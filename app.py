@@ -47,7 +47,7 @@ def load_data(version="v2"):
     with open("data/stats.json", "r") as f:
         return json.load(f)
 
-data = load_data("v3") # Bump version to bust cache
+data = load_data("v4") # Bump version to bust cache
 overall = data['overall']
 sectors = pd.DataFrame(data['sectors'])
 
@@ -277,6 +277,43 @@ if page == "Executive Summary":
             text_auto='.1f'
         )
         st.plotly_chart(fig_bench, use_container_width=True)
+
+    st.divider()
+    
+    # Row 5: Board Effectiveness & Tenure
+    st.subheader("5. Board Effectiveness & Tenure")
+    r5c1, r5c2 = st.columns(2)
+    
+    with r5c1:
+        # Avg Director Tenure
+        if 'avg_tenure' in sectors.columns:
+            # Filter out 0 values
+            tenure_df = sectors[sectors['avg_tenure'] > 0].sort_values('avg_tenure', ascending=True)
+            
+            fig_tenure = px.bar(
+                tenure_df, x="avg_tenure", y="sector", orientation='h',
+                title="Average Director Tenure (Years)",
+                color="avg_tenure", color_continuous_scale='Teal',
+                text_auto='.1f'
+            )
+            st.plotly_chart(fig_tenure, use_container_width=True)
+        else:
+            st.info("Tenure data not available.")
+            
+    with r5c2:
+        # CEO Duality (CEO is Chair)
+        if 'ceo_chair_pct' in sectors.columns:
+            duality_df = sectors.sort_values('ceo_chair_pct', ascending=True)
+            
+            fig_duality = px.bar(
+                duality_df, x="ceo_chair_pct", y="sector", orientation='h',
+                title="CEO Duality (% where CEO is Chair)",
+                color="ceo_chair_pct", color_continuous_scale='Oranges',
+                text_auto='.1f'
+            )
+            st.plotly_chart(fig_duality, use_container_width=True)
+        else:
+            st.info("CEO Duality data not available.")
 
 # --- Sector Deep Dives ---
 elif page == "Sector Deep Dives":
