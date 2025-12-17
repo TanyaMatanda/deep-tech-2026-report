@@ -364,7 +364,7 @@ elif page == "Sector Deep Dives":
 
 # --- Full Report ---
 elif page == "Full Report":
-    st.title("Deep Tech Proxy Season 2026: What Should You Know?")
+    # Title is already in the markdown file, so we don't need st.title here
     
     with open("assets/deep_tech_2026_comprehensive_report.md", "r") as f:
         report_text = f.read()
