@@ -382,9 +382,11 @@ elif page == "Full Report":
         
         # Add a direct download link in the main area as a backup
         st.markdown(f'<a href="data:application/pdf;base64,{base64_pdf}" download="Deep_Tech_Proxy_Season_2026_What_Should_You_Know.pdf" style="display: inline-block; padding: 10px 20px; background-color: #2563eb; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 20px;">📥 Download PDF Report</a>', unsafe_allow_html=True)
+        
+        st.caption(f"Viewing: {os.path.basename(pdf_file)} ({len(base64_pdf)} bytes)")
             
-        # Use iframe which is generally better supported for base64 PDFs in Streamlit
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000px" type="application/pdf"></iframe>'
+        # Use <object> tag which is the standard for embedding PDFs
+        pdf_display = f'<object data="data:application/pdf;base64,{base64_pdf}" type="application/pdf" width="100%" height="1000px"><p>Your browser does not support embedded PDFs. Please use the download button above.</p></object>'
         st.markdown(pdf_display, unsafe_allow_html=True)
     else:
         st.error("PDF file not found.")
