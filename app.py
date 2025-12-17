@@ -78,8 +78,12 @@ elif page == "Full Report":
     if os.path.exists(pdf_file):
         with open(pdf_file, "rb") as f:
             base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+        
+        # Add a direct download link in the main area as a backup
+        st.markdown(f'<a href="data:application/pdf;base64,{base64_pdf}" download="Deep_Tech_Proxy_Season_2026_What_Should_You_Know.pdf">Download PDF</a> if it does not view below.', unsafe_allow_html=True)
             
-        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000px" type="application/pdf"></iframe>'
+        # Use <embed> tag which is often more reliable than <iframe> for PDFs
+        pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000px" type="application/pdf">'
         st.markdown(pdf_display, unsafe_allow_html=True)
     else:
         st.error("PDF file not found.")
