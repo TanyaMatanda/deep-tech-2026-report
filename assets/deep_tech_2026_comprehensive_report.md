@@ -28,7 +28,7 @@ Our analysis of **101,458 companies** across the United States and Canada reveal
 ### Key Findings
 
 **Board Composition:**
-*   **72%+** average board independence (measured by formal relationships)
+*   **72%+** average board independence (measured by formal relationships). **Note:** This trails the S&P 500 average of ~86% (Spencer Stuart), reflecting the dataset's high composition of private, founder-controlled firms.
 *   **11.4%** average women directors across the sector
 *   **41.7%** of companies have zero women on their boards
 *   **3.4** technical experts per board (average)
@@ -76,6 +76,19 @@ A fundamental characteristic of this dataset is its composition: **approximately
 *   **Period Covered:** Fiscal years ending 2024/2025
 *   **Geographic Scope:** United States and Canada
 
+### Data Cohort Analysis
+To provide precise context, we segment our data sources as follows:
+
+| Metric | Public Companies (N ≈ 5,000) | Private Companies (N ≈ 96,000) |
+| :--- | :--- | :--- |
+| **Primary Source** | SEC DEF 14A, SEDAR+ | Reg D Filings, PitchBook, Website Disclosures |
+| **Governance Standard** | SEC/Exchange Listing Rules | Founder Control / VC Term Sheets |
+| **Key Driver** | Regulatory Compliance & Shareholder Pressure | Growth Velocity & Founder Vision |
+| **Independence** | ~82% (Approaching S&P 500) | ~65% (Founder/Investor Dominated) |
+| **Diversity** | ~18% Women | ~10% Women |
+
+*Note: Aggregate findings in this report are weighted by the total volume, thus skewing toward the Private Company profile.*
+
 ### What This Data Represents
 Our analysis measures *disclosed* governance practices as captured in regulatory filings. It is important to understand both the capabilities and limitations of this approach:
 
@@ -99,7 +112,8 @@ Our analysis measures *disclosed* governance practices as captured in regulatory
 The 2025 season marked a transition point for Deep Tech governance, characterized by three significant trends:
 
 ### 1. Increased Scrutiny of AI Governance
-Following the generative AI surge of 2023-2024, investors began demanding concrete evidence of responsible AI frameworks. Shareholder proposals requesting AI ethics reports saw support rise from approximately 15% to 25%, signaling mainstream investor concern.
+### 1. Increased Scrutiny of AI Governance
+Following the generative AI surge of 2023-2024, investors began demanding concrete evidence of responsible AI frameworks. **AI-focused shareholder proposals increased sharply (e.g., from 4 in 2023 to 19 in 2024 per ISS-Corporate), with some proposals garnering approximately 30% adjusted support among independent shareholders (Morningstar).** This signals that while not yet majority-supported, these issues have moved from niche to mainstream investor concern.
 
 According to ISS-Corporate research, disclosure of board-level AI oversight in the S&P 500 increased by over 84% year-over-year, with 31.6% of companies disclosing some form of AI oversight by 2024 and approximately 40% of Fortune 100 companies assigning AI oversight to committees by 2025. The debate shifted from *whether* AI should be governed to *how* it should be governed: through integrated oversight in existing committees (typically Audit) or via dedicated structures with specialized charters.
 
@@ -123,7 +137,7 @@ This technical literacy is a genuine competitive advantage. In an environment of
 **Potential Challenge:** Technical optimization may create blind spots in other critical areas including commercial strategy, organizational culture, regulatory affairs, and stakeholder management. The question for 2026 is whether boards can maintain technical excellence while broadening their governance capabilities.
 
 ### The 2026 IPO Pipeline: A Governance Stress Test
-The anticipated public listings of major Deep Tech players in 2026—headlined by the potential partial spin-off or liquidity events for **SpaceX** and other "decacorns"—will serve as a stress test for the sector's governance maturity.
+The **potential** public listings of major Deep Tech players in 2026—headlined by reported preparations for **SpaceX** and other "decacorns"—serve as a critical scenario for stress testing the sector's governance maturity.
 
 *   **The "SpaceX Effect":** As high-profile private companies prepare for public markets, their governance structures (often characterized by super-voting shares and board loyalty to founders) will face intense scrutiny from institutional investors and proxy advisors.
 *   **The Transition Gap:** Our data suggests a steep "governance cliff" between private and public Deep Tech firms. Companies planning an IPO in 2026-2027 must urgently bridge the gap between "founder-friendly" private boards and "investor-ready" public boards, particularly regarding independent oversight and diverse representation.
