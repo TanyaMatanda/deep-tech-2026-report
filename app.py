@@ -47,7 +47,7 @@ def load_data(version="v2"):
     with open("data/stats.json", "r") as f:
         return json.load(f)
 
-data = load_data("v4") # Bump version to bust cache
+data = load_data("v5") # Bump version to bust cache
 overall = data['overall']
 sectors = pd.DataFrame(data['sectors'])
 
@@ -324,12 +324,23 @@ elif page == "Sector Deep Dives":
     sec_data = sectors[sectors['sector'] == selected_sector].iloc[0]
     
     # Top Level Metrics
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3, col4 = st.columns(4)
     col1.metric("Sample Size", sec_data['count'])
     col2.metric("Women on Boards", f"{sec_data['avg_women_pct']}%", 
                 delta=f"{round(sec_data['avg_women_pct'] - overall['avg_women_pct'], 1)}% vs Avg")
     col3.metric("Tech Experts", sec_data['avg_tech_experts'],
                 delta=f"{round(sec_data['avg_tech_experts'] - overall['avg_tech_experts'], 1)} vs Avg")
+    col4.metric("Avg Tenure", f"{sec_data.get('avg_tenure', 'N/A')} yrs",
+                delta=f"{round(sec_data.get('avg_tenure', 0) - overall.get('avg_tenure', 0), 1)} yrs" if 'avg_tenure' in sec_data else None)
+
+    col5, col6, col7, col8 = st.columns(4)
+    col5.metric("Independence", f"{sec_data.get('avg_indep_pct', 'N/A')}%",
+                delta=f"{round(sec_data.get('avg_indep_pct', 0) - overall.get('avg_indep_pct', 0), 1)}%" if 'avg_indep_pct' in sec_data else None)
+    col6.metric("CEO is Chair", f"{sec_data.get('ceo_chair_pct', 'N/A')}%",
+                 delta=f"{round(sec_data.get('ceo_chair_pct', 0) - overall.get('ceo_chair_pct', 0), 1)}%" if 'ceo_chair_pct' in sec_data else None,
+                 delta_color="inverse")
+    col7.metric("Avg Age", f"{sec_data.get('avg_age', 'N/A')} yrs")
+    col8.metric("AI Oversight", f"{sec_data.get('ai_oversight_pct', 'N/A')}%")
     
     st.divider()
     
@@ -337,22 +348,23 @@ elif page == "Sector Deep Dives":
     st.subheader("Comparative Analysis")
     
     # Radar Chart for comparison
-    categories = ['Women %', 'Tech Experts (Scaled)', 'Zero Women % (Inverted)']
+    categories = ['Women %', 'Tech Experts (Scaled)', 'Independence %', 'Tenure (Scaled)', 'AI Oversight %']
     
     # Normalize for radar chart (rough scaling)
-    def normalize(val, max_val): return min(val / max_val, 1.0)
-    
-    # Invert zero women (lower is better) -> 100 - val
     sec_vals = [
         sec_data['avg_women_pct'], 
         sec_data['avg_tech_experts'] * 10, # Scale up to match %
-        100 - ((sec_data['diversity_buckets']['0 Women']))
+        sec_data.get('avg_indep_pct', 0),
+        sec_data.get('avg_tenure', 0) * 5, # Scale 10 yrs -> 50
+        sec_data.get('ai_oversight_pct', 0)
     ]
     
     avg_vals = [
         overall['avg_women_pct'],
         overall['avg_tech_experts'] * 10,
-        100 - overall['pct_zero_women']
+        overall.get('avg_indep_pct', 0),
+        overall.get('avg_tenure', 0) * 5,
+        overall.get('ai_oversight_pct', 0)
     ]
     
     fig_radar = go.Figure()
@@ -381,7 +393,7 @@ elif page == "Sector Deep Dives":
                 range=[0, 100]
             )),
         showlegend=True,
-        title="Sector Performance vs Average"
+        title="Governance Footprint vs Average"
     )
     
     c1, c2 = st.columns([1, 1])
@@ -389,15 +401,22 @@ elif page == "Sector Deep Dives":
         st.plotly_chart(fig_radar, use_container_width=True)
     
     with c2:
-        st.markdown("### Key Insights")
-        # Dynamic Insights
-        if sec_data['avg_women_pct'] > overall['avg_women_pct']:
-            st.success(f"**Leader in Diversity:** {selected_sector} outperforms the industry average in gender diversity.")
-        else:
-            st.warning(f"**Lagging in Diversity:** {selected_sector} is below the industry average for women on boards.")
+        st.markdown("### Board Composition Breakdown")
+        # Pie chart of Independent vs Non-Independent (approximate)
+        if 'avg_indep_pct' in sec_data:
+            indep = sec_data['avg_indep_pct']
+            non_indep = 100 - indep
             
-        if sec_data['avg_tech_experts'] > overall['avg_tech_experts']:
-            st.info(f"**High Technical Depth:** Boards in this sector have significantly more technical experts than average.")
+            fig_comp = px.pie(
+                names=['Independent', 'Non-Independent'],
+                values=[indep, non_indep],
+                title="Average Board Independence",
+                color_discrete_sequence=['#10b981', '#cbd5e1'],
+                hole=0.4
+            )
+            st.plotly_chart(fig_comp, use_container_width=True)
+        else:
+            st.info("Independence data not available.")
             
         # Hardcoded qualitative insights
         insights = {
@@ -405,7 +424,8 @@ elif page == "Sector Deep Dives":
             "Energy & Climate": "Sector leader in diversity. Regulatory pressure drives higher governance standards.",
             "Biotechnology": "Boards often composed of MDs/PhDs. 'Tech Expert' count may understate medical expertise.",
             "Quantum & Photonics": "Lowest diversity. Niche talent pool creates tension between meritocracy and diversity.",
-            "Cross Domain Enablement": "Represents the 'average' Deep Tech company. B2B SaaS tends to have better governance than Consumer Tech."
+            "Cross Domain Enablement": "Represents the 'average' Deep Tech company. B2B SaaS tends to have better governance than Consumer Tech.",
+            "General Deep Tech": "Broad category encompassing advanced technology companies. Serves as a baseline for the broader deep tech ecosystem."
         }
         st.markdown(f"**Sector Context:** {insights.get(selected_sector, 'No specific context available.')}")
 
