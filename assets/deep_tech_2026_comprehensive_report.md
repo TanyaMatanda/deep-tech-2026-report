@@ -1,4 +1,4 @@
-# Deep Tech 2026 Proxy Season Report
+# Deep Tech Proxy Season 2026: What Should You Know?
 **The State of Governance in the Deep Tech Sector**
 
 > **Date:** December 17, 2025

@@ -7,7 +7,7 @@ import os
 
 # Page Config
 st.set_page_config(
-    page_title="Deep Tech 2026 Proxy Season Report",
+    page_title="Deep Tech Proxy Season 2026: What Should You Know?",
     page_icon="📊",
     layout="wide"
 )
@@ -49,7 +49,7 @@ overall = data['overall']
 sectors = pd.DataFrame(data['sectors'])
 
 # Sidebar
-st.sidebar.title("Deep Tech 2026")
+st.sidebar.title("Deep Tech 2026: What Should You Know?")
 st.sidebar.info("Analysis of 101,458 Companies")
 
 # Download Report Button
@@ -364,7 +364,7 @@ elif page == "Sector Deep Dives":
 
 # --- Full Report ---
 elif page == "Full Report":
-    st.title("Deep Tech 2026 Comprehensive Report")
+    st.title("Deep Tech Proxy Season 2026: What Should You Know?")
     
     with open("assets/deep_tech_2026_comprehensive_report.md", "r") as f:
         report_text = f.read()
