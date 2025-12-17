@@ -235,15 +235,21 @@ if page == "Executive Summary":
     
     with r4c1:
         # Avg Board Size & Independence
-        # Filter out 0 values
-        struct_df = sectors[sectors['avg_board_size'] > 0]
-        
-        # Normalize for chart
-        fig_struct = go.Figure()
-        fig_struct.add_trace(go.Bar(
-            y=struct_df['sector'], x=struct_df['avg_board_size'],
-            name='Avg Board Size', orientation='h', marker_color='#64748b'
-        ))
+        # Check if column exists (defensive coding)
+        if 'avg_board_size' in sectors.columns:
+            # Filter out 0 values
+            struct_df = sectors[sectors['avg_board_size'] > 0]
+            
+            # Normalize for chart
+            fig_struct = go.Figure()
+            fig_struct.add_trace(go.Bar(
+                y=struct_df['sector'], x=struct_df['avg_board_size'],
+                name='Avg Board Size', orientation='h', marker_color='#64748b'
+            ))
+        else:
+            st.warning("Board size data not available.")
+            struct_df = pd.DataFrame() # Empty for independence check
+            fig_struct = go.Figure()
         # Check if we have independence data (might be missing if old json)
         if 'avg_indep_pct' in struct_df.columns:
              fig_struct.add_trace(go.Bar(
