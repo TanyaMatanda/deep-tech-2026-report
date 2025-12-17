@@ -118,11 +118,14 @@ if page == "Executive Summary":
     
     with r1c1:
         # Treemap of Sector Sizes
+        # Filter out the massive "Cross Domain Enablement" bucket to show detail in others
+        tree_df = sectors[sectors['sector'] != "Cross Domain Enablement"]
+        
         fig_tree = px.treemap(
-            sectors, 
+            tree_df, 
             path=['sector'], 
             values='count',
-            title="Market Composition by Sector (Sample Size)",
+            title="Deep Tech Sub-Sector Composition (Excl. General Enablement)",
             color='count',
             color_continuous_scale='Blues'
         )
@@ -230,16 +233,19 @@ if page == "Executive Summary":
     
     with r4c1:
         # Avg Board Size & Independence
+        # Filter out 0 values
+        struct_df = sectors[sectors['avg_board_size'] > 0]
+        
         # Normalize for chart
         fig_struct = go.Figure()
         fig_struct.add_trace(go.Bar(
-            y=sectors['sector'], x=sectors.get('avg_board_size', [0]*len(sectors)),
+            y=struct_df['sector'], x=struct_df['avg_board_size'],
             name='Avg Board Size', orientation='h', marker_color='#64748b'
         ))
         # Check if we have independence data (might be missing if old json)
-        if 'avg_indep_pct' in sectors.columns:
+        if 'avg_indep_pct' in struct_df.columns:
              fig_struct.add_trace(go.Bar(
-                y=sectors['sector'], x=sectors['avg_indep_pct'] / 10, # Scale down to match size roughly? No, use secondary axis or separate
+                y=struct_df['sector'], x=struct_df['avg_indep_pct'] / 10, # Scale down to match size roughly? No, use secondary axis or separate
                 name='Independence % (Scaled / 10)', orientation='h', marker_color='#0ea5e9', visible='legendonly'
             ))
         
