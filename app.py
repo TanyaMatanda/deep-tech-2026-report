@@ -81,6 +81,7 @@ else:
 
 # Navigation
 page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Full Report"])
+# st.write(f"Debug: Current page is {page}")
 
 # --- Executive Summary ---
 if page == "Executive Summary":
