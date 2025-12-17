@@ -1,8 +1,8 @@
 {
   "overall": {
-    "total_companies": 136156,
+    "total_companies": 134561,
     "avg_women_pct": 11.4,
-    "pct_zero_women": 41.7,
+    "pct_zero_women": 41.8,
     "avg_tech_experts": 3.4,
     "public_pct": 4.9,
     "private_pct": 95.1
@@ -10,31 +10,122 @@
   "sectors": [
     {
       "sector": "Cross Domain Enablement",
-      "count": 95348,
-      "avg_women_pct": 11.4,
-      "pct_zero_women": 42.0,
-      "avg_tech_experts": 3.4
+      "count": 99439,
+      "avg_women_pct": 11.3,
+      "avg_tech_experts": 3.4,
+      "diversity_buckets": {
+        "0 Women": 42.0,
+        "1 Woman": 41.6,
+        "2 Women": 4.2,
+        "3+ Women": 12.3
+      },
+      "tech_buckets": {
+        "0-1 Experts": 0.6,
+        "2-3 Experts": 68.3,
+        "4+ Experts": 31.1
+      }
+    },
+    {
+      "sector": "Semiconductors & AI",
+      "count": 18,
+      "avg_women_pct": 10.4,
+      "avg_tech_experts": 2.2,
+      "diversity_buckets": {
+        "0 Women": 37.5,
+        "1 Woman": 37.5,
+        "2 Women": 0.0,
+        "3+ Women": 25.0
+      },
+      "tech_buckets": {
+        "0-1 Experts": 55.6,
+        "2-3 Experts": 33.3,
+        "4+ Experts": 11.1
+      }
     },
     {
       "sector": "Biotechnology",
-      "count": 234,
-      "avg_women_pct": 0,
-      "pct_zero_women": 0,
-      "avg_tech_experts": 0.1
+      "count": 515,
+      "avg_women_pct": 15.0,
+      "avg_tech_experts": 0.8,
+      "diversity_buckets": {
+        "0 Women": 33.3,
+        "1 Woman": 41.2,
+        "2 Women": 3.9,
+        "3+ Women": 21.6
+      },
+      "tech_buckets": {
+        "0-1 Experts": 80.2,
+        "2-3 Experts": 12.8,
+        "4+ Experts": 7.0
+      }
     },
     {
       "sector": "Energy & Climate",
-      "count": 112,
+      "count": 154,
+      "avg_women_pct": 13.6,
+      "avg_tech_experts": 1.5,
+      "diversity_buckets": {
+        "0 Women": 31.5,
+        "1 Woman": 38.9,
+        "2 Women": 14.8,
+        "3+ Women": 14.8
+      },
+      "tech_buckets": {
+        "0-1 Experts": 64.9,
+        "2-3 Experts": 23.4,
+        "4+ Experts": 11.7
+      }
+    },
+    {
+      "sector": "Quantum & Photonics",
+      "count": 8,
+      "avg_women_pct": 7.4,
+      "avg_tech_experts": 3.0,
+      "diversity_buckets": {
+        "0 Women": 50.0,
+        "1 Woman": 50.0,
+        "2 Women": 0.0,
+        "3+ Women": 0.0
+      },
+      "tech_buckets": {
+        "0-1 Experts": 0.0,
+        "2-3 Experts": 100.0,
+        "4+ Experts": 0.0
+      }
+    },
+    {
+      "sector": "Space & Aerospace",
+      "count": 7,
       "avg_women_pct": 0,
-      "pct_zero_women": 0,
-      "avg_tech_experts": 0.3
+      "avg_tech_experts": 0.1,
+      "diversity_buckets": {
+        "0 Women": 0,
+        "1 Woman": 0,
+        "2 Women": 0,
+        "3+ Women": 0
+      },
+      "tech_buckets": {
+        "0-1 Experts": 100.0,
+        "2-3 Experts": 0.0,
+        "4+ Experts": 0.0
+      }
     },
     {
       "sector": "Cybersecurity",
-      "count": 18,
+      "count": 11,
       "avg_women_pct": 0,
-      "pct_zero_women": 0,
-      "avg_tech_experts": 0.7
+      "avg_tech_experts": 0.7,
+      "diversity_buckets": {
+        "0 Women": 0,
+        "1 Woman": 0,
+        "2 Women": 0,
+        "3+ Women": 0
+      },
+      "tech_buckets": {
+        "0-1 Experts": 100.0,
+        "2-3 Experts": 0.0,
+        "4+ Experts": 0.0
+      }
     }
   ]
 }
