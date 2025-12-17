@@ -364,9 +364,16 @@ elif page == "Sector Deep Dives":
 
 # --- Full Report ---
 elif page == "Full Report":
-    # Title is already in the markdown file, so we don't need st.title here
+    # Embed the PDF directly so it matches the user's upload exactly
+    import base64
     
-    with open("assets/deep_tech_2026_comprehensive_report.md", "r") as f:
-        report_text = f.read()
-        
-    st.markdown(report_text)
+    pdf_file = "assets/Deep_Tech_2026_Report.pdf"
+    
+    if os.path.exists(pdf_file):
+        with open(pdf_file, "rb") as f:
+            base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+            
+        pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="100%" height="1000px" type="application/pdf"></iframe>'
+        st.markdown(pdf_display, unsafe_allow_html=True)
+    else:
+        st.error("PDF file not found.")
