@@ -1,6 +1,6 @@
 {
   "overall": {
-    "total_companies": 134561,
+    "total_companies": 137093,
     "avg_women_pct": 11.4,
     "pct_zero_women": 41.8,
     "avg_tech_experts": 3.4,
@@ -10,77 +10,92 @@
   "sectors": [
     {
       "sector": "Cross Domain Enablement",
-      "count": 99439,
-      "avg_women_pct": 11.3,
+      "count": 104861,
+      "avg_women_pct": 11.4,
       "avg_tech_experts": 3.4,
+      "avg_board_size": 7.5,
+      "avg_indep_pct": 16.2,
+      "ai_oversight_pct": 0.0,
       "diversity_buckets": {
-        "0 Women": 42.0,
+        "0 Women": 41.8,
         "1 Woman": 41.6,
         "2 Women": 4.2,
         "3+ Women": 12.3
       },
       "tech_buckets": {
-        "0-1 Experts": 0.6,
-        "2-3 Experts": 68.3,
-        "4+ Experts": 31.1
+        "0-1 Experts": 1.1,
+        "2-3 Experts": 67.9,
+        "4+ Experts": 31.0
       }
     },
     {
       "sector": "Semiconductors & AI",
-      "count": 18,
-      "avg_women_pct": 10.4,
-      "avg_tech_experts": 2.2,
+      "count": 13,
+      "avg_women_pct": 7.1,
+      "avg_tech_experts": 1.7,
+      "avg_board_size": 7.4,
+      "avg_indep_pct": 23.7,
+      "ai_oversight_pct": 0.0,
       "diversity_buckets": {
-        "0 Women": 37.5,
-        "1 Woman": 37.5,
+        "0 Women": 50.0,
+        "1 Woman": 50.0,
         "2 Women": 0.0,
-        "3+ Women": 25.0
+        "3+ Women": 0.0
       },
       "tech_buckets": {
-        "0-1 Experts": 55.6,
-        "2-3 Experts": 33.3,
-        "4+ Experts": 11.1
+        "0-1 Experts": 53.8,
+        "2-3 Experts": 46.2,
+        "4+ Experts": 0.0
       }
     },
     {
       "sector": "Biotechnology",
-      "count": 515,
-      "avg_women_pct": 15.0,
-      "avg_tech_experts": 0.8,
+      "count": 256,
+      "avg_women_pct": 12.6,
+      "avg_tech_experts": 1.1,
+      "avg_board_size": 6.7,
+      "avg_indep_pct": 17.1,
+      "ai_oversight_pct": 0.0,
       "diversity_buckets": {
-        "0 Women": 33.3,
-        "1 Woman": 41.2,
-        "2 Women": 3.9,
-        "3+ Women": 21.6
+        "0 Women": 37.5,
+        "1 Woman": 48.9,
+        "2 Women": 2.3,
+        "3+ Women": 11.4
       },
       "tech_buckets": {
-        "0-1 Experts": 80.2,
-        "2-3 Experts": 12.8,
+        "0-1 Experts": 65.6,
+        "2-3 Experts": 27.3,
         "4+ Experts": 7.0
       }
     },
     {
       "sector": "Energy & Climate",
-      "count": 154,
-      "avg_women_pct": 13.6,
-      "avg_tech_experts": 1.5,
+      "count": 148,
+      "avg_women_pct": 16.1,
+      "avg_tech_experts": 1.4,
+      "avg_board_size": 8.2,
+      "avg_indep_pct": 17.3,
+      "ai_oversight_pct": 0.0,
       "diversity_buckets": {
-        "0 Women": 31.5,
-        "1 Woman": 38.9,
-        "2 Women": 14.8,
-        "3+ Women": 14.8
+        "0 Women": 21.7,
+        "1 Woman": 47.8,
+        "2 Women": 15.2,
+        "3+ Women": 15.2
       },
       "tech_buckets": {
-        "0-1 Experts": 64.9,
-        "2-3 Experts": 23.4,
-        "4+ Experts": 11.7
+        "0-1 Experts": 68.9,
+        "2-3 Experts": 18.9,
+        "4+ Experts": 12.2
       }
     },
     {
       "sector": "Quantum & Photonics",
-      "count": 8,
-      "avg_women_pct": 7.4,
+      "count": 6,
+      "avg_women_pct": 7.9,
       "avg_tech_experts": 3.0,
+      "avg_board_size": 6.3,
+      "avg_indep_pct": 15.9,
+      "ai_oversight_pct": 0.0,
       "diversity_buckets": {
         "0 Women": 50.0,
         "1 Woman": 50.0,
@@ -95,9 +110,12 @@
     },
     {
       "sector": "Space & Aerospace",
-      "count": 7,
+      "count": 5,
       "avg_women_pct": 0,
-      "avg_tech_experts": 0.1,
+      "avg_tech_experts": 0.6,
+      "avg_board_size": 0,
+      "avg_indep_pct": 0,
+      "ai_oversight_pct": 0.0,
       "diversity_buckets": {
         "0 Women": 0,
         "1 Woman": 0,
@@ -112,9 +130,12 @@
     },
     {
       "sector": "Cybersecurity",
-      "count": 11,
+      "count": 7,
       "avg_women_pct": 0,
       "avg_tech_experts": 0.7,
+      "avg_board_size": 0,
+      "avg_indep_pct": 0,
+      "ai_oversight_pct": 0.0,
       "diversity_buckets": {
         "0 Women": 0,
         "1 Woman": 0,
@@ -128,4 +149,4 @@
       }
     }
   ]
-} 
+}

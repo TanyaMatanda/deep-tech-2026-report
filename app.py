@@ -110,78 +110,157 @@ if page == "Executive Summary":
         *   **Sector Classification:** Companies are categorized by their primary revenue-generating activity or core technology focus.
         """)
     
-    # Charts
-    c1, c2 = st.columns(2)
+    # --- Charts Section ---
     
-    with c1:
-        st.subheader("Diversity Distribution by Sector")
-        # Prepare data for stacked bar
+    # Row 1: Composition & Structure
+    st.subheader("1. Sector Composition & Structure")
+    r1c1, r1c2 = st.columns([2, 1])
+    
+    with r1c1:
+        # Treemap of Sector Sizes
+        fig_tree = px.treemap(
+            sectors, 
+            path=['sector'], 
+            values='count',
+            title="Market Composition by Sector (Sample Size)",
+            color='count',
+            color_continuous_scale='Blues'
+        )
+        st.plotly_chart(fig_tree, use_container_width=True)
+        
+    with r1c2:
+        # Public vs Private Pie
+        labels = ['Private', 'Public']
+        values = [overall['private_pct'], overall['public_pct']]
+        fig_pie = px.pie(
+            names=labels, 
+            values=values, 
+            title="Public vs. Private Split",
+            color_discrete_sequence=['#1e3a8a', '#60a5fa'],
+            hole=0.4
+        )
+        st.plotly_chart(fig_pie, use_container_width=True)
+
+    st.divider()
+
+    # Row 2: Diversity Deep Dive
+    st.subheader("2. Diversity Analysis")
+    r2c1, r2c2 = st.columns(2)
+    
+    with r2c1:
+        # Stacked Bar (Existing)
         div_data = []
         for _, row in sectors.iterrows():
             buckets = row['diversity_buckets']
             for bucket, val in buckets.items():
-                div_data.append({
-                    "Sector": row['sector'],
-                    "Category": bucket,
-                    "Percentage": val
-                })
+                div_data.append({"Sector": row['sector'], "Category": bucket, "Percentage": val})
         div_df = pd.DataFrame(div_data)
-        
-        # Custom sort order for categories
         cat_order = ["0 Women", "1 Woman", "2 Women", "3+ Women"]
         
         fig_div = px.bar(
-            div_df,
-            x="Percentage",
-            y="Sector",
-            color="Category",
-            orientation='h',
-            title="Board Gender Diversity Breakdown",
+            div_df, x="Percentage", y="Sector", color="Category", orientation='h',
+            title="Board Gender Diversity Distribution",
             category_orders={"Category": cat_order},
-            color_discrete_map={
-                "0 Women": "#94a3b8",  # Grey
-                "1 Woman": "#60a5fa",  # Light Blue
-                "2 Women": "#2563eb",  # Blue
-                "3+ Women": "#1e3a8a"  # Dark Blue
-            },
-            height=500
+            color_discrete_map={"0 Women": "#94a3b8", "1 Woman": "#60a5fa", "2 Women": "#2563eb", "3+ Women": "#1e3a8a"},
+            height=400
         )
-        fig_div.update_layout(legend_title_text='')
         st.plotly_chart(fig_div, use_container_width=True)
         
-    with c2:
-        st.subheader("Technical Expertise Distribution")
-        # Prepare data for stacked bar
+    with r2c2:
+        # Zero Women Bar Chart (Sorted)
+        # Calculate zero women pct from buckets if not explicitly in stats, or use what we have
+        # We have diversity_buckets['0 Women']
+        zero_women_data = []
+        for _, row in sectors.iterrows():
+            zero_women_data.append({
+                "Sector": row['sector'],
+                "Zero Women %": row['diversity_buckets']['0 Women']
+            })
+        zw_df = pd.DataFrame(zero_women_data).sort_values("Zero Women %", ascending=True)
+        
+        fig_zw = px.bar(
+            zw_df, x="Zero Women %", y="Sector", orientation='h',
+            title="Percentage of Boards with Zero Women",
+            color="Zero Women %", color_continuous_scale='Reds',
+            text_auto='.1f'
+        )
+        st.plotly_chart(fig_zw, use_container_width=True)
+
+    st.divider()
+
+    # Row 3: Technical Expertise & Governance
+    st.subheader("3. Technical Expertise & Governance Quality")
+    r3c1, r3c2 = st.columns(2)
+    
+    with r3c1:
+        # Tech Stacked Bar (Existing)
         tech_data = []
         for _, row in sectors.iterrows():
             buckets = row['tech_buckets']
             for bucket, val in buckets.items():
-                tech_data.append({
-                    "Sector": row['sector'],
-                    "Category": bucket,
-                    "Percentage": val
-                })
+                tech_data.append({"Sector": row['sector'], "Category": bucket, "Percentage": val})
         tech_df = pd.DataFrame(tech_data)
-        
         tech_order = ["0-1 Experts", "2-3 Experts", "4+ Experts"]
         
         fig_tech = px.bar(
-            tech_df,
-            x="Percentage",
-            y="Sector",
-            color="Category",
-            orientation='h',
-            title="Board Technical Expertise Breakdown",
+            tech_df, x="Percentage", y="Sector", color="Category", orientation='h',
+            title="Technical Expertise Distribution",
             category_orders={"Category": tech_order},
-            color_discrete_map={
-                "0-1 Experts": "#fca5a5", # Light Red
-                "2-3 Experts": "#fbbf24", # Amber
-                "4+ Experts": "#10b981"   # Emerald
-            },
-            height=500
+            color_discrete_map={"0-1 Experts": "#fca5a5", "2-3 Experts": "#fbbf24", "4+ Experts": "#10b981"},
+            height=400
         )
-        fig_tech.update_layout(legend_title_text='')
         st.plotly_chart(fig_tech, use_container_width=True)
+        
+    with r3c2:
+        # Scatter: Women % vs Tech Experts
+        fig_scat = px.scatter(
+            sectors, x="avg_tech_experts", y="avg_women_pct",
+            size="count", color="sector",
+            title="Correlation: Diversity vs. Technical Expertise",
+            labels={"avg_tech_experts": "Avg Tech Experts", "avg_women_pct": "Avg % Women"},
+            hover_name="sector"
+        )
+        st.plotly_chart(fig_scat, use_container_width=True)
+
+    st.divider()
+
+    # Row 4: Board Structure & Oversight
+    st.subheader("4. Board Structure & Oversight")
+    r4c1, r4c2 = st.columns(2)
+    
+    with r4c1:
+        # Avg Board Size & Independence
+        # Normalize for chart
+        fig_struct = go.Figure()
+        fig_struct.add_trace(go.Bar(
+            y=sectors['sector'], x=sectors.get('avg_board_size', [0]*len(sectors)),
+            name='Avg Board Size', orientation='h', marker_color='#64748b'
+        ))
+        # Check if we have independence data (might be missing if old json)
+        if 'avg_indep_pct' in sectors.columns:
+             fig_struct.add_trace(go.Bar(
+                y=sectors['sector'], x=sectors['avg_indep_pct'] / 10, # Scale down to match size roughly? No, use secondary axis or separate
+                name='Independence % (Scaled / 10)', orientation='h', marker_color='#0ea5e9', visible='legendonly'
+            ))
+        
+        fig_struct.update_layout(title="Average Board Size by Sector", barmode='group')
+        st.plotly_chart(fig_struct, use_container_width=True)
+
+    with r4c2:
+        # AI Oversight Benchmark
+        # Hardcoded benchmark data
+        bench_data = pd.DataFrame({
+            "Group": ["Fortune 100", "S&P 500", "Deep Tech (Avg)"],
+            "AI Oversight %": [40, 30, sectors['ai_oversight_pct'].mean() if 'ai_oversight_pct' in sectors.columns else 5] # Fallback if missing
+        })
+        
+        fig_bench = px.bar(
+            bench_data, x="Group", y="AI Oversight %",
+            title="AI Oversight Disclosure vs. Benchmarks",
+            color="Group", color_discrete_map={"Fortune 100": "#cbd5e1", "S&P 500": "#94a3b8", "Deep Tech (Avg)": "#ef4444"},
+            text_auto='.1f'
+        )
+        st.plotly_chart(fig_bench, use_container_width=True)
 
 # --- Sector Deep Dives ---
 elif page == "Sector Deep Dives":
