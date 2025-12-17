@@ -1,0 +1,40 @@
+{
+  "overall": {
+    "total_companies": 136156,
+    "avg_women_pct": 11.4,
+    "pct_zero_women": 41.7,
+    "avg_tech_experts": 3.4,
+    "public_pct": 4.9,
+    "private_pct": 95.1
+  },
+  "sectors": [
+    {
+      "sector": "Cross Domain Enablement",
+      "count": 95348,
+      "avg_women_pct": 11.4,
+      "pct_zero_women": 42.0,
+      "avg_tech_experts": 3.4
+    },
+    {
+      "sector": "Biotechnology",
+      "count": 234,
+      "avg_women_pct": 0,
+      "pct_zero_women": 0,
+      "avg_tech_experts": 0.1
+    },
+    {
+      "sector": "Energy & Climate",
+      "count": 112,
+      "avg_women_pct": 0,
+      "pct_zero_women": 0,
+      "avg_tech_experts": 0.3
+    },
+    {
+      "sector": "Cybersecurity",
+      "count": 18,
+      "avg_women_pct": 0,
+      "pct_zero_women": 0,
+      "avg_tech_experts": 0.7
+    }
+  ]
+}
