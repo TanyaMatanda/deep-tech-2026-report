@@ -51,7 +51,7 @@ sectors = pd.DataFrame(data['sectors'])
 
 # Sidebar
 st.sidebar.title("Deep Tech 2026: What Should You Know?")
-st.sidebar.info("Analysis of 101,458 Companies")
+st.sidebar.info(f"Analysis of {overall['total_companies']:,} Companies")
 
 # Download Report Button
 pdf_path = "assets/Deep_Tech_2026_Final_v3.pdf"
