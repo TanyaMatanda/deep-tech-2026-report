@@ -54,7 +54,7 @@ st.sidebar.title("Deep Tech 2026: What Should You Know?")
 st.sidebar.info("Analysis of 101,458 Companies")
 
 # Download Report Button
-pdf_path = "assets/Deep_Tech_2026_Final_v2.pdf"
+pdf_path = "assets/Deep_Tech_2026_Final_v3.pdf"
 html_path = "assets/Deep_Tech_2026_Report.html"
 
 if os.path.exists(pdf_path):
@@ -374,7 +374,7 @@ elif page == "Sector Deep Dives":
 elif page == "Full Report":
     # Embed the PDF directly so it matches the user's upload exactly
     
-    pdf_file = "assets/Deep_Tech_2026_Final_v2.pdf"
+    pdf_file = "assets/Deep_Tech_2026_Final_v3.pdf"
     
     if os.path.exists(pdf_file):
         with open(pdf_file, "rb") as f:
