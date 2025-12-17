@@ -41,11 +41,13 @@ st.markdown("""
 
 # Load Data
 @st.cache_data
-def load_data():
+# Load Data
+@st.cache_data(ttl=60) # Force refresh every 60 seconds to prevent stale data
+def load_data(version="v2"):
     with open("data/stats.json", "r") as f:
         return json.load(f)
 
-data = load_data()
+data = load_data("v3") # Bump version to bust cache
 overall = data['overall']
 sectors = pd.DataFrame(data['sectors'])
 
