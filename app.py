@@ -62,7 +62,7 @@ if os.path.exists(pdf_path):
     st.sidebar.download_button(
         label="📄 Download Full Report (PDF)",
         data=file_bytes,
-        file_name="Deep_Tech_2026_Report.pdf",
+        file_name="Deep_Tech_Proxy_Season_2026_What_Should_You_Know.pdf",
         mime="application/pdf"
     )
 elif os.path.exists(html_path):
