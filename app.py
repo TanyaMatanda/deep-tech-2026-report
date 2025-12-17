@@ -98,6 +98,18 @@ if page == "Executive Summary":
     # Context
     st.info(f"**Context:** This dataset is **{overall['private_pct']}% Private** and **{overall['public_pct']}% Public**. The high percentage of private companies explains the lower diversity figures compared to S&P 500 benchmarks.")
     
+    with st.expander("ℹ️ Definitions & Limitations"):
+        st.markdown("""
+        **Definitions:**
+        *   **Diversity:** Measured as the percentage of board directors who are women.
+        *   **Technical Expertise:** Directors with explicit backgrounds in STEM, R&D, Engineering, or specialized scientific fields relevant to the company's core technology.
+        
+        **Limitations:**
+        *   **Private Company Data:** 95% of the dataset consists of private companies. Governance data for these entities is disclosure-based and may not fully capture informal advisory structures.
+        *   **Lagging Indicators:** Public filings (Proxy Statements) are retrospective. Real-time board changes may not be immediately reflected.
+        *   **Sector Classification:** Companies are categorized by their primary revenue-generating activity or core technology focus.
+        """)
+    
     # Charts
     c1, c2 = st.columns(2)
     
