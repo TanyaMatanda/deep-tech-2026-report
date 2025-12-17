@@ -53,7 +53,7 @@ sectors = pd.DataFrame(data['sectors'])
 
 # Sidebar
 st.sidebar.title("Deep Tech 2026: What Should You Know?")
-st.sidebar.info(f"Analysis of {overall['total_companies']:,} Companies")
+st.sidebar.info("Analysis of 101,458 Companies")
 
 # Download Report Button
 pdf_path = "assets/Deep_Tech_2026_Final_v3.pdf"
@@ -92,7 +92,7 @@ if page == "Executive Summary":
     
     # Key Metrics
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Total Companies", f"{overall['total_companies']:,}")
+    col1.metric("Total Companies", "101,458", help="Total companies in the analysis universe (Report Baseline).")
     col2.metric("Avg Women on Boards", f"{overall['avg_women_pct']}%", delta_color="off")
     col3.metric("Zero Women Boards", f"{overall['pct_zero_women']}%", delta_color="inverse")
     col4.metric("Avg Tech Experts", f"{overall['avg_tech_experts']}")
