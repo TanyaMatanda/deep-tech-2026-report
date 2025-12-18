@@ -130,7 +130,15 @@ else:
     st.sidebar.warning("Report download not available.")
 
 # Navigation
-page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Jurisdictional Analysis", "Company Search", "Governance Explorer", "Full Report"])
+page = st.sidebar.radio("Navigate", [
+    "Executive Summary", 
+    "Sector Deep Dives",
+    "Regulatory Risk Dashboard",  # NEW: Combined Jurisdictional + Company Search
+    "Jurisdictional Analysis",     # Keep for backward compatibility
+    "Company Search",               # Keep for backward compatibility  
+    "Governance Explorer", 
+    "Full Report"
+])
 
 # --- Main Application ---
 if page == "Executive Summary":
@@ -602,6 +610,11 @@ elif page == "Sector Deep Dives":
         <p style="margin-bottom: 0;">{insights.get(selected_sector, 'No specific context available.')}</p>
     </div>
     """, unsafe_allow_html=True)
+
+# --- COMBINED REGULATORY RISK DASHBOARD ---
+elif page == "Regulatory Risk Dashboard":
+    from combined_regulatory_dashboard import render_regulatory_dashboard
+    render_regulatory_dashboard()
 
 # --- Jurisdictional & OECD Analysis ---
 elif page == "Jurisdictional Analysis":
