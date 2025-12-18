@@ -1,6 +1,29 @@
 import streamlit as st
 import pandas as pd
 
+def map_sector(row):
+    # Check both sub_sector and company_name for keywords
+    s = ""
+    if isinstance(row.get('sub_sector'), str):
+        s += row['sub_sector'].lower() + " "
+    if isinstance(row.get('company_name'), str):
+        s += row['company_name'].lower()
+    
+    if not s.strip(): return "Other"
+    
+    if any(x in s for x in ['biotech', 'pharma', 'medic', 'genom', 'therapeut', 'oncology', 'bio']): return "Biotechnology"
+    if any(x in s for x in ['energy', 'climate', 'solar', 'wind', 'carbon', 'renew', 'hydrogen', 'clean']): return "Energy & Climate"
+    if any(x in s for x in ['semi', 'chip', 'processor', 'hardware', 'gpu', 'ai', 'computing', 'hpc']): return "Semiconductors & AI"
+    if any(x in s for x in ['material', 'plasma', 'graphite', 'carbon', 'nano']): return "Advanced Materials"
+    if any(x in s for x in ['quantum', 'optic', 'photon']): return "Quantum & Photonics"
+    if any(x in s for x in ['space', 'missile', 'aircraft', 'satellite']): return "Space & Aerospace"
+    if any(x in s for x in ['cyber', 'crypto', 'forensic', 'decryption', 'security']): return "Cybersecurity"
+    if any(x in s for x in ['robot', 'drone', 'autonomous', 'automation']): return "Autonomous Systems"
+    if any(x in s for x in ['agri', 'food', 'crop', 'farm']): return "Agriculture & Food Tech"
+    if "advanced technology" in s: return "General Deep Tech"
+    if any(x in s for x in ['software', 'iot', 'data', 'info', 'tech']): return "Cross Domain Enablement"
+    return "Other"
+
 def render_governance_explorer():
     st.title("🏛️ Governance Data Explorer")
     st.markdown("### Real SEC Filing Data - No Composite Scores")
@@ -17,12 +40,12 @@ def render_governance_explorer():
         # Query company_risk_factors joined with companies
         st.markdown("---")
         
-        with st.spinner("Loading governance data (fetching 10,000 records)..."):
+        with st.spinner("Loading governance data (fetching 20,000 records)..."):
             try:
                 # Fetch data in batches to bypass the 1000-record limit
                 all_rows = []
                 batch_size = 1000
-                total_to_fetch = 10000
+                total_to_fetch = 20000
                 
                 for start in range(0, total_to_fetch, batch_size):
                     end = start + batch_size - 1
@@ -65,7 +88,7 @@ def render_governance_explorer():
                     gov_data.append({
                         'Company': company.get('company_name', 'Unknown'),
                         'Ticker': company.get('ticker_symbol', '-'),
-                        'Sector': company.get('primary_sector', '-'),
+                        'Sector': map_sector(company),
                         'Sub-Sector': company.get('sub_sector', '-'),
                         'Jurisdiction': company.get('jurisdiction', '-'),
                         
@@ -93,7 +116,7 @@ def render_governance_explorer():
                 
                 df_gov = pd.DataFrame(gov_data)
                 
-                st.markdown(f"**Showing Top 10,000 Companies** (out of {len(df_gov):,} loaded with governance data)")
+                st.markdown(f"**Showing Top 20,000 Companies** (out of {len(df_gov):,} loaded with governance data)")
                 st.markdown(f"**Last Refreshed**: {df_gov['Last Updated'].max() if not df_gov.empty else 'N/A'}")
                 
                 # Filters
