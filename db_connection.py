@@ -4,14 +4,30 @@ from supabase import create_client, Client, ClientOptions
 
 # Robust credential loading
 def get_credential(key):
-    # 1. Try st.secrets (Streamlit Cloud)
+    # 1. Try st.secrets (Streamlit Cloud UI or .streamlit/secrets.toml)
     try:
         if key in st.secrets:
             return st.secrets[key]
     except Exception:
         pass
     
-    # 2. Try environment variables (Local/Docker)
+    # 2. Try manual TOML load (Fallback for some environments)
+    try:
+        import toml
+        # Try both dashboard/.streamlit and .streamlit
+        paths = [
+            os.path.join(os.getcwd(), ".streamlit", "secrets.toml"),
+            os.path.join(os.getcwd(), "dashboard", ".streamlit", "secrets.toml")
+        ]
+        for p in paths:
+            if os.path.exists(p):
+                with open(p, "r") as f:
+                    s = toml.load(f)
+                    if key in s: return s[key]
+    except Exception:
+        pass
+    
+    # 3. Try environment variables (Local/Docker)
     val = os.getenv(key)
     if val:
         return val
@@ -21,21 +37,29 @@ def get_credential(key):
 # Check if we are on Streamlit Cloud
 IS_STREAMLIT_CLOUD = os.getenv("STREAMLIT_SERVER_ADDRESS") is not None or os.getenv("HOSTNAME") == "streamlit"
 
-SUPABASE_URL = get_credential("SUPABASE_URL")
-SUPABASE_KEY = get_credential("SUPABASE_KEY")
-
 @st.cache_resource
 def init_connection():
     url = get_credential("SUPABASE_URL")
     key = get_credential("SUPABASE_KEY")
         
     if not url or not key:
-        msg = "Supabase credentials not found. "
+        st.error("### ⚠️ Supabase Credentials Missing")
+        st.write("The app cannot connect to the database. Please follow these steps:")
+        
         if IS_STREAMLIT_CLOUD:
-            msg += "Please set SUPABASE_URL and SUPABASE_KEY in the Streamlit Cloud dashboard (Settings > Secrets)."
+            st.markdown("""
+            1. Go to your **Streamlit Cloud Dashboard**.
+            2. Click on your app -> **Settings** -> **Secrets**.
+            3. Paste the following (including the quotes):
+            ```toml
+            SUPABASE_URL = "https://mpabbijfgrmqiqnysiwf.supabase.co"
+            SUPABASE_KEY = "your-service-role-key-here"
+            ```
+            4. Click **Save**.
+            """)
         else:
-            msg += "Please set SUPABASE_URL and SUPABASE_KEY in .streamlit/secrets.toml or environment variables."
-        st.error(msg)
+            st.write("Please ensure `dashboard/.streamlit/secrets.toml` exists and contains `SUPABASE_URL` and `SUPABASE_KEY`.")
+            
         return None
     
     # Create client with schema option
