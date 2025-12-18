@@ -78,7 +78,7 @@ st.markdown("""
 # Load Data
 # Load Data
 @st.cache_data(ttl=3600) # Standard caching
-def load_data(version="v10.0"):
+def load_data(version="v11.0"):
     # Robust pathing: find data relative to this script
     base_dir = os.path.dirname(os.path.abspath(__file__))
     path = os.path.join(base_dir, "data", "stats.json")
@@ -88,7 +88,7 @@ def load_data(version="v10.0"):
         data = json.load(f)
         return data
 
-data = load_data("v10.0")
+data = load_data("v11.0")
 overall = data['overall']
 sectors = pd.DataFrame(data['sectors'])
 
@@ -130,7 +130,7 @@ else:
     st.sidebar.warning("Report download not available.")
 
 # Navigation
-page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Governance Explorer", "Full Report"])
+page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Jurisdictional Analysis", "Governance Explorer", "Full Report"])
 
 # --- Main Application ---
 if page == "Executive Summary":
@@ -602,6 +602,91 @@ elif page == "Sector Deep Dives":
         <p style="margin-bottom: 0;">{insights.get(selected_sector, 'No specific context available.')}</p>
     </div>
     """, unsafe_allow_html=True)
+
+# --- Jurisdictional & OECD Analysis ---
+elif page == "Jurisdictional Analysis":
+    st.title("Jurisdictional & OECD Analysis")
+    st.markdown("### Global Governance Benchmarks & Regulatory Roadmap")
+    
+    # 1. Jurisdictional Comparison
+    st.subheader("1. US (SEC) vs. Canada (SEDAR+) Comparison")
+    
+    comparison_data = {
+        "Feature": ["Diversity", "Climate Disclosure", "Cybersecurity", "Supply Chain", "Transparency"],
+        "United States (SEC)": [
+            "Mandatory disclosure proposal expected Oct 2025.",
+            "Rules adopted (Mar 2024) but currently stayed pending litigation.",
+            "Mandatory 4-day material incident reporting & annual strategy disclosure.",
+            "Sector-specific focus (Conflict Minerals).",
+            "Strict Beneficial Ownership Information (BOI) reporting."
+        ],
+        "Canada (SEDAR+)": [
+            "\"Comply or Explain\" model (NI 58-101) for gender diversity.",
+            "Mandatory climate rules paused as of April 2025 to support markets.",
+            "General risk disclosure requirements; less prescriptive than SEC.",
+            "New Forced & Child Labor in Supply Chains Act (Jan 2024).",
+            "Federal register for Individuals with Significant Control (25%+)."
+        ]
+    }
+    st.table(pd.DataFrame(comparison_data))
+    
+    st.divider()
+    
+    # 2. OECD Principles 2023
+    st.subheader("2. G20/OECD Principles of Corporate Governance (2023)")
+    
+    o1, o2, o3 = st.columns(3)
+    with o1:
+        st.markdown("""
+        <div style="background-color: #ffffff; padding: 1.5rem; border: 1px solid #e5e5e5; border-top: 4px solid #0077c8; height: 100%;">
+            <h4 style="color: #0077c8; margin-top: 0;">Sustainability</h4>
+            <p style="font-size: 0.9rem;">First-ever chapter dedicated to <b>Sustainability and Resilience</b>. Recommends managing climate risks as core board responsibilities.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with o2:
+        st.markdown("""
+        <div style="background-color: #ffffff; padding: 1.5rem; border: 1px solid #e5e5e5; border-top: 4px solid #00a3e0; height: 100%;">
+            <h4 style="color: #00a3e0; margin-top: 0;">Digital Risk</h4>
+            <p style="font-size: 0.9rem;">Explicit focus on <b>Digital Transformation</b>. Boards must oversee digital security, data privacy, and AI-driven decision making.</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with o3:
+        st.markdown("""
+        <div style="background-color: #ffffff; padding: 1.5rem; border: 1px solid #e5e5e5; border-top: 4px solid #051c2c; height: 100%;">
+            <h4 style="color: #051c2c; margin-top: 0;">Diversity</h4>
+            <p style="font-size: 0.9rem;">Strengthened recommendations for <b>Board Diversity</b> (gender and beyond) to enhance decision-making quality.</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.divider()
+    
+    # 3. Regulatory Roadmap
+    st.subheader("3. Regulatory Roadmap 2025-2026")
+    
+    roadmap = [
+        {"Date": "Feb 2025", "Regulation": "EU AI Act", "Impact": "Prohibitions on manipulative/exploitative AI practices take effect."},
+        {"Date": "Aug 2025", "Regulation": "EU AI Act", "Impact": "Governance rules for General-Purpose AI (GPAI) models apply."},
+        {"Date": "Oct 2025", "Regulation": "SEC Diversity", "Impact": "Expected proposal for mandatory corporate board diversity disclosures."},
+        {"Date": "Jan 2026", "Regulation": "UK SOX", "Impact": "Mandatory board declaration on effectiveness of material controls (UK Corporate Governance Code)."},
+        {"Date": "Aug 2026", "Regulation": "EU AI Act", "Impact": "Full applicability for High-Risk AI systems and transparency rules."}
+    ]
+    
+    for item in roadmap:
+        with st.expander(f"📅 {item['Date']}: {item['Regulation']}"):
+            st.write(item['Impact'])
+            st.info("**Strategic Affect:** Companies must audit their AI pipelines and internal control frameworks 6-12 months in advance to avoid non-compliance penalties.")
+
+    st.divider()
+    
+    # 4. Strategic Impact for Deep Tech
+    st.subheader("4. Strategic Impact Analysis")
+    st.markdown("""
+    For Deep Tech companies, these jurisdictional shifts create a **"Compliance Multiplier"** effect:
+    
+    *   **Capital Access:** Divergent ESG rules between the US and EU/Canada can complicate cross-border fundraising.
+    *   **Talent War:** Stricter diversity mandates in the US (proposed) vs. Canada's "Comply or Explain" may shift where companies choose to HQ their executive teams.
+    *   **R&D Velocity:** The EU AI Act's high-risk classification could slow down deployment for medical or infrastructure-focused AI startups.
+    """)
         
 # --- Governance Explorer ---
 elif page == "Governance Explorer":
