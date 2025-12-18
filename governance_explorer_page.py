@@ -50,7 +50,7 @@ def render_governance_explorer():
                 for start in range(0, total_to_fetch, batch_size):
                     end = start + batch_size - 1
                     response = supabase.table('board_composition_annual')\
-                        .select('*, companies(company_name, ticker_symbol, primary_sector, sub_sector, jurisdiction)')\
+                        .select('*, companies(company_name, ticker_symbol, primary_sector, listing_type, jurisdiction)')\
                         .order('fiscal_year', desc=True)\
                         .range(start, end)\
                         .execute()
@@ -92,7 +92,7 @@ def render_governance_explorer():
                         'Company': company.get('company_name', 'Unknown'),
                         'Ticker': company.get('ticker_symbol', '-'),
                         'Sector': map_sector(company),
-                        'Sub-Sector': company.get('sub_sector', '-'),
+                        'Type': company.get('listing_type', 'Private'),
                         'Jurisdiction': company.get('jurisdiction', '-'),
                         
                         # Board Composition
@@ -132,7 +132,7 @@ def render_governance_explorer():
                     sector_filter = st.multiselect("Sector", sorted(df_gov['Sector'].dropna().unique()), default=[])
                 
                 with filter_col2:
-                    sub_sector_filter = st.multiselect("Sub-Sector", sorted(df_gov['Sub-Sector'].dropna().unique()), default=[])
+                    type_filter = st.multiselect("Company Type", sorted(df_gov['Type'].dropna().unique()), default=[])
                     
                 with filter_col3:
                     juris_filter = st.multiselect("Jurisdiction", sorted(df_gov['Jurisdiction'].dropna().unique()), default=[])
@@ -148,8 +148,8 @@ def render_governance_explorer():
                 
                 if sector_filter:
                     filtered_df = filtered_df[filtered_df['Sector'].isin(sector_filter)]
-                if sub_sector_filter:
-                    filtered_df = filtered_df[filtered_df['Sub-Sector'].isin(sub_sector_filter)]
+                if type_filter:
+                    filtered_df = filtered_df[filtered_df['Type'].isin(type_filter)]
                 if juris_filter:
                     filtered_df = filtered_df[filtered_df['Jurisdiction'].isin(juris_filter)]
                 if min_board_indep > 0:
@@ -171,7 +171,7 @@ def render_governance_explorer():
                 
                 with tab1:
                     st.markdown("### Board Composition & Independence")
-                    board_cols = ['Company', 'Ticker', 'Sector', 'Sub-Sector', 'Board Independence %', 'Board Diversity %', 'Split Chair/CEO', 'Total Directors']
+                    board_cols = ['Company', 'Ticker', 'Sector', 'Type', 'Board Independence %', 'Board Diversity %', 'Split Chair/CEO', 'Total Directors']
                     st.dataframe(
                         filtered_df[board_cols].sort_values('Board Independence %', ascending=False, na_position='last'),
                         use_container_width=True,
@@ -198,7 +198,7 @@ def render_governance_explorer():
                     
                 with tab4:
                     st.markdown("### Jurisdiction & Sector Analysis")
-                    risk_cols = ['Company', 'Ticker', 'Sector', 'Sub-Sector', 'Jurisdiction', 'Fiscal Year']
+                    risk_cols = ['Company', 'Ticker', 'Sector', 'Type', 'Jurisdiction', 'Fiscal Year']
                     st.dataframe(
                         filtered_df[risk_cols].sort_values('Company', ascending=True),
                         use_container_width=True,
