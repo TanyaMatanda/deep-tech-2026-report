@@ -2,35 +2,40 @@ import os
 import streamlit as st
 from supabase import create_client, Client, ClientOptions
 
-# Use st.secrets or environment variables
-try:
-    SUPABASE_URL = st.secrets.get("SUPABASE_URL")
-    SUPABASE_KEY = st.secrets.get("SUPABASE_KEY")
-except FileNotFoundError:
-    SUPABASE_URL = os.getenv("SUPABASE_URL")
-    SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-except Exception:
-    # Fallback for when st.secrets is not available (e.g. script execution)
-    SUPABASE_URL = os.getenv("SUPABASE_URL")
-    SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+# Robust credential loading
+def get_credential(key):
+    # 1. Try st.secrets (Streamlit Cloud)
+    try:
+        if key in st.secrets:
+            return st.secrets[key]
+    except Exception:
+        pass
+    
+    # 2. Try environment variables (Local/Docker)
+    val = os.getenv(key)
+    if val:
+        return val
+        
+    return None
+
+# Check if we are on Streamlit Cloud
+IS_STREAMLIT_CLOUD = os.getenv("STREAMLIT_SERVER_ADDRESS") is not None or os.getenv("HOSTNAME") == "streamlit"
+
+SUPABASE_URL = get_credential("SUPABASE_URL")
+SUPABASE_KEY = get_credential("SUPABASE_KEY")
 
 @st.cache_resource
 def init_connection():
-    # Use st.secrets or environment variables
-    try:
-        url = st.secrets.get("SUPABASE_URL")
-        key = st.secrets.get("SUPABASE_KEY")
-    except Exception:
-        url = os.getenv("SUPABASE_URL")
-        key = os.getenv("SUPABASE_KEY")
-
-    if not url or not key:
-        # Try one more time with os.getenv just in case st.secrets returned None but didn't raise
-        url = os.getenv("SUPABASE_URL")
-        key = os.getenv("SUPABASE_KEY")
+    url = get_credential("SUPABASE_URL")
+    key = get_credential("SUPABASE_KEY")
         
     if not url or not key:
-        st.error("Supabase credentials not found. Please set SUPABASE_URL and SUPABASE_KEY in .streamlit/secrets.toml or environment variables.")
+        msg = "Supabase credentials not found. "
+        if IS_STREAMLIT_CLOUD:
+            msg += "Please set SUPABASE_URL and SUPABASE_KEY in the Streamlit Cloud dashboard (Settings > Secrets)."
+        else:
+            msg += "Please set SUPABASE_URL and SUPABASE_KEY in .streamlit/secrets.toml or environment variables."
+        st.error(msg)
         return None
     
     # Create client with schema option

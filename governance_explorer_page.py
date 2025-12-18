@@ -18,9 +18,11 @@ def render_governance_explorer():
         st.markdown("---")
         
         with st.spinner("Loading governance data..."):
-            # Fetch data with company names
-            response = supabase.table('company_risk_factors')\
+            # Fetch data from board_composition_annual joined with companies
+            # We also join with company_risk_factors for risk-specific data
+            response = supabase.table('board_composition_annual')\
                 .select('*, companies!inner(company_name, ticker_symbol, primary_sector, jurisdiction)')\
+                .order('fiscal_year', desc=True)\
                 .limit(1000)\
                 .execute()
             
@@ -31,6 +33,17 @@ def render_governance_explorer():
                 gov_data = []
                 for row in response.data:
                     company = row.get('companies', {})
+                    
+                    # Calculate independence % if not stored
+                    indep_pct = row.get('board_independence_pct')
+                    if indep_pct is None and row.get('total_directors', 0) > 0:
+                        ratio = row.get('independent_directors', 0) / row.get('total_directors')
+                        # Heuristic: Flip if < 50% (likely insider count)
+                        if ratio < 0.5:
+                            indep_pct = (1 - ratio) * 100
+                        else:
+                            indep_pct = ratio * 100
+
                     gov_data.append({
                         'Company': company.get('company_name', 'Unknown'),
                         'Ticker': company.get('ticker_symbol', '-'),
@@ -38,31 +51,23 @@ def render_governance_explorer():
                         'Jurisdiction': company.get('jurisdiction', '-'),
                         
                         # Board Composition
-                        'Board Independence %': row.get('board_independence_pct'),
-                        'Board Diversity %': row.get('board_diversity_pct'),
-                        'Split Chair/CEO': '✅ Yes' if row.get('split_chair_ceo') else ('❌ No' if row.get('split_chair_ceo') is False else '-'),
-                        'Overboarded Directors': row.get('overboarded_directors_count', 0),
+                        'Board Independence %': round(indep_pct, 1) if indep_pct is not None else None,
+                        'Board Diversity %': row.get('women_percentage'),
+                        'Split Chair/CEO': '✅ Yes' if not row.get('ceo_is_board_chair') else '❌ No',
+                        'Total Directors': row.get('total_directors'),
                         
-                        # Compensation
-                        'Say-on-Pay %': row.get('say_on_pay_support'),
-                        'CEO Pay Ratio': f"{row.get('ceo_pay_ratio')}:1" if row.get('ceo_pay_ratio') else '-',
-                        'Has Clawback': '✅' if row.get('has_clawback_policy') else '❌',
+                        # Technical Expertise
+                        'Tech Experts': row.get('tech_experts', 0),
+                        'AI/Cyber Experts': row.get('ai_cybersecurity_experts', 0),
                         
                         # AI Governance
-                        'AI Ethics Board': '✅' if row.get('has_ai_ethics_board') else '❌',
-                        'Board AI Expertise': '✅' if row.get('board_ai_expertise') else '❌',
-                        'AI Risk Mentions': row.get('ai_risk_mentions', 0),
+                        'AI Oversight': '✅' if row.get('has_ai_oversight_committee') else '❌',
+                        'AI Ethics Policy': '✅' if row.get('has_ai_ethics_policy') else '❌',
                         
-                        # Cybersecurity
-                        'Cyber Oversight': '✅' if row.get('cyber_oversight_explicit') else '❌',
-                        'Breach History': '✅' if row.get('breach_history') else '❌',
+                        # Compensation & Meetings
+                        'Board Meetings': row.get('board_meetings_per_year', '-'),
+                        'Avg Attendance': f"{row.get('avg_attendance_rate')}%" if row.get('avg_attendance_rate') else '-',
                         
-                        # Risk & ESG
-                        'Climate Risk Mentions': row.get('climate_risk_mentions', 0),
-                        'Supply Chain Risks': row.get('supply_chain_risk_mentions', 0),
-                        'Total Risk Factors': row.get('risk_factor_count', 0),
-                        
-                        'Last Updated': row.get('last_updated', '-'),
                         'Fiscal Year': row.get('fiscal_year', '-')
                     })
                 
