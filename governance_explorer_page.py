@@ -162,11 +162,12 @@ def render_governance_explorer():
                 st.markdown(f"**Filtered Results**: {len(filtered_df):,} companies")
                 
                 # Tabs for different views
-                tab1, tab2, tab3, tab4 = st.tabs([
+                tab1, tab2, tab3, tab4, tab5 = st.tabs([
                     "📊 Board & Independence",
                     "💰 Compensation",
                     "🤖 AI & Cyber",
-                    "🌍 Risk & ESG"
+                    "🌍 Jurisdiction & Sector",
+                    "⚠️ Risk Factors"
                 ])
                 
                 with tab1:
@@ -204,6 +205,47 @@ def render_governance_explorer():
                         use_container_width=True,
                         hide_index=True
                     )
+
+                with tab5:
+                    st.markdown("### 2025 Proxy Risk Factors")
+                    st.caption("Specific risk disclosures extracted from Item 1A of 10-K and Proxy filings.")
+                    
+                    try:
+                        # Fetch risk factors
+                        risk_res = supabase.table('company_risk_factors')\
+                            .select('*, companies(company_name, ticker_symbol)')\
+                            .execute()
+                        
+                        if risk_res.data:
+                            risk_df = pd.DataFrame([
+                                {
+                                    'Company': r['companies']['company_name'],
+                                    'Ticker': r['companies']['ticker_symbol'],
+                                    'Category': r['risk_category'],
+                                    'Risk Title': r['risk_title'],
+                                    'Description': r['risk_description'],
+                                    'Material': '✅' if r.get('is_material') else '❌',
+                                    'Year': r['fiscal_year']
+                                }
+                                for r in risk_res.data
+                            ])
+                            
+                            # Filter by companies currently in filtered_df
+                            current_companies = filtered_df['Company'].unique()
+                            risk_df = risk_df[risk_df['Company'].isin(current_companies)]
+                            
+                            if not risk_df.empty:
+                                st.dataframe(
+                                    risk_df.sort_values(['Company', 'Category']),
+                                    use_container_width=True,
+                                    hide_index=True
+                                )
+                            else:
+                                st.info("No specific risk factor disclosures found for the filtered companies.")
+                        else:
+                            st.info("No risk factor data available in the database.")
+                    except Exception as e:
+                        st.error(f"Error loading risk factors: {e}")
                 
                 # Export
                 st.markdown("---")

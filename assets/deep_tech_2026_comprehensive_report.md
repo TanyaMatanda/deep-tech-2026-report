@@ -38,6 +38,14 @@ Our analysis of **101,458 companies** across the United States and Canada reveal
 *   **High concentration of dual-class share structures** among founder-led companies.
 *   **Limited proxy access and shareholder rights** across the sector.
 
+**2025 Risk Landscape:**
+*   **AI Governance & Ethics:** Scrutiny of responsible AI frameworks and the scarcity of dedicated oversight committees (0.1%).
+*   **Cybersecurity & IP Theft:** Near-universal disclosure of cyber threats as material risks, with a focus on state-sponsored IP theft.
+*   **Geopolitical & Supply Chain:** Export controls and trade dynamics, particularly in the Semiconductor sector.
+*   **Regulatory & Compliance:** Increasing pressure in Energy & Climate (utilities) and Space (defense contracting).
+*   **Innovation Integrity:** The "Innovation Wash" risk, where companies claim AI status without supporting R&D (patents).
+*   **Clinical & Technical Feasibility:** High-stakes risks in Biotech (clinical trials) and Quantum (expectation management).
+
 These findings suggest a sector that has optimized for technical competence while lagging in transparency around governance for emerging technology risks—a notable gap given Deep Tech's central role in AI development. As these companies scale and face increased regulatory scrutiny, this gap presents both risk and opportunity for investors and boards.
 
 ---

@@ -132,9 +132,9 @@ else:
 # Navigation
 page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Governance Explorer", "Full Report"])
 
-# --- VERSION 12.0 - FORCED REDEPLOY ---
+# --- VERSION 13.0 - FORCED REDEPLOY (UPDATED) ---
 if page == "Executive Summary":
-    st.title("The State of Governance in Deep Tech (v12.0)")
+    st.title("The State of Governance in Deep Tech (v13.0) - UPDATED")
     st.markdown("<p style='font-size: 1.2rem; color: #666; font-weight: 400; margin-top: -1rem;'>2026 PROXY SEASON OUTLOOK</p>", unsafe_allow_html=True)
     
     # Key Metrics
@@ -154,6 +154,50 @@ if page == "Executive Summary":
         The high concentration of private companies is a key driver of the governance trends observed, particularly in diversity and disclosure levels compared to public benchmarks.</p>
     </div>
     """, unsafe_allow_html=True)
+
+    # 2025 Risk Landscape
+    st.markdown("### 2025 Risk Landscape")
+    
+    # Fetch risk stats for dynamic chart
+    from db_connection import init_connection
+    supabase = init_connection()
+    if supabase:
+        try:
+            risk_res = supabase.table('company_risk_factors').select('risk_category').execute()
+            if risk_res.data:
+                risk_counts = pd.DataFrame(risk_res.data)['risk_category'].value_counts().reset_index()
+                risk_counts.columns = ['Category', 'Count']
+                
+                fig_risk = px.bar(
+                    risk_counts, x='Category', y='Count',
+                    title='Distribution of Disclosed Risks (2025 Proxies)',
+                    color='Category',
+                    color_discrete_sequence=MCKINSEY_PALETTE
+                )
+                fig_risk.update_layout(height=300, margin=dict(l=20, r=20, t=40, b=20))
+                st.plotly_chart(fig_risk, use_container_width=True)
+        except:
+            pass
+
+    r_col1, r_col2 = st.columns(2)
+    
+    with r_col1:
+        st.markdown("""
+        **AI & Technical Risks**
+        *   **AI Governance & Ethics:** Scrutiny of responsible AI frameworks; scarcity of dedicated oversight committees (0.1%).
+        *   **Innovation Integrity:** The "Innovation Wash" risk—companies claiming AI status without supporting R&D (patents).
+        *   **Technical Feasibility:** High-stakes risks in Quantum (expectation management) and Biotech (clinical trials).
+        """)
+        
+    with r_col2:
+        st.markdown("""
+        **Operational & Geopolitical Risks**
+        *   **Cybersecurity & IP Theft:** Near-universal disclosure of cyber threats as material risks; focus on state-sponsored theft.
+        *   **Geopolitical & Supply Chain:** Export controls and trade dynamics, particularly in Semiconductors.
+        *   **Regulatory & Compliance:** Increasing pressure in Energy & Climate and Space (defense contracting).
+        """)
+    
+    st.divider()
     
     with st.expander("ℹ️ Definitions & Limitations"):
         st.markdown("""
