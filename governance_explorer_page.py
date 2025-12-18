@@ -1,7 +1,7 @@
-# Governance Explorer Page Code Snippet
-# Insert this after the Company Search page (around line 2189 in app.py)
+import streamlit as st
+import pandas as pd
 
-elif page == "Governance Explorer":
+def render_governance_explorer():
     st.title("🏛️ Governance Data Explorer")
     st.markdown("### Real SEC Filing Data - No Composite Scores")
     
@@ -107,14 +107,14 @@ elif page == "Governance Explorer":
                 
                 # Tabs for different views
                 tab1, tab2, tab3, tab4 = st.tabs([
-                    "📊 Board Composition",
+                    "📊 Board & Independence",
                     "💰 Compensation",
                     "🤖 AI & Cyber",
                     "🌍 Risk & ESG"
                 ])
                 
                 with tab1:
-                    st.markdown("### Board Composition Factors")
+                    st.markdown("### Board Composition & Independence")
                     board_cols = ['Company', 'Ticker', 'Sector', 'Board Independence %', 'Board Diversity %', 'Split Chair/CEO', 'Overboarded Directors']
                     st.dataframe(
                         filtered_df[board_cols].sort_values('Board Independence %', ascending=False, na_position='last'),
@@ -176,11 +176,11 @@ elif page == "Governance Explorer":
                     - **Best Practice**: Yes (reduces conflicts of interest)
                     
                     **Say-on-Pay %**: Shareholder approval rating for executive compensation
-                    - **Red Flag**: \u003c70% (indicates shareholder concerns)
+                    - **Red Flag**: <70% (indicates shareholder concerns)
                     
                     **CEO Pay Ratio**: Ratio of CEO compensation to median employee pay
                     - **Typical Range**: 100:1 to 300:1
-                    - **Red Flag**: \u003e500:1
+                    - **Red Flag**: >500:1
                     
                     **AI Ethics Board**: Dedicated board committee for AI governance
                     - **Emerging Best Practice**: Yes for AI-intensive companies
@@ -191,3 +191,6 @@ elif page == "Governance Explorer":
                     **Risk Mentions**: Number of times topic appears in Item  1A Risk Factors
                     - **Higher = More disclosure** (not necessarily more risk)
                     """)
+
+if __name__ == "__main__":
+    render_governance_explorer()
