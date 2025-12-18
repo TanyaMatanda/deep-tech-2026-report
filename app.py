@@ -78,7 +78,7 @@ st.markdown("""
 # Load Data
 # Load Data
 @st.cache_data(ttl=3600) # Standard caching
-def load_data(version="v11.0"):
+def load_data(version="v12.0"):
     # Robust pathing: find data relative to this script
     base_dir = os.path.dirname(os.path.abspath(__file__))
     path = os.path.join(base_dir, "data", "stats.json")
@@ -88,7 +88,7 @@ def load_data(version="v11.0"):
         data = json.load(f)
         return data
 
-data = load_data("v11.0")
+data = load_data("v12.0")
 overall = data['overall']
 sectors = pd.DataFrame(data['sectors'])
 
@@ -130,7 +130,7 @@ else:
     st.sidebar.warning("Report download not available.")
 
 # Navigation
-page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Jurisdictional Analysis", "Governance Explorer", "Full Report"])
+page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Jurisdictional Analysis", "Company Search", "Governance Explorer", "Full Report"])
 
 # --- Main Application ---
 if page == "Executive Summary":
@@ -687,6 +687,11 @@ elif page == "Jurisdictional Analysis":
     *   **Talent War:** Stricter diversity mandates in the US (proposed) vs. Canada's "Comply or Explain" may shift where companies choose to HQ their executive teams.
     *   **R&D Velocity:** The EU AI Act's high-risk classification could slow down deployment for medical or infrastructure-focused AI startups.
     """)
+
+# --- Company Search ---
+elif page == "Company Search":
+    from company_search_page import render_company_search
+    render_company_search()
         
 # --- Governance Explorer ---
 elif page == "Governance Explorer":
