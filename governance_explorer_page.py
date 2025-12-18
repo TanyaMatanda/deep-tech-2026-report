@@ -77,8 +77,11 @@ def render_governance_explorer():
                     
                     # Calculate independence % if not stored
                     indep_pct = row.get('board_independence_pct')
-                    if indep_pct is None and row.get('total_directors', 0) > 0:
-                        ratio = row.get('independent_directors', 0) / row.get('total_directors')
+                    total = row.get('total_directors') or 0
+                    indep = row.get('independent_directors') or 0
+                    
+                    if indep_pct is None and total > 0:
+                        ratio = indep / total
                         # Heuristic: Flip if < 50% (likely insider count)
                         if ratio < 0.5:
                             indep_pct = (1 - ratio) * 100
