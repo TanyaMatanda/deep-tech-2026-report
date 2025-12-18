@@ -18,13 +18,18 @@ def render_governance_explorer():
         st.markdown("---")
         
         with st.spinner("Loading governance data..."):
-            # Fetch data from board_composition_annual joined with companies
-            # We also join with company_risk_factors for risk-specific data
-            response = supabase.table('board_composition_annual')\
-                .select('*, companies!inner(company_name, ticker_symbol, primary_sector, jurisdiction)')\
-                .order('fiscal_year', desc=True)\
-                .limit(1000)\
-                .execute()
+            try:
+                # Fetch data from board_composition_annual joined with companies
+                # Using standard join syntax for better compatibility
+                response = supabase.table('board_composition_annual')\
+                    .select('*, companies(company_name, ticker_symbol, primary_sector, jurisdiction)')\
+                    .order('fiscal_year', desc=True)\
+                    .limit(1000)\
+                    .execute()
+            except Exception as e:
+                st.error(f"### ❌ Database Query Failed")
+                st.write(f"Error details: {str(e)}")
+                return
             
             if not response.data:
                 st.warning("No governance data found")
