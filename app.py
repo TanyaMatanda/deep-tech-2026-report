@@ -78,7 +78,7 @@ st.markdown("""
 # Load Data
 # Load Data
 @st.cache_data(ttl=3600) # Standard caching
-def load_data(version="v9.0"):
+def load_data(version="v10.0"):
     # Robust pathing: find data relative to this script
     base_dir = os.path.dirname(os.path.abspath(__file__))
     path = os.path.join(base_dir, "data", "stats.json")
@@ -88,7 +88,7 @@ def load_data(version="v9.0"):
         data = json.load(f)
         return data
 
-data = load_data("v9.0")
+data = load_data("v10.0")
 overall = data['overall']
 sectors = pd.DataFrame(data['sectors'])
 
