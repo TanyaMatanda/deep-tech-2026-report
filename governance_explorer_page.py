@@ -67,13 +67,14 @@ def render_governance_explorer():
                         
                         # AI Governance
                         'AI Oversight': '✅' if row.get('has_ai_oversight_committee') else '❌',
-                        'AI Ethics Policy': '✅' if row.get('has_ai_ethics_policy') else '❌',
+                        'AI Ethics Board': '✅' if row.get('has_ai_ethics_policy') else '❌',
                         
                         # Compensation & Meetings
                         'Board Meetings': row.get('board_meetings_per_year', '-'),
                         'Avg Attendance': f"{row.get('avg_attendance_rate')}%" if row.get('avg_attendance_rate') else '-',
                         
-                        'Fiscal Year': row.get('fiscal_year', '-')
+                        'Fiscal Year': row.get('fiscal_year', '-'),
+                        'Last Updated': row.get('created_at', '-')
                     })
                 
                 df_gov = pd.DataFrame(gov_data)
@@ -125,7 +126,7 @@ def render_governance_explorer():
                 
                 with tab1:
                     st.markdown("### Board Composition & Independence")
-                    board_cols = ['Company', 'Ticker', 'Sector', 'Board Independence %', 'Board Diversity %', 'Split Chair/CEO', 'Overboarded Directors']
+                    board_cols = ['Company', 'Ticker', 'Sector', 'Board Independence %', 'Board Diversity %', 'Split Chair/CEO', 'Total Directors']
                     st.dataframe(
                         filtered_df[board_cols].sort_values('Board Independence %', ascending=False, na_position='last'),
                         use_container_width=True,
@@ -133,28 +134,28 @@ def render_governance_explorer():
                     )
                     
                 with tab2:
-                    st.markdown("### Executive Compensation Factors")
-                    comp_cols = ['Company', 'Ticker', 'Say-on-Pay %', 'CEO Pay Ratio', 'Has Clawback']
+                    st.markdown("### Board Meetings & Attendance")
+                    comp_cols = ['Company', 'Ticker', 'Board Meetings', 'Avg Attendance', 'Fiscal Year']
                     st.dataframe(
-                        filtered_df[comp_cols].sort_values('Say-on-Pay %', ascending=False, na_position='last'),
+                        filtered_df[comp_cols].sort_values('Board Meetings', ascending=False, na_position='last'),
                         use_container_width=True,
                         hide_index=True
                     )
                     
                 with tab3:
                     st.markdown("### AI Governance & Cybersecurity")
-                    ai_cols = ['Company', 'Ticker', 'AI Ethics Board', 'Board AI Expertise', 'AI Risk Mentions', 'Cyber Oversight', 'Breach History']
+                    ai_cols = ['Company', 'Ticker', 'AI Oversight', 'AI Ethics Board', 'Tech Experts', 'AI/Cyber Experts']
                     st.dataframe(
-                        filtered_df[ai_cols].sort_values('AI Risk Mentions', ascending=False),
+                        filtered_df[ai_cols].sort_values('AI/Cyber Experts', ascending=False),
                         use_container_width=True,
                         hide_index=True
                     )
                     
                 with tab4:
-                    st.markdown("### Risk Factors & ESG")
-                    risk_cols = ['Company', 'Ticker', 'Climate Risk Mentions', 'Supply Chain Risks', 'Total Risk Factors']
+                    st.markdown("### Jurisdiction & Sector Analysis")
+                    risk_cols = ['Company', 'Ticker', 'Sector', 'Jurisdiction', 'Fiscal Year']
                     st.dataframe(
-                        filtered_df[risk_cols].sort_values('Climate Risk Mentions', ascending=False),
+                        filtered_df[risk_cols].sort_values('Company', ascending=True),
                         use_container_width=True,
                         hide_index=True
                     )
