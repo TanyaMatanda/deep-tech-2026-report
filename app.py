@@ -132,9 +132,9 @@ else:
 # Navigation
 page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Governance Explorer", "Full Report"])
 
-# --- VERSION 13.0 - FORCED REDEPLOY (UPDATED) ---
+# --- Main Application ---
 if page == "Executive Summary":
-    st.title("The State of Governance in Deep Tech (v13.0) - UPDATED")
+    st.title("The State of Governance in Deep Tech")
     st.markdown("<p style='font-size: 1.2rem; color: #666; font-weight: 400; margin-top: -1rem;'>2026 PROXY SEASON OUTLOOK</p>", unsafe_allow_html=True)
     
     # Key Metrics
