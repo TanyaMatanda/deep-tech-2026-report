@@ -37,26 +37,29 @@ def get_credential(key):
 # Check if we are on Streamlit Cloud
 IS_STREAMLIT_CLOUD = os.getenv("STREAMLIT_SERVER_ADDRESS") is not None or os.getenv("HOSTNAME") == "streamlit"
 
-@st.cache_resource
 def init_connection():
     url = get_credential("SUPABASE_URL")
     key = get_credential("SUPABASE_KEY")
         
     if not url or not key:
         st.error("### ⚠️ Supabase Credentials Missing")
-        st.write("The app cannot connect to the database. Please follow these steps:")
+        st.write("The app cannot connect to the database. Please follow these steps exactly:")
         
         if IS_STREAMLIT_CLOUD:
-            st.markdown("""
+            st.markdown(f"""
             1. Go to your **Streamlit Cloud Dashboard**.
             2. Click on your app -> **Settings** -> **Secrets**.
-            3. Paste the following (including the quotes):
+            3. **Delete everything** in the secrets box and paste exactly this:
             ```toml
             SUPABASE_URL = "https://mpabbijfgrmqiqnysiwf.supabase.co"
-            SUPABASE_KEY = "your-service-role-key-here"
+            SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1wYWJiaWpmZ3JtcWlxbnlzaXdmIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2NDM0MDg3OSwiZXhwIjoyMDc5OTE2ODc5fQ.s0DV0GCUP-LCwn9RhRsQyRm_D-tMSzlHGB8SI17gEB0"
             ```
             4. Click **Save**.
+            5. **Refresh this page.**
             """)
+            
+            # Debug info (masked)
+            st.info(f"Debug: URL found: {'✅' if url else '❌'} | Key found: {'✅' if key else '❌'}")
         else:
             st.write("Please ensure `dashboard/.streamlit/secrets.toml` exists and contains `SUPABASE_URL` and `SUPABASE_KEY`.")
             
