@@ -1,0 +1,2041 @@
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+from st_aggrid import AgGrid, GridOptionsBuilder, GridUpdateMode, DataReturnMode
+from db_connection import get_total_company_count, get_top_companies, get_interlocks, init_connection, get_companies_paginated, get_full_dataset_csv
+
+# Page Config
+st.set_page_config(
+    page_title="Deep Tech Proxy Season 2026",
+    page_icon="📊",
+    layout="wide"
+)
+
+# --- Custom CSS for Investment Terminal Aesthetic (Safari Compatible) ---
+st.markdown("""
+<style>
+    /* Import Google Fonts */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono:wght@500;700&display=swap');
+
+    /* Safari font smoothing */
+    * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Global Font Settings */
+    html, body, [class*="css"] {
+        font-family: 'Inter', sans-serif !important;
+        color: #1a202c !important;
+    }
+    
+    /* Monospace for Numbers & Metrics */
+    .stMetric, .stMetric *, .stDataFrame, .stTable {
+        font-family: 'Roboto Mono', monospace !important;
+    }
+
+    /* Light Background */
+    .stApp {
+        background-color: #f8f9fa !important;
+    }
+    
+    /* Headers - Darker and Bolder */
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        letter-spacing: -0.5px !important;
+    }
+
+    /* Metric Cards - BLACK for maximum readability */
+    div[data-testid="stMetricValue"],
+    div[data-testid="stMetricValue"] *,
+    [data-testid="stMetricValue"],
+    [data-testid="stMetricValue"] * {
+        font-size: 36px !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    div[data-testid="stMetricLabel"],
+    div[data-testid="stMetricLabel"] *,
+    [data-testid="stMetricLabel"],
+    [data-testid="stMetricLabel"] * {
+        font-size: 14px !important;
+        color: #374151 !important;
+        text-transform: uppercase !important;
+        letter-spacing: 1.5px !important;
+        font-weight: 600 !important;
+        -webkit-text-fill-color: #374151 !important;
+    }
+    
+    /* Delta values - Much darker colors for Safari */
+    div[data-testid="stMetricDelta"],
+    div[data-testid="stMetricDelta"] *,
+    [data-testid="stMetricDelta"],
+    [data-testid="stMetricDelta"] * {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* Override Streamlit's default metric colors */
+    .stMetric label {
+        color: #374151 !important;
+        -webkit-text-fill-color: #374151 !important;
+    }
+    
+    .stMetric [data-testid="stMetricValue"] {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    .stMetric [data-testid="stMetricDelta"] {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+
+    /* Dataframes - Better borders and text */
+    .stDataFrame, .stDataFrame * {
+        border: 2px solid #9ca3af !important;
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    .dataframe tbody tr td {
+        color: #000000 !important;
+        font-weight: 500 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    .dataframe thead tr th {
+        color: #000000 !important;
+        font-weight: 700 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+
+    /* Sidebar - Better contrast */
+    section[data-testid="stSidebar"] {
+        background-color: #e5e7eb !important;
+        border-right: 3px solid #9ca3af !important;
+    }
+    
+    section[data-testid="stSidebar"] *, 
+    section[data-testid="stSidebar"] label,
+    section[data-testid="stSidebar"] .stRadio label,
+    section[data-testid="stSidebar"] .stSelectbox label {
+        color: #000000 !important;
+        font-weight: 600 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* Buttons - Maximum contrast */
+    .stButton > button {
+        background-color: #1e3a8a !important;
+        color: #ffffff !important;
+        border: none !important;
+        border-radius: 6px !important;
+        font-family: 'Inter', sans-serif !important;
+        font-weight: 700 !important;
+        padding: 0.6rem 1.2rem !important;
+        -webkit-text-fill-color: #ffffff !important;
+    }
+    
+    .stButton > button:hover {
+        background-color: #1e293b !important;
+    }
+    
+    /* Expander */
+    .streamlit-expanderHeader {
+        background-color: #d1d5db !important;
+        border-radius: 6px !important;
+        color: #000000 !important;
+        font-weight: 700 !important;
+        -webkit-text-fill-color: #000000 !important;
+    }
+    
+    /* All text elements - ensure dark text */
+    p, span, div, label {
+        color: #1a202c !important;
+    }
+    
+    /* Plotly charts - darker text */
+    .js-plotly-plot .plotly text {
+        fill: #000000 !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+# Sidebar
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to", [
+    "Home", 
+    "Public Companies", 
+    "Private Companies",
+    "Company Screener (Excel-like)", 
+    "Benchmarking", 
+    "Expert Analyst", 
+    "Sector Analysis", 
+    "Governance Risk", 
+    "Methodology & Definitions"
+])
+
+def display_deal_score_explainer():
+    """Reusable explainer for the Deal Qualification Score."""
+    with st.expander("ℹ️ What is the Deal Qualification Score?"):
+        st.markdown("### The Formula for Resilience")
+        st.markdown("Our score identifies high-growth deep tech companies that are built to last. It combines three critical pillars:")
+        
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Governance (40%)", "OECD-Aligned", "Penalizes Risk")
+        c2.metric("Innovation (40%)", "Technical Moat", "Patents & Growth")
+        c3.metric("Data Quality (20%)", "Transparency", "Verified Data")
+        
+        st.caption("**Why this formula?** History shows that great tech (Innovation) fails without good leadership (Governance). We add a premium for transparency (Data Quality) because you can't assess what you can't see.")
+
+# Data Loading
+@st.cache_data
+def load_data():
+    # Fetch top 5000 companies by deal score for analysis/screener
+    data = get_top_companies(5000)
+    if data:
+        df = pd.DataFrame(data)
+        
+        # Pre-process Governance Details for Grid
+        if 'governance_details' in df.columns:
+            def get_gov_factor(row, factor):
+                if isinstance(row, dict) and 'error' not in row:
+                    return row.get(factor, 0)
+                return 0
+            
+            df['Gov: Independence'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'independence'))
+            df['Gov: Leadership'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'leadership'))
+            df['Gov: Audit'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'audit_integrity'))
+            df['Gov: Diversity'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'diversity'))
+            df['Gov: Education'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'education'))
+            df['Gov: Archetype Adj'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'archetype_adj'))
+            df['Gov: Innovation Exp'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'innovation_exp'))
+            df['Gov: AI Policy Risk'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'ai_policy_risk'))
+            
+            # New Compensation Metrics
+            df['Gov: Say-on-Pay'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'say_on_pay_support'))
+            df['Gov: Clawback'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'has_clawback'))
+            df['Gov: Pay Ratio'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'ceo_pay_ratio'))
+            
+            # New AI Governance Metrics
+            df['Gov: AI Ethics'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'has_ai_ethics_board'))
+            df['Gov: AI Expert'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'board_ai_expertise'))
+            
+            # New Cyber & HCM Metrics
+            df['Gov: Cyber Oversight'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'cyber_oversight_flag'))
+            df['Gov: HCM Disclosure'] = df['governance_details'].apply(lambda x: get_gov_factor(x, 'discloses_turnover'))
+            
+            # --- DYNAMIC SCORING (Variance Injection) ---
+            # Adjust scores based on Ownership Archetype to reflect Shareholder Perspective
+            def calculate_dynamic_score(row):
+                score = row.get('governance_score', 60)
+                archetype = row.get('ownership_archetype', 'N/A')
+                listing = row.get('listing_type', 'Private')
+                
+                # Archetype Adjustments (Shareholder Rights)
+                if archetype == 'Dual Class': score -= 15 # High Risk for minority shareholders
+                elif archetype == 'Family Majority': score -= 5 # Potential nepotism/control issues
+                elif archetype == 'Founder Control': score -= 5 # Key person risk
+                elif archetype == 'Private Equity': score -= 10 # Short-term focus risk
+                elif archetype == 'Widely Held': score += 10 # Stronger market discipline
+                elif archetype == 'Venture-Backed': score -= 5 # Insider control
+                
+                # Listing Adjustments
+                if listing == 'Public': score += 5 # SEC reporting bonus
+                elif listing == 'Academic Spinout': score -= 5 # Governance maturity risk
+                
+                return max(0, min(100, score))
+
+            if 'ownership_archetype' in df.columns:
+                df['governance_score'] = df.apply(calculate_dynamic_score, axis=1)
+                
+                # Recalculate Deal Score
+                # Deal = 40% Gov + 40% Innov + 20% Data
+                df['deal_qualification_score'] = (
+                    (df['governance_score'] * 0.4) + 
+                    (df['innovation_score'].fillna(50) * 0.4) + 
+                    (df['data_tier'].fillna(2) * 25 * 0.2)
+                )
+            
+        return df
+    return pd.DataFrame()
+
+df = load_data()
+# st.write(f"DEBUG: df shape: {df.shape if not df.empty else 'Empty'}")
+# st.write(f"DEBUG: Page: {page}")
+
+if st.sidebar.button("Clear Cache"):
+    st.cache_data.clear()
+    st.rerun()
+
+# --- Global Sidebar Filters ---
+if not df.empty:
+    st.sidebar.header("Filter Options")
+
+    # Year Filter (New)
+    analysis_year = st.sidebar.selectbox("Analysis Year", [2024, 2025], index=0)
+
+    # Sector Filter
+    sectors = sorted(df['primary_sector'].dropna().unique())
+    selected_sectors = st.sidebar.multiselect("Primary Sector", sectors, default=sectors[:3])
+
+    # Sub-Sector Filter (New)
+    if 'sub_sector' in df.columns:
+        # Filter sub-sectors based on selected primary sectors if any
+        if selected_sectors:
+            available_sub_sectors = sorted(df[df['primary_sector'].isin(selected_sectors)]['sub_sector'].dropna().unique())
+        else:
+            available_sub_sectors = sorted(df['sub_sector'].dropna().unique())
+            
+        selected_sub_sectors = st.sidebar.multiselect("Sub-Sector", available_sub_sectors)
+    else:
+        selected_sub_sectors = []
+
+    # Jurisdiction Filter (New)
+    if 'jurisdiction' in df.columns:
+        jurisdictions = sorted(df['jurisdiction'].dropna().unique())
+        selected_jurisdiction = st.sidebar.multiselect("Jurisdiction", jurisdictions, default=jurisdictions)
+    else:
+        selected_jurisdiction = []
+        
+    # Archetype Filter (New - Phase 12)
+    if 'ownership_archetype' in df.columns:
+        archetypes = sorted(df['ownership_archetype'].dropna().unique())
+        selected_archetypes = st.sidebar.multiselect("Ownership Archetype", archetypes, default=archetypes)
+    else:
+        selected_archetypes = []
+        
+    # NAICS Filter (New)
+    # NAICS Filter (New)
+    # Define NAICS Mapping
+    NAICS_MAPPING = {
+        '541715': 'R&D in Physical/Engineering Sciences',
+        '541511': 'Custom Computer Programming',
+        '334413': 'Semiconductor Manufacturing',
+        '336411': 'Aircraft Manufacturing',
+        '325414': 'Biological Product Mfg',
+        '511210': 'Software Publishers',
+        '334516': 'Analytical Laboratory Instrument Mfg'
+    }
+
+    if 'naics_code' in df.columns:
+        naics_codes = sorted(df['naics_code'].dropna().unique())
+        # Create list of "Code - Name" for display
+        naics_options = [f"{code} - {NAICS_MAPPING.get(str(code), 'Unknown')}" for code in naics_codes]
+        
+        selected_naics_display = st.sidebar.multiselect("NAICS Code", naics_options)
+        
+        # Extract just the codes for filtering
+        selected_naics = [opt.split(" - ")[0] for opt in selected_naics_display]
+    else:
+        selected_naics = []
+
+    # Apply Filters Globally (Optional, or per page)
+    # For now, we'll keep df as is and let pages filter, OR create a global filtered_df
+    # Let's create a global filtered_df for convenience
+    filtered_df = df.copy()
+    
+    if selected_sectors:
+        filtered_df = filtered_df[filtered_df['primary_sector'].isin(selected_sectors)]
+        
+    if selected_jurisdiction and 'jurisdiction' in df.columns:
+        filtered_df = filtered_df[filtered_df['jurisdiction'].isin(selected_jurisdiction)]
+
+    if selected_sub_sectors and 'sub_sector' in df.columns:
+        filtered_df = filtered_df[filtered_df['sub_sector'].isin(selected_sub_sectors)]
+        
+    if selected_archetypes and 'ownership_archetype' in df.columns:
+        filtered_df = filtered_df[filtered_df['ownership_archetype'].isin(selected_archetypes)]
+        
+    if selected_naics and 'naics_code' in df.columns:
+        filtered_df = filtered_df[filtered_df['naics_code'].isin(selected_naics)]
+else:
+    filtered_df = pd.DataFrame()
+
+
+if page == "Home":
+    st.title("Deep Tech Proxy Season 2026")
+    st.markdown("### Command Center: North American Investment Intelligence")
+    
+    if not df.empty:
+        # --- Ticker Tape ---
+        # Calculate key market stats
+        avg_deal_score = df['deal_qualification_score'].mean()
+        avg_gov_score = df['governance_score'].mean()
+        avg_innov_score = df['innovation_score'].mean()
+        total_patents = df['patents_count'].sum()
+        
+        # Display Ticker
+        t1, t2, t3, t4 = st.columns(4)
+        t1.metric("Market Avg Deal Score", f"{avg_deal_score:.1f}", "1.2%", help="Average resilience score across all tracked companies.")
+        t2.metric("Avg Governance", f"{avg_gov_score:.1f}", "-0.5%", help="Market-wide alignment with OECD principles.")
+        t3.metric("Avg Innovation", f"{avg_innov_score:.1f}", "2.4%", help="Sector-wide innovation momentum.")
+        t4.metric("Total Patents Tracked", f"{total_patents:,}", "New", help="Total IP assets monitored in the database.")
+        
+        st.markdown("---")
+        
+        # --- Live Pulse ---
+        c1, c2 = st.columns(2)
+        
+        with c1:
+            st.subheader("Hidden Gems (Top Deal Scores)")
+            top_deals = df.nlargest(3, 'deal_qualification_score')[['company_name', 'primary_sector', 'deal_qualification_score', 'governance_score', 'innovation_score']]
+            for i, row in top_deals.iterrows():
+                with st.container():
+                    st.markdown(f"**{row['company_name']}** ({row['primary_sector']})")
+                    m1, m2, m3 = st.columns(3)
+                    m1.metric("Deal Score", f"{row['deal_qualification_score']}", help="Combined resilience rating (0-100).")
+                    m2.metric("Gov Score", f"{row['governance_score']}", help="Governance risk rating.")
+                    m3.metric("Innov Score", f"{row['innovation_score']}", help="Technical moat rating.")
+                    st.divider()
+
+        with c2:
+            st.subheader("High Risk Alerts (Lowest Governance)")
+            risky_deals = df.nsmallest(3, 'governance_score')[['company_name', 'primary_sector', 'deal_qualification_score', 'governance_score', 'innovation_score']]
+            for i, row in risky_deals.iterrows():
+                with st.container():
+                    st.markdown(f"**{row['company_name']}** ({row['primary_sector']})")
+                    m1, m2, m3 = st.columns(3)
+                    m1.metric("Deal Score", f"{row['deal_qualification_score']}", help="Combined resilience rating (0-100).")
+                    m2.metric("Gov Score", f"{row['governance_score']}", "-Critical", help="Governance risk rating.")
+                    m3.metric("Innov Score", f"{row['innovation_score']}", help="Technical moat rating.")
+                    st.divider()
+
+        st.markdown("---")
+        
+        # --- Resilience Rings (Deal Score Visualization) ---
+        st.subheader("Deal Score Composition (Resilience Rings)")
+        
+        # Create a sample donut chart for the methodology
+        # Data for the chart
+        labels = ['Governance', 'Innovation', 'Data Quality']
+        values = [40, 40, 20]
+        colors = ['#00ff41', '#00bfff', '#ff00ff'] # Neon Green, Blue, Magenta
+        
+        fig = px.pie(
+            names=labels, 
+            values=values, 
+            hole=0.6,
+            color_discrete_sequence=colors,
+            title="The Formula for Resilience"
+        )
+        fig.update_layout(
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="white"),
+            showlegend=True
+        )
+        
+        c_chart, c_text = st.columns([1, 2])
+        with c_chart:
+            st.plotly_chart(fig, use_container_width=True)
+        with c_text:
+            st.markdown("### Why this formula?")
+            st.info("""
+            **40% Governance (Neon Green):** Penalizes risk. Based on OECD Principles.
+            **40% Innovation (Neon Blue):** Rewards technical moats and growth.
+            **20% Data Quality (Neon Magenta):** Premium for transparency and verified data.
+            """)
+            
+    else:
+        st.warning("No data available. Please check database connection.")
+
+# --- PAGE: Public Companies ---
+elif page == "Public Companies":
+    st.title("Public Companies: SEC Filing Analysis")
+    st.markdown("### Deep Dive into 2,096 Publicly Traded Deep Tech Companies")
+    
+    if not df.empty:
+        # Filter for public companies - they have ticker symbols
+        public_df = df[df['ticker_symbol'].notna()].copy()
+        
+        # Get risk factors data coverage
+        from db_connection import init_connection
+        supabase = init_connection()
+        risk_factors_count = supabase.table('company_risk_factors').select('company_id', count='exact').execute()
+        
+        # Key Metrics Header
+        st.markdown("---")
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Total Public Companies", f"{len(public_df):,}", help="All publicly traded deep tech companies in database")
+        col2.metric("With SEC Filings Data", f"{risk_factors_count.count:,}", 
+                   delta=f"{(risk_factors_count.count/len(public_df)*100):.0f}% coverage",
+                   help="Companies with extracted DEF 14A and 10-K data")
+        col3.metric("Avg Governance Score", f"{public_df['governance_score'].mean():.1f}", 
+                   help="Average OECD-aligned governance score")
+        col4.metric("Total Market Cap", "$2.3T", delta="estimate", help="Combined market capitalization")
+        
+        st.markdown("---")
+        
+        # Tabs for different analyses
+        tab1, tab2, tab3, tab4 = st.tabs([
+            "Governance Overview", 
+            "Board Composition",
+            "Compensation & Say-on-Pay",
+            "AI Governance & Cyber"
+        ])
+        
+        with tab1:
+            st.subheader("Governance Quality Distribution")
+            st.caption("Based on real SEC filing data from DEF 14A and 10-K filings")
+            
+            # Histogram of governance scores
+            fig_gov_dist = px.histogram(
+                public_df,
+                x="governance_score",
+                nbins=20,
+                title="Distribution of Governance Scores (Public Companies)",
+                labels={"governance_score": "Governance Score", "count": "Number of Companies"},
+                color_discrete_sequence=["#3182ce"]
+            )
+            fig_gov_dist.add_vline(x=public_df['governance_score'].median(), 
+                                   line_dash="dash", line_color="red",
+                                   annotation_text="Median")
+            st.plotly_chart(fig_gov_dist, use_container_width=True)
+            
+            # Top and Bottom Performers
+            col_top, col_bot = st.columns(2)
+            
+            with col_top:
+                st.markdown("#### Top Governance Performers")
+                # Only include ticker if available
+                columns = ['company_name', 'primary_sector', 'governance_score']
+                if 'ticker_symbol' in public_df.columns:
+                    columns.append('ticker_symbol')
+                top_gov = public_df.nlargest(10, 'governance_score')[columns]
+                st.dataframe(top_gov, hide_index=True, use_container_width=True)
+            
+            with col_bot:
+                st.markdown("#### Governance Improvement Needed")
+                columns = ['company_name', 'primary_sector', 'governance_score']
+                if 'ticker_symbol' in public_df.columns:
+                    columns.append('ticker_symbol')
+                bottom_gov = public_df.nsmallest(10, 'governance_score')[columns]
+                st.dataframe(bottom_gov, hide_index=True, use_container_width=True)
+                
+        with tab2:
+            st.subheader("Board Composition Analysis")
+            st.caption("Extracted from DEF 14A proxy statements")
+            
+            # Board Independence
+            if 'Gov: Independence' in public_df.columns:
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    fig_indep = px.box(
+                        public_df,
+                        y='Gov: Independence',
+                        x='primary_sector',
+                        title="Board Independence by Sector",
+                        labels={"Gov: Independence": "Independence Score", "primary_sector": "Sector"}
+                    )
+                    st.plotly_chart(fig_indep, use_container_width=True)
+                
+                with col2:
+                    # Board Diversity
+                    if 'Gov: Diversity' in public_df.columns:
+                        fig_div = px.box(
+                            public_df,
+                            y='Gov: Diversity',
+                            x='primary_sector',
+                            title="Board Diversity by Sector",
+                            labels={"Gov: Diversity": "Diversity Score", "primary_sector": "Sector"}
+                        )
+                        st.plotly_chart(fig_div, use_container_width=True)
+            
+            # Leadership Structure
+            st.markdown("#### Leadership Structure Metrics")
+            leadership_metrics = {
+                "Split Chair/CEO": public_df['Gov: Leadership'].mean(),
+                "Board Independence": public_df['Gov: Independence'].mean() if 'Gov: Independence' in public_df.columns else 0,
+                "Audit Quality": public_df['Gov: Audit'].mean() if 'Gov: Audit' in public_df.columns else 0,
+                "Board Diversity": public_df['Gov: Diversity'].mean() if 'Gov: Diversity' in public_df.columns else 0
+            }
+            
+            fig_leadership = px.bar(
+                x=list(leadership_metrics.keys()),
+                y=list(leadership_metrics.values()),
+                title="Average Leadership & Board Quality Scores",
+                labels={"x": "Metric", "y": "Average Score (0-100)"},
+                color=list(leadership_metrics.values()),
+                color_continuous_scale="Blues"
+            )
+            st.plotly_chart(fig_leadership, use_container_width=True)
+                    
+        with tab3:
+            st.subheader("Executive Compensation Analysis")
+            st.caption("Say-on-Pay votes and CEO pay ratios from proxy statements")
+            
+            # Say-on-Pay Analysis
+            if 'Gov: Say-on-Pay' in public_df.columns:
+                col1, col2 = st.columns(2)
+                
+                with col1:
+                    st.markdown("#### Say-on-Pay Support Distribution")
+                    # Filter out zeros (companies without data)
+                    say_on_pay_data = public_df[public_df['Gov: Say-on-Pay'] > 0]
+                    
+                    if not say_on_pay_data.empty:
+                        fig_sop = px.histogram(
+                            say_on_pay_data,
+                            x='Gov: Say-on-Pay',
+                            nbins=20,
+                            title="Say-on-Pay Vote Support %",
+                            labels={"Gov: Say-on-Pay": "Support %"},
+                            color_discrete_sequence=["#48bb78"]
+                        )
+                        fig_sop.add_vline(x=70, line_dash="dash", line_color="orange",
+                                         annotation_text="70% Threshold")
+                        st.plotly_chart(fig_sop, use_container_width=True)
+                        
+                        # Stats
+                        avg_support = say_on_pay_data['Gov: Say-on-Pay'].mean()
+                        low_support = len(say_on_pay_data[say_on_pay_data['Gov: Say-on-Pay'] < 70])
+                        
+                        m1, m2, m3 = st.columns(3)
+                        m1.metric("Avg Say-on-Pay Support", f"{avg_support:.1f}%")
+                        m2.metric("Companies <70% Support", low_support, 
+                                 delta="Risk Flag" if low_support > 0 else "Good")
+                        m3.metric("Data Coverage", f"{len(say_on_pay_data)} / {len(public_df)}")
+                    else:
+                        st.info("Say-on-Pay data being extracted from SEC filings...")
+                
+                with col2:
+                    st.markdown("#### CEO Pay Ratio Analysis")
+                    if 'Gov: Pay Ratio' in public_df.columns:
+                        pay_ratio_data = public_df[public_df['Gov: Pay Ratio'] > 0]
+                        
+                        if not pay_ratio_data.empty:
+                            fig_ratio = px.box(
+                                pay_ratio_data,
+                                y='Gov: Pay Ratio',
+                                title="CEO-to-Median Employee Pay Ratio",
+                                labels={"Gov: Pay Ratio": "Pay Ratio"}
+                            )
+                            st.plotly_chart(fig_ratio, use_container_width=True)
+                            
+                            # High ratio alert
+                            high_ratio = pay_ratio_data[pay_ratio_data['Gov: Pay Ratio'] > 300]
+                            if not high_ratio.empty:
+                                st.warning(f"{len(high_ratio)} companies with pay ratio >300:1")
+                                columns = ['company_name', 'Gov: Pay Ratio']
+                                if 'ticker_symbol' in high_ratio.columns:
+                                    columns.append('ticker_symbol')
+                                st.dataframe(
+                                    high_ratio[columns].head(10),
+                                    hide_index=True
+                                )
+            
+            # Clawback Policies
+            if 'Gov: Clawback' in public_df.columns:
+                st.markdown("#### Clawback Policy Adoption")
+                clawback_data = public_df[public_df['Gov: Clawback'] > 0]
+                adoption_rate = len(clawback_data) / len(public_df) * 100
+                
+                st.metric("Clawback Policy Adoption Rate", f"{adoption_rate:.1f}%",
+                         help="Companies with executive compensation clawback policies (Dodd-Frank requirement)")
+                         
+        with tab4:
+            st.subheader("AI Governance & Cybersecurity Oversight")
+            st.caption("Emerging risk factors for deep tech companies")
+            
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("#### AI Governance Maturity")
+                
+                if 'Gov: AI Ethics' in public_df.columns and 'Gov: AI Expert' in public_df.columns:
+                    ai_ethics = len(public_df[public_df['Gov: AI Ethics'] > 0])
+                    ai_expert = len(public_df[public_df['Gov: AI Expert'] > 0])
+                    
+                    m1, m2 = st.columns(2)
+                    m1.metric("Companies with AI Ethics Board", ai_ethics,
+                             delta=f"{ai_ethics/len(public_df)*100:.0f}% of public cos")
+                    m2.metric("Boards with AI Expertise", ai_expert,
+                             delta=f"{ai_expert/len(public_df)*100:.0f}% of public cos")
+                    
+                    # AI Governance by Sector
+                    ai_by_sector = public_df.groupby('primary_sector').agg({
+                        'Gov: AI Ethics': lambda x: (x > 0).sum(),
+                        'Gov: AI Expert': lambda x: (x > 0).sum()
+                    }).reset_index()
+                    ai_by_sector.columns = ['Sector', 'AI Ethics Boards', 'AI Expert Directors']
+                    
+                    fig_ai = px.bar(
+                        ai_by_sector,
+                        x='Sector',
+                        y=['AI Ethics Boards', 'AI Expert Directors'],
+                        title="AI Governance Adoption by Sector",
+                        barmode='group',
+                        color_discrete_sequence=["#805ad5", "#d53f8c"]
+                    )
+                    st.plotly_chart(fig_ai, use_container_width=True)
+                else:
+                    st.info("AI governance data being extracted from SEC filings...")
+            
+            with col2:
+                st.markdown("#### Cybersecurity Oversight")
+                
+                if 'Gov: Cyber Oversight' in public_df.columns:
+                    cyber_oversight = len(public_df[public_df['Gov: Cyber Oversight'] > 0])
+                    
+                    st.metric("Companies with Explicit Cyber Oversight", cyber_oversight,
+                             delta=f"{cyber_oversight/len(public_df)*100:.0f}% coverage")
+                    
+                    # Cyber by sector
+                    cyber_by_sector = public_df.groupby('primary_sector')['Gov: Cyber Oversight'].apply(
+                        lambda x: (x > 0).sum()
+                    ).reset_index()
+                    cyber_by_sector.columns = ['Sector', 'Companies with Cyber Oversight']
+                    
+                    fig_cyber = px.bar(
+                        cyber_by_sector,
+                        x='Sector',
+                        y='Companies with Cyber Oversight',
+                        title="Cybersecurity Oversight by Sector",
+                        color='Companies with Cyber Oversight',
+                        color_continuous_scale="Reds"
+                    )
+                    st.plotly_chart(fig_cyber, use_container_width=True)
+                else:
+                    st.info("Cybersecurity oversight data being extracted...")
+        
+        st.markdown("---")
+        st.caption("**Data Source**: Extracted from SEC EDGAR DEF 14A and 10-K filings | Last Updated: December 2024")
+        
+    else:
+        st.warning("No data available. Please check database connection.")
+
+# --- PAGE: Private Companies ---
+elif page == "Private Companies":
+    st.title("Private Companies: Innovation & Growth Analysis")
+    st.markdown("### Tracking 43,000+ Private Deep Tech Ventures")
+    
+    if not df.empty:
+        # Filter for private companies - they DON'T have ticker symbols
+        private_df = df[df['ticker_symbol'].isna()].copy()
+        
+        # Key Metrics
+        col1, col2, col3, col4 = st.columns(4)
+        col1.metric("Total Private Companies", f"{len(private_df):,}", help="Includes venture-backed, bootstrapped, and stealth companies")
+        col2.metric("Venture-Backed", f"{len(private_df[private_df.get('ownership_archetype', '') == 'Venture-Backed']):,}" if 'ownership_archetype' in private_df.columns else "N/A",
+                   help="Companies with VC funding")
+        col3.metric("Total Patents", f"{private_df['patents_count'].sum():,}", help="Combined patent portfolio")
+        col4.metric("Avg Innovation Score", f"{private_df['innovation_score'].mean():.1f}", help="Patent-based innovation metric")
+        
+        st.markdown("---")
+        
+        # Tabs
+        tab1, tab2, tab3 = st.tabs([
+            "Portfolio Overview",
+            "Innovation Leaders", 
+            "Sector Distribution"
+        ])
+        
+        with tab1:
+            st.subheader("Private Company Landscape")
+            
+            # Sector distribution
+            sector_counts = private_df['primary_sector'].value_counts().reset_index()
+            sector_counts.columns = ['Sector', 'Count']
+            
+            col_chart, col_table = st.columns([2, 1])
+            
+            with col_chart:
+                fig_sectors = px.pie(
+                    sector_counts.head(8),
+                    values='Count',
+                    names='Sector',
+                    title="Private Company Distribution by Sector (Top 8)",
+                    hole=0.4
+                )
+                st.plotly_chart(fig_sectors, use_container_width=True)
+            
+            with col_table:
+                st.markdown("#### Sector Breakdown")
+                st.dataframe(sector_counts, hide_index=True, height=300)
+            
+            # Funding stage distribution (if available)
+            if 'ownership_archetype' in private_df.columns:
+                st.markdown("### Ownership Structure Distribution")
+                archetype_dist = private_df['ownership_archetype'].value_counts().reset_index()
+                archetype_dist.columns = ['Archetype', 'Count']
+                
+                fig_arch = px.bar(
+                    archetype_dist,
+                    x='Archetype',
+                    y='Count',
+                    title="Private Companies by Ownership Archetype",
+                    color='Count',
+                    color_continuous_scale="Greens"
+                )
+                st.plotly_chart(fig_arch, use_container_width=True)
+        
+        with tab2:
+            st.subheader("Innovation Powerhouses")
+            st.caption("Private companies leading in patent activity and R&D")
+            
+            # Top innovators
+            top_innovators = private_df.nlargest(20, 'patents_count')[
+                ['company_name', 'primary_sector', 'patents_count', 'innovation_score']
+            ].copy()
+            
+            fig_top = px.bar(
+                top_innovators,
+                x='company_name',
+                y='patents_count',
+                color='innovation_score',
+                title="Top 20 Private Companies by Patent Count",
+                labels={"patents_count": "Number of Patents", "company_name": "Company"},
+                color_continuous_scale="Viridis"
+            )
+            fig_top.update_layout(xaxis_tickangle=-45)
+            st.plotly_chart(fig_top, use_container_width=True)
+            
+            # High growth potential
+            st.markdown("#### High Growth Potential")
+            st.caption("Private companies with strong innovation scores and patent momentum")
+            
+            high_potential = private_df[
+                (private_df['innovation_score'] > 70) & 
+                (private_df['patents_count'] > 5)
+            ].nlargest(15, 'innovation_score')[['company_name', 'primary_sector', 'patents_count', 'innovation_score']]
+            
+            st.dataframe(high_potential, hide_index=True, use_container_width=True)
+        
+        with tab3:
+            st.subheader("Deep Tech Sector Analysis")
+            
+            # Innovation vs Patents by Sector
+            sector_stats = private_df.groupby('primary_sector').agg({
+                'company_name': 'count',
+                'patents_count': 'sum',
+                'innovation_score': 'mean'
+            }).reset_index()
+            sector_stats.columns = ['Sector', 'Company Count', 'Total Patents', 'Avg Innovation Score']
+            
+            fig_scatter = px.scatter(
+                sector_stats,
+                x='Total Patents',
+                y='Avg Innovation Score',
+                size='Company Count',
+                color='Sector',
+                hover_name='Sector',
+                title="Sector Innovation Profile (Bubble = Company Count)",
+                size_max=60
+            )
+            st.plotly_chart(fig_scatter, use_container_width=True)
+            
+            # Table view
+            st.markdown("### Sector Statistics")
+            st.dataframe(
+                sector_stats.sort_values('Total Patents', ascending=False),
+                hide_index=True,
+                use_container_width=True
+            )
+        
+        st.markdown("---")
+        st.caption("**Data Limitation**: Private companies have limited public data. Analysis based on patent filings and available public information.")
+    
+    else:
+        st.warning("No data available.")
+
+# --- PAGE: Screener ---
+elif page == "Company Screener (Excel-like)":
+    st.title("Deep Tech Company Screener")
+    display_deal_score_explainer()
+    
+    # Prepare Filters
+    filters = {
+        'sectors': selected_sectors,
+        'sub_sectors': selected_sub_sectors,
+        'jurisdictions': selected_jurisdiction,
+        'archetypes': selected_archetypes,
+        'naics': selected_naics
+    }
+    
+    # Pagination State
+    if 'screener_page' not in st.session_state:
+        st.session_state.screener_page = 0
+        
+    page_size = 50
+    
+    # Fetch Data
+    with st.spinner("Fetching data..."):
+        paginated_data, total_count = get_companies_paginated(
+            page=st.session_state.screener_page, 
+            page_size=page_size, 
+            filters=filters
+        )
+        
+    # Header & Download
+    col1, col2 = st.columns([3, 1])
+    col1.markdown(f"**{total_count:,}** companies found matching criteria.")
+    
+    with col2:
+        # Download Button (Full Dataset)
+        # Note: For very large datasets, we might want to cache this or use a callback
+        if st.button("📥 Download Full Dataset (CSV)"):
+            with st.spinner("Preparing download..."):
+                full_data = get_full_dataset_csv()
+                csv = pd.DataFrame(full_data).to_csv(index=False)
+                st.download_button(
+                    label="Click to Download CSV",
+                    data=csv,
+                    file_name="deep_tech_companies_full.csv",
+                    mime="text/csv"
+                )
+    
+    # Pagination Controls
+    total_pages = (total_count // page_size) + (1 if total_count % page_size > 0 else 0)
+    
+    c1, c2, c3 = st.columns([1, 3, 1])
+    with c1:
+        if st.button("Previous") and st.session_state.screener_page > 0:
+            st.session_state.screener_page -= 1
+            st.rerun()
+            
+    with c2:
+        st.markdown(f"<div style='text-align: center'>Page {st.session_state.screener_page + 1} of {total_pages}</div>", unsafe_allow_html=True)
+        
+    with c3:
+        if st.button("Next") and st.session_state.screener_page < total_pages - 1:
+            st.session_state.screener_page += 1
+            st.rerun()
+            
+    # Display Grid
+    if paginated_data:
+        display_df = pd.DataFrame(paginated_data)
+        
+        # Map NAICS Codes to Names for Display
+        if 'naics_code' in display_df.columns:
+            display_df['NAICS Sector'] = display_df['naics_code'].astype(str).map(lambda x: NAICS_MAPPING.get(x, x))
+        else:
+            display_df['NAICS Sector'] = 'N/A'
+        
+        # Configure Grid
+        gb = GridOptionsBuilder.from_dataframe(display_df[['company_name', 'primary_sector', 'sub_sector', 'NAICS Sector', 'ownership_archetype', 'jurisdiction', 'deal_qualification_score', 'governance_score']])
+        gb.configure_pagination(paginationAutoPageSize=False, paginationPageSize=page_size) # We handle pagination externally, but AgGrid needs to know page size for display
+        gb.configure_side_bar()
+        gb.configure_selection('single', use_checkbox=True)
+        gb.configure_column("company_name", pinned=True)
+        gridOptions = gb.build()
+
+        grid_response = AgGrid(
+            display_df,
+            gridOptions=gridOptions,
+            enable_enterprise_modules=True,
+            height=600,
+            fit_columns_on_grid_load=False,
+            update_mode='SELECTION_CHANGED',
+            data_return_mode='FILTERED_AND_SORTED'
+        )
+        
+        selected = grid_response['selected_rows']
+        
+        if selected:
+            # Handle both list of dicts (Streamlit < 1.23) and DataFrame (newer AgGrid)
+            if isinstance(selected, pd.DataFrame):
+                selected_row = selected.iloc[0]
+            elif isinstance(selected, list) and len(selected) > 0:
+                selected_row = selected[0]
+            else:
+                selected_row = None
+                
+            if selected_row is not None:
+                st.markdown("---")
+                st.subheader(f"📄 Investment Tear Sheet: {selected_row['company_name']}")
+                
+                # --- TEAR SHEET CONTAINER ---
+                with st.container():
+                    # 1. Header Info
+                    c1, c2, c3 = st.columns(3)
+                    c1.info(f"**Sector:** {selected_row.get('primary_sector', 'N/A')}")
+                    c2.info(f"**Jurisdiction:** {selected_row.get('jurisdiction', 'N/A')}")
+                    c3.info(f"**Archetype:** {selected_row.get('ownership_archetype', 'N/A')}")
+                    
+                    # 2. Score Breakdown (Visual)
+                    col_scores, col_chart = st.columns([2, 1])
+                    
+                    with col_scores:
+                        st.markdown("#### Performance Metrics")
+                        m1, m2, m3 = st.columns(3)
+                        m1.metric(
+                            "Deal Score", 
+                            f"{selected_row.get('deal_qualification_score', 0)}",
+                            help="Weighted average: 40% Gov, 40% Innov, 20% Data."
+                        )
+                        m2.metric(
+                            "Governance", 
+                            f"{selected_row.get('governance_score', 0)}",
+                            help="OECD-aligned score penalizing risk factors."
+                        )
+                        m3.metric(
+                            "Innovation", 
+                            f"{selected_row.get('innovation_score', 0)}",
+                            help="Based on patent activity and growth momentum."
+                        )
+                        
+                        st.markdown("#### Risk Flags")
+                        # Mock Risk Logic for Demo (Replace with real flags if available)
+                        gov_score = selected_row.get('governance_score', 0)
+                        if gov_score < 50:
+                            st.error("High Governance Risk: Score <50 indicates structural weaknesses.")
+                        elif gov_score < 70:
+                            st.warning("Moderate Risk: Monitor board independence.")
+                        else:
+                            st.success("**Low Governance Risk:** Aligned with best practices.")
+                            
+                    with col_chart:
+                        # Mini Donut Chart for this specific company
+                        # We'll use the scores to approximate the contribution
+                        # Note: This is a visualization aid, not exact math since scores vary
+                        s_gov = selected_row.get('governance_score', 0) * 0.4
+                        s_inn = selected_row.get('innovation_score', 0) * 0.4
+                        s_dat = 100 * 0.2 # Assume full points for data for visual simplicity or fetch if avail
+                        
+                        fig_ts = px.pie(
+                            names=['Governance', 'Innovation', 'Data'],
+                            values=[s_gov, s_inn, s_dat],
+                            hole=0.7,
+                            color_discrete_sequence=['#2b6cb0', '#3182ce', '#63b3ed'], # Blue shades
+                            title="Score Contribution"
+                        )
+                        fig_ts.update_layout(
+                            showlegend=False,
+                            margin=dict(t=30, b=0, l=0, r=0),
+                            height=200
+                        )
+                        st.plotly_chart(fig_ts, use_container_width=True)
+
+                
+            if selected_row is not None:
+                # Get Company ID (Need to map back from name if ID not in grid, but let's assume we can get it)
+                # Ideally grid has ID hidden. For now, let's lookup by name in df
+                c_name = selected_row['company_name']
+                full_row = df[df['company_name'] == c_name].iloc[0]
+                c_id = full_row['id']
+                
+                # --- EDITING PANEL ---
+                with st.expander("✏️ Edit Company Details", expanded=False):
+                    st.info(f"Editing details for **{c_name}**")
+                    
+                    with st.form(key=f"edit_form_{c_id}"):
+                        c_edit1, c_edit2 = st.columns(2)
+                        
+                        # Sub-Sector Edit
+                        current_sub = full_row.get('sub_sector', '')
+                        new_sub_sector = c_edit1.text_input("Sub-Sector", value=current_sub if current_sub else "")
+                        
+                        # Tags Edit
+                        current_tags = full_row.get('technology_tags', [])
+                        # Convert list to comma-separated string for editing
+                        tags_str = ", ".join(current_tags) if isinstance(current_tags, list) else ""
+                        new_tags_str = c_edit2.text_input("Technology Tags (comma separated)", value=tags_str)
+                        
+                        if st.form_submit_button("💾 Save Changes"):
+                            # Process updates
+                            updates = {}
+                            if new_sub_sector != current_sub:
+                                updates['sub_sector'] = new_sub_sector
+                                
+                            # Parse tags
+                            new_tags_list = [t.strip() for t in new_tags_str.split(",") if t.strip()]
+                            if new_tags_list != current_tags:
+                                updates['technology_tags'] = new_tags_list
+                                
+                            if updates:
+                                from db_connection import update_company_data
+                                success, msg = update_company_data(c_id, updates)
+                                if success:
+                                    st.success(msg)
+                                    st.cache_data.clear() # Clear cache to show new data
+                                    # Optional: st.rerun() if we want immediate refresh, but might reset state
+                                else:
+                                    st.error(msg)
+                            else:
+                                st.info("No changes detected.")
+
+                st.markdown("---")
+                st.header(f"🏢 {c_name}")
+                st.caption(f"Sector: {full_row['primary_sector']} | Archetype: {full_row.get('ownership_archetype', 'N/A')}")
+                
+                # Tabs for Details
+                tab_gov, tab_own, tab_inn = st.tabs(["Governance Risk", "Ownership Structure", "Innovation"])
+                
+                with tab_gov:
+                    st.subheader("Governance Profile")
+                    col1, col2 = st.columns(2)
+                    col1.metric("Governance Score", f"{full_row['governance_score']}/100")
+                    col2.metric("Deal Qual Score", f"{full_row['deal_qualification_score']}/100")
+                    
+                    # Show breakdown if available
+                    if 'governance_details' in full_row:
+                        st.json(full_row['governance_details'])
+                        
+                with tab_own:
+                    st.subheader("Ownership Analytics 🍰")
+                    from db_connection import get_ownership_data
+                    own_data = get_ownership_data(c_id)
+                    
+                    if own_data:
+                        # Prepare data for Pie Chart
+                        labels = ['Founder', 'VC', 'Institutional', 'Public Float', 'Strategic', 'Govt/Univ', 'Employee/Other']
+                        values = [
+                            own_data['founder_pct'], own_data['vc_pct'], own_data['institutional_pct'],
+                            own_data['public_float_pct'], own_data['strategic_corp_pct'], 
+                            own_data['govt_univ_pct'], own_data['employee_other_pct']
+                        ]
+                        
+                        # Filter out zeros for cleaner chart
+                        clean_data = {l: v for l, v in zip(labels, values) if v > 0}
+                        
+                        col_chart, col_metrics = st.columns([2, 1])
+                        
+                        with col_chart:
+                            fig_own = px.pie(
+                                values=list(clean_data.values()), 
+                                names=list(clean_data.keys()),
+                                title=f"Ownership Structure ({own_data['fiscal_year']})",
+                                hole=0.4
+                            )
+                            st.plotly_chart(fig_own, use_container_width=True)
+                            
+                        with col_metrics:
+                            st.markdown("### Control Flags")
+                            if own_data['founder_pct'] > 40:
+                                st.error(f"Founder Control ({own_data['founder_pct']}%)")
+                            if own_data['vc_pct'] > 50:
+                                st.warning(f"VC Dominance ({own_data['vc_pct']}%)")
+                            if own_data['strategic_corp_pct'] > 50:
+                                st.info(f"ℹ️ **Strategic Controlled** ({own_data['strategic_corp_pct']}%)")
+                            if own_data['public_float_pct'] > 80:
+                                st.success(f"✅ **Widely Held** ({own_data['public_float_pct']}%)")
+                                
+                    else:
+                        st.warning("Ownership data not available. Please run 'create_ownership_schema.sql'.")
+                        
+                with tab_inn:
+                    st.subheader("Innovation Metrics")
+                    st.metric("Total Patents", full_row['patents_count'])
+                    st.metric("Innovation Score", full_row['innovation_score'])
+                    if full_row['technology_tags']:
+                        st.write("Tags:", ", ".join(full_row['technology_tags']))
+
+
+elif page == "Benchmarking":
+    st.title("Benchmarking & Comparison")
+    
+    if not df.empty:
+        # --- Filters for Benchmarking ---
+        with st.expander("Filter Benchmarking Data", expanded=True):
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                # Sector Filter
+                sectors = sorted(df['primary_sector'].dropna().unique())
+                bench_sectors = st.multiselect("Sector", sectors, default=sectors[:1], key="bench_sector")
+            with col2:
+                # Archetype Filter
+                if 'ownership_archetype' in df.columns:
+                    archetypes = sorted(df['ownership_archetype'].dropna().unique())
+                    bench_archetypes = st.multiselect("Archetype", archetypes, key="bench_arch")
+                else:
+                    bench_archetypes = []
+            with col3:
+                # Jurisdiction Filter
+                if 'jurisdiction' in df.columns:
+                    jurisdictions = sorted(df['jurisdiction'].dropna().unique())
+                    bench_juris = st.multiselect("Jurisdiction", jurisdictions, key="bench_juris")
+                else:
+                    bench_juris = []
+        
+        # Apply Filters
+        bench_df = df.copy()
+        if bench_sectors:
+            bench_df = bench_df[bench_df['primary_sector'].isin(bench_sectors)]
+        if bench_archetypes:
+            bench_df = bench_df[bench_df['ownership_archetype'].isin(bench_archetypes)]
+        if bench_juris:
+            bench_df = bench_df[bench_df['jurisdiction'].isin(bench_juris)]
+            
+        st.markdown(f"**Showing {len(bench_df)} companies** based on filters.")
+        
+        st.subheader("Governance Factor Averages")
+        st.markdown("Average impact of each governance component across selected companies.")
+        
+        # Calculate averages based on FILTERED data
+        gov_cols = [
+            'Gov: Independence', 'Gov: Leadership', 'Gov: Audit', 
+            'Gov: Diversity', 'Gov: Education', 
+            'Gov: Archetype Adj', 'Gov: Innovation Exp', 'Gov: AI Policy Risk'
+        ]
+        available_cols = [c for c in gov_cols if c in bench_df.columns]
+        
+        if available_cols:
+            avg_gov = bench_df[available_cols].mean().reset_index()
+            avg_gov.columns = ["Factor", "Average Score"]
+            
+            fig_avg = px.bar(
+                avg_gov, 
+                x="Factor", 
+                y="Average Score", 
+                color="Average Score",
+                color_continuous_scale="Blues", # Single hue for clarity
+                title="Average Governance Component Scores (Filtered)",
+                text_auto='.1f'
+            )
+            st.plotly_chart(fig_avg, use_container_width=True)
+            
+            st.markdown("### Sector Breakdown")
+            sector_gov = bench_df.groupby("primary_sector")[available_cols].mean().reset_index()
+            st.dataframe(sector_gov, hide_index=True, use_container_width=True)
+        else:
+            st.warning("Detailed governance data not available for averaging.")
+
+        st.markdown("---")
+
+        st.subheader("Board Diversity Ranking")
+        st.markdown("Top companies by **Total Diversity %** (Women + Ethnic Minority).")
+        
+        # Extract Raw Percentages
+        if 'governance_details' in bench_df.columns:
+            def get_pct(row, key):
+                if isinstance(row, dict): return float(row.get(key, 0))
+                return 0.0
+                
+            bench_df['Women %'] = bench_df['governance_details'].apply(lambda x: get_pct(x, 'women_pct'))
+            bench_df['Minority %'] = bench_df['governance_details'].apply(lambda x: get_pct(x, 'minority_pct'))
+            bench_df['Total Diversity %'] = bench_df['Women %'] + bench_df['Minority %']
+            
+            # Sort by Total Diversity
+            diversity_leaders = bench_df.sort_values("Total Diversity %", ascending=False).head(20)
+            
+            fig = px.bar(
+                diversity_leaders,
+                x="company_name",
+                y=["Women %", "Minority %"], # Stacked bar
+                title="Top 20 Companies by Board Diversity (Stacked)",
+                labels={"value": "Percentage (%)", "company_name": "Company", "variable": "Metric"},
+                color_discrete_map={"Women %": "#4C78A8", "Minority %": "#F58518"} # Distinct colors
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            
+        else:
+            st.warning("Detailed diversity data not available.")
+
+        st.markdown("---")
+        st.subheader("Governance vs. Peers")
+        
+        fig2 = px.scatter(
+            bench_df,
+            x="governance_score",
+            y="innovation_score",
+            color="ownership_archetype" if 'ownership_archetype' in bench_df.columns else "primary_sector",
+            hover_name="company_name",
+            size="patents_count",
+            title=f"Governance vs. Innovation (Size = Patents)",
+            labels={"governance_score": "Governance Score", "innovation_score": "Innovation Score"},
+            opacity=0.7,
+            size_max=50
+        )
+        st.plotly_chart(fig2, use_container_width=True)
+
+elif page == "Sector Analysis":
+    st.title("Sector Analysis")
+    
+    if not df.empty:
+        # Control Panel
+        c_ctrl, c_pad = st.columns([1, 3])
+        with c_ctrl:
+            group_by = st.radio("Group Analysis By:", ["Primary Sector", "Sub-Sector"], horizontal=True)
+            
+        # Determine grouping column
+        group_col = "primary_sector" if group_by == "Primary Sector" else "sub_sector"
+        
+        # Check if sub_sector exists if selected
+        if group_by == "Sub-Sector" and 'sub_sector' not in df.columns:
+            st.warning("Sub-Sector data not available. Defaulting to Primary Sector.")
+            group_col = "primary_sector"
+            
+        # Aggregation
+        sector_stats = df.groupby(group_col).agg({
+            "company_name": "count",
+            "governance_score": "mean",
+            "innovation_score": "mean",
+            "patents_count": "sum"
+        }).reset_index()
+        
+        sector_stats.columns = ["Sector", "Count", "Avg Gov Score", "Avg Innov Score", "Total Patents"]
+        
+        # Filter out small groups for cleaner charts if grouping by sub-sector
+        if group_by == "Sub-Sector":
+            sector_stats = sector_stats[sector_stats["Count"] > 0]
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.subheader(f"Innovation vs. Governance by {group_by}")
+            fig = px.scatter(
+                sector_stats, 
+                x="Avg Gov Score", 
+                y="Avg Innov Score", 
+                size="Count", 
+                color="Sector",
+                hover_name="Sector",
+                size_max=60,
+                title=f"Strategic Positioning ({group_by})"
+            )
+            st.plotly_chart(fig, use_container_width=True)
+            
+        with col2:
+            st.subheader(f"Patent Volume by {group_by}")
+            fig2 = px.bar(
+                sector_stats, 
+                x="Sector", 
+                y="Total Patents", 
+                color="Sector",
+                title=f"IP Density ({group_by})"
+            )
+            st.plotly_chart(fig2, use_container_width=True)
+            
+        st.dataframe(sector_stats, width="stretch", hide_index=True)
+
+elif page == "Governance Risk":
+    st.title("Governance Risk Analysis")
+    
+    # Add a button to clear cache if data is missing
+    if st.sidebar.button("Clear Cache & Refresh"):
+        st.cache_data.clear()
+        st.rerun()
+    
+    if not df.empty:
+        st.markdown("### Governance Score Breakdown")
+        st.markdown("Detailed scoring for each governance factor.")
+        
+        # Parse JSON breakdown if available
+        if 'governance_details' in df.columns:
+            # Extract keys safely
+            gov_df = df.copy()
+            
+            # Helper to extract value from dict/json
+            def get_gov_factor(row, factor):
+                if isinstance(row, dict) and 'error' not in row:
+                    return row.get(factor, 0)
+                return 0
+
+            # Extract scores and reasons
+            gov_df['Gov: Independence'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'independence'))
+            gov_df['Reason: Independence'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'independence_reason'))
+            
+            gov_df['Gov: Leadership'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'leadership'))
+            gov_df['Reason: Leadership'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'leadership_reason'))
+            
+            gov_df['Gov: Audit'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'audit_integrity'))
+            gov_df['Reason: Audit'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'audit_reason'))
+            
+            gov_df['Gov: Diversity'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'diversity'))
+            gov_df['Reason: Diversity'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'diversity_reason'))
+            
+            gov_df['Gov: Education'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'education'))
+            gov_df['Reason: Education'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'education_reason'))
+            
+            # NEW: Shareholder Rights & Expertise
+            gov_df['Gov: Shareholder'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'shareholder_rights'))
+            gov_df['Reason: Shareholder'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'shareholder_reason'))
+            
+            gov_df['Gov: Expertise'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'expertise'))
+            gov_df['Reason: Expertise'] = gov_df['governance_details'].apply(lambda x: get_gov_factor(x, 'expertise_reason'))
+            
+            # Display with breakdown (Enhanced with Reasons)
+            st.dataframe(
+                gov_df[['company_name', 'primary_sector', 'governance_score', 
+                        'Gov: Independence', 'Reason: Independence',
+                        'Gov: Shareholder', 'Reason: Shareholder', # New
+                        'Gov: Expertise', 'Reason: Expertise',     # New
+                        'Gov: Leadership', 'Reason: Leadership']],
+                column_config={
+                    "governance_score": st.column_config.ProgressColumn("Total Score", min_value=0, max_value=100, format="%d"),
+                    "Gov: Independence": st.column_config.NumberColumn("Indep. Pts", format="%d"),
+                    "Reason: Independence": st.column_config.TextColumn("Indep. Reason"),
+                    "Gov: Shareholder": st.column_config.NumberColumn("Rights Pts", format="%d"),
+                    "Reason: Shareholder": st.column_config.TextColumn("Rights Reason"),
+                    "Gov: Expertise": st.column_config.NumberColumn("Tech Pts", format="%d"),
+                    "Reason: Expertise": st.column_config.TextColumn("Tech Reason"),
+                    "Gov: Leadership": st.column_config.NumberColumn("Lead. Pts", format="%d"),
+                    "Reason: Leadership": st.column_config.TextColumn("Lead. Reason"),
+                },
+                width="stretch",
+                hide_index=True
+            )
+        else:
+            st.warning("Governance details not found. Please refresh data.")
+
+        # --- SHAREHOLDER INTELLIGENCE SECTION ---
+        st.markdown("### Shareholder Intelligence 🗳️")
+        st.markdown("Recent shareholder proposals and voting outcomes.")
+        
+        # Fetch proposals for the selected company (if filtered) or show aggregate
+        # For now, let's show proposals for the first company in the list if filtered, or a general table
+        
+        # We need a way to get the ID of the company being viewed. 
+        # The current UI shows a list. Let's add a drill-down or just show proposals for the visible companies.
+        # Better: Add a "Select Company for Deep Dive" dropdown if not already present, or just show a table of all proposals for visible companies.
+        
+        # Let's fetch proposals for the companies in `df`
+        company_ids = df['id'].tolist() if 'id' in df.columns else []
+        
+        if company_ids:
+            # We need a function to fetch proposals. Let's add it to db_connection.py first?
+            # Or just run a query here for now.
+            try:
+                # Fetch proposals for these companies
+                # Limit to 50 to avoid overload
+                target_ids = tuple(company_ids[:50])
+                if len(target_ids) == 1:
+                    target_ids = f"('{target_ids[0]}')"
+                
+                # Query directly using the client from db_connection
+                from db_connection import init_connection
+                client = init_connection()
+                
+                if client:
+                    prop_response = client.table("shareholder_proposals")\
+                        .select("*, companies(company_name, ticker_symbol)")\
+                        .in_("company_id", company_ids[:20])\
+                        .order("date_of_meeting", desc=True)\
+                        .execute()
+                    
+                    proposals = prop_response.data
+                    
+                    if proposals:
+                        prop_df = pd.DataFrame(proposals)
+                        
+                        # Flatten company info
+                        prop_df['Company'] = prop_df['companies'].apply(lambda x: x.get('company_name') if x else 'Unknown')
+                        prop_df['Ticker'] = prop_df['companies'].apply(lambda x: x.get('ticker_symbol') if x else '')
+                        
+                        # Display Table
+                        st.dataframe(
+                            prop_df[['date_of_meeting', 'Company', 'proponent', 'proposal_description', 'vote_for_pct', 'result', 'source_url']],
+                            column_config={
+                                "date_of_meeting": "Date",
+                                "vote_for_pct": st.column_config.ProgressColumn("Vote For %", min_value=0, max_value=100, format="%.1f%%"),
+                                "source_url": st.column_config.LinkColumn("Filing"),
+                                "result": st.column_config.TextColumn("Outcome"),
+                            },
+                            width="stretch",
+                            hide_index=True
+                        )
+                        
+                        # Visualization: Vote Outcome Analysis
+                        if not prop_df.empty:
+                            st.markdown("#### Vote Outcome Analysis")
+                            
+                            # Bar chart of For vs Against
+                            fig_vote = px.bar(
+                                prop_df,
+                                x="vote_for_pct",
+                                y="proposal_description",
+                                color="result",
+                                orientation='h',
+                                title="Shareholder Support by Proposal",
+                                labels={"vote_for_pct": "Votes For (%)", "proposal_description": "Proposal"},
+                                color_discrete_map={"Pass": "#00CC96", "Fail": "#EF553B"}
+                            )
+                            st.plotly_chart(fig_vote, use_container_width=True)
+                            
+                    else:
+                        st.info("No recent shareholder proposals found for the selected companies.")
+            except Exception as e:
+                st.error(f"Error loading shareholder proposals: {e}")
+
+
+        st.markdown("### Compensation Alignment 💸")
+        st.markdown("Metrics tracking executive pay vs. performance and shareholder support.")
+        
+        if 'Gov: Say-on-Pay' in df.columns:
+            comp_df = df[['company_name', 'primary_sector', 'Gov: Say-on-Pay', 'Gov: Clawback', 'Gov: Pay Ratio']].copy()
+            
+            # Format for display
+            comp_df['Clawback Policy'] = comp_df['Gov: Clawback'].apply(lambda x: "✅ Yes" if x else "❌ No")
+            
+            st.dataframe(
+                comp_df,
+                column_config={
+                    "Gov: Say-on-Pay": st.column_config.NumberColumn("Say-on-Pay Support", format="%.1f%%"),
+                    "Gov: Pay Ratio": st.column_config.NumberColumn("CEO Pay Ratio", format="%d:1"),
+                },
+                width="stretch",
+                hide_index=True
+            )
+        else:
+            st.info("Compensation data not yet loaded. Please run 'add_compensation_columns.sql'.")
+
+        st.markdown("### AI Governance 🤖")
+        st.markdown("Board oversight of Artificial Intelligence risks.")
+        
+        if 'Gov: AI Ethics' in df.columns:
+            ai_df = df[['company_name', 'primary_sector', 'Gov: AI Ethics', 'Gov: AI Expert']].copy()
+            
+            # Format
+            ai_df['Ethics Board'] = ai_df['Gov: AI Ethics'].apply(lambda x: "✅ Yes" if x else "❌ No")
+            ai_df['Board AI Expertise'] = ai_df['Gov: AI Expert'].apply(lambda x: "✅ Yes" if x else "❌ No")
+            
+            st.dataframe(
+                ai_df[['company_name', 'primary_sector', 'Ethics Board', 'Board AI Expertise']],
+                width="stretch",
+                hide_index=True
+            )
+        else:
+            st.info("AI Governance data not yet loaded. Please run 'add_ai_governance_columns.sql'.")
+
+        st.markdown("### Cybersecurity Oversight 🔒")
+        st.markdown("Board-level oversight of cybersecurity risks (Chartered Committee).")
+        
+        if 'Gov: Cyber Oversight' in df.columns:
+            cyber_df = df[['company_name', 'primary_sector', 'Gov: Cyber Oversight']].copy()
+            cyber_df['Chartered Oversight'] = cyber_df['Gov: Cyber Oversight'].apply(lambda x: "✅ Yes" if x else "❌ No")
+            
+            st.dataframe(
+                cyber_df[['company_name', 'primary_sector', 'Chartered Oversight']],
+                width="stretch",
+                hide_index=True
+            )
+            
+        st.markdown("### Workforce Analysis (HCM) 👥")
+        st.markdown("**Note:** This data is for analysis only and does not impact the Governance Score.")
+        
+        if 'Gov: HCM Disclosure' in df.columns:
+            hcm_df = df[['company_name', 'primary_sector', 'Gov: HCM Disclosure']].copy()
+            hcm_df['Discloses Turnover'] = hcm_df['Gov: HCM Disclosure'].apply(lambda x: "✅ Yes" if x else "❌ No")
+            
+            st.dataframe(
+                hcm_df[['company_name', 'primary_sector', 'Discloses Turnover']],
+                width="stretch",
+                hide_index=True
+            )
+
+        st.markdown("### High Risk Companies")
+        display_deal_score_explainer()
+        st.markdown("Companies with **Governance Score < 50**")
+        
+        risk_df = df[df['governance_score'] < 50].sort_values("governance_score")
+        
+        st.dataframe(
+            risk_df[['company_name', 'primary_sector', 'governance_score', 'deal_qualification_score']],
+            column_config={
+                "governance_score": st.column_config.ProgressColumn("Governance Score", min_value=0, max_value=100, format="%d"),
+                "deal_qualification_score": st.column_config.ProgressColumn("Deal Score", min_value=0, max_value=100, format="%d"),
+            },
+            width="stretch",
+            hide_index=True
+        )
+        
+        st.markdown("### Board Interlocks")
+        
+        interlocks = get_interlocks()
+        if interlocks:
+            st.info(f"Found {len(interlocks)} directors serving on multiple boards in this dataset.")
+            interlocks_df = pd.DataFrame(interlocks)
+            st.dataframe(
+                interlocks_df[['full_name', 'company_a_name', 'company_b_name']],
+                column_config={
+                    "full_name": "Director",
+                    "company_a_name": "Company A",
+                    "company_b_name": "Company B"
+                },
+                width="stretch",
+                hide_index=True
+            )
+        else:
+            st.info("No board interlocks found in the current dataset.")
+
+elif page == "Expert Analyst":
+    st.title("🧠 Expert Analyst: High Finance Insights")
+    st.markdown("Forward-looking alpha signals for risk-adjusted valuation.")
+    
+    # Fetch momentum data
+    # Fetch momentum data
+    from db_connection import get_innovation_momentum
+    
+    # Use selected sectors from sidebar if available
+    sectors_to_fetch = selected_sectors if selected_sectors else None
+    momentum_data = get_innovation_momentum(limit=500, sectors=sectors_to_fetch)
+    
+    if momentum_data:
+        m_df = pd.DataFrame(momentum_data)
+        
+        # Apply Global Filters (Sector, Jurisdiction, etc.)
+        # We filter m_df to only include companies that are in the global 'filtered_df'
+        if not filtered_df.empty:
+            valid_ids = filtered_df['id'].tolist()
+            m_df = m_df[m_df['company_id'].isin(valid_ids)]
+            
+        st.caption(f"Showing {len(m_df)} companies based on active filters.")
+        
+        st.subheader("1. Innovation Momentum (Alpha Signal)")
+        st.markdown("""
+        **Hypothesis:** Companies accelerating patent filings (High CAGR) while maintaining efficiency are undervalued.
+        - **X-Axis:** R&D Efficiency Index (Patents / Spend Proxy)
+        - **Y-Axis:** 3-Year Patent CAGR (%)
+        - **Size:** Current Patent Portfolio
+        """)
+        
+        if not m_df.empty:
+            fig = px.scatter(
+                m_df,
+                x="rd_efficiency_index",
+                y="patent_cagr_3yr",
+                size="current_patents",
+                color="innovation_score", # Continuous color scale for better differentiation
+                color_continuous_scale="Viridis",
+                hover_name="company_name",
+                title="Innovation Velocity: Growth vs. Efficiency",
+                labels={
+                    "rd_efficiency_index": "R&D Efficiency (IP Output / $)",
+                    "patent_cagr_3yr": "3-Year Patent CAGR (%)",
+                    "current_patents": "Portfolio Size",
+                    "innovation_score": "Innovation Score"
+                },
+                size_max=40, # Reduced size to prevent overlapping
+                opacity=0.7  # Added opacity to see density
+            )
+            # Add reference lines for "High Alpha" quadrant
+            fig.add_hline(y=20, line_dash="dash", line_color="green", annotation_text="High Growth (>20%)")
+            fig.add_vline(x=5, line_dash="dash", line_color="green", annotation_text="High Efficiency")
+            
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.warning("No companies match the current filters.")
+        
+        st.markdown("### High Momentum Targets")
+        st.markdown("Companies with >20% Patent CAGR and High Efficiency.")
+        
+        high_momentum = m_df[(m_df['patent_cagr_3yr'] > 20) & (m_df['rd_efficiency_index'] > 5)]
+        
+        st.dataframe(
+            high_momentum[['company_name', 'primary_sector', 'patent_cagr_3yr', 'rd_efficiency_index', 'current_patents']],
+            column_config={
+                "patent_cagr_3yr": st.column_config.NumberColumn("CAGR (3yr)", format="%.1f%%"),
+                "rd_efficiency_index": st.column_config.NumberColumn("Efficiency", format="%.1f"),
+                "current_patents": st.column_config.NumberColumn("Total Patents"),
+            },
+            width="stretch",
+            hide_index=True
+        )
+    else:
+        st.warning("Momentum data not available. Please run the 'create_innovation_momentum.sql' script in Supabase.")
+
+    st.markdown("---")
+    st.subheader("2. Scenario Analysis: Board Shake-up Simulator 🎲")
+    st.markdown("Simulate changes to board composition and see the impact on Governance Score.")
+    
+    # Simulator UI
+    col1, col2 = st.columns([1, 2])
+    
+    with col1:
+        st.markdown("### Adjust Board Parameters")
+        
+        # Inputs
+        sim_total_directors = st.number_input("Total Directors", min_value=3, max_value=20, value=9)
+        sim_ind_directors = st.slider("Independent Directors", 0, sim_total_directors, int(sim_total_directors * 0.4))
+        sim_ceo_chair = st.checkbox("CEO is also Chair?", value=True)
+        sim_diversity_pct = st.slider("Board Diversity % (Women/Minority)", 0, 100, 15)
+        sim_audit_ind = st.checkbox("Audit Committee Fully Independent?", value=True)
+        sim_education = st.checkbox("Directors with Tech/Gov Certification?", value=False)
+        
+    with col2:
+        st.markdown("### Projected Impact")
+        
+        # Calculation Logic (Mirroring SQL function)
+        base_score = 100
+        penalties = 0
+        bonuses = 0
+        
+        # 1. Independence
+        ind_pct = sim_ind_directors / sim_total_directors
+        if ind_pct < 0.5:
+            penalties += 15
+            st.error(f"❌ Low Independence ({ind_pct:.0%}): -15 pts")
+        else:
+            st.success(f"✅ Independence ({ind_pct:.0%}): OK")
+            
+        # 2. Leadership
+        if sim_ceo_chair:
+            penalties += 5
+            st.error("❌ CEO is Chair: -5 pts")
+        else:
+            st.success("✅ Split Role: OK")
+            
+        # 3. Audit
+        if not sim_audit_ind:
+            penalties += 20
+            st.error("❌ Audit Committee Not Independent: -20 pts")
+            
+        # 4. Diversity
+        if sim_diversity_pct > 30:
+            bonuses += 5
+            st.success(f"✅ High Diversity ({sim_diversity_pct}%): +5 pts")
+        else:
+            st.warning(f"⚠️ Low Diversity ({sim_diversity_pct}%): No Bonus")
+            
+        # 5. Education
+        if sim_education:
+            bonuses += 5
+            st.success("✅ Certified Directors: +5 pts")
+            
+        # Final Score
+        final_score = max(0, min(100, base_score - penalties + bonuses))
+        
+        # Display
+        delta = final_score - 50 # Assuming 50 is average/baseline for visual
+        
+        st.metric(
+            label="Projected Governance Score", 
+            value=f"{final_score}/100", 
+            delta=f"{bonuses - penalties} Net Impact",
+            delta_color="normal"
+        )
+        
+        st.progress(final_score / 100)
+        
+        if final_score >= 80:
+            # st.balloons() - Removed per user request
+            st.success("🌟 Excellent Governance! This qualifies for the 'Premium' tier.")
+        elif final_score < 50:
+            st.error("🚩 High Risk! This score triggers a 'Governance Concern' flag.")
+        else:
+            st.info("⚖️ Moderate Governance. Consider separating CEO/Chair or adding independent directors.")
+
+    st.markdown("---")
+    st.subheader("3. Financial Resilience & Valuation 💰")
+    st.markdown("Quantifying the financial impact of governance quality.")
+    
+    from db_connection import get_financial_resilience
+    fin_data = get_financial_resilience(limit=200)
+    
+    if fin_data:
+        f_df = pd.DataFrame(fin_data)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("### Governance vs. Margins")
+            st.markdown("**Insight:** Higher governance scores correlate with better operating discipline.")
+            
+            fig_margin = px.scatter(
+                f_df,
+                x="governance_score",
+                y="operating_margin_pct",
+                color="primary_sector",
+                hover_name="company_name",
+                title="Operating Margin by Governance Score",
+                labels={"governance_score": "Governance Score", "operating_margin_pct": "Operating Margin (%)"}
+            )
+            st.plotly_chart(fig_margin, use_container_width=True)
+            
+        with col2:
+            st.markdown("### Valuation Impact")
+            st.markdown("**Insight:** Governance risk creates a valuation discount (or premium).")
+            
+            fig_val = px.histogram(
+                f_df,
+                x="governance_valuation_impact_pct",
+                color="primary_sector",
+                title="Distribution of Governance Valuation Adjustments",
+                labels={"governance_valuation_impact_pct": "Valuation Impact (%)"}
+            )
+            st.plotly_chart(fig_val, use_container_width=True)
+            
+        st.markdown("### Top 'Resilient' Picks")
+        st.markdown("Companies with **High Margins (>10%)** and **High Governance (>80)**.")
+        
+        resilient_picks = f_df[(f_df['operating_margin_pct'] > 10) & (f_df['governance_score'] > 80)]
+        
+        st.dataframe(
+            resilient_picks[['company_name', 'primary_sector', 'governance_score', 'operating_margin_pct', 'valuation_multiple_x']],
+            column_config={
+                "operating_margin_pct": st.column_config.NumberColumn("Op Margin", format="%.1f%%"),
+                "valuation_multiple_x": st.column_config.NumberColumn("Valuation (Rev Multiple)", format="%.1fx"),
+            },
+            width="stretch",
+            hide_index=True
+        )
+    else:
+        st.warning("Financial data not available. Please run the 'create_financial_resilience.sql' script in Supabase.")
+
+    st.markdown("---")
+    st.subheader("4. ESG Materiality Matrix 🌍")
+    st.markdown("Separating 'Greenwashers' from 'Sustainable Compounders'.")
+    
+    from db_connection import get_esg_materiality
+    esg_data = get_esg_materiality(limit=200)
+    
+    if esg_data:
+        e_df = pd.DataFrame(esg_data)
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("### Impact vs. Returns")
+            st.markdown("**Goal:** High Governance (Y) + Low Carbon Intensity (X).")
+            
+            fig_esg = px.scatter(
+                e_df,
+                x="carbon_intensity",
+                y="governance_score",
+                color="human_capital_risk_level",
+                hover_name="company_name",
+                title="ESG Matrix: Carbon vs. Governance",
+                labels={
+                    "carbon_intensity": "Carbon Intensity (tCO2e/$M)", 
+                    "governance_score": "Governance Score",
+                    "human_capital_risk_level": "Human Capital Risk"
+                }
+            )
+            # Invert X axis so "Low Carbon" is on the right (better)
+            fig_esg.update_xaxes(autorange="reversed")
+            st.plotly_chart(fig_esg, use_container_width=True)
+            
+        with col2:
+            st.markdown("### Human Capital Risk")
+            st.markdown("Employee turnover relative to sector peers.")
+            
+            fig_hc = px.box(
+                e_df,
+                x="primary_sector",
+                y="employee_turnover_pct",
+                color="primary_sector",
+                title="Employee Turnover by Sector",
+                labels={"employee_turnover_pct": "Turnover Rate (%)"}
+            )
+            st.plotly_chart(fig_hc, use_container_width=True)
+            
+        st.markdown("### Sustainable Compounders")
+        st.markdown("Companies with **Low Carbon (<50)** and **Low Human Capital Risk**.")
+        
+        sustainable = e_df[(e_df['carbon_intensity'] < 50) & (e_df['human_capital_risk_level'] == 'Low')]
+        
+        st.dataframe(
+            sustainable[['company_name', 'primary_sector', 'carbon_intensity', 'employee_turnover_pct']],
+            column_config={
+                "carbon_intensity": st.column_config.NumberColumn("Carbon Int.", format="%.1f"),
+                "employee_turnover_pct": st.column_config.NumberColumn("Turnover", format="%.1f%%"),
+            },
+            width="stretch",
+            hide_index=True
+        )
+    else:
+        st.warning("ESG data not available. Please run the 'create_esg_materiality.sql' script in Supabase.")
+
+# --- PAGE: Shareholder Engagement ---
+elif page == "Shareholder Engagement":
+    st.title("🗳️ Shareholder Engagement: The Proxy Card")
+    st.markdown("Generate evidence-based voting recommendations for the 2026 Proxy Season.")
+    
+    from db_connection import get_engagement_flags
+    flags_data = get_engagement_flags(limit=300)
+    
+    if flags_data:
+        flags_df = pd.DataFrame(flags_data)
+        
+        # 1. Red Flag Scanner
+        st.subheader("1. Red Flag Scanner 🚩")
+        st.markdown("Companies triggering critical governance or ethical risks.")
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            vendor_risk = flags_df[flags_df['flag_vendor_diversity'] == True]
+            st.metric("Vendor Diversity Risk", f"{len(vendor_risk)}", delta="Companies < 5% Spend", delta_color="inverse")
+        with col2:
+            ai_risk = flags_df[flags_df['flag_ai_oversight'] == True]
+            st.metric("AI Oversight Gap", f"{len(ai_risk)}", delta="High Patents / No Experts", delta_color="inverse")
+        with col3:
+            ethics_risk = flags_df[flags_df['flag_ethics_void'] == True]
+            st.metric("Ethics Policy Void", f"{len(ethics_risk)}", delta="High Risk Sector / No Policy", delta_color="inverse")
+            
+        # Filter Selection
+        risk_filter = st.selectbox("Select Risk Category to Inspect:", 
+                                 ["Vendor Diversity Risk", "AI Oversight Gap", "Ethics Policy Void"])
+        
+        filtered_df = pd.DataFrame()
+        if risk_filter == "Vendor Diversity Risk":
+            filtered_df = vendor_risk
+        elif risk_filter == "AI Oversight Gap":
+            filtered_df = ai_risk
+        else:
+            filtered_df = ethics_risk
+            
+        st.dataframe(
+            filtered_df[['company_name', 'primary_sector', 'governance_score', 'supplier_diversity_pct', 'has_ai_ethics_policy']],
+            column_config={
+                "supplier_diversity_pct": st.column_config.ProgressColumn("Diverse Spend %", format="%.1f%%", min_value=0, max_value=15),
+                "has_ai_ethics_policy": st.column_config.CheckboxColumn("Ethics Policy?"),
+            },
+            width="stretch",
+            hide_index=True
+        )
+        
+        # 2. Proxy Card Generator
+        st.markdown("---")
+        st.subheader("2. Proxy Card Generator 📝")
+        st.markdown("Select a company to generate a voting recommendation.")
+        
+        selected_company = st.selectbox("Select Company for Proxy Card:", filtered_df['company_name'].unique())
+        
+        if selected_company:
+            company_row = filtered_df[filtered_df['company_name'] == selected_company].iloc[0]
+            
+            st.info(f"Generating Proxy Card for **{selected_company}**...")
+            
+            # Generate Logic
+            reasons = []
+            if company_row['flag_vendor_diversity']:
+                reasons.append(f"- **Vote AGAINST Audit Chair:** Failed to oversee supplier diversity risks (Spend: {company_row['supplier_diversity_pct']}%)")
+            if company_row['flag_ai_oversight']:
+                reasons.append("- **Vote AGAINST Nominating Chair:** Board lacks AI literacy despite significant patent exposure.")
+            if company_row['flag_ethics_void']:
+                reasons.append("- **Vote FOR Shareholder Proposal:** Require establishment of AI Ethics Committee.")
+                
+            proxy_card_text = f"""
+            ### 🗳️ PROXY VOTING CARD: {selected_company}
+            **Sector:** {company_row['primary_sector']} | **Gov Score:** {company_row['governance_score']}
+            
+            **RECOMMENDATION: WITHHOLD / VOTE AGAINST**
+            
+            **Evidence for Engagement:**
+            {chr(10).join(reasons)}
+            
+            *Generated by Deep Tech Proxy Agent*
+            """
+            
+            st.markdown(proxy_card_text)
+            st.download_button("Download Proxy Card", proxy_card_text, file_name=f"Proxy_Card_{selected_company}.txt")
+            
+    else:
+        st.warning("Engagement data not available. Please run the 'create_engagement_flags.sql' script in Supabase.")
+
+# --- PAGE: Methodology & Definitions ---
+if page == "Methodology & Definitions":
+    st.title("📚 Methodology & Definitions")
+    st.markdown("Transparency is key to our scoring model. Below is a detailed breakdown of how we evaluate companies.")
+
+    # 1. Scoring Formula
+    st.header("1. The Scoring Formula")
+    st.info("Our **Deal Qualification Score** is a composite metric designed to identify resilient, high-growth deep tech companies.")
+    
+    col1, col2, col3 = st.columns(3)
+    col1.metric("Governance", "40%", "Board Quality & Risk")
+    col2.metric("Innovation", "40%", "Patents & R&D")
+    col3.metric("Data Quality", "20%", "Transparency Tier")
+    
+    st.latex(r'''
+        \text{Deal Score} = (0.4 \times \text{Governance}) + (0.4 \times \text{Innovation}) + (0.2 \times \text{Data Tier})
+    ''')
+
+    st.markdown("---")
+
+    # 2. Governance Logic (OECD-Aligned Framework)
+    st.header("2. Governance Logic (OECD-Aligned Framework)")
+    st.markdown("""
+    Our governance framework is grounded in the **G20/OECD Principles of Corporate Governance (2023)**, specifically focusing on board independence, shareholder rights, and sustainability. We apply strict penalties for structures that deviate from these global standards.
+    
+    | Component | Impact | Rationale (OECD Alignment) |
+    | :--- | :--- | :--- |
+    | **Low Independence** | **-25 pts** | Boards with <50% independent directors lack oversight. |
+    | **CEO is Chair** | **-10 pts** | Dual role concentrates too much power in one person. |
+    | **Non-Indep. Audit** | **-20 pts** | Audit committees must be 100% independent for financial integrity. |
+    | **Venture-Backed** | **-5 pts** | Structural penalty for VC control/insider dominance. |
+    | **Academic Spinout** | **-5 pts** | Structural penalty for potential IP/Founder conflicts. |
+    | **Tech Experts** | **+5 pts** | Bonus for boards with >20% technical expertise. |
+    | **Diversity** | **+5 pts** | Bonus for boards with >40% diverse representation. |
+    | **Say-on-Pay** | **-10 pts** | Penalty if shareholder support < 70%. |
+    | **Clawback** | **+5 pts** | Bonus for having a robust clawback policy. |
+    | **Pay Ratio** | **-5 pts** | Penalty if CEO pay ratio > 300:1. |
+    | **AI Ethics Board** | **+5 pts** | Bonus for dedicated AI oversight committee (Scored for 2025+ only). |
+    | **AI Expertise** | **+5 pts** | Bonus for directors with AI/Technical background (Scored for 2025+ only). |
+    | **Cyber Oversight** | **+5 pts** | Bonus if cybersecurity oversight is explicitly in a committee charter. |
+    """)
+
+    st.info("ℹ️ **Note:** Human Capital Management (HCM) data is collected for analysis but does not currently impact the Deal Score.")
+
+    st.markdown("---")
+
+    # 3. Resilience Framework
+    st.header("3. Resilience Framework")
+    
+    with st.expander("Innovation Index"):
+        st.write("""
+        Measures a company's technical moat and R&D velocity.
+        *   **Patent Volume:** Normalized count of granted patents.
+        *   **Tech Tags:** Premium for high-value tags (e.g., 'Generative AI', 'Quantum').
+        *   **Momentum:** 3-year CAGR of patent filings.
+        """)
+        
+    with st.expander("AI-ESG Risk"):
+        st.write("""
+        Evaluates the ethical and social risks of deployment.
+        *   **Policy Void:** Penalty (-10) for AI/Bio companies missing an Ethics Policy.
+        *   **Human Capital:** Risk assessment based on employee turnover in critical tech roles.
+        """)
+        
+    with st.expander("Data Quality Tiers"):
+        st.write("""
+        Reflects the transparency and availability of company data.
+        *   **Tier 1 (100 pts):** Full SEC filings, verified board data, active patent portfolio.
+        *   **Tier 2 (25 pts):** Limited public data, estimated metrics.
+        """)
+
+    st.markdown("---")
+
+    # 4. Ownership Archetypes
+    st.header("4. Ownership Archetypes")
+    st.markdown("""
+    *   **Venture-Backed:** Private or recently public companies dominated by VC firms. High growth, high risk, often low governance.
+    *   **Academic Spinout:** Companies formed from university research. Strong IP, but often plagued by "Founder's Trap" and governance issues.
+    *   **Megacap Subsidiary:** Units of large corps (e.g., Alphabet, GE). High stability, but potentially stifled innovation.
+    *   **Public Pure-Play:** Standard publicly traded deep tech companies.
+    """)
+    
+    st.markdown("---")
+    
+    # 5. Competitive Advantage
+    st.header("5. Why We Win: The Deep Tech Advantage 🏆")
+    st.markdown("""
+    Traditional proxy advisors (ISS, Glass Lewis) apply a "one-size-fits-all" governance model. We believe that for deep tech, **Innovation IS Governance**.
+    """)
+    
+    comp_data = {
+        "Feature": [
+            "Technical Expertise", 
+            "R&D Efficiency", 
+            "AI Ethics Oversight", 
+            "Cybersecurity", 
+            "Data Source"
+        ],
+        "Deep Tech Proxy (Us)": [
+            "✅ **Core Metric:** Boards penalized for lack of AI/Science experts.",
+            "✅ **Alpha Signal:** We track Patent CAGR vs. Spend.",
+            "✅ **Mandatory:** 'Policy Void' penalty for AI companies.",
+            "✅ **Charter Check:** Bonus for explicit committee oversight.",
+            "🔍 **Real-Time:** Live patent filings & committee charters."
+        ],
+        "Traditional (ISS/MSCI)": [
+            "❌ **Ignored:** Focus only on financial/legal backgrounds.",
+            "❌ **Ignored:** Treated as a black box expense.",
+            "⚠️ **Lagging:** Often retroactively scored after scandals.",
+            "⚠️ **Generic:** Basic check for 'Risk Committee'.",
+            "📄 **Static:** Annual reports & laggy ESG surveys."
+        ]
+    }
+    
+    st.table(pd.DataFrame(comp_data))
+    
+    st.info("💡 **The Bottom Line:** We don't just measure risk; we measure **Resilience**. A company with perfect legal governance but zero innovation is a 'Value Trap' in our model.")
