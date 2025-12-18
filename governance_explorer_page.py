@@ -24,7 +24,7 @@ def render_governance_explorer():
                 response = supabase.table('board_composition_annual')\
                     .select('*, companies(company_name, ticker_symbol, primary_sector, jurisdiction)')\
                     .order('fiscal_year', desc=True)\
-                    .limit(1000)\
+                    .limit(5000)\
                     .execute()
             except Exception as e:
                 st.error(f"### ❌ Database Query Failed")
@@ -79,7 +79,7 @@ def render_governance_explorer():
                 
                 df_gov = pd.DataFrame(gov_data)
                 
-                st.markdown(f"**Total Companies**: {len(df_gov):,} with governance data")
+                st.markdown(f"**Showing Top 5,000 Companies** (out of {len(df_gov):,} loaded with governance data)")
                 st.markdown(f"**Last Refreshed**: {df_gov['Last Updated'].max() if not df_gov.empty else 'N/A'}")
                 
                 # Filters
