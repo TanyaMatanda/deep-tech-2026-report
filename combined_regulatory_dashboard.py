@@ -153,11 +153,17 @@ def render_company_profile(company: pd.Series, supabase):
     # Get applicable regulations count
     jurisdiction = company.get('jurisdiction', company.get('incorporation_country', 'USA'))
     sectors = [company.get('primary_sector', '')]
-    applicable_regs = get_regulations_for_company(jurisdiction, sectors)
+    listing_type = company.get('listing_type', 'Unknown')
+    applicable_regs = get_regulations_for_company(jurisdiction, sectors, listing_type)
     high_priority = [r for r in applicable_regs if r.risk_level == "High" and r.status == "Active"]
     
-    st.info(f"📊 **{len(applicable_regs)} applicable regulations identified** | "
-            f"**{len(high_priority)} high-priority active** ⚠️")
+    # Add private company disclaimer if applicable
+    if listing_type == 'Private':
+        st.info(f"📊 **{len(applicable_regs)} applicable regulations identified** (SEC rules excluded for private companies) | "
+                f"**{len(high_priority)} high-priority active** ⚠️")
+    else:
+        st.info(f"📊 **{len(applicable_regs)} applicable regulations identified** | "
+                f"**{len(high_priority)} high-priority active** ⚠️")
 
 def render_priority_regulations(company: pd.Series, supabase):
     """Render high-priority compliance obligations"""
@@ -167,7 +173,8 @@ def render_priority_regulations(company: pd.Series, supabase):
     # Get applicable regulations
     jurisdiction = company.get('jurisdiction', company.get('incorporation_country', 'USA'))
     sectors = [company.get('primary_sector', '')]
-    applicable_regs = get_regulations_for_company(jurisdiction, sectors)
+    listing_type = company.get('listing_type', 'Unknown')
+    applicable_regs = get_regulations_for_company(jurisdiction, sectors, listing_type)
     
     if not applicable_regs:
         st.info("No specific regulations identified for this company profile.")

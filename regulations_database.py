@@ -338,9 +338,19 @@ def get_regulations_for_company(jurisdiction: str, sectors: List[str], listing_t
     """
     applicable = []
     
+    # Define regulations that only apply to public companies
+    public_only_regs = [
+        'usa_sec_cyber',  # SEC Cybersecurity - public companies only
+        'usa_sec_climate',  # SEC Climate - public companies only
+    ]
+    
     for reg in ALL_REGULATIONS:
         # Check jurisdiction match
         if reg.jurisdiction != jurisdiction:
+            continue
+        
+        # Filter out public-only regulations for private companies
+        if listing_type == 'Private' and reg.id in public_only_regs:
             continue
         
         # Check if regulation applies to any of the company's sectors
