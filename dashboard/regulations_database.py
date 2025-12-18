@@ -348,6 +348,8 @@ def get_regulations_for_company(jurisdiction: str, sectors: List[str], listing_t
             applicable.append(reg)
         else:
             for company_sector in sectors:
+                if not company_sector:
+                    continue
                 for reg_sector in reg.sectors:
                     if reg_sector.lower() in company_sector.lower() or company_sector.lower() in reg_sector.lower():
                         applicable.append(reg)

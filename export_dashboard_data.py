@@ -265,7 +265,12 @@ def calculate_stats():
     with open("dashboard/data/stats.json", "w") as f:
         json.dump(output, f, indent=2)
         
-    print("Dashboard data exported to dashboard/data/stats.json")
+    # Also update root data folder for compatibility
+    if os.path.exists("data"):
+        with open("data/stats.json", "w") as f:
+            json.dump(output, f, indent=2)
+        
+    print("Dashboard data exported to dashboard/data/stats.json and data/stats.json")
 
 if __name__ == "__main__":
     calculate_stats()
