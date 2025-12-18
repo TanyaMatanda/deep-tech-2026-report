@@ -20,29 +20,22 @@ def render_company_search():
         </div>
         """, unsafe_allow_html=True)
         
-        # Search input
-        search_query = st.text_input("Search by Company Name or Ticker", placeholder="e.g. NVIDIA or NVDA")
-        search_button = st.button("Analyze Company")
-        
-        if search_button and search_query:
-            # Fetch company list for matching
-            try:
-                # Case-insensitive search
-                companies_res = supabase.table('companies')\
-                    .select('id, company_name, ticker_symbol, primary_sector, jurisdiction')\
-                    .or_(f"company_name.ilike.%{search_query}%,ticker_symbol.ilike.%{search_query}%")\
-                    .limit(5)\
-                    .execute()
+        # Fetch company list for autocomplete
+        try:
+            companies_res = supabase.table('companies').select('id, company_name, ticker_symbol, primary_sector, jurisdiction').execute()
+            if companies_res.data:
+                company_df = pd.DataFrame(companies_res.data)
+                company_df['display_name'] = company_df['company_name'] + " (" + company_df['ticker_symbol'].fillna('N/A') + ")"
                 
-                if companies_res.data:
-                    if len(companies_res.data) > 1:
-                        st.info(f"Found {len(companies_res.data)} matches. Please select one:")
-                        match_names = [f"{c['company_name']} ({c['ticker_symbol'] or 'N/A'})" for c in companies_res.data]
-                        selected_match = st.radio("Matches", match_names)
-                        selected_company = companies_res.data[match_names.index(selected_match)]
-                    else:
-                        selected_company = companies_res.data[0]
-                    
+                selected_display = st.selectbox(
+                    "Select a Company to Analyze",
+                    options=sorted(company_df['display_name'].tolist()),
+                    index=None,
+                    placeholder="Search by name or ticker..."
+                )
+                
+                if selected_display:
+                    selected_company = company_df[company_df['display_name'] == selected_display].iloc[0]
                     company_id = selected_company['id']
                     company_name = selected_company['company_name']
                     jurisdiction = selected_company['jurisdiction']
