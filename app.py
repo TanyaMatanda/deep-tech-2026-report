@@ -462,37 +462,40 @@ elif page == "Sector Deep Dives":
                 delta=f"{round(sec_data['avg_women_pct'] - overall['avg_women_pct'], 1)}% vs Avg")
     col3.metric("Tech Experts", sec_data['avg_tech_experts'],
                 delta=f"{round(sec_data['avg_tech_experts'] - overall['avg_tech_experts'], 1)} vs Avg")
-    col4.metric("Avg Tenure", f"{sec_data.get('avg_tenure', 'N/A')} yrs",
-                delta=f"{round(sec_data.get('avg_tenure', 0) - overall.get('avg_tenure', 0), 1)} yrs" if 'avg_tenure' in sec_data else None)
+    col4.metric("Avg Patents", f"{int(sec_data.get('avg_patents', 0))}",
+                delta=f"{round(sec_data.get('avg_patents', 0) - overall.get('avg_patents', 0), 1)} vs Avg")
 
     col5, col6, col7, col8 = st.columns(4)
     col5.metric("Independence", f"{sec_data.get('avg_indep_pct', 'N/A')}%",
                 delta=f"{round(sec_data.get('avg_indep_pct', 0) - overall.get('avg_indep_pct', 0), 1)}%" if 'avg_indep_pct' in sec_data else None)
-    col6.metric("CEO is Chair", f"{sec_data.get('ceo_chair_pct', 'N/A')}%",
-                 delta=f"{round(sec_data.get('ceo_chair_pct', 0) - overall.get('ceo_chair_pct', 0), 1)}%" if 'ceo_chair_pct' in sec_data else None,
-                 delta_color="inverse")
+    col6.metric("Gov Score", f"{sec_data.get('avg_gov_score', 'N/A')}",
+                 delta=f"{round(sec_data.get('avg_gov_score', 0) - overall.get('avg_gov_score', 0), 1)} vs Avg")
     col7.metric("Avg Age", f"{sec_data.get('avg_age', 'N/A')} yrs")
     col8.metric("AI Oversight", f"{sec_data.get('ai_oversight_pct', 'N/A')}%")
     
+    # AI Washing Alert
+    if sec_data.get('ai_wash_pct', 0) > 0:
+        st.warning(f"⚠️ **AI Washing Risk:** {sec_data['ai_wash_pct']}% of companies in this sector claim AI status but have **zero patents**.")
+
     st.divider()
     
     # Comparative Analysis
-    st.subheader("Governance Footprint")
+    st.subheader("Governance & Innovation Footprint")
     
     # Radar Chart
-    categories = ['Women %', 'Tech Experts (Scaled)', 'Independence %', 'Tenure (Scaled)', 'AI Oversight %']
+    categories = ['Women %', 'Tech Experts (Scaled)', 'Independence %', 'Gov Score', 'AI Oversight %']
     sec_vals = [
         sec_data['avg_women_pct'], 
         sec_data['avg_tech_experts'] * 10,
         sec_data.get('avg_indep_pct', 0),
-        sec_data.get('avg_tenure', 0) * 5,
+        sec_data.get('avg_gov_score', 0),
         sec_data.get('ai_oversight_pct', 0)
     ]
     avg_vals = [
         overall['avg_women_pct'],
         overall['avg_tech_experts'] * 10,
         overall.get('avg_indep_pct', 0),
-        overall.get('avg_tenure', 0) * 5,
+        overall.get('avg_gov_score', 0),
         overall.get('ai_oversight_pct', 0)
     ]
     
@@ -507,7 +510,7 @@ elif page == "Sector Deep Dives":
         polar=dict(radialaxis=dict(visible=True, range=[0, 100])),
         showlegend=True,
         template="plotly_white",
-        title="Governance Footprint vs Average",
+        title="Sector Maturity vs Average",
         font=dict(family="Helvetica Neue, Helvetica, Arial, sans-serif")
     )
     
@@ -516,12 +519,50 @@ elif page == "Sector Deep Dives":
         st.plotly_chart(fig_radar, use_container_width=True)
     
     with c2:
+        # Risk Profile Chart
+        risk_dist = sec_data.get('risk_distribution', {})
+        if risk_dist:
+            risk_df = pd.DataFrame(list(risk_dist.items()), columns=['Category', 'Count']).sort_values('Count', ascending=True)
+            fig_risk = px.bar(
+                risk_df, x='Count', y='Category', orientation='h',
+                title=f"Risk Disclosure Profile: {selected_sector}",
+                color='Count', color_continuous_scale='Reds'
+            )
+            fig_risk.update_layout(template="plotly_white", showlegend=False)
+            st.plotly_chart(fig_risk, use_container_width=True)
+        else:
+            st.info("No detailed risk factor data available for this sector.")
+
+    st.divider()
+    
+    # Row 2: Innovation & Board Composition
+    r2c1, r2c2 = st.columns(2)
+    
+    with r2c1:
+        # Patent Intensity Comparison
+        patent_data = []
+        for s in sectors.to_dict('records'):
+            patent_data.append({"Sector": s['sector'], "Avg Patents": s.get('avg_patents', 0)})
+        p_df = pd.DataFrame(patent_data).sort_values("Avg Patents", ascending=True)
+        
+        fig_patents = px.bar(
+            p_df, x="Avg Patents", y="Sector", orientation='h',
+            title="Innovation Intensity (Avg Patents per Company)",
+            color="Avg Patents", color_continuous_scale='Blues',
+            text_auto='.1f'
+        )
+        # Highlight selected sector
+        fig_patents.update_traces(marker_color=[MCKINSEY_TEAL if s == selected_sector else MCKINSEY_GREY for s in p_df['Sector']])
+        
+        fig_patents.update_layout(template="plotly_white", xaxis_title="Average Patents")
+        st.plotly_chart(fig_patents, use_container_width=True)
+
+    with r2c2:
         st.markdown("### Board Composition")
         if 'avg_indep_pct' in sec_data:
             indep = sec_data['avg_indep_pct']
             non_indep = 100 - indep
             
-            # Use a DataFrame for more robust plotting
             df_pie = pd.DataFrame({
                 "Category": ["Independent", "Non-Independent"],
                 "Percentage": [indep, non_indep]
@@ -546,21 +587,21 @@ elif page == "Sector Deep Dives":
             )
             st.plotly_chart(fig_comp, use_container_width=True)
             
-        # Insights
-        insights = {
-            "Semiconductors & AI": "High technical barrier to entry limits traditional director pool. Governance focuses on supply chain and IP protection.",
-            "Energy & Climate": "Sector leader in diversity. Regulatory pressure drives higher governance standards.",
-            "Biotechnology": "Boards often composed of MDs/PhDs. 'Tech Expert' count may understate medical expertise.",
-            "Quantum & Photonics": "Lowest diversity. Niche talent pool creates tension between meritocracy and diversity.",
-            "Cross Domain Enablement": "Represents the 'average' Deep Tech company. B2B SaaS tends to have better governance than Consumer Tech.",
-            "General Deep Tech": "Broad category encompassing advanced technology companies. Serves as a baseline for the broader deep tech ecosystem."
-        }
-        st.markdown(f"""
-        <div style="background-color: #f8f9fa; padding: 1.5rem; border-left: 5px solid #0077c8; margin-top: 1rem;">
-            <h4 style="margin-top: 0; color: #0077c8; font-size: 0.9rem; text-transform: uppercase;">SECTOR CONTEXT</h4>
-            <p style="margin-bottom: 0;">{insights.get(selected_sector, 'No specific context available.')}</p>
-        </div>
-        """, unsafe_allow_html=True)
+    # Insights
+    insights = {
+        "Semiconductors & AI": "High technical barrier to entry limits traditional director pool. Governance focuses on supply chain and IP protection.",
+        "Energy & Climate": "Sector leader in diversity. Regulatory pressure drives higher governance standards.",
+        "Biotechnology": "Boards often composed of MDs/PhDs. 'Tech Expert' count may understate medical expertise.",
+        "Quantum & Photonics": "Lowest diversity. Niche talent pool creates tension between meritocracy and diversity.",
+        "Cross Domain Enablement": "Represents the 'average' Deep Tech company. B2B SaaS tends to have better governance than Consumer Tech.",
+        "General Deep Tech": "Broad category encompassing advanced technology companies. Serves as a baseline for the broader deep tech ecosystem."
+    }
+    st.markdown(f"""
+    <div style="background-color: #f8f9fa; padding: 1.5rem; border-left: 5px solid #0077c8; margin-top: 1rem;">
+        <h4 style="margin-top: 0; color: #0077c8; font-size: 0.9rem; text-transform: uppercase;">SECTOR CONTEXT</h4>
+        <p style="margin-bottom: 0;">{insights.get(selected_sector, 'No specific context available.')}</p>
+    </div>
+    """, unsafe_allow_html=True)
         
 # --- Governance Explorer ---
 elif page == "Governance Explorer":
