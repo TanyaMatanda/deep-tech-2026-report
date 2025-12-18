@@ -44,11 +44,23 @@ def render_regulatory_dashboard():
         </div>
         """, unsafe_allow_html=True)
         
-        # Fetch company list
+        # Fetch company list - limit to prevent loading 101K+ companies
         try:
-            companies_res = supabase.table('companies').select(
-                'id, company_name, ticker_symbol, primary_sector, jurisdiction, incorporation_country, listing_type'
-            ).execute()
+            # Add search filter
+            search_term = st.text_input("🔍 Search by company name or ticker", placeholder="e.g., NVIDIA, NVDA", key="company_search")
+            
+            if search_term and len(search_term) >= 2:
+                # Search with ILIKE for case-insensitive partial match
+                companies_res = supabase.table('companies').select(
+                    'id, company_name, ticker_symbol, primary_sector, jurisdiction, incorporation_country, listing_type'
+                ).or_(
+                    f"company_name.ilike.%{search_term}%,ticker_symbol.ilike.%{search_term}%"
+                ).limit(100).execute()
+            else:
+                # Default: top public companies only (limits to 500 to prevent loading all 101K companies)
+                companies_res = supabase.table('companies').select(
+                    'id, company_name, ticker_symbol, primary_sector, jurisdiction, incorporation_country, listing_type'
+                ).eq('listing_type', 'Public').limit(500).execute()
             
             if companies_res.data:
                 company_df = pd.DataFrame(companies_res.data)
@@ -64,7 +76,8 @@ def render_regulatory_dashboard():
                         "Select a Company to Analyze",
                         options=sorted(company_df['display_name'].tolist()),
                         index=None,
-                        placeholder="Search by name or ticker..."
+                        placeholder="Type company name above to search...",
+                        key="company_select"
                     )
                 
                 with col2:
