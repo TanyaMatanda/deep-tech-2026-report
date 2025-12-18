@@ -114,7 +114,8 @@ def render_governance_explorer():
                         'Avg Attendance': f"{row.get('avg_attendance_rate')}%" if row.get('avg_attendance_rate') else '-',
                         
                         'Fiscal Year': row.get('fiscal_year', '-'),
-                        'Last Updated': row.get('created_at', '-')
+                        'Last Updated': row.get('created_at', '-'),
+                        'company_id': row.get('company_id')
                     })
                 
                 df_gov = pd.DataFrame(gov_data)
@@ -142,6 +143,12 @@ def render_governance_explorer():
                     
                 with filter_col5:
                     ai_ethics_filter = st.selectbox("AI Ethics Board", ['All', 'Yes', 'No'])
+
+                # Add a second row of filters for Fiscal Year
+                filter_row2_col1, _ = st.columns([1, 4])
+                with filter_row2_col1:
+                    year_options = ['Latest Available'] + sorted(df_gov['Fiscal Year'].dropna().unique().tolist(), reverse=True)
+                    year_filter = st.selectbox("Fiscal Year", year_options, index=0)
                 
                 # Apply filters
                 filtered_df = df_gov.copy()
@@ -158,6 +165,13 @@ def render_governance_explorer():
                     filtered_df = filtered_df[filtered_df['AI Ethics Board'] == '✅']
                 elif ai_ethics_filter == 'No':
                     filtered_df = filtered_df[filtered_df['AI Ethics Board'] == '❌']
+                
+                if year_filter == 'Latest Available':
+                    # Sort by company_id and Fiscal Year desc, then drop duplicates on company_id
+                    filtered_df = filtered_df.sort_values(['company_id', 'Fiscal Year'], ascending=[True, False])
+                    filtered_df = filtered_df.drop_duplicates(subset=['company_id'], keep='first')
+                else:
+                    filtered_df = filtered_df[filtered_df['Fiscal Year'] == year_filter]
                 
                 st.markdown(f"**Filtered Results**: {len(filtered_df):,} companies")
                 
