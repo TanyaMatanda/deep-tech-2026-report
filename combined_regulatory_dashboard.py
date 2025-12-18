@@ -152,7 +152,8 @@ def render_company_profile(company: pd.Series, supabase):
     
     # Get applicable regulations count
     jurisdiction = company.get('jurisdiction', company.get('incorporation_country', 'USA'))
-    sectors = [company.get('primary_sector', '')]
+    primary_sector = company.get('primary_sector') or ""
+    sectors = [primary_sector]
     listing_type = company.get('listing_type', 'Unknown')
     applicable_regs = get_regulations_for_company(jurisdiction, sectors, listing_type)
     high_priority = [r for r in applicable_regs if r.risk_level == "High" and r.status == "Active"]
