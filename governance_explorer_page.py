@@ -17,26 +17,39 @@ def render_governance_explorer():
         # Query company_risk_factors joined with companies
         st.markdown("---")
         
-        with st.spinner("Loading governance data..."):
+        with st.spinner("Loading governance data (fetching 10,000 records)..."):
             try:
-                # Fetch data from board_composition_annual joined with companies
-                # Using standard join syntax for better compatibility
-                response = supabase.table('board_composition_annual')\
-                    .select('*, companies(company_name, ticker_symbol, primary_sector, sub_sector, jurisdiction)')\
-                    .order('fiscal_year', desc=True)\
-                    .limit(5000)\
-                    .execute()
+                # Fetch data in batches to bypass the 1000-record limit
+                all_rows = []
+                batch_size = 1000
+                total_to_fetch = 10000
+                
+                for start in range(0, total_to_fetch, batch_size):
+                    end = start + batch_size - 1
+                    response = supabase.table('board_composition_annual')\
+                        .select('*, companies(company_name, ticker_symbol, primary_sector, sub_sector, jurisdiction)')\
+                        .order('fiscal_year', desc=True)\
+                        .range(start, end)\
+                        .execute()
+                    
+                    if not response.data:
+                        break
+                    all_rows.extend(response.data)
+                    if len(response.data) < batch_size:
+                        break
+                
+                data_to_process = all_rows
             except Exception as e:
                 st.error(f"### ❌ Database Query Failed")
                 st.write(f"Error details: {str(e)}")
                 return
             
-            if not response.data:
+            if not data_to_process:
                 st.warning("No governance data found")
             else:
                 # Process data
                 gov_data = []
-                for row in response.data:
+                for row in data_to_process:
                     company = row.get('companies', {})
                     
                     # Calculate independence % if not stored
@@ -80,7 +93,7 @@ def render_governance_explorer():
                 
                 df_gov = pd.DataFrame(gov_data)
                 
-                st.markdown(f"**Showing Top 5,000 Companies** (out of {len(df_gov):,} loaded with governance data)")
+                st.markdown(f"**Showing Top 10,000 Companies** (out of {len(df_gov):,} loaded with governance data)")
                 st.markdown(f"**Last Refreshed**: {df_gov['Last Updated'].max() if not df_gov.empty else 'N/A'}")
                 
                 # Filters
