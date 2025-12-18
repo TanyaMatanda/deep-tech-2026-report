@@ -316,7 +316,8 @@ def render_compliance_calendar(company: pd.Series):
     
     jurisdiction = company.get('jurisdiction', company.get('incorporation_country', 'USA'))
     sectors = [company.get('primary_sector', '')]
-    applicable_regs = get_regulations_for_company(jurisdiction, sectors)
+    listing_type = company.get('listing_type', 'Unknown')
+    applicable_regs = get_regulations_for_company(jurisdiction, sectors, listing_type)
     
     # Filter active regulations with deadlines
     active_with_deadlines = [r for r in applicable_regs if r.status == "Active" and r.deadline_type]
@@ -336,7 +337,8 @@ def render_investor_summary(company: pd.Series):
     
     jurisdiction = company.get('jurisdiction', company.get('incorporation_country', 'USA'))
     sectors = [company.get('primary_sector', '')]
-    applicable_regs = get_regulations_for_company(jurisdiction, sectors)
+    listing_type = company.get('listing_type', 'Unknown')
+    applicable_regs = get_regulations_for_company(jurisdiction, sectors, listing_type)
     
     high_risks = [r for r in applicable_regs if r.risk_level == "High" and r.status == "Active"]
     medium_risks = [r for r in applicable_regs if r.risk_level == "Medium" and r.status == "Active"]
