@@ -133,9 +133,7 @@ else:
 page = st.sidebar.radio("Navigate", [
     "Executive Summary", 
     "Sector Deep Dives",
-    "Regulatory Risk Dashboard",  # NEW: Combined Jurisdictional + Company Search
-    "Jurisdictional Analysis",     # Keep for backward compatibility
-    "Company Search",               # Keep for backward compatibility  
+    "Regulatory Risk Dashboard",
     "Governance Explorer", 
     "Full Report"
 ])
