@@ -146,10 +146,10 @@ def render_company_search():
                             """, unsafe_allow_html=True)
                     else:
                         st.info("No specific regulatory mappings found for this company profile.")
-            else:
-                st.warning("No company data available.")
-        except Exception as e:
-            st.error(f"Error fetching company data: {e}")
+                else:
+                    st.warning("No company data available.")
+            except Exception as e:
+                st.error(f"Error fetching company data: {e}")
 
 if __name__ == "__main__":
     render_company_search()
