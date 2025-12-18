@@ -120,7 +120,6 @@ Our analysis measures *disclosed* governance practices as captured in regulatory
 The 2025 season marked a transition point for Deep Tech governance, characterized by three significant trends:
 
 ### 1. Increased Scrutiny of AI Governance
-### 1. Increased Scrutiny of AI Governance
 Following the generative AI surge of 2023-2024, investors began demanding concrete evidence of responsible AI frameworks. **AI-focused shareholder proposals increased sharply (e.g., from 4 in 2023 to 19 in 2024 per ISS-Corporate), with some proposals garnering approximately 30% adjusted support among independent shareholders (Morningstar).** This signals that while not yet majority-supported, these issues have moved from niche to mainstream investor concern.
 
 According to ISS-Corporate research, disclosure of board-level AI oversight in the S&P 500 increased by over 84% year-over-year, with 31.6% of companies disclosing some form of AI oversight by 2024 and approximately 40% of Fortune 100 companies assigning AI oversight to committees by 2025. The debate shifted from *whether* AI should be governed to *how* it should be governed: through integrated oversight in existing committees (typically Audit) or via dedicated structures with specialized charters.
