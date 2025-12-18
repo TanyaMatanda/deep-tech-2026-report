@@ -22,7 +22,7 @@ def render_governance_explorer():
                 # Fetch data from board_composition_annual joined with companies
                 # Using standard join syntax for better compatibility
                 response = supabase.table('board_composition_annual')\
-                    .select('*, companies(company_name, ticker_symbol, primary_sector, jurisdiction)')\
+                    .select('*, companies(company_name, ticker_symbol, primary_sector, sub_sector, jurisdiction)')\
                     .order('fiscal_year', desc=True)\
                     .limit(5000)\
                     .execute()
@@ -53,6 +53,7 @@ def render_governance_explorer():
                         'Company': company.get('company_name', 'Unknown'),
                         'Ticker': company.get('ticker_symbol', '-'),
                         'Sector': company.get('primary_sector', '-'),
+                        'Sub-Sector': company.get('sub_sector', '-'),
                         'Jurisdiction': company.get('jurisdiction', '-'),
                         
                         # Board Composition
@@ -86,18 +87,21 @@ def render_governance_explorer():
                 st.markdown("---")
                 st.subheader("🔍 Filters")
                 
-                filter_col1, filter_col2, filter_col3, filter_col4 = st.columns(4)
+                filter_col1, filter_col2, filter_col3, filter_col4, filter_col5 = st.columns(5)
                 
                 with filter_col1:
                     sector_filter = st.multiselect("Sector", sorted(df_gov['Sector'].dropna().unique()), default=[])
-                    
+                
                 with filter_col2:
+                    sub_sector_filter = st.multiselect("Sub-Sector", sorted(df_gov['Sub-Sector'].dropna().unique()), default=[])
+                    
+                with filter_col3:
                     juris_filter = st.multiselect("Jurisdiction", sorted(df_gov['Jurisdiction'].dropna().unique()), default=[])
                 
-                with filter_col3:
+                with filter_col4:
                     min_board_indep = st.number_input("Min Board Independence %", min_value=0, max_value=100, value=0)
                     
-                with filter_col4:
+                with filter_col5:
                     ai_ethics_filter = st.selectbox("AI Ethics Board", ['All', 'Yes', 'No'])
                 
                 # Apply filters
@@ -105,6 +109,8 @@ def render_governance_explorer():
                 
                 if sector_filter:
                     filtered_df = filtered_df[filtered_df['Sector'].isin(sector_filter)]
+                if sub_sector_filter:
+                    filtered_df = filtered_df[filtered_df['Sub-Sector'].isin(sub_sector_filter)]
                 if juris_filter:
                     filtered_df = filtered_df[filtered_df['Jurisdiction'].isin(juris_filter)]
                 if min_board_indep > 0:
@@ -126,7 +132,7 @@ def render_governance_explorer():
                 
                 with tab1:
                     st.markdown("### Board Composition & Independence")
-                    board_cols = ['Company', 'Ticker', 'Sector', 'Board Independence %', 'Board Diversity %', 'Split Chair/CEO', 'Total Directors']
+                    board_cols = ['Company', 'Ticker', 'Sector', 'Sub-Sector', 'Board Independence %', 'Board Diversity %', 'Split Chair/CEO', 'Total Directors']
                     st.dataframe(
                         filtered_df[board_cols].sort_values('Board Independence %', ascending=False, na_position='last'),
                         use_container_width=True,
@@ -153,7 +159,7 @@ def render_governance_explorer():
                     
                 with tab4:
                     st.markdown("### Jurisdiction & Sector Analysis")
-                    risk_cols = ['Company', 'Ticker', 'Sector', 'Jurisdiction', 'Fiscal Year']
+                    risk_cols = ['Company', 'Ticker', 'Sector', 'Sub-Sector', 'Jurisdiction', 'Fiscal Year']
                     st.dataframe(
                         filtered_df[risk_cols].sort_values('Company', ascending=True),
                         use_container_width=True,
