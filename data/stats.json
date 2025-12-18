@@ -1,0 +1,335 @@
+{
+  "overall": {
+    "total_companies": 49248,
+    "avg_women_pct": 11.5,
+    "pct_zero_women": 41.3,
+    "avg_tech_experts": 3.3,
+    "avg_gov_score": 74.8,
+    "avg_patents": 85.1,
+    "public_pct": 4.9,
+    "private_pct": 95.1
+  },
+  "sectors": [
+    {
+      "sector": "General Deep Tech",
+      "count": 41186,
+      "avg_women_pct": 11.4,
+      "avg_tech_experts": 3.4,
+      "avg_board_size": 7.5,
+      "avg_indep_pct": 83.8,
+      "avg_tenure": 5.8,
+      "avg_age": 62.1,
+      "avg_gov_score": 0,
+      "avg_patents": 89.6,
+      "ceo_chair_pct": 100.0,
+      "ai_oversight_pct": 0.1,
+      "ai_wash_pct": 0.0,
+      "diversity_buckets": {
+        "0 Women": 41.4,
+        "1 Woman": 42.0,
+        "2 Women": 4.3,
+        "3+ Women": 12.3
+      },
+      "tech_buckets": {
+        "0-1 Experts": 0.1,
+        "2-3 Experts": 68.4,
+        "4+ Experts": 31.5
+      },
+      "risk_distribution": {}
+    },
+    {
+      "sector": "Semiconductors & AI",
+      "count": 1542,
+      "avg_women_pct": 11.6,
+      "avg_tech_experts": 3.3,
+      "avg_board_size": 7.6,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 4.6,
+      "avg_age": 62.6,
+      "avg_gov_score": 76.0,
+      "avg_patents": 77.2,
+      "ceo_chair_pct": 96.8,
+      "ai_oversight_pct": 0.5,
+      "ai_wash_pct": 4.5,
+      "diversity_buckets": {
+        "0 Women": 41.5,
+        "1 Woman": 41.8,
+        "2 Women": 3.4,
+        "3+ Women": 13.2
+      },
+      "tech_buckets": {
+        "0-1 Experts": 4.5,
+        "2-3 Experts": 66.1,
+        "4+ Experts": 29.4
+      },
+      "risk_distribution": {
+        "AI": 5,
+        "Environmental": 5
+      }
+    },
+    {
+      "sector": "Autonomous Systems",
+      "count": 190,
+      "avg_women_pct": 9.9,
+      "avg_tech_experts": 3.0,
+      "avg_board_size": 7.2,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 0,
+      "avg_age": 0,
+      "avg_gov_score": 0,
+      "avg_patents": 71.2,
+      "ceo_chair_pct": 95.8,
+      "ai_oversight_pct": 0.0,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 46.0,
+        "1 Woman": 42.0,
+        "2 Women": 5.1,
+        "3+ Women": 6.8
+      },
+      "tech_buckets": {
+        "0-1 Experts": 7.4,
+        "2-3 Experts": 71.1,
+        "4+ Experts": 21.6
+      },
+      "risk_distribution": {
+        "AI": 2,
+        "Environmental": 1
+      }
+    },
+    {
+      "sector": "Biotechnology",
+      "count": 4550,
+      "avg_women_pct": 11.8,
+      "avg_tech_experts": 2.8,
+      "avg_board_size": 7.5,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 5.7,
+      "avg_age": 61.0,
+      "avg_gov_score": 0,
+      "avg_patents": 62.0,
+      "ceo_chair_pct": 91.9,
+      "ai_oversight_pct": 0.1,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 39.6,
+        "1 Woman": 44.2,
+        "2 Women": 3.9,
+        "3+ Women": 12.4
+      },
+      "tech_buckets": {
+        "0-1 Experts": 19.4,
+        "2-3 Experts": 54.2,
+        "4+ Experts": 26.4
+      },
+      "risk_distribution": {
+        "AI": 15,
+        "Environmental": 6
+      }
+    },
+    {
+      "sector": "Energy & Climate",
+      "count": 715,
+      "avg_women_pct": 9.8,
+      "avg_tech_experts": 2.5,
+      "avg_board_size": 7.2,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 3.9,
+      "avg_age": 62.7,
+      "avg_gov_score": 0,
+      "avg_patents": 56.2,
+      "ceo_chair_pct": 88.8,
+      "ai_oversight_pct": 0.1,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 47.5,
+        "1 Woman": 40.6,
+        "2 Women": 3.5,
+        "3+ Women": 8.3
+      },
+      "tech_buckets": {
+        "0-1 Experts": 25.2,
+        "2-3 Experts": 54.1,
+        "4+ Experts": 20.7
+      },
+      "risk_distribution": {
+        "AI": 6,
+        "Environmental": 4
+      }
+    },
+    {
+      "sector": "Cybersecurity",
+      "count": 111,
+      "avg_women_pct": 10.8,
+      "avg_tech_experts": 3.4,
+      "avg_board_size": 7.9,
+      "avg_indep_pct": 84.3,
+      "avg_tenure": 0,
+      "avg_age": 0,
+      "avg_gov_score": 69.0,
+      "avg_patents": 57.9,
+      "ceo_chair_pct": 95.5,
+      "ai_oversight_pct": 0.0,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 47.0,
+        "1 Woman": 34.0,
+        "2 Women": 1.0,
+        "3+ Women": 18.0
+      },
+      "tech_buckets": {
+        "0-1 Experts": 9.9,
+        "2-3 Experts": 55.9,
+        "4+ Experts": 34.2
+      },
+      "risk_distribution": {
+        "AI": 2,
+        "Environmental": 1
+      }
+    },
+    {
+      "sector": "Advanced Materials",
+      "count": 198,
+      "avg_women_pct": 13.6,
+      "avg_tech_experts": 3.1,
+      "avg_board_size": 7.6,
+      "avg_indep_pct": 84.1,
+      "avg_tenure": 8.6,
+      "avg_age": 66.0,
+      "avg_gov_score": 0,
+      "avg_patents": 62.4,
+      "ceo_chair_pct": 92.9,
+      "ai_oversight_pct": 0.0,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 36.2,
+        "1 Woman": 43.1,
+        "2 Women": 5.7,
+        "3+ Women": 14.9
+      },
+      "tech_buckets": {
+        "0-1 Experts": 10.2,
+        "2-3 Experts": 59.9,
+        "4+ Experts": 29.9
+      },
+      "risk_distribution": {}
+    },
+    {
+      "sector": "Space & Aerospace",
+      "count": 128,
+      "avg_women_pct": 10.4,
+      "avg_tech_experts": 2.4,
+      "avg_board_size": 7.2,
+      "avg_indep_pct": 83.4,
+      "avg_tenure": 8.8,
+      "avg_age": 59.6,
+      "avg_gov_score": 0,
+      "avg_patents": 41.7,
+      "ceo_chair_pct": 83.6,
+      "ai_oversight_pct": 0.0,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 46.6,
+        "1 Woman": 39.8,
+        "2 Women": 3.4,
+        "3+ Women": 10.2
+      },
+      "tech_buckets": {
+        "0-1 Experts": 31.7,
+        "2-3 Experts": 46.0,
+        "4+ Experts": 22.2
+      },
+      "risk_distribution": {
+        "Environmental": 4,
+        "AI": 4
+      }
+    },
+    {
+      "sector": "Agriculture & Food Tech",
+      "count": 162,
+      "avg_women_pct": 11.4,
+      "avg_tech_experts": 3.8,
+      "avg_board_size": 8.5,
+      "avg_indep_pct": 84.2,
+      "avg_tenure": 0,
+      "avg_age": 0,
+      "avg_gov_score": 0,
+      "avg_patents": 72.4,
+      "ceo_chair_pct": 100.0,
+      "ai_oversight_pct": 0.0,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 44.6,
+        "1 Woman": 30.6,
+        "2 Women": 4.5,
+        "3+ Women": 20.4
+      },
+      "tech_buckets": {
+        "0-1 Experts": 3.1,
+        "2-3 Experts": 50.6,
+        "4+ Experts": 46.3
+      },
+      "risk_distribution": {}
+    },
+    {
+      "sector": "Quantum & Photonics",
+      "count": 166,
+      "avg_women_pct": 11.0,
+      "avg_tech_experts": 3.2,
+      "avg_board_size": 7.5,
+      "avg_indep_pct": 83.7,
+      "avg_tenure": 0,
+      "avg_age": 0,
+      "avg_gov_score": 0,
+      "avg_patents": 59.8,
+      "ceo_chair_pct": 91.6,
+      "ai_oversight_pct": 0.0,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 43.5,
+        "1 Woman": 39.5,
+        "2 Women": 4.8,
+        "3+ Women": 12.2
+      },
+      "tech_buckets": {
+        "0-1 Experts": 11.4,
+        "2-3 Experts": 62.7,
+        "4+ Experts": 25.9
+      },
+      "risk_distribution": {
+        "Environmental": 3,
+        "AI": 1
+      }
+    },
+    {
+      "sector": "Cross Domain Enablement",
+      "count": 300,
+      "avg_women_pct": 33.5,
+      "avg_tech_experts": 0.4,
+      "avg_board_size": 16.6,
+      "avg_indep_pct": 73.5,
+      "avg_tenure": 6.2,
+      "avg_age": 62.1,
+      "avg_gov_score": 0,
+      "avg_patents": 0.0,
+      "ceo_chair_pct": 61.7,
+      "ai_oversight_pct": 3.0,
+      "ai_wash_pct": 0,
+      "diversity_buckets": {
+        "0 Women": 14.3,
+        "1 Woman": 14.3,
+        "2 Women": 0.0,
+        "3+ Women": 71.4
+      },
+      "tech_buckets": {
+        "0-1 Experts": 98.0,
+        "2-3 Experts": 2.0,
+        "4+ Experts": 0.0
+      },
+      "risk_distribution": {
+        "AI": 13,
+        "Environmental": 12
+      }
+    }
+  ]
+}

@@ -1,33 +1,5 @@
-# Python bytecode
 __pycache__/
-*.py[cod]
-*$py.class
-
-# Virtual environment
-venv/
-env/
-ENV/
-
-# Large data files
-*.sql
-*.csv
-*.xlsx
-*.numbers
-*.pdf
-*.log
-*.txt
-collectors/
-models/
-automation/
-
-# IDE
-.vscode/
-.idea/
-*.swp
-
-# OS
+*.pyc
 .DS_Store
-
-# Sensitive
 .env
-secrets.toml
+venv/
