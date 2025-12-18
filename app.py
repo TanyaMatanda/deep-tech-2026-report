@@ -132,9 +132,9 @@ else:
 # Navigation
 page = st.sidebar.radio("Navigate", ["Executive Summary", "Sector Deep Dives", "Governance Explorer", "Full Report"])
 
-# --- Executive Summary ---
+# --- VERSION 12.0 - FORCED REDEPLOY ---
 if page == "Executive Summary":
-    st.title("The State of Governance in Deep Tech")
+    st.title("The State of Governance in Deep Tech (v12.0)")
     st.markdown("<p style='font-size: 1.2rem; color: #666; font-weight: 400; margin-top: -1rem;'>2026 PROXY SEASON OUTLOOK</p>", unsafe_allow_html=True)
     
     # Key Metrics
@@ -476,15 +476,28 @@ elif page == "Sector Deep Dives":
         if 'avg_indep_pct' in sec_data:
             indep = sec_data['avg_indep_pct']
             non_indep = 100 - indep
+            
+            # Use a DataFrame for more robust plotting
+            df_pie = pd.DataFrame({
+                "Category": ["Independent", "Non-Independent"],
+                "Percentage": [indep, non_indep]
+            })
+            
             fig_comp = px.pie(
-                names=['Independent', 'Non-Independent'],
-                values=[indep, non_indep],
+                df_pie,
+                names="Category",
+                values="Percentage",
                 title="Average Board Independence",
-                color_discrete_sequence=[MCKINSEY_TEAL, MCKINSEY_GREY],
+                color="Category",
+                color_discrete_map={
+                    "Independent": MCKINSEY_TEAL,
+                    "Non-Independent": MCKINSEY_GREY
+                },
                 hole=0.6
             )
             fig_comp.update_layout(
                 template="plotly_white",
+                legend=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5),
                 font=dict(family="Helvetica Neue, Helvetica, Arial, sans-serif")
             )
             st.plotly_chart(fig_comp, use_container_width=True)
