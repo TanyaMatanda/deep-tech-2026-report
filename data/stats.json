@@ -1,16 +1,16 @@
 {
   "overall": {
-    "total_companies": 50658,
+    "total_companies": 48878,
     "avg_women_pct": 11.4,
-    "pct_zero_women": 41.8,
-    "avg_tech_experts": 3.4,
+    "pct_zero_women": 41.5,
+    "avg_tech_experts": 3.3,
     "public_pct": 4.9,
     "private_pct": 95.1
   },
   "sectors": [
     {
       "sector": "General Deep Tech",
-      "count": 50618,
+      "count": 41303,
       "avg_women_pct": 11.4,
       "avg_tech_experts": 3.4,
       "avg_board_size": 7.5,
@@ -20,106 +20,244 @@
       "ceo_chair_pct": 100.0,
       "ai_oversight_pct": 0.7,
       "diversity_buckets": {
-        "0 Women": 41.8,
-        "1 Woman": 41.6,
+        "0 Women": 41.5,
+        "1 Woman": 41.9,
         "2 Women": 4.2,
         "3+ Women": 12.4
       },
       "tech_buckets": {
-        "0-1 Experts": 0.1,
-        "2-3 Experts": 68.4,
-        "4+ Experts": 31.5
+        "0-1 Experts": 0.0,
+        "2-3 Experts": 68.2,
+        "4+ Experts": 31.8
+      }
+    },
+    {
+      "sector": "Semiconductors & AI",
+      "count": 1582,
+      "avg_women_pct": 12.1,
+      "avg_tech_experts": 3.3,
+      "avg_board_size": 7.5,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 5.7,
+      "avg_age": 62.3,
+      "ceo_chair_pct": 97.3,
+      "ai_oversight_pct": 0.8,
+      "diversity_buckets": {
+        "0 Women": 39.1,
+        "1 Woman": 44.4,
+        "2 Women": 2.8,
+        "3+ Women": 13.8
+      },
+      "tech_buckets": {
+        "0-1 Experts": 4.0,
+        "2-3 Experts": 67.2,
+        "4+ Experts": 28.8
+      }
+    },
+    {
+      "sector": "Biotechnology",
+      "count": 4175,
+      "avg_women_pct": 11.4,
+      "avg_tech_experts": 2.7,
+      "avg_board_size": 7.4,
+      "avg_indep_pct": 83.8,
+      "avg_tenure": 6.5,
+      "avg_age": 61.7,
+      "ceo_chair_pct": 91.8,
+      "ai_oversight_pct": 0.3,
+      "diversity_buckets": {
+        "0 Women": 41.9,
+        "1 Woman": 42.1,
+        "2 Women": 3.6,
+        "3+ Women": 12.3
+      },
+      "tech_buckets": {
+        "0-1 Experts": 21.1,
+        "2-3 Experts": 54.5,
+        "4+ Experts": 24.4
       }
     },
     {
       "sector": "Energy & Climate",
-      "count": 12,
-      "avg_women_pct": 0,
-      "avg_tech_experts": 0.7,
-      "avg_board_size": 10.0,
-      "avg_indep_pct": 80.0,
-      "avg_tenure": 3.0,
-      "avg_age": 0,
-      "ceo_chair_pct": 25.0,
-      "ai_oversight_pct": 0.0,
+      "count": 679,
+      "avg_women_pct": 10.2,
+      "avg_tech_experts": 2.4,
+      "avg_board_size": 7.3,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 5.0,
+      "avg_age": 61.7,
+      "ceo_chair_pct": 89.0,
+      "ai_oversight_pct": 0.6,
       "diversity_buckets": {
-        "0 Women": 0,
-        "1 Woman": 0,
-        "2 Women": 0,
-        "3+ Women": 0
+        "0 Women": 45.2,
+        "1 Woman": 42.5,
+        "2 Women": 3.5,
+        "3+ Women": 8.8
       },
       "tech_buckets": {
-        "0-1 Experts": 100.0,
-        "2-3 Experts": 0.0,
-        "4+ Experts": 0.0
+        "0-1 Experts": 28.6,
+        "2-3 Experts": 50.4,
+        "4+ Experts": 20.9
       }
     },
     {
-      "sector": "Quantum & Photonics",
-      "count": 5,
-      "avg_women_pct": 0,
-      "avg_tech_experts": 1.0,
-      "avg_board_size": 10.0,
-      "avg_indep_pct": 80.0,
-      "avg_tenure": 3.2,
-      "avg_age": 0,
-      "ceo_chair_pct": 0.0,
+      "sector": "Autonomous Systems",
+      "count": 165,
+      "avg_women_pct": 10.8,
+      "avg_tech_experts": 3.1,
+      "avg_board_size": 7.3,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 4.2,
+      "avg_age": 63.8,
+      "ceo_chair_pct": 96.4,
       "ai_oversight_pct": 0.0,
       "diversity_buckets": {
-        "0 Women": 0,
-        "1 Woman": 0,
-        "2 Women": 0,
-        "3+ Women": 0
+        "0 Women": 42.0,
+        "1 Woman": 44.0,
+        "2 Women": 3.3,
+        "3+ Women": 10.7
       },
       "tech_buckets": {
-        "0-1 Experts": 100.0,
-        "2-3 Experts": 0.0,
-        "4+ Experts": 0.0
+        "0-1 Experts": 9.1,
+        "2-3 Experts": 67.9,
+        "4+ Experts": 23.0
       }
     },
     {
-      "sector": "Space & Aerospace",
-      "count": 5,
-      "avg_women_pct": 0,
-      "avg_tech_experts": 0.0,
-      "avg_board_size": 0,
-      "avg_indep_pct": 0,
-      "avg_tenure": 0,
-      "avg_age": 0,
-      "ceo_chair_pct": 20.0,
-      "ai_oversight_pct": 0.0,
+      "sector": "Agriculture & Food Tech",
+      "count": 148,
+      "avg_women_pct": 11.2,
+      "avg_tech_experts": 3.4,
+      "avg_board_size": 7.7,
+      "avg_indep_pct": 83.8,
+      "avg_tenure": 5.4,
+      "avg_age": 63.8,
+      "ceo_chair_pct": 100.0,
+      "ai_oversight_pct": 0.7,
       "diversity_buckets": {
-        "0 Women": 0,
-        "1 Woman": 0,
-        "2 Women": 0,
-        "3+ Women": 0
+        "0 Women": 45.1,
+        "1 Woman": 36.1,
+        "2 Women": 3.5,
+        "3+ Women": 15.3
       },
       "tech_buckets": {
-        "0-1 Experts": 100.0,
-        "2-3 Experts": 0.0,
-        "4+ Experts": 0.0
+        "0-1 Experts": 2.7,
+        "2-3 Experts": 61.5,
+        "4+ Experts": 35.8
       }
     },
     {
       "sector": "Cybersecurity",
-      "count": 10,
-      "avg_women_pct": 0,
-      "avg_tech_experts": 0.8,
-      "avg_board_size": 0,
-      "avg_indep_pct": 0,
-      "avg_tenure": 0,
-      "avg_age": 0,
-      "ceo_chair_pct": 40.0,
-      "ai_oversight_pct": 0.0,
+      "count": 107,
+      "avg_women_pct": 10.3,
+      "avg_tech_experts": 3.2,
+      "avg_board_size": 7.8,
+      "avg_indep_pct": 84.7,
+      "avg_tenure": 5.2,
+      "avg_age": 60.7,
+      "ceo_chair_pct": 94.4,
+      "ai_oversight_pct": 0.9,
       "diversity_buckets": {
-        "0 Women": 0,
-        "1 Woman": 0,
-        "2 Women": 0,
-        "3+ Women": 0
+        "0 Women": 46.7,
+        "1 Woman": 38.0,
+        "2 Women": 2.2,
+        "3+ Women": 13.0
       },
       "tech_buckets": {
-        "0-1 Experts": 100.0,
-        "2-3 Experts": 0.0,
+        "0-1 Experts": 14.0,
+        "2-3 Experts": 50.5,
+        "4+ Experts": 35.5
+      }
+    },
+    {
+      "sector": "Quantum & Photonics",
+      "count": 159,
+      "avg_women_pct": 9.6,
+      "avg_tech_experts": 3.1,
+      "avg_board_size": 7.4,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 0,
+      "avg_age": 0,
+      "ceo_chair_pct": 91.2,
+      "ai_oversight_pct": 0.0,
+      "diversity_buckets": {
+        "0 Women": 45.8,
+        "1 Woman": 41.5,
+        "2 Women": 5.6,
+        "3+ Women": 7.0
+      },
+      "tech_buckets": {
+        "0-1 Experts": 10.7,
+        "2-3 Experts": 67.9,
+        "4+ Experts": 21.4
+      }
+    },
+    {
+      "sector": "Space & Aerospace",
+      "count": 123,
+      "avg_women_pct": 12.9,
+      "avg_tech_experts": 2.5,
+      "avg_board_size": 7.8,
+      "avg_indep_pct": 84.0,
+      "avg_tenure": 7.1,
+      "avg_age": 59.8,
+      "ceo_chair_pct": 83.7,
+      "ai_oversight_pct": 0.0,
+      "diversity_buckets": {
+        "0 Women": 44.6,
+        "1 Woman": 36.1,
+        "2 Women": 1.2,
+        "3+ Women": 18.1
+      },
+      "tech_buckets": {
+        "0-1 Experts": 32.8,
+        "2-3 Experts": 37.7,
+        "4+ Experts": 29.5
+      }
+    },
+    {
+      "sector": "Advanced Materials",
+      "count": 170,
+      "avg_women_pct": 10.1,
+      "avg_tech_experts": 3.1,
+      "avg_board_size": 7.5,
+      "avg_indep_pct": 83.9,
+      "avg_tenure": 7.2,
+      "avg_age": 65.5,
+      "ceo_chair_pct": 94.7,
+      "ai_oversight_pct": 0.6,
+      "diversity_buckets": {
+        "0 Women": 47.1,
+        "1 Woman": 35.9,
+        "2 Women": 7.2,
+        "3+ Women": 9.8
+      },
+      "tech_buckets": {
+        "0-1 Experts": 8.9,
+        "2-3 Experts": 68.0,
+        "4+ Experts": 23.1
+      }
+    },
+    {
+      "sector": "Cross Domain Enablement",
+      "count": 267,
+      "avg_women_pct": 35.0,
+      "avg_tech_experts": 0.3,
+      "avg_board_size": 15.3,
+      "avg_indep_pct": 72.5,
+      "avg_tenure": 6.2,
+      "avg_age": 61.8,
+      "ceo_chair_pct": 64.0,
+      "ai_oversight_pct": 3.0,
+      "diversity_buckets": {
+        "0 Women": 16.7,
+        "1 Woman": 16.7,
+        "2 Women": 0.0,
+        "3+ Women": 66.7
+      },
+      "tech_buckets": {
+        "0-1 Experts": 98.5,
+        "2-3 Experts": 1.5,
         "4+ Experts": 0.0
       }
     }
