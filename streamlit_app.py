@@ -198,7 +198,7 @@ with col1:
                  title='Total Compensation Distribution',
                  labels={'total': 'Total Compensation ($)'})
     fig.update_layout(height=400)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 with col2:
     # Equity mix distribution
@@ -208,7 +208,7 @@ with col2:
     fig.add_vline(x=85, line_dash="dash", line_color="green", 
                   annotation_text="Strong Alignment Threshold")
     fig.update_layout(height=400)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width='stretch')
 
 # Sector Benchmarking
 st.header("🎯 Sector Benchmarking")
@@ -244,7 +244,7 @@ fig.update_layout(
     barmode='group',
     height=400
 )
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width='stretch')
 
 # Sector stats table
 st.markdown("### 📈 Cross-Sector Statistical Summary")
@@ -255,7 +255,7 @@ st.dataframe(
         'Median Equity Mix': '{:.1f}%',
         'Median Salary': '${:,.0f}'
     }),
-    use_container_width=True
+    width='stretch'
 )
 
 # Red Flag Companies
@@ -273,7 +273,7 @@ if len(cash_heavy) > 0:
             'salary': '${:,.0f}',
             'non_equity': '${:,.0f}'
         }),
-        use_container_width=True
+        width='stretch'
     )
 
 # Sector-specific tables
@@ -294,7 +294,7 @@ for sector in selected_sectors:
                 'other': '${:,.0f}',
                 'equity_mix': '{:.1f}%'
             }),
-            use_container_width=True
+            width='stretch'
         )
 
 # Footer
