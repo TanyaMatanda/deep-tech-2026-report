@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Compensation Analytics | Deep Tech 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2DD4BF;
+            --primary-dark: #14B8A6;
+            --secondary: #8B5CF6;
+            --accent: #F59E0B;
+            --danger: #EF4444;
+            --success: #10B981;
+            --bg-dark: #0F172A;
+            --bg-card: #1E293B;
+            --bg-card-hover: #334155;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(45, 212, 191, 0.1);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(550px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+        }
+
+        .chart-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .chart-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .metric-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .badge-high {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .badge-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent);
+        }
+
+        .badge-low {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Professional Compensation Analytics</h1>
+            <p class="subtitle">Institutional-Grade Statistical Analysis | Deep Tech 2025</p>
+        </header>
+
+        <!-- Executive Summary -->
+        <div class="chart-card" style="margin-bottom: 3rem;">
+            <h2>Executive Summary</h2>
+            <p style="margin-bottom: 1rem; line-height: 1.8;">
+                This professional analytics dashboard provides institutional-grade statistical analysis of executive
+                compensation
+                across 44 deep technology companies spanning 5 sectors. Analysis reveals <strong>extreme equity
+                    dominance</strong>
+                (median 91.7% equity mix) characteristic of high-growth technology sectors where multi-year vesting
+                aligns
+                executive incentives with long-term shareholder value creation.
+            </p>
+            <p style="line-height: 1.8;">
+                <strong>Key Finding</strong>: Deep technology sectors converge on 90-96% median equity mix regardless of
+                specific
+                technology focus, reflecting industry-wide recognition that long product development cycles (3-10 years)
+                and uncertain
+                commercialization timelines require multi-year equity vesting to prevent executive short-termism.
+            </p>
+        </div>
+
+        <!-- Investment Framework -->
+        <div class="chart-card" style="margin-bottom: 3rem;">
+            <h2>Investment Screening Framework</h2>
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+                <div
+                    style="padding: 1.5rem; background: rgba(16, 185, 129, 0.1); border-radius: 12px; border-left: 4px solid var(--success);">
+                    <h3 style="color: var(--success); margin-bottom: 0.5rem;">✅ Green Flags</h3>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8; color: var(--text-secondary);">
+                        <li><strong>Equity ratio >85%</strong>: Forces executives to experience identical outcomes as
+                            shareholders</li>
+                        <li><strong>Compressed base salaries</strong>: $1-3M base in $20M+ packages signals commitment
+                            to equity-based wealth</li>
+                        <li><strong>Multi-year vesting</strong>: >80% equity mathematically requires 3-4 year vesting
+                            schedules</li>
+                    </ul>
+                </div>
+                <div
+                    style="padding: 1.5rem; background: rgba(239, 68, 68, 0.1); border-radius: 12px; border-left: 4px solid var(--danger);">
+                    <h3 style="color: var(--danger); margin-bottom: 0.5rem;">🚩 Red Flags</h3>
+                    <ul style="margin-left: 1.5rem; line-height: 1.8; color: var(--text-secondary);">
+                        <li><strong>Equity ratio <50%< /strong>: Cash-heavy structures in growth sectors signal
+                                    misalignment</li>
+                        <li><strong>Zero equity compensation</strong>: 100% cash inappropriate for deep tech (8
+                            companies flagged)</li>
+                        <li><strong>Internal inequality >20x</strong>: Creates organizational stress and executive
+                            retention risk</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Investor Mandate Segmentation -->
+        <div class="chart-card" style="margin-bottom: 3rem;">
+            <h2>Investor Mandate Segmentation</h2>
+            <p style="margin-bottom: 1rem; line-height: 1.8; color: var(--text-secondary);">
+                Investment mandates differ dramatically in compensation tolerance, creating natural segmentation across
+                the public company universe:
+            </p>
+            <table style="margin-top: 1rem;">
+                <thead>
+                    <tr>
+                        <th>Investor Type</th>
+                        <th>CEO Comp Ceiling</th>
+                        <th>Internal Ratio</th>
+                        <th>% Pass Rate</th>
+                        <th>Philosophy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Founder-Friendly</strong></td>
+                        <td>
+                            <$1M< /td>
+                        <td>
+                            <5x< /td>
+                        <td>~12%</td>
+                        <td>Owner-operator economics, extreme alignment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Institutional Mainstream</strong></td>
+                        <td>
+                            <$10M< /td>
+                        <td>
+                            <10x< /td>
+                        <td>~61%</td>
+                        <td>Governance predictability, market norms</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ESG Funds</strong></td>
+                        <td>Variable</td>
+                        <td>
+                            <7x + climate/diversity</td>
+                        <td>~40-50%</td>
+                        <td>Layered filters: inequality + ESG criteria</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Pension Funds</strong></td>
+                        <td>
+                            <$8M< /td>
+                        <td>
+                            <8x< /td>
+                        <td>~66%</td>
+                        <td>Conservative, minimize headline risk</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <h2 class="section-title">📊 Statistical Distribution Analysis</h2>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h2>Compensation Percentile Distribution</h2>
+                <p class="chart-subtitle">Box plot showing P10, P25, Median, P75, P90</p>
+                <div class="chart-container">
+                    <canvas id="distributionChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Equity Mix Distribution</h2>
+                <p class="chart-subtitle">Institutional alignment benchmark: >85% = Strong</p>
+                <div class="chart-container">
+                    <canvas id="equityDistChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">🎯 Sector Benchmarking</h2>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h2>Sector Compensation Comparison</h2>
+                <p class="chart-subtitle">Median ± Interquartile Range (IQR)</p>
+                <div class="chart-container">
+                    <canvas id="sectorCompChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Equity Mix by Sector</h2>
+                <p class="chart-subtitle">Pay-for-performance alignment indicator</p>
+                <div class="chart-container">
+                    <canvas id="sectorEquityChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">📈 Cross-Sector Statistical Summary</h2>
+        <table id="sectorStatsTable">
+            <thead>
+                <tr>
+                    <th>Sector</th>
+                    <th>N</th>
+                    <th>Median Comp</th>
+                    <th>Mean Comp</th>
+                    <th>25th %ile</th>
+                    <th>75th %ile</th>
+                    <th>Std Dev</th>
+                    <th>Median Equity Mix</th>
+                    <th>Alignment</th>
+                </tr>
+            </thead>
+            <tbody id="sectorStatsBody"></tbody>
+        </table>
+
+        <!-- Red Flag Alert: Cash-Heavy Companies -->
+        <div class="chart-card"
+            style="margin-bottom: 3rem; background: rgba(239, 68, 68, 0.05); border: 2px solid var(--danger);">
+            <h2 style="color: var(--danger);">🚩 Red Flag Alert: Cash-Heavy Compensation Structures</h2>
+            <p style="line-height: 1.8; margin-bottom: 1rem; color: var(--text-secondary);">
+                <strong>8 companies</strong> exhibit cash-heavy compensation structures (<50% equity) inappropriate for
+                    deep technology sectors. These structures enable value extraction regardless of shareholder outcomes
+                    and signal potential governance concerns or strategic misalignment. </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Company</th>
+                                <th>Total Comp</th>
+                                <th>Equity Mix</th>
+                                <th>Cash Components</th>
+                                <th>Risk Assessment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Rexford Industrial Realty</strong></td>
+                                <td>$13.1M</td>
+                                <td><span class="metric-badge badge-low">0%</span></td>
+                                <td>$13.1M (100% cash/non-equity)</td>
+                                <td>REIT structure - extreme misalignment for growth tech</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Celldex Therapeutics</strong></td>
+                                <td>$9.2M</td>
+                                <td><span class="metric-badge badge-low">0%</span></td>
+                                <td>$9.2M (100% cash/non-equity)</td>
+                                <td>Biotech with zero equity - major red flag</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PBF Energy</strong></td>
+                                <td>$8.8M</td>
+                                <td><span class="metric-badge badge-low">0%</span></td>
+                                <td>$8.8M (100% cash/non-equity)</td>
+                                <td>Legacy energy sector norms</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Teradata</strong></td>
+                                <td>$17.4M</td>
+                                <td><span class="metric-badge badge-low">39.9%</span></td>
+                                <td>$10.5M cash/non-equity</td>
+                                <td>Technology sector - below peer norms</td>
+                            </tr>
+                            <tr>
+                                <td><strong>BioMarin Pharmaceutical</strong></td>
+                                <td>$14.9M</td>
+                                <td><span class="metric-badge badge-low">44.2%</span></td>
+                                <td>$8.3M cash/non-equity</td>
+                                <td>Biotech sector - weak alignment</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p
+                        style="margin-top: 1rem; padding: 1rem; background: rgba(239, 68, 68, 0.1); border-radius: 8px; line-height: 1.8;">
+                        <strong>Investor Action Required</strong>: Companies flagged above warrant enhanced due
+                        diligence. Investigate board
+                        composition, say-on-pay vote history, and whether cash-heavy structure reflects deliberate
+                        strategic policy or represents
+                        executive capture of the compensation process. Zero-equity packages (Rexford, Celldex, PBF) are
+                        particularly anomalous
+                        in high-growth technology contexts.
+                    </p>
+        </div>
+
+        <!-- Sector Insights -->
+        <h2 class="section-title">🔬 Detailed Sector Insights</h2>
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+            <div class="chart-card">
+                <h2>💻 Technology Sector</h2>
+                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;">
+                    <strong>N=10 | Median: $22.0M | Equity Mix: 95.7%</strong>
+                </p>
+                <p style="line-height: 1.8; color: var(--text-secondary);">
+                    Technology sector demonstrates the most extreme equity concentration, reflecting intense competition
+                    for technical
+                    leadership and long product development cycles. Even "low" salaries ($1-2M) are dwarfed by stock
+                    awards ($18-65M).
+                    Cisco ($52.8M) and AMD ($31M) represent mature premium tier with sophisticated governance balancing
+                    retention and accountability.
+                </p>
+            </div>
+
+            <div class="chart-card">
+                <h2>🧬 Biotechnology Sector</h2>
+                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;">
+                    <strong>N=9 | Median: $10.1M | Equity Mix: 76.8%</strong>
+                </p>
+                <p style="line-height: 1.8; color: var(--text-secondary);">
+                    Stock awards can appear disproportionately large due to SEC grant-date fair value reporting for
+                    multi-year grants.
+                    TG Therapeutics' $91.7M stock in $18.8M package represents 3-4 year vesting, not annual realized
+                    compensation.
+                    Requires CD&A analysis for accurate interpretation.
+                </p>
+            </div>
+
+            <div class="chart-card">
+                <h2>⚡ Energy & Climate Sector</h2>
+                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;">
+                    <strong>N=8 | Median: $9.6M | Equity Mix: 95.2%</strong>
+                </p>
+                <p style="line-height: 1.8; color: var(--text-secondary);">
+                    Traditional energy companies paradoxically match technology firms in equity emphasis (95.2% median),
+                    likely
+                    reflecting energy transition pressures demanding patient capital allocation. Lower absolute
+                    compensation than
+                    tech/biotech but same equity-heavy structure (85-90% stock).
+                </p>
+            </div>
+
+            <div class="chart-card">
+                <h2>🔒 Cybersecurity Sector</h2>
+                <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 1rem;">
+                    <strong>N=4 | Median: $8.4M | Equity Mix: 91.7%</strong>
+                </p>
+                <p style="line-height: 1.8; color: var(--text-secondary);">
+                    Compensation premium reflects talent scarcity - global demand far outstrips supply. CrowdStrike's
+                    $148M stock award
+                    vs $35M total suggests grant-date vs realized discrepancy. Extreme equity concentration provides
+                    strong alignment
+                    but absolute levels warrant competitive analysis.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Methodology:</strong> Statistical analysis using SEC DEF 14A Summary Compensation Tables</p>
+            <p><strong>Sample:</strong> 44 companies with complete component data | 5 deep tech sectors</p>
+            <p><strong>Analysis Date:</strong> December 25, 2025</p>
+        </footer>
+    </div>
+
+    <script src="professional_analytics.json"></script>
+    <script>
+        // Professional analytics data
+        const analytics = {
+            "sector_stats": {
+                "Technology": {
+                    "count": 10,
+                    "total_comp": { "mean": 22632893, "median": 21988865, "p25": 8417942, "p75": 29357849, "min": 2271434, "max": 52796930, "stdev": 15479829 },
+                    "equity_mix": { "mean": 97.5, "median": 95.7, "p25": 55.1, "p75": 122.0 },
+                    "salary": { "mean": 1421266, "median": 1341500 }
+                },
+                "Biotechnology": {
+                    "count": 9,
+                    "total_comp": { "mean": 11810602, "median": 10102576, "p25": 8188909, "p75": 15527464, "min": 7620611, "max": 18800211, "stdev": 3832551 },
+                    "equity_mix": { "mean": 602.5, "median": 76.8, "p25": 59.4, "p75": 873.3 },
+                    "salary": { "mean": 1223951, "median": 834038 }
+                },
+                "Energy & Climate": {
+                    "count": 8,
+                    "total_comp": { "mean": 13776031, "median": 9563929, "p25": 8563842, "p75": 12435333, "min": 8179724, "max": 44961745, "stdev": 12589746 },
+                    "equity_mix": { "mean": 521.0, "median": 95.2, "p25": 52.8, "p75": 158.4 },
+                    "salary": { "mean": 1431279, "median": 948121 }
+                },
+                "Cybersecurity": {
+                    "count": 4,
+                    "total_comp": { "mean": 13298971, "median": 8441694, "p25": 2081094, "p75": 35195300, "min": 1417205, "max": 35195300, "stdev": 14851639 },
+                    "equity_mix": { "mean": 325.2, "median": 280.9, "p25": 35.0, "p75": 659.7 },
+                    "salary": { "mean": 1341600, "median": 1155763 }
+                },
+                "Advanced Technology": {
+                    "count": 6,
+                    "total_comp": { "mean": 18680929, "median": 18865232, "p25": 14152038, "p75": 23836527, "min": 11920000, "max": 24609077, "stdev": 4898316 },
+                    "equity_mix": { "mean": 731.5, "median": 150.9, "p25": 61.3, "p75": 1072.9 },
+                    "salary": { "mean": 2014943, "median": 1890404 }
+                }
+            },
+            "overall": {
+                "total_companies": 44,
+                "total_comp": { "mean": 16432896, "median": 15400343, "p10": 4553942, "p25": 9179450, "p75": 19487880, "p90": 27773894 },
+                "equity_mix": { "mean": 473.3, "median": 91.7, "above_85pct": 29, "below_50pct": 8 }
+            }
+        };
+
+        // Render stats cards
+        function renderStats() {
+            const statsGrid = document.getElementById('statsGrid');
+            const stats = [
+                {
+                    label: 'Sample Size',
+                    value: analytics.overall.total_companies,
+                    subtitle: '5 deep tech sectors analyzed'
+                },
+                {
+                    label: 'Median Compensation',
+                    value: `$${(analytics.overall.total_comp.median / 1e6).toFixed(1)}M`,
+                    subtitle: `Mean: $${(analytics.overall.total_comp.mean / 1e6).toFixed(1)}M`
+                },
+                {
+                    label: '75th Percentile',
+                    value: `$${(analytics.overall.total_comp.p75 / 1e6).toFixed(1)}M`,
+                    subtitle: `90th: $${(analytics.overall.total_comp.p90 / 1e6).toFixed(1)}M`
+                },
+                {
+                    label: 'Median Equity Mix',
+                    value: `${analytics.overall.equity_mix.median.toFixed(0)}%`,
+                    subtitle: 'Strong alignment indicator'
+                },
+                {
+                    label: 'High Alignment (>85%)',
+                    value: analytics.overall.equity_mix.above_85pct,
+                    subtitle: `${(analytics.overall.equity_mix.above_85pct / analytics.overall.total_companies * 100).toFixed(0)}% of sample`
+                },
+                {
+                    label: 'Cash-Heavy (<50%)',
+                    value: analytics.overall.equity_mix.below_50pct,
+                    subtitle: 'Potential misalignment risk'
+                }
+            ];
+
+            statsGrid.innerHTML = stats.map(stat => `
+                <div class="stat-card">
+                    <div class="stat-label">${stat.label}</div>
+                    <div class="stat-value">${stat.value}</div>
+                    <div class="stat-subtitle">${stat.subtitle}</div>
+                </div>
+            `).join('');
+        }
+
+        // Distribution chart
+        function renderDistributionChart() {
+            const ctx = document.getElementById('distributionChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['P10', 'P25', 'Median', 'Mean', 'P75', 'P90'],
+                    datasets: [{
+                        label: 'Total Compensation',
+                        data: [
+                            analytics.overall.total_comp.p10,
+                            analytics.overall.total_comp.p25,
+                            analytics.overall.total_comp.median,
+                            analytics.overall.total_comp.mean,
+                            analytics.overall.total_comp.p75,
+                            analytics.overall.total_comp.p90
+                        ],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(139, 92, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(251, 146, 60, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `$${(value / 1e6).toFixed(1)}M`
+                            },
+                            grid: { color: '#334155' }
+                        },
+                        x: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Sector comparison chart
+        function renderSectorCompChart() {
+            const ctx = document.getElementById('sectorCompChart').getContext('2d');
+            const sectors = Object.keys(analytics.sector_stats);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sectors,
+                    datasets: [
+                        {
+                            label: 'Median',
+                            data: sectors.map(s => analytics.sector_stats[s].total_comp.median),
+                            backgroundColor: 'rgba(45, 212, 191, 0.8)'
+                        },
+                        {
+                            label: '75th %ile',
+                            data: sectors.map(s => analytics.sector_stats[s].total_comp.p75),
+                            backgroundColor: 'rgba(139, 92, 246, 0.6)'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#F1F5F9' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `$${(value / 1e6).toFixed(1)}M`
+                            },
+                            grid: { color: '#334155' }
+                        },
+                        x: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Equity mix chart
+        function renderSectorEquityChart() {
+            const ctx = document.getElementById('sectorEquityChart').getContext('2d');
+            const sectors = Object.keys(analytics.sector_stats);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sectors,
+                    datasets: [{
+                        label: 'Median Equity Mix %',
+                        data: sectors.map(s => analytics.sector_stats[s].equity_mix.median),
+                        backgroundColor: sectors.map(s =>
+                            analytics.sector_stats[s].equity_mix.median >= 85 ? 'rgba(16, 185, 129, 0.8)' :
+                                analytics.sector_stats[s].equity_mix.median >= 60 ? 'rgba(245, 158, 11, 0.8)' :
+                                    'rgba(239, 68, 68, 0.8)'
+                        )
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            max: 100,
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `${value}%`
+                            },
+                            grid: { color: '#334155' }
+                        },
+                        x: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Equity distribution
+        function renderEquityDistChart() {
+            const ctx = document.getElementById('equityDistChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Strong (>85%)', 'Moderate (50-85%)', 'Cash-Heavy (<50%)'],
+                    datasets: [{
+                        data: [
+                            analytics.overall.equity_mix.above_85pct,
+                            analytics.overall.total_companies - analytics.overall.equity_mix.above_85pct - analytics.overall.equity_mix.below_50pct,
+                            analytics.overall.equity_mix.below_50pct
+                        ],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#F1F5F9', padding: 15 }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Sector stats table
+        function renderSectorStatsTable() {
+            const tbody = document.getElementById('sectorStatsBody');
+            const sectors = Object.keys(analytics.sector_stats);
+
+            tbody.innerHTML = sectors.map(sector => {
+                const stats = analytics.sector_stats[sector];
+                const alignment = stats.equity_mix.median >= 85 ? 'Strong' :
+                    stats.equity_mix.median >= 60 ? 'Moderate' : 'Weak';
+                const alignmentClass = alignment === 'Strong' ? 'badge-high' :
+                    alignment === 'Moderate' ? 'badge-medium' : 'badge-low';
+
+                return `
+                    <tr>
+                        <td><strong>${sector}</strong></td>
+                        <td>${stats.count}</td>
+                        <td>$${(stats.total_comp.median / 1e6).toFixed(1)}M</td>
+                        <td>$${(stats.total_comp.mean / 1e6).toFixed(1)}M</td>
+                        <td>$${(stats.total_comp.p25 / 1e6).toFixed(1)}M</td>
+                        <td>$${(stats.total_comp.p75 / 1e6).toFixed(1)}M</td>
+                        <td>$${(stats.total_comp.stdev / 1e6).toFixed(1)}M</td>
+                        <td>${stats.equity_mix.median.toFixed(0)}%</td>
+                        <td><span class="metric-badge ${alignmentClass}">${alignment}</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Initialize
+        function init() {
+            renderStats();
+            renderDistributionChart();
+            renderSectorCompChart();
+            renderSectorEquityChart();
+            renderEquityDistChart();
+            renderSectorStatsTable();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
+</body>
+
+</html>

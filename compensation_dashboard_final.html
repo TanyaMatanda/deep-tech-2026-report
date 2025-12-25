@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Compensation Intelligence | Deep Tech 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2DD4BF;
+            --primary-dark: #14B8A6;
+            --secondary: #8B5CF6;
+            --accent: #F59E0B;
+            --danger: #EF4444;
+            --success: #10B981;
+            --bg-dark: #0F172A;
+            --bg-card: #1E293B;
+            --bg-card-hover: #334155;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1. 5rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(45, 212, 191, 0.1);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .chart-card:hover {
+            border-color: var(--primary);
+        }
+
+        .chart-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .rank-1 {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+        }
+
+        .rank-2 {
+            background: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%);
+            color: #000;
+        }
+
+        .rank-3 {
+            background: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%);
+            color: #FFF;
+        }
+
+        .rank-default {
+            background: var(--bg-card-hover);
+            color: var(--text-secondary);
+        }
+
+        .comp-amount {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.125rem;
+        }
+
+        .ratio-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .ratio-low {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .ratio-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent);
+        }
+
+        .ratio-high {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Executive Compensation Intelligence</h1>
+            <p class="subtitle">Analyzing 997 Deep Tech Companies | Fiscal Years 2023-2024</p>
+        </header>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h2>Compensation Tier Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="tierChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Top 10 Sectors by Avg CEO Compensation</h2>
+                <div class="chart-container">
+                    <canvas id="sectorChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Internal Pay Ratio Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="ratioChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Compensation Statistics</h2>
+                <div class="chart-container">
+                    <canvas id="statsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEW: Sector-Specific Top 10 Tables with Components -->
+        <h2 class="section-title">💻 Technology Sector - Top 10</h2>
+        <table id="techTable"></table>
+
+        <h2 class="section-title">🧬 Biotechnology Sector - Top 10</h2>
+        <table id="bioTable"></table>
+
+        <h2 class="section-title">⚡ Energy & Climate Sector - Top 10</h2>
+        <table id="energyTable"></table>
+
+        <h2 class="section-title">🔒 Cybersecurity Sector - Top 4</h2>
+        <table id="cyberTable"></table>
+
+        <h2 class="section-title">🚀 Advanced Technology Sector - Top 10</h2>
+        <table id="advancedTable"></table>
+
+        <h2 class="section-title">Overall Top 10 Highest-Compensated CEOs</h2>
+        <table id="top10Table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Company</th>
+                    <th>Sector</th>
+                    <th>CEO Compensation</th>
+                    <th>Executives</th>
+                    <th>Internal Ratio</th>
+                </tr>
+            </thead>
+            <tbody id="top10Body"></tbody>
+        </table>
+
+        <footer>
+            <p><strong>Data Source:</strong> SEC DEF 14A Proxy Filings (2024-2025)</p>
+            <p><strong>Analysis Date:</strong> December 24, 2025</p>
+            <p>Report generated from 4,132 executive compensation records across 1,025 companies</p>
+        </footer>
+    </div>
+
+    <script>
+        // Sector-specific top 10 compensation data with components
+        const sectorData = {
+            "Technology": [
+                { "company": "CISCO SYSTEMS, INC.", "total": 52796930, "salary": 1385000, "stock": 45914748, "bonus": 0, "non_equity": 0, "other": 5497182 },
+                { "company": "ADVANCED MICRO DEVICES INC", "total": 30971764, "salary": 2062500, "stock": 18671682, "bonus": 0, "non_equity": 9945000, "other": 292582 },
+                { "company": "SoFi Technologies, Inc.", "total": 28143663, "salary": 2564263, "stock": 64625024, "bonus": 0, "non_equity": 0, "other": 247558 },
+                { "company": "Applied Materials", "total": 27773894, "salary": 1668000, "stock": 22116630, "bonus": 0, "non_equity": 3708000, "other": 281264 },
+                { "company": "Meta Platforms", "total": 27209926, "salary": 1000000, "stock": 23627000, "bonus": 0, "non_equity": 0, "other": 2582926 },
+                { "company": "TERADATA CORP", "total": 17424961, "salary": 996154, "stock": 6943934, "bonus": 0, "non_equity": 8740385, "other": 744488 },
+                { "company": "BENTLEY SYSTEMS INC", "total": 16406387, "salary": 1993000, "stock": 13456249, "bonus": 0, "non_equity": 0, "other": 957138 },
+                { "company": "Rexford Industrial", "total": 13070000, "salary": 975000, "stock": 0, "bonus": 0, "non_equity": 8757000, "other": 3338000 },
+                { "company": "Palantir", "total": 4553942, "salary": 0, "stock": 4299995, "bonus": 0, "non_equity": 0, "other": 253947 },
+                { "company": "Salesforce", "total": 2271434, "salary": 1568750, "stock": 0, "bonus": 0, "non_equity": 0, "other": 702684 }
+            ],
+            "Biotechnology": [
+                { "company": "TG THERAPEUTICS", "total": 18800211, "salary": 2331000, "stock": 91717000, "bonus": 0, "non_equity": 0, "other": 207211 },
+                { "company": "JAZZ PHARMACEUTICALS", "total": 15527464, "salary": 560120, "stock": 17262015, "bonus": 0, "non_equity": 4695635, "other": 341100 },
+                { "company": "BIOMARIN PHARMACEUTICAL", "total": 14900322, "salary": 984015, "stock": 6590024, "bonus": 0, "non_equity": 6948000, "other": 378283 },
+                { "company": "IOVANCE BIOTHERAPEUTICS", "total": 10996350, "salary": 2925000, "stock": 7078588, "bonus": 0, "non_equity": 0, "other": 992762 },
+                { "company": "REGENERON PHARMACEUTICALS", "total": 10102576, "salary": 1888461, "stock": 5691012, "bonus": 0, "non_equity": 2271250, "other": 251853 },
+                { "company": "Xenon Pharmaceuticals", "total": 9842668, "salary": 668056, "stock": 8455550, "bonus": 0, "non_equity": 0, "other": 719062 },
+                { "company": "Arrowhead Pharma", "total": 9255555, "salary": 834038, "stock": 7155000, "bonus": 0, "non_equity": 0, "other": 1266517 },
+                { "company": "Celldex Therapeutics", "total": 9179450, "salary": 730000, "stock": 0, "bonus": 0, "non_equity": 4380000, "other": 4069450 },
+                { "company": "Twist Bioscience", "total": 7620611, "salary": 955575, "stock": 5849949, "bonus": 0, "non_equity": 685000, "other": 130087 }
+            ],
+            "Energy & Climate": [
+                { "company": "Bloom Energy", "total": 44961745, "salary": 1298695, "stock": 39968710, "bonus": 0, "non_equity": 3755269, "other": 0 },
+                { "company": "Enphase Energy", "total": 12630005, "salary": 805193, "stock": 6672535, "bonus": 0, "non_equity": 3357725, "other": 53000 },
+                { "company": "SM Energy Co", "total": 12240662, "salary": 770293, "stock": 11928971, "bonus": 0, "non_equity": 3516638, "other": 305989 },
+                { "company": "PBF Energy", "total": 8837500, "salary": 2580689, "stock": 0, "bonus": 0, "non_equity": 3997176, "other": 331946 },
+                { "company": "ADVANCED ENERGY INDUSTRIES", "total": 8761961, "salary": 2972720, "stock": 8136164, "bonus": 0, "non_equity": 2759375, "other": 0 },
+                { "company": "Sunrun", "total": 8395295, "salary": 919000, "stock": 6895000, "bonus": 0, "non_equity": 0, "other": 561295 },
+                { "company": "ChargePoint", "total": 8360000, "salary": 825000, "stock": 6825000, "bonus": 0, "non_equity": 0, "other": 718000 },
+                { "company": "Chord Energy", "total": 8179724, "salary": 1130070, "stock": 10798062, "bonus": 0, "non_equity": 3350803, "other": 848627 }
+            ],
+            "Cybersecurity": [
+                { "company": "CrowdStrike", "total": 35195300, "salary": 837695, "stock": 148504806, "bonus": 0, "non_equity": 1320000, "other": 1000000 },
+                { "company": "Varonis", "total": 14502288, "salary": 641900, "stock": 20277376, "bonus": 0, "non_equity": 0, "other": 184000 },
+                { "company": "Cloudflare", "total": 2081094, "salary": 1669626, "stock": 15378722, "bonus": 0, "non_equity": 0, "other": 88000 },
+                { "company": "BlackBerry", "total": 1417205, "salary": 2217180, "stock": 0, "bonus": 0, "non_equity": 3686845, "other": 1295625 }
+            ],
+            "Advanced Technology": [
+                { "company": "Hims & Hers Health", "total": 24609077, "salary": 1476514, "stock": 110273117, "bonus": 0, "non_equity": 0, "other": 126038 },
+                { "company": "UPS", "total": 24063977, "salary": 1713257, "stock": 9185261, "bonus": 0, "non_equity": 0, "other": 0 },
+                { "company": "GE HealthCare Technologies", "total": 19487880, "salary": 2050000, "stock": 13412402, "bonus": 0, "non_equity": 4407205, "other": 0 },
+                { "company": "Astrana Health", "total": 18242585, "salary": 2843062, "stock": 16942570, "bonus": 2279000, "non_equity": 3644213, "other": 0 },
+                { "company": "BrightSpring Health Services", "total": 13816155, "salary": 1700808, "stock": 16037970, "bonus": 0, "non_equity": 0, "other": 0 },
+                { "company": "Palo Alto Networks", "total": 11920000, "salary": 1000000, "stock": 10050000, "bonus": 0, "non_equity": 0, "other": 870000 }
+            ]
+        };
+
+        // Legacy format for compatibility
+        const dashboardData = {
+            "total_records": 4132,
+            "total_companies": 1008,
+            "total_compensation": 7646729564,
+            "by_tier": {
+                "founder": 127,
+                "moderate": 358,
+                "high": 259,
+                "mega": 253
+            },
+            "by_sector": {
+                "Quantum Computing": {
+                    "count": 1,
+                    "total_comp": 3127584,
+                    "avg_comp": 3127584.0
+                },
+                "Biotechnology": {
+                    "count": 137,
+                    "total_comp": 637650405,
+                    "avg_comp": 4654382.518248175
+                },
+                "Energy & Climate": {
+                    "count": 84,
+                    "total_comp": 644708654,
+                    "avg_comp": 7675103.023809524
+                },
+                "Advanced Technology": {
+                    "count": 115,
+                    "total_comp": 865304571,
+                    "avg_comp": 7524387.573913043
+                },
+                "Electronic Computers": {
+                    "count": 3,
+                    "total_comp": 13371555,
+                    "avg_comp": 4457185.0
+                },
+                "Cloud Infrastructure": {
+                    "count": 5,
+                    "total_comp": 62848296,
+                    "avg_comp": 12569659.2
+                },
+                "Pharmaceutical Preparations": {
+                    "count": 9,
+                    "total_comp": 30202628,
+                    "avg_comp": 3355847.5555555555
+                },
+                "Technology": {
+                    "count": 356,
+                    "total_comp": 2552888709,
+                    "avg_comp": 7171035.699438202
+                },
+                "Prepackaged Software": {
+                    "count": 1,
+                    "total_comp": 1248601,
+                    "avg_comp": 1248601.0
+                },
+                "Biological Products": {
+                    "count": 8,
+                    "total_comp": 44370769,
+                    "avg_comp": 5546346.125
+                },
+                "Semiconductors": {
+                    "count": 6,
+                    "total_comp": 85071075,
+                    "avg_comp": 14178512.5
+                },
+                "Guided Missiles & Space Vehicles": {
+                    "count": 2,
+                    "total_comp": 27474203,
+                    "avg_comp": 13737101.5
+                },
+                "AI & Machine Learning": {
+                    "count": 9,
+                    "total_comp": 113884047,
+                    "avg_comp": 12653783.0
+                },
+                "Cybersecurity": {
+                    "count": 8,
+                    "total_comp": 121074792,
+                    "avg_comp": 15134349.0
+                },
+                "Antibody Discovery (AI)": {
+                    "count": 1,
+                    "total_comp": 16962608,
+                    "avg_comp": 16962608.0
+                },
+                "Biopharmaceuticals": {
+                    "count": 1,
+                    "total_comp": 2645657,
+                    "avg_comp": 2645657.0
+                },
+                "Cybersecurity & IoT": {
+                    "count": 1,
+                    "total_comp": 3146625,
+                    "avg_comp": 3146625.0
+                },
+                "Cross Domain Enablement": {
+                    "count": 18,
+                    "total_comp": 110809900,
+                    "avg_comp": 6156105.555555556
+                },
+                "Space and Aerospace": {
+                    "count": 2,
+                    "total_comp": 3568327,
+                    "avg_comp": 1784163.5
+                },
+                "Semi Conductors and AI": {
+                    "count": 2,
+                    "total_comp": 4566229,
+                    "avg_comp": 2283114.5
+                },
+                "Energy and Climate": {
+                    "count": 2,
+                    "total_comp": 5985050,
+                    "avg_comp": 2992525.0
+                },
+                "Space Technology": {
+                    "count": 1,
+                    "total_comp": 5638706,
+                    "avg_comp": 5638706.0
+                },
+                "Biotech": {
+                    "count": 1,
+                    "total_comp": 1128691,
+                    "avg_comp": 1128691.0
+                },
+                "Robotics": {
+                    "count": 1,
+                    "total_comp": 18257391,
+                    "avg_comp": 18257391.0
+                },
+                "Advanced Computing": {
+                    "count": 1,
+                    "total_comp": 30996392,
+                    "avg_comp": 30996392.0
+                }
+            },
+            "top_10": [
+                {
+                    "company": "NVIDIA",
+                    "ceo_comp": 49866251,
+                    "sector": "Technology",
+                    "exec_count": 4,
+                    "internal_ratio": 2.5
+                },
+                {
+                    "company": "Alignment Healthcare, Inc.",
+                    "ceo_comp": 45998851,
+                    "sector": "Technology",
+                    "exec_count": 4,
+                    "internal_ratio": 4.2
+                },
+                {
+                    "company": "Mobileye Global Inc.",
+                    "ceo_comp": 45219678,
+                    "sector": "Technology",
+                    "exec_count": 4,
+                    "internal_ratio": 9.5
+                },
+                {
+                    "company": "Bloom Energy Corp",
+                    "ceo_comp": 44961745,
+                    "sector": "Energy & Climate",
+                    "exec_count": 4,
+                    "internal_ratio": 12.0
+                },
+                {
+                    "company": "Bloom Energy",
+                    "ceo_comp": 44961745,
+                    "sector": "Energy & Climate",
+                    "exec_count": 4,
+                    "internal_ratio": 12.0
+                },
+                {
+                    "company": "Uber Technologies, Inc",
+                    "ceo_comp": 39408629,
+                    "sector": "Technology",
+                    "exec_count": 4,
+                    "internal_ratio": 4.0
+                },
+                {
+                    "company": "Uber Technologies, Inc",
+                    "ceo_comp": 39408629,
+                    "sector": null,
+                    "exec_count": 4,
+                    "internal_ratio": 4.0
+                },
+                {
+                    "company": "Uber Technologies, Inc",
+                    "ceo_comp": 39408629,
+                    "sector": null,
+                    "exec_count": 4,
+                    "internal_ratio": 4.0
+                },
+                {
+                    "company": "EMBER TECHNOLOGIES INC",
+                    "ceo_comp": 39408629,
+                    "sector": "Advanced Technology",
+                    "exec_count": 4,
+                    "internal_ratio": 4.0
+                },
+                {
+                    "company": "LifeStance Health Group, Inc.",
+                    "ceo_comp": 38859218,
+                    "sector": "Technology",
+                    "exec_count": 3,
+                    "internal_ratio": 1.0
+                }
+            ],
+            "internal_ratio_distribution": {
+                "1": 361,
+                "5": 19,
+                "2": 333,
+                "4": 79,
+                "3": 167,
+                "16": 1,
+                "20": 3,
+                "9": 5,
+                "6": 12,
+                "12": 1,
+                "7": 3,
+                "8": 5,
+                "11": 5,
+                "10": 3
+            },
+            "statistics": {
+                "median": 5148564,
+                "mean": 7662747,
+                "min": 60811,
+                "max": 49866251,
+                "p25": 1892675,
+                "p75": 10226709
+            },
+            "sectors": [
+                {
+                    "name": "Advanced Computing",
+                    "count": 1,
+                    "total_comp": 30996392,
+                    "avg_comp": 30996392.0
+                },
+                {
+                    "name": "Robotics",
+                    "count": 1,
+                    "total_comp": 18257391,
+                    "avg_comp": 18257391.0
+                },
+                {
+                    "name": "Antibody Discovery (AI)",
+                    "count": 1,
+                    "total_comp": 16962608,
+                    "avg_comp": 16962608.0
+                },
+                {
+                    "name": "Cybersecurity",
+                    "count": 8,
+                    "total_comp": 121074792,
+                    "avg_comp": 15134349.0
+                },
+                {
+                    "name": "Semiconductors",
+                    "count": 6,
+                    "total_comp": 85071075,
+                    "avg_comp": 14178512.5
+                },
+                {
+                    "name": "Guided Missiles & Space Vehicles",
+                    "count": 2,
+                    "total_comp": 27474203,
+                    "avg_comp": 13737101.5
+                },
+                {
+                    "name": "AI & Machine Learning",
+                    "count": 9,
+                    "total_comp": 113884047,
+                    "avg_comp": 12653783.0
+                },
+                {
+                    "name": "Cloud Infrastructure",
+                    "count": 5,
+                    "total_comp": 62848296,
+                    "avg_comp": 12569659.2
+                },
+                {
+                    "name": "Energy & Climate",
+                    "count": 84,
+                    "total_comp": 644708654,
+                    "avg_comp": 7675103.023809524
+                },
+                {
+                    "name": "Advanced Technology",
+                    "count": 115,
+                    "total_comp": 865304571,
+                    "avg_comp": 7524387.573913043
+                }
+            ]
+        };
+
+        // Render statistics cards
+        function renderStats() {
+            const statsGrid = document.getElementById('statsGrid');
+
+            const stats = [
+                {
+                    label: 'Total Companies',
+                    value: dashboardData.total_companies.toLocaleString(),
+                    subtitle: '997 with full analysis'
+                },
+                {
+                    label: 'Total Compensation',
+                    value: `$${(dashboardData.total_compensation / 1e9).toFixed(2)}B`,
+                    subtitle: 'CEO compensation analyzed'
+                },
+                {
+                    label: 'Median CEO Comp',
+                    value: `$${(dashboardData.statistics.median / 1e6).toFixed(2)}M`,
+                    subtitle: `Range: $50K - $${(dashboardData.statistics.max / 1e6).toFixed(1)}M`
+                },
+                {
+                    label: 'Executive Records',
+                    value: dashboardData.total_records.toLocaleString(),
+                    subtitle: 'Individual compensation records'
+                }
+            ];
+
+            statsGrid.innerHTML = stats.map(stat => `
+                <div class="stat-card">
+                    <div class="stat-label">${stat.label}</div>
+                    <div class="stat-value">${stat.value}</div>
+                    <div class="stat-subtitle">${stat.subtitle}</div>
+                </div>
+            `).join('');
+        }
+
+        // Render tier distribution chart
+        function renderTierChart() {
+            const ctx = document.getElementById('tierChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Founder-Friendly (<$1M)', 'Moderate ($1-5M)', 'High ($5-10M)', 'Mega (>$10M)'],
+                    datasets: [{
+                        data: [
+                            dashboardData.by_tier.founder,
+                            dashboardData.by_tier.moderate,
+                            dashboardData.by_tier.high,
+                            dashboardData.by_tier.mega
+                        ],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ],
+                        borderColor: '#1E293B',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#F1F5F9',
+                                padding: 15,
+                                font: { size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render sector chart
+        function renderSectorChart() {
+            const ctx = document.getElementById('sectorChart').getContext('2d');
+            const topSectors = dashboardData.sectors.slice(0, 10);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: topSectors.map(s => s.name),
+                    datasets: [{
+                        label: 'Avg CEO Compensation',
+                        data: topSectors.map(s => s.avg_comp),
+                        backgroundColor: 'rgba(45, 212, 191, 0.8)',
+                        borderColor: 'rgba(45, 212, 191, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `$${(value / 1e6).toFixed(1)}M`
+                            },
+                            grid: { color: '#334155' }
+                        },
+                        y: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render ratio distribution chart
+        function renderRatioChart() {
+            const ctx = document.getElementById('ratioChart').getContext('2d');
+            const ratios = Object.keys(dashboardData.internal_ratio_distribution)
+                .map(Number)
+                .sort((a, b) => a - b);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ratios.map(r => r === 20 ? '20+x' : `${r}x`),
+                    datasets: [{
+                        label: 'Number of Companies',
+                        data: ratios.map(r => dashboardData.internal_ratio_distribution[r]),
+                        backgroundColor: ratios.map(r =>
+                            r <= 3 ? 'rgba(16, 185, 129, 0.8)' :
+                                r <= 10 ? 'rgba(245, 158, 11, 0.8)' :
+                                    'rgba(239, 68, 68, 0.8)'
+                        ),
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#94A3B8' },
+                            grid: { display: false }
+                        },
+                        y: {
+                            ticks: { color: '#94A3B8' },
+                            grid: { color: '#334155' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render statistics chart
+        function renderStatsChart() {
+            const ctx = document.getElementById('statsChart').getContext('2d');
+            const stats = dashboardData.statistics;
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Min', '25th %ile', 'Median', 'Mean', '75th %ile', 'Max'],
+                    datasets: [{
+                        label: 'CEO Compensation',
+                        data: [stats.min, stats.p25, stats.median, stats.mean, stats.p75, stats.max],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(139, 92, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(251, 146, 60, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `$${(value / 1e6).toFixed(1)}M`
+                            },
+                            grid: { color: '#334155' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render sector-specific tables with component breakdown
+        function renderSectorTable(tableId, sectorKey, sectorName) {
+            const table = document.getElementById(tableId);
+            const companies = sectorData[sectorKey] || [];
+
+            table.innerHTML = `
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Company</th>
+                        <th>Total</th>
+                        <th>Salary</th>
+                        <th>Stock</th>
+                        <th>Options</th>
+                        <th>Bonus</th>
+                        <th>Non-Equity</th>
+                        <th>Other</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${companies.map((company, idx) => {
+                const rankClass = idx === 0 ? 'rank-1' : idx === 1 ? 'rank-2' : idx === 2 ? 'rank-3' : 'rank-default';
+                return `
+                            <tr>
+                                <td><span class="rank-badge ${rankClass}">${idx + 1}</span></td>
+                                <td><strong>${company.company}</strong></td>
+                                <td><span class="comp-amount">$${(company.total / 1e6).toFixed(1)}M</span></td>
+                                <td>${(company.salary / 1e6).toFixed(1)}M</td>
+                                <td>${(company.stock / 1e6).toFixed(1)}M</td>
+                                <td>${(company.bonus / 1e6).toFixed(1)}M</td>
+                                <td>${(company.bonus / 1e6).toFixed(1)}M</td>
+                                <td>${(company.non_equity / 1e6).toFixed(1)}M</td>
+                                <td>${(company.other / 1e6).toFixed(1)}M</td>
+                            </tr>
+                        `;
+            }).join('')}
+                </tbody>
+            `;
+        }
+
+        // Render top 10 table
+        function renderTop10() {
+            const tbody = document.getElementById('top10Body');
+
+            tbody.innerHTML = dashboardData.top_10.map((company, idx) => {
+                const rankClass = idx === 0 ? 'rank-1' : idx === 1 ? 'rank-2' : idx === 2 ? 'rank-3' : 'rank-default';
+                const ratioClass = company.internal_ratio <= 5 ? 'ratio-low' :
+                    company.internal_ratio <= 10 ? 'ratio-medium' : 'ratio-high';
+
+                return `
+                    <tr>
+                        <td><span class="rank-badge ${rankClass}">${idx + 1}</span></td>
+                        <td><strong>${company.company}</strong></td>
+                        <td>${company.sector}</td>
+                        <td><span class="comp-amount">$${(company.ceo_comp / 1e6).toFixed(2)}M</span></td>
+                        <td>${company.exec_count}</td>
+                        <td><span class="ratio-badge ${ratioClass}">${company.internal_ratio}x</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Initialize dashboard
+        function init() {
+            renderStats();
+            renderTierChart();
+            renderSectorChart();
+            renderRatioChart();
+            renderStatsChart();
+
+            // Render new sector-specific tables
+            renderSectorTable('techTable', 'Technology', 'Technology');
+            renderSectorTable('bioTable', 'Biotechnology', 'Biotechnology');
+            renderSectorTable('energyTable', 'Energy & Climate', 'Energy & Climate');
+            renderSectorTable('cyberTable', 'Cybersecurity', 'Cybersecurity');
+            renderSectorTable('advancedTable', 'Advanced Technology', 'Advanced Technology');
+
+            renderTop10();
+        }
+
+        // Load when ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
+</body>
+
+</html>
