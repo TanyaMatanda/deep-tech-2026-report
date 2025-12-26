@@ -43,8 +43,7 @@ def main():
     
     print(f"✓ Retrieved {len(response.data)} CEO compensation records")
     
-    # Organize by sector
-    sector_data = {}
+    # Map sectors to standardized names
     sector_mapping = {
         'Biotechnology': 'Biotechnology',
         'Technology': 'Technology',
@@ -52,6 +51,10 @@ def main():
         'Cybersecurity': 'Cybersecurity',
         'Advanced Materials & Manufacturing': 'Advanced Materials'
     }
+    
+    # Organize by sector and deduplicate
+    sector_data = {}
+    seen_companies = {}  # Track companies we've already added
     
     for record in response.data:
         # Skip zero compensation
@@ -62,16 +65,25 @@ def main():
         if not company:
             continue
         
+        company_name = company.get('company_name')
         sector = company.get('primary_sector', 'Other')
         dashboard_sector = sector_mapping.get(sector, 'Other')
         
-        if dashboard_sector == 'Other':
+        if dashboard_sector == 'Other' or not company_name:
             continue
         
-        if dashboard_sector not in sector_data:
-            sector_data[dashboard_sector] = []
+        # Skip if we've already added this company to this sector with higher compensation
+        sector_company_key = f"{dashboard_sector}_{company_name}"
+        if sector_company_key in seen_companies:
+            if seen_companies[sector_company_key] >= record.get('total_compensation', 0):
+                continue
         
-        # Format the record
+        seen_companies[sector_company_key] = record.get('total_compensation', 0)
+        
+        if dashboard_sector not in sector_data:
+            sector_data[dashboard_sector] = {}
+        
+        # Format the record with all components
         total = record.get('total_compensation', 0) or 0
         salary = record.get('base_salary', 0) or 0
         bonus = record.get('bonus', 0) or 0
@@ -81,8 +93,8 @@ def main():
         pension = record.get('change_in_pension_value', 0) or 0
         other = record.get('all_other_compensation', 0) or 0
         
-        sector_data[dashboard_sector].append({
-            'company': company.get('company_name'),
+        sector_data[dashboard_sector][company_name] = {
+            'company': company_name,
             'total': total,
             'salary': salary,
             'bonus': bonus,
@@ -91,12 +103,13 @@ def main():
             'non_equity': non_equity,
             'pension': pension,
             'other': other
-        })
+        }
     
-    # Get top 10 for each sector
+    # Convert to lists sorted by total compensation and get top 10
     sector_tables = {}
-    for sector, companies in sector_data.items():
-        sector_tables[sector] = companies[:10]
+    for sector, companies_dict in sector_data.items():
+        companies_list = sorted(companies_dict.values(), key=lambda x: x['total'], reverse=True)
+        sector_tables[sector] = companies_list[:10]
     
     print(f"\n📋 Sector Distribution (Top 10 per sector):")
     for sector, companies in sorted(sector_tables.items(), key=lambda x: len(x[1]), reverse=True):

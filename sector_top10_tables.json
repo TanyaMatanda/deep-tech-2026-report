@@ -12,17 +12,6 @@
       "other": 0
     },
     {
-      "company": "Palo Alto Networks Inc",
-      "total": 99736336,
-      "salary": 0,
-      "bonus": 0,
-      "stock": 267474290,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 0
-    },
-    {
       "company": "GENERAL ELECTRIC CO",
       "total": 88954586,
       "salary": 0,
@@ -32,28 +21,6 @@
       "non_equity": 0,
       "pension": 0,
       "other": 0
-    },
-    {
-      "company": "Riot Platforms, Inc.",
-      "total": 83532328,
-      "salary": 0,
-      "bonus": 181615,
-      "stock": 55439295,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 463189
-    },
-    {
-      "company": "Riot Platforms, Inc.",
-      "total": 83532328,
-      "salary": 0,
-      "bonus": 181615,
-      "stock": 55439295,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 463189
     },
     {
       "company": "Riot Platforms, Inc.",
@@ -89,17 +56,6 @@
       "other": 400865
     },
     {
-      "company": "Trump Media & Technology Group Corp.",
-      "total": 46883031,
-      "salary": 0,
-      "bonus": 0,
-      "stock": 47640469,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 400865
-    },
-    {
       "company": "Uber Technologies, Inc",
       "total": 39408629,
       "salary": 0,
@@ -109,6 +65,50 @@
       "non_equity": 0,
       "pension": 0,
       "other": 162773
+    },
+    {
+      "company": "CRISPR Therapeutics AG",
+      "total": 33175626,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 10016562,
+      "options": 0,
+      "non_equity": 4657955,
+      "pension": 0,
+      "other": 366252
+    },
+    {
+      "company": "Marvell Technology, Inc.",
+      "total": 32160142,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 144383348,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "ADVANCED MICRO DEVICES INC",
+      "total": 30996392,
+      "salary": 2056835,
+      "bonus": 0,
+      "stock": 18654655,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "MICRON TECHNOLOGY INC",
+      "total": 30940146,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 86570533,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
     }
   ],
   "Cybersecurity": [
@@ -118,39 +118,6 @@
       "salary": 0,
       "bonus": 0,
       "stock": 267474290,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 0
-    },
-    {
-      "company": "CrowdStrike",
-      "total": 35195300,
-      "salary": 0,
-      "bonus": 0,
-      "stock": 0,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 2025
-    },
-    {
-      "company": "CrowdStrike",
-      "total": 35195300,
-      "salary": 837695,
-      "bonus": 0,
-      "stock": 148504806,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 0
-    },
-    {
-      "company": "CrowdStrike",
-      "total": 35195300,
-      "salary": 837695,
-      "bonus": 0,
-      "stock": 148504806,
       "options": 0,
       "non_equity": 0,
       "pension": 0,
@@ -202,17 +169,6 @@
     }
   ],
   "Biotechnology": [
-    {
-      "company": "SOLENO THERAPEUTICS INC",
-      "total": 51160430,
-      "salary": 0,
-      "bonus": 0,
-      "stock": 175489000,
-      "options": 0,
-      "non_equity": 0,
-      "pension": 0,
-      "other": 0
-    },
     {
       "company": "SOLENO THERAPEUTICS INC",
       "total": 51160430,
@@ -309,6 +265,17 @@
       "stock": 6566982,
       "options": 0,
       "non_equity": 1711776,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "IOVANCE BIOTHERAPEUTICS, INC.",
+      "total": 10953192,
+      "salary": 2925794,
+      "bonus": 0,
+      "stock": 7048573,
+      "options": 0,
+      "non_equity": 3258633,
       "pension": 0,
       "other": 0
     }
