@@ -1217,12 +1217,10 @@
             renderRatioChart();
             renderStatsChart();
 
-            // Render new sector-specific tables
+            // Render new sector-specific tables (only the 3 we have data for)
             renderSectorTable('techTable', 'Technology', 'Technology');
             renderSectorTable('bioTable', 'Biotechnology', 'Biotechnology');
-            renderSectorTable('energyTable', 'Energy & Climate', 'Energy & Climate');
             renderSectorTable('cyberTable', 'Cybersecurity', 'Cybersecurity');
-            renderSectorTable('advancedTable', 'Advanced Technology', 'Advanced Technology');
 
             renderTop10();
         }
