@@ -100,7 +100,7 @@ However, investors must remain alert to potential weakness in this pattern. Some
 
 ### Cybersecurity: Premium Pay for Scarce Talent
 
-The cybersecurity sector exhibits the most extreme equity concentration we observe across all sectors, with stock awards regularly exceeding 90% of total compensation. CrowdStrike provides the paradigmatic example: $35.2 million total compensation consisting of $838,000 base salary, $148.5 million in stock awards, $1.3 million in non-equity incentive, and $1 million in other compensation. The apparent mathematical impossibility—$148.5 million stock awards within $35.2 million total—again signals grant-date vs. actually-paid reporting differences or multi-year vesting recognition. What remains clear regardless of accounting treatment: CrowdStrike pays its CEO primarily through equity worth multiples of the reported total, creating almost perfect alignment between executive wealth accumulation and shareholder returns.
+The cybersecurity sector exhibits the most extreme equity concentration we observe across all sectors, with stock awards regularly exceeding 90% of total compensation. CrowdStrike provides an instructive example of data extraction challenges: reported values show $35.2 million total compensation with component fields including $148.5 million in stock awards—a mathematical impossibility within SCT rules. **This represents a Category 2 anomaly (extraction/table-type mismatch) requiring original DEF 14A verification.** Setting aside the specific component breakdown, CrowdStrike's compensation structure clearly demonstrates equity-dominant alignment between executive wealth accumulation and shareholder returns.
 
 The cybersecurity sector's compensation premium reflects fundamental economics of talent scarcity. Global demand for cybersecurity expertise far outstrips supply, creating intense competition for executive leadership with both technical depth and business acumen. Companies compete not only against each other but against private equity firms, venture capital partnerships, and consulting practices that offer alternative career paths for top security talent. In this environment, equity packages reaching $100-150 million become necessary to attract and retain executives capable of building market-leading security platforms.
 
@@ -176,7 +176,7 @@ Declining compensation combined with declining stock prices indicates death spir
 
 ### Green Flags Signaling Strong Alignment
 
-Equity dominance above 90% of total compensation represents the strongest alignment signal available from Summary Compensation Table data. When executives derive virtually all incremental wealth from multi-year stock price appreciation, their incentives align almost perfectly with shareholder outcomes across the same timeframe. Companies like CrowdStrike achieving 99.7% equity composition through minimal base salaries and massive restricted stock unit grants create situations where CEO wealth accumulation depends entirely on sustained value creation. The multi-year vesting periods ensure executives cannot extract value through short-term financial engineering, reinforcing long-term orientation.
+Equity dominance above 90% of total compensation represents the strongest alignment signal available from Summary Compensation Table data. When executives derive virtually all incremental wealth from multi-year stock price appreciation, their incentives align almost perfectly with shareholder outcomes across the same timeframe. Companies demonstrating high equity composition through minimal base salaries and substantial restricted stock unit grants create situations where CEO wealth accumulation depends heavily on sustained value creation. The multi-year vesting periods ensure executives cannot extract value through short-term financial engineering, reinforcing long-term orientation.
 
 Multi-year vesting periods extending beyond three years provide particularly strong alignment signals. While three-year vesting has become standard practice, leading companies increasingly adopt four or five-year schedules with cliff vesting at year two or three followed by monthly vesting thereafter. These extended schedules create powerful retention incentives and ensure executives maintain significant unvested equity through market cycles. An executive with $40 million in unvested grants scheduled across the next four years faces enormous opportunity costs from departure, creating natural alignment with patient capital investors seeking stable long-term management.
 
@@ -809,7 +809,7 @@ For readers operating in or comparing to non-US markets, this appendix serves as
 | 4 | Arrowhead Pharma | $9.3M | $834K | $7.2M | - | $1.3M |
 | 5 | Xenon Pharmaceuticals | $9.8M | $668K | $8.5M | - | $525K |
 
-**Biotech Insight**: Stock awards can appear disproportionately large (e.g., TG Therapeutics $91.7M stock in $18.8M package) due to SEC grant-date fair value reporting mechanics for multi-year grants. When companies make large equity grants in a single fiscal year, the full grant-date fair value appears in that year's stock awards column even though the equity vests over 3-4 years. These figures represent theoretical value at grant rather than realized compensation—requiring Compensation Discussion & Analysis (CD&A) review for accurate interpretation.
+**Biotech Insight**: Some records show component values exceeding reported totals (e.g., TG Therapeutics $91.7M stock in $18.8M package). **Treat these as extraction errors or table-type mismatches; verify in the original DEF 14A and CD&A before using numerically.** The directional insight—biotechnology compensation is heavily equity-based with multi-year vesting—remains valid regardless of specific component accuracy.
 
 ---
 
@@ -834,7 +834,7 @@ For readers operating in or comparing to non-US markets, this appendix serves as
 | 2 | Varonis | $14.5M | $642K | $20.3M | - | $184K |
 | 3 | Cloudflare | $2.1M | $1.7M | $15.4M | - | $88K |
 
-**Cybersecurity Insight**: CrowdStrike's $148M stock award vs $35M total suggests actually-paid vs grant-date discrepancy or multi-year vesting recognition.
+**Cybersecurity Insight**: Component values not reconciling to total (e.g., CrowdStrike $148M stock vs $35M total) indicate extraction errors or table-type mismatch. Verify in original DEF 14A before using numerically. Directional pattern: cybersecurity compensation is heavily equity-dominant.
 
 ---
 
