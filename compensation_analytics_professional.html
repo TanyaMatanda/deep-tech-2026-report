@@ -530,43 +530,128 @@
     <script>
         // Professional analytics data
         const analytics = {
-            "sector_stats": {
-                "Technology": {
-                    "count": 10,
-                    "total_comp": { "mean": 22632893, "median": 21988865, "p25": 8417942, "p75": 29357849, "min": 2271434, "max": 52796930, "stdev": 15479829 },
-                    "equity_mix": { "mean": 97.5, "median": 95.7, "p25": 55.1, "p75": 122.0 },
-                    "salary": { "mean": 1421266, "median": 1341500 }
-                },
-                "Biotechnology": {
-                    "count": 9,
-                    "total_comp": { "mean": 11810602, "median": 10102576, "p25": 8188909, "p75": 15527464, "min": 7620611, "max": 18800211, "stdev": 3832551 },
-                    "equity_mix": { "mean": 602.5, "median": 76.8, "p25": 59.4, "p75": 873.3 },
-                    "salary": { "mean": 1223951, "median": 834038 }
-                },
-                "Energy & Climate": {
-                    "count": 8,
-                    "total_comp": { "mean": 13776031, "median": 9563929, "p25": 8563842, "p75": 12435333, "min": 8179724, "max": 44961745, "stdev": 12589746 },
-                    "equity_mix": { "mean": 521.0, "median": 95.2, "p25": 52.8, "p75": 158.4 },
-                    "salary": { "mean": 1431279, "median": 948121 }
-                },
-                "Cybersecurity": {
-                    "count": 4,
-                    "total_comp": { "mean": 13298971, "median": 8441694, "p25": 2081094, "p75": 35195300, "min": 1417205, "max": 35195300, "stdev": 14851639 },
-                    "equity_mix": { "mean": 325.2, "median": 280.9, "p25": 35.0, "p75": 659.7 },
-                    "salary": { "mean": 1341600, "median": 1155763 }
-                },
-                "Advanced Technology": {
-                    "count": 6,
-                    "total_comp": { "mean": 18680929, "median": 18865232, "p25": 14152038, "p75": 23836527, "min": 11920000, "max": 24609077, "stdev": 4898316 },
-                    "equity_mix": { "mean": 731.5, "median": 150.9, "p25": 61.3, "p75": 1072.9 },
-                    "salary": { "mean": 2014943, "median": 1890404 }
-                }
-            },
-            "overall": {
-                "total_companies": 997,
-                "total_comp": { "mean": 16432896, "median": 15400343, "p10": 4553942, "p25": 9179450, "p75": 19487880, "p90": 27773894 },
-                "equity_mix": { "mean": 473.3, "median": 91.7, "above_85pct": 29, "below_50pct": 8 }
-            }
+                        "sector_stats": {
+                                        "Advanced Technology": {
+                                                        "count": 3,
+                                                        "total_comp": {
+                                                                        "mean": 3127584.0,
+                                                                        "median": 3127584.0,
+                                                                        "p25": 3127584.0,
+                                                                        "p75": 3127584.0,
+                                                                        "min": 3127584.0,
+                                                                        "max": 3127584.0,
+                                                                        "stdev": 0.0
+                                                        },
+                                                        "equity_mix": {
+                                                                        "mean": 72.73985287045848,
+                                                                        "median": 72.73985287045848,
+                                                                        "p25": 72.73985287045848,
+                                                                        "p75": 72.73985287045848,
+                                                                        "min": 72.73985287045848,
+                                                                        "max": 72.73985287045848,
+                                                                        "stdev": 0.0
+                                                        },
+                                                        "salary": {
+                                                                        "mean": 550000.0,
+                                                                        "median": 550000.0
+                                                        }
+                                        },
+                                        "Technology": {
+                                                        "count": 323,
+                                                        "total_comp": {
+                                                                        "mean": 11061272.780185759,
+                                                                        "median": 8106143.0,
+                                                                        "p25": 3440160.5,
+                                                                        "p75": 14298554.0,
+                                                                        "min": 8995.0,
+                                                                        "max": 99736336.0,
+                                                                        "stdev": 13346955.489568014
+                                                        },
+                                                        "equity_mix": {
+                                                                        "mean": 115.80900161354364,
+                                                                        "median": 127.59100171915418,
+                                                                        "p25": 0.0,
+                                                                        "p75": 200.0,
+                                                                        "min": 0.0,
+                                                                        "max": 200.0,
+                                                                        "stdev": 82.92637003916651
+                                                        },
+                                                        "salary": {
+                                                                        "mean": 1917145.2551020407,
+                                                                        "median": 1991036.0
+                                                        }
+                                        },
+                                        "Biotechnology": {
+                                                        "count": 74,
+                                                        "total_comp": {
+                                                                        "mean": 6632538.945945946,
+                                                                        "median": 4086127.0,
+                                                                        "p25": 2062424.0,
+                                                                        "p75": 7046205.0,
+                                                                        "min": 365177.0,
+                                                                        "max": 51160430.0,
+                                                                        "stdev": 9234522.249579169
+                                                        },
+                                                        "equity_mix": {
+                                                                        "mean": 84.0503790120064,
+                                                                        "median": 37.201950867552526,
+                                                                        "p25": 0.0,
+                                                                        "p75": 200.0,
+                                                                        "min": 0.0,
+                                                                        "max": 200.0,
+                                                                        "stdev": 90.12806665284788
+                                                        },
+                                                        "salary": {
+                                                                        "mean": 1881732.6153846155,
+                                                                        "median": 2003459.0
+                                                        }
+                                        },
+                                        "Cybersecurity": {
+                                                        "count": 6,
+                                                        "total_comp": {
+                                                                        "mean": 40433105.0,
+                                                                        "median": 35195300.0,
+                                                                        "p25": 35195300.0,
+                                                                        "p75": 35195300.0,
+                                                                        "min": 2081094.0,
+                                                                        "max": 99736336.0,
+                                                                        "stdev": 29147579.544036422
+                                                        },
+                                                        "equity_mix": {
+                                                                        "mean": 133.33333333333334,
+                                                                        "median": 200.0,
+                                                                        "p25": 50.0,
+                                                                        "p75": 200.0,
+                                                                        "min": 0.0,
+                                                                        "max": 200.0,
+                                                                        "stdev": 94.28090415820634
+                                                        },
+                                                        "salary": {
+                                                                        "mean": 1115005.3333333333,
+                                                                        "median": 837695.0
+                                                        }
+                                        }
+                        },
+                        "overall": {
+                                        "total_companies": 1000,
+                                        "total_comp": {
+                                                        "mean": 11623982.427,
+                                                        "median": 7451715.0,
+                                                        "p25": 3087765.75,
+                                                        "p75": 15647277.75,
+                                                        "min": 8212.0,
+                                                        "max": 99736336.0,
+                                                        "stdev": 13876685.478478013,
+                                                        "p10": 1092500.0,
+                                                        "p90": 25867325.0
+                                        },
+                                        "equity_mix": {
+                                                        "mean": 111.55713935544615,
+                                                        "median": 128.01813525135216,
+                                                        "above_85pct": 614,
+                                                        "below_50pct": 327
+                                        }
+                        }
         };
 
         // Render stats cards
