@@ -1,0 +1,316 @@
+{
+  "Technology": [
+    {
+      "company": "Palo Alto Networks Inc",
+      "total": 99736336,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 267474290,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "Palo Alto Networks Inc",
+      "total": 99736336,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 267474290,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "GENERAL ELECTRIC CO",
+      "total": 88954586,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 284666600,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "Riot Platforms, Inc.",
+      "total": 83532328,
+      "salary": 0,
+      "bonus": 181615,
+      "stock": 55439295,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 463189
+    },
+    {
+      "company": "Riot Platforms, Inc.",
+      "total": 83532328,
+      "salary": 0,
+      "bonus": 181615,
+      "stock": 55439295,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 463189
+    },
+    {
+      "company": "Riot Platforms, Inc.",
+      "total": 83532328,
+      "salary": 0,
+      "bonus": 181615,
+      "stock": 55439295,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 463189
+    },
+    {
+      "company": "CISCO SYSTEMS, INC.",
+      "total": 52838751,
+      "salary": 1390000,
+      "bonus": 0,
+      "stock": 45870690,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 460637
+    },
+    {
+      "company": "Trump Media & Technology Group Corp.",
+      "total": 46883031,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 47640469,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 400865
+    },
+    {
+      "company": "Trump Media & Technology Group Corp.",
+      "total": 46883031,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 47640469,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 400865
+    },
+    {
+      "company": "Uber Technologies, Inc",
+      "total": 39408629,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 74251272,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 162773
+    }
+  ],
+  "Cybersecurity": [
+    {
+      "company": "Palo Alto Networks",
+      "total": 99736336,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 267474290,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "CrowdStrike",
+      "total": 35195300,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 0,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 2025
+    },
+    {
+      "company": "CrowdStrike",
+      "total": 35195300,
+      "salary": 837695,
+      "bonus": 0,
+      "stock": 148504806,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "CrowdStrike",
+      "total": 35195300,
+      "salary": 837695,
+      "bonus": 0,
+      "stock": 148504806,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "CrowdStrike",
+      "total": 35195300,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 0,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 2025
+    },
+    {
+      "company": "Okta",
+      "total": 23319458,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 28000000,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "Varonis",
+      "total": 14502288,
+      "salary": 641900,
+      "bonus": 0,
+      "stock": 20277376,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "Fortinet",
+      "total": 13143289,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 37716937,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    }
+  ],
+  "Biotechnology": [
+    {
+      "company": "SOLENO THERAPEUTICS INC",
+      "total": 51160430,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 175489000,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "SOLENO THERAPEUTICS INC",
+      "total": 51160430,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 175489000,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "CRISPR Therapeutics",
+      "total": 33175626,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 10016562,
+      "options": 0,
+      "non_equity": 4657955,
+      "pension": 0,
+      "other": 366252
+    },
+    {
+      "company": "Benitec Biopharma Inc.",
+      "total": 25865036,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 26724611,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "VERTEX PHARMACEUTICALS INC / MA",
+      "total": 21538668,
+      "salary": 0,
+      "bonus": 0,
+      "stock": 43611733,
+      "options": 0,
+      "non_equity": 0,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "TG THERAPEUTICS, INC.",
+      "total": 18752897,
+      "salary": 2254350,
+      "bonus": 0,
+      "stock": 91737003,
+      "options": 0,
+      "non_equity": 3933225,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "Jazz Pharmaceuticals plc",
+      "total": 15527464,
+      "salary": 560120,
+      "bonus": 4068950,
+      "stock": 17262015,
+      "options": 0,
+      "non_equity": 4695635,
+      "pension": 0,
+      "other": 0
+    },
+    {
+      "company": "IONIS PHARMACEUTICALS INC",
+      "total": 15400343,
+      "salary": 2697612,
+      "bonus": 0,
+      "stock": 453897000,
+      "options": 0,
+      "non_equity": 4066897,
+      "pension": 0,
+      "other": 1803424
+    },
+    {
+      "company": "Intellia Therapeutics, Inc.",
+      "total": 15330547,
+      "salary": 0,
+      "bonus": 335175,
+      "stock": 519021000,
+      "options": 0,
+      "non_equity": 4740007,
+      "pension": 0,
+      "other": 353494
+    },
+    {
+      "company": "BIOMARIN PHARMACEUTICAL INC",
+      "total": 14853605,
+      "salary": 2421839,
+      "bonus": 0,
+      "stock": 6566982,
+      "options": 0,
+      "non_equity": 1711776,
+      "pension": 0,
+      "other": 0
+    }
+  ]
+}
