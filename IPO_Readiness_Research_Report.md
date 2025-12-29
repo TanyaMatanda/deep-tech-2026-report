@@ -4,7 +4,7 @@
 
 **As of: December 29, 2025**
 
-**Authors:** Tanya Matanda, Chicago Booth Research Initiative  
+**Author:** Tanya Matanda  
 **Data Source:** Deep Tech 2026 Company Database  
 **Analysis Period:** FY2023-2024 Financial Data
 
@@ -514,7 +514,7 @@ Ritter, J. R., & Welch, I. (2002). A review of IPO activity, pricing, and alloca
 Anonymized summary statistics and scoring methodology are available upon request. Firm-level data cannot be shared due to privacy agreements with data providers.
 
 **Acknowledgments:**  
-This research was conducted as part of the Chicago Booth Deep Tech 2026 Initiative. We thank participants at the Booth Finance Workshop for helpful comments.
+This research methodology is inspired by academic frameworks from the University of Chicago Booth School of Business. All analysis and conclusions are independent.
 
 **Correspondence:**  
 Tanya Matanda (tanya@governanceiq.com)
