@@ -1,0 +1,76 @@
+name: IPO Data Request
+description: Request access to IPO readiness datasets
+title: "[Data Request] "
+labels: ["data-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Request IPO Readiness Data
+        Fill out this form to receive download links to our IPO readiness datasets.
+        
+  - type: input
+    id: full-name
+    attributes:
+      label: Full Name
+      placeholder: Jane Smith
+    validations:
+      required: true
+      
+  - type: input
+    id: email
+    attributes:
+      label: Email Address
+      placeholder: jane@example.com
+    validations:
+      required: true
+      
+  - type: input
+    id: company
+    attributes:
+      label: Company
+      placeholder: Acme Corp
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: role
+    attributes:
+      label: Role
+      options:
+        - Investor / VC
+        - Investment Banker
+        - Company Executive
+        - Advisor / Consultant
+        - Academic / Researcher
+        - Other
+    validations:
+      required: true
+      
+  - type: dropdown
+    id: dataset
+    attributes:
+      label: Dataset Requested
+      options:
+        - IPO-Ready Companies (427)
+        - Near-Term Companies (1,834)
+        - Significant Gaps Sample (2,000)
+        - Summary Overview
+    validations:
+      required: true
+      
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Intended Use (Optional)
+      placeholder: Brief description of how you plan to use the data
+    validations:
+      required: false
+      
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Consent
+      options:
+        - label: I agree to receive the dataset and occasional updates on IPO market research
+          required: true
