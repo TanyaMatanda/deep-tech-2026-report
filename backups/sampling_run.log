@@ -1,0 +1,119 @@
+  File "/Users/tanyamatanda/Desktop/Proxy Season 2026/stratified_sampling.py", line 129
+    print(f'\n{'='*60}')
+                ^
+SyntaxError: f-string: expecting '}'
+============================================================
+STRATIFIED SAMPLING FOR 20K+ DEEP TECH COMPANIES
+============================================================
+
+Fetching Advanced Technology companies...
+
+  Advanced Technology:
+    Total available: 24,000
+    With CIK/SEDAR: 99
+    Without: 23,901
+    Selected: 8,000 (99 with filing IDs)
+
+Fetching Biotechnology companies...
+
+  Biotechnology:
+    Total available: 9,000
+    With CIK/SEDAR: 194
+    Without: 8,806
+    Selected: 3,000 (194 with filing IDs)
+
+Fetching Energy & Climate companies...
+
+  Energy & Climate:
+    Total available: 8,000
+    With CIK/SEDAR: 163
+    Without: 7,837
+    Selected: 2,500 (163 with filing IDs)
+
+Fetching Cybersecurity companies...
+
+  Cybersecurity:
+    Total available: 5,000
+    With CIK/SEDAR: 9
+    Without: 4,991
+    Selected: 1,500 (9 with filing IDs)
+
+Fetching Agriculture & Food Tech companies...
+
+  Agriculture & Food Tech:
+    Total available: 4,000
+    With CIK/SEDAR: 0
+    Without: 4,000
+    Selected: 1,200 (0 with filing IDs)
+
+Fetching Advanced Computing companies...
+
+  Advanced Computing:
+    Total available: 3,000
+    With CIK/SEDAR: 1
+    Without: 2,999
+    Selected: 1,000 (1 with filing IDs)
+
+Fetching Robotics companies...
+
+  Robotics:
+    Total available: 3,000
+    With CIK/SEDAR: 2
+    Without: 2,998
+    Selected: 1,000 (2 with filing IDs)
+
+Fetching Advanced Materials companies...
+
+  Advanced Materials:
+    Total available: 2,704
+    With CIK/SEDAR: 3
+    Without: 2,701
+    Selected: 800 (3 with filing IDs)
+
+Fetching Space Technology companies...
+
+  Space Technology:
+    Total available: 2,705
+    With CIK/SEDAR: 4
+    Without: 2,701
+    Selected: 700 (4 with filing IDs)
+
+Fetching Quantum Computing companies...
+
+  Quantum Computing:
+    Total available: 910
+    With CIK/SEDAR: 4
+    Without: 906
+    Selected: 500 (4 with filing IDs)
+
+Fetching Other companies...
+
+  Other:
+    Total available: 2,277
+    With CIK/SEDAR: 1,695
+    Without: 582
+    Selected: 800 (800 with filing IDs)
+
+============================================================
+SAMPLING COMPLETE
+============================================================
+
+Total selected: 21,000
+Companies with filing IDs: 1,279
+
+✅ Saved to: backups/selected_companies_20k.json
+✅ Details saved to: backups/selected_companies_details.json
+
+
+📊 SECTOR BREAKDOWN:
+  Advanced Technology: 8,000 companies (1.2% with filing IDs)
+  Biotechnology: 3,000 companies (6.5% with filing IDs)
+  Energy & Climate: 2,500 companies (6.5% with filing IDs)
+  Cybersecurity: 1,500 companies (0.6% with filing IDs)
+  Agriculture & Food Tech: 1,200 companies (0.0% with filing IDs)
+  Advanced Computing: 1,000 companies (0.1% with filing IDs)
+  Robotics: 1,000 companies (0.2% with filing IDs)
+  Advanced Materials: 800 companies (0.4% with filing IDs)
+  Space Technology: 700 companies (0.6% with filing IDs)
+  Quantum Computing: 500 companies (0.8% with filing IDs)
+  Other: 800 companies (100.0% with filing IDs)

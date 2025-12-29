@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Compensation Dashboard | Deep Tech 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2DD4BF;
+            --primary-dark: #14B8A6;
+            --secondary: #8B5CF6;
+            --accent: #F59E0B;
+            --danger: #EF4444;
+            --success: #10B981;
+            --bg-dark: #0F172A;
+            --bg-card: #1E293B;
+            --bg-card-hover: #334155;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 3rem 0 1rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 0.875rem;
+            border-top: 1px solid var(--border);
+            font-size: 0.875rem;
+        }
+
+        tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .comp-amount {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.rem;
+        }
+
+        .component {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.75rem;
+        }
+
+        .rank-1 {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+        }
+
+        .rank-2 {
+            background: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%);
+            color: #000;
+        }
+
+        .rank-3 {
+            background: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%);
+            color: #FFF;
+        }
+
+        .rank-default {
+            background: var(--bg-card-hover);
+            color: var(--text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Executive Compensation Dashboard</h1>
+            <p class="subtitle">Component Breakdown by Sector | Deep Tech 2025</p>
+            <p class="subtitle" style="font-size: 1rem;">53 companies with full SEC component data</p>
+        </header>
+
+        <div id="sectorsContainer"></div>
+
+        <footer>
+            <p><strong>Data Source:</strong> SEC DEF 14A Proxy Filings (2024-2025 proxy season)</p>
+            <p><strong>Extraction Method:</strong> iXBRL-anchored parsing from Summary Compensation Tables</p>
+            <p><strong>Analysis Date:</strong> December 25, 2025</p>
+        </footer>
+    </div>
+
+    <script src="dashboard_complete.json" type="application/json"></script>
+    <script>
+        // Embedded dashboard data
+        const dashboardData = {
+            "sectors": {
+                "Technology": {
+                    "count": 10,
+                    "top10": [
+                        { "company": "CISCO SYSTEMS, INC.", "total": 52796930, "salary": 1385000, "stock": 45914748, "option": 0, "non_equity": 0, "other": 5497182 },
+                        { "company": "ADVANCED MICRO DEVICES INC", "total": 30971764, "salary": 2062500, "stock": 18671682, "option": 0, "non_equity": 9945000, "other": 292582 },
+                        { "company": "SoFi Technologies, Inc.", "total": 28143663, "salary": 2564263, "stock": 64625024, "option": 0, "non_equity": 0, "other": 247558 },
+                        { "company": "Applied Materials", "total": 27773894, "salary": 1668000, "stock": 22116630, "option": 0, "non_equity": 3708000, "other": 281264 },
+                        { "company": "Meta Platforms", "total": 27209926, "salary": 1000000, "stock": 23627000, "option": 0, "non_equity": 0, "other": 2582926 },
+                        { "company": "TERADATA CORP /DE/", "total": 17424961, "salary": 996154, "stock": 6943934, "option": 0, "non_equity": 8740385, "other": 744488 },
+                        { "company": "BENTLEY SYSTEMS INC", "total": 16406387, "salary": 1993000, "stock": 13456249, "option": 0, "non_equity": 0, "other": 957138 },
+                        { "company": "Rexford Industrial Realty, Inc.", "total": 13070000, "salary": 975000, "stock": 0, "option": 0, "non_equity": 8757000, "other": 3338000 },
+                        { "company": "Palantir", "total": 4553942, "salary": 0, "stock": 4299995, "option": 0, "non_equity": 0, "other": 253947 },
+                        { "company": "salesforce.com, inc.", "total": 2271434, "salary": 1568750, "stock": 0, "option": 0, "non_equity": 0, "other": 702684 }
+                    ]
+                },
+                "Biotechnology": {
+                    "count": 10,
+                    "top10": [
+                        { "company": "TG THERAPEUTICS, INC.", "total": 18800211, "salary": 2331000, "stock": 91717000, "option": 0, "non_equity": 0, "other": 207211 },
+                        { "company": "BIOMARIN PHARMACEUTICAL INC", "total": 14900322, "salary": 984015, "stock": 6590024, "option": 0, "non_equity": 6948000, "other": 378283 },
+                        { "company": "JAZZ PHARMACEUTICALS INC", "total": 15527464, "salary": 560120, "stock": 17262015, "option": 0, "non_equity": 4695635, "other": 341100 },
+                        { "company": "REGENERON PHARMACEUTICALS, INC.", "total": 10102576, "salary": 1888461, "stock": 5691012, "option": 0, "non_equity": 2271250, "other": 251853 },
+                        { "company": "Xenon Pharmaceuticals Inc.", "total": 9842668, "salary": 668056, "stock": 8455550, "option": 0, "non_equity": 0, "other": 719062 },
+                        { "company": "Celldex Therapeutics, Inc.", "total": 9179450, "salary": 730000, "stock": 0, "option": 0, "non_equity": 4380000, "other": 4069450 },
+                        { "company": "Arrowhead Pharma", "total": 9255555, "salary": 834038, "stock": 7155000, "option": 0, "non_equity": 0, "other": 1266517 },
+                        { "company": "IOVANCE BIOTHERAPEUTICS, INC.", "total": 10996350, "salary": 2925000, "stock": 7078588, "option": 0, "non_equity": 0, "other": 992762 },
+                        { "company": "Zentalis Pharmaceuticals, Inc.", "total": 8188909, "salary": 619342, "stock": 165867000, "option": 0, "non_equity": 0, "other": 0 },
+                        { "company": "Twist Bioscience", "total": 7620611, "salary": 955575, "stock": 5849949, "option": 0, "non_equity": 685000, "other": 130087 }
+                    ]
+                },
+                "Energy & Climate": {
+                    "count": 10,
+                    "top10": [
+                        { "company": "Bloom Energy", "total": 44961745, "salary": 1298695, "stock": 39968710, "option": 0, "non_equity": 3755269, "other": 0 },
+                        { "company": "Enphase Energy", "total": 12630005, "salary": 805193, "stock": 6672535, "option": 0, "non_equity": 3357725, "other": 53000 },
+                        { "company": "SM Energy Co", "total": 12240662, "salary": 770293, "stock": 11928971, "option": 0, "non_equity": 3516638, "other": 305989 },
+                        { "company": "ADVANCED ENERGY INDUSTRIES INC", "total": 8761961, "salary": 2972720, "stock": 8136164, "option": 0, "non_equity": 2759375, "other": 0 },
+                        { "company": "PBF Energy Inc.", "total": 8837500, "salary": 2580689, "stock": 0, "option": 0, "non_equity": 3997176, "other": 331946 },
+                        { "company": "ChargePoint", "total": 8360000, "salary": 825000, "stock": 6825000, "option": 0, "non_equity": 0, "other": 718000 },
+                        { "company": "Chord Energy Corp", "total": 8179724, "salary": 1130070, "stock": 10798062, "option": 0, "non_equity": 3350803, "other": 848627 },
+                        { "company": "Sunrun", "total": 8395295, "salary": 919000, "stock": 6895000, "option": 0, "non_equity": 0, "other": 561295 },
+                        { "company": "Bloom Energy Corp", "total": 44961745, "salary": 1298695, "stock": 39968710, "option": 0, "non_equity": 3755269, "other": 0 },
+                        { "company": "Clean Energy Fuels", "total": 5432195, "salary": 700000, "stock": 3932000, "option": 0, "non_equity": 800195, "other": 0 }
+                    ]
+                },
+                "Cybersecurity": {
+                    "count": 4,
+                    "top10": [
+                        { "company": "CrowdStrike", "total": 35195300, "salary": 837695, "stock": 148504806, "option": 0, "non_equity": 1320000, "other": 1000000 },
+                        { "company": "Varonis", "total": 14502288, "salary": 641900, "stock": 20277376, "option": 0, "non_equity": 0, "other": 184000 },
+                        { "company": "Cloudflare", "total": 2081094, "salary": 1669626, "stock": 15378722, "option": 0, "non_equity": 0, "other": 88000 },
+                        { "company": "BlackBerry", "total": 1417205, "salary": 2217180, "stock": 0, "option": 0, "non_equity": 3686845, "other": 1295625 }
+                    ]
+                },
+                "Advanced Technology": {
+                    "count": 10,
+                    "top10": [
+                        { "company": "Hims & Hers Health, Inc.", "total": 24609077, "salary": 1476514, "stock": 110273117, "option": 0, "non_equity": 0, "other": 126038 },
+                        { "company": "United parcel service america inc", "total": 24063977, "salary": 1713257, "stock": 9185261, "option": 0, "non_equity": 0, "other": 0 },
+                        { "company": "GE HealthCare Technologies Inc.", "total": 19487880, "salary": 2050000, "stock": 13412402, "option": 0, "non_equity": 4407205, "other": 0 },
+                        { "company": "Astrana Health, Inc.", "total": 18242585, "salary": 2843062, "stock": 16942570, "option": 2279000, "non_equity": 3644213, "other": 0 },
+                        { "company": "VRINGO INFRASTRUCTURE INC", "total": 16871121, "salary": 2227258, "stock": 32166188, "option": 0, "non_equity": 0, "other": 0 },
+                        { "company": "INGERSOLL RAND CO", "total": 16720080, "salary": 2949575, "stock": 42145967, "option": 0, "non_equity": 4207311, "other": 0 },
+                        { "company": "BRIDGE PHARMA INC", "total": 15581922, "salary": 2656829, "stock": 6082873, "option": 221902, "non_equity": 543347, "other": 261159 },
+                        { "company": "BrightSpring Health Services, Inc.", "total": 13816155, "salary": 1700808, "stock": 16037970, "option": 0, "non_equity": 0, "other": 0 },
+                        { "company": "Palo Alto Networks", "total": 11920000, "salary": 1000000, "stock": 10050000, "option": 0, "non_equity": 0, "other": 870000 },
+                        { "company": "TELADOC HEALTH INC", "total": 11250000, "salary": 800000, "stock": 9500000, "option": 0, "non_equity": 950000, "other": 0 }
+                    ]
+                }
+            }
+        };
+
+        function renderDashboard() {
+            const container = document.getElementById('sectorsContainer');
+
+            const sectors = [
+                { key: 'Technology', icon: '💻' },
+                { key: 'Energy & Climate', icon: '⚡' },
+                { key: 'Biotechnology', icon: '🧬' },
+                { key: 'Cybersecurity', icon: '🔒' },
+                { key: 'Advanced Technology', icon: '🚀' }
+            ];
+
+            sectors.forEach(({ key, icon }) => {
+                const sectorData = dashboardData.sectors[key];
+                if (!sectorData) return;
+
+                const avgComp = sectorData.top10.reduce((sum, c) => sum + c.total, 0) / sectorData.top10.length;
+
+                const sectionHTML = `
+                    <h2 class="section-title">${icon} ${key}</h2>
+                    <p class="subtitle" style="margin-bottom: 1.5rem; font-size: 1rem;">
+                        ${sectorData.top10.length} companies | Average CEO Comp: $${(avgComp / 1e6).toFixed(1)}M
+                    </p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Company</th>
+                                <th>Total</th>
+                                <th>Salary</th>
+                                <th>Stock</th>
+                                <th>Options</th>
+                                <th>Bonus</th>
+                                <th>Non-Eq</th>
+                                <th>Other</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${sectorData.top10.map((company, idx) => {
+                    const rankClass = idx === 0 ? 'rank-1' : idx === 1 ? 'rank-2' : idx === 2 ? 'rank-3' : 'rank-default';
+                    return `
+                                    <tr>
+                                        <td><span class="rank-badge ${rankClass}">${idx + 1}</span></td>
+                                        <td><strong>${company.company}</strong></td>
+                                        <td><span class="comp-amount">$${(company.total / 1e6).toFixed(1)}M</span></td>
+                                        <td class="component">$${(company.salary / 1e6).toFixed(1)}M</td>
+                                        <td class="component">$${(company.stock / 1e6).toFixed(1)}M</td>
+                                        <td class="component">$${(company.option / 1e6).toFixed(1)}M</td>
+                                        <td class="component">$${(company.bonus / 1e6).toFixed(1)}M</td>
+                                        <td class="component">$${(company.non_equity / 1e6).toFixed(1)}M</td>
+                                        <td class="component">$${(company.other / 1e6).toFixed(1)}M</td>
+                                    </tr>
+                                `;
+                }).join('')}
+                        </tbody>
+                    </table>
+                `;
+
+                container.innerHTML += sectionHTML;
+            });
+        }
+
+        renderDashboard();
+    </script>
+</body>
+
+</html>

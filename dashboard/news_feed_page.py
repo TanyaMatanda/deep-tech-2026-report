@@ -11,10 +11,10 @@ import plotly.express as px
 def render_news_feed_page():
     """Render the governance news feed page"""
     
-    st.title("📰 Governance News Feed")
+    st.title("Governance News Feed")
     st.markdown("### Real-Time Corporate Governance Events")
     
-    st.info("🔄 **Live data** from SEC filings • Updated every 15 minutes")
+    st.info("**Live data** from SEC filings • Updated every 15 minutes")
     
     # Fetch news data
     from db_connection import init_connection
@@ -77,7 +77,7 @@ def render_news_feed_page():
     
     if not news_items:
         st.warning("No news items found. The monitor may need to run.")
-        st.info("💡 **Tip**: Run `python3 collectors/sec_rss_monitor.py` to collect latest filings")
+        st.info("**Tip**: Run `python3 collectors/sec_rss_monitor.py` to collect latest filings")
         return
     
     # Apply client-side filters
@@ -150,22 +150,22 @@ def render_news_feed_page():
     
     # News feed
     st.markdown("---")
-    st.subheader(f"📋 News Feed ({len(df)} items)")
+    st.subheader(f"News Feed ({len(df)} items)")
     
     # Event type icons
     type_icons = {
-        'Material Event': '🔴',
-        'M&A': '🤝',
-        'Proxy': '🗳️',
-        'Activism': '📢',
-        'Board Change': '👔',
-        'Governance': '⚖️',
-        'Other': '📋'
+        'Material Event': '',
+        'M&A': '',
+        'Proxy': '',
+        'Activism': '',
+        'Board Change': '',
+        'Governance': '',
+        'Other': ''
     }
     
     # Display news items
     for idx, item in df.iterrows():
-        icon = type_icons.get(item['news_type'], '📋')
+        icon = type_icons.get(item['news_type'], '')
         
         # Calculate time ago
         published = pd.to_datetime(item['published_at'])
@@ -179,7 +179,7 @@ def render_news_feed_page():
             time_ago = f"{int(time_diff.days)}d ago"
         
         # Create expandable card
-        with st.expander(f"{icon} **{item['headline']}** • {time_ago}", expanded=False):
+        with st.expander(f"**{item['headline']}** • {time_ago}", expanded=False):
             col_left, col_right = st.columns([3, 1])
             
             with col_left:
@@ -205,7 +205,7 @@ def render_news_feed_page():
     if not df.empty:
         csv = df[['headline', 'news_type', 'source', 'published_at', 'url']].to_csv(index=False)
         st.download_button(
-            label="📥 Export News Feed (CSV)",
+            label="Export News Feed (CSV)",
             data=csv,
             file_name=f"governance_news_{datetime.now().strftime('%Y%m%d')}.csv",
             mime="text/csv"

@@ -13,7 +13,7 @@ import plotly.graph_objects as go
 def render_political_risk_intelligence(supabase):
     """Render Political Risk Intelligence with company links"""
     
-    st.markdown("## 🚨 Political Risk Intelligence")
+    st.markdown("## Political Risk Intelligence")
     st.caption("Real Polymarket prediction markets mapped to corporate governance impacts")
     
     # Fetch political risk events
@@ -45,7 +45,7 @@ def render_political_risk_intelligence(supabase):
     risks = current_risks
     
     if not risks:
-        st.warning("⚠️ All political events are historical. Run sync to get current data.")
+        st.warning("All political events are historical. Run sync to get current data.")
         return
     
     # Group by risk category
@@ -64,7 +64,7 @@ def render_political_risk_intelligence(supabase):
     
     with col2:
         high_prob = len([r for r in risks if (r.get('yes_probability') or 0) > 0.6])
-        st.metric("High Probability (>60%)", high_prob, delta="⚠️ Urgent")
+        st.metric("High Probability (>60%)", high_prob, delta="Urgent")
     
     with col3:
         risk_types = len(risk_categories)
@@ -123,16 +123,16 @@ def render_political_risk_intelligence(supabase):
             
             # Color based on probability
             if prob >= 0.7:
-                prob_color = "🔴"
+                prob_color = ""
                 urgency = "HIGH"
             elif prob >= 0.5:
-                prob_color = "🟡"
+                prob_color = ""
                 urgency = "MEDIUM"
             else:
-                prob_color = "🟢"
+                prob_color = ""
                 urgency = "LOW"
             
-            with st.expander(f"{prob_color} **{question}** ({prob*100:.0f}%)", expanded=False):
+            with st.expander(f"**{question}** ({prob*100:.0f}%)", expanded=False):
                 col_left, col_right = st.columns([2, 1])
                 
                 with col_left:

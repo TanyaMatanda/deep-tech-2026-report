@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Compensation Intelligence | Deep Tech 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2DD4BF;
+            --primary-dark: #14B8A6;
+            --secondary: #8B5CF6;
+            --accent: #F59E0B;
+            --danger: #EF4444;
+            --success: #10B981;
+            --bg-dark: #0F172A;
+            --bg-card: #1E293B;
+            --bg-card-hover: #334155;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1. 5rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(45, 212, 191, 0.1);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .chart-card:hover {
+            border-color: var(--primary);
+        }
+
+        .chart-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .rank-1 {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+        }
+
+        .rank-2 {
+            background: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%);
+            color: #000;
+        }
+
+        .rank-3 {
+            background: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%);
+            color: #FFF;
+        }
+
+        .rank-default {
+            background: var(--bg-card-hover);
+            color: var(--text-secondary);
+        }
+
+        .comp-amount {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.125rem;
+        }
+
+        .ratio-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .ratio-low {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .ratio-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent);
+        }
+
+        .ratio-high {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Executive Compensation Intelligence</h1>
+            <p class="subtitle">Analyzing 997 Deep Tech Companies | Fiscal Years 2023-2024</p>
+        </header>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h2>Compensation Tier Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="tierChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Top 10 Sectors by Avg CEO Compensation</h2>
+                <div class="chart-container">
+                    <canvas id="sectorChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Internal Pay Ratio Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="ratioChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Compensation Statistics</h2>
+                <div class="chart-container">
+                    <canvas id="statsChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Top 10 Highest-Compensated CEOs</h2>
+        <table id="top10Table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Company</th>
+                    <th>Sector</th>
+                    <th>CEO Compensation</th>
+                    <th>Executives</th>
+                    <th>Internal Ratio</th>
+                </tr>
+            </thead>
+            <tbody id="top10Body"></tbody>
+        </table>
+
+        <footer>
+            <p><strong>Data Source:</strong> SEC DEF 14A Proxy Filings (2024-2025)</p>
+            <p><strong>Analysis Date:</strong> December 24, 2025</p>
+            <p>Report generated from 4,132 executive compensation records across 1,025 companies</p>
+        </footer>
+    </div>
+
+    <script>
+        // Dashboard data will be embedded here
+        const dashboardData = DASHBOARD_DATA_PLACEHOLDER;
+
+        // Render statistics cards
+        function renderStats() {
+            const statsGrid = document.getElementById('statsGrid');
+
+            const stats = [
+                {
+                    label: 'Total Companies',
+                    value: dashboardData.total_companies.toLocaleString(),
+                    subtitle: '997 with full analysis'
+                },
+                {
+                    label: 'Total Compensation',
+                    value: `$${(dashboardData.total_compensation / 1e9).toFixed(2)}B`,
+                    subtitle: 'CEO compensation analyzed'
+                },
+                {
+                    label: 'Median CEO Comp',
+                    value: `$${(dashboardData.statistics.median / 1e6).toFixed(2)}M`,
+                    subtitle: `Range: $50K - $${(dashboardData.statistics.max / 1e6).toFixed(1)}M`
+                },
+                {
+                    label: 'Executive Records',
+                    value: dashboardData.total_records.toLocaleString(),
+                    subtitle: 'Individual compensation records'
+                }
+            ];
+
+            statsGrid.innerHTML = stats.map(stat => `
+                <div class="stat-card">
+                    <div class="stat-label">${stat.label}</div>
+                    <div class="stat-value">${stat.value}</div>
+                    <div class="stat-subtitle">${stat.subtitle}</div>
+                </div>
+            `).join('');
+        }
+
+        // Render tier distribution chart
+        function renderTierChart() {
+            const ctx = document.getElementById('tierChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Founder-Friendly (<$1M)', 'Moderate ($1-5M)', 'High ($5-10M)', 'Mega (>$10M)'],
+                    datasets: [{
+                        data: [
+                            dashboardData.by_tier.founder,
+                            dashboardData.by_tier.moderate,
+                            dashboardData.by_tier.high,
+                            dashboardData.by_tier.mega
+                        ],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ],
+                        borderColor: '#1E293B',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#F1F5F9',
+                                padding: 15,
+                                font: { size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render sector chart
+        function renderSectorChart() {
+            const ctx = document.getElementById('sectorChart').getContext('2d');
+            const topSectors = dashboardData.sectors.slice(0, 10);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: topSectors.map(s => s.name),
+                    datasets: [{
+                        label: 'Avg CEO Compensation',
+                        data: topSectors.map(s => s.avg_comp),
+                        backgroundColor: 'rgba(45, 212, 191, 0.8)',
+                        borderColor: 'rgba(45, 212, 191, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `$${(value / 1e6).toFixed(1)}M`
+                            },
+                            grid: { color: '#334155' }
+                        },
+                        y: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render ratio distribution chart
+        function renderRatioChart() {
+            const ctx = document.getElementById('ratioChart').getContext('2d');
+            const ratios = Object.keys(dashboardData.internal_ratio_distribution)
+                .map(Number)
+                .sort((a, b) => a - b);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ratios.map(r => r === 20 ? '20+x' : `${r}x`),
+                    datasets: [{
+                        label: 'Number of Companies',
+                        data: ratios.map(r => dashboardData.internal_ratio_distribution[r]),
+                        backgroundColor: ratios.map(r =>
+                            r <= 3 ? 'rgba(16, 185, 129, 0.8)' :
+                                r <= 10 ? 'rgba(245, 158, 11, 0.8)' :
+                                    'rgba(239, 68, 68, 0.8)'
+                        ),
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#94A3B8' },
+                            grid: { display: false }
+                        },
+                        y: {
+                            ticks: { color: '#94A3B8' },
+                            grid: { color: '#334155' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render statistics chart
+        function renderStatsChart() {
+            const ctx = document.getElementById('statsChart').getContext('2d');
+            const stats = dashboardData.statistics;
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Min', '25th %ile', 'Median', 'Mean', '75th %ile', 'Max'],
+                    datasets: [{
+                        label: 'CEO Compensation',
+                        data: [stats.min, stats.p25, stats.median, stats.mean, stats.p75, stats.max],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(139, 92, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(251, 146, 60, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        },
+                        y: {
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `$${(value / 1e6).toFixed(1)}M`
+                            },
+                            grid: { color: '#334155' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render top 10 table
+        function renderTop10() {
+            const tbody = document.getElementById('top10Body');
+
+            tbody.innerHTML = dashboardData.top_10.map((company, idx) => {
+                const rankClass = idx === 0 ? 'rank-1' : idx === 1 ? 'rank-2' : idx === 2 ? 'rank-3' : 'rank-default';
+                const ratioClass = company.internal_ratio <= 5 ? 'ratio-low' :
+                    company.internal_ratio <= 10 ? 'ratio-medium' : 'ratio-high';
+
+                return `
+                    <tr>
+                        <td><span class="rank-badge ${rankClass}">${idx + 1}</span></td>
+                        <td><strong>${company.company}</strong></td>
+                        <td>${company.sector}</td>
+                        <td><span class="comp-amount">$${(company.ceo_comp / 1e6).toFixed(2)}M</span></td>
+                        <td>${company.exec_count}</td>
+                        <td><span class="ratio-badge ${ratioClass}">${company.internal_ratio}x</span></td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Initialize dashboard
+        function init() {
+            renderStats();
+            renderTierChart();
+            renderSectorChart();
+            renderRatioChart();
+            renderStatsChart();
+            renderTop10();
+        }
+
+        // Load when ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
+</body>
+
+</html>

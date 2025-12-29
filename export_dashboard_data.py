@@ -58,7 +58,19 @@ def map_sector(row):
     if any(x in s for x in ['agri', 'food', 'crop', 'farm']): return "Agriculture & Food Tech"
     if "advanced technology" in s: return "General Deep Tech"
     if any(x in s for x in ['software', 'iot', 'data', 'info', 'tech']): return "Cross Domain Enablement"
+    if any(x in s for x in ['software', 'iot', 'data', 'info', 'tech']): return "Cross Domain Enablement"
     return "Other"
+
+def get_total_company_count(client):
+    """Get the raw count of companies in the database (Universe)."""
+    try:
+        # Use head=True to get count without fetching data
+        res = client.table("companies").select("id", count="exact", head=True).execute()
+        print(f"Total Universe Count: {res.count}")
+        return res.count
+    except Exception as e:
+        print(f"Error fetching total count: {e}")
+        return 95866 # Fallback to known count
 
 def calculate_stats():
     client = init_connection()
@@ -246,8 +258,15 @@ def calculate_stats():
     avg_gov_overall = df['overall_governance_score'].mean() if 'overall_governance_score' in df.columns else 0
     avg_patents_overall = df['patents_count'].mean() if 'patents_count' in df.columns else 0
     
+    avg_patents_overall = df['patents_count'].mean() if 'patents_count' in df.columns else 0
+    
+    # Get total universe count
+    total_universe = get_total_company_count(client)
+
     overall_stats = {
-        "total_companies": total_companies,
+        "total_companies": total_companies, # This is the filtered/analyzed count (~53k)
+        "total_universe_count": total_universe, # This is the full DB count (~96k)
+
         "avg_women_pct": round(avg_women_overall, 1),
         "pct_zero_women": round(zero_women_overall_pct, 1),
         "avg_tech_experts": round(avg_tech_overall, 1),

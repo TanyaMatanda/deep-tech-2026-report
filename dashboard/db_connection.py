@@ -42,7 +42,7 @@ def init_connection():
     key = get_credential("SUPABASE_KEY")
         
     if not url or not key:
-        st.error("### ⚠️ Supabase Credentials Missing")
+        st.error("### Supabase Credentials Missing")
         st.write("The app cannot connect to the database. Please follow these steps exactly:")
         
         if IS_STREAMLIT_CLOUD:
@@ -59,7 +59,7 @@ def init_connection():
             """)
             
             # Debug info (masked)
-            st.info(f"Debug: URL found: {'✅' if url else '❌'} | Key found: {'✅' if key else '❌'}")
+            st.info(f"Debug: URL found: {'Yes' if url else 'No'} | Key found: {'Yes' if key else 'No'}")
         else:
             st.write("Please ensure `dashboard/.streamlit/secrets.toml` exists and contains `SUPABASE_URL` and `SUPABASE_KEY`.")
             

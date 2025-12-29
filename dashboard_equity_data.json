@@ -1,0 +1,204 @@
+{
+  "sector_equity_mix": [
+    {
+      "sector": "Cybersecurity",
+      "median": 280.9,
+      "count": 4
+    },
+    {
+      "sector": "Pharmaceutical Preparations",
+      "median": 153.9,
+      "count": 9
+    },
+    {
+      "sector": "Advanced Technology",
+      "median": 150.9,
+      "count": 10
+    },
+    {
+      "sector": "Biotechnology",
+      "median": 116.7,
+      "count": 10
+    },
+    {
+      "sector": "Technology",
+      "median": 95.7,
+      "count": 10
+    },
+    {
+      "sector": "Energy & Climate",
+      "median": 95.2,
+      "count": 10
+    }
+  ],
+  "top_equity_alignment": [
+    {
+      "company": "SM Energy Co",
+      "total": 12240662,
+      "equity_pct": 97.5,
+      "stock": 11928971,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "ADVANCED ENERGY INDUSTRIES INC",
+      "total": 8761961,
+      "equity_pct": 92.9,
+      "stock": 8136164,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "Astrana Health, Inc.",
+      "total": 18242585,
+      "equity_pct": 92.9,
+      "stock": 16942570,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "Bloom Energy",
+      "total": 44961745,
+      "equity_pct": 88.9,
+      "stock": 39968710,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "CISCO SYSTEMS, INC.",
+      "total": 52838751,
+      "equity_pct": 86.8,
+      "stock": 45870690,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "BENTLEY SYSTEMS INC",
+      "total": 16418063,
+      "equity_pct": 82.0,
+      "stock": 13465407,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "Twist Bioscience",
+      "total": 7620611,
+      "equity_pct": 76.8,
+      "stock": 5849949,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "GE HealthCare Technologies Inc.",
+      "total": 19487880,
+      "equity_pct": 68.8,
+      "stock": 13412402,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "IOVANCE BIOTHERAPEUTICS, INC.",
+      "total": 10953192,
+      "equity_pct": 64.4,
+      "stock": 7048573,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "ADVANCED MICRO DEVICES INC",
+      "total": 30996392,
+      "equity_pct": 60.2,
+      "stock": 18654655,
+      "option": 0,
+      "sector": "Technology"
+    }
+  ],
+  "cluster_distribution": {
+    "Founder-Friendly": 0,
+    "Growth Stage": 1,
+    "Mature Premium": 2,
+    "Cash-Heavy (RED FLAG)": 11
+  },
+  "cash_heavy_companies": [
+    {
+      "company": "TERADATA CORP /DE/",
+      "total": 17418309,
+      "equity_pct": 39.9,
+      "stock": 6943270,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "Rexford Industrial Realty, Inc.",
+      "total": 13143105,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "BIOMARIN PHARMACEUTICAL INC",
+      "total": 14853605,
+      "equity_pct": 44.2,
+      "stock": 6566982,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "Celldex Therapeutics, Inc.",
+      "total": 9229165,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "PBF Energy Inc.",
+      "total": 8837500,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "BlackBerry",
+      "total": 1417205,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Cybersecurity"
+    },
+    {
+      "company": "BRIDGE PHARMA INC",
+      "total": 15581922,
+      "equity_pct": 39.0,
+      "stock": 6082873,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "United parcel service america inc",
+      "total": 24063977,
+      "equity_pct": 38.2,
+      "stock": 9185261,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "89bio, Inc.",
+      "total": 7619426,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "ABEONA THERAPEUTICS INC.",
+      "total": 3506708,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    }
+  ]
+}

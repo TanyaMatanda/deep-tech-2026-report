@@ -1,0 +1,46 @@
+/Users/tanyamatanda/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+WARNING:__main__:
+⚠️  SEDAR+ BROWSER AUTOMATION - EXPERIMENTAL
+WARNING:__main__:This script uses browser automation to access public SEDAR+ records
+WARNING:__main__:Field selectors may need updating if SEDAR+ page structure changes
+
+INFO:__main__:🇨🇦 Starting SEDAR Browser Extraction (Limit: 1)
+INFO:__main__:Headless mode: False
+
+INFO:WDM:====== WebDriver manager ======
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Get LATEST chromedriver version for google-chrome
+INFO:WDM:Driver [/Users/tanyamatanda/.wdm/drivers/chromedriver/mac64/143.0.7499.169/chromedriver-mac-arm64/chromedriver] found in cache
+INFO:__main__:✅ Browser initialized
+INFO:httpx:HTTP Request: GET https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/companies?select=id%2Ccompany_name&jurisdiction=ilike.%25CA%25&stock_exchange=not.is.null&limit=1 "HTTP/2 200 OK"
+INFO:__main__:Found 1 Canadian listed companies
+
+INFO:__main__:
+============================================================
+INFO:__main__:Processing: Shopify Inc.
+INFO:__main__:============================================================
+INFO:__main__:Searching for: Shopify Inc.
+WARNING:__main__:Could not find company name field: Message: 
+Stacktrace:
+0   chromedriver                        0x0000000100bd4b2c cxxbridge1$str$ptr + 3033596
+1   chromedriver                        0x0000000100bccb30 cxxbridge1$str$ptr + 3000832
+2   chromedriver                        0x00000001006c6b0c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 74196
+3   chromedriver                        0x000000010070d9c8 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 364688
+4   chromedriver                        0x000000010074e968 _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 630832
+5   chromedriver                        0x000000010070216c _RNvCsgXDX2mvAJAg_7___rustc35___rust_no_alloc_shim_is_unstable_v2 + 317492
+6   chromedriver                        0x0000000100b98098 cxxbridge1$str$ptr + 2785128
+7   chromedriver                        0x0000000100b9b804 cxxbridge1$str$ptr + 2799316
+8   chromedriver                        0x0000000100b78850 cxxbridge1$str$ptr + 2656032
+9   chromedriver                        0x0000000100b9c074 cxxbridge1$str$ptr + 2801476
+10  chromedriver                        0x0000000100b691cc cxxbridge1$str$ptr + 2592924
+11  chromedriver                        0x0000000100bbbcb4 cxxbridge1$str$ptr + 2931588
+12  chromedriver                        0x0000000100bbbe34 cxxbridge1$str$ptr + 2931972
+13  chromedriver                        0x0000000100bcc788 cxxbridge1$str$ptr + 2999896
+14  libsystem_pthread.dylib             0x0000000193b83bc8 _pthread_start + 136
+15  libsystem_pthread.dylib             0x0000000193b7eb80 thread_start + 8
+
+INFO:__main__:
+✅ Extraction complete!
+INFO:__main__:Total records saved: 0
+INFO:__main__:Browser closed

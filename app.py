@@ -7,7 +7,7 @@ import os
 import base64
 
 # Page Config
-st.set_page_config(page_title="Deep Tech Governance 2026", layout="wide", page_icon="📊")
+st.set_page_config(page_title="Deep Tech Governance 2026", layout="wide")
 
 # --- McKinsey-Style Design System ---
 MCKINSEY_BLUE = "#051c2c"
@@ -100,7 +100,8 @@ st.sidebar.markdown(f"""
 </div>
 """, unsafe_allow_html=True)
 
-st.sidebar.markdown(f"**Universe:** 101,458 Companies")
+
+st.sidebar.markdown(f"**Universe:** {overall.get('total_universe_count', 95866):,} Companies")
 st.sidebar.markdown(f"**Source:** Proprietary Analysis")
 
 # Download Report Button
@@ -111,7 +112,7 @@ if os.path.exists(pdf_path):
     with open(pdf_path, "rb") as f:
         file_bytes = f.read()
     st.sidebar.download_button(
-        label="📄 Download Full Report (PDF)",
+        label="Download Full Report (PDF)",
         data=file_bytes,
         file_name="Deep_Tech_Proxy_Season_2026_What_Should_You_Know.pdf",
         mime="application/pdf"
@@ -120,7 +121,7 @@ elif os.path.exists(html_path):
     with open(html_path, "r") as f:
         file_bytes = f.read()
     st.sidebar.download_button(
-        label="🌐 Download Full Report (HTML)",
+        label="Download Full Report (HTML)",
         data=file_bytes,
         file_name="Deep_Tech_2026_Report.html",
         mime="text/html",
@@ -145,7 +146,12 @@ if page == "Executive Summary":
     
     # Key Metrics
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Total Companies", "101,458", help="Total companies in the analysis universe (Report Baseline).")
+    # Key Metrics
+    col1, col2, col3, col4 = st.columns(4)
+    universe_count = overall.get('total_universe_count', 95866)
+    analyzed_count = overall.get('total_companies', 0)
+    
+    col1.metric("Total Companies", f"{universe_count:,}", help=f"Total companies in database. Analyzed cohort: {analyzed_count:,} (Deep Tech)")
     col2.metric("Avg Women on Boards", f"{overall['avg_women_pct']}%", delta_color="off")
     col3.metric("Zero Women Boards", f"{overall['pct_zero_women']}%", delta_color="inverse")
     col4.metric("Avg Tech Experts", f"{overall['avg_tech_experts']}")
@@ -156,7 +162,7 @@ if page == "Executive Summary":
     st.markdown("""
     <div style="background-color: #f8f9fa; padding: 1.5rem; border-left: 5px solid #051c2c; margin-bottom: 2rem;">
         <h4 style="margin-top: 0; color: #051c2c;">MARKET CONTEXT</h4>
-        <p style="margin-bottom: 0;">This analysis covers a universe of <b>101,458 companies</b>. The dataset is <b>""" + str(overall['private_pct']) + """% Private</b> and <b>""" + str(overall['public_pct']) + """% Public</b>. 
+        <p style="margin-bottom: 0;">This analysis covers a universe of <b>{universe_count:,} companies</b>. The dataset is <b>""" + str(overall['private_pct']) + """% Private</b> and <b>""" + str(overall['public_pct']) + """% Public</b>. 
         The high concentration of private companies is a key driver of the governance trends observed, particularly in diversity and disclosure levels compared to public benchmarks.</p>
     </div>
     """, unsafe_allow_html=True)
@@ -205,7 +211,7 @@ if page == "Executive Summary":
     
     st.divider()
     
-    with st.expander("ℹ️ Definitions & Limitations"):
+    with st.expander("Definitions & Limitations"):
         st.markdown("""
         **Definitions:**
         *   **Diversity:** Measured as the percentage of board directors who are women.
@@ -481,7 +487,7 @@ elif page == "Sector Deep Dives":
     
     # AI Washing Alert
     if sec_data.get('ai_wash_pct', 0) > 0:
-        st.warning(f"⚠️ **AI Washing Risk:** {sec_data['ai_wash_pct']}% of companies in this sector claim AI status but have **zero patents**.")
+        st.warning(f"**AI Washing Risk:** {sec_data['ai_wash_pct']}% of companies in this sector claim AI status but have **zero patents**.")
 
     st.divider()
     
@@ -683,7 +689,7 @@ elif page == "Jurisdictional Analysis":
     ]
     
     for item in roadmap:
-        with st.expander(f"📅 {item['Date']}: {item['Regulation']}"):
+        with st.expander(f"{item['Date']}: {item['Regulation']}"):
             st.write(item['Impact'])
             st.info("**Strategic Affect:** Companies must audit their AI pipelines and internal control frameworks 6-12 months in advance to avoid non-compliance penalties.")
 

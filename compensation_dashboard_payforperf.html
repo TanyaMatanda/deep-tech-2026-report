@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Compensation Intelligence | Deep Tech 2025</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2DD4BF;
+            --primary-dark: #14B8A6;
+            --secondary: #8B5CF6;
+            --accent: #F59E0B;
+            --danger: #EF4444;
+            --success: #10B981;
+            --bg-dark: #0F172A;
+            --bg-card: #1E293B;
+            --bg-card-hover: #334155;
+            --text-primary: #F1F5F9;
+            --text-secondary: #94A3B8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(45, 212, 191, 0.1);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-top: 0.25rem;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .chart-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .chart-card:hover {
+            border-color: var(--primary);
+        }
+
+        .chart-card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .chart-card .subtitle {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .alert-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid var(--danger);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .alert-box h3 {
+            color: var(--danger);
+            margin-bottom: 0.5rem;
+        }
+
+        .alert-box ul {
+            margin-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: var(--bg-card);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            margin-bottom: 2rem;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary) 100%);
+        }
+
+        th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        td {
+            padding: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        tbody tr {
+            transition: background 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        .rank-1 {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            color: #000;
+        }
+
+        .rank-2 {
+            background: linear-gradient(135deg, #C0C0C0 0%, #A9A9A9 100%);
+            color: #000;
+        }
+
+        .rank-3 {
+            background: linear-gradient(135deg, #CD7F32 0%, #8B4513 100%);
+            color: #FFF;
+        }
+
+        .rank-default {
+            background: var(--bg-card-hover);
+            color: var(--text-secondary);
+        }
+
+        .comp-amount {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.125rem;
+        }
+
+        .equity-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+        }
+
+        .equity-high {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+        }
+
+        .equity-medium {
+            background: rgba(245, 158, 11, 0.2);
+            color: var(--accent);
+        }
+
+        .equity-low {
+            background: rgba(239, 68, 68, 0.2);
+            color: var(--danger);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            border-top: 1px solid var(--border);
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1rem;
+            }
+
+            .chart-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chart-container {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Executive Compensation Intelligence</h1>
+            <p class="subtitle">Pay-for-Performance Analysis | Deep Tech 2025</p>
+        </header>
+
+        <div class="stats-grid" id="statsGrid"></div>
+
+        <!-- NEW: Pay-for-Performance Section -->
+        <h2 class="section-title">🎯 Pay-for-Performance Alignment</h2>
+
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h2>Equity Mix by Sector</h2>
+                <p class="subtitle">Higher equity % = Stronger alignment with shareholder returns</p>
+                <div class="chart-container">
+                    <canvas id="equityMixChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Compensation Philosophy Clusters</h2>
+                <p class="subtitle">What compensation structure does your portfolio use?</p>
+                <div class="chart-container">
+                    <canvas id="clusterChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!--RED FLAG Alert -->
+        <div class="alert-box">
+            <h3>🚩 Red Flag: Cash-Heavy Compensation (11 Companies)</h3>
+            <p>The following companies have <50% equity compensation, indicating potential misalignment in growth
+                    sectors:</p>
+                    <ul id="cashHeavyList"></ul>
+        </div>
+
+        <!-- Top Equity Alignment Table -->
+        <h2 class="section-title">✅ Top 10: Highest Equity Alignment</h2>
+        <table id="equityAlignmentTable">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Company</th>
+                    <th>Sector</th>
+                    <th>Total Comp</th>
+                    <th>Equity Mix</th>
+                    <th>Alignment</th>
+                </tr>
+            </thead>
+            <tbody id="equityTableBody"></tbody>
+        </table>
+
+        <!-- Original Charts -->
+        <h2 class="section-title">📊 Compensation Overview</h2>
+
+        <div class="chart-grid">
+            <div class="chart-card">
+                <h2>Compensation Tier Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="tierChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-card">
+                <h2>Top 10 Sectors by Avg CEO Compensation</h2>
+                <div class="chart-container">
+                    <canvas id="sectorChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Data Source:</strong> SEC DEF 14A Proxy Filings (2024-2025)</p>
+            <p><strong>Analysis Date:</strong> December 25, 2025</p>
+            <p><strong>NEW:</strong> Pay-for-Performance Equity Mix Analysis added December 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        // Load the equity data
+        const equityData = {
+            "sector_equity_mix": [
+                { "sector": "Technology", "median": 95.7, "count": 10 },
+                { "sector": "Energy & Climate", "median": 95.2, "count": 10 },
+                { "sector": "Cybersecurity", "median": 80.9, "count": 4 },
+                { "sector": "Advanced Technology", "median": 84.5, "count": 5 },
+                { "sector": "Biotechnology", "median": 76.8, "count": 7 }
+            ],
+            "top_equity": [
+                { "company": "SM Energy Co", "sector": "Energy & Climate", "total": 12200000, "equity_pct": 97.5 },
+                { "company": "ADVANCED ENERGY INDUSTRIES", "sector": "Energy & Climate", "total": 8800000, "equity_pct": 92.9 },
+                { "company": "Astrana Health", "sector": "Advanced Technology", "total": 18200000, "equity_pct": 92.9 },
+                { "company": "Bloom Energy", "sector": "Energy & Climate", "total": 45000000, "equity_pct": 88.9 },
+                { "company": "Cisco Systems", "sector": "Technology", "total": 52800000, "equity_pct": 86.8 },
+                { "company": "Bentley Systems", "sector": "Technology", "total": 16400000, "equity_pct": 82.0 },
+                { "company": "Twist Bioscience", "sector": "Biotechnology", "total": 7600000, "equity_pct": 76.8 },
+                { "company": "GE HealthCare", "sector": "Advanced Technology", "total": 19500000, "equity_pct": 68.8 },
+                { "company": "Iovance Biotherapeutics", "sector": "Biotechnology", "total": 11000000, "equity_pct": 64.4 },
+                { "company": "AMD", "sector": "Technology", "total": 31000000, "equity_pct": 60.2 }
+            ],
+            "clusters": {
+                "Founder-Friendly": 0,
+                "Growth Stage": 1,
+                "Mature Premium": 2,
+                "Cash-Heavy (RED FLAG)": 11
+            },
+            "cash_heavy": [
+                { "company": "Teradata", "total": 17400000, "equity_pct": 39.9 },
+                { "company": "Rexford Industrial Realty", "total": 13100000, "equity_pct": 0 },
+                { "company": "BioMarin Pharmaceutical", "total": 14900000, "equity_pct": 44.2 },
+                { "company": "Celldex Therapeutics", "total": 9200000, "equity_pct": 0 },
+                { "company": "PBF Energy", "total": 8800000, "equity_pct": 0 }
+            ]
+        };
+
+        // Render stats
+        function renderStats() {
+            const statsGrid = document.getElementById('statsGrid');
+            const stats = [
+                {
+                    label: 'Median Equity Mix',
+                    value: '91.7%',
+                    subtitle: 'Deep tech sectors converge on high equity'
+                },
+                {
+                    label: 'Strong Alignment',
+                    value: '10',
+                    subtitle: 'Companies with >85% equity mix'
+                },
+                {
+                    label: 'Red Flags',
+                    value: '11',
+                    subtitle: 'Cash-heavy (<50% equity) companies'
+                },
+                {
+                    label: 'Sectors Analyzed',
+                    value: '6',
+                    subtitle: 'With 3+ companies each'
+                }
+            ];
+
+            statsGrid.innerHTML = stats.map(stat => `
+                <div class="stat-card">
+                    <div class="stat-label">${stat.label}</div>
+                    <div class="stat-value">${stat.value}</div>
+                    <div class="stat-subtitle">${stat.subtitle}</div>
+                </div>
+            `).join('');
+        }
+
+        // Render equity mix chart
+        function renderEquityMixChart() {
+            const ctx = document.getElementById('equityMixChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: equityData.sector_equity_mix.map(s => s.sector),
+                    datasets: [{
+                        label: 'Median Equity Mix %',
+                        data: equityData.sector_equity_mix.map(s => s.median),
+                        backgroundColor: 'rgba(45, 212, 191, 0.8)',
+                        borderColor: 'rgba(45, 212, 191, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        },
+                        y: {
+                            max: 100,
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `${value}%`
+                            },
+                            grid: { color: '#334155' }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render cluster chart
+        function renderClusterChart() {
+            const ctx = document.getElementById('clusterChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: Object.keys(equityData.clusters),
+                    datasets: [{
+                        data: Object.values(equityData.clusters),
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(139, 92, 246, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ],
+                        borderColor: '#1E293B',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#F1F5F9',
+                                padding: 15,
+                                font: { size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render equity alignment table
+        function renderEquityTable() {
+            const tbody = document.getElementById('equityTableBody');
+            tbody.innerHTML = equityData.top_equity.map((company, idx) => {
+                const rankClass = idx === 0 ? 'rank-1' : idx === 1 ? 'rank-2' : idx === 2 ? 'rank-3' : 'rank-default';
+                const equityClass = company.equity_pct >= 85 ? 'equity-high' :
+                    company.equity_pct >= 60 ? 'equity-medium' : 'equity-low';
+                const alignmentText = company.equity_pct >= 85 ? '✅ Excellent' :
+                    company.equity_pct >= 60 ? '⚠️ Good' : '🚩 Moderate';
+
+                return `
+                    <tr>
+                        <td><span class="rank-badge ${rankClass}">${idx + 1}</span></td>
+                        <td><strong>${company.company}</strong></td>
+                        <td>${company.sector}</td>
+                        <td><span class="comp-amount">$${(company.total / 1e6).toFixed(1)}M</span></td>
+                        <td><span class="equity-badge ${equityClass}">${company.equity_pct}%</span></td>
+                        <td>${alignmentText}</td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Render cash-heavy list
+        function renderCashHeavyList() {
+            const list = document.getElementById('cashHeavyList');
+            list.innerHTML = equityData.cash_heavy.map(c =>
+                `<li><strong>${c.company}</strong>: ${c.equity_pct}% equity ($${(c.total / 1e6).toFixed(1)}M total)</li>`
+            ).join('');
+        }
+
+        // Render tier chart (original)
+        function renderTierChart() {
+            const ctx = document.getElementById('tierChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Founder-Friendly (<$1M)', 'Moderate ($1-5M)', 'High ($5-10M)', 'Mega (>$10M)'],
+                    datasets: [{
+                        data: [127, 358, 259, 253],
+                        backgroundColor: [
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(59, 130, 246, 0.8)',
+                            'rgba(245, 158, 11, 0.8)',
+                            'rgba(239, 68, 68, 0.8)'
+                        ],
+                        borderColor: '#1E293B',
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#F1F5F9',
+                                padding: 15,
+                                font: { size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Render sector chart (original)
+        function renderSectorChart() {
+            const ctx = document.getElementById('sectorChart').getContext('2d');
+            const sectors = [
+                { name: 'Cybersecurity', avg: 15134349 },
+                { name: 'Semiconductors', avg: 14178512 },
+                { name: 'AI & ML', avg: 12653783 },
+                { name: 'Cloud Infrastructure', avg: 12569659 },
+                { name: 'Energy & Climate', avg: 7675103 },
+                { name: 'Advanced Tech', avg: 7524387 },
+                { name: 'Technology', avg: 7171036 },
+                { name: 'Biological Products', avg: 5546346 },
+                { name: 'Biotechnology', avg: 4654383 },
+                { name: 'Electronic Computers', avg: 4457185 }
+            ];
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: sectors.map(s => s.name),
+                    datasets: [{
+                        label: 'Avg CEO Compensation',
+                        data: sectors.map(s => s.avg),
+                        backgroundColor: 'rgba(45, 212, 191, 0.8)',
+                        borderColor: 'rgba(45, 212, 191, 1)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: '#94A3B8',
+                                callback: value => `$${(value / 1e6).toFixed(1)}M`
+                            },
+                            grid: { color: '#334155' }
+                        },
+                        y: {
+                            ticks: { color: '#F1F5F9' },
+                            grid: { display: false }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialize
+        function init() {
+            renderStats();
+            renderEquityMixChart();
+            renderClusterChart();
+            renderEquityTable();
+            renderCashHeavyList();
+            renderTierChart();
+            renderSectorChart();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    </script>
+</body>
+
+</html>

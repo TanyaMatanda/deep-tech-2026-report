@@ -1,0 +1,12 @@
+Connecting...
+Connected
+Fetching data...
+Data fetched: 1000 rows
+Total companies: 1000
+Private but should be Public: 0
+
+Public but should be Private: 0
+
+Listing Type is None: 1000
+  - Of which should be Public: 0
+  - Of which should be Private: 1000

@@ -1,0 +1,56 @@
+Ticker,Company,Exchange,Sector,Subsector,Market Cap (M),Price (Dec 2025),CEO Equity %,Performance Targets,Notes
+DTSS,Datasea Inc,NASDAQ,AI/ML,AI Mobile Analytics,25-50,0.88-0.99,Unknown,Standard vesting,Penny stock
+IVDA,Iveda Solutions,NASDAQ,AI/ML,AI Video Surveillance,30-60,0.94-0.96,Unknown,Revenue milestones,Security systems
+REKR,Rekor Systems,NASDAQ,AI/ML,Public Safety AI,80-120,1.54-1.63,Unknown,Contract milestones,Government contracts
+NOTE,FiscalNote Holdings,NYSE,AI/ML,AI Policy Analytics,150-200,1.84-1.86,Unknown,TSR targets,Enterprise SaaS
+PRZO,ParaZero Technologies,NASDAQ,Robotics,Drone Safety,40-70,1.15-1.17,Unknown,FAA certification,Defense pivot potential
+MBOT,Microbot Medical,NASDAQ,Robotics,Micro-Robotics,60-100,2.08-2.19,Unknown,FDA milestones,Medical devices
+ARBE,Arbe Robotics,NASDAQ,Autonomous Vehicles,4D Imaging Radar,150-250,1.15-1.22,Unknown,OEM partnerships,AV critical tech
+KSCP,Knightscope,NASDAQ,Robotics,Security Robots,200-350,3.70-3.80,Founder >15%,Market cap targets,Subscription model
+RR,Richtech Robotics,NASDAQ,Robotics,Retail Automation,100-200,3.63,Unknown,Unit deployment,High growth
+SERV,Serve Robotics,NASDAQ,Robotics,Delivery Robots,400-600,10.26-11.02,Uber owns 17%,Partnership revenue,Nvidia backed
+KITT,Nauticus Robotics,NASDAQ,Robotics,Ocean Robotics,50-100,<$5,Unknown,Underwater systems,Defense opportunity
+BRN.AX,BrainChip Holdings,ASX/OTC,AI Hardware,Neuromorphic,250-400,~A$0.20,Unknown,Licensing revenue,Akida processor
+GSIT,GSI Technology,NASDAQ,AI Hardware,Compute-in-Memory,200-210,~$6,Unknown,APU commercialization,Memory tech
+MRAM,Everspin Technologies,NASDAQ,AI Hardware,MRAM,204-209,~$10,Unknown,Production milestones,Non-volatile memory
+SMTK,Smart
+
+Kem,NASDAQ,Semiconductors,Advanced Materials,670,1.51-1.59,Unknown,Manufacturing deals,Organic semiconductors
+POET,POET Technologies,NASDAQ,Photonics,Optical Interposer,1000-1500,>$5,Unknown,Datacom partnerships,AI datacenter critical
+NNXPF,NanoXplore,OTC/TSX,Nanotechnology,Graphene,~600,1.60,Unknown,Production scaling,Government contracts
+BLDP,Ballard Power Systems,NASDAQ/TSX,Energy,Hydrogen Fuel Cells,780-1100,2.61-3.66,Unknown,Fleet deployments,Volatile price
+PLUG,Plug Power,NASDAQ,Energy,Hydrogen Solutions,1200,2.11-2.23,Unknown,Green hydrogen network,High burn rate
+ONVO,Organovo Holdings,NASDAQ,3D Printing,Bioprinting,3-6,2.00-2.04,Unknown,Clinical trials,Organ printing
+MKFG,Markforged,NASDAQ,3D Printing,Industrial,98,4.74,Unknown,Profitability path,Metal printing
+MNTS,Momentus,NASDAQ,Space,In-Orbit Transport,280-400,8.73,Unknown,Payload delivery,NASA contracts
+GSAT,Globalstar,NASDAQ,Space,Satellite Comms,11200,62.25,Apple partnership,IoT expansion,Apple deal massive
+SIDU,Sidus Space,NASDAQ,Space,Space-as-Service,42,~$2.59,Founder CEO,Satellite deployment,LizzieSat
+QNC,Quantum eMotion,TSXV,Post-Quantum Crypto,QRNG,1120 CAD,C$5.18,Unknown,TSMC chip production,Quantum security
+BTQ,BTQ Technologies,NEO,Post-Quantum Crypto,Blockchain Security,~800 CAD,C$8.86,Unknown,Product launch,Post-quantum infrastructure
+ARQQ,Arqit Quantum,NASDAQ,Post-Quantum Crypto,Encryption,>1000,>$10,Unknown,Government contracts,QuantumCloud platform
+LPTH,LightPath Technologies,NASDAQ,Photonics,IR Imaging,150-200,7.64-8.53,Unknown,Lockheed contract,BlackDiamond Glass
+LASE,Laser Photonics,NASDAQ,Photonics,Industrial Lasers,60-90,2.57-2.68,Unknown,System sales,AI-enabled lasers
+QUBT,Quantum Computing Inc,NASDAQ,Quantum Computing,Nanophotonics,2440-2740,10-12,Unknown,Commercial deployments,Massive 2024 rally
+RGTI,Rigetti Computing,NASDAQ,Quantum Computing,Superconducting,>5000,~27,Unknown,Gate fidelity,Massive 2024 rally
+QBTS,D-Wave Quantum,NYSE,Quantum Computing,Annealing,>10000,~32,Unknown,Commercial revenue,Massive 2024 rally
+LAES,SEALSQ Corp,NASDAQ,Semiconductors,Post-Quantum,>1000,>$5,Unknown,Chip production,Quantum-resistant
+SMR,NuScale Power,NYSE,Energy,SMR Nuclear,4500-5050,>$10,Unknown,Reactor deployment,First NRC certified
+OKLO,Oklo Inc,NYSE,Energy,Fast Reactors,11870,>$20,Sam Altman involvement,DOE site access,OpenAI CEO backed
+NNE,NANO Nuclear Energy,NASDAQ,Energy,Microreactors,1200-1660,>$15,Unknown,Reactor development,Portable nuclear
+JOBY,Joby Aviation,NYSE,eVTOL,Air Taxi,>5000,>$5,Toyota partnership,FAA certification,Defense contracts
+ACHR,Archer Aviation,NYSE,eVTOL,Urban Air Mobility,>3000,>$5,Stellantis backing,Commercial launch 2025,United Airlines
+EH,EHang Holdings,NASDAQ,eVTOL,Autonomous AAV,>1000,>$20,China certified,Passenger flights,Commercial operations
+EVTL,Vertical Aerospace,NYSE,eVTOL,Zero Emission,<1000,~$5.56,Unknown,VX4 certification,UK-based
+EVEX,Eve Holding,NYSE,eVTOL,Embraer Spinoff,>1000,>$4,Embraer backing,2027 commercialization,Aerospace pedigree
+PRCT,Procept BioRobotics,NASDAQ,Robotics,Surgical Robots,>2000,>$20,Unknown,Clinical adoption,48% revenue growth
+EVLV,Evolv Technologies,NASDAQ,AI/ML,Security Screening,>500,>$3,Unknown,Deployment milestones,Weapons detection
+AMBA,Ambarella,NASDAQ,AI Hardware,Vision Chips,>2000,>$50,Unknown,Auto tier-1 deals,Low-power AI
+PDYN,Palladyne AI,NASDAQ,AI/ML,Autonomy Software,<200,<$5,Unknown,Military contracts,Drone AI
+GFAI,Guardforce AI,NASDAQ,Robotics,Automation,<100,<$2,Unknown,Asia expansion,Security robotics
+AUR,Aurora Innovation,NASDAQ,Autonomous Vehicles,Trucking,>5000,~$5,Unknown,Commercial deployment,Pure-play autonomous
+WRD,WeRide,NASDAQ,Autonomous Vehicles,Multi-Product,>3000,>$10,Unknown,China expansion,Robotaxi leader
+PONY,Pony.ai,NASDAQ,Autonomous Vehicles,China AV,>5000,>$15,Unknown,Commercial launch,China focused
+HSAI,Hesai Group,NASDAQ,Autonomous Vehicles,LiDAR,>3000,>$10,Profitable,Production scaling,Market leader
+MBLY,Mobileye,NASDAQ,Autonomous Vehicles,ADAS,>20000,>$10,Intel owned,Level 4 deployment,Established player
+OUST,Ouster,NASDAQ,Autonomous Vehicles,LiDAR,500-800,>$8,Unknown,Industrial robotics,Beyond auto focus
+LAZR,Luminar Technologies,NASDAQ,Autonomous Vehicles,LiDAR,>1000,>$3,Austin Russell CEO,OEM production,Youngest CEO

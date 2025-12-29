@@ -25,10 +25,10 @@ def map_sector(row):
     return "Other"
 
 def render_governance_explorer():
-    st.title("🏛️ Governance Data Explorer")
+    st.title("Governance Data Explorer")
     st.markdown("### Real SEC Filing Data - No Composite Scores")
     
-    st.info("📋 **What you're seeing**: Actual governance factors extracted from DEF 14A and 10-K filings, not simulated scores. Use filters to find companies by specific governance characteristics.")
+    st.info("**What you're seeing**: Actual governance factors extracted from DEF 14A and 10-K filings, not simulated scores. Use filters to find companies by specific governance characteristics.")
     
     # Fetch governance data
     from db_connection import init_connection
@@ -63,7 +63,7 @@ def render_governance_explorer():
                 
                 data_to_process = all_rows
             except Exception as e:
-                st.error(f"### ❌ Database Query Failed")
+                st.error("### Database Query Failed")
                 st.write(f"Error details: {str(e)}")
                 return
             
@@ -98,7 +98,7 @@ def render_governance_explorer():
                         # Board Composition
                         'Board Independence %': round(indep_pct, 1) if indep_pct is not None else None,
                         'Board Diversity %': row.get('women_percentage'),
-                        'Split Chair/CEO': '✅ Yes' if not row.get('ceo_is_board_chair') else '❌ No',
+                        'Split Chair/CEO': 'Yes' if not row.get('ceo_is_board_chair') else 'No',
                         'Total Directors': row.get('total_directors'),
                         
                         # Technical Expertise
@@ -106,8 +106,8 @@ def render_governance_explorer():
                         'AI/Cyber Experts': row.get('ai_cybersecurity_experts', 0),
                         
                         # AI Governance
-                        'AI Oversight': '✅' if row.get('has_ai_oversight_committee') else '❌',
-                        'AI Ethics Board': '✅' if row.get('has_ai_ethics_policy') else '❌',
+                        'AI Oversight': 'Yes' if row.get('has_ai_oversight_committee') else 'No',
+                        'AI Ethics Board': 'Yes' if row.get('has_ai_ethics_policy') else 'No',
                         
                         # Compensation & Meetings
                         'Board Meetings': row.get('board_meetings_per_year', '-'),
@@ -125,7 +125,7 @@ def render_governance_explorer():
                 
                 # Filters
                 st.markdown("---")
-                st.subheader("🔍 Filters")
+                st.subheader("Filters")
                 
                 filter_col1, filter_col2, filter_col3, filter_col4, filter_col5 = st.columns(5)
                 
@@ -162,9 +162,9 @@ def render_governance_explorer():
                 if min_board_indep > 0:
                     filtered_df = filtered_df[filtered_df['Board Independence %'] >= min_board_indep]
                 if ai_ethics_filter == 'Yes':
-                    filtered_df = filtered_df[filtered_df['AI Ethics Board'] == '✅']
+                    filtered_df = filtered_df[filtered_df['AI Ethics Board'] == 'Yes']
                 elif ai_ethics_filter == 'No':
-                    filtered_df = filtered_df[filtered_df['AI Ethics Board'] == '❌']
+                    filtered_df = filtered_df[filtered_df['AI Ethics Board'] == 'No']
                 
                 if year_filter == 'Latest Available':
                     # Sort by company_id and Fiscal Year desc, then drop duplicates on company_id
@@ -177,11 +177,11 @@ def render_governance_explorer():
                 
                 # Tabs for different views
                 tab1, tab2, tab3, tab4, tab5 = st.tabs([
-                    "📊 Board & Independence",
-                    "💰 Compensation",
-                    "🤖 AI & Cyber",
-                    "🌍 Jurisdiction & Sector",
-                    "⚠️ Risk Factors"
+                    "Board & Independence",
+                    "Compensation",
+                    "AI & Cyber",
+                    "Jurisdiction & Sector",
+                    "Risk Factors"
                 ])
                 
                 with tab1:
@@ -238,7 +238,7 @@ def render_governance_explorer():
                                     'Category': r['risk_category'],
                                     'Risk Title': r['risk_title'],
                                     'Description': r['risk_description'],
-                                    'Material': '✅' if r.get('is_material') else '❌',
+                                    'Material': 'Yes' if r.get('is_material') else 'No',
                                     'Year': r['fiscal_year']
                                 }
                                 for r in risk_res.data
@@ -263,7 +263,7 @@ def render_governance_explorer():
                 
                 # Export
                 st.markdown("---")
-                st.subheader("📥 Export Data")
+                st.subheader("Export Data")
                 
                 csv = filtered_df.to_csv(index=False)
                 st.download_button(
@@ -274,7 +274,7 @@ def render_governance_explorer():
                 )
                 
                 # Help
-                with st.expander("📖 Data Dictionary"):
+                with st.expander("Data Dictionary"):
                     st.markdown("""
                     ### Governance Factors Explained
                     

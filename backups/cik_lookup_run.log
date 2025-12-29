@@ -1,0 +1,22 @@
+/Users/tanyamatanda/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+📋 Loaded 21,000 selected companies
+📥 Downloading SEC company data...
+✅ Loaded 10499 SEC companies
+
+🔍 Processing 21,000 companies...
+
+  Progress: 100 CIKs added
+  Progress: 200 CIKs added
+  Progress: 300 CIKs added
+
+============================================================
+CIK LOOKUP COMPLETE
+============================================================
+  ✅ Matched by ticker: 0
+  ✅ Matched by name: 356
+  ℹ️  Already had CIK: 1,283
+  ⚠️  Not found: 19,360
+  📊 Success rate: 1.8%
+
+✅ Results saved to: backups/cik_lookup_results.json

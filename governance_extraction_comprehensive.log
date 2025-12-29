@@ -1,0 +1,397 @@
+/Users/tanyamatanda/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:httpx:HTTP Request: GET https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/companies?select=id%2Ccompany_name%2Ccik%2Cticker_symbol&listing_type=eq.Public&cik=not.is.null&offset=0&limit=1000 "HTTP/2 200 OK"
+INFO:httpx:HTTP Request: GET https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/companies?select=id%2Ccompany_name%2Ccik%2Cticker_symbol&listing_type=eq.Public&cik=not.is.null&offset=1000&limit=1000 "HTTP/2 200 OK"
+INFO:httpx:HTTP Request: GET https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/companies?select=id%2Ccompany_name%2Ccik%2Cticker_symbol&listing_type=eq.Public&cik=not.is.null&offset=2000&limit=1000 "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for PROCEPT BioRobotics Corp (CIK: 0001588978)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001588978 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001588978 (Date: 2025-02-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for New Zealand Energy Corp. (CIK: 0001509705)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001509705
+WARNING:sec_filing_parser:No 10-K found for CIK 0001509705
+INFO:sec_filing_parser:Extracting factors for Syndax Pharmaceuticals Inc (CIK: 0001395937)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001395937 (Date: 2025-04-01)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001395937 (Date: 2025-03-03)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for ARROWHEAD PHARMACEUTICALS, INC. (CIK: 0000879407)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000879407 (Date: 2025-01-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000879407 (Date: 2025-11-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Theravance Biopharma, Inc. (CIK: 0001583107)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001583107 (Date: 2025-04-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001583107 (Date: 2025-03-07)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Anbio Biotechnology (CIK: 0001982708)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001982708
+WARNING:sec_filing_parser:No 10-K found for CIK 0001982708
+INFO:sec_filing_parser:Extracting factors for Day One Biopharmaceuticals, Inc. (CIK: 0001845337)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001845337 (Date: 2025-04-11)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001845337 (Date: 2025-02-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for ArriVent BioPharma, Inc. (CIK: 0001868279)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001868279 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001868279 (Date: 2025-03-03)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for ARS Pharmaceuticals, Inc. (CIK: 0001671858)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001671858 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001671858 (Date: 2025-03-20)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for RIGEL PHARMACEUTICALS INC (CIK: 0001034842)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001034842 (Date: 2025-04-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001034842 (Date: 2025-03-04)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Vir Biotechnology, Inc. (CIK: 0001706431)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001706431 (Date: 2025-04-17)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001706431 (Date: 2025-02-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Arbutus Biopharma Corp (CIK: 0001447028)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001447028 (Date: 2025-04-04)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001447028 (Date: 2025-03-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for aTYR PHARMA INC (CIK: 0001339970)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001339970 (Date: 2025-03-19)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001339970 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for OKYO Pharma Ltd (CIK: 0001849296)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001849296
+WARNING:sec_filing_parser:No 10-K found for CIK 0001849296
+INFO:sec_filing_parser:Extracting factors for PMV Pharmaceuticals, Inc. (CIK: 0001699382)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001699382 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001699382 (Date: 2025-03-03)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for NRX Pharmaceuticals, Inc. (CIK: 0001719406)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001719406 (Date: 2024-09-05)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001719406 (Date: 2025-03-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+======================================================================
+PHASE 5: EXTRACT GOVERNANCE DATA (ENHANCED)
+======================================================================
+
+📥 Fetching public companies...
+  Fetched 1,000 companies...
+  Fetched 2,000 companies...
+  Fetched 2,779 companies...
+✓ Found 2,779 public companies with CIK total
+
+🔍 Extracting governance data...
+⏱️  Estimated time: 23.2 minutes
+
+  ⚠️ Error inserting board data for PROCEPT BioRobotics Corp: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Syndax Pharmaceuticals Inc: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for ARROWHEAD PHARMACEUTICALS, INC.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Theravance Biopharma, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Day One Biopharmaceuticals, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for ArriVent BioPharma, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for ARS Pharmaceuticals, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  Progress: 10/2779 | Extracted: 0 | Failed: 9
+  ⚠️ Error inserting board data for RIGEL PHARMACEUTICALS INC: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing RIGEL PHARMACEUTICALS INC: '>=' not supported between instances of 'NoneType' and 'int'
+  ⚠️ Error inserting board data for Vir Biotechnology, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Arbutus Biopharma Corp: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for aTYR PHARMA INC: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for PMV Pharmaceuticals, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for ABVC BIOPHARMA, INC. (CIK: 0001173313)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001173313 (Date: 2025-05-16)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001173313 (Date: 2025-04-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Nasus Pharma Ltd (CIK: 0002029039)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002029039
+WARNING:sec_filing_parser:No 10-K found for CIK 0002029039
+INFO:sec_filing_parser:Extracting factors for Xenetic Biosciences, Inc. (CIK: 0001534525)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001534525 (Date: 2025-10-31)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001534525 (Date: 2025-03-18)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Kaival Brands Innovations Group, Inc. (CIK: 0001762239)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001762239 (Date: 2025-10-07)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001762239 (Date: 2025-02-10)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for MIRA PHARMACEUTICALS, INC. (CIK: 0001904286)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001904286 (Date: 2024-07-26)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001904286 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Maxeon Solar Technologies, Ltd. (CIK: 0001796898)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001796898
+WARNING:sec_filing_parser:No 10-K found for CIK 0001796898
+INFO:sec_filing_parser:Extracting factors for SusGlobal Energy Corp. (CIK: 0001652539)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001652539 (Date: 2022-03-01)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001652539 (Date: 2025-05-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for SolarMax Technology, Inc. (CIK: 0001519472)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001519472 (Date: 2025-10-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001519472 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Cue Biopharma, Inc. (CIK: 0001645460)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001645460 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001645460 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Medicus Pharma Ltd. (CIK: 0001997296)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001997296 (Date: 2025-06-30)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001997296 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Telomir Pharmaceuticals, Inc. (CIK: 0001971532)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001971532
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001971532 (Date: 2025-02-04)
+INFO:sec_filing_parser:Extracting factors for MAIA Biotechnology, Inc. (CIK: 0001878313)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001878313 (Date: 2025-04-08)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001878313 (Date: 2025-03-21)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Actinium Pharmaceuticals, Inc. (CIK: 0001388320)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001388320 (Date: 2025-11-05)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001388320 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for PDS Biotechnology Corp (CIK: 0001472091)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001472091 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001472091 (Date: 2025-03-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Lantern Pharma Inc. (CIK: 0001763950)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001763950 (Date: 2025-08-08)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001763950 (Date: 2025-03-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Quantum Biopharma Ltd. (CIK: 0001771885)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001771885
+WARNING:sec_filing_parser:No 10-K found for CIK 0001771885
+INFO:sec_filing_parser:Extracting factors for Apimeds Pharmaceuticals US, Inc. (CIK: 0001894525)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001894525
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001894525 (Date: 2025-04-15)
+INFO:sec_filing_parser:Extracting factors for Generation Bio Co. (CIK: 0001733294)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001733294 (Date: 2025-04-23)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001733294 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+  ⚠️ Error inserting board data for NRX Pharmaceuticals, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for ABVC BIOPHARMA, INC.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Xenetic Biosciences, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing Xenetic Biosciences, Inc.: '>=' not supported between instances of 'NoneType' and 'int'
+  Progress: 20/2779 | Extracted: 0 | Failed: 19
+  ⚠️ Error inserting board data for Kaival Brands Innovations Group, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for MIRA PHARMACEUTICALS, INC.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing MIRA PHARMACEUTICALS, INC.: '>=' not supported between instances of 'NoneType' and 'int'
+  ⚠️ Error inserting board data for SusGlobal Energy Corp.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing SusGlobal Energy Corp.: '>=' not supported between instances of 'NoneType' and 'int'
+  ⚠️ Error inserting board data for SolarMax Technology, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Cue Biopharma, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing Cue Biopharma, Inc.: '>=' not supported between instances of 'NoneType' and 'int'
+  ⚠️ Error inserting board data for Medicus Pharma Ltd.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for MAIA Biotechnology, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing MAIA Biotechnology, Inc.: '>=' not supported between instances of 'NoneType' and 'int'
+  ⚠️ Error inserting board data for Actinium Pharmaceuticals, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing Actinium Pharmaceuticals, Inc.: '>=' not supported between instances of 'NoneType' and 'int'
+  Progress: 30/2779 | Extracted: 0 | Failed: 29
+  ⚠️ Error inserting board data for PDS Biotechnology Corp: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Lantern Pharma Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Generation Bio Co.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for LakeShore Biopharma Co., Ltd. (CIK: 0001946399)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001946399
+WARNING:sec_filing_parser:No 10-K found for CIK 0001946399
+INFO:sec_filing_parser:Extracting factors for CUMBERLAND PHARMACEUTICALS INC (CIK: 0001087294)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001087294 (Date: 2025-03-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001087294 (Date: 2025-03-07)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for IGC Pharma, Inc. (CIK: 0001326205)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001326205 (Date: 2025-08-18)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001326205 (Date: 2025-06-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Liminatus Pharma, Inc. (CIK: 0001971387)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001971387
+WARNING:sec_filing_parser:No 10-K found for CIK 0001971387
+INFO:sec_filing_parser:Extracting factors for REVELATION BIOSCIENCES, INC. (CIK: 0001810560)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001810560 (Date: 2025-11-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001810560 (Date: 2025-03-06)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Ensysce Biosciences, Inc. (CIK: 0001716947)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001716947 (Date: 2025-12-02)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001716947 (Date: 2025-03-10)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Arcadia Biosciences, Inc. (CIK: 0001469443)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001469443 (Date: 2025-11-19)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001469443 (Date: 2025-03-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for SolarWindow Technologies, Inc. (CIK: 0001071840)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001071840
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001071840 (Date: 2025-11-13)
+INFO:sec_filing_parser:Extracting factors for PROVECTUS BIOPHARMACEUTICALS, INC. (CIK: 0000315545)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000315545 (Date: 2025-05-01)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000315545 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Matinas BioPharma Holdings, Inc. (CIK: 0001582554)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001582554 (Date: 2025-05-12)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001582554 (Date: 2025-04-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for LIXTE BIOTECHNOLOGY HOLDINGS, INC. (CIK: 0001335105)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001335105 (Date: 2025-10-27)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001335105 (Date: 2025-03-24)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Citius Pharmaceuticals, Inc. (CIK: 0001506251)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001506251 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001506251 (Date: 2024-12-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for SUNation Energy, Inc. (CIK: 0000022701)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000022701 (Date: 2025-11-24)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000022701 (Date: 2025-04-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for AYTU BIOPHARMA, INC (CIK: 0001385818)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001385818 (Date: 2025-10-24)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001385818 (Date: 2025-09-23)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Traws Pharma, Inc. (CIK: 0001130598)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001130598 (Date: 2025-10-08)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001130598 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:sec_filing_parser:Extracting factors for Skycorp Solar Group Ltd (CIK: 0002001288)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002001288
+WARNING:sec_filing_parser:No 10-K found for CIK 0002001288
+INFO:sec_filing_parser:Extracting factors for Raphael Pharmaceutical Inc. (CIK: 0001415397)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001415397
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001415397 (Date: 2025-03-31)
+INFO:sec_filing_parser:Extracting factors for Evoke Pharma Inc (CIK: 0001403708)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001403708 (Date: 2025-04-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001403708 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/executive_compensation_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/governance_scores?on_conflict=company_id%2C+fiscal_year "HTTP/2 400 Bad Request"
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for CUMBERLAND PHARMACEUTICALS INC: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for IGC Pharma, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing IGC Pharma, Inc.: '>=' not supported between instances of 'NoneType' and 'int'
+  ⚠️ Error inserting board data for REVELATION BIOSCIENCES, INC.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing REVELATION BIOSCIENCES, INC.: '>=' not supported between instances of 'NoneType' and 'int'
+  Progress: 40/2779 | Extracted: 0 | Failed: 39
+  ⚠️ Error inserting board data for Ensysce Biosciences, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Arcadia Biosciences, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for PROVECTUS BIOPHARMACEUTICALS, INC.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Matinas BioPharma Holdings, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for LIXTE BIOTECHNOLOGY HOLDINGS, INC.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Citius Pharmaceuticals, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing Citius Pharmaceuticals, Inc.: '>=' not supported between instances of 'NoneType' and 'int'
+  ⚠️ Error inserting board data for SUNation Energy, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for AYTU BIOPHARMA, INC: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting governance score: {'message': "Could not find the 'board_structure_score' column of 'governance_scores' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting board data for Traws Pharma, Inc.: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'has_clawback_policy' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error processing Traws Pharma, Inc.: '>=' not supported between instances of 'NoneType' and 'int'
+  Progress: 50/2779 | Extracted: 0 | Failed: 49
+  ⚠️ Error inserting board data for Evoke Pharma Inc: {'message': "Could not find the 'overboarded_directors_count' column of 'board_composition_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+  ⚠️ Error inserting compensation data: {'message': "Could not find the 'ceo_pay_ratio' column of 'executive_compensation_annual' in the schema cache", 'code': 'PGRST204', 'hint': None, 'details': None}
+INFO:sec_filing_parser:Extracting factors for Quoin Pharmaceuticals, Ltd. (CIK: 0001671502)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001671502 (Date: 2025-07-17)

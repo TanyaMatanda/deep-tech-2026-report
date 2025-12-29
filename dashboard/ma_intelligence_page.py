@@ -12,7 +12,7 @@ import plotly.express as px
 def render_ma_intelligence(supabase):
     """Render M&A probability intelligence"""
     
-    st.markdown("## 🎯 M&A Probability Intelligence")
+    st.markdown("## M&A Probability Intelligence")
     st.caption("Proprietary predictions using SEC filing signals")
     
     # Fetch M&A scores
@@ -30,7 +30,7 @@ def render_ma_intelligence(supabase):
         return
     
     if not scores:
-        st.info("📊 No M&A scores yet. Run `python3 models/sync_risk_scores.py` to calculate.")
+        st.info("No M&A scores yet. Run `python3 models/sync_risk_scores.py` to calculate.")
         return
     
     # Overview metrics
@@ -42,11 +42,11 @@ def render_ma_intelligence(supabase):
     
     with col2:
         high_prob = len([s for s in scores if s.get('ma_probability', 0) > 60])
-        st.metric("High Probability (>60)", high_prob, delta="🔴 Hot")
+        st.metric("High Probability (>60)", high_prob, delta="Hot")
     
     with col3:
         medium_prob = len([s for s in scores if 30 < s.get('ma_probability', 0) <= 60])
-        st.metric("Medium (30-60)", medium_prob, delta="🟡")
+        st.metric("Medium (30-60)", medium_prob)
     
     with col4:
         # Average score
@@ -95,16 +95,16 @@ def render_ma_intelligence(supabase):
         
         # Color based on probability
         if prob >= 60:
-            color = "🔴"
+            color = ""
             urgency = "HIGH"
         elif prob >= 30:
-            color = "🟡"
+            color = ""
             urgency = "MEDIUM"
         else:
-            color = "🟢"
+            color = ""
             urgency = "LOW"
         
-        with st.expander(f"{color} **{company_name}** {ticker} - {prob:.0f}% M&A Probability", expanded=False):
+        with st.expander(f"**{company_name}** {ticker} - {prob:.0f}% M&A Probability", expanded=False):
             col_left, col_right = st.columns([2, 1])
             
             with col_left:
@@ -129,7 +129,7 @@ def render_ma_intelligence(supabase):
                                 st.caption(f"    - {key.replace('_', ' ').title()}: {value}")
             
             with col_right:
-                st.markdown("**📊 Timeline Estimate**")
+                st.markdown("**Timeline Estimate**")
                 if prob >= 60:
                     st.info("90-180 days")
                 elif prob >= 30:

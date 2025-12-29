@@ -1,0 +1,44 @@
+{
+  "total_companies": 997,
+  "criteria": {
+    "Retail Day Trader": {
+      "description": "High volatility indicators, special situations",
+      "rationale": "Extreme compensation = potential catalyst/controversy",
+      "pass_count": 93,
+      "pass_rate": 9.327983951855568
+    },
+    "Long-Term Retail": {
+      "description": "Founder-friendly models with alignment",
+      "rationale": "Owner-operator mentality, compressed equality",
+      "pass_count": 124,
+      "pass_rate": 12.437311935807422
+    },
+    "Asset Manager": {
+      "description": "Market-competitive, avoids extremes",
+      "rationale": "Within peer benchmarks, passes ISS screens",
+      "pass_count": 612,
+      "pass_rate": 61.384152457372124
+    },
+    "Pension Fund": {
+      "description": "Fiduciary-grade governance",
+      "rationale": "Defendable to trustees, reasonable inequality",
+      "pass_count": 661,
+      "pass_rate": 66.29889669007021
+    },
+    "ESG Fund": {
+      "description": "Stakeholder-aligned, low inequality",
+      "rationale": "Internal equity signal of culture",
+      "pass_count": 971,
+      "pass_rate": 97.39217652958877
+    },
+    "Reinsurer": {
+      "description": "Diversified risk, no extremes",
+      "rationale": "Moderate compensation, manageable key person risk",
+      "pass_count": 711,
+      "pass_rate": 71.31394182547643
+    }
+  },
+  "intersection_count": 0,
+  "intersection_rate": 0.0,
+  "example_companies": []
+}

@@ -3,7 +3,7 @@ import pandas as pd
 from db_connection import init_connection
 
 def render_company_search():
-    st.title("🔍 Company Risk & Compliance Search")
+    st.title("Company Risk & Compliance Search")
     st.markdown("### Individual Company Analysis & Regulatory Roadmap")
     
     supabase = init_connection()
@@ -55,7 +55,7 @@ def render_company_search():
                     st.divider()
                     
                     # 3. Risk Factors (from Database)
-                    st.subheader("⚠️ Identified Risk Factors")
+                    st.subheader("Identified Risk Factors")
                     st.caption("Extracted from the latest SEC/SEDAR filings.")
                     
                     risk_res = supabase.table('company_risk_factors')\
@@ -65,7 +65,7 @@ def render_company_search():
                     
                     if risk_res.data:
                         for risk in risk_res.data:
-                            with st.expander(f"🚩 {risk['risk_category']}: {risk['risk_title']}"):
+                            with st.expander(f"{risk['risk_category']}: {risk['risk_title']}"):
                                 st.write(risk['risk_description'])
                                 if risk.get('is_material'):
                                     st.warning("This risk is flagged as **Material** in recent disclosures.")
@@ -75,7 +75,7 @@ def render_company_search():
                     st.divider()
                     
                     # 4. Compliance Roadmap (Rule-Based)
-                    st.subheader("📅 Applicable Laws & Regulations")
+                    st.subheader("Applicable Laws & Regulations")
                     st.caption("Based on jurisdiction, sector, and identified risk profile.")
                     
                     regulations = []

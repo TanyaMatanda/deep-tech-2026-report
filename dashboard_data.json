@@ -1,0 +1,296 @@
+{
+  "total_records": 4132,
+  "total_companies": 1008,
+  "total_compensation": 7646729564,
+  "by_tier": {
+    "founder": 127,
+    "moderate": 358,
+    "high": 259,
+    "mega": 253
+  },
+  "by_sector": {
+    "Quantum Computing": {
+      "count": 1,
+      "total_comp": 3127584,
+      "avg_comp": 3127584.0
+    },
+    "Biotechnology": {
+      "count": 137,
+      "total_comp": 637650405,
+      "avg_comp": 4654382.518248175
+    },
+    "Energy & Climate": {
+      "count": 84,
+      "total_comp": 644708654,
+      "avg_comp": 7675103.023809524
+    },
+    "Advanced Technology": {
+      "count": 115,
+      "total_comp": 865304571,
+      "avg_comp": 7524387.573913043
+    },
+    "Electronic Computers": {
+      "count": 3,
+      "total_comp": 13371555,
+      "avg_comp": 4457185.0
+    },
+    "Cloud Infrastructure": {
+      "count": 5,
+      "total_comp": 62848296,
+      "avg_comp": 12569659.2
+    },
+    "Pharmaceutical Preparations": {
+      "count": 9,
+      "total_comp": 30202628,
+      "avg_comp": 3355847.5555555555
+    },
+    "Technology": {
+      "count": 356,
+      "total_comp": 2552888709,
+      "avg_comp": 7171035.699438202
+    },
+    "Prepackaged Software": {
+      "count": 1,
+      "total_comp": 1248601,
+      "avg_comp": 1248601.0
+    },
+    "Biological Products": {
+      "count": 8,
+      "total_comp": 44370769,
+      "avg_comp": 5546346.125
+    },
+    "Semiconductors": {
+      "count": 6,
+      "total_comp": 85071075,
+      "avg_comp": 14178512.5
+    },
+    "Guided Missiles & Space Vehicles": {
+      "count": 2,
+      "total_comp": 27474203,
+      "avg_comp": 13737101.5
+    },
+    "AI & Machine Learning": {
+      "count": 9,
+      "total_comp": 113884047,
+      "avg_comp": 12653783.0
+    },
+    "Cybersecurity": {
+      "count": 8,
+      "total_comp": 121074792,
+      "avg_comp": 15134349.0
+    },
+    "Antibody Discovery (AI)": {
+      "count": 1,
+      "total_comp": 16962608,
+      "avg_comp": 16962608.0
+    },
+    "Biopharmaceuticals": {
+      "count": 1,
+      "total_comp": 2645657,
+      "avg_comp": 2645657.0
+    },
+    "Cybersecurity & IoT": {
+      "count": 1,
+      "total_comp": 3146625,
+      "avg_comp": 3146625.0
+    },
+    "Cross Domain Enablement": {
+      "count": 18,
+      "total_comp": 110809900,
+      "avg_comp": 6156105.555555556
+    },
+    "Space and Aerospace": {
+      "count": 2,
+      "total_comp": 3568327,
+      "avg_comp": 1784163.5
+    },
+    "Semi Conductors and AI": {
+      "count": 2,
+      "total_comp": 4566229,
+      "avg_comp": 2283114.5
+    },
+    "Energy and Climate": {
+      "count": 2,
+      "total_comp": 5985050,
+      "avg_comp": 2992525.0
+    },
+    "Space Technology": {
+      "count": 1,
+      "total_comp": 5638706,
+      "avg_comp": 5638706.0
+    },
+    "Biotech": {
+      "count": 1,
+      "total_comp": 1128691,
+      "avg_comp": 1128691.0
+    },
+    "Robotics": {
+      "count": 1,
+      "total_comp": 18257391,
+      "avg_comp": 18257391.0
+    },
+    "Advanced Computing": {
+      "count": 1,
+      "total_comp": 30996392,
+      "avg_comp": 30996392.0
+    }
+  },
+  "top_10": [
+    {
+      "company": "NVIDIA",
+      "ceo_comp": 49866251,
+      "sector": "Technology",
+      "exec_count": 4,
+      "internal_ratio": 2.5
+    },
+    {
+      "company": "Alignment Healthcare, Inc.",
+      "ceo_comp": 45998851,
+      "sector": "Technology",
+      "exec_count": 4,
+      "internal_ratio": 4.2
+    },
+    {
+      "company": "Mobileye Global Inc.",
+      "ceo_comp": 45219678,
+      "sector": "Technology",
+      "exec_count": 4,
+      "internal_ratio": 9.5
+    },
+    {
+      "company": "Bloom Energy Corp",
+      "ceo_comp": 44961745,
+      "sector": "Energy & Climate",
+      "exec_count": 4,
+      "internal_ratio": 12.0
+    },
+    {
+      "company": "Bloom Energy",
+      "ceo_comp": 44961745,
+      "sector": "Energy & Climate",
+      "exec_count": 4,
+      "internal_ratio": 12.0
+    },
+    {
+      "company": "Uber Technologies, Inc",
+      "ceo_comp": 39408629,
+      "sector": "Technology",
+      "exec_count": 4,
+      "internal_ratio": 4.0
+    },
+    {
+      "company": "Uber Technologies, Inc",
+      "ceo_comp": 39408629,
+      "sector": null,
+      "exec_count": 4,
+      "internal_ratio": 4.0
+    },
+    {
+      "company": "Uber Technologies, Inc",
+      "ceo_comp": 39408629,
+      "sector": null,
+      "exec_count": 4,
+      "internal_ratio": 4.0
+    },
+    {
+      "company": "EMBER TECHNOLOGIES INC",
+      "ceo_comp": 39408629,
+      "sector": "Advanced Technology",
+      "exec_count": 4,
+      "internal_ratio": 4.0
+    },
+    {
+      "company": "LifeStance Health Group, Inc.",
+      "ceo_comp": 38859218,
+      "sector": "Technology",
+      "exec_count": 3,
+      "internal_ratio": 1.0
+    }
+  ],
+  "internal_ratio_distribution": {
+    "1": 361,
+    "5": 19,
+    "2": 333,
+    "4": 79,
+    "3": 167,
+    "16": 1,
+    "20": 3,
+    "9": 5,
+    "6": 12,
+    "12": 1,
+    "7": 3,
+    "8": 5,
+    "11": 5,
+    "10": 3
+  },
+  "statistics": {
+    "median": 5148564,
+    "mean": 7662747,
+    "min": 60811,
+    "max": 49866251,
+    "p25": 1892675,
+    "p75": 10226709
+  },
+  "sectors": [
+    {
+      "name": "Advanced Computing",
+      "count": 1,
+      "total_comp": 30996392,
+      "avg_comp": 30996392.0
+    },
+    {
+      "name": "Robotics",
+      "count": 1,
+      "total_comp": 18257391,
+      "avg_comp": 18257391.0
+    },
+    {
+      "name": "Antibody Discovery (AI)",
+      "count": 1,
+      "total_comp": 16962608,
+      "avg_comp": 16962608.0
+    },
+    {
+      "name": "Cybersecurity",
+      "count": 8,
+      "total_comp": 121074792,
+      "avg_comp": 15134349.0
+    },
+    {
+      "name": "Semiconductors",
+      "count": 6,
+      "total_comp": 85071075,
+      "avg_comp": 14178512.5
+    },
+    {
+      "name": "Guided Missiles & Space Vehicles",
+      "count": 2,
+      "total_comp": 27474203,
+      "avg_comp": 13737101.5
+    },
+    {
+      "name": "AI & Machine Learning",
+      "count": 9,
+      "total_comp": 113884047,
+      "avg_comp": 12653783.0
+    },
+    {
+      "name": "Cloud Infrastructure",
+      "count": 5,
+      "total_comp": 62848296,
+      "avg_comp": 12569659.2
+    },
+    {
+      "name": "Energy & Climate",
+      "count": 84,
+      "total_comp": 644708654,
+      "avg_comp": 7675103.023809524
+    },
+    {
+      "name": "Advanced Technology",
+      "count": 115,
+      "total_comp": 865304571,
+      "avg_comp": 7524387.573913043
+    }
+  ]
+}

@@ -16,7 +16,7 @@ import plotly.graph_objects as go
 def render_predictions_page():
     """Render the Market Predictions intelligence hub"""
     
-    st.title("🎯 Market Intelligence & Predictions")
+    st.title("Market Intelligence & Predictions")
     st.markdown("### Real-time events • Crowd wisdom • Proprietary signals")
     
     from db_connection import init_connection
@@ -28,10 +28,10 @@ def render_predictions_page():
     
     # Tabs for different views
     tab1, tab2, tab3, tab4 = st.tabs([
-        "📊 Active Predictions",
-        "🔴 Live Events", 
-        "🏢 Private Companies",
-        "📈 Analytics"
+        "Active Predictions",
+        "Live Events", 
+        "Private Companies",
+        "Analytics"
     ])
     
     # ===== TAB 1: ACTIVE PREDICTIONS =====
@@ -60,7 +60,7 @@ def render_predictions_page():
             predictions = result.data
         except Exception as e:
             predictions = []
-            st.info("💡 No prediction data yet. Run sync script to populate with Polymarket data.")
+            st.info("No prediction data yet. Run sync script to populate with Polymarket data.")
         
         if predictions:
             # Event type filter
@@ -82,20 +82,20 @@ def render_predictions_page():
                 
                 # Color based on probability
                 if prob >= 0.7:
-                    color = "🟢"
+                    color = ""
                     badge_color = "green"
                 elif prob >= 0.4:
-                    color = "🟡"
+                    color = ""
                     badge_color = "orange"
                 else:
-                    color = "🔴"
+                    color = ""
                     badge_color = "red"
                 
                 with st.container():
                     col1, col2 = st.columns([3, 1])
                     
                     with col1:
-                        st.markdown(f"### {color} {pred.get('question', 'Unknown event')}")
+                        st.markdown(f"### {pred.get('question', 'Unknown event')}")
                         st.markdown(f"**Type**: {pred.get('event_type', 'Other')}")
                         if pred.get('description'):
                             st.caption(pred['description'][:150] + "...")
@@ -118,7 +118,7 @@ def render_predictions_page():
         else:
             # Show sample/placeholder predictions
             # All political risk data is now real - no samples!
-            st.caption("ℹ️ Additional corporate event predictions (IPO, M&A) available when Kalshi adds coverage")
+            st.caption("Additional corporate event predictions (IPO, M&A) available when Kalshi adds coverage")
             
             sample_predictions = [
                 {
@@ -143,11 +143,11 @@ def render_predictions_page():
             
             for pred in sample_predictions:
                 prob = pred['probability']
-                color = "🟢" if prob >= 0.7 else "🟡" if prob >= 0.4 else "🔴"
+                color = ""
                 
                 col1, col2 = st.columns([3, 1])
                 with col1:
-                    st.markdown(f"### {color} {pred['question']}")
+                    st.markdown(f"### {pred['question']}")
                     st.markdown(f"**Type**: {pred['type']}")
                 with col2:
                     st.metric("Probability", f"{prob*100:.1f}%")
@@ -173,13 +173,7 @@ def render_predictions_page():
         
         if news_items:
             for item in news_items:
-                event_icon = {
-                    'M&A': '🤝',
-                    'Material Event': '🔴',
-                    'Proxy': '🗳️',
-                    'Activism': '📢',
-                    'Board Change': '👔'
-                }.get(item.get('news_type'), '📰')
+                event_icon = ""
                 
                 # Calculate time ago
                 published = pd.to_datetime(item['published_at'])
@@ -192,7 +186,7 @@ def render_predictions_page():
                 else:
                     time_ago = f"{int(time_diff.days)}d ago"
                 
-                with st.expander(f"{event_icon} **{item['headline']}** • {time_ago}", expanded=False):
+                with st.expander(f"**{item['headline']}** • {time_ago}", expanded=False):
                     col_left, col_right = st.columns([2, 1])
                     
                     with col_left:
@@ -203,7 +197,7 @@ def render_predictions_page():
                             st.link_button("View Full Filing →", item['url'])
                     
                     with col_right:
-                        st.markdown("**📊 Prediction Context**")
+                        st.markdown("**Prediction Context**")
                         # TODO: Link to related Kalshi markets
                         st.info("Run sync_political_risks.py to see Polymarket predictions for this event")
         else:
@@ -213,7 +207,7 @@ def render_predictions_page():
     with tab3:
         st.subheader("Private Company Intelligence")
         
-        st.info("🏗️ **Coming soon**: Private company tracking via Crunchbase API")
+        st.info("Coming soon: Private company tracking via Crunchbase API")
         
         # Show mockup
         st.markdown("### High-Probability Exit Candidates")
@@ -301,13 +295,13 @@ def render_predictions_page():
         st.markdown("### Prediction Accuracy (Historical)")
         
         # Sample accuracy tracking
-        st.info("📊 Track performance: Compare Polymarket probabilities vs actual outcomes")
+        st.info("Track performance: Compare Polymarket probabilities vs actual outcomes")
         
         sample_accuracy = pd.DataFrame({
             'Event': ['Databricks IPO 2024', 'Meta Layoffs Q4', 'Apple AI Launch'],
             'Predicted Probability': ['34%', '82%', '67%'],
             'Actual Outcome': ['Did not occur', 'Occurred', 'Occurred'],
-            'Accuracy Score': ['✓ Calibrated', '✓ Correct', '✓ Correct']
+            'Accuracy Score': ['Calibrated', 'Correct', 'Correct']
         })
         
         st.dataframe(sample_accuracy, use_container_width=True, hide_index=True)

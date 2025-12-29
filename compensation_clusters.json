@@ -1,0 +1,445 @@
+{
+  "founder_friendly": [],
+  "growth_stage": [
+    {
+      "company": "Twist Bioscience",
+      "total": 7620611,
+      "equity_pct": 76.8,
+      "stock": 5849949,
+      "option": 0,
+      "sector": "Biotechnology"
+    }
+  ],
+  "mature_premium": [
+    {
+      "company": "ADVANCED MICRO DEVICES INC",
+      "total": 30996392,
+      "equity_pct": 60.2,
+      "stock": 18654655,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "GE HealthCare Technologies Inc.",
+      "total": 19487880,
+      "equity_pct": 68.8,
+      "stock": 13412402,
+      "option": 0,
+      "sector": "Advanced Technology"
+    }
+  ],
+  "cash_heavy": [
+    {
+      "company": "TERADATA CORP /DE/",
+      "total": 17418309,
+      "equity_pct": 39.9,
+      "stock": 6943270,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "Rexford Industrial Realty, Inc.",
+      "total": 13143105,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "BIOMARIN PHARMACEUTICAL INC",
+      "total": 14853605,
+      "equity_pct": 44.2,
+      "stock": 6566982,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "Celldex Therapeutics, Inc.",
+      "total": 9229165,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "PBF Energy Inc.",
+      "total": 8837500,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "BlackBerry",
+      "total": 1417205,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Cybersecurity"
+    },
+    {
+      "company": "BRIDGE PHARMA INC",
+      "total": 15581922,
+      "equity_pct": 39.0,
+      "stock": 6082873,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "United parcel service america inc",
+      "total": 24063977,
+      "equity_pct": 38.2,
+      "stock": 9185261,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "89bio, Inc.",
+      "total": 7619426,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "ABEONA THERAPEUTICS INC.",
+      "total": 3506708,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "ADC Therapeutics SA",
+      "total": 1837628,
+      "equity_pct": 0.0,
+      "stock": 0,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    }
+  ],
+  "top_equity": [
+    {
+      "company": "SM Energy Co",
+      "total": 12240662,
+      "equity_pct": 97.5,
+      "stock": 11928971,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "ADVANCED ENERGY INDUSTRIES INC",
+      "total": 8761961,
+      "equity_pct": 92.9,
+      "stock": 8136164,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "Astrana Health, Inc.",
+      "total": 18242585,
+      "equity_pct": 92.9,
+      "stock": 16942570,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "Bloom Energy",
+      "total": 44961745,
+      "equity_pct": 88.9,
+      "stock": 39968710,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "CISCO SYSTEMS, INC.",
+      "total": 52838751,
+      "equity_pct": 86.8,
+      "stock": 45870690,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "BENTLEY SYSTEMS INC",
+      "total": 16418063,
+      "equity_pct": 82.0,
+      "stock": 13465407,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "Twist Bioscience",
+      "total": 7620611,
+      "equity_pct": 76.8,
+      "stock": 5849949,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "GE HealthCare Technologies Inc.",
+      "total": 19487880,
+      "equity_pct": 68.8,
+      "stock": 13412402,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "IOVANCE BIOTHERAPEUTICS, INC.",
+      "total": 10953192,
+      "equity_pct": 64.4,
+      "stock": 7048573,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "ADVANCED MICRO DEVICES INC",
+      "total": 30996392,
+      "equity_pct": 60.2,
+      "stock": 18654655,
+      "option": 0,
+      "sector": "Technology"
+    }
+  ],
+  "data_errors": [
+    {
+      "company": "SoFi Technologies, Inc.",
+      "total": 28072183,
+      "equity_pct": 230.0,
+      "stock": 64579825,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "VARONIS SYSTEMS INC",
+      "total": 14502288,
+      "equity_pct": 139.8,
+      "stock": 20277376,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "BrightSpring Health Services, Inc.",
+      "total": 17673893,
+      "equity_pct": 116.1,
+      "stock": 20521000,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "MONOLITHIC POWER SYSTEMS INC",
+      "total": 18979292,
+      "equity_pct": 115.5,
+      "stock": 21914905,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "MEDICAL PROPERTIES TRUST INC",
+      "total": 16388255,
+      "equity_pct": 104.6,
+      "stock": 17144799,
+      "option": 0,
+      "sector": "Technology"
+    },
+    {
+      "company": "IONIS PHARMACEUTICALS INC",
+      "total": 15400343,
+      "equity_pct": 2947.3,
+      "stock": 453897000,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "Zentalis Pharmaceuticals, Inc.",
+      "total": 8188909,
+      "equity_pct": 2025.5,
+      "stock": 165867000,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "TG THERAPEUTICS, INC.",
+      "total": 18752897,
+      "equity_pct": 489.2,
+      "stock": 91737003,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "PULSE BIOSCIENCES, INC.",
+      "total": 8720432,
+      "equity_pct": 144.8,
+      "stock": 12625697,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "ANI PHARMACEUTICALS INC",
+      "total": 8859402,
+      "equity_pct": 122.1,
+      "stock": 10815366,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "Jazz Pharmaceuticals plc",
+      "total": 15527464,
+      "equity_pct": 111.2,
+      "stock": 17262015,
+      "option": 0,
+      "sector": "Biotechnology"
+    },
+    {
+      "company": "OGE ENERGY CORP.",
+      "total": 10128949,
+      "equity_pct": 4358.8,
+      "stock": 441500000,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "GULFPORT ENERGY CORP",
+      "total": 8988358,
+      "equity_pct": 184.1,
+      "stock": 16551431,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "CONSUMERS ENERGY CO",
+      "total": 10401409,
+      "equity_pct": 149.8,
+      "stock": 15578999,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "Chord Energy Corp",
+      "total": 8179724,
+      "equity_pct": 132.0,
+      "stock": 10798062,
+      "option": 0,
+      "sector": "Energy & Climate"
+    },
+    {
+      "company": "Cloudflare",
+      "total": 2081094,
+      "equity_pct": 739.0,
+      "stock": 15378722,
+      "option": 0,
+      "sector": "Cybersecurity"
+    },
+    {
+      "company": "CrowdStrike",
+      "total": 35195300,
+      "equity_pct": 421.9,
+      "stock": 148504806,
+      "option": 0,
+      "sector": "Cybersecurity"
+    },
+    {
+      "company": "Varonis",
+      "total": 14502288,
+      "equity_pct": 139.8,
+      "stock": 20277376,
+      "option": 0,
+      "sector": "Cybersecurity"
+    },
+    {
+      "company": "REPLIGEN CORP",
+      "total": 20304850,
+      "equity_pct": 3126.5,
+      "stock": 634836884,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "IMPRIMIS PHARMACEUTICALS INC",
+      "total": 15400343,
+      "equity_pct": 2947.3,
+      "stock": 453897000,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "Hims & Hers Health, Inc.",
+      "total": 24609077,
+      "equity_pct": 448.1,
+      "stock": 110273117,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "INGERSOLL RAND CO",
+      "total": 16720080,
+      "equity_pct": 252.1,
+      "stock": 42145967,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "VRINGO INFRASTRUCTURE INC",
+      "total": 16871121,
+      "equity_pct": 190.7,
+      "stock": 32166188,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "JAZZ PHARMACEUTICALS INC",
+      "total": 15527464,
+      "equity_pct": 111.2,
+      "stock": 17262015,
+      "option": 0,
+      "sector": "Advanced Technology"
+    },
+    {
+      "company": "Aclaris Therapeutics, Inc.",
+      "total": 1445135,
+      "equity_pct": 9138.6,
+      "stock": 132065000,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "Actinium Pharmaceuticals, Inc.",
+      "total": 1173200,
+      "equity_pct": 3259.7,
+      "stock": 38243000,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "ADIAL PHARMACEUTICALS, INC.",
+      "total": 976339,
+      "equity_pct": 1351.7,
+      "stock": 13197000,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "AGIOS PHARMACEUTICALS, INC.",
+      "total": 6776359,
+      "equity_pct": 191.4,
+      "stock": 12973276,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "Aldeyra Therapeutics, Inc.",
+      "total": 3931645,
+      "equity_pct": 153.9,
+      "stock": 6050349,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    },
+    {
+      "company": "Akebia Therapeutics, Inc.",
+      "total": 4260114,
+      "equity_pct": 130.7,
+      "stock": 5569779,
+      "option": 0,
+      "sector": "Pharmaceutical Preparations"
+    }
+  ]
+}

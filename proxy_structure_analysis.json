@@ -1,0 +1,112 @@
+[
+  {
+    "company": "CrowdStrike",
+    "cik": "0001535527",
+    "filing_date": "2025-05-06",
+    "has_table_tags": false,
+    "has_tr_tags": false,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 0,
+    "total_chars": 22000
+  },
+  {
+    "company": "Meta",
+    "cik": "0001326801",
+    "filing_date": "2025-04-17",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 3,
+    "total_chars": 22000
+  },
+  {
+    "company": "Amazon",
+    "cik": "0001018724",
+    "filing_date": "2025-04-10",
+    "has_table_tags": false,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 0,
+    "total_chars": 22000
+  },
+  {
+    "company": "Microsoft",
+    "cik": "0000789019",
+    "filing_date": "2025-10-21",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 1,
+    "total_chars": 22000
+  },
+  {
+    "company": "Tesla",
+    "cik": "0001288776",
+    "filing_date": "2015-04-23",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 10,
+    "total_chars": 22000
+  },
+  {
+    "company": "Alphabet",
+    "cik": "0001652044",
+    "filing_date": "2025-04-25",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 3,
+    "total_chars": 22000
+  },
+  {
+    "company": "NVIDIA",
+    "cik": "0001318605",
+    "filing_date": "2025-09-17",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 1,
+    "total_chars": 22000
+  },
+  {
+    "company": "Moderna",
+    "cik": "0001467623",
+    "filing_date": "2025-04-15",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 1,
+    "total_chars": 22000
+  },
+  {
+    "company": "Illumina",
+    "cik": "0001551152",
+    "filing_date": "2025-03-24",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 1,
+    "total_chars": 22000
+  },
+  {
+    "company": "Apple",
+    "cik": "0000320193",
+    "filing_date": "2025-01-10",
+    "has_table_tags": true,
+    "has_tr_tags": true,
+    "has_div_table_row": false,
+    "has_ix_nonfraction": false,
+    "table_count": 5,
+    "total_chars": 22000
+  }
+]

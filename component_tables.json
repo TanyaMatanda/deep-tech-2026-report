@@ -1,0 +1,544 @@
+{
+  "Technology": [
+    {
+      "company": "CISCO SYSTEMS, INC.",
+      "total": 52838751,
+      "salary": 1390000,
+      "bonus": 0,
+      "stock": 45870690,
+      "option": 0,
+      "non_equity": 0,
+      "other": 460637
+    },
+    {
+      "company": "ADVANCED MICRO DEVICES INC",
+      "total": 30996392,
+      "salary": 2056835,
+      "bonus": 0,
+      "stock": 18654655,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "SoFi Technologies, Inc.",
+      "total": 28072183,
+      "salary": 2606170,
+      "bonus": 0,
+      "stock": 64579825,
+      "option": 0,
+      "non_equity": 0,
+      "other": 498665
+    },
+    {
+      "company": "MONOLITHIC POWER SYSTEMS INC",
+      "total": 18979292,
+      "salary": 1786700,
+      "bonus": 0,
+      "stock": 21914905,
+      "option": 0,
+      "non_equity": 768132,
+      "other": 0
+    },
+    {
+      "company": "BrightSpring Health Services, Inc.",
+      "total": 17673893,
+      "salary": 1917970,
+      "bonus": 0,
+      "stock": 20521000,
+      "option": 0,
+      "non_equity": 1842076,
+      "other": 0
+    },
+    {
+      "company": "TERADATA CORP /DE/",
+      "total": 17418309,
+      "salary": 2307880,
+      "bonus": 0,
+      "stock": 6943270,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "BENTLEY SYSTEMS INC",
+      "total": 16418063,
+      "salary": 2927002,
+      "bonus": 0,
+      "stock": 13465407,
+      "option": 0,
+      "non_equity": 3451053,
+      "other": 0
+    },
+    {
+      "company": "MEDICAL PROPERTIES TRUST INC",
+      "total": 16388255,
+      "salary": 2801115,
+      "bonus": 0,
+      "stock": 17144799,
+      "option": 0,
+      "non_equity": 3005335,
+      "other": 0
+    },
+    {
+      "company": "VARONIS SYSTEMS INC",
+      "total": 14502288,
+      "salary": 641900,
+      "bonus": 0,
+      "stock": 20277376,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "Rexford Industrial Realty, Inc.",
+      "total": 13143105,
+      "salary": 917041,
+      "bonus": 285926,
+      "stock": 0,
+      "option": 0,
+      "non_equity": 3253698,
+      "other": 453702
+    }
+  ],
+  "Biotechnology": [
+    {
+      "company": "TG THERAPEUTICS, INC.",
+      "total": 18752897,
+      "salary": 2254350,
+      "bonus": 0,
+      "stock": 91737003,
+      "option": 0,
+      "non_equity": 3933225,
+      "other": 0
+    },
+    {
+      "company": "Jazz Pharmaceuticals plc",
+      "total": 15527464,
+      "salary": 560120,
+      "bonus": 4068950,
+      "stock": 17262015,
+      "option": 0,
+      "non_equity": 4695635,
+      "other": 0
+    },
+    {
+      "company": "IONIS PHARMACEUTICALS INC",
+      "total": 15400343,
+      "salary": 2697612,
+      "bonus": 0,
+      "stock": 453897000,
+      "option": 0,
+      "non_equity": 4066897,
+      "other": 1803424
+    },
+    {
+      "company": "BIOMARIN PHARMACEUTICAL INC",
+      "total": 14853605,
+      "salary": 2421839,
+      "bonus": 0,
+      "stock": 6566982,
+      "option": 0,
+      "non_equity": 1711776,
+      "other": 0
+    },
+    {
+      "company": "IOVANCE BIOTHERAPEUTICS, INC.",
+      "total": 10953192,
+      "salary": 2925794,
+      "bonus": 0,
+      "stock": 7048573,
+      "option": 0,
+      "non_equity": 3258633,
+      "other": 0
+    },
+    {
+      "company": "Celldex Therapeutics, Inc.",
+      "total": 9229165,
+      "salary": 2979068,
+      "bonus": 0,
+      "stock": 0,
+      "option": 0,
+      "non_equity": 725281,
+      "other": 157863
+    },
+    {
+      "company": "ANI PHARMACEUTICALS INC",
+      "total": 8859402,
+      "salary": 2686867,
+      "bonus": 0,
+      "stock": 10815366,
+      "option": 0,
+      "non_equity": 2349641,
+      "other": 0
+    },
+    {
+      "company": "PULSE BIOSCIENCES, INC.",
+      "total": 8720432,
+      "salary": 1305872,
+      "bonus": 0,
+      "stock": 12625697,
+      "option": 0,
+      "non_equity": 0,
+      "other": 473997
+    },
+    {
+      "company": "Zentalis Pharmaceuticals, Inc.",
+      "total": 8188909,
+      "salary": 619342,
+      "bonus": 0,
+      "stock": 165867000,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "Twist Bioscience",
+      "total": 7620611,
+      "salary": 955575,
+      "bonus": 0,
+      "stock": 5849949,
+      "option": 0,
+      "non_equity": 685000,
+      "other": 130087
+    }
+  ],
+  "Energy & Climate": [
+    {
+      "company": "Bloom Energy",
+      "total": 44961745,
+      "salary": 1298695,
+      "bonus": 0,
+      "stock": 39968710,
+      "option": 0,
+      "non_equity": 3755269,
+      "other": 0
+    },
+    {
+      "company": "Enphase Energy",
+      "total": 12630005,
+      "salary": 805193,
+      "bonus": 0,
+      "stock": 6672535,
+      "option": 0,
+      "non_equity": 3357725,
+      "other": 0
+    },
+    {
+      "company": "Enphase Energy, Inc.",
+      "total": 12630005,
+      "salary": 805193,
+      "bonus": 0,
+      "stock": 6672535,
+      "option": 0,
+      "non_equity": 3357725,
+      "other": 0
+    },
+    {
+      "company": "SM Energy Co",
+      "total": 12240662,
+      "salary": 770293,
+      "bonus": 3473519,
+      "stock": 11928971,
+      "option": 0,
+      "non_equity": 3516638,
+      "other": 305989
+    },
+    {
+      "company": "CONSUMERS ENERGY CO",
+      "total": 10401409,
+      "salary": 2768186,
+      "bonus": 0,
+      "stock": 15578999,
+      "option": 0,
+      "non_equity": 3781203,
+      "other": 0
+    },
+    {
+      "company": "OGE ENERGY CORP.",
+      "total": 10128949,
+      "salary": 1374642,
+      "bonus": 0,
+      "stock": 441500000,
+      "option": 0,
+      "non_equity": 1344617,
+      "other": 0
+    },
+    {
+      "company": "GULFPORT ENERGY CORP",
+      "total": 8988358,
+      "salary": 2847532,
+      "bonus": 0,
+      "stock": 16551431,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "PBF Energy Inc.",
+      "total": 8837500,
+      "salary": 2580689,
+      "bonus": 0,
+      "stock": 0,
+      "option": 0,
+      "non_equity": 3997176,
+      "other": 331946
+    },
+    {
+      "company": "ADVANCED ENERGY INDUSTRIES INC",
+      "total": 8761961,
+      "salary": 2972720,
+      "bonus": 0,
+      "stock": 8136164,
+      "option": 0,
+      "non_equity": 2759375,
+      "other": 0
+    },
+    {
+      "company": "Chord Energy Corp",
+      "total": 8179724,
+      "salary": 1130070,
+      "bonus": 0,
+      "stock": 10798062,
+      "option": 0,
+      "non_equity": 3350803,
+      "other": 848627
+    }
+  ],
+  "Cybersecurity": [
+    {
+      "company": "CrowdStrike",
+      "total": 35195300,
+      "salary": 837695,
+      "bonus": 0,
+      "stock": 148504806,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "Varonis",
+      "total": 14502288,
+      "salary": 641900,
+      "bonus": 0,
+      "stock": 20277376,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "Cloudflare",
+      "total": 2081094,
+      "salary": 1669626,
+      "bonus": 0,
+      "stock": 15378722,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "BlackBerry",
+      "total": 1417205,
+      "salary": 2217180,
+      "bonus": 0,
+      "stock": 0,
+      "option": 0,
+      "non_equity": 3686845,
+      "other": 1295625
+    }
+  ],
+  "Advanced Technology": [
+    {
+      "company": "Hims & Hers Health, Inc.",
+      "total": 24609077,
+      "salary": 1476514,
+      "bonus": 0,
+      "stock": 110273117,
+      "option": 0,
+      "non_equity": 0,
+      "other": 126038
+    },
+    {
+      "company": "United parcel service america inc",
+      "total": 24063977,
+      "salary": 1713257,
+      "bonus": 0,
+      "stock": 9185261,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "REPLIGEN CORP",
+      "total": 20304850,
+      "salary": 2239292,
+      "bonus": 0,
+      "stock": 634836884,
+      "option": 0,
+      "non_equity": 1089794,
+      "other": 921139
+    },
+    {
+      "company": "GE HealthCare Technologies Inc.",
+      "total": 19487880,
+      "salary": 2050000,
+      "bonus": 0,
+      "stock": 13412402,
+      "option": 0,
+      "non_equity": 4407205,
+      "other": 0
+    },
+    {
+      "company": "Astrana Health, Inc.",
+      "total": 18242585,
+      "salary": 2843062,
+      "bonus": 2279000,
+      "stock": 16942570,
+      "option": 0,
+      "non_equity": 3644213,
+      "other": 0
+    },
+    {
+      "company": "VRINGO INFRASTRUCTURE INC",
+      "total": 16871121,
+      "salary": 2227258,
+      "bonus": 0,
+      "stock": 32166188,
+      "option": 0,
+      "non_equity": 0,
+      "other": 0
+    },
+    {
+      "company": "INGERSOLL RAND CO",
+      "total": 16720080,
+      "salary": 2949575,
+      "bonus": 0,
+      "stock": 42145967,
+      "option": 0,
+      "non_equity": 4207311,
+      "other": 0
+    },
+    {
+      "company": "BRIDGE PHARMA INC",
+      "total": 15581922,
+      "salary": 2656829,
+      "bonus": 221902,
+      "stock": 6082873,
+      "option": 0,
+      "non_equity": 543347,
+      "other": 261159
+    },
+    {
+      "company": "JAZZ PHARMACEUTICALS INC",
+      "total": 15527464,
+      "salary": 560120,
+      "bonus": 4068950,
+      "stock": 17262015,
+      "option": 0,
+      "non_equity": 4695635,
+      "other": 0
+    },
+    {
+      "company": "IMPRIMIS PHARMACEUTICALS INC",
+      "total": 15400343,
+      "salary": 2697612,
+      "bonus": 0,
+      "stock": 453897000,
+      "option": 0,
+      "non_equity": 4066897,
+      "other": 1803424
+    }
+  ],
+  "Pharmaceutical Preparations": [
+    {
+      "company": "89bio, Inc.",
+      "total": 7619426,
+      "salary": 2469460,
+      "bonus": 3365569,
+      "stock": 0,
+      "option": 0,
+      "non_equity": 4270532,
+      "other": 367079
+    },
+    {
+      "company": "AGIOS PHARMACEUTICALS, INC.",
+      "total": 6776359,
+      "salary": 2462405,
+      "bonus": 0,
+      "stock": 12973276,
+      "option": 0,
+      "non_equity": 3526736,
+      "other": 0
+    },
+    {
+      "company": "Akebia Therapeutics, Inc.",
+      "total": 4260114,
+      "salary": 1428373,
+      "bonus": 0,
+      "stock": 5569779,
+      "option": 0,
+      "non_equity": 1388958,
+      "other": 0
+    },
+    {
+      "company": "Aldeyra Therapeutics, Inc.",
+      "total": 3931645,
+      "salary": 1005859,
+      "bonus": 0,
+      "stock": 6050349,
+      "option": 0,
+      "non_equity": 949776,
+      "other": 0
+    },
+    {
+      "company": "ABEONA THERAPEUTICS INC.",
+      "total": 3506708,
+      "salary": 1622252,
+      "bonus": 0,
+      "stock": 0,
+      "option": 0,
+      "non_equity": 3988235,
+      "other": 1452218
+    },
+    {
+      "company": "ADC Therapeutics SA",
+      "total": 1837628,
+      "salary": 1579197,
+      "bonus": 0,
+      "stock": 0,
+      "option": 0,
+      "non_equity": 4130959,
+      "other": 971549
+    },
+    {
+      "company": "Aclaris Therapeutics, Inc.",
+      "total": 1445135,
+      "salary": 1632066,
+      "bonus": 779312,
+      "stock": 132065000,
+      "option": 0,
+      "non_equity": 1387635,
+      "other": 1348674
+    },
+    {
+      "company": "Actinium Pharmaceuticals, Inc.",
+      "total": 1173200,
+      "salary": 943760,
+      "bonus": 0,
+      "stock": 38243000,
+      "option": 0,
+      "non_equity": 4497044,
+      "other": 581800
+    },
+    {
+      "company": "ADIAL PHARMACEUTICALS, INC.",
+      "total": 976339,
+      "salary": 823533,
+      "bonus": 322161,
+      "stock": 13197000,
+      "option": 0,
+      "non_equity": 0,
+      "other": 352307
+    }
+  ]
+}

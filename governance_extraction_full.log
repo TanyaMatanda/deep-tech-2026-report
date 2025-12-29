@@ -1,0 +1,558 @@
+/Users/tanyamatanda/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+INFO:httpx:HTTP Request: GET https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/companies?select=id%2Ccompany_name%2Ccik%2Cticker_symbol&listing_type=eq.Public&cik=not.is.null&offset=0&limit=1000 "HTTP/2 200 OK"
+INFO:httpx:HTTP Request: GET https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/companies?select=id%2Ccompany_name%2Ccik%2Cticker_symbol&listing_type=eq.Public&cik=not.is.null&offset=1000&limit=1000 "HTTP/2 200 OK"
+INFO:httpx:HTTP Request: GET https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/companies?select=id%2Ccompany_name%2Ccik%2Cticker_symbol&listing_type=eq.Public&cik=not.is.null&offset=2000&limit=1000 "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Eledon Pharmaceuticals, Inc. (CIK: 0001404281)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001404281 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001404281 (Date: 2025-03-20)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Zhengye Biotechnology Holding Ltd (CIK: 0001975641)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001975641
+WARNING:sec_filing_parser:No 10-K found for CIK 0001975641
+INFO:sec_filing_parser:Extracting factors for Bridger Aerospace Group Holdings, Inc. (CIK: 0001941536)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001941536 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001941536 (Date: 2025-03-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Horizon Space Acquisition I Corp. (CIK: 0001946021)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001946021 (Date: 2025-10-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001946021 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Anebulo Pharmaceuticals, Inc. (CIK: 0001815974)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001815974 (Date: 2025-03-06)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001815974 (Date: 2025-09-29)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for GrowGeneration Corp. (CIK: 0001604868)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001604868 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001604868 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for DUKE Robotics Corp. (CIK: 0001638911)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001638911
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001638911 (Date: 2025-03-20)
+INFO:sec_filing_parser:Extracting factors for Semnur Pharmaceuticals, Inc. (CIK: 0001913577)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001913577 (Date: 2025-03-27)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001913577 (Date: 2025-04-02)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for GENESIS ENERGY LP (CIK: 0001022321)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001022321
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001022321 (Date: 2025-03-03)
+INFO:sec_filing_parser:Extracting factors for Mirum Pharmaceuticals, Inc. (CIK: 0001759425)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001759425 (Date: 2025-04-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001759425 (Date: 2025-02-26)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for INTEGRATED BIOPHARMA INC (CIK: 0001016504)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001016504 (Date: 2025-10-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001016504 (Date: 2025-09-23)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Dragonfly Energy Holdings Corp. (CIK: 0001847986)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001847986 (Date: 2025-09-15)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001847986 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ANFIELD ENERGY INC. (CIK: 0001519469)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001519469
+WARNING:sec_filing_parser:No 10-K found for CIK 0001519469
+INFO:sec_filing_parser:Extracting factors for TuHURA Biosciences, Inc./NV (CIK: 0001498382)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001498382 (Date: 2024-05-17)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001498382 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Anixa Biosciences Inc (CIK: 0000715446)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000715446 (Date: 2025-02-06)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000715446 (Date: 2025-01-10)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Energy Services of America CORP (CIK: 0001357971)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001357971 (Date: 2025-01-13)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001357971 (Date: 2025-12-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Protalix BioTherapeutics, Inc. (CIK: 0001006281)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001006281 (Date: 2025-04-30)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001006281 (Date: 2025-03-17)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Kolibri Global Energy Inc. (CIK: 0001477081)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001477081
+WARNING:sec_filing_parser:No 10-K found for CIK 0001477081
+INFO:sec_filing_parser:Extracting factors for NovaBay Pharmaceuticals, Inc. (CIK: 0001389545)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001389545 (Date: 2025-09-23)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001389545 (Date: 2025-04-02)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Atea Pharmaceuticals, Inc. (CIK: 0001593899)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001593899 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001593899 (Date: 2025-03-06)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for TIGO ENERGY, INC. (CIK: 0001855447)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001855447 (Date: 2025-04-04)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001855447 (Date: 2025-03-20)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Epsilon Energy Ltd. (CIK: 0001726126)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001726126 (Date: 2025-04-22)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001726126 (Date: 2025-03-19)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for SURF AIR MOBILITY INC. (CIK: 0001936224)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001936224 (Date: 2025-05-13)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001936224 (Date: 2025-03-21)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Telomir Pharmaceuticals, Inc. (CIK: 0001971532)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001971532
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001971532 (Date: 2025-02-04)
+INFO:sec_filing_parser:Extracting factors for Gain Therapeutics, Inc. (CIK: 0001819411)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001819411 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001819411 (Date: 2025-03-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Invesco DB Energy Fund (CIK: 0001383062)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001383062 (Date: 2015-01-23)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001383062 (Date: 2025-02-26)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Bioceres Crop Solutions Corp. (CIK: 0001769484)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001769484
+WARNING:sec_filing_parser:No 10-K found for CIK 0001769484
+INFO:sec_filing_parser:Extracting factors for LakeShore Biopharma Co., Ltd. (CIK: 0001946399)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001946399
+WARNING:sec_filing_parser:No 10-K found for CIK 0001946399
+INFO:sec_filing_parser:Extracting factors for SPRUCE BIOSCIENCES, INC. (CIK: 0001683553)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001683553 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001683553 (Date: 2025-04-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for CO2 Energy Transition Corp. (CIK: 0001956648)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001956648
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001956648 (Date: 2025-03-31)
+INFO:sec_filing_parser:Extracting factors for KIORA PHARMACEUTICALS INC (CIK: 0001372514)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001372514 (Date: 2025-04-30)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001372514 (Date: 2025-03-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for QS Energy, Inc. (CIK: 0001103795)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001103795 (Date: 2024-12-27)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001103795 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Orgenesis Inc. (CIK: 0001460602)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001460602 (Date: 2024-05-06)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001460602 (Date: 2024-04-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for THAI YEE HONG TECHNOLOGY HOLDINGS PTE LTD (CIK: 0002081842)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002081842
+WARNING:sec_filing_parser:No 10-K found for CIK 0002081842
+INFO:sec_filing_parser:Extracting factors for HOUSTON AMERICAN ENERGY CORP (CIK: 0001156041)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001156041 (Date: 2025-11-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001156041 (Date: 2025-02-24)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for CBAK Energy Technology, Inc. (CIK: 0001117171)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001117171 (Date: 2025-11-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001117171 (Date: 2025-03-17)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for WORLD HEALTH ENERGY HOLDINGS, INC. (CIK: 0000943535)
+WARNING:sec_filing_parser:Could not retrieve DEF 14A from https://www.sec.gov/Archives/edgar/data/943535/000095012300005875/0001.txt (Status: 404)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000943535 (Date: 2025-04-15)
+INFO:sec_filing_parser:Extracting factors for AltEnergy Acquisition Corp (CIK: 0001852016)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001852016 (Date: 2025-04-11)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001852016 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Healthcare AI Acquisition Corp. (CIK: 0001848861)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001848861 (Date: 2025-09-17)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001848861 (Date: 2025-03-03)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for AERO ENERGY Ltd (CIK: 0001905688)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001905688
+WARNING:sec_filing_parser:No 10-K found for CIK 0001905688
+INFO:sec_filing_parser:Extracting factors for MADRIGAL PHARMACEUTICALS, INC. (CIK: 0001157601)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001157601 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001157601 (Date: 2025-02-26)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Baird Medical Investment Holdings Ltd (CIK: 0001982444)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001982444
+WARNING:sec_filing_parser:No 10-K found for CIK 0001982444
+INFO:sec_filing_parser:Extracting factors for MAMMOTH ENERGY SERVICES, INC. (CIK: 0001679268)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001679268 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001679268 (Date: 2025-03-07)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Leishen Energy Holding Co., Ltd. (CIK: 0001985139)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001985139
+WARNING:sec_filing_parser:No 10-K found for CIK 0001985139
+INFO:sec_filing_parser:Extracting factors for ImageneBio, Inc. (CIK: 0001835579)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001835579 (Date: 2024-04-26)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001835579 (Date: 2025-03-06)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Paranovus Entertainment Technology Ltd. (CIK: 0001751876)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001751876
+WARNING:sec_filing_parser:No 10-K found for CIK 0001751876
+INFO:sec_filing_parser:Extracting factors for SCIENTIFIC ENERGY, INC (CIK: 0001276531)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001276531 (Date: 2010-09-13)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001276531 (Date: 2025-05-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Capstone Green Energy Holdings, Inc. (CIK: 0001009759)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001009759 (Date: 2025-07-02)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001009759 (Date: 2025-06-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Aimei Health Technology Co., Ltd. (CIK: 0001979005)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001979005 (Date: 2025-11-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001979005 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Senti Biosciences, Inc. (CIK: 0001854270)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001854270 (Date: 2025-04-30)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001854270 (Date: 2025-03-20)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ORION ENERGY SYSTEMS, INC. (CIK: 0001409375)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001409375 (Date: 2025-07-07)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001409375 (Date: 2025-06-26)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for BIOMARIN PHARMACEUTICAL INC (CIK: 0001048477)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001048477 (Date: 2025-04-08)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001048477 (Date: 2025-02-24)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Blue Hat Interactive Entertainment Technology (CIK: 0001759136)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001759136
+WARNING:sec_filing_parser:No 10-K found for CIK 0001759136
+INFO:sec_filing_parser:Extracting factors for VOC Energy Trust (CIK: 0001505413)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001505413
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001505413 (Date: 2025-03-20)
+INFO:sec_filing_parser:Extracting factors for GENERAC HOLDINGS INC. (CIK: 0001474735)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001474735 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001474735 (Date: 2025-02-19)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Sunrise New Energy Co., Ltd. (CIK: 0001780731)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001780731
+WARNING:sec_filing_parser:No 10-K found for CIK 0001780731
+INFO:sec_filing_parser:Extracting factors for Vertical Aerospace Ltd. (CIK: 0001867102)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001867102
+WARNING:sec_filing_parser:No 10-K found for CIK 0001867102
+INFO:sec_filing_parser:Extracting factors for PORTLAND GENERAL ELECTRIC CO /OR/ (CIK: 0000784977)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000784977 (Date: 2025-03-05)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000784977 (Date: 2025-02-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for BioScience Health Innovations, Inc. (CIK: 0001784440)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001784440
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001784440 (Date: 2025-03-13)
+INFO:sec_filing_parser:Extracting factors for BioXcel Therapeutics, Inc. (CIK: 0001720893)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001720893 (Date: 2025-11-12)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001720893 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Centessa Pharmaceuticals plc (CIK: 0001847903)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001847903 (Date: 2025-05-06)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001847903 (Date: 2025-03-24)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Rain Enhancement Technologies Holdco, Inc. (CIK: 0002028293)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002028293
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0002028293 (Date: 2025-04-16)
+INFO:sec_filing_parser:Extracting factors for ACORN ENERGY, INC. (CIK: 0000880984)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000880984 (Date: 2025-08-06)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000880984 (Date: 2025-03-06)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Bimergen Energy Corp (CIK: 0001066764)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001066764 (Date: 2020-12-15)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001066764 (Date: 2025-05-30)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for US ENERGY CORP (CIK: 0000101594)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000101594 (Date: 2025-04-17)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000101594 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Ruanyun Edai Technology Inc. (CIK: 0001873454)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001873454
+WARNING:sec_filing_parser:No 10-K found for CIK 0001873454
+INFO:sec_filing_parser:Extracting factors for CHIPOTLE MEXICAN GRILL INC (CIK: 0001058090)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001058090 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001058090 (Date: 2025-02-05)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for KLX Energy Services Holdings, Inc. (CIK: 0001738827)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001738827 (Date: 2025-03-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001738827 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for CollPlant Biotechnologies Ltd (CIK: 0001631487)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001631487
+WARNING:sec_filing_parser:No 10-K found for CIK 0001631487
+INFO:sec_filing_parser:Extracting factors for Sonnet BioTherapeutics Holdings, Inc. (CIK: 0001106838)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001106838 (Date: 2025-08-26)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001106838 (Date: 2025-12-16)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Indonesia Energy Corp Ltd (CIK: 0001757840)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001757840
+WARNING:sec_filing_parser:No 10-K found for CIK 0001757840
+INFO:sec_filing_parser:Extracting factors for Barinthus Biotherapeutics plc. (CIK: 0001828185)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001828185 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001828185 (Date: 2025-03-20)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ScanTech AI Systems Inc. (CIK: 0001994624)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001994624 (Date: 2025-10-24)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001994624 (Date: 2025-05-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for GeneDx Holdings Corp. (CIK: 0001818331)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001818331 (Date: 2025-04-30)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001818331 (Date: 2025-02-20)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Koil Energy Solutions, Inc. (CIK: 0001110607)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001110607
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001110607 (Date: 2025-04-15)
+INFO:sec_filing_parser:Extracting factors for ACADIA PHARMACEUTICALS INC (CIK: 0001070494)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001070494 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001070494 (Date: 2025-02-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for BLUE DOLPHIN ENERGY CO (CIK: 0000793306)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000793306 (Date: 2025-05-16)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000793306 (Date: 2025-04-01)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Nine Energy Service, Inc. (CIK: 0001532286)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001532286 (Date: 2025-03-06)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001532286 (Date: 2025-03-06)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for SILVERTON ENERGY, INC. (CIK: 0001508786)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001508786
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001508786 (Date: 2016-02-24)
+INFO:sec_filing_parser:Extracting factors for Tarsus Pharmaceuticals, Inc. (CIK: 0001819790)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001819790 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001819790 (Date: 2025-02-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for MEXCO ENERGY CORP (CIK: 0000066418)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000066418 (Date: 2025-07-23)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000066418 (Date: 2025-06-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for TMD Energy Ltd (CIK: 0002009714)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002009714
+WARNING:sec_filing_parser:No 10-K found for CIK 0002009714
+INFO:sec_filing_parser:Extracting factors for 60 DEGREES PHARMACEUTICALS, INC. (CIK: 0001946563)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001946563 (Date: 2025-08-27)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001946563 (Date: 2025-03-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for EyePoint Pharmaceuticals, Inc. (CIK: 0001314102)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001314102 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001314102 (Date: 2025-03-06)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Energys Group Ltd (CIK: 0001971828)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001971828
+WARNING:sec_filing_parser:No 10-K found for CIK 0001971828
+INFO:sec_filing_parser:Extracting factors for Cellectar Biosciences, Inc. (CIK: 0001279704)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001279704 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001279704 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for PUMA BIOTECHNOLOGY, INC. (CIK: 0001401667)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001401667 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001401667 (Date: 2025-02-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Turbo Energy, S.A. (CIK: 0001963439)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001963439
+WARNING:sec_filing_parser:No 10-K found for CIK 0001963439
+INFO:sec_filing_parser:Extracting factors for ENERGY FOCUS, INC/DE (CIK: 0000924168)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000924168 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000924168 (Date: 2025-03-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Robin Energy Ltd. (CIK: 0002039060)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002039060
+WARNING:sec_filing_parser:No 10-K found for CIK 0002039060
+INFO:sec_filing_parser:Extracting factors for Artificial Intelligence Technology Solutions Inc. (CIK: 0001498148)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001498148
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001498148 (Date: 2025-05-29)
+INFO:sec_filing_parser:Extracting factors for Oric Pharmaceuticals, Inc. (CIK: 0001796280)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001796280 (Date: 2025-04-23)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001796280 (Date: 2025-02-18)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Horizon Space Acquisition I Corp. (CIK: 0001946021)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001946021 (Date: 2025-10-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001946021 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Zentalis Pharmaceuticals, Inc. (CIK: 0001725160)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001725160 (Date: 2025-04-30)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001725160 (Date: 2025-03-26)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Huachen AI Parking Management Technology Holding Co., Ltd (CIK: 0001958399)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001958399
+WARNING:sec_filing_parser:No 10-K found for CIK 0001958399
+INFO:sec_filing_parser:Extracting factors for Urano Energy Corp. (CIK: 0001834607)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001834607
+WARNING:sec_filing_parser:No 10-K found for CIK 0001834607
+INFO:sec_filing_parser:Extracting factors for Raphael Pharmaceutical Inc. (CIK: 0001415397)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001415397
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001415397 (Date: 2025-03-31)
+INFO:sec_filing_parser:Extracting factors for Argentina Lithium & Energy Corp. (CIK: 0001689448)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001689448
+WARNING:sec_filing_parser:No 10-K found for CIK 0001689448
+INFO:sec_filing_parser:Extracting factors for CAMBER ENERGY, INC. (CIK: 0001309082)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001309082 (Date: 2023-10-18)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001309082 (Date: 2025-05-12)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Sensei Biotherapeutics, Inc. (CIK: 0001829802)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001829802 (Date: 2025-04-11)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001829802 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Maison Solutions Inc. (CIK: 0001892292)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001892292 (Date: 2025-04-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001892292 (Date: 2025-08-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for URZ3 ENERGY CORP. (CIK: 0001398713)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001398713
+WARNING:sec_filing_parser:No 10-K found for CIK 0001398713
+INFO:sec_filing_parser:Extracting factors for CASI Pharmaceuticals, Inc. (CIK: 0001962738)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001962738
+WARNING:sec_filing_parser:No 10-K found for CIK 0001962738
+INFO:sec_filing_parser:Extracting factors for CRESCENT BIOPHARMA, INC. (CIK: 0001253689)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001253689 (Date: 2024-04-01)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001253689 (Date: 2025-02-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Estrella Immunopharma, Inc. (CIK: 0001844417)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001844417 (Date: 2023-06-16)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001844417 (Date: 2024-09-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Clean Energy Technologies, Inc. (CIK: 0001329606)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001329606 (Date: 2025-04-15)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001329606 (Date: 2025-04-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Bolt Biotherapeutics, Inc. (CIK: 0001641281)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001641281 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001641281 (Date: 2025-03-24)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Acurx Pharmaceuticals, Inc. (CIK: 0001736243)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001736243 (Date: 2025-08-04)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001736243 (Date: 2025-03-17)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Top End Energy Ltd/ADR (CIK: 0002075349)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002075349
+WARNING:sec_filing_parser:No 10-K found for CIK 0002075349
+INFO:sec_filing_parser:Extracting factors for BioVaxys Technology Corp. (CIK: 0001882559)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001882559
+WARNING:sec_filing_parser:No 10-K found for CIK 0001882559
+INFO:sec_filing_parser:Extracting factors for LIGAND PHARMACEUTICALS INC (CIK: 0000886163)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000886163 (Date: 2025-04-22)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000886163 (Date: 2025-02-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for INTELLIGENT BIO SOLUTIONS INC. (CIK: 0001725430)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001725430 (Date: 2025-09-19)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001725430 (Date: 2025-08-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for WASTE ENERGY CORP. (CIK: 0001515139)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001515139 (Date: 2023-05-09)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001515139 (Date: 2025-05-12)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Royale Energy, Inc. (CIK: 0001694617)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001694617 (Date: 2023-10-11)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001694617 (Date: 2025-04-09)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for BION ENVIRONMENTAL TECHNOLOGIES INC (CIK: 0000875729)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000875729 (Date: 2022-02-07)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000875729 (Date: 2025-09-29)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Advanced Biomed Inc. (CIK: 0001941029)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001941029
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001941029 (Date: 2025-10-08)
+INFO:sec_filing_parser:Extracting factors for Silo Pharma, Inc. (CIK: 0001514183)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001514183 (Date: 2025-09-05)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001514183 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Park Ha Biological Technology Co., Ltd. (CIK: 0001986247)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001986247
+WARNING:sec_filing_parser:No 10-K found for CIK 0001986247
+INFO:sec_filing_parser:Extracting factors for Aspire Biopharma Holdings, Inc. (CIK: 0001847345)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001847345 (Date: 2025-09-23)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001847345 (Date: 2025-04-07)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ANI PHARMACEUTICALS INC (CIK: 0001023024)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001023024 (Date: 2025-04-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001023024 (Date: 2025-02-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Guardian Pharmacy Services, Inc. (CIK: 0001802255)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001802255 (Date: 2025-03-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001802255 (Date: 2025-03-26)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Canadian Solar Inc. (CIK: 0001375877)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001375877
+WARNING:sec_filing_parser:No 10-K found for CIK 0001375877
+INFO:sec_filing_parser:Extracting factors for CUMBERLAND PHARMACEUTICALS INC (CIK: 0001087294)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001087294 (Date: 2025-03-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001087294 (Date: 2025-03-07)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Hillcrest Energy Technologies Ltd. (CIK: 0001418149)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001418149
+WARNING:sec_filing_parser:No 10-K found for CIK 0001418149
+INFO:sec_filing_parser:Extracting factors for CN ENERGY GROUP. INC. (CIK: 0001780785)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001780785
+WARNING:sec_filing_parser:No 10-K found for CIK 0001780785
+INFO:sec_filing_parser:Extracting factors for bioAffinity Technologies, Inc. (CIK: 0001712762)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001712762 (Date: 2025-11-07)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001712762 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for PROCEPT BioRobotics Corp (CIK: 0001588978)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001588978 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001588978 (Date: 2025-02-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for New Zealand Energy Corp. (CIK: 0001509705)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001509705
+WARNING:sec_filing_parser:No 10-K found for CIK 0001509705
+INFO:sec_filing_parser:Extracting factors for Syndax Pharmaceuticals Inc (CIK: 0001395937)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001395937 (Date: 2025-04-01)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001395937 (Date: 2025-03-03)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ARROWHEAD PHARMACEUTICALS, INC. (CIK: 0000879407)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0000879407 (Date: 2025-01-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0000879407 (Date: 2025-11-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Theravance Biopharma, Inc. (CIK: 0001583107)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001583107 (Date: 2025-04-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001583107 (Date: 2025-03-07)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Anbio Biotechnology (CIK: 0001982708)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001982708
+WARNING:sec_filing_parser:No 10-K found for CIK 0001982708
+INFO:sec_filing_parser:Extracting factors for Day One Biopharmaceuticals, Inc. (CIK: 0001845337)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001845337 (Date: 2025-04-11)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001845337 (Date: 2025-02-25)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ArriVent BioPharma, Inc. (CIK: 0001868279)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001868279 (Date: 2025-04-28)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001868279 (Date: 2025-03-03)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ARS Pharmaceuticals, Inc. (CIK: 0001671858)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001671858 (Date: 2025-04-29)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001671858 (Date: 2025-03-20)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for RIGEL PHARMACEUTICALS INC (CIK: 0001034842)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001034842 (Date: 2025-04-10)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001034842 (Date: 2025-03-04)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Vir Biotechnology, Inc. (CIK: 0001706431)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001706431 (Date: 2025-04-17)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001706431 (Date: 2025-02-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Arbutus Biopharma Corp (CIK: 0001447028)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001447028 (Date: 2025-04-04)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001447028 (Date: 2025-03-27)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for aTYR PHARMA INC (CIK: 0001339970)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001339970 (Date: 2025-03-19)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001339970 (Date: 2025-03-13)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for OKYO Pharma Ltd (CIK: 0001849296)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001849296
+WARNING:sec_filing_parser:No 10-K found for CIK 0001849296
+INFO:sec_filing_parser:Extracting factors for PMV Pharmaceuticals, Inc. (CIK: 0001699382)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001699382 (Date: 2025-04-25)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001699382 (Date: 2025-03-03)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for NRX Pharmaceuticals, Inc. (CIK: 0001719406)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001719406 (Date: 2024-09-05)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001719406 (Date: 2025-03-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for ABVC BIOPHARMA, INC. (CIK: 0001173313)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001173313 (Date: 2025-05-16)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001173313 (Date: 2025-04-15)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Nasus Pharma Ltd (CIK: 0002029039)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0002029039
+WARNING:sec_filing_parser:No 10-K found for CIK 0002029039
+INFO:sec_filing_parser:Extracting factors for Xenetic Biosciences, Inc. (CIK: 0001534525)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001534525 (Date: 2025-10-31)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001534525 (Date: 2025-03-18)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Kaival Brands Innovations Group, Inc. (CIK: 0001762239)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001762239 (Date: 2025-10-07)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001762239 (Date: 2025-02-10)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for MIRA PHARMACEUTICALS, INC. (CIK: 0001904286)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001904286 (Date: 2024-07-26)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001904286 (Date: 2025-03-28)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Maxeon Solar Technologies, Ltd. (CIK: 0001796898)
+WARNING:sec_filing_parser:No DEF 14A found for CIK 0001796898
+WARNING:sec_filing_parser:No 10-K found for CIK 0001796898
+INFO:sec_filing_parser:Extracting factors for SusGlobal Energy Corp. (CIK: 0001652539)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001652539 (Date: 2022-03-01)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001652539 (Date: 2025-05-14)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for SolarMax Technology, Inc. (CIK: 0001519472)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001519472 (Date: 2025-10-14)
+INFO:sec_filing_parser:✓ Found 10-K filing for CIK 0001519472 (Date: 2025-03-31)
+INFO:httpx:HTTP Request: POST https://mpabbijfgrmqiqnysiwf.supabase.co/rest/v1/board_composition_annual?on_conflict=company_id%2C+fiscal_year "HTTP/2 200 OK"
+INFO:sec_filing_parser:Extracting factors for Cue Biopharma, Inc. (CIK: 0001645460)
+INFO:sec_filing_parser:✓ Found DEF 14A filing for CIK 0001645460 (Date: 2025-04-25)

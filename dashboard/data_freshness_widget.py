@@ -11,7 +11,7 @@ import pandas as pd
 def render_data_freshness(supabase):
     """Display data freshness indicators"""
     
-    st.markdown("### 📊 Data Freshness")
+    st.markdown("### Data Freshness")
     
     try:
         # Check latest governance data update
@@ -35,21 +35,20 @@ def render_data_freshness(supabase):
         if poly_result.data:
             last_update = pd.to_datetime(poly_result.data[0]['last_updated'])
             time_ago = datetime.now() - last_update
-            
             if time_ago.total_seconds() < 3600:
                 freshness = f"{int(time_ago.total_seconds() / 60)}m ago"
-                color = "🟢"
+                color = ""
             elif time_ago.total_seconds() < 86400:
                 freshness = f"{int(time_ago.total_seconds() / 3600)}h ago"
-                color = "🟢"
+                color = ""
             elif time_ago.days < 7:
                 freshness = f"{time_ago.days}d ago"
-                color = "🟡"
+                color = ""
             else:
                 freshness = f"{time_ago.days}d ago"
-                color = "🔴"
+                color = ""
             
-            st.caption(f"**Political Risks**: {color} Updated {freshness}")
+            st.caption(f"**Political Risks**: Updated {freshness}")
         
         # Check latest news
         news_result = supabase.table('governance_news')\

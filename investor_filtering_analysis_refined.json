@@ -1,0 +1,16 @@
+{
+  "total_companies": 997,
+  "distribution": {
+    "4": 533,
+    "3": 198,
+    "2": 184,
+    "1": 78,
+    "0": 4
+  },
+  "passes_5_or_6": 0,
+  "passes_4_or_more": 533,
+  "pct_5_plus": 0.0,
+  "pct_4_plus": 53.46038114343029,
+  "interpretation": "8-12% likely refers to companies passing 5+ out of 6 investor types",
+  "example_companies_5_plus": []
+}

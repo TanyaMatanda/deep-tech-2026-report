@@ -1,0 +1,4 @@
+DEBUG: Analyzing 285 directors.
+DEBUG: Sample expertise: [['Quantum and Photonics', 'Technology'], ['Quantum Computing', 'Trapped Ion Technology', 'Engineering'], ['SaaS', 'Data Science', 'Cybersecurity'], ['Quantum and Photonics', 'Technology'], ['Artificial Intelligence', 'Cloud Computing']]
+DEBUG: Found 75 tech experts.
+DEBUG: Boards with tech experts: 23 / 95816

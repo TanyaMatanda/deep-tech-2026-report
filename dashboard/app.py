@@ -7,7 +7,7 @@ import os
 import base64
 
 # Page Config
-st.set_page_config(page_title="Deep Tech Governance 2026", layout="wide", page_icon="📊")
+st.set_page_config(page_title="Deep Tech Governance 2026", layout="wide")
 
 # --- McKinsey-Style Design System ---
 MCKINSEY_BLUE = "#051c2c"
@@ -111,7 +111,7 @@ if os.path.exists(pdf_path):
     with open(pdf_path, "rb") as f:
         file_bytes = f.read()
     st.sidebar.download_button(
-        label="📄 Download Full Report (PDF)",
+        label="Download Full Report (PDF)",
         data=file_bytes,
         file_name="Deep_Tech_Proxy_Season_2026_What_Should_You_Know.pdf",
         mime="application/pdf"
@@ -120,7 +120,7 @@ elif os.path.exists(html_path):
     with open(html_path, "r") as f:
         file_bytes = f.read()
     st.sidebar.download_button(
-        label="🌐 Download Full Report (HTML)",
+        label="Download Full Report (HTML)",
         data=file_bytes,
         file_name="Deep_Tech_2026_Report.html",
         mime="text/html",
@@ -207,7 +207,7 @@ if page == "Executive Summary":
     
     st.divider()
     
-    with st.expander("ℹ️ Definitions & Limitations"):
+    with st.expander("Definitions & Limitations"):
         st.markdown("""
         **Definitions:**
         *   **Diversity:** Measured as the percentage of board directors who are women.
@@ -483,7 +483,7 @@ elif page == "Sector Deep Dives":
     
     # AI Washing Alert
     if sec_data.get('ai_wash_pct', 0) > 0:
-        st.warning(f"⚠️ **AI Washing Risk:** {sec_data['ai_wash_pct']}% of companies in this sector claim AI status but have **zero patents**.")
+        st.warning(f"**AI Washing Risk:** {sec_data['ai_wash_pct']}% of companies in this sector claim AI status but have **zero patents**.")
 
     st.divider()
     
@@ -685,7 +685,7 @@ elif page == "Jurisdictional Analysis":
     ]
     
     for item in roadmap:
-        with st.expander(f"📅 {item['Date']}: {item['Regulation']}"):
+        with st.expander(f"{item['Date']}: {item['Regulation']}"):
             st.write(item['Impact'])
             st.info("**Strategic Affect:** Companies must audit their AI pipelines and internal control frameworks 6-12 months in advance to avoid non-compliance penalties.")
 

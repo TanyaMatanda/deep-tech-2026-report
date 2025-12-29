@@ -1,0 +1,1055 @@
+{
+  "total_selected": 145,
+  "target": 1000,
+  "us_distribution": {
+    "Technology": 220,
+    "null": 17,
+    "Biotechnology": 5,
+    "Pharmaceutical Preparations": 5,
+    "Energy & Climate": 4,
+    "Biological Products": 3,
+    "Electronic Computers": 2,
+    "Semiconductors": 2,
+    "Advanced Technology": 1,
+    "Guided Missiles & Space Vehicles": 1,
+    "Prepackaged Software": 1,
+    "Cloud Infrastructure": 1,
+    "Quantum Computing": 1,
+    "AI & Machine Learning": 1
+  },
+  "canadian_targets": {
+    "Technology": 833,
+    "null": 64,
+    "Biotechnology": 18,
+    "Pharmaceutical Preparations": 18,
+    "Energy & Climate": 15,
+    "Biological Products": 11,
+    "Electronic Computers": 7,
+    "Semiconductors": 7,
+    "Advanced Technology": 3,
+    "Guided Missiles & Space Vehicles": 3,
+    "Prepackaged Software": 3,
+    "Cloud Infrastructure": 3,
+    "Quantum Computing": 3,
+    "AI & Machine Learning": 3
+  },
+  "company_ids": [
+    "dfbbd23b-0fda-466a-a5f6-1cfa3da8f678",
+    "59b6ebd0-47c0-40a7-b914-e9c9086a7fa1",
+    "fb5d1e98-b929-46e0-aec1-665655f71d48",
+    "85e04283-bcbb-40b5-a9ca-845e39f65e11",
+    "19ed2ccc-4bcb-4d94-957b-03eabfdbdb45",
+    "5d38008d-3c6c-4220-b960-9ebe27a622dc",
+    "c1c333c4-856d-4786-8665-fca0d53b1719",
+    "7c51304b-2bda-4dcb-ad3c-aa93df04fd61",
+    "df1698b0-5652-4633-9e42-5652ef21178e",
+    "6aece4fb-03b9-4b04-88e4-fa98972fc873",
+    "43e57211-5d29-4828-8ffa-84ed6c479678",
+    "ccae5ab4-0198-41eb-b632-aff9b2f18864",
+    "0dd0b4b4-3e89-41ea-a296-37e82ce5ba53",
+    "a211dd66-ba19-4923-b2b9-ba07c921a412",
+    "1025f7dd-80bb-46bc-9de5-2fa2b8ba769f",
+    "75db769d-930b-4070-a709-6a2dc8032de8",
+    "b15541c3-8299-48f0-8b79-6a838f176dc9",
+    "2cc2c917-e1d5-4b4f-835e-cadec63fc6ba",
+    "45489039-cbd6-4817-a05d-66b67012c387",
+    "fd60b0f5-1099-42ce-b793-506d5632edc9",
+    "5cb4841d-720e-48d4-ac35-5dab9eabe798",
+    "4e5141e0-1646-459f-84d4-ef2671b12e83",
+    "fd7c41f5-0c7c-4f1a-9cb5-9ee862c34a71",
+    "5a618058-0dff-4f66-ac07-590c47b014cd",
+    "a0d55c86-40c4-4888-9427-6b1ea19f2fad",
+    "34af1672-c56a-4e19-a4d1-61c0b2ac0e70",
+    "81a23588-06b0-4895-a20a-f8fb62b17006",
+    "ca9db559-0bfa-4530-913e-18a41126af09",
+    "de89acf6-c8b4-4bfc-981a-d994aa0fb087",
+    "4cc8b654-2730-45bd-b75b-06a1eb0bd040",
+    "3a2e0d23-a3e9-498a-8154-1e445ce22717",
+    "0c7ee861-5136-400b-9f39-6635404ed0e3",
+    "0ef4885f-ce3e-4a55-a91b-c7ab3899f9f1",
+    "064b3ed4-8c02-49c0-b257-63f2d7a9f63e",
+    "e6be069d-33f3-44dc-8a96-c65afcd18aba",
+    "617e08de-4f06-43a9-9f08-74da0ab95c2c",
+    "6a22c696-8f7b-469d-80a0-810d9e5bc875",
+    "384ed72d-7d12-4c21-bccb-4d656e36ac9c",
+    "ff16a508-22e4-433b-b586-b1ad294d5658",
+    "e0d74400-56b8-4598-a772-1da0c6b92648",
+    "0c503109-d0e2-4873-9a4b-ee6faf437e83",
+    "7dd1116d-867f-4f42-b5f3-76df02b8b30f",
+    "a4044ee8-4e3b-4387-b4bb-7984a2030cbf",
+    "4c22ae26-f4c6-4bf6-ad03-44a50dde2be1",
+    "ac9edce7-6985-4516-a257-c8e7eb16d6a5",
+    "701e0349-b535-4ae4-a000-7170ec10a813",
+    "2a9a3ec0-bccf-4d22-8ab6-41867fe5c657",
+    "b25c11ec-d2a4-4551-a58e-34480b4cb4cc",
+    "a5c728c4-c95e-4f86-bd34-ad932d717e4f",
+    "f84774f9-046b-49dd-bb2d-7302fa84b0f1",
+    "8a6a157f-98b4-43b3-b022-bf332d78be89",
+    "c49d7657-0a8e-4cde-b348-1c73befe70cf",
+    "8924b679-5a05-49ca-8f29-13d217134725",
+    "2fb7ea73-cf57-4528-9113-80d9f9dc5a36",
+    "dc5b8a3a-e48c-457c-b10a-ccbe077545be",
+    "feb77b35-9f53-4ca4-a717-35cb8d29bd80",
+    "b51e8e98-0415-4f5b-a22e-791f5f320c6c",
+    "81aa5071-df8c-4d8b-a74c-63ee36a6bcfc",
+    "94404e5d-841c-45d9-a62c-12783eb69c90",
+    "d7711920-aefb-44f2-9410-cc833b007c67",
+    "0f606343-36d8-440a-b32d-01ad04ae68b3",
+    "3780eb45-e374-41dc-bdb5-bb9217cb300f",
+    "bcb4f3a8-5e40-4b2e-bed4-2033e0d34492",
+    "7578b15d-bdb9-4e6c-8ced-009017ed10f6",
+    "51fc378a-b2d3-42b5-a280-af2829ed67dc",
+    "f4ac359a-d56a-4af1-8da0-de1cba6f3fc4",
+    "84d08040-bb8d-4afc-a85f-19ce9959caba",
+    "689fe1ee-2f22-46d8-bc30-c7e291652e90",
+    "26eaf694-964a-4f42-9575-6fc6c6294cf8",
+    "945643a0-050c-451b-9f68-5e7c63d9ca6d",
+    "88e42313-41af-4960-b63f-2f7da7bf0050",
+    "2de62401-ec88-4e2f-a237-f5783a286b45",
+    "0d42e080-45d0-4baf-b09a-fcc62e175fad",
+    "d65d897b-1c1d-4fc9-b9e5-e8361d362d08",
+    "f6cbd388-c891-4559-9a51-5f8f20218fda",
+    "ecbd35cc-0524-4c83-84da-05548073a50e",
+    "ad55a775-a6fd-4cb5-9ecb-1530fa9cccd5",
+    "9e655f6a-424b-40d5-acba-5a3400670345",
+    "69a19179-92d6-4974-bb6e-9c64859154ef",
+    "66cc24b1-7a31-4d4d-9811-52a308cb28d9",
+    "fdaa13cb-bf1c-4c25-b6d1-125fef6770ad",
+    "3412c026-b30a-4d76-9465-c9537f852b71",
+    "5df608da-e607-4273-9c1a-98ee07f0652c",
+    "b96e0215-197b-455b-b649-95cca045d4cb",
+    "d41a7c5a-a663-4ab3-a8e9-129bf120f43e",
+    "eb449d97-970b-4ac6-a53c-a0d9b98ff695",
+    "4b39f42a-e59e-4049-9b9d-dbd07a86b35a",
+    "9da89d62-f55d-4383-854b-133343b0eb4d",
+    "74bb93c0-0a04-4157-a6bf-d589dbda11ad",
+    "2102bd50-4eb5-4643-9d30-1e6d407f2dd7",
+    "c3b7d23b-7cfb-488a-afa4-d8651b44e7f4",
+    "fba92ab0-add2-49d6-9b35-27d5bf4ffd38",
+    "05257bc9-c728-44a7-b448-b925e2a6c967",
+    "21af2607-c5a7-4b32-8756-a2d16ecb2cc0",
+    "9ecf01b0-8e4f-4b8c-96cb-435b4b253ea2",
+    "ae9cb76d-5c2a-41b6-b6b2-6265626aa25f",
+    "45c46230-84a9-460b-a402-47fc4c31ed8c",
+    "125b6b40-1559-49e5-a960-cad3f0ee9fbf",
+    "f3e9a859-85d2-46a4-8222-53a7bde38605",
+    "010e5eff-6ea1-4c2a-88cb-af61847e686b",
+    "84a6d445-4033-4007-9ff9-2f76b80bf25c",
+    "8078f28a-d1b7-43a4-a22d-3187861d7b26",
+    "78eec72d-2fbb-4fc7-b256-e711e1c70d1a",
+    "6ba7f38a-a7c9-454b-af8b-3e97986b4fe6",
+    "667adf9c-76c8-488f-a50a-9b6118774d99",
+    "89928eb1-3cf0-4ce6-aae4-c935d6901839",
+    "e4eacf56-3edf-4f6c-abf8-f699d4925f72",
+    "50ab00e7-c95f-49e9-ab9d-f39b6a2f7a7e",
+    "2fe03a4d-b7f8-4777-933d-1092b90f1fa3",
+    "c637ddcf-8e52-413a-92ae-3b8c3b0efea4",
+    "2abaf1ee-2767-4d57-8491-5a001c80ba83",
+    "28b15339-073f-4c7a-94d6-4caea60c3c93",
+    "99b6c1a9-242f-4459-bac2-f5059b717e3c",
+    "b66b9957-1dfc-4607-bc54-e6ea62cef58d",
+    "13f86c1b-e543-4f95-961b-1f46a29395d9",
+    "ef9a864b-ce11-4acd-a166-1baa0717bef0",
+    "d9d4dce2-1687-4e2f-b06e-87c46ff70f90",
+    "a2145038-10ec-4be3-b0e4-1b23bf64514e",
+    "5f222c56-2ee3-492f-ad53-bba311f0c740",
+    "f6cd2024-9cd9-490d-a1ae-9f7667ba29db",
+    "76f75a1b-2f05-455e-b09e-8eac49f4bb72",
+    "e37d58ac-528e-44ba-b9a7-a6d4770c156f",
+    "e931eb88-ee5b-447a-9cf3-52d28d3bcea6",
+    "f42f4fe3-a85a-4e58-9c21-d1287e0cb57a",
+    "8acd1766-500f-4abb-9adb-fded6a7cd754",
+    "428e0742-9000-4df5-b91a-d4322c5d7a51",
+    "a4e5530f-ca9e-4298-b1d3-e2af34037a02",
+    "4ecb8ce5-ea65-4c37-b4ac-6cff5c07850c",
+    "26423d98-c027-4f5e-b245-c08c9f0a6855",
+    "b3778793-0034-44d0-813b-9ab818e1b6de",
+    "d202b01c-69fd-4b00-ba90-0e551d2d09b1",
+    "54440d65-a65c-4dff-9e86-15c47d3b394d",
+    "a2f44eb9-05cf-47d9-bb58-79a360a0a771",
+    "cf9c69c7-e1c5-4081-a71e-1bf3f8c59b3e",
+    "eecb1353-a5a5-428d-840d-043279866510",
+    "2919f7e1-c1d3-4026-a9d5-4000b6748ad4",
+    "1472dac1-9e3b-41e9-88fc-d5bab35ba5ca",
+    "89f9c747-8818-492a-a2e6-4f18d210ac04",
+    "6338b878-e933-4e92-9d27-4cfdf2ebf28c",
+    "607438cb-afe7-41c3-9e08-824ac8cd9989",
+    "60574ca0-55e3-4291-8b8a-538cc79f8b77",
+    "622a9aff-eab7-4119-8980-11ce4d51c6be",
+    "89085e24-cd71-4cc4-abad-27ec53eee284",
+    "2d16862d-13cb-4d0b-b6c8-389a960cdbe6",
+    "826d1c3d-888d-4aa0-a6af-729f5cd592c6"
+  ],
+  "companies": [
+    {
+      "id": "dfbbd23b-0fda-466a-a5f6-1cfa3da8f678",
+      "company_name": "Contagious Gaming Inc.",
+      "ticker_symbol": "CNS",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "59b6ebd0-47c0-40a7-b914-e9c9086a7fa1",
+      "company_name": "Destiny Media Technologies Inc.",
+      "ticker_symbol": "DSY",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "fb5d1e98-b929-46e0-aec1-665655f71d48",
+      "company_name": "Matador Technologies Inc.",
+      "ticker_symbol": "MATA",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "85e04283-bcbb-40b5-a9ca-845e39f65e11",
+      "company_name": "DelphX Capital Markets Inc.",
+      "ticker_symbol": "DELX",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "19ed2ccc-4bcb-4d94-957b-03eabfdbdb45",
+      "company_name": "LQWD Technologies Corp.",
+      "ticker_symbol": "LQWD",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "5d38008d-3c6c-4220-b960-9ebe27a622dc",
+      "company_name": "Enablence Technologies",
+      "ticker_symbol": "ENA",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "c1c333c4-856d-4786-8665-fca0d53b1719",
+      "company_name": "Metavista3D Inc.",
+      "ticker_symbol": "DDD",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "7c51304b-2bda-4dcb-ad3c-aa93df04fd61",
+      "company_name": "Zoomd Technologies Ltd.",
+      "ticker_symbol": "ZOMD",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "df1698b0-5652-4633-9e42-5652ef21178e",
+      "company_name": "Alithya Group Inc.",
+      "ticker_symbol": "ALYA",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "6aece4fb-03b9-4b04-88e4-fa98972fc873",
+      "company_name": "Altus Group Limited",
+      "ticker_symbol": "AIF",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "43e57211-5d29-4828-8ffa-84ed6c479678",
+      "company_name": "Baylin Technologies Inc.",
+      "ticker_symbol": "BYL",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "ccae5ab4-0198-41eb-b632-aff9b2f18864",
+      "company_name": "BBTV Holdings Inc.",
+      "ticker_symbol": "BBTV",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "0dd0b4b4-3e89-41ea-a296-37e82ce5ba53",
+      "company_name": "Blackline Safety Corp.",
+      "ticker_symbol": "BLN",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "a211dd66-ba19-4923-b2b9-ba07c921a412",
+      "company_name": "Bragg Gaming Group Inc.",
+      "ticker_symbol": "BRAG",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "1025f7dd-80bb-46bc-9de5-2fa2b8ba769f",
+      "company_name": "Calian Group Ltd.",
+      "ticker_symbol": "CGY",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "75db769d-930b-4070-a709-6a2dc8032de8",
+      "company_name": "Ceridian HCM Holding Inc.",
+      "ticker_symbol": "CDAY",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "b15541c3-8299-48f0-8b79-6a838f176dc9",
+      "company_name": "CGI Inc.",
+      "ticker_symbol": "GIB",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "2cc2c917-e1d5-4b4f-835e-cadec63fc6ba",
+      "company_name": "Converge Technology Solutions Corp.",
+      "ticker_symbol": "CTS",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "45489039-cbd6-4817-a05d-66b67012c387",
+      "company_name": "Copperleaf Technologies Inc.",
+      "ticker_symbol": "CPLF",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "fd60b0f5-1099-42ce-b793-506d5632edc9",
+      "company_name": "CubicFarm Systems Corp.",
+      "ticker_symbol": "CUB",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "5cb4841d-720e-48d4-ac35-5dab9eabe798",
+      "company_name": "CyberCatch Holdings Inc.",
+      "ticker_symbol": "CYBE",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "4e5141e0-1646-459f-84d4-ef2671b12e83",
+      "company_name": "D2L Inc.",
+      "ticker_symbol": "DTOL",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "fd7c41f5-0c7c-4f1a-9cb5-9ee862c34a71",
+      "company_name": "Dayforce Inc.",
+      "ticker_symbol": "DAY",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "5a618058-0dff-4f66-ac07-590c47b014cd",
+      "company_name": "Descartes Systems Group Inc.",
+      "ticker_symbol": "DSG",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "a0d55c86-40c4-4888-9427-6b1ea19f2fad",
+      "company_name": "Dye & Durham Limited",
+      "ticker_symbol": "DND",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "34af1672-c56a-4e19-a4d1-61c0b2ac0e70",
+      "company_name": "East Side Games Group Inc.",
+      "ticker_symbol": "EAGR",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "81a23588-06b0-4895-a20a-f8fb62b17006",
+      "company_name": "Enghouse Systems Limited",
+      "ticker_symbol": "ENGH",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "ca9db559-0bfa-4530-913e-18a41126af09",
+      "company_name": "Enthusiast Gaming Holdings Inc.",
+      "ticker_symbol": "EGLX",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "de89acf6-c8b4-4bfc-981a-d994aa0fb087",
+      "company_name": "Evertz Technologies Limited",
+      "ticker_symbol": "ET",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "4cc8b654-2730-45bd-b75b-06a1eb0bd040",
+      "company_name": "Firan Technology Group Corporation",
+      "ticker_symbol": "FTG",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "3a2e0d23-a3e9-498a-8154-1e445ce22717",
+      "company_name": "Givex Corp.",
+      "ticker_symbol": "GIVX",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "0c7ee861-5136-400b-9f39-6635404ed0e3",
+      "company_name": "Haivision Systems Inc.",
+      "ticker_symbol": "HAI",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "0ef4885f-ce3e-4a55-a91b-c7ab3899f9f1",
+      "company_name": "Hut 8 Mining Corp.",
+      "ticker_symbol": "HUT",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "064b3ed4-8c02-49c0-b257-63f2d7a9f63e",
+      "company_name": "illumin Holdings Inc.",
+      "ticker_symbol": "ILLM",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "e6be069d-33f3-44dc-8a96-c65afcd18aba",
+      "company_name": "Information Services Corporation",
+      "ticker_symbol": "ISV",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "617e08de-4f06-43a9-9f08-74da0ab95c2c",
+      "company_name": "Intermap Technologies Corporation",
+      "ticker_symbol": "IMP",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "6a22c696-8f7b-469d-80a0-810d9e5bc875",
+      "company_name": "kneat.com, inc.",
+      "ticker_symbol": "KSI",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "384ed72d-7d12-4c21-bccb-4d656e36ac9c",
+      "company_name": "Lumine Group Inc.",
+      "ticker_symbol": "LMN",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "ff16a508-22e4-433b-b586-b1ad294d5658",
+      "company_name": "mdf commerce inc.",
+      "ticker_symbol": "MDF",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "e0d74400-56b8-4598-a772-1da0c6b92648",
+      "company_name": "MediaValet Inc.",
+      "ticker_symbol": "MVP",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "0c503109-d0e2-4873-9a4b-ee6faf437e83",
+      "company_name": "Nuvei Corporation",
+      "ticker_symbol": "NVEI",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "7dd1116d-867f-4f42-b5f3-76df02b8b30f",
+      "company_name": "Open Text Corporation",
+      "ticker_symbol": "OTEX",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "a4044ee8-4e3b-4387-b4bb-7984a2030cbf",
+      "company_name": "Opsens Inc.",
+      "ticker_symbol": "OPS",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "4c22ae26-f4c6-4bf6-ad03-44a50dde2be1",
+      "company_name": "Optiva Inc.",
+      "ticker_symbol": "OPT",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "ac9edce7-6985-4516-a257-c8e7eb16d6a5",
+      "company_name": "Payfare Inc.",
+      "ticker_symbol": "PAY",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "701e0349-b535-4ae4-a000-7170ec10a813",
+      "company_name": "Propel Holdings Inc.",
+      "ticker_symbol": "PRL",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "2a9a3ec0-bccf-4d22-8ab6-41867fe5c657",
+      "company_name": "Q4 Inc.",
+      "ticker_symbol": "QFOR",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "b25c11ec-d2a4-4551-a58e-34480b4cb4cc",
+      "company_name": "Quarterhill Inc.",
+      "ticker_symbol": "QTRH",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "a5c728c4-c95e-4f86-bd34-ad932d717e4f",
+      "company_name": "Quantum Emotion Corp.",
+      "ticker_symbol": "QNC",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "f84774f9-046b-49dd-bb2d-7302fa84b0f1",
+      "company_name": "Telesat Corp",
+      "ticker_symbol": "TSAT",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "8a6a157f-98b4-43b3-b022-bf332d78be89",
+      "company_name": "Tucows Inc.",
+      "ticker_symbol": "TC",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "c49d7657-0a8e-4cde-b348-1c73befe70cf",
+      "company_name": "01 Communique Laboratory Inc.",
+      "ticker_symbol": "ONE",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "8924b679-5a05-49ca-8f29-13d217134725",
+      "company_name": "A2Z Smart Technologies Corp.",
+      "ticker_symbol": "AZ",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "2fb7ea73-cf57-4528-9113-80d9f9dc5a36",
+      "company_name": "Acceleware Ltd.",
+      "ticker_symbol": "AXE",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "dc5b8a3a-e48c-457c-b10a-ccbe077545be",
+      "company_name": "Ackroo Inc.",
+      "ticker_symbol": "AKR",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "feb77b35-9f53-4ca4-a717-35cb8d29bd80",
+      "company_name": "AdRabbit Limited",
+      "ticker_symbol": "RABI",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "b51e8e98-0415-4f5b-a22e-791f5f320c6c",
+      "company_name": "Advent-AWI Holdings Inc.",
+      "ticker_symbol": "AWI",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "81aa5071-df8c-4d8b-a74c-63ee36a6bcfc",
+      "company_name": "AGEDB Technology Ltd.",
+      "ticker_symbol": "AGET",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "94404e5d-841c-45d9-a62c-12783eb69c90",
+      "company_name": "AirIQ Inc.",
+      "ticker_symbol": "IQ",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "d7711920-aefb-44f2-9410-cc833b007c67",
+      "company_name": "Aisix Solutions Inc.",
+      "ticker_symbol": "AISX",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "0f606343-36d8-440a-b32d-01ad04ae68b3",
+      "company_name": "Alphinat Inc.",
+      "ticker_symbol": "NPA",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "3780eb45-e374-41dc-bdb5-bb9217cb300f",
+      "company_name": "AnalytixInsight Inc.",
+      "ticker_symbol": "ALY",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "bcb4f3a8-5e40-4b2e-bed4-2033e0d34492",
+      "company_name": "ARHT Media Inc.",
+      "ticker_symbol": "ART",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "7578b15d-bdb9-4e6c-8ced-009017ed10f6",
+      "company_name": "Armada Data Corporation",
+      "ticker_symbol": "ARD",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "51fc378a-b2d3-42b5-a280-af2829ed67dc",
+      "company_name": "Astron Connect Inc.",
+      "ticker_symbol": "AST",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "f4ac359a-d56a-4af1-8da0-de1cba6f3fc4",
+      "company_name": "ATW Tech Inc.",
+      "ticker_symbol": "ATW",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "84d08040-bb8d-4afc-a85f-19ce9959caba",
+      "company_name": "Avante Corp.",
+      "ticker_symbol": "XX",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "689fe1ee-2f22-46d8-bc30-c7e291652e90",
+      "company_name": "Axion Ventures Inc.",
+      "ticker_symbol": "AXV",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "26eaf694-964a-4f42-9575-6fc6c6294cf8",
+      "company_name": "Backstageplay Inc.",
+      "ticker_symbol": "BP",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "945643a0-050c-451b-9f68-5e7c63d9ca6d",
+      "company_name": "Banxa Holdings Inc.",
+      "ticker_symbol": "BNXA",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "88e42313-41af-4960-b63f-2f7da7bf0050",
+      "company_name": "BEACN Wizardry & Magic Inc.",
+      "ticker_symbol": "BECN",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "2de62401-ec88-4e2f-a237-f5783a286b45",
+      "company_name": "BeWhere Holdings Inc.",
+      "ticker_symbol": "BEW",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "0d42e080-45d0-4baf-b09a-fcc62e175fad",
+      "company_name": "Bitcoin Well Inc.",
+      "ticker_symbol": "BTCW",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "d65d897b-1c1d-4fc9-b9e5-e8361d362d08",
+      "company_name": "Black Swan Graphene Inc.",
+      "ticker_symbol": "SWAN",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "f6cbd388-c891-4559-9a51-5f8f20218fda",
+      "company_name": "BlockchainK2 Corp.",
+      "ticker_symbol": "BITK",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "ecbd35cc-0524-4c83-84da-05548073a50e",
+      "company_name": "Blockmate Ventures Inc.",
+      "ticker_symbol": "MATE",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "ad55a775-a6fd-4cb5-9ecb-1530fa9cccd5",
+      "company_name": "BlockMint Technologies Inc.",
+      "ticker_symbol": "BKMT",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "9e655f6a-424b-40d5-acba-5a3400670345",
+      "company_name": "BlueRush Inc.",
+      "ticker_symbol": "BTV",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "69a19179-92d6-4974-bb6e-9c64859154ef",
+      "company_name": "Boardwalktech Software Corp.",
+      "ticker_symbol": "BWLK",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "66cc24b1-7a31-4d4d-9811-52a308cb28d9",
+      "company_name": "Builddirect.com Technologies Inc.",
+      "ticker_symbol": "BILD",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "fdaa13cb-bf1c-4c25-b6d1-125fef6770ad",
+      "company_name": "Carbeeza Inc.",
+      "ticker_symbol": "AUTO",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "3412c026-b30a-4d76-9465-c9537f852b71",
+      "company_name": "Carebook Technologies Inc.",
+      "ticker_symbol": "CRBK",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "5df608da-e607-4273-9c1a-98ee07f0652c",
+      "company_name": "Cathedra Bitcoin Inc.",
+      "ticker_symbol": "CBIT",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "b96e0215-197b-455b-b649-95cca045d4cb",
+      "company_name": "C-Com Satellite Systems Inc.",
+      "ticker_symbol": "CMI",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "d41a7c5a-a663-4ab3-a8e9-129bf120f43e",
+      "company_name": "CE Brands Inc.",
+      "ticker_symbol": "CEBI",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "eb449d97-970b-4ac6-a53c-a0d9b98ff695",
+      "company_name": "Champion Gaming Group Inc.",
+      "ticker_symbol": "WAGR",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "4b39f42a-e59e-4049-9b9d-dbd07a86b35a",
+      "company_name": "Clip Money Inc.",
+      "ticker_symbol": "CLIP",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "9da89d62-f55d-4383-854b-133343b0eb4d",
+      "company_name": "CloudMD Software & Services Inc.",
+      "ticker_symbol": "DOC",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "74bb93c0-0a04-4157-a6bf-d589dbda11ad",
+      "company_name": "Cryptostar Corp.",
+      "ticker_symbol": "CSTR",
+      "stock_exchange": "TSX-V"
+    },
+    {
+      "id": "2102bd50-4eb5-4643-9d30-1e6d407f2dd7",
+      "company_name": "Computer Modelling Group Ltd.",
+      "ticker_symbol": "CMG",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "c3b7d23b-7cfb-488a-afa4-d8651b44e7f4",
+      "company_name": "Adcore Inc.",
+      "ticker_symbol": "ADCO",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "fba92ab0-add2-49d6-9b35-27d5bf4ffd38",
+      "company_name": "D-Box Technologies Inc.",
+      "ticker_symbol": "DBO",
+      "stock_exchange": "TSX"
+    },
+    {
+      "id": "05257bc9-c728-44a7-b448-b925e2a6c967",
+      "company_name": "Absci",
+      "ticker_symbol": "ABSI",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "21af2607-c5a7-4b32-8756-a2d16ecb2cc0",
+      "company_name": "Schr\u00f6dinger",
+      "ticker_symbol": "SDGR",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "9ecf01b0-8e4f-4b8c-96cb-435b4b253ea2",
+      "company_name": "Intellia Therapeutics",
+      "ticker_symbol": "NTLA",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "ae9cb76d-5c2a-41b6-b6b2-6265626aa25f",
+      "company_name": "CRISPR Therapeutics",
+      "ticker_symbol": "CRSP",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "45c46230-84a9-460b-a402-47fc4c31ed8c",
+      "company_name": "10x Genomics",
+      "ticker_symbol": "TXG",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "125b6b40-1559-49e5-a960-cad3f0ee9fbf",
+      "company_name": "Ginkgo Bioworks",
+      "ticker_symbol": "DNA",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "f3e9a859-85d2-46a4-8222-53a7bde38605",
+      "company_name": "BioVectra Inc.",
+      "ticker_symbol": null,
+      "stock_exchange": "Private"
+    },
+    {
+      "id": "010e5eff-6ea1-4c2a-88cb-af61847e686b",
+      "company_name": "Biotech Company 176",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "84a6d445-4033-4007-9ff9-2f76b80bf25c",
+      "company_name": "Biotech Company 52",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "8078f28a-d1b7-43a4-a22d-3187861d7b26",
+      "company_name": "Biotech Company 56",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "78eec72d-2fbb-4fc7-b256-e711e1c70d1a",
+      "company_name": "Biotech Company 60",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "6ba7f38a-a7c9-454b-af8b-3e97986b4fe6",
+      "company_name": "Biotech Company 62",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "667adf9c-76c8-488f-a50a-9b6118774d99",
+      "company_name": "Biotech Company 64",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "89928eb1-3cf0-4ce6-aae4-c935d6901839",
+      "company_name": "Biotech Company 66",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "e4eacf56-3edf-4f6c-abf8-f699d4925f72",
+      "company_name": "Biotech Company 70",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "50ab00e7-c95f-49e9-ab9d-f39b6a2f7a7e",
+      "company_name": "Biotech Company 77",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "2fe03a4d-b7f8-4777-933d-1092b90f1fa3",
+      "company_name": "Biotech Company 83",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "c637ddcf-8e52-413a-92ae-3b8c3b0efea4",
+      "company_name": "Biotech Company 84",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "2abaf1ee-2767-4d57-8491-5a001c80ba83",
+      "company_name": "Acurx Pharmaceuticals, Inc.",
+      "ticker_symbol": "ACXP",
+      "stock_exchange": null
+    },
+    {
+      "id": "28b15339-073f-4c7a-94d6-4caea60c3c93",
+      "company_name": "60 DEGREES PHARMACEUTICALS, INC.",
+      "ticker_symbol": "SXTPW",
+      "stock_exchange": null
+    },
+    {
+      "id": "99b6c1a9-242f-4459-bac2-f5059b717e3c",
+      "company_name": "ADIAL PHARMACEUTICALS, INC.",
+      "ticker_symbol": "ADIL",
+      "stock_exchange": null
+    },
+    {
+      "id": "b66b9957-1dfc-4607-bc54-e6ea62cef58d",
+      "company_name": "Stem",
+      "ticker_symbol": "STEM",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "13f86c1b-e543-4f95-961b-1f46a29395d9",
+      "company_name": "ChargePoint",
+      "ticker_symbol": "CHPT",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "ef9a864b-ce11-4acd-a166-1baa0717bef0",
+      "company_name": "FuelCell Energy",
+      "ticker_symbol": "FCEL",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "d9d4dce2-1687-4e2f-b06e-87c46ff70f90",
+      "company_name": "Plug Power",
+      "ticker_symbol": "PLUG",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "a2145038-10ec-4be3-b0e4-1b23bf64514e",
+      "company_name": "Sunrun",
+      "ticker_symbol": "RUN",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "5f222c56-2ee3-492f-ad53-bba311f0c740",
+      "company_name": "Enphase Energy",
+      "ticker_symbol": "ENPH",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "f6cd2024-9cd9-490d-a1ae-9f7667ba29db",
+      "company_name": "Bloom Energy",
+      "ticker_symbol": "BE",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "76f75a1b-2f05-455e-b09e-8eac49f4bb72",
+      "company_name": "QuantumScape",
+      "ticker_symbol": "QS",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "e37d58ac-528e-44ba-b9a7-a6d4770c156f",
+      "company_name": "Clean Energy Company 1",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "e931eb88-ee5b-447a-9cf3-52d28d3bcea6",
+      "company_name": "Clean Energy Company 2",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "f42f4fe3-a85a-4e58-9c21-d1287e0cb57a",
+      "company_name": "Clean Energy Company 4",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "8acd1766-500f-4abb-9adb-fded6a7cd754",
+      "company_name": "Clean Energy Company 7",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "428e0742-9000-4df5-b91a-d4322c5d7a51",
+      "company_name": "Clean Energy Company 13",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "a4e5530f-ca9e-4298-b1d3-e2af34037a02",
+      "company_name": "Clean Energy Company 20",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "4ecb8ce5-ea65-4c37-b4ac-6cff5c07850c",
+      "company_name": "Clean Energy Company 23",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "26423d98-c027-4f5e-b245-c08c9f0a6855",
+      "company_name": "aTYR PHARMA INC",
+      "ticker_symbol": "ATYR",
+      "stock_exchange": null
+    },
+    {
+      "id": "b3778793-0034-44d0-813b-9ab818e1b6de",
+      "company_name": "Canadian Solar Inc.",
+      "ticker_symbol": "CSIQ",
+      "stock_exchange": null
+    },
+    {
+      "id": "d202b01c-69fd-4b00-ba90-0e551d2d09b1",
+      "company_name": "Ascent Solar Technologies, Inc.",
+      "ticker_symbol": "ASTI",
+      "stock_exchange": null
+    },
+    {
+      "id": "54440d65-a65c-4dff-9e86-15c47d3b394d",
+      "company_name": "CHIPMOS TECHNOLOGIES INC",
+      "ticker_symbol": "IMOS",
+      "stock_exchange": null
+    },
+    {
+      "id": "a2f44eb9-05cf-47d9-bb58-79a360a0a771",
+      "company_name": "COREL CORP",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "cf9c69c7-e1c5-4081-a71e-1bf3f8c59b3e",
+      "company_name": "SERVICENOW CANADA INC",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "eecb1353-a5a5-428d-840d-043279866510",
+      "company_name": "GENESIS ROBOTICS & MOTION TECH CANADA ULC",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    },
+    {
+      "id": "2919f7e1-c1d3-4026-a9d5-4000b6748ad4",
+      "company_name": "Redwire Corp",
+      "ticker_symbol": "RKLB",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "1472dac1-9e3b-41e9-88fc-d5bab35ba5ca",
+      "company_name": "Firefly Aerospace Inc.",
+      "ticker_symbol": "FLY",
+      "stock_exchange": null
+    },
+    {
+      "id": "89f9c747-8818-492a-a2e6-4f18d210ac04",
+      "company_name": "Rocket Lab Corp",
+      "ticker_symbol": "RKLB",
+      "stock_exchange": null
+    },
+    {
+      "id": "6338b878-e933-4e92-9d27-4cfdf2ebf28c",
+      "company_name": "DataDog",
+      "ticker_symbol": "DDOG",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "607438cb-afe7-41c3-9e08-824ac8cd9989",
+      "company_name": "D-Wave Quantum",
+      "ticker_symbol": "QBTS",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "60574ca0-55e3-4291-8b8a-538cc79f8b77",
+      "company_name": "Rigetti Computing",
+      "ticker_symbol": "RGTI",
+      "stock_exchange": "NASDAQ"
+    },
+    {
+      "id": "622a9aff-eab7-4119-8980-11ce4d51c6be",
+      "company_name": "D-Wave Quantum Inc.",
+      "ticker_symbol": "QBTS",
+      "stock_exchange": "NYSE (Canadian HQ)"
+    },
+    {
+      "id": "89085e24-cd71-4cc4-abad-27ec53eee284",
+      "company_name": "Palantir Technologies",
+      "ticker_symbol": "PLTR",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "2d16862d-13cb-4d0b-b6c8-389a960cdbe6",
+      "company_name": "UiPath",
+      "ticker_symbol": "PATH",
+      "stock_exchange": "NYSE"
+    },
+    {
+      "id": "826d1c3d-888d-4aa0-a6af-729f5cd592c6",
+      "company_name": "Anthropic",
+      "ticker_symbol": null,
+      "stock_exchange": null
+    }
+  ]
+}

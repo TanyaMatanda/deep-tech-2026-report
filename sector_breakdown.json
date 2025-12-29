@@ -1,0 +1,390 @@
+{
+  "Technology": [
+    {
+      "company": "NVIDIA",
+      "total": 49866251,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Alignment Healthcare, Inc.",
+      "total": 45998851,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Mobileye Global Inc.",
+      "total": 45219678,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Uber Technologies, Inc",
+      "total": 39408629,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "LifeStance Health Group, Inc.",
+      "total": 38859218,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Marvell Technology, Inc.",
+      "total": 32160142,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Meta Platforms, Inc.",
+      "total": 31657818,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Motorola Solutions, Inc.",
+      "total": 30853387,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "ELECTRONIC ARTS INC.",
+      "total": 30529835,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Applied Digital Corp.",
+      "total": 27708092,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    }
+  ],
+  "Biotechnology": [
+    {
+      "company": "Lyell Immunopharma, Inc.",
+      "total": 18686189,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "SUPERNUS PHARMACEUTICALS, INC.",
+      "total": 17848004,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "VERTEX PHARMACEUTICALS INC / MA",
+      "total": 16473245,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Pacira BioSciences, Inc.",
+      "total": 15944347,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "TEVA PHARMACEUTICAL INDUSTRIES LTD",
+      "total": 15518947,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Intellia Therapeutics, Inc.",
+      "total": 15330547,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Illumina",
+      "total": 14802924,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "RHYTHM PHARMACEUTICALS, INC.",
+      "total": 14663742,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "LIGAND PHARMACEUTICALS INC",
+      "total": 12914980,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "ARROWHEAD PHARMACEUTICALS, INC.",
+      "total": 12031969,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    }
+  ],
+  "Energy & Climate": [
+    {
+      "company": "Bloom Energy Corp",
+      "total": 44961745,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Bloom Energy",
+      "total": 44961745,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "FIRSTENERGY CORP",
+      "total": 26452616,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "NEXTERA ENERGY INC",
+      "total": 23720707,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "VALERO ENERGY CORP/TX",
+      "total": 22412292,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Duke Energy CORP",
+      "total": 21276982,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "New Fortress Energy Inc.",
+      "total": 21096840,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "QuantumScape",
+      "total": 19606478,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "XCEL ENERGY INC",
+      "total": 16805589,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Cheniere Energy, Inc.",
+      "total": 14893339,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    }
+  ],
+  "Cybersecurity": [
+    {
+      "company": "CrowdStrike",
+      "total": 35195300,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Palo Alto Networks",
+      "total": 23541480,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Okta",
+      "total": 23319458,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Zscaler",
+      "total": 18480646,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Fortinet",
+      "total": 10650714,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Varonis",
+      "total": 6201417,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "BlackBerry",
+      "total": 3146625,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    },
+    {
+      "company": "Cloudflare",
+      "total": 539152,
+      "base": null,
+      "bonus": null,
+      "stock": null,
+      "options": null,
+      "non_equity": null,
+      "other": null
+    }
+  ]
+}

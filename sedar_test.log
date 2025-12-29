@@ -1,0 +1,4 @@
+  File "/Users/tanyamatanda/Desktop/Proxy Season 2026/collectors/extract_comp_sedar_browser.py", line 125
+    if any(keyword in link_text or keyword in parent_text) for keyword in [
+                                                           ^
+SyntaxError: invalid syntax

@@ -1,0 +1,216 @@
+{
+  "total_companies": 95866,
+  "sectors": {
+    "Technology": 932,
+    "Prepackaged Software": 99,
+    "Pharmaceutical Preparations": 186,
+    "Biological Products": 145,
+    "Semiconductors": 100,
+    "Guided Missiles & Space Vehicles": 26,
+    "Electronic Computers": 100,
+    "Advanced Technology": 47972,
+    "Energy & Climate": 9311,
+    "Space Technology": 2468,
+    "Robotics": 3088,
+    "Quantum Computing": 863,
+    "Advanced Materials": 2795,
+    "Biotechnology": 11778,
+    "Agriculture & Food Tech": 5189,
+    "AI & Machine Learning": 122,
+    "Cybersecurity": 6600,
+    "Advanced Computing": 3420,
+    "Biologics": 1,
+    "Information Management": 2,
+    "Logistics Software": 2,
+    "Plasma Technology": 2,
+    "Broadcast Tech": 2,
+    "Data Intelligence": 2,
+    "Vertical Market Software": 2,
+    "Blockchain Infrastructure": 4,
+    "Marine Robotics": 2,
+    "Post-Quantum Cybersecurity": 2,
+    "Optical Components": 2,
+    "Radiopharmaceuticals": 2,
+    "Biotech": 2,
+    "Energy Storage": 2,
+    "Drone Technology": 2,
+    "Digital Banking/Cybersecurity": 2,
+    "High Performance Computing": 2,
+    "Blockchain & AI": 2,
+    "Decryption": 2,
+    "Cyber Security Services": 2,
+    "Augmented Reality": 2,
+    "AI Solutions": 2,
+    "Telehealth AI": 2,
+    "Cognitive Computing": 2,
+    "AI & Enterprise Software": 2,
+    "Commerce Platform": 2,
+    "Cloud Infrastructure": 10,
+    "Advanced Manufacturing": 4,
+    "Learning Tech (AI)": 2
+  },
+  "subsectors": {
+    "AI Accelerators & GPU Computing": 1,
+    "Orbital Transfer Services": 1,
+    "Trapped Ion Quantum Hardware": 1,
+    "AI Wafer-Scale Chips": 2,
+    "Residential Solar & Storage": 2,
+    "Space Tourism": 2,
+    "Earth Imaging Satellites": 2,
+    "Monitoring & Analytics Platform": 2,
+    "Data Streaming Platform": 2,
+    "AI Data Analytics Platform": 2,
+    "Voice AI & Conversational Intelligence": 2,
+    "Solid Oxide Fuel Cells": 2,
+    "Synthetic DNA & Gene Synthesis": 2,
+    "Antibody Discovery Platform": 2,
+    "AI-Powered Endpoint Security": 2,
+    "Edge Computing & Security": 2,
+    "AI-Powered Energy Storage": 2,
+    "Space Infrastructure": 2,
+    "Industrial Exoskeletons": 2,
+    "Metal 3D Printing": 2,
+    "Multi-Cloud Infrastructure Automation": 2,
+    "NoSQL Database Platform": 2,
+    "Search & Observability": 2,
+    "AI-Driven Drug Discovery": 2,
+    "Solid-State Battery Technology": 2,
+    "High-Performance Processors": 2,
+    "Network Security Platform": 2,
+    "Base Editing": 2,
+    "3D Metal Printing": 2,
+    "CRISPR In Vivo Therapeutics": 2,
+    "Small Satellite Launch Services": 1,
+    "Solar Microinverters": 1
+  },
+  "top_subsectors": [
+    [
+      "AI Wafer-Scale Chips",
+      2
+    ],
+    [
+      "Residential Solar & Storage",
+      2
+    ],
+    [
+      "Space Tourism",
+      2
+    ],
+    [
+      "Earth Imaging Satellites",
+      2
+    ],
+    [
+      "Monitoring & Analytics Platform",
+      2
+    ],
+    [
+      "Data Streaming Platform",
+      2
+    ],
+    [
+      "AI Data Analytics Platform",
+      2
+    ],
+    [
+      "Voice AI & Conversational Intelligence",
+      2
+    ],
+    [
+      "Solid Oxide Fuel Cells",
+      2
+    ],
+    [
+      "Synthetic DNA & Gene Synthesis",
+      2
+    ],
+    [
+      "Antibody Discovery Platform",
+      2
+    ],
+    [
+      "AI-Powered Endpoint Security",
+      2
+    ],
+    [
+      "Edge Computing & Security",
+      2
+    ],
+    [
+      "AI-Powered Energy Storage",
+      2
+    ],
+    [
+      "Space Infrastructure",
+      2
+    ],
+    [
+      "Industrial Exoskeletons",
+      2
+    ],
+    [
+      "Metal 3D Printing",
+      2
+    ],
+    [
+      "Multi-Cloud Infrastructure Automation",
+      2
+    ],
+    [
+      "NoSQL Database Platform",
+      2
+    ],
+    [
+      "Search & Observability",
+      2
+    ],
+    [
+      "AI-Driven Drug Discovery",
+      2
+    ],
+    [
+      "Solid-State Battery Technology",
+      2
+    ],
+    [
+      "High-Performance Processors",
+      2
+    ],
+    [
+      "Network Security Platform",
+      2
+    ],
+    [
+      "Base Editing",
+      2
+    ],
+    [
+      "3D Metal Printing",
+      2
+    ],
+    [
+      "CRISPR In Vivo Therapeutics",
+      2
+    ],
+    [
+      "AI Accelerators & GPU Computing",
+      1
+    ],
+    [
+      "Orbital Transfer Services",
+      1
+    ],
+    [
+      "Trapped Ion Quantum Hardware",
+      1
+    ],
+    [
+      "Small Satellite Launch Services",
+      1
+    ],
+    [
+      "Solar Microinverters",
+      1
+    ]
+  ]
+}

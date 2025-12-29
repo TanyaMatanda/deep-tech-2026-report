@@ -8,7 +8,7 @@ import streamlit as st
 def show_database_stats(supabase):
     """Display comprehensive database statistics"""
     
-    st.markdown("### 📊 Database Overview")
+    st.markdown("### Database Overview")
     
     try:
         # Get total companies

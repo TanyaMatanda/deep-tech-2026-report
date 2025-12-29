@@ -1,0 +1,3672 @@
+{
+  "Technology": {
+    "total_companies": 365,
+    "companies": [
+      {
+        "rank": 1,
+        "company": "HEALTHSTREAM INC",
+        "ceo_comp": 160643007160
+      },
+      {
+        "rank": 2,
+        "company": "Palantir Technologies Inc.",
+        "ceo_comp": 1098513297
+      },
+      {
+        "rank": 3,
+        "company": "Rivian Automotive, Inc. / DE",
+        "ceo_comp": 422140679
+      },
+      {
+        "rank": 4,
+        "company": "LifeStance Health Group, Inc.",
+        "ceo_comp": 147001804
+      },
+      {
+        "rank": 5,
+        "company": "Palo Alto Networks Inc",
+        "ceo_comp": 99736336
+      },
+      {
+        "rank": 6,
+        "company": "GENERAL ELECTRIC CO",
+        "ceo_comp": 88954586
+      },
+      {
+        "rank": 7,
+        "company": "LATTICE SEMICONDUCTOR CORP",
+        "ceo_comp": 69154980
+      },
+      {
+        "rank": 8,
+        "company": "SoFi Technologies, Inc.",
+        "ceo_comp": 53533739
+      },
+      {
+        "rank": 9,
+        "company": "CISCO SYSTEMS, INC.",
+        "ceo_comp": 52838751
+      },
+      {
+        "rank": 10,
+        "company": "Unity Software Inc.",
+        "ceo_comp": 52147152
+      },
+      {
+        "rank": 11,
+        "company": "NVIDIA",
+        "ceo_comp": 49866251
+      },
+      {
+        "rank": 12,
+        "company": "Alignment Healthcare, Inc.",
+        "ceo_comp": 45998851
+      },
+      {
+        "rank": 13,
+        "company": "Mobileye Global Inc.",
+        "ceo_comp": 45219678
+      },
+      {
+        "rank": 14,
+        "company": "Uber Technologies, Inc",
+        "ceo_comp": 39408629
+      },
+      {
+        "rank": 15,
+        "company": "Marvell Technology, Inc.",
+        "ceo_comp": 32160142
+      },
+      {
+        "rank": 16,
+        "company": "Meta Platforms, Inc.",
+        "ceo_comp": 31657818
+      },
+      {
+        "rank": 17,
+        "company": "Motorola Solutions, Inc.",
+        "ceo_comp": 30853387
+      },
+      {
+        "rank": 18,
+        "company": "ELECTRONIC ARTS INC.",
+        "ceo_comp": 30529835
+      },
+      {
+        "rank": 19,
+        "company": "Applied Digital Corp.",
+        "ceo_comp": 27708092
+      },
+      {
+        "rank": 20,
+        "company": "SS&C Technologies Holdings Inc",
+        "ceo_comp": 25870693
+      },
+      {
+        "rank": 21,
+        "company": "MICRON TECHNOLOGY INC",
+        "ceo_comp": 25316709
+      },
+      {
+        "rank": 22,
+        "company": "TENET HEALTHCARE CORP",
+        "ceo_comp": 24661553
+      },
+      {
+        "rank": 23,
+        "company": "GENERAL DYNAMICS CORP",
+        "ceo_comp": 23794702
+      },
+      {
+        "rank": 24,
+        "company": "General Motors Co",
+        "ceo_comp": 23657987
+      },
+      {
+        "rank": 25,
+        "company": "CVS HEALTH Corp",
+        "ceo_comp": 23431466
+      },
+      {
+        "rank": 26,
+        "company": "Arlo Technologies, Inc.",
+        "ceo_comp": 23268296
+      },
+      {
+        "rank": 27,
+        "company": "UNITED THERAPEUTICS Corp",
+        "ceo_comp": 23009609
+      },
+      {
+        "rank": 28,
+        "company": "MOLINA HEALTHCARE, INC.",
+        "ceo_comp": 21944109
+      },
+      {
+        "rank": 29,
+        "company": "DXC Technology Co",
+        "ceo_comp": 21733120
+      },
+      {
+        "rank": 30,
+        "company": "L3HARRIS TECHNOLOGIES, INC. /DE/",
+        "ceo_comp": 20839223
+      },
+      {
+        "rank": 31,
+        "company": "NXP Semiconductors N.V.",
+        "ceo_comp": 20694772
+      },
+      {
+        "rank": 32,
+        "company": "Nextpower Inc.",
+        "ceo_comp": 20097412
+      },
+      {
+        "rank": 33,
+        "company": "QuantumScape Corp",
+        "ceo_comp": 19606478
+      },
+      {
+        "rank": 34,
+        "company": "CHIPOTLE MEXICAN GRILL INC",
+        "ceo_comp": 19137518
+      },
+      {
+        "rank": 35,
+        "company": "AUTOMATIC DATA PROCESSING INC",
+        "ceo_comp": 19137192
+      },
+      {
+        "rank": 36,
+        "company": "ROPER TECHNOLOGIES INC",
+        "ceo_comp": 19078951
+      },
+      {
+        "rank": 37,
+        "company": "MONOLITHIC POWER SYSTEMS INC",
+        "ceo_comp": 18979292
+      },
+      {
+        "rank": 38,
+        "company": "COMMVAULT SYSTEMS INC",
+        "ceo_comp": 18811603
+      },
+      {
+        "rank": 39,
+        "company": "Petco Health & Wellness Company, Inc.",
+        "ceo_comp": 18258291
+      },
+      {
+        "rank": 40,
+        "company": "UL Solutions Inc.",
+        "ceo_comp": 18121504
+      },
+      {
+        "rank": 41,
+        "company": "SKYWORKS SOLUTIONS, INC.",
+        "ceo_comp": 18096527
+      },
+      {
+        "rank": 42,
+        "company": "MARTIN MARIETTA MATERIALS INC",
+        "ceo_comp": 17716763
+      },
+      {
+        "rank": 43,
+        "company": "BrightSpring Health Services, Inc.",
+        "ceo_comp": 17673893
+      },
+      {
+        "rank": 44,
+        "company": "TERADATA CORP /DE/",
+        "ceo_comp": 17418309
+      },
+      {
+        "rank": 45,
+        "company": "Frontier Communications Parent, Inc.",
+        "ceo_comp": 17209584
+      },
+      {
+        "rank": 46,
+        "company": "Seagate Technology Holdings plc",
+        "ceo_comp": 17176927
+      },
+      {
+        "rank": 47,
+        "company": "MEDICAL PROPERTIES TRUST INC",
+        "ceo_comp": 16857637
+      },
+      {
+        "rank": 48,
+        "company": "COGNIZANT TECHNOLOGY SOLUTIONS CORP",
+        "ceo_comp": 16801707
+      },
+      {
+        "rank": 49,
+        "company": "DIGITAL REALTY TRUST, INC.",
+        "ceo_comp": 16254113
+      },
+      {
+        "rank": 50,
+        "company": "PROCORE TECHNOLOGIES, INC.",
+        "ceo_comp": 16122797
+      },
+      {
+        "rank": 51,
+        "company": "AGILENT TECHNOLOGIES, INC.",
+        "ceo_comp": 15967631
+      },
+      {
+        "rank": 52,
+        "company": "AMERICAN ELECTRIC POWER CO INC",
+        "ceo_comp": 15503434
+      },
+      {
+        "rank": 53,
+        "company": "EMERSON ELECTRIC CO",
+        "ceo_comp": 15066763
+      },
+      {
+        "rank": 54,
+        "company": "ENTRAVISION COMMUNICATIONS CORP",
+        "ceo_comp": 14958648
+      },
+      {
+        "rank": 55,
+        "company": "BENTLEY SYSTEMS INC",
+        "ceo_comp": 14462703
+      },
+      {
+        "rank": 56,
+        "company": "Optimum Communications, Inc.",
+        "ceo_comp": 14425399
+      },
+      {
+        "rank": 57,
+        "company": "Advantage Solutions Inc.",
+        "ceo_comp": 14074523
+      },
+      {
+        "rank": 58,
+        "company": "JACOBS SOLUTIONS INC.",
+        "ceo_comp": 14038363
+      },
+      {
+        "rank": 59,
+        "company": "Guidewire Software, Inc.",
+        "ceo_comp": 14012061
+      },
+      {
+        "rank": 60,
+        "company": "Gen Digital Inc.",
+        "ceo_comp": 13829574
+      },
+      {
+        "rank": 61,
+        "company": "Rexford Industrial Realty, Inc.",
+        "ceo_comp": 13143105
+      },
+      {
+        "rank": 62,
+        "company": "Trane Technologies plc",
+        "ceo_comp": 12888518
+      },
+      {
+        "rank": 63,
+        "company": "HALOZYME THERAPEUTICS, INC.",
+        "ceo_comp": 12741421
+      },
+      {
+        "rank": 64,
+        "company": "Zoom Communications, Inc.",
+        "ceo_comp": 12493135
+      },
+      {
+        "rank": 65,
+        "company": "CARDINAL HEALTH INC",
+        "ceo_comp": 12482378
+      },
+      {
+        "rank": 66,
+        "company": "Paycom Software, Inc.",
+        "ceo_comp": 12088037
+      },
+      {
+        "rank": 67,
+        "company": "ManpowerGroup Inc.",
+        "ceo_comp": 11903571
+      },
+      {
+        "rank": 68,
+        "company": "AMC Networks Inc.",
+        "ceo_comp": 11849849
+      },
+      {
+        "rank": 69,
+        "company": "ARROW ELECTRONICS, INC.",
+        "ceo_comp": 11703943
+      },
+      {
+        "rank": 70,
+        "company": "Guardant Health, Inc.",
+        "ceo_comp": 11613545
+      },
+      {
+        "rank": 71,
+        "company": "WESTERN DIGITAL CORP",
+        "ceo_comp": 11534369
+      },
+      {
+        "rank": 72,
+        "company": "Spirit AeroSystems Holdings, Inc.",
+        "ceo_comp": 11457523
+      },
+      {
+        "rank": 73,
+        "company": "CSG SYSTEMS INTERNATIONAL INC",
+        "ceo_comp": 11394373
+      },
+      {
+        "rank": 74,
+        "company": "HEALTHPEAK PROPERTIES, INC.",
+        "ceo_comp": 11374615
+      },
+      {
+        "rank": 75,
+        "company": "NEOGENOMICS INC",
+        "ceo_comp": 11338487
+      },
+      {
+        "rank": 76,
+        "company": "Zurn Elkay Water Solutions Corp",
+        "ceo_comp": 11189617
+      },
+      {
+        "rank": 77,
+        "company": "Evolent Health, Inc.",
+        "ceo_comp": 11136185
+      },
+      {
+        "rank": 78,
+        "company": "Arista Networks, Inc.",
+        "ceo_comp": 10891249
+      },
+      {
+        "rank": 79,
+        "company": "VERINT SYSTEMS INC",
+        "ceo_comp": 10825132
+      },
+      {
+        "rank": 80,
+        "company": "Dell Technologies Inc.",
+        "ceo_comp": 10756644
+      },
+      {
+        "rank": 81,
+        "company": "Orthofix Medical Inc.",
+        "ceo_comp": 10629953
+      },
+      {
+        "rank": 82,
+        "company": "VIAVI SOLUTIONS INC.",
+        "ceo_comp": 10595839
+      },
+      {
+        "rank": 83,
+        "company": "Dayforce Inc.",
+        "ceo_comp": 10553341
+      },
+      {
+        "rank": 84,
+        "company": "Lumen Technologies, Inc.",
+        "ceo_comp": 10499991
+      },
+      {
+        "rank": 85,
+        "company": "Sotera Health Co",
+        "ceo_comp": 10392468
+      },
+      {
+        "rank": 86,
+        "company": "PROGRESS SOFTWARE CORP /MA",
+        "ceo_comp": 10374886
+      },
+      {
+        "rank": 87,
+        "company": "DigitalBridge Group, Inc.",
+        "ceo_comp": 10200262
+      },
+      {
+        "rank": 88,
+        "company": "NeueHealth, Inc.",
+        "ceo_comp": 9993169
+      },
+      {
+        "rank": 89,
+        "company": "Gates Industrial Corp plc",
+        "ceo_comp": 9962638
+      },
+      {
+        "rank": 90,
+        "company": "SONIC AUTOMOTIVE INC",
+        "ceo_comp": 9923585
+      },
+      {
+        "rank": 91,
+        "company": "CADENCE DESIGN SYSTEMS INC",
+        "ceo_comp": 9604640
+      },
+      {
+        "rank": 92,
+        "company": "CLOVER HEALTH INVESTMENTS, CORP. /DE",
+        "ceo_comp": 9476723
+      },
+      {
+        "rank": 93,
+        "company": "Protagonist Therapeutics, Inc",
+        "ceo_comp": 9473819
+      },
+      {
+        "rank": 94,
+        "company": "HEALTHEQUITY, INC.",
+        "ceo_comp": 9399483
+      },
+      {
+        "rank": 95,
+        "company": "iRhythm Technologies, Inc.",
+        "ceo_comp": 9343903
+      },
+      {
+        "rank": 96,
+        "company": "Datadog, Inc.",
+        "ceo_comp": 9058196
+      },
+      {
+        "rank": 97,
+        "company": "Donnelley Financial Solutions, Inc.",
+        "ceo_comp": 9051322
+      },
+      {
+        "rank": 98,
+        "company": "Array Technologies, Inc.",
+        "ceo_comp": 8862712
+      },
+      {
+        "rank": 99,
+        "company": "AMERICAN AXLE & MANUFACTURING HOLDINGS INC",
+        "ceo_comp": 8844428
+      },
+      {
+        "rank": 100,
+        "company": "Dianthus Therapeutics, Inc. /DE/",
+        "ceo_comp": 8843300
+      },
+      {
+        "rank": 101,
+        "company": "SBA COMMUNICATIONS CORP",
+        "ceo_comp": 8817502
+      },
+      {
+        "rank": 102,
+        "company": "Atmus Filtration Technologies Inc.",
+        "ceo_comp": 8783500
+      },
+      {
+        "rank": 103,
+        "company": "SELECT MEDICAL HOLDINGS CORP",
+        "ceo_comp": 8780479
+      },
+      {
+        "rank": 104,
+        "company": "GROUP 1 AUTOMOTIVE INC",
+        "ceo_comp": 8670563
+      },
+      {
+        "rank": 105,
+        "company": "Upland Software, Inc.",
+        "ceo_comp": 8626209
+      },
+      {
+        "rank": 106,
+        "company": "POWER INTEGRATIONS INC",
+        "ceo_comp": 8610159
+      },
+      {
+        "rank": 107,
+        "company": "Sabra Health Care REIT, Inc.",
+        "ceo_comp": 8481297
+      },
+      {
+        "rank": 108,
+        "company": "Rackspace Technology, Inc.",
+        "ceo_comp": 8419184
+      },
+      {
+        "rank": 109,
+        "company": "CNH Industrial N.V.",
+        "ceo_comp": 8291838
+      },
+      {
+        "rank": 110,
+        "company": "Esperion Therapeutics, Inc.",
+        "ceo_comp": 8227286
+      },
+      {
+        "rank": 111,
+        "company": "Option Care Health, Inc.",
+        "ceo_comp": 8222800
+      },
+      {
+        "rank": 112,
+        "company": "FATE THERAPEUTICS INC",
+        "ceo_comp": 8145000
+      },
+      {
+        "rank": 113,
+        "company": "Rocket Companies, Inc.",
+        "ceo_comp": 8044681
+      },
+      {
+        "rank": 114,
+        "company": "STAAR SURGICAL CO",
+        "ceo_comp": 7821216
+      },
+      {
+        "rank": 115,
+        "company": "DigitalOcean Holdings, Inc.",
+        "ceo_comp": 7774582
+      },
+      {
+        "rank": 116,
+        "company": "ARRAY DIGITAL INFRASTRUCTURE, INC.",
+        "ceo_comp": 7656948
+      },
+      {
+        "rank": 117,
+        "company": "Pediatrix Medical Group, Inc.",
+        "ceo_comp": 7597254
+      },
+      {
+        "rank": 118,
+        "company": "WM TECHNOLOGY, INC.",
+        "ceo_comp": 7509027
+      },
+      {
+        "rank": 119,
+        "company": "PTC THERAPEUTICS, INC.",
+        "ceo_comp": 7410765
+      },
+      {
+        "rank": 120,
+        "company": "PORTLAND GENERAL ELECTRIC CO /OR/",
+        "ceo_comp": 7367025
+      },
+      {
+        "rank": 121,
+        "company": "LINCOLN ELECTRIC HOLDINGS INC",
+        "ceo_comp": 7356657
+      },
+      {
+        "rank": 122,
+        "company": "Axsome Therapeutics, Inc.",
+        "ceo_comp": 7304689
+      },
+      {
+        "rank": 123,
+        "company": "FIRST INDUSTRIAL REALTY TRUST INC",
+        "ceo_comp": 7123032
+      },
+      {
+        "rank": 124,
+        "company": "P3 Health Partners Inc.",
+        "ceo_comp": 7100000
+      },
+      {
+        "rank": 125,
+        "company": "Fulcrum Therapeutics, Inc.",
+        "ceo_comp": 6990596
+      },
+      {
+        "rank": 126,
+        "company": "GENERAC HOLDINGS INC.",
+        "ceo_comp": 6961596
+      },
+      {
+        "rank": 127,
+        "company": "Spyre Therapeutics, Inc.",
+        "ceo_comp": 6960186
+      },
+      {
+        "rank": 128,
+        "company": "Ardent Health, Inc.",
+        "ceo_comp": 6939253
+      },
+      {
+        "rank": 129,
+        "company": "Encompass Health Corp",
+        "ceo_comp": 6925127
+      },
+      {
+        "rank": 130,
+        "company": "Element Solutions Inc",
+        "ceo_comp": 6910584
+      },
+      {
+        "rank": 131,
+        "company": "Butterfly Network, Inc.",
+        "ceo_comp": 6640611
+      },
+      {
+        "rank": 132,
+        "company": "PLIANT THERAPEUTICS, INC.",
+        "ceo_comp": 6614704
+      },
+      {
+        "rank": 133,
+        "company": "Axalta Coating Systems Ltd.",
+        "ceo_comp": 6602134
+      },
+      {
+        "rank": 134,
+        "company": "TREACE MEDICAL CONCEPTS, INC.",
+        "ceo_comp": 6597160
+      },
+      {
+        "rank": 135,
+        "company": "ICU MEDICAL INC/DE",
+        "ceo_comp": 6454754
+      },
+      {
+        "rank": 136,
+        "company": "ASBURY AUTOMOTIVE GROUP INC",
+        "ceo_comp": 6454000
+      },
+      {
+        "rank": 137,
+        "company": "TAKE TWO INTERACTIVE SOFTWARE INC",
+        "ceo_comp": 6445720
+      },
+      {
+        "rank": 138,
+        "company": "Outlook Therapeutics, Inc.",
+        "ceo_comp": 6377953
+      },
+      {
+        "rank": 139,
+        "company": "nVent Electric plc",
+        "ceo_comp": 6322870
+      },
+      {
+        "rank": 140,
+        "company": "Keros Therapeutics, Inc.",
+        "ceo_comp": 6273192
+      },
+      {
+        "rank": 141,
+        "company": "Oscar Health, Inc.",
+        "ceo_comp": 6228088
+      },
+      {
+        "rank": 142,
+        "company": "eHealth, Inc.",
+        "ceo_comp": 6215508
+      },
+      {
+        "rank": 143,
+        "company": "VARONIS SYSTEMS INC",
+        "ceo_comp": 6201417
+      },
+      {
+        "rank": 144,
+        "company": "MINERALS TECHNOLOGIES INC",
+        "ceo_comp": 6149154
+      },
+      {
+        "rank": 145,
+        "company": "Contagious Gaming Inc.",
+        "ceo_comp": 6098150
+      },
+      {
+        "rank": 146,
+        "company": "APPLIED INDUSTRIAL TECHNOLOGIES INC",
+        "ceo_comp": 6084592
+      },
+      {
+        "rank": 147,
+        "company": "EAGLE MATERIALS INC",
+        "ceo_comp": 6058635
+      },
+      {
+        "rank": 148,
+        "company": "Silence Therapeutics plc",
+        "ceo_comp": 6039265
+      },
+      {
+        "rank": 149,
+        "company": "PENSKE AUTOMOTIVE GROUP, INC.",
+        "ceo_comp": 5979555
+      },
+      {
+        "rank": 150,
+        "company": "MACOM Technology Solutions Holdings, Inc.",
+        "ceo_comp": 5974818
+      },
+      {
+        "rank": 151,
+        "company": "FRANKLIN ELECTRIC CO INC",
+        "ceo_comp": 5953917
+      },
+      {
+        "rank": 152,
+        "company": "MSC INDUSTRIAL DIRECT CO INC",
+        "ceo_comp": 5873837
+      },
+      {
+        "rank": 153,
+        "company": "MODINE MANUFACTURING CO",
+        "ceo_comp": 5838871
+      },
+      {
+        "rank": 154,
+        "company": "Nurix Therapeutics, Inc.",
+        "ceo_comp": 5812862
+      },
+      {
+        "rank": 155,
+        "company": "DYNAVAX TECHNOLOGIES CORP",
+        "ceo_comp": 5810736
+      },
+      {
+        "rank": 156,
+        "company": "CORCEPT THERAPEUTICS INC",
+        "ceo_comp": 5762102
+      },
+      {
+        "rank": 157,
+        "company": "RAYONIER ADVANCED MATERIALS INC.",
+        "ceo_comp": 5579824
+      },
+      {
+        "rank": 158,
+        "company": "VERRA MOBILITY Corp",
+        "ceo_comp": 5562902
+      },
+      {
+        "rank": 159,
+        "company": "SAGA COMMUNICATIONS INC",
+        "ceo_comp": 5527664
+      },
+      {
+        "rank": 160,
+        "company": "Health Catalyst, Inc.",
+        "ceo_comp": 5494141
+      },
+      {
+        "rank": 161,
+        "company": "FACTSET RESEARCH SYSTEMS INC",
+        "ceo_comp": 5468745
+      },
+      {
+        "rank": 162,
+        "company": "BWX Technologies, Inc.",
+        "ceo_comp": 5456840
+      },
+      {
+        "rank": 163,
+        "company": "VISHAY INTERTECHNOLOGY INC",
+        "ceo_comp": 5451180
+      },
+      {
+        "rank": 164,
+        "company": "agilon health, inc.",
+        "ceo_comp": 5416043
+      },
+      {
+        "rank": 165,
+        "company": "WATTS WATER TECHNOLOGIES INC",
+        "ceo_comp": 5328463
+      },
+      {
+        "rank": 166,
+        "company": "Aveanna Healthcare Holdings, Inc.",
+        "ceo_comp": 5312967
+      },
+      {
+        "rank": 167,
+        "company": "PALVELLA THERAPEUTICS, INC.",
+        "ceo_comp": 5148564
+      },
+      {
+        "rank": 168,
+        "company": "Acadia Healthcare Company, Inc.",
+        "ceo_comp": 5131395
+      },
+      {
+        "rank": 169,
+        "company": "Howmet Aerospace Inc.",
+        "ceo_comp": 5060171
+      },
+      {
+        "rank": 170,
+        "company": "CARPENTER TECHNOLOGY CORP",
+        "ceo_comp": 5019390
+      },
+      {
+        "rank": 171,
+        "company": "INNOVATIVE INDUSTRIAL PROPERTIES INC",
+        "ceo_comp": 4999273
+      },
+      {
+        "rank": 172,
+        "company": "MERCURY SYSTEMS INC",
+        "ceo_comp": 4949119
+      },
+      {
+        "rank": 173,
+        "company": "Simpson Manufacturing Co., Inc.",
+        "ceo_comp": 4880856
+      },
+      {
+        "rank": 174,
+        "company": "BENCHMARK ELECTRONICS INC",
+        "ceo_comp": 4870541
+      },
+      {
+        "rank": 175,
+        "company": "LXP Industrial Trust",
+        "ceo_comp": 4867205
+      },
+      {
+        "rank": 176,
+        "company": "Inspire Medical Systems, Inc.",
+        "ceo_comp": 4865607
+      },
+      {
+        "rank": 177,
+        "company": "GLOBUS MEDICAL INC",
+        "ceo_comp": 4858660
+      },
+      {
+        "rank": 178,
+        "company": "BICYCLE THERAPEUTICS PLC",
+        "ceo_comp": 4857218
+      },
+      {
+        "rank": 179,
+        "company": "ZoomInfo Technologies Inc.",
+        "ceo_comp": 4853682
+      },
+      {
+        "rank": 180,
+        "company": "Fortune Brands Innovations, Inc.",
+        "ceo_comp": 4694510
+      },
+      {
+        "rank": 181,
+        "company": "Tango Therapeutics, Inc.",
+        "ceo_comp": 4681787
+      },
+      {
+        "rank": 182,
+        "company": "COPT DEFENSE PROPERTIES",
+        "ceo_comp": 4548812
+      },
+      {
+        "rank": 183,
+        "company": "Allogene Therapeutics, Inc.",
+        "ceo_comp": 4482208
+      },
+      {
+        "rank": 184,
+        "company": "Quantum-Si Inc",
+        "ceo_comp": 4439833
+      },
+      {
+        "rank": 185,
+        "company": "Select Water Solutions, Inc.",
+        "ceo_comp": 4389506
+      },
+      {
+        "rank": 186,
+        "company": "Cartesian Therapeutics, Inc.",
+        "ceo_comp": 4292242
+      },
+      {
+        "rank": 187,
+        "company": "Luminar Technologies, Inc./DE",
+        "ceo_comp": 4287546
+      },
+      {
+        "rank": 188,
+        "company": "Wave Life Sciences Ltd.",
+        "ceo_comp": 4272299
+      },
+      {
+        "rank": 189,
+        "company": "Spero Therapeutics, Inc.",
+        "ceo_comp": 4239705
+      },
+      {
+        "rank": 190,
+        "company": "Janux Therapeutics, Inc.",
+        "ceo_comp": 4193269
+      },
+      {
+        "rank": 191,
+        "company": "Converge Technology Solutions Corp.",
+        "ceo_comp": 4188526
+      },
+      {
+        "rank": 192,
+        "company": "STAG Industrial, Inc.",
+        "ceo_comp": 4188250
+      },
+      {
+        "rank": 193,
+        "company": "HEALTHCARE SERVICES GROUP INC",
+        "ceo_comp": 4182274
+      },
+      {
+        "rank": 194,
+        "company": "Aquestive Therapeutics, Inc.",
+        "ceo_comp": 4181472
+      },
+      {
+        "rank": 195,
+        "company": "CASELLA WASTE SYSTEMS INC",
+        "ceo_comp": 4166661
+      },
+      {
+        "rank": 196,
+        "company": "CROSS COUNTRY HEALTHCARE INC",
+        "ceo_comp": 4126562
+      },
+      {
+        "rank": 197,
+        "company": "PureCycle Technologies, Inc.",
+        "ceo_comp": 4074178
+      },
+      {
+        "rank": 198,
+        "company": "COMFORT SYSTEMS USA INC",
+        "ceo_comp": 4060002
+      },
+      {
+        "rank": 199,
+        "company": "Viking Therapeutics, Inc.",
+        "ceo_comp": 4059119
+      },
+      {
+        "rank": 200,
+        "company": "Repare Therapeutics Inc.",
+        "ceo_comp": 4021395
+      },
+      {
+        "rank": 201,
+        "company": "Cullinan Therapeutics, Inc.",
+        "ceo_comp": 4008206
+      },
+      {
+        "rank": 202,
+        "company": "Iridium Communications Inc.",
+        "ceo_comp": 4007440
+      },
+      {
+        "rank": 203,
+        "company": "Seres Therapeutics, Inc.",
+        "ceo_comp": 4006248
+      },
+      {
+        "rank": 204,
+        "company": "PHIBRO ANIMAL HEALTH CORP",
+        "ceo_comp": 4001319
+      },
+      {
+        "rank": 205,
+        "company": "Kimball Electronics, Inc.",
+        "ceo_comp": 3982601
+      },
+      {
+        "rank": 206,
+        "company": "USANA HEALTH SCIENCES INC",
+        "ceo_comp": 3909615
+      },
+      {
+        "rank": 207,
+        "company": "MICROCHIP TECHNOLOGY INC",
+        "ceo_comp": 3891467
+      },
+      {
+        "rank": 208,
+        "company": "COMTECH TELECOMMUNICATIONS CORP /DE/",
+        "ceo_comp": 3886838
+      },
+      {
+        "rank": 209,
+        "company": "Credo Technology Group Holding Ltd",
+        "ceo_comp": 3880000
+      },
+      {
+        "rank": 210,
+        "company": "Sarepta Therapeutics, Inc.",
+        "ceo_comp": 3842309
+      },
+      {
+        "rank": 211,
+        "company": "SYNCHRONOSS TECHNOLOGIES INC",
+        "ceo_comp": 3842280
+      },
+      {
+        "rank": 212,
+        "company": "AVIAT NETWORKS, INC.",
+        "ceo_comp": 3772051
+      },
+      {
+        "rank": 213,
+        "company": "ONTO INNOVATION INC.",
+        "ceo_comp": 3763688
+      },
+      {
+        "rank": 214,
+        "company": "NEKTAR THERAPEUTICS",
+        "ceo_comp": 3762693
+      },
+      {
+        "rank": 215,
+        "company": "Community Healthcare Trust Inc",
+        "ceo_comp": 3737563
+      },
+      {
+        "rank": 216,
+        "company": "CATHAY GENERAL BANCORP",
+        "ceo_comp": 3687873
+      },
+      {
+        "rank": 217,
+        "company": "Kymera Therapeutics, Inc.",
+        "ceo_comp": 3678001
+      },
+      {
+        "rank": 218,
+        "company": "CSW INDUSTRIALS, INC.",
+        "ceo_comp": 3639862
+      },
+      {
+        "rank": 219,
+        "company": "INNODATA INC",
+        "ceo_comp": 3628930
+      },
+      {
+        "rank": 220,
+        "company": "Relay Therapeutics, Inc.",
+        "ceo_comp": 3576319
+      },
+      {
+        "rank": 221,
+        "company": "Quantum Computing Inc.",
+        "ceo_comp": 3542578
+      },
+      {
+        "rank": 222,
+        "company": "Neurogene Inc.",
+        "ceo_comp": 3464815
+      },
+      {
+        "rank": 223,
+        "company": "Vera Therapeutics, Inc.",
+        "ceo_comp": 3429733
+      },
+      {
+        "rank": 224,
+        "company": "Jasper Therapeutics, Inc.",
+        "ceo_comp": 3369990
+      },
+      {
+        "rank": 225,
+        "company": "RELMADA THERAPEUTICS, INC.",
+        "ceo_comp": 3194828
+      },
+      {
+        "rank": 226,
+        "company": "Ivanhoe Electric Inc.",
+        "ceo_comp": 3103477
+      },
+      {
+        "rank": 227,
+        "company": "Global Medical REIT Inc.",
+        "ceo_comp": 3086114
+      },
+      {
+        "rank": 228,
+        "company": "ORASURE TECHNOLOGIES INC",
+        "ceo_comp": 3085421
+      },
+      {
+        "rank": 229,
+        "company": "EVERSPIN TECHNOLOGIES INC.",
+        "ceo_comp": 3022589
+      },
+      {
+        "rank": 230,
+        "company": "QUANTUM CORP /DE/",
+        "ceo_comp": 2989619
+      },
+      {
+        "rank": 231,
+        "company": "Penguin Solutions, Inc.",
+        "ceo_comp": 2948891
+      },
+      {
+        "rank": 232,
+        "company": "NETSCOUT SYSTEMS INC",
+        "ceo_comp": 2926747
+      },
+      {
+        "rank": 233,
+        "company": "SHENANDOAH TELECOMMUNICATIONS CO/VA/",
+        "ceo_comp": 2875067
+      },
+      {
+        "rank": 234,
+        "company": "DBV Technologies S.A.",
+        "ceo_comp": 2787640
+      },
+      {
+        "rank": 235,
+        "company": "Quince Therapeutics, Inc.",
+        "ceo_comp": 2732125
+      },
+      {
+        "rank": 236,
+        "company": "ESCO TECHNOLOGIES INC",
+        "ceo_comp": 2677153
+      },
+      {
+        "rank": 237,
+        "company": "Purple Innovation, Inc.",
+        "ceo_comp": 2663668
+      },
+      {
+        "rank": 238,
+        "company": "InterDigital, Inc.",
+        "ceo_comp": 2642504
+      },
+      {
+        "rank": 239,
+        "company": "Mastech Digital, Inc.",
+        "ceo_comp": 2630828
+      },
+      {
+        "rank": 240,
+        "company": "TTM TECHNOLOGIES INC",
+        "ceo_comp": 2610139
+      },
+      {
+        "rank": 241,
+        "company": "Organogenesis Holdings Inc.",
+        "ceo_comp": 2541209
+      },
+      {
+        "rank": 242,
+        "company": "Mersana Therapeutics, Inc.",
+        "ceo_comp": 2537911
+      },
+      {
+        "rank": 243,
+        "company": "Summit Therapeutics Inc.",
+        "ceo_comp": 2514385
+      },
+      {
+        "rank": 244,
+        "company": "SANGAMO THERAPEUTICS, INC",
+        "ceo_comp": 2457450
+      },
+      {
+        "rank": 245,
+        "company": "ORMAT TECHNOLOGIES, INC.",
+        "ceo_comp": 2405763
+      },
+      {
+        "rank": 246,
+        "company": "American Healthcare REIT, Inc.",
+        "ceo_comp": 2398043
+      },
+      {
+        "rank": 247,
+        "company": "Consensus Cloud Solutions, Inc.",
+        "ceo_comp": 2391440
+      },
+      {
+        "rank": 248,
+        "company": "Lineage Cell Therapeutics, Inc.",
+        "ceo_comp": 2372528
+      },
+      {
+        "rank": 249,
+        "company": "Stabilis Solutions, Inc.",
+        "ceo_comp": 2220964
+      },
+      {
+        "rank": 250,
+        "company": "Apyx Medical Corp",
+        "ceo_comp": 2170236
+      },
+      {
+        "rank": 251,
+        "company": "DELCATH SYSTEMS, INC.",
+        "ceo_comp": 2157414
+      },
+      {
+        "rank": 252,
+        "company": "NATIONAL HEALTHCARE CORP",
+        "ceo_comp": 2154574
+      },
+      {
+        "rank": 253,
+        "company": "Greenwave Technology Solutions, Inc.",
+        "ceo_comp": 2150000
+      },
+      {
+        "rank": 254,
+        "company": "NATIONAL HEALTH INVESTORS INC",
+        "ceo_comp": 2084567
+      },
+      {
+        "rank": 255,
+        "company": "Neuphoria Therapeutics Inc.",
+        "ceo_comp": 2079880
+      },
+      {
+        "rank": 256,
+        "company": "Karyopharm Therapeutics Inc.",
+        "ceo_comp": 2069341
+      },
+      {
+        "rank": 257,
+        "company": "WRAP TECHNOLOGIES, INC.",
+        "ceo_comp": 1959493
+      },
+      {
+        "rank": 258,
+        "company": "OPKO HEALTH, INC.",
+        "ceo_comp": 1945950
+      },
+      {
+        "rank": 259,
+        "company": "VIEMED HEALTHCARE, INC.",
+        "ceo_comp": 1925507
+      },
+      {
+        "rank": 260,
+        "company": "TETRA TECHNOLOGIES INC",
+        "ceo_comp": 1915532
+      },
+      {
+        "rank": 261,
+        "company": "PIONEER POWER SOLUTIONS, INC.",
+        "ceo_comp": 1861520
+      },
+      {
+        "rank": 262,
+        "company": "ZEBRA TECHNOLOGIES CORP",
+        "ceo_comp": 1836299
+      },
+      {
+        "rank": 263,
+        "company": "Rekor Systems, Inc.",
+        "ceo_comp": 1826586
+      },
+      {
+        "rank": 264,
+        "company": "UNIVERSAL HEALTH SERVICES INC",
+        "ceo_comp": 1825611
+      },
+      {
+        "rank": 265,
+        "company": "Ribbon Communications Inc.",
+        "ceo_comp": 1807140
+      },
+      {
+        "rank": 266,
+        "company": "GrowGeneration Corp.",
+        "ceo_comp": 1764902
+      },
+      {
+        "rank": 267,
+        "company": "CytomX Therapeutics, Inc.",
+        "ceo_comp": 1752802
+      },
+      {
+        "rank": 268,
+        "company": "KULR Technology Group, Inc.",
+        "ceo_comp": 1749159
+      },
+      {
+        "rank": 269,
+        "company": "Strata Critical Medical, Inc.",
+        "ceo_comp": 1719791
+      },
+      {
+        "rank": 270,
+        "company": "LISATA THERAPEUTICS, INC.",
+        "ceo_comp": 1691174
+      },
+      {
+        "rank": 271,
+        "company": "Trevi Therapeutics, Inc.",
+        "ceo_comp": 1687298
+      },
+      {
+        "rank": 272,
+        "company": "UFP TECHNOLOGIES INC",
+        "ceo_comp": 1665380
+      },
+      {
+        "rank": 273,
+        "company": "AEHR TEST SYSTEMS",
+        "ceo_comp": 1652788
+      },
+      {
+        "rank": 274,
+        "company": "SIGA TECHNOLOGIES INC",
+        "ceo_comp": 1639090
+      },
+      {
+        "rank": 275,
+        "company": "AMERICAN BATTERY TECHNOLOGY Co",
+        "ceo_comp": 1598997
+      },
+      {
+        "rank": 276,
+        "company": "GLOBAL INDUSTRIAL Co",
+        "ceo_comp": 1580810
+      },
+      {
+        "rank": 277,
+        "company": "Dyne Therapeutics, Inc.",
+        "ceo_comp": 1540333
+      },
+      {
+        "rank": 278,
+        "company": "HELIOS TECHNOLOGIES, INC.",
+        "ceo_comp": 1533991
+      },
+      {
+        "rank": 279,
+        "company": "CASS INFORMATION SYSTEMS INC",
+        "ceo_comp": 1517412
+      },
+      {
+        "rank": 280,
+        "company": "ACHIEVE LIFE SCIENCES, INC.",
+        "ceo_comp": 1504795
+      },
+      {
+        "rank": 281,
+        "company": "Aeva Technologies, Inc.",
+        "ceo_comp": 1496649
+      },
+      {
+        "rank": 282,
+        "company": "Climb Global Solutions, Inc.",
+        "ceo_comp": 1482930
+      },
+      {
+        "rank": 283,
+        "company": "TRANSACT TECHNOLOGIES INC",
+        "ceo_comp": 1451745
+      },
+      {
+        "rank": 284,
+        "company": "LESAKA TECHNOLOGIES INC",
+        "ceo_comp": 1432860
+      },
+      {
+        "rank": 285,
+        "company": "Anika Therapeutics, Inc.",
+        "ceo_comp": 1411154
+      },
+      {
+        "rank": 286,
+        "company": "SANUWAVE Health, Inc.",
+        "ceo_comp": 1383846
+      },
+      {
+        "rank": 287,
+        "company": "NATURAL HEALTH TRENDS CORP",
+        "ceo_comp": 1373217
+      },
+      {
+        "rank": 288,
+        "company": "AXCELIS TECHNOLOGIES INC",
+        "ceo_comp": 1356639
+      },
+      {
+        "rank": 289,
+        "company": "Voyager Therapeutics, Inc.",
+        "ceo_comp": 1353260
+      },
+      {
+        "rank": 290,
+        "company": "Rein Therapeutics, Inc.",
+        "ceo_comp": 1331919
+      },
+      {
+        "rank": 291,
+        "company": "ROCKWELL MEDICAL, INC.",
+        "ceo_comp": 1310878
+      },
+      {
+        "rank": 292,
+        "company": "Aurora Innovation, Inc.",
+        "ceo_comp": 1298122
+      },
+      {
+        "rank": 293,
+        "company": "Metavista3D Inc.",
+        "ceo_comp": 1248601
+      },
+      {
+        "rank": 294,
+        "company": "NAPCO SECURITY TECHNOLOGIES, INC",
+        "ceo_comp": 1243026
+      },
+      {
+        "rank": 295,
+        "company": "Plymouth Industrial REIT, Inc.",
+        "ceo_comp": 1210608
+      },
+      {
+        "rank": 296,
+        "company": "METHODE ELECTRONICS INC",
+        "ceo_comp": 1200082
+      },
+      {
+        "rank": 297,
+        "company": "RETRACTABLE TECHNOLOGIES INC",
+        "ceo_comp": 1188645
+      },
+      {
+        "rank": 298,
+        "company": "Whitehawk Therapeutics, Inc.",
+        "ceo_comp": 1186581
+      },
+      {
+        "rank": 299,
+        "company": "NEUROONE MEDICAL TECHNOLOGIES Corp",
+        "ceo_comp": 1186410
+      },
+      {
+        "rank": 300,
+        "company": "XTI Aerospace, Inc.",
+        "ceo_comp": 1164615
+      },
+      {
+        "rank": 301,
+        "company": "PLUS THERAPEUTICS, INC.",
+        "ceo_comp": 1083987
+      },
+      {
+        "rank": 302,
+        "company": "ASURE SOFTWARE INC",
+        "ceo_comp": 1066868
+      },
+      {
+        "rank": 303,
+        "company": "Xtant Medical Holdings, Inc.",
+        "ceo_comp": 1060562
+      },
+      {
+        "rank": 304,
+        "company": "Hoth Therapeutics, Inc.",
+        "ceo_comp": 1060370
+      },
+      {
+        "rank": 305,
+        "company": "NORTECH SYSTEMS INC",
+        "ceo_comp": 1030477
+      },
+      {
+        "rank": 306,
+        "company": "vTv Therapeutics Inc.",
+        "ceo_comp": 1001967
+      },
+      {
+        "rank": 307,
+        "company": "Ideal Power Inc.",
+        "ceo_comp": 996317
+      },
+      {
+        "rank": 308,
+        "company": "SOUTH DAKOTA SOYBEAN PROCESSORS LLC",
+        "ceo_comp": 974553
+      },
+      {
+        "rank": 309,
+        "company": "GALECTIN THERAPEUTICS INC",
+        "ceo_comp": 974181
+      },
+      {
+        "rank": 310,
+        "company": "MITEK SYSTEMS INC",
+        "ceo_comp": 973850
+      },
+      {
+        "rank": 311,
+        "company": "ZEVRA THERAPEUTICS, INC.",
+        "ceo_comp": 953616
+      },
+      {
+        "rank": 312,
+        "company": "Avalo Therapeutics, Inc.",
+        "ceo_comp": 945417
+      },
+      {
+        "rank": 313,
+        "company": "Kezar Life Sciences, Inc.",
+        "ceo_comp": 927300
+      },
+      {
+        "rank": 314,
+        "company": "PDF SOLUTIONS INC",
+        "ceo_comp": 900314
+      },
+      {
+        "rank": 315,
+        "company": "SYPRIS SOLUTIONS INC",
+        "ceo_comp": 891421
+      },
+      {
+        "rank": 316,
+        "company": "DarioHealth Corp.",
+        "ceo_comp": 879232
+      },
+      {
+        "rank": 317,
+        "company": "TOMI Environmental Solutions, Inc.",
+        "ceo_comp": 841127
+      },
+      {
+        "rank": 318,
+        "company": "Ernexa Therapeutics Inc.",
+        "ceo_comp": 792978
+      },
+      {
+        "rank": 319,
+        "company": "DIRTT ENVIRONMENTAL SOLUTIONS LTD",
+        "ceo_comp": 772895
+      },
+      {
+        "rank": 320,
+        "company": "Trump Media & Technology Group Corp.",
+        "ceo_comp": 750000
+      },
+      {
+        "rank": 321,
+        "company": "Powerfleet, Inc.",
+        "ceo_comp": 741832
+      },
+      {
+        "rank": 322,
+        "company": "Entero Therapeutics, Inc.",
+        "ceo_comp": 741720
+      },
+      {
+        "rank": 323,
+        "company": "Riot Platforms, Inc.",
+        "ceo_comp": 698581
+      },
+      {
+        "rank": 324,
+        "company": "CareCloud, Inc.",
+        "ceo_comp": 683925
+      },
+      {
+        "rank": 325,
+        "company": "Modular Medical, Inc.",
+        "ceo_comp": 683745
+      },
+      {
+        "rank": 326,
+        "company": "SONIM TECHNOLOGIES INC",
+        "ceo_comp": 672918
+      },
+      {
+        "rank": 327,
+        "company": "TENAX THERAPEUTICS, INC.",
+        "ceo_comp": 667332
+      },
+      {
+        "rank": 328,
+        "company": "DATA I/O CORP",
+        "ceo_comp": 634748
+      },
+      {
+        "rank": 329,
+        "company": "Marker Therapeutics, Inc.",
+        "ceo_comp": 613007
+      },
+      {
+        "rank": 330,
+        "company": "Aspira Women's Health Inc.",
+        "ceo_comp": 604256
+      },
+      {
+        "rank": 331,
+        "company": "Vistagen Therapeutics, Inc.",
+        "ceo_comp": 600000
+      },
+      {
+        "rank": 332,
+        "company": "GSI TECHNOLOGY INC",
+        "ceo_comp": 569167
+      },
+      {
+        "rank": 333,
+        "company": "CPS TECHNOLOGIES CORP/DE/",
+        "ceo_comp": 566674
+      },
+      {
+        "rank": 334,
+        "company": "Origin Materials, Inc.",
+        "ceo_comp": 563731
+      },
+      {
+        "rank": 335,
+        "company": "Cyclerion Therapeutics, Inc.",
+        "ceo_comp": 559278
+      },
+      {
+        "rank": 336,
+        "company": "LIGHTPATH TECHNOLOGIES INC",
+        "ceo_comp": 553722
+      },
+      {
+        "rank": 337,
+        "company": "AQUABOUNTY TECHNOLOGIES INC",
+        "ceo_comp": 553557
+      },
+      {
+        "rank": 338,
+        "company": "Cloudflare, Inc.",
+        "ceo_comp": 539152
+      },
+      {
+        "rank": 339,
+        "company": "Nuvera Communications, Inc.",
+        "ceo_comp": 512113
+      },
+      {
+        "rank": 340,
+        "company": "GYRE THERAPEUTICS, INC.",
+        "ceo_comp": 491568
+      },
+      {
+        "rank": 341,
+        "company": "REGIONAL HEALTH PROPERTIES, INC",
+        "ceo_comp": 478240
+      },
+      {
+        "rank": 342,
+        "company": "ClearSign Technologies Corp",
+        "ceo_comp": 471967
+      },
+      {
+        "rank": 343,
+        "company": "enVVeno Medical Corp",
+        "ceo_comp": 466476
+      },
+      {
+        "rank": 344,
+        "company": "DUOS TECHNOLOGIES GROUP, INC.",
+        "ceo_comp": 458990
+      },
+      {
+        "rank": 345,
+        "company": "National Healthcare Properties, Inc.",
+        "ceo_comp": 458841
+      },
+      {
+        "rank": 346,
+        "company": "GEOSPACE TECHNOLOGIES CORP",
+        "ceo_comp": 439739
+      },
+      {
+        "rank": 347,
+        "company": "ENDRA Life Sciences Inc.",
+        "ceo_comp": 430872
+      },
+      {
+        "rank": 348,
+        "company": "MODIV INDUSTRIAL, INC.",
+        "ceo_comp": 421600
+      },
+      {
+        "rank": 349,
+        "company": "BK Technologies Corp",
+        "ceo_comp": 374417
+      },
+      {
+        "rank": 350,
+        "company": "INTERLINK ELECTRONICS INC",
+        "ceo_comp": 351677
+      },
+      {
+        "rank": 351,
+        "company": "DIGITAL ALLY, INC.",
+        "ceo_comp": 348525
+      },
+      {
+        "rank": 352,
+        "company": "MIND TECHNOLOGY, INC",
+        "ceo_comp": 347201
+      },
+      {
+        "rank": 353,
+        "company": "DIVERSIFIED HEALTHCARE TRUST",
+        "ceo_comp": 341608
+      },
+      {
+        "rank": 354,
+        "company": "UNIVERSAL HEALTH REALTY INCOME TRUST",
+        "ceo_comp": 311893
+      },
+      {
+        "rank": 355,
+        "company": "PARK AEROSPACE CORP",
+        "ceo_comp": 302202
+      },
+      {
+        "rank": 356,
+        "company": "Professional Diversity Network, Inc.",
+        "ceo_comp": 275597
+      },
+      {
+        "rank": 357,
+        "company": "Lifeloc Technologies, Inc",
+        "ceo_comp": 270617
+      },
+      {
+        "rank": 358,
+        "company": "GigaCloud Technology Inc",
+        "ceo_comp": 238898
+      },
+      {
+        "rank": 359,
+        "company": "Harvard Apparatus Regenerative Technology, Inc.",
+        "ceo_comp": 227533
+      },
+      {
+        "rank": 360,
+        "company": "Elite Health Systems Inc.",
+        "ceo_comp": 188000
+      },
+      {
+        "rank": 361,
+        "company": "Industrial Logistics Properties Trust",
+        "ceo_comp": 60811
+      },
+      {
+        "rank": 362,
+        "company": "ZW Data Action Technologies Inc.",
+        "ceo_comp": 29601
+      },
+      {
+        "rank": 363,
+        "company": "Wetouch Technology Inc.",
+        "ceo_comp": 20336
+      },
+      {
+        "rank": 364,
+        "company": "COGENT COMMUNICATIONS HOLDINGS, INC.",
+        "ceo_comp": 14111
+      },
+      {
+        "rank": 365,
+        "company": "AVENUE THERAPEUTICS, INC.",
+        "ceo_comp": 10668
+      }
+    ]
+  },
+  "Biotechnology": {
+    "total_companies": 143,
+    "companies": [
+      {
+        "rank": 1,
+        "company": "Lyell Immunopharma, Inc.",
+        "ceo_comp": 18686189
+      },
+      {
+        "rank": 2,
+        "company": "SUPERNUS PHARMACEUTICALS, INC.",
+        "ceo_comp": 17848004
+      },
+      {
+        "rank": 3,
+        "company": "VERTEX PHARMACEUTICALS INC / MA",
+        "ceo_comp": 16473245
+      },
+      {
+        "rank": 4,
+        "company": "Pacira BioSciences, Inc.",
+        "ceo_comp": 15944347
+      },
+      {
+        "rank": 5,
+        "company": "TEVA PHARMACEUTICAL INDUSTRIES LTD",
+        "ceo_comp": 15518947
+      },
+      {
+        "rank": 6,
+        "company": "Intellia Therapeutics, Inc.",
+        "ceo_comp": 15330547
+      },
+      {
+        "rank": 7,
+        "company": "Illumina",
+        "ceo_comp": 14802924
+      },
+      {
+        "rank": 8,
+        "company": "RHYTHM PHARMACEUTICALS, INC.",
+        "ceo_comp": 14663742
+      },
+      {
+        "rank": 9,
+        "company": "LIGAND PHARMACEUTICALS INC",
+        "ceo_comp": 12914980
+      },
+      {
+        "rank": 10,
+        "company": "ARROWHEAD PHARMACEUTICALS, INC.",
+        "ceo_comp": 12031969
+      },
+      {
+        "rank": 11,
+        "company": "IOVANCE BIOTHERAPEUTICS, INC.",
+        "ceo_comp": 10953192
+      },
+      {
+        "rank": 12,
+        "company": "Crinetics Pharmaceuticals, Inc.",
+        "ceo_comp": 10533579
+      },
+      {
+        "rank": 13,
+        "company": "INOVIO PHARMACEUTICALS, INC.",
+        "ceo_comp": 10472297
+      },
+      {
+        "rank": 14,
+        "company": "Denali Therapeutics Inc.",
+        "ceo_comp": 9302445
+      },
+      {
+        "rank": 15,
+        "company": "Apellis Pharmaceuticals, Inc.",
+        "ceo_comp": 9275425
+      },
+      {
+        "rank": 16,
+        "company": "Vir Biotechnology, Inc.",
+        "ceo_comp": 9255903
+      },
+      {
+        "rank": 17,
+        "company": "CRISPR Therapeutics",
+        "ceo_comp": 9105256
+      },
+      {
+        "rank": 18,
+        "company": "NEUROCRINE BIOSCIENCES INC",
+        "ceo_comp": 8535422
+      },
+      {
+        "rank": 19,
+        "company": "AMICUS THERAPEUTICS, INC.",
+        "ceo_comp": 8526943
+      },
+      {
+        "rank": 20,
+        "company": "RECURSION PHARMACEUTICALS, INC.",
+        "ceo_comp": 8499587
+      },
+      {
+        "rank": 21,
+        "company": "10x Genomics",
+        "ceo_comp": 7929349
+      },
+      {
+        "rank": 22,
+        "company": "10x Genomics, Inc.",
+        "ceo_comp": 7929349
+      },
+      {
+        "rank": 23,
+        "company": "ALNYLAM PHARMACEUTICALS, INC.",
+        "ceo_comp": 7818164
+      },
+      {
+        "rank": 24,
+        "company": "Syndax Pharmaceuticals Inc",
+        "ceo_comp": 7707176
+      },
+      {
+        "rank": 25,
+        "company": "Zentalis Pharmaceuticals, Inc.",
+        "ceo_comp": 7425326
+      },
+      {
+        "rank": 26,
+        "company": "Structure Therapeutics Inc.",
+        "ceo_comp": 7390911
+      },
+      {
+        "rank": 27,
+        "company": "Amneal Pharmaceuticals, Inc.",
+        "ceo_comp": 7191109
+      },
+      {
+        "rank": 28,
+        "company": "Amylyx Pharmaceuticals, Inc.",
+        "ceo_comp": 7178416
+      },
+      {
+        "rank": 29,
+        "company": "Kiniksa Pharmaceuticals International, plc",
+        "ceo_comp": 7129792
+      },
+      {
+        "rank": 30,
+        "company": "BIOLIFE SOLUTIONS INC",
+        "ceo_comp": 7046205
+      },
+      {
+        "rank": 31,
+        "company": "CASTLE BIOSCIENCES INC",
+        "ceo_comp": 6941074
+      },
+      {
+        "rank": 32,
+        "company": "CATALYST PHARMACEUTICALS, INC.",
+        "ceo_comp": 6923782
+      },
+      {
+        "rank": 33,
+        "company": "ROCKET PHARMACEUTICALS, INC.",
+        "ceo_comp": 6841407
+      },
+      {
+        "rank": 34,
+        "company": "ORAMED PHARMACEUTICALS INC.",
+        "ceo_comp": 6833620
+      },
+      {
+        "rank": 35,
+        "company": "REGENERON PHARMACEUTICALS, INC.",
+        "ceo_comp": 6823034
+      },
+      {
+        "rank": 36,
+        "company": "IRONWOOD PHARMACEUTICALS INC",
+        "ceo_comp": 6821113
+      },
+      {
+        "rank": 37,
+        "company": "Mirum Pharmaceuticals, Inc.",
+        "ceo_comp": 6598551
+      },
+      {
+        "rank": 38,
+        "company": "Day One Biopharmaceuticals, Inc.",
+        "ceo_comp": 6560577
+      },
+      {
+        "rank": 39,
+        "company": "Aurinia Pharmaceuticals Inc.",
+        "ceo_comp": 6417897
+      },
+      {
+        "rank": 40,
+        "company": "Theravance Biopharma, Inc.",
+        "ceo_comp": 6272907
+      },
+      {
+        "rank": 41,
+        "company": "COLLEGIUM PHARMACEUTICAL, INC",
+        "ceo_comp": 6042639
+      },
+      {
+        "rank": 42,
+        "company": "Olema Pharmaceuticals, Inc.",
+        "ceo_comp": 5989638
+      },
+      {
+        "rank": 43,
+        "company": "Cidara Therapeutics, Inc.",
+        "ceo_comp": 5965903
+      },
+      {
+        "rank": 44,
+        "company": "Amphastar Pharmaceuticals, Inc.",
+        "ceo_comp": 5962949
+      },
+      {
+        "rank": 45,
+        "company": "EyePoint Pharmaceuticals, Inc.",
+        "ceo_comp": 5954807
+      },
+      {
+        "rank": 46,
+        "company": "NewAmsterdam Pharma Co N.V.",
+        "ceo_comp": 5805558
+      },
+      {
+        "rank": 47,
+        "company": "Arcus Biosciences, Inc.",
+        "ceo_comp": 5685664
+      },
+      {
+        "rank": 48,
+        "company": "Emergent BioSolutions Inc.",
+        "ceo_comp": 5569978
+      },
+      {
+        "rank": 49,
+        "company": "ENANTA PHARMACEUTICALS INC",
+        "ceo_comp": 5293709
+      },
+      {
+        "rank": 50,
+        "company": "Travere Therapeutics, Inc.",
+        "ceo_comp": 5204877
+      },
+      {
+        "rank": 51,
+        "company": "Ultragenyx Pharmaceutical Inc.",
+        "ceo_comp": 5144220
+      },
+      {
+        "rank": 52,
+        "company": "KalVista Pharmaceuticals, Inc.",
+        "ceo_comp": 5098640
+      },
+      {
+        "rank": 53,
+        "company": "Cogent Biosciences, Inc.",
+        "ceo_comp": 4917890
+      },
+      {
+        "rank": 54,
+        "company": "Solid Biosciences Inc.",
+        "ceo_comp": 4869909
+      },
+      {
+        "rank": 55,
+        "company": "Cytek Biosciences, Inc.",
+        "ceo_comp": 4818502
+      },
+      {
+        "rank": 56,
+        "company": "Avidity Biosciences, Inc.",
+        "ceo_comp": 4795542
+      },
+      {
+        "rank": 57,
+        "company": "Ventyx Biosciences, Inc.",
+        "ceo_comp": 4640423
+      },
+      {
+        "rank": 58,
+        "company": "UroGen Pharma Ltd.",
+        "ceo_comp": 4639590
+      },
+      {
+        "rank": 59,
+        "company": "Tonix Pharmaceuticals Holding Corp.",
+        "ceo_comp": 4580167
+      },
+      {
+        "rank": 60,
+        "company": "BioXcel Therapeutics, Inc.",
+        "ceo_comp": 4559195
+      },
+      {
+        "rank": 61,
+        "company": "PRECISION BIOSCIENCES INC",
+        "ceo_comp": 4310914
+      },
+      {
+        "rank": 62,
+        "company": "Atea Pharmaceuticals, Inc.",
+        "ceo_comp": 4202323
+      },
+      {
+        "rank": 63,
+        "company": "Arcutis Biotherapeutics, Inc.",
+        "ceo_comp": 4058365
+      },
+      {
+        "rank": 64,
+        "company": "Actinium Pharmaceuticals, Inc.",
+        "ceo_comp": 4020167
+      },
+      {
+        "rank": 65,
+        "company": "PUMA BIOTECHNOLOGY, INC.",
+        "ceo_comp": 3969931
+      },
+      {
+        "rank": 66,
+        "company": "X4 Pharmaceuticals, Inc",
+        "ceo_comp": 3872533
+      },
+      {
+        "rank": 67,
+        "company": "IDEAYA Biosciences, Inc.",
+        "ceo_comp": 3848871
+      },
+      {
+        "rank": 68,
+        "company": "Xeris Biopharma Holdings, Inc.",
+        "ceo_comp": 3764134
+      },
+      {
+        "rank": 69,
+        "company": "Generation Bio Co.",
+        "ceo_comp": 3671696
+      },
+      {
+        "rank": 70,
+        "company": "PMV Pharmaceuticals, Inc.",
+        "ceo_comp": 3576440
+      },
+      {
+        "rank": 71,
+        "company": "Phathom Pharmaceuticals, Inc.",
+        "ceo_comp": 3411022
+      },
+      {
+        "rank": 72,
+        "company": "Adaptimmune Therapeutics PLC",
+        "ceo_comp": 3408527
+      },
+      {
+        "rank": 73,
+        "company": "Harmony Biosciences Holdings, Inc.",
+        "ceo_comp": 3230374
+      },
+      {
+        "rank": 74,
+        "company": "AVADEL PHARMACEUTICALS PLC",
+        "ceo_comp": 3143694
+      },
+      {
+        "rank": 75,
+        "company": "Celldex Therapeutics, Inc.",
+        "ceo_comp": 3006668
+      },
+      {
+        "rank": 76,
+        "company": "RIGEL PHARMACEUTICALS INC",
+        "ceo_comp": 2963884
+      },
+      {
+        "rank": 77,
+        "company": "Xenon Pharmaceuticals Inc.",
+        "ceo_comp": 2941911
+      },
+      {
+        "rank": 78,
+        "company": "Vanda Pharmaceuticals Inc.",
+        "ceo_comp": 2913420
+      },
+      {
+        "rank": 79,
+        "company": "Editas Medicine",
+        "ceo_comp": 2880375
+      },
+      {
+        "rank": 80,
+        "company": "LEXICON PHARMACEUTICALS, INC.",
+        "ceo_comp": 2835589
+      },
+      {
+        "rank": 81,
+        "company": "Applied Therapeutics, Inc.",
+        "ceo_comp": 2758765
+      },
+      {
+        "rank": 82,
+        "company": "Arbutus Biopharma Corp",
+        "ceo_comp": 2645657
+      },
+      {
+        "rank": 83,
+        "company": "ANI PHARMACEUTICALS INC",
+        "ceo_comp": 2429358
+      },
+      {
+        "rank": 84,
+        "company": "SUTRO BIOPHARMA, INC.",
+        "ceo_comp": 2332343
+      },
+      {
+        "rank": 85,
+        "company": "PDS Biotechnology Corp",
+        "ceo_comp": 2302548
+      },
+      {
+        "rank": 86,
+        "company": "Mereo BioPharma Group plc",
+        "ceo_comp": 2219323
+      },
+      {
+        "rank": 87,
+        "company": "Anixa Biosciences Inc",
+        "ceo_comp": 2159033
+      },
+      {
+        "rank": 88,
+        "company": "Larimar Therapeutics, Inc.",
+        "ceo_comp": 2129549
+      },
+      {
+        "rank": 89,
+        "company": "Eton Pharmaceuticals, Inc.",
+        "ceo_comp": 2119541
+      },
+      {
+        "rank": 90,
+        "company": "Milestone Pharmaceuticals Inc.",
+        "ceo_comp": 1978092
+      },
+      {
+        "rank": 91,
+        "company": "GT Biopharma, Inc.",
+        "ceo_comp": 1892293
+      },
+      {
+        "rank": 92,
+        "company": "PACIFIC BIOSCIENCES OF CALIFORNIA, INC.",
+        "ceo_comp": 1855694
+      },
+      {
+        "rank": 93,
+        "company": "ASSEMBLY BIOSCIENCES, INC.",
+        "ceo_comp": 1759202
+      },
+      {
+        "rank": 94,
+        "company": "CUMBERLAND PHARMACEUTICALS INC",
+        "ceo_comp": 1533713
+      },
+      {
+        "rank": 95,
+        "company": "Evofem Biosciences, Inc.",
+        "ceo_comp": 1520455
+      },
+      {
+        "rank": 96,
+        "company": "aTYR PHARMA INC",
+        "ceo_comp": 1480522
+      },
+      {
+        "rank": 97,
+        "company": "Protalix BioTherapeutics, Inc.",
+        "ceo_comp": 1468296
+      },
+      {
+        "rank": 98,
+        "company": "Cellectar Biosciences, Inc.",
+        "ceo_comp": 1463172
+      },
+      {
+        "rank": 99,
+        "company": "Perspective Therapeutics, Inc.",
+        "ceo_comp": 1458996
+      },
+      {
+        "rank": 100,
+        "company": "Corbus Pharmaceuticals Holdings, Inc.",
+        "ceo_comp": 1442841
+      },
+      {
+        "rank": 101,
+        "company": "Quoin Pharmaceuticals, Ltd.",
+        "ceo_comp": 1406801
+      },
+      {
+        "rank": 102,
+        "company": "MoonLake Immunotherapeutics",
+        "ceo_comp": 1406038
+      },
+      {
+        "rank": 103,
+        "company": "PROCEPT BioRobotics Corp",
+        "ceo_comp": 1374745
+      },
+      {
+        "rank": 104,
+        "company": "Cue Biopharma, Inc.",
+        "ceo_comp": 1373850
+      },
+      {
+        "rank": 105,
+        "company": "Iterum Therapeutics plc",
+        "ceo_comp": 1372710
+      },
+      {
+        "rank": 106,
+        "company": "CAPRICOR THERAPEUTICS, INC.",
+        "ceo_comp": 1333423
+      },
+      {
+        "rank": 107,
+        "company": "Twist Bioscience",
+        "ceo_comp": 1281593
+      },
+      {
+        "rank": 108,
+        "company": "Forte Biosciences, Inc.",
+        "ceo_comp": 1227610
+      },
+      {
+        "rank": 109,
+        "company": "LIFECORE BIOMEDICAL, INC. DE",
+        "ceo_comp": 1131299
+      },
+      {
+        "rank": 110,
+        "company": "SOLENO THERAPEUTICS INC",
+        "ceo_comp": 1128691
+      },
+      {
+        "rank": 111,
+        "company": "Eledon Pharmaceuticals, Inc.",
+        "ceo_comp": 1118493
+      },
+      {
+        "rank": 112,
+        "company": "NORTHWEST BIOTHERAPEUTICS INC",
+        "ceo_comp": 1100000
+      },
+      {
+        "rank": 113,
+        "company": "Grace Therapeutics, Inc.",
+        "ceo_comp": 1074621
+      },
+      {
+        "rank": 114,
+        "company": "PULSE BIOSCIENCES, INC.",
+        "ceo_comp": 1052964
+      },
+      {
+        "rank": 115,
+        "company": "Sonnet BioTherapeutics Holdings, Inc.",
+        "ceo_comp": 1005393
+      },
+      {
+        "rank": 116,
+        "company": "Bionano Genomics, Inc.",
+        "ceo_comp": 989677
+      },
+      {
+        "rank": 117,
+        "company": "Verrica Pharmaceuticals Inc.",
+        "ceo_comp": 987849
+      },
+      {
+        "rank": 118,
+        "company": "Salarius Pharmaceuticals, Inc.",
+        "ceo_comp": 941023
+      },
+      {
+        "rank": 119,
+        "company": "Benitec Biopharma Inc.",
+        "ceo_comp": 918725
+      },
+      {
+        "rank": 120,
+        "company": "ADIAL PHARMACEUTICALS, INC.",
+        "ceo_comp": 801621
+      },
+      {
+        "rank": 121,
+        "company": "Traws Pharma, Inc.",
+        "ceo_comp": 761169
+      },
+      {
+        "rank": 122,
+        "company": "LIXTE BIOTECHNOLOGY HOLDINGS, INC.",
+        "ceo_comp": 725739
+      },
+      {
+        "rank": 123,
+        "company": "KIORA PHARMACEUTICALS INC",
+        "ceo_comp": 714182
+      },
+      {
+        "rank": 124,
+        "company": "AYTU BIOPHARMA, INC",
+        "ceo_comp": 708000
+      },
+      {
+        "rank": 125,
+        "company": "Evoke Pharma Inc",
+        "ceo_comp": 687586
+      },
+      {
+        "rank": 126,
+        "company": "TuHURA Biosciences, Inc./NV",
+        "ceo_comp": 682827
+      },
+      {
+        "rank": 127,
+        "company": "ARTELO BIOSCIENCES, INC.",
+        "ceo_comp": 654831
+      },
+      {
+        "rank": 128,
+        "company": "Xenetic Biosciences, Inc.",
+        "ceo_comp": 632827
+      },
+      {
+        "rank": 129,
+        "company": "Ensysce Biosciences, Inc.",
+        "ceo_comp": 622609
+      },
+      {
+        "rank": 130,
+        "company": "Cocrystal Pharma, Inc.",
+        "ceo_comp": 621588
+      },
+      {
+        "rank": 131,
+        "company": "FENNEC PHARMACEUTICALS INC.",
+        "ceo_comp": 614161
+      },
+      {
+        "rank": 132,
+        "company": "Matinas BioPharma Holdings, Inc.",
+        "ceo_comp": 598000
+      },
+      {
+        "rank": 133,
+        "company": "Sonoma Pharmaceuticals, Inc.",
+        "ceo_comp": 559939
+      },
+      {
+        "rank": 134,
+        "company": "Corvus Pharmaceuticals, Inc.",
+        "ceo_comp": 524239
+      },
+      {
+        "rank": 135,
+        "company": "Oruka Therapeutics, Inc.",
+        "ceo_comp": 520911
+      },
+      {
+        "rank": 136,
+        "company": "Arcadia Biosciences, Inc.",
+        "ceo_comp": 430709
+      },
+      {
+        "rank": 137,
+        "company": "NovaBay Pharmaceuticals, Inc.",
+        "ceo_comp": 364954
+      },
+      {
+        "rank": 138,
+        "company": "Silo Pharma, Inc.",
+        "ceo_comp": 352500
+      },
+      {
+        "rank": 139,
+        "company": "INTEGRATED BIOPHARMA INC",
+        "ceo_comp": 330794
+      },
+      {
+        "rank": 140,
+        "company": "PROVECTUS BIOPHARMACEUTICALS, INC.",
+        "ceo_comp": 169900
+      },
+      {
+        "rank": 141,
+        "company": "Phio Pharmaceuticals Corp.",
+        "ceo_comp": 109380
+      },
+      {
+        "rank": 142,
+        "company": "DiaMedica Therapeutics Inc.",
+        "ceo_comp": 2023
+      },
+      {
+        "rank": 143,
+        "company": "IGC Pharma, Inc.",
+        "ceo_comp": 1006
+      }
+    ]
+  },
+  "Energy & Climate": {
+    "total_companies": 87,
+    "companies": [
+      {
+        "rank": 1,
+        "company": "Bloom Energy Corp",
+        "ceo_comp": 44961745
+      },
+      {
+        "rank": 2,
+        "company": "Bloom Energy",
+        "ceo_comp": 44961745
+      },
+      {
+        "rank": 3,
+        "company": "FIRSTENERGY CORP",
+        "ceo_comp": 26452616
+      },
+      {
+        "rank": 4,
+        "company": "NEXTERA ENERGY INC",
+        "ceo_comp": 23720707
+      },
+      {
+        "rank": 5,
+        "company": "VALERO ENERGY CORP/TX",
+        "ceo_comp": 22412292
+      },
+      {
+        "rank": 6,
+        "company": "Duke Energy CORP",
+        "ceo_comp": 21276982
+      },
+      {
+        "rank": 7,
+        "company": "New Fortress Energy Inc.",
+        "ceo_comp": 21096840
+      },
+      {
+        "rank": 8,
+        "company": "QuantumScape",
+        "ceo_comp": 19606478
+      },
+      {
+        "rank": 9,
+        "company": "XCEL ENERGY INC",
+        "ceo_comp": 16805589
+      },
+      {
+        "rank": 10,
+        "company": "Cheniere Energy, Inc.",
+        "ceo_comp": 14893339
+      },
+      {
+        "rank": 11,
+        "company": "EVERSOURCE ENERGY",
+        "ceo_comp": 14575276
+      },
+      {
+        "rank": 12,
+        "company": "Coterra Energy Inc.",
+        "ceo_comp": 14194706
+      },
+      {
+        "rank": 13,
+        "company": "DOMINION ENERGY, INC",
+        "ceo_comp": 12904625
+      },
+      {
+        "rank": 14,
+        "company": "Enphase Energy, Inc.",
+        "ceo_comp": 12630005
+      },
+      {
+        "rank": 15,
+        "company": "PATTERSON UTI ENERGY INC",
+        "ceo_comp": 12051176
+      },
+      {
+        "rank": 16,
+        "company": "ENERGY FUELS INC",
+        "ceo_comp": 11756702
+      },
+      {
+        "rank": 17,
+        "company": "CBAK Energy Technology, Inc.",
+        "ceo_comp": 11555600
+      },
+      {
+        "rank": 18,
+        "company": "WEC ENERGY GROUP, INC.",
+        "ceo_comp": 10948091
+      },
+      {
+        "rank": 19,
+        "company": "EXPAND ENERGY Corp",
+        "ceo_comp": 10620155
+      },
+      {
+        "rank": 20,
+        "company": "DTE ENERGY CO",
+        "ceo_comp": 10605622
+      },
+      {
+        "rank": 21,
+        "company": "Constellation Energy Corp",
+        "ceo_comp": 10439082
+      },
+      {
+        "rank": 22,
+        "company": "Diamondback Energy, Inc.",
+        "ceo_comp": 10152471
+      },
+      {
+        "rank": 23,
+        "company": "OGE ENERGY CORP.",
+        "ceo_comp": 10128949
+      },
+      {
+        "rank": 24,
+        "company": "ATMOS ENERGY CORP",
+        "ceo_comp": 9953274
+      },
+      {
+        "rank": 25,
+        "company": "PBF Energy Inc.",
+        "ceo_comp": 8837500
+      },
+      {
+        "rank": 26,
+        "company": "ADVANCED ENERGY INDUSTRIES INC",
+        "ceo_comp": 8761961
+      },
+      {
+        "rank": 27,
+        "company": "Vital Energy, Inc.",
+        "ceo_comp": 8141620
+      },
+      {
+        "rank": 28,
+        "company": "CONSUMERS ENERGY CO",
+        "ceo_comp": 7898536
+      },
+      {
+        "rank": 29,
+        "company": "CMS ENERGY CORP",
+        "ceo_comp": 7898536
+      },
+      {
+        "rank": 30,
+        "company": "TXNM ENERGY INC",
+        "ceo_comp": 7837411
+      },
+      {
+        "rank": 31,
+        "company": "SOLAREDGE TECHNOLOGIES, INC.",
+        "ceo_comp": 7500450
+      },
+      {
+        "rank": 32,
+        "company": "PEABODY ENERGY CORP",
+        "ceo_comp": 6972467
+      },
+      {
+        "rank": 33,
+        "company": "ALLIANT ENERGY CORP",
+        "ceo_comp": 6971735
+      },
+      {
+        "rank": 34,
+        "company": "CENTERPOINT ENERGY INC",
+        "ceo_comp": 6656290
+      },
+      {
+        "rank": 35,
+        "company": "Array Technologies",
+        "ceo_comp": 6560577
+      },
+      {
+        "rank": 36,
+        "company": "GULFPORT ENERGY CORP",
+        "ceo_comp": 6447544
+      },
+      {
+        "rank": 37,
+        "company": "FIRST SOLAR, INC.",
+        "ceo_comp": 6386641
+      },
+      {
+        "rank": 38,
+        "company": "Talen Energy Corp",
+        "ceo_comp": 6258127
+      },
+      {
+        "rank": 39,
+        "company": "Atlas Energy Solutions Inc.",
+        "ceo_comp": 5904989
+      },
+      {
+        "rank": 40,
+        "company": "NRG ENERGY, INC.",
+        "ceo_comp": 5463154
+      },
+      {
+        "rank": 41,
+        "company": "Excelerate Energy, Inc.",
+        "ceo_comp": 5438007
+      },
+      {
+        "rank": 42,
+        "company": "HELIX ENERGY SOLUTIONS GROUP INC",
+        "ceo_comp": 5335487
+      },
+      {
+        "rank": 43,
+        "company": "FORUM ENERGY TECHNOLOGIES, INC.",
+        "ceo_comp": 5049661
+      },
+      {
+        "rank": 44,
+        "company": "NorthWestern Energy Group, Inc.",
+        "ceo_comp": 4811089
+      },
+      {
+        "rank": 45,
+        "company": "Kosmos Energy Ltd.",
+        "ceo_comp": 4722701
+      },
+      {
+        "rank": 46,
+        "company": "SunCoke Energy, Inc.",
+        "ceo_comp": 4587812
+      },
+      {
+        "rank": 47,
+        "company": "PRIMEENERGY RESOURCES CORP",
+        "ceo_comp": 4467237
+      },
+      {
+        "rank": 48,
+        "company": "FUELCELL ENERGY INC",
+        "ceo_comp": 4165643
+      },
+      {
+        "rank": 49,
+        "company": "FuelCell Energy",
+        "ceo_comp": 4165643
+      },
+      {
+        "rank": 50,
+        "company": "Solaris Energy Infrastructure, Inc.",
+        "ceo_comp": 3820166
+      },
+      {
+        "rank": 51,
+        "company": "HALLADOR ENERGY CO",
+        "ceo_comp": 3431832
+      },
+      {
+        "rank": 52,
+        "company": "RING ENERGY, INC.",
+        "ceo_comp": 3403046
+      },
+      {
+        "rank": 53,
+        "company": "Liberty Energy Inc.",
+        "ceo_comp": 3310114
+      },
+      {
+        "rank": 54,
+        "company": "CVR ENERGY INC",
+        "ceo_comp": 3164806
+      },
+      {
+        "rank": 55,
+        "company": "GRAN TIERRA ENERGY INC.",
+        "ceo_comp": 3017224
+      },
+      {
+        "rank": 56,
+        "company": "VAALCO ENERGY INC /DE/",
+        "ceo_comp": 3015493
+      },
+      {
+        "rank": 57,
+        "company": "Clearway Energy, Inc.",
+        "ceo_comp": 2851921
+      },
+      {
+        "rank": 58,
+        "company": "KLX Energy Services Holdings, Inc.",
+        "ceo_comp": 2829189
+      },
+      {
+        "rank": 59,
+        "company": "MGE ENERGY INC",
+        "ceo_comp": 2711113
+      },
+      {
+        "rank": 60,
+        "company": "Amplify Energy Corp.",
+        "ceo_comp": 2484347
+      },
+      {
+        "rank": 61,
+        "company": "Ascent Solar Technologies, Inc.",
+        "ceo_comp": 2447031
+      },
+      {
+        "rank": 62,
+        "company": "Chord Energy Corp",
+        "ceo_comp": 2370324
+      },
+      {
+        "rank": 63,
+        "company": "TALOS ENERGY INC.",
+        "ceo_comp": 2334115
+      },
+      {
+        "rank": 64,
+        "company": "CENTRUS ENERGY CORP",
+        "ceo_comp": 2139517
+      },
+      {
+        "rank": 65,
+        "company": "US ENERGY CORP",
+        "ceo_comp": 2079349
+      },
+      {
+        "rank": 66,
+        "company": "Nine Energy Service, Inc.",
+        "ceo_comp": 2022259
+      },
+      {
+        "rank": 67,
+        "company": "Fluence Energy, Inc.",
+        "ceo_comp": 1943101
+      },
+      {
+        "rank": 68,
+        "company": "enCore Energy Corp.",
+        "ceo_comp": 1930208
+      },
+      {
+        "rank": 69,
+        "company": "SM Energy Co",
+        "ceo_comp": 1879774
+      },
+      {
+        "rank": 70,
+        "company": "Clean Energy Fuels Corp.",
+        "ceo_comp": 1826353
+      },
+      {
+        "rank": 71,
+        "company": "Ranger Energy Services, Inc.",
+        "ceo_comp": 1753266
+      },
+      {
+        "rank": 72,
+        "company": "URANIUM ENERGY CORP",
+        "ceo_comp": 1635553
+      },
+      {
+        "rank": 73,
+        "company": "Sunnova Energy International Inc.",
+        "ceo_comp": 1593926
+      },
+      {
+        "rank": 74,
+        "company": "SunPower",
+        "ceo_comp": 1437313
+      },
+      {
+        "rank": 75,
+        "company": "Epsilon Energy Ltd.",
+        "ceo_comp": 1353353
+      },
+      {
+        "rank": 76,
+        "company": "Genie Energy Ltd.",
+        "ceo_comp": 999261
+      },
+      {
+        "rank": 77,
+        "company": "UR-ENERGY INC",
+        "ceo_comp": 977721
+      },
+      {
+        "rank": 78,
+        "company": "Capstone Green Energy Holdings, Inc.",
+        "ceo_comp": 926739
+      },
+      {
+        "rank": 79,
+        "company": "ORION ENERGY SYSTEMS, INC.",
+        "ceo_comp": 865722
+      },
+      {
+        "rank": 80,
+        "company": "SANDRIDGE ENERGY INC",
+        "ceo_comp": 864866
+      },
+      {
+        "rank": 81,
+        "company": "Clean Energy Technologies, Inc.",
+        "ceo_comp": 430500
+      },
+      {
+        "rank": 82,
+        "company": "SUNation Energy, Inc.",
+        "ceo_comp": 408171
+      },
+      {
+        "rank": 83,
+        "company": "HOUSTON AMERICAN ENERGY CORP",
+        "ceo_comp": 352725
+      },
+      {
+        "rank": 84,
+        "company": "ACORN ENERGY, INC.",
+        "ceo_comp": 326096
+      },
+      {
+        "rank": 85,
+        "company": "CAMBER ENERGY, INC.",
+        "ceo_comp": 180000
+      },
+      {
+        "rank": 86,
+        "company": "DEVON ENERGY CORP/DE",
+        "ceo_comp": 13355
+      },
+      {
+        "rank": 87,
+        "company": "Energy Recovery, Inc.",
+        "ceo_comp": 2092
+      }
+    ]
+  },
+  "Cybersecurity": {
+    "total_companies": 8,
+    "companies": [
+      {
+        "rank": 1,
+        "company": "Palo Alto Networks",
+        "ceo_comp": 99736336
+      },
+      {
+        "rank": 2,
+        "company": "CrowdStrike",
+        "ceo_comp": 35195300
+      },
+      {
+        "rank": 3,
+        "company": "Okta",
+        "ceo_comp": 23319458
+      },
+      {
+        "rank": 4,
+        "company": "Zscaler",
+        "ceo_comp": 18480646
+      },
+      {
+        "rank": 5,
+        "company": "Fortinet",
+        "ceo_comp": 10650714
+      },
+      {
+        "rank": 6,
+        "company": "Varonis",
+        "ceo_comp": 6201417
+      },
+      {
+        "rank": 7,
+        "company": "BlackBerry",
+        "ceo_comp": 3146625
+      },
+      {
+        "rank": 8,
+        "company": "Cloudflare",
+        "ceo_comp": 539152
+      }
+    ]
+  },
+  "Advanced Technology": {
+    "total_companies": 116,
+    "companies": [
+      {
+        "rank": 1,
+        "company": "Privia Health Group, Inc.",
+        "ceo_comp": 103637801
+      },
+      {
+        "rank": 2,
+        "company": "EMBER TECHNOLOGIES INC",
+        "ceo_comp": 39408629
+      },
+      {
+        "rank": 3,
+        "company": "TEGA THERAPEUTICS INC",
+        "ceo_comp": 32497238
+      },
+      {
+        "rank": 4,
+        "company": "ELECTRONICS ARTS INC",
+        "ceo_comp": 30529835
+      },
+      {
+        "rank": 5,
+        "company": "HCA Healthcare, Inc.",
+        "ceo_comp": 30397771
+      },
+      {
+        "rank": 6,
+        "company": "BRAZE INC",
+        "ceo_comp": 29342548
+      },
+      {
+        "rank": 7,
+        "company": "DIABLO TECHNOLOGIES INC",
+        "ceo_comp": 23268296
+      },
+      {
+        "rank": 8,
+        "company": "LAS VEGAS SANDS CORP",
+        "ceo_comp": 21851773
+      },
+      {
+        "rank": 9,
+        "company": "OLIN CORP",
+        "ceo_comp": 20358134
+      },
+      {
+        "rank": 10,
+        "company": "GE HealthCare Technologies Inc.",
+        "ceo_comp": 19487880
+      },
+      {
+        "rank": 11,
+        "company": "Teladoc Health, Inc.",
+        "ceo_comp": 16061267
+      },
+      {
+        "rank": 12,
+        "company": "BRIDGE PHARMA INC",
+        "ceo_comp": 15581922
+      },
+      {
+        "rank": 13,
+        "company": "RESIDEO TECHNOLOGIES, INC.",
+        "ceo_comp": 15000857
+      },
+      {
+        "rank": 14,
+        "company": "Elanco Animal Health Inc",
+        "ceo_comp": 14833704
+      },
+      {
+        "rank": 15,
+        "company": "SRG GLOBAL INC",
+        "ceo_comp": 14786849
+      },
+      {
+        "rank": 16,
+        "company": "VITAERIS INC",
+        "ceo_comp": 14759379
+      },
+      {
+        "rank": 17,
+        "company": "REMEDEV INC",
+        "ceo_comp": 14674543
+      },
+      {
+        "rank": 18,
+        "company": "XENON CORP",
+        "ceo_comp": 14440051
+      },
+      {
+        "rank": 19,
+        "company": "EXLSERVICE HOLDINGS INC",
+        "ceo_comp": 14166996
+      },
+      {
+        "rank": 20,
+        "company": "ARCELLX INC",
+        "ceo_comp": 14120246
+      },
+      {
+        "rank": 21,
+        "company": "GUIDEWIRE SOFTWARE INC",
+        "ceo_comp": 14012061
+      },
+      {
+        "rank": 22,
+        "company": "PALL CORP",
+        "ceo_comp": 12329337
+      },
+      {
+        "rank": 23,
+        "company": "NORFOLK SOUTHERN CORP",
+        "ceo_comp": 11924070
+      },
+      {
+        "rank": 24,
+        "company": "SHIRE NPS PHARMACEUTICALS INC",
+        "ceo_comp": 10963040
+      },
+      {
+        "rank": 25,
+        "company": "VIAVI SOLUTIONS INC",
+        "ceo_comp": 10595839
+      },
+      {
+        "rank": 26,
+        "company": "OMEGA HEALTHCARE INVESTORS INC",
+        "ceo_comp": 10453238
+      },
+      {
+        "rank": 27,
+        "company": "ENTERIN INC",
+        "ceo_comp": 10185801
+      },
+      {
+        "rank": 28,
+        "company": "Vulcan Materials CO",
+        "ceo_comp": 9883031
+      },
+      {
+        "rank": 29,
+        "company": "AMN HEALTHCARE SERVICES INC",
+        "ceo_comp": 9562742
+      },
+      {
+        "rank": 30,
+        "company": "WOLVERINE WORLD WIDE INC",
+        "ceo_comp": 9372067
+      },
+      {
+        "rank": 31,
+        "company": "SPX Technologies, Inc.",
+        "ceo_comp": 9305169
+      },
+      {
+        "rank": 32,
+        "company": "TAMIR BIOTECHNOLOGY INC",
+        "ceo_comp": 9255903
+      },
+      {
+        "rank": 33,
+        "company": "GoHealth, Inc.",
+        "ceo_comp": 9206399
+      },
+      {
+        "rank": 34,
+        "company": "O REILLY AUTOMOTIVE INC",
+        "ceo_comp": 8990958
+      },
+      {
+        "rank": 35,
+        "company": "SYNOPSYS INC",
+        "ceo_comp": 8963359
+      },
+      {
+        "rank": 36,
+        "company": "ANGIOCRINE BIOSCIENCE INC",
+        "ceo_comp": 8535422
+      },
+      {
+        "rank": 37,
+        "company": "SIGNATURE THERAPEUTICS INC",
+        "ceo_comp": 8145000
+      },
+      {
+        "rank": 38,
+        "company": "BLADE THERAPEUTICS INC",
+        "ceo_comp": 8145000
+      },
+      {
+        "rank": 39,
+        "company": "3F THERAPEUTICS INC",
+        "ceo_comp": 8145000
+      },
+      {
+        "rank": 40,
+        "company": "Shoals Technologies Group, Inc.",
+        "ceo_comp": 8108466
+      },
+      {
+        "rank": 41,
+        "company": "10X GENOMICS INC",
+        "ceo_comp": 7929349
+      },
+      {
+        "rank": 42,
+        "company": "AVANOS MEDICAL, INC.",
+        "ceo_comp": 7550729
+      },
+      {
+        "rank": 43,
+        "company": "SENSIENT TECHNOLOGIES CORP",
+        "ceo_comp": 7304550
+      },
+      {
+        "rank": 44,
+        "company": "SOLANTRO SEMICONDUCTOR CORP",
+        "ceo_comp": 7056742
+      },
+      {
+        "rank": 45,
+        "company": "LIFE BIOSCIENCES INC",
+        "ceo_comp": 6941074
+      },
+      {
+        "rank": 46,
+        "company": "OMAX CORP",
+        "ceo_comp": 6922439
+      },
+      {
+        "rank": 47,
+        "company": "FORUM PHARMACEUTICALS INC",
+        "ceo_comp": 6598551
+      },
+      {
+        "rank": 48,
+        "company": "MIRUM PHARMACEUTICALS INC",
+        "ceo_comp": 6598551
+      },
+      {
+        "rank": 49,
+        "company": "AURINIA PHARMACEUTICALS INC",
+        "ceo_comp": 6417897
+      },
+      {
+        "rank": 50,
+        "company": "BAMBOO THERAPEUTICS INC",
+        "ceo_comp": 6409631
+      },
+      {
+        "rank": 51,
+        "company": "CDF CORP",
+        "ceo_comp": 6342674
+      },
+      {
+        "rank": 52,
+        "company": "KUROME THERAPEUTICS INC",
+        "ceo_comp": 6273192
+      },
+      {
+        "rank": 53,
+        "company": "MYRIAD GENETICS INC",
+        "ceo_comp": 6174458
+      },
+      {
+        "rank": 54,
+        "company": "ANTRONIX INC",
+        "ceo_comp": 6086293
+      },
+      {
+        "rank": 55,
+        "company": "INTUITIVE SURGICAL INC",
+        "ceo_comp": 6043362
+      },
+      {
+        "rank": 56,
+        "company": "Ocean Power Technologies, Inc.",
+        "ceo_comp": 5954405
+      },
+      {
+        "rank": 57,
+        "company": "UVLRX THERAPEUTICS INC",
+        "ceo_comp": 5812862
+      },
+      {
+        "rank": 58,
+        "company": "IMMUTRIX THERAPEUTICS INC",
+        "ceo_comp": 5812862
+      },
+      {
+        "rank": 59,
+        "company": "NewAmsterdam Pharma Co N.V.",
+        "ceo_comp": 5805558
+      },
+      {
+        "rank": 60,
+        "company": "CORNER THERAPEUTICS INC",
+        "ceo_comp": 5762102
+      },
+      {
+        "rank": 61,
+        "company": "GENESCO INC",
+        "ceo_comp": 5185437
+      },
+      {
+        "rank": 62,
+        "company": "Prestige Consumer Healthcare Inc.",
+        "ceo_comp": 5148033
+      },
+      {
+        "rank": 63,
+        "company": "MERCURY SYSTEMS INC",
+        "ceo_comp": 4949119
+      },
+      {
+        "rank": 64,
+        "company": "TYLER TECHNOLOGIES INC",
+        "ceo_comp": 4692182
+      },
+      {
+        "rank": 65,
+        "company": "AJAX THERAPEUTICS INC",
+        "ceo_comp": 4193269
+      },
+      {
+        "rank": 66,
+        "company": "WINGS THERAPEUTICS INC",
+        "ceo_comp": 4059119
+      },
+      {
+        "rank": 67,
+        "company": "AMERICAN WELL CORP",
+        "ceo_comp": 4043689
+      },
+      {
+        "rank": 68,
+        "company": "SUNRUN INC",
+        "ceo_comp": 3578839
+      },
+      {
+        "rank": 69,
+        "company": "CB THERAPEUTICS INC",
+        "ceo_comp": 3509439
+      },
+      {
+        "rank": 70,
+        "company": "TELEDYNE TECHNOLOGIES INC",
+        "ceo_comp": 3499689
+      },
+      {
+        "rank": 71,
+        "company": "Solid Power, Inc.",
+        "ceo_comp": 3214558
+      },
+      {
+        "rank": 72,
+        "company": "SRI ENERGY INC",
+        "ceo_comp": 3164806
+      },
+      {
+        "rank": 73,
+        "company": "MERCURY GENERAL CORP",
+        "ceo_comp": 2882942
+      },
+      {
+        "rank": 74,
+        "company": "LYNDRA THERAPEUTICS INC",
+        "ceo_comp": 2858490
+      },
+      {
+        "rank": 75,
+        "company": "Healthcare Realty Trust Inc",
+        "ceo_comp": 2823858
+      },
+      {
+        "rank": 76,
+        "company": "SAAM INC",
+        "ceo_comp": 2692691
+      },
+      {
+        "rank": 77,
+        "company": "Sensata Technologies Holding plc",
+        "ceo_comp": 2642866
+      },
+      {
+        "rank": 78,
+        "company": "SPRUCE POWER HOLDING CORP",
+        "ceo_comp": 2585854
+      },
+      {
+        "rank": 79,
+        "company": "Astrana Health, Inc.",
+        "ceo_comp": 2521773
+      },
+      {
+        "rank": 80,
+        "company": "Fulgent Genetics, Inc.",
+        "ceo_comp": 2507503
+      },
+      {
+        "rank": 81,
+        "company": "SOVA PHARMACEUTICALS INC",
+        "ceo_comp": 2429358
+      },
+      {
+        "rank": 82,
+        "company": "PDS BIOTECHNOLOGY CORP",
+        "ceo_comp": 2302548
+      },
+      {
+        "rank": 83,
+        "company": "SANARIA INC",
+        "ceo_comp": 2195542
+      },
+      {
+        "rank": 84,
+        "company": "CORE MOLDING TECHNOLOGIES INC",
+        "ceo_comp": 1963530
+      },
+      {
+        "rank": 85,
+        "company": "SELLAS Life Sciences Group, Inc.",
+        "ceo_comp": 1952245
+      },
+      {
+        "rank": 86,
+        "company": "THERATECHNOLOGIES INC",
+        "ceo_comp": 1915532
+      },
+      {
+        "rank": 87,
+        "company": "CLEAN ENERGY FUELS CORP",
+        "ceo_comp": 1826353
+      },
+      {
+        "rank": 88,
+        "company": "CYTORI THERAPEUTICS INC",
+        "ceo_comp": 1752802
+      },
+      {
+        "rank": 89,
+        "company": "ADVENT TECHNOLOGIES HOLDINGS, INC.",
+        "ceo_comp": 1697750
+      },
+      {
+        "rank": 90,
+        "company": "TREVI THERAPEUTICS INC",
+        "ceo_comp": 1687298
+      },
+      {
+        "rank": 91,
+        "company": "GENIA TECHNOLOGIES INC",
+        "ceo_comp": 1639090
+      },
+      {
+        "rank": 92,
+        "company": "CARDIFF ONCOLOGY INC",
+        "ceo_comp": 1590347
+      },
+      {
+        "rank": 93,
+        "company": "DEFENCE THERAPEUTICS INC",
+        "ceo_comp": 1540333
+      },
+      {
+        "rank": 94,
+        "company": "ACHELIOS THERAPEUTICS INC",
+        "ceo_comp": 1348674
+      },
+      {
+        "rank": 95,
+        "company": "WORKSPORT LTD",
+        "ceo_comp": 1255858
+      },
+      {
+        "rank": 96,
+        "company": "RICHARDSON ELECTRONICS, LTD.",
+        "ceo_comp": 1230517
+      },
+      {
+        "rank": 97,
+        "company": "XENOTHERAPEUTICS INC",
+        "ceo_comp": 1128691
+      },
+      {
+        "rank": 98,
+        "company": "MONTELINO THERAPEUTICS INC",
+        "ceo_comp": 1128691
+      },
+      {
+        "rank": 99,
+        "company": "NORTHWEST BIOTHERAPEUTICS INC",
+        "ceo_comp": 1100000
+      },
+      {
+        "rank": 100,
+        "company": "Vivani Medical, Inc.",
+        "ceo_comp": 1084200
+      },
+      {
+        "rank": 101,
+        "company": "FLOMAX INTERNATIONAL INC",
+        "ceo_comp": 1082190
+      },
+      {
+        "rank": 102,
+        "company": "VET THERAPEUTICS INC",
+        "ceo_comp": 1001967
+      },
+      {
+        "rank": 103,
+        "company": "ADVENT THERAPEUTICS INC",
+        "ceo_comp": 1001967
+      },
+      {
+        "rank": 104,
+        "company": "AP SOLUTIONS INC",
+        "ceo_comp": 900314
+      },
+      {
+        "rank": 105,
+        "company": "Sensus Healthcare, Inc.",
+        "ceo_comp": 754428
+      },
+      {
+        "rank": 106,
+        "company": "FRANKLIN WIRELESS CORP",
+        "ceo_comp": 675000
+      },
+      {
+        "rank": 107,
+        "company": "EASTERN CO",
+        "ceo_comp": 612198
+      },
+      {
+        "rank": 108,
+        "company": "LEVITATE TECHNOLOGIES INC",
+        "ceo_comp": 553722
+      },
+      {
+        "rank": 109,
+        "company": "Sintx Technologies, Inc.",
+        "ceo_comp": 537312
+      },
+      {
+        "rank": 110,
+        "company": "ORBUS THERAPEUTICS INC",
+        "ceo_comp": 520911
+      },
+      {
+        "rank": 111,
+        "company": "SILARA MEDTECH INC",
+        "ceo_comp": 489021
+      },
+      {
+        "rank": 112,
+        "company": "SCI Engineered Materials, Inc.",
+        "ceo_comp": 413431
+      },
+      {
+        "rank": 113,
+        "company": "HUDSON TECHNOLOGIES INC /NY",
+        "ceo_comp": 377875
+      },
+      {
+        "rank": 114,
+        "company": "ORAGENICS INC",
+        "ceo_comp": 314702
+      },
+      {
+        "rank": 115,
+        "company": "Power REIT",
+        "ceo_comp": 150000
+      },
+      {
+        "rank": 116,
+        "company": "UNIVERSAL ELECTRONICS INC",
+        "ceo_comp": 3593
+      }
+    ]
+  },
+  "Pharmaceutical Preparations": {
+    "total_companies": 9,
+    "companies": [
+      {
+        "rank": 1,
+        "company": "ACADIA PHARMACEUTICALS INC",
+        "ceo_comp": 7594107
+      },
+      {
+        "rank": 2,
+        "company": "AGIOS PHARMACEUTICALS, INC.",
+        "ceo_comp": 6776359
+      },
+      {
+        "rank": 3,
+        "company": "Akero Therapeutics, Inc.",
+        "ceo_comp": 4454686
+      },
+      {
+        "rank": 4,
+        "company": "89bio, Inc.",
+        "ceo_comp": 3127849
+      },
+      {
+        "rank": 5,
+        "company": "Aldeyra Therapeutics, Inc.",
+        "ceo_comp": 2858490
+      },
+      {
+        "rank": 6,
+        "company": "ADC Therapeutics SA",
+        "ceo_comp": 1837628
+      },
+      {
+        "rank": 7,
+        "company": "Alaunos Therapeutics, Inc.",
+        "ceo_comp": 1792818
+      },
+      {
+        "rank": 8,
+        "company": "Aclaris Therapeutics, Inc.",
+        "ceo_comp": 1348674
+      },
+      {
+        "rank": 9,
+        "company": "ADIAL PHARMACEUTICALS, INC.",
+        "ceo_comp": 412017
+      }
+    ]
+  }
+}

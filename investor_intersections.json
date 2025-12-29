@@ -1,0 +1,232 @@
+{
+  "intersection_matrix": {
+    "Day Trader \u2229 LT Retail": {
+      "count": 0,
+      "overlap_pct": 0.0,
+      "type1_total": 93,
+      "type2_total": 124
+    },
+    "Day Trader \u2229 Asset Mgr": {
+      "count": 0,
+      "overlap_pct": 0.0,
+      "type1_total": 93,
+      "type2_total": 612
+    },
+    "Day Trader \u2229 Pension": {
+      "count": 0,
+      "overlap_pct": 0.0,
+      "type1_total": 93,
+      "type2_total": 661
+    },
+    "Day Trader \u2229 ESG": {
+      "count": 84,
+      "overlap_pct": 90.32258064516128,
+      "type1_total": 93,
+      "type2_total": 971
+    },
+    "Day Trader \u2229 Reinsurer": {
+      "count": 0,
+      "overlap_pct": 0.0,
+      "type1_total": 93,
+      "type2_total": 711
+    },
+    "LT Retail \u2229 Asset Mgr": {
+      "count": 0,
+      "overlap_pct": 0.0,
+      "type1_total": 124,
+      "type2_total": 612
+    },
+    "LT Retail \u2229 Pension": {
+      "count": 124,
+      "overlap_pct": 100.0,
+      "type1_total": 124,
+      "type2_total": 661
+    },
+    "LT Retail \u2229 ESG": {
+      "count": 124,
+      "overlap_pct": 100.0,
+      "type1_total": 124,
+      "type2_total": 971
+    },
+    "LT Retail \u2229 Reinsurer": {
+      "count": 0,
+      "overlap_pct": 0.0,
+      "type1_total": 124,
+      "type2_total": 711
+    },
+    "Asset Mgr \u2229 Pension": {
+      "count": 534,
+      "overlap_pct": 87.25490196078431,
+      "type1_total": 612,
+      "type2_total": 661
+    },
+    "Asset Mgr \u2229 ESG": {
+      "count": 606,
+      "overlap_pct": 99.01960784313727,
+      "type1_total": 612,
+      "type2_total": 971
+    },
+    "Asset Mgr \u2229 Reinsurer": {
+      "count": 612,
+      "overlap_pct": 100.0,
+      "type1_total": 612,
+      "type2_total": 711
+    },
+    "Pension \u2229 ESG": {
+      "count": 660,
+      "overlap_pct": 99.84871406959152,
+      "type1_total": 661,
+      "type2_total": 971
+    },
+    "Pension \u2229 Reinsurer": {
+      "count": 534,
+      "overlap_pct": 80.78668683812406,
+      "type1_total": 661,
+      "type2_total": 711
+    },
+    "ESG \u2229 Reinsurer": {
+      "count": 698,
+      "overlap_pct": 98.17158931082982,
+      "type1_total": 971,
+      "type2_total": 711
+    }
+  },
+  "total_companies": 997,
+  "interpretation": [
+    [
+      "ESG \u2229 Reinsurer",
+      {
+        "count": 698,
+        "overlap_pct": 98.17158931082982,
+        "type1_total": 971,
+        "type2_total": 711
+      }
+    ],
+    [
+      "Pension \u2229 ESG",
+      {
+        "count": 660,
+        "overlap_pct": 99.84871406959152,
+        "type1_total": 661,
+        "type2_total": 971
+      }
+    ],
+    [
+      "Asset Mgr \u2229 Reinsurer",
+      {
+        "count": 612,
+        "overlap_pct": 100.0,
+        "type1_total": 612,
+        "type2_total": 711
+      }
+    ],
+    [
+      "Asset Mgr \u2229 ESG",
+      {
+        "count": 606,
+        "overlap_pct": 99.01960784313727,
+        "type1_total": 612,
+        "type2_total": 971
+      }
+    ],
+    [
+      "Asset Mgr \u2229 Pension",
+      {
+        "count": 534,
+        "overlap_pct": 87.25490196078431,
+        "type1_total": 612,
+        "type2_total": 661
+      }
+    ],
+    [
+      "Pension \u2229 Reinsurer",
+      {
+        "count": 534,
+        "overlap_pct": 80.78668683812406,
+        "type1_total": 661,
+        "type2_total": 711
+      }
+    ],
+    [
+      "LT Retail \u2229 Pension",
+      {
+        "count": 124,
+        "overlap_pct": 100.0,
+        "type1_total": 124,
+        "type2_total": 661
+      }
+    ],
+    [
+      "LT Retail \u2229 ESG",
+      {
+        "count": 124,
+        "overlap_pct": 100.0,
+        "type1_total": 124,
+        "type2_total": 971
+      }
+    ],
+    [
+      "Day Trader \u2229 ESG",
+      {
+        "count": 84,
+        "overlap_pct": 90.32258064516128,
+        "type1_total": 93,
+        "type2_total": 971
+      }
+    ],
+    [
+      "Day Trader \u2229 LT Retail",
+      {
+        "count": 0,
+        "overlap_pct": 0.0,
+        "type1_total": 93,
+        "type2_total": 124
+      }
+    ],
+    [
+      "Day Trader \u2229 Asset Mgr",
+      {
+        "count": 0,
+        "overlap_pct": 0.0,
+        "type1_total": 93,
+        "type2_total": 612
+      }
+    ],
+    [
+      "Day Trader \u2229 Pension",
+      {
+        "count": 0,
+        "overlap_pct": 0.0,
+        "type1_total": 93,
+        "type2_total": 661
+      }
+    ],
+    [
+      "Day Trader \u2229 Reinsurer",
+      {
+        "count": 0,
+        "overlap_pct": 0.0,
+        "type1_total": 93,
+        "type2_total": 711
+      }
+    ],
+    [
+      "LT Retail \u2229 Asset Mgr",
+      {
+        "count": 0,
+        "overlap_pct": 0.0,
+        "type1_total": 124,
+        "type2_total": 612
+      }
+    ],
+    [
+      "LT Retail \u2229 Reinsurer",
+      {
+        "count": 0,
+        "overlap_pct": 0.0,
+        "type1_total": 124,
+        "type2_total": 711
+      }
+    ]
+  ]
+}
