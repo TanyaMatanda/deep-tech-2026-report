@@ -4,323 +4,414 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPO Readiness Dashboard | 95K Company Analysis</title>
+    <title>IPO Readiness Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Jony Ive Design Philosophy: Radical Simplicity */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            color: #1d1d1f;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
 
-        .glass {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+        /* Generous Whitespace */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px;
         }
 
-        .metric-card {
-            transition: transform 0.2s;
+        /* Typography Hierarchy */
+        h1 {
+            font-size: 64px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+            color: #1d1d1f;
         }
 
-        .metric-card:hover {
-            transform: translateY(-4px);
+        .subtitle {
+            font-size: 21px;
+            font-weight: 400;
+            color: #6e6e73;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            font-size: 14px;
+            color: #86868b;
+            margin-bottom: 80px;
+        }
+
+        /* Subtle Depth - No heavy shadows */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 32px;
+            margin-bottom: 24px;
+            border: 1px solid #e8e8ed;
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Metrics Grid */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+
+        .metric {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #86868b;
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #1d1d1f;
+            margin-bottom: 4px;
+        }
+
+        .metric-detail {
+            font-size: 12px;
+            color: #6e6e73;
+        }
+
+        /* Section Headers */
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 24px;
+            color: #1d1d1f;
+        }
+
+        /* Charts - Minimal Style */
+        .chart-container {
+            position: relative;
+            height: 320px;
+            margin-bottom: 24px;
+        }
+
+        /* Table - Clean and Refined */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        thead {
+            background: #f5f5f7;
+        }
+
+        th {
+            padding: 16px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #6e6e73;
+            border-bottom: 1px solid #e8e8ed;
+        }
+
+        td {
+            padding: 20px 16px;
+            font-size: 15px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+
+        tbody tr:hover {
+            background: #fafafa;
+        }
+
+        .rank {
+            font-weight: 600;
+            color: #86868b;
+        }
+
+        .company-name {
+            font-weight: 500;
+            color: #1d1d1f;
         }
 
         .tier-badge {
             display: inline-block;
-            padding: 0.375rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
             font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
         }
 
         .tier-ready {
-            background: #10b981;
-            color: white;
+            background: #e8f5e9;
+            color: #2e7d32;
         }
 
         .tier-near {
-            background: #f59e0b;
-            color: white;
+            background: #fff3e0;
+            color: #ef6c00;
         }
 
-        .tier-gaps {
-            background: #ef4444;
-            color: white;
+        /* Insights - Minimal Cards */
+        .insights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 60px;
+        }
+
+        .insight {
+            background: #f5f5f7;
+            border-radius: 12px;
+            padding: 32px;
+        }
+
+        .insight-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1d1d1f;
+        }
+
+        .insight-text {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #6e6e73;
+        }
+
+        /* Grid Layout for Charts */
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        /* Minimal Score Badge */
+        .score {
+            font-weight: 600;
+            color: #007aff;
         }
     </style>
 </head>
 
-<body class="min-h-screen p-6">
+<body>
+    <div class="container">
+        <!-- Header -->
+        <h1>IPO Readiness</h1>
+        <div class="subtitle">Analyzing 95,000 private companies</div>
+        <div class="meta">December 2025 • Based on academic research from Chicago Booth</div>
 
-    <!-- Header -->
-    <div class="max-w-7xl mx-auto mb-8">
-        <div class="glass p-8">
-            <h1 class="text-4xl font-bold text-gray-900 mb-2">📈 IPO Readiness Dashboard</h1>
-            <p class="text-gray-600 text-lg">Analyzing 95,000+ Private Companies for Public Market Readiness</p>
-            <p class="text-sm text-gray-500 mt-2">Based on Academic Research from Chicago Booth | Updated: <span
-                    id="updateTime"></span></p>
-        </div>
-    </div>
-
-    <!-- Key Metrics -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-6 mb-8">
-        <div class="glass p-6 metric-card">
-            <div class="text-sm text-gray-500 mb-1">Total Companies</div>
-            <div class="text-3xl font-bold text-gray-900" id="totalCompanies">95,247</div>
-            <div class="text-xs text-gray-500 mt-1">Full private universe</div>
-        </div>
-
-        <div class="glass p-6 metric-card">
-            <div class="text-sm text-gray-500 mb-1">IPO-Ready</div>
-            <div class="text-3xl font-bold text-green-600" id="ipoReady">427</div>
-            <div class="text-xs text-gray-600 mt-1">Score 80+ (0.45%)</div>
-        </div>
-
-        <div class="glass p-6 metric-card">
-            <div class="text-sm text-gray-500 mb-1">Near-Term</div>
-            <div class="text-3xl font-bold text-orange-500" id="nearTerm">1,834</div>
-            <div class="text-xs text-gray-600 mt-1">Score 60-79 (1.9%)</div>
-        </div>
-
-        <div class="glass p-6 metric-card">
-            <div class="text-sm text-gray-500 mb-1">Median Revenue</div>
-            <div class="text-3xl font-bold text-blue-600" id="medianRev">$8.3M</div>
-            <div class="text-xs text-gray-600 mt-1">All companies</div>
+        <!-- Key Metrics -->
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-label">Total</div>
+                <div class="metric-value">95,247</div>
+                <div class="metric-detail">Companies analyzed</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">IPO-Ready</div>
+                <div class="metric-value">427</div>
+                <div class="metric-detail">0.45% of universe</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Near-Term</div>
+                <div class="metric-value">1,834</div>
+                <div class="metric-detail">1.9% with potential</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Median Revenue</div>
+                <div class="metric-value">$8.3M</div>
+                <div class="metric-detail">Annual</div>
+            </div>
+            <div class="metric">
+                <div class="metric-label">Patents</div>
+                <div class="metric-value">248K</div>
+                <div class="metric-detail">Active portfolio</div>
+            </div>
         </div>
 
-        <div class="glass p-6 metric-card">
-            <div class="text-sm text-gray-500 mb-1">Total Patents</div>
-            <div class="text-3xl font-bold text-purple-600" id="totalPatents">247,891</div>
-            <div class="text-xs text-gray-600 mt-1">Active portfolio</div>
-        </div>
-    </div>
-
-    <!-- Charts Row 1 -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <!-- Score Distribution -->
-        <div class="glass p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">IPO Readiness Score Distribution</h3>
-            <canvas id="scoreDistChart"></canvas>
-        </div>
-
-        <!-- Tier Breakdown -->
-        <div class="glass p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">Companies by Readiness Tier</h3>
-            <canvas id="tierPieChart"></canvas>
-        </div>
-    </div>
-
-    <!-- Charts Row 2 -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <!-- Top Sectors -->
-        <div class="glass p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">Top Sectors by Company Count</h3>
-            <canvas id="sectorChart"></canvas>
+        <!-- Charts -->
+        <div class="chart-grid">
+            <div class="card">
+                <h2>Distribution</h2>
+                <div class="chart-container">
+                    <canvas id="scoreChart"></canvas>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Readiness Tiers</h2>
+                <div class="chart-container">
+                    <canvas id="tierChart"></canvas>
+                </div>
+            </div>
         </div>
 
-        <!-- Component Scores -->
-        <div class="glass p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">Average Component Scores (IPO-Ready)</h3>
-            <canvas id="componentChart"></canvas>
+        <!-- Top Companies -->
+        <div class="card">
+            <h2>Top Candidates</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Company</th>
+                        <th>Sector</th>
+                        <th>Revenue</th>
+                        <th>Score</th>
+                        <th>Tier</th>
+                        <th>Exchange</th>
+                    </tr>
+                </thead>
+                <tbody id="topTable">
+                    <!-- Populated by JS -->
+                </tbody>
+            </table>
         </div>
-    </div>
 
-    <!-- Top Companies Table -->
-    <div class="max-w-7xl mx-auto mb-8">
-        <div class="glass p-6">
-            <h3 class="text-lg font-semibold text-gray-900 mb-4">🏆 Top 20 IPO Candidates</h3>
-            <div class="overflow-x-auto">
-                <table class="w-full text-left">
-                    <thead class="bg-gray-50">
-                        <tr>
-                            <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase">Rank</th>
-                            <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase">Company</th>
-                            <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase">Sector</th>
-                            <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase">Revenue</th>
-                            <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase">Score</th>
-                            <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase">Tier</th>
-                            <th class="px-4 py-3 text-xs font-medium text-gray-500 uppercase">Target Exchange</th>
-                        </tr>
-                    </thead>
-                    <tbody id="topCompaniesTable" class="divide-y divide-gray-200">
-                        <!-- Populated by JS -->
-                    </tbody>
-                </table>
+        <!-- Insights -->
+        <div class="insights">
+            <div class="insight">
+                <div class="insight-title">SPAC Performance</div>
+                <div class="insight-text">Traditional IPOs outperform SPACs by 25% in first-year returns based on
+                    2020-2025 empirical data.</div>
+            </div>
+            <div class="insight">
+                <div class="insight-title">Canadian Advantage</div>
+                <div class="insight-text">TSX-V Capital Pool Company program offers 94% lower costs compared to US IPO
+                    processes.</div>
+            </div>
+            <div class="insight">
+                <div class="insight-title">Governance Gap</div>
+                <div class="insight-text">Only 31% of near-term candidates have majority-independent boards—the primary
+                    barrier to IPO eligibility.</div>
             </div>
         </div>
     </div>
 
-    <!-- Insights Section -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div class="glass p-6">
-            <h4 class="font-semibold text-gray-900 mb-2">💡 Key Insight: SPAC Alternative</h4>
-            <p class="text-sm text-gray-600">Based on 2020-2025 research, traditional IPOs outperform SPACs by 25% in
-                first-year returns. Our top candidates prioritize conventional paths.</p>
-        </div>
-
-        <div class="glass p-6">
-            <h4 class="font-semibold text-gray-900 mb-2">🌍 Canadian Opportunity</h4>
-            <p class="text-sm text-gray-600">TSX-V's Capital Pool Company program offers 94% lower costs than US IPOs.
-                23% of top candidates are exploring this route for initial listing.</p>
-        </div>
-
-        <div class="glass p-6">
-            <h4 class="font-semibold text-gray-900 mb-2">⚖️ Governance Gap</h4>
-            <p class="text-sm text-gray-600">Only 31% of near-term candidates have majority-independent boards. This is
-                the #1 blocker preventing immediate IPO eligibility.</p>
-        </div>
-    </div>
-
     <script>
-        // Set update time
-        document.getElementById('updateTime').textContent = new Date().toLocaleDateString();
-
-        // Sample data based on IPO readiness framework
-        const topCompanies = [
-            { rank: 1, name: "QuantumCore AI", sector: "AI Infrastructure", revenue: "$247M", score: 94, tier: "IPO-Ready (12-18mo)", exchange: "NASDAQ" },
-            { rank: 2, name: "BioCure Therapeutics", sector: "Biotechnology", revenue: "$189M", score: 92, tier: "IPO-Ready (12-18mo)", exchange: "NYSE" },
-            { rank: 3, name: "CyberShield Pro", sector: "Cybersecurity", revenue: "$156M", score: 90, tier: "IPO-Ready (12-18mo)", exchange: "NASDAQ" },
-            { rank: 4, name: "Fusion Energy Systems", sector: "Clean Energy", revenue: "$134M", score: 88, tier: "IPO-Ready (12-18mo)", exchange: "NYSE" },
-            { rank: 5, name: "NeuroTech Innovations", sector: "Medical Devices", revenue: "$128M", score: 87, tier: "IPO-Ready (12-18mo)", exchange: "NASDAQ" },
-            { rank: 6, name: "SpaceLogistics Inc", sector: "Aerospace", revenue: "$201M", score: 86, tier: "IPO-Ready (12-18mo)", exchange: "NYSE" },
-            { rank: 7, name: "GenEdit Bio", sector: "Biotechnology", revenue: "$98M", score: 85, tier: "IPO-Ready (12-18mo)", exchange: "NASDAQ" },
-            { rank: 8, name: "QuantumSecure", sector: "Quantum Computing", revenue: "$76M", score: 84, tier: "IPO-Ready (12-18mo)", exchange: "NASDAQ" },
-            { rank: 9, name: "SolarMax Energy", sector: "Renewable Energy", revenue: "$112M", score: 83, tier: "Near-Term (18-24mo)", exchange: "NYSE" },
-            { rank: 10, name: "AI Robotics Corp", sector: "Robotics", revenue: "$89M", score: 82, tier: "Near-Term (18-24mo)", exchange: "NASDAQ" },
-            { rank: 11, name: "BioMaterials Plus", sector: "Advanced Materials", revenue: "$71M", score: 81, tier: "Near-Term (18-24mo)", exchange: "TSX" },
-            { rank: 12, name: "CloudQuantum", sector: "Cloud Computing", revenue: "$145M", score: 80, tier: "Near-Term (18-24mo)", exchange: "NASDAQ" },
-            { rank: 13, name: "PrecisionMed AI", sector: "Healthcare AI", revenue: "$54M", score: 79, tier: "Near-Term (18-24mo)", exchange: "NASDAQ" },
-            { rank: 14, name: "DroneFleet Logistics", sector: "Logistics Tech", revenue: "$67M", score: 78, tier: "Near-Term (18-24mo)", exchange: "NYSE" },
-            { rank: 15, name: "NanoChip Systems", sector: "Semiconductors", revenue: "$203M", score: 77, tier: "Near-Term (18-24mo)", exchange: "NASDAQ" },
-            { rank: 16, name: "EcoFuel Technologies", sector: "Clean Tech", revenue: "$44M", score: 76, tier: "Near-Term (18-24mo)", exchange: "TSX" },
-            { rank: 17, name: "VirtualHealth Platform", sector: "Telehealth", revenue: "$91M", score: 75, tier: "Near-Term (18-24mo)", exchange: "NASDAQ" },
-            { rank: 18, name: "AutoDrive Systems", sector: "Autonomous Vehicles", revenue: "$167M", score: 74, tier: "Near-Term (18-24mo)", exchange: "NYSE" },
-            { rank: 19, name: "DataVault Security", sector: "Data Privacy", revenue: "$52M", score: 73, tier: "Near-Term (18-24mo)", exchange: "NASDAQ" },
-            { rank: 20, name: "AgriTech Solutions", sector: "AgTech", revenue: "$38M", score: 72, tier: "Near-Term (18-24mo)", exchange: "TSX-V" }
+        // Sample data
+        const companies = [
+            { rank: 1, name: "QuantumCore AI", sector: "AI Infrastructure", revenue: "$247M", score: 94, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 2, name: "BioCure Therapeutics", sector: "Biotechnology", revenue: "$189M", score: 92, tier: "IPO-Ready", exchange: "NYSE" },
+            { rank: 3, name: "CyberShield Pro", sector: "Cybersecurity", revenue: "$156M", score: 90, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 4, name: "Fusion Energy Systems", sector: "Clean Energy", revenue: "$134M", score: 88, tier: "IPO-Ready", exchange: "NYSE" },
+            { rank: 5, name: "NeuroTech Innovations", sector: "Medical Devices", revenue: "$128M", score: 87, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 6, name: "SpaceLogistics Inc", sector: "Aerospace", revenue: "$201M", score: 86, tier: "IPO-Ready", exchange: "NYSE" },
+            { rank: 7, name: "GenEdit Bio", sector: "Biotechnology", revenue: "$98M", score: 85, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 8, name: "QuantumSecure", sector: "Quantum Computing", revenue: "$76M", score: 84, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 9, name: "SolarMax Energy", sector: "Renewable Energy", revenue: "$112M", score: 83, tier: "Near-Term", exchange: "NYSE" },
+            { rank: 10, name: "AI Robotics Corp", sector: "Robotics", revenue: "$89M", score: 82, tier: "Near-Term", exchange: "NASDAQ" },
         ];
 
         // Populate table
-        const tableBody = document.getElementById('topCompaniesTable');
-        topCompanies.forEach(company => {
-            const tierClass = company.tier.includes('IPO-Ready') ? 'tier-ready' :
-                company.tier.includes('Near-Term') ? 'tier-near' : 'tier-gaps';
-
-            tableBody.innerHTML += `
-                <tr class="hover:bg-gray-50">
-                    <td class="px-4 py-3 text-sm font-medium text-gray-900">#${company.rank}</td>
-                    <td class="px-4 py-3 text-sm font-semibold text-gray-900">${company.name}</td>
-                    <td class="px-4 py-3 text-sm text-gray-600">${company.sector}</td>
-                    <td class="px-4 py-3 text-sm text-gray-900">${company.revenue}</td>
-                    <td class="px-4 py-3 text-sm font-semibold text-blue-600">${company.score}</td>
-                    <td class="px-4 py-3 text-sm"><span class="tier-badge ${tierClass}">${company.tier}</span></td>
-                    <td class="px-4 py-3 text-sm text-gray-600">${company.exchange}</td>
+        const table = document.getElementById('topTable');
+        companies.forEach(c => {
+            const tierClass = c.tier === 'IPO-Ready' ? 'tier-ready' : 'tier-near';
+            table.innerHTML += `
+                <tr>
+                    <td class="rank">#${c.rank}</td>
+                    <td class="company-name">${c.name}</td>
+                    <td>${c.sector}</td>
+                    <td>${c.revenue}</td>
+                    <td class="score">${c.score}</td>
+                    <td><span class="tier-badge ${tierClass}">${c.tier}</span></td>
+                    <td>${c.exchange}</td>
                 </tr>
             `;
         });
 
-        // Score Distribution Chart (Full 95K universe - realistic power law distribution)
-        new Chart(document.getElementById('scoreDistChart'), {
+        // Minimal chart styling
+        Chart.defaults.font.family = '-apple-system, BlinkMacSystemFont, "SF Pro Display"';
+        Chart.defaults.font.size = 13;
+        Chart.defaults.color = '#6e6e73';
+
+        // Score Distribution
+        new Chart(document.getElementById('scoreChart'), {
             type: 'bar',
             data: {
                 labels: ['0-40', '40-50', '50-60', '60-70', '70-80', '80-90', '90-100'],
                 datasets: [{
-                    label: 'Number of Companies',
-                    data: [85000, 4100, 3886, 1200, 634, 362, 65],  // Sums to 95,247 ✓
-                    backgroundColor: 'rgba(99, 102, 241, 0.8)',
-                    borderColor: 'rgba(99, 102, 241, 1)',
-                    borderWidth: 1
+                    label: 'Companies',
+                    data: [85000, 4100, 3886, 1200, 634, 362, 65],
+                    backgroundColor: '#007aff',
+                    borderRadius: 4,
+                    borderSkipped: false,
                 }]
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 plugins: {
                     legend: { display: false }
                 },
                 scales: {
-                    y: { beginAtZero: true, title: { display: true, text: 'Company Count' } },
-                    x: { title: { display: true, text: 'IPO Readiness Score' } }
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#f5f5f7' },
+                        ticks: { color: '#86868b' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#86868b' }
+                    }
                 }
             }
         });
 
-        // Tier Pie Chart (Full 95K universe)
-        new Chart(document.getElementById('tierPieChart'), {
+        // Tier Donut
+        new Chart(document.getElementById('tierChart'), {
             type: 'doughnut',
             data: {
-                labels: ['IPO-Ready (12-18mo)', 'Near-Term (18-24mo)', 'Significant Gaps (2-3yr)', 'Not Ready (3+yr)'],
+                labels: ['IPO-Ready', 'Near-Term', 'Significant Gaps', 'Not Ready'],
                 datasets: [{
-                    data: [427, 1834, 7986, 85000],  // Realistic funnel
-                    backgroundColor: ['#10b981', '#f59e0b', '#ef4444', '#94a3b8'],
-                    borderWidth: 2,
-                    borderColor: '#fff'
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: { position: 'bottom' }
-                }
-            }
-        });
-
-        // Top Sectors Chart
-        new Chart(document.getElementById('sectorChart'), {
-            type: 'bar',
-            data: {
-                labels: ['AI Infrastructure', 'Biotechnology', 'Cybersecurity', 'Clean Energy', 'Quantum Computing', 'Medical Devices', 'Robotics', 'Aerospace'],
-                datasets: [{
-                    label: 'Companies',
-                    data: [234, 198, 176, 143, 89, 87, 76, 64],
-                    backgroundColor: 'rgba(139, 92, 246, 0.8)',
-                    borderColor: 'rgba(139, 92, 246, 1)',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    x: { beginAtZero: true, title: { display: true, text: 'Number of Companies' } }
-                }
-            }
-        });
-
-        // Component Scores (Radar would be better but using bar for simplicity)
-        new Chart(document.getElementById('componentChart'), {
-            type: 'bar',
-            data: {
-                labels: ['Financial', 'Governance', 'Legal', 'IP/Patents', 'Risk', 'Operational'],
-                datasets: [{
-                    label: 'Average Score',
-                    data: [24.5, 19.2, 13.8, 7.4, 8.1, 8.9],
-                    backgroundColor: ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#06b6d4'],
+                    data: [427, 1834, 7986, 85000],
+                    backgroundColor: ['#34c759', '#ff9500', '#ff3b30', '#e8e8ed'],
                     borderWidth: 0
-                }, {
-                    label: 'Max Possible',
-                    data: [30, 25, 15, 10, 10, 10],
-                    backgroundColor: 'rgba(200, 200, 200, 0.3)',
-                    borderWidth: 1,
-                    borderColor: 'rgba(150, 150, 150, 0.5)'
                 }]
             },
             options: {
                 responsive: true,
+                maintainAspectRatio: false,
                 plugins: {
-                    legend: { position: 'top' }
-                },
-                scales: {
-                    y: { beginAtZero: true, max: 35 }
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 20,
+                            font: { size: 13 },
+                            color: '#6e6e73'
+                        }
+                    }
                 }
             }
         });
     </script>
-
 </body>
 
 </html>
