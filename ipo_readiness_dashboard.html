@@ -390,6 +390,7 @@
         <div class="tab-nav-container">
             <button class="tab-button active" onclick="showTab('dashboard')">Dashboard</button>
             <button class="tab-button" onclick="showTab('report')">Research Report</button>
+            <button class="tab-button" onclick="showTab('data')">Data Access</button>
         </div>
     </div>
 
@@ -487,7 +488,8 @@
                 <p><strong>Data Completeness:</strong> 47% of companies lack complete FY2024 data. <strong>Governance
                         Opacity:</strong> Board composition directly observable for only 34% of companies.
                     <strong>Geographic Skew:</strong> Heavy North American focus (89%). <strong>Point-in-Time:</strong>
-                    Snapshot analysis; readiness changes dynamically.</p>
+                    Snapshot analysis; readiness changes dynamically.
+                </p>
 
                 <p><a href="#" onclick="showTab('report'); return false;"
                         style="color: #007aff; text-decoration: none; font-weight: 500;">Read full research report →
@@ -913,10 +915,200 @@
         </div>
     </div>
 
+    <!-- Data Access Tab -->
+    <div id="data-tab" class="tab-content">
+        <div class="container">
+            <h1>Data Access</h1>
+            <div class="subtitle">Download company-level IPO readiness data by tier</div>
+            <div class="meta" style="margin-bottom: 60px;">
+                Excel files with detailed scoring, financials, and analysis
+            </div>
+
+            <!-- Data Tiers -->
+            <div class="card" style="margin-bottom: 40px;">
+                <h2>Available Datasets</h2>
+                <table style="margin-top: 24px;">
+                    <thead>
+                        <tr>
+                            <th>Tier</th>
+                            <th>Score Range</th>
+                            <th>Companies</th>
+                            <th>File Size</th>
+                            <th style="text-align: center;">Access</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>IPO-Ready</strong></td>
+                            <td>80-100</td>
+                            <td>427 companies</td>
+                            <td>~85 KB</td>
+                            <td style="text-align: center;">
+                                <button onclick="requestDownload('ipo-ready')"
+                                    style="background: #007aff; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">Request
+                                    Access</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Near-Term</strong></td>
+                            <td>60-79</td>
+                            <td>1,834 companies</td>
+                            <td>~320 KB</td>
+                            <td style="text-align: center;">
+                                <button onclick="requestDownload('near-term')"
+                                    style="background: #007aff; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">Request
+                                    Access</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Significant Gaps</strong></td>
+                            <td>40-59</td>
+                            <td>2,000 sample (of 7,986)</td>
+                            <td>~380 KB</td>
+                            <td style="text-align: center;">
+                                <button onclick="requestDownload('sig-gaps')"
+                                    style="background: #007aff; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">Request
+                                    Access</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Summary Overview</strong></td>
+                            <td>All tiers</td>
+                            <td>Aggregate statistics</td>
+                            <td>~12 KB</td>
+                            <td style="text-align: center;">
+                                <button onclick="requestDownload('summary')"
+                                    style="background: #007aff; color: white; border: none; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer;">Request
+                                    Access</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- What's Included -->
+            <div class="card" style="background: #f5f5f7; margin-bottom: 40px;">
+                <h3>What's Included in Each Dataset</h3>
+                <ul style="font-size: 15px; line-height: 1.8; color: #1d1d1f; margin-top: 16px;">
+                    <li><strong>Company Profile:</strong> Name, sector, geography, employee count</li>
+                    <li><strong>Financial Metrics:</strong> Revenue, profitability status, growth indicators</li>
+                    <li><strong>Readiness Scoring:</strong> Overall score plus breakdown by 6 dimensions</li>
+                    <li><strong>Governance Data:</strong> Board independence, committee structure, director count</li>
+                    <li><strong>IP Portfolio:</strong> Patent count and quality indicators</li>
+                    <li><strong>Gap Analysis:</strong> Primary barriers to IPO, estimated timeline</li>
+                    <li><strong>Target Exchanges:</strong> NASDAQ, NYSE, TSX preferences</li>
+                </ul>
+            </div>
+
+            <!-- Lead Capture Form (Hidden by default) -->
+            <div id="lead-form" class="card" style="display: none; background: #ffffff; border: 2px solid #007aff;">
+                <h2>Request Data Access</h2>
+                <p style="font-size: 15px; color: #6e6e73; margin-bottom: 32px;">
+                    Please provide your contact information to receive the <strong id="requested-tier"></strong>
+                    dataset.
+                    You'll receive a download link via email within 24 hours.
+                </p>
+
+                <form id="contact-form" onsubmit="handleFormSubmit(event)" style="max-width: 500px;">
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 13px; font-weight: 600; color: #1d1d1f; margin-bottom: 8px;">Full
+                            Name *</label>
+                        <input type="text" id="name" required
+                            style="width: 100%; padding: 12px; border: 1px solid #e8e8ed; border-radius: 8px; font-size: 15px;">
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 13px; font-weight: 600; color: #1d1d1f; margin-bottom: 8px;">Email
+                            *</label>
+                        <input type="email" id="email" required
+                            style="width: 100%; padding: 12px; border: 1px solid #e8e8ed; border-radius: 8px; font-size: 15px;">
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 13px; font-weight: 600; color: #1d1d1f; margin-bottom: 8px;">Company</label>
+                        <input type="text" id="company"
+                            style="width: 100%; padding: 12px; border: 1px solid #e8e8ed; border-radius: 8px; font-size: 15px;">
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <label
+                            style="display: block; font-size: 13px; font-weight: 600; color: #1d1d1f; margin-bottom: 8px;">Role</label>
+                        <select id="role"
+                            style="width: 100%; padding: 12px; border: 1px solid #e8e8ed; border-radius: 8px; font-size: 15px;">
+                            <option value="">Select your role...</option>
+                            <option value="investor">Investor / VC</option>
+                            <option value="banker">Investment Banker</option>
+                            <option value="executive">Company Executive</option>
+                            <option value="advisor">Advisor / Consultant</option>
+                            <option value="researcher">Academic / Researcher</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 24px;">
+                        <label style="display: flex; align-items: start; font-size: 13px; color: #6e6e73;">
+                            <input type="checkbox" required style="margin-right: 8px; margin-top: 2px;">
+                            <span>I agree to receive the dataset and occasional updates on IPO market research</span>
+                        </label>
+                    </div>
+
+                    <div style="display: flex; gap: 12px;">
+                        <button type="submit"
+                            style="flex: 1; background: #007aff; color: white; border: none; padding: 14px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer;">
+                            Submit Request
+                        </button>
+                        <button type="button" onclick="closeForm()"
+                            style="background: #f5f5f7; color: #1d1d1f; border: none; padding: 14px 24px; border-radius: 8px; font-size: 15px; font-weight: 500; cursor: pointer;">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Success Message (Hidden by default) -->
+            <div id="success-message" class="card"
+                style="display: none; background: #e8f5e9; border: 2px solid #34c759;">
+                <h3 style="color: #2e7d32; margin-bottom: 16px;">✓ Request Submitted!</h3>
+                <p style="font-size: 15px; color: #1d1d1f;">
+                    Thank you for your interest. Your download link has been sent to <strong
+                        id="submitted-email"></strong>.
+                    Please allow up to 24 hours for delivery.
+                </p>
+                <button onclick="location.reload()"
+                    style="margin-top: 16px; background: #34c759; color: white; border: none; padding: 12px 24px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">
+                    Request Another Dataset
+                </button>
+            </div>
+
+            <!-- Use Cases -->
+            <div class="insights" style="margin-top: 60px;">
+                <div class="insight">
+                    <div class="insight-title">VCs & Private Equity</div>
+                    <div class="insight-text">Identify IPO-ready portfolio companies and benchmark against market.
+                        Prioritize governance reforms for near-term candidates.</div>
+                </div>
+                <div class="insight">
+                    <div class="insight-title">Investment Banks</div>
+                    <div class="insight-text">Build IPO pipeline, pre-qualify candidates, and tailor pitch materials
+                        based on readiness gaps.</div>
+                </div>
+                <div class="insight">
+                    <div class="insight-title">Company Executives</div>
+                    <div class="insight-text">Benchmark your IPO readiness against peers, identify gaps, and plan
+                        governance roadmap.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
+        let requestedDataset = '';
+
         // Tab switching
         function showTab(tabName) {
-            // Hide all tabs
             document.querySelectorAll('.tab-content').forEach(tab => {
                 tab.classList.remove('active');
             });
@@ -924,17 +1116,59 @@
                 btn.classList.remove('active');
             });
 
-            // Show selected tab
-            if (tabName === 'dashboard') {
-                document.getElementById('dashboard-tab').classList.add('active');
-                document.querySelectorAll('.tab-button')[0].classList.add('active');
-            } else {
-                document.getElementById('report-tab').classList.add('active');
-                document.querySelectorAll('.tab-button')[1].classList.add('active');
+            const tabMap = {
+                'dashboard': [document.getElementById('dashboard-tab'), 0],
+                'report': [document.getElementById('report-tab'), 1],
+                'data': [document.getElementById('data-tab'), 2]
+            };
+
+            if (tabMap[tabName]) {
+                tabMap[tabName][0].classList.add('active');
+                document.querySelectorAll('.tab-button')[tabMap[tabName][1]].classList.add('active');
             }
 
-            // Scroll to top
             window.scrollTo(0, 0);
+        }
+
+        // Request download
+        function requestDownload(tier) {
+            const tierNames = {
+                'ipo-ready': 'IPO-Ready Companies (427)',
+                'near-term': 'Near-Term Companies (1,834)',
+                'sig-gaps': 'Significant Gaps Sample (2,000)',
+                'summary': 'Summary Overview'
+            };
+
+            requestedDataset = tier;
+            document.getElementById('requested-tier').textContent = tierNames[tier];
+            document.getElementById('lead-form').style.display = 'block';
+            document.getElementById('lead-form').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const company = document.getElementById('company').value;
+            const role = document.getElementById('role').value;
+
+            // In production, send to backend/CRM
+            console.log('Lead captured:', { name, email, company, role, dataset: requestedDataset });
+
+            // Show success message
+            document.getElementById('submitted-email').textContent = email;
+            document.getElementById('lead-form').style.display = 'none';
+            document.getElementById('success-message').style.display = 'block';
+            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+
+            // In production, trigger actual download or email delivery here
+        }
+
+        // Close form
+        function closeForm() {
+            document.getElementById('lead-form').style.display = 'none';
         }
 
         // Sample data
