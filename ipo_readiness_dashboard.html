@@ -1131,21 +1131,17 @@
         }
 
         // Request download
+        // Request download - redirects to GitHub Issue
         function requestDownload(tier) {
             const tierNames = {
-                'ipo-ready': 'IPO-Ready Companies (427)',
-                'near-term': 'Near-Term Companies (1,834)',
-                'sig-gaps': 'Significant Gaps Sample (2,000)',
-                'summary': 'Summary Overview'
+                'ipo-ready': 'IPO-Ready%20Companies%20(427)',
+                'near-term': 'Near-Term%20Companies%20(1%2C834)',
+                'sig-gaps': 'Significant%20Gaps%20Sample%20(2%2C000)',
+                'summary': 'Summary%20Overview'
             };
-
-            requestedDataset = tier;
-            document.getElementById('requested-tier').textContent = tierNames[tier];
-            document.getElementById('lead-form').style.display = 'block';
-            document.getElementById('lead-form').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Handle form submission
+            const githubUrl = `https://github.com/TanyaMatanda/deep-tech-2026-report/issues/new?template=data_request.yml&title=[Data%20Request]%20${tierNames[tier]}`;
+            window.open(githubUrl, '_blank');
+        }        // Handle form submission
         function handleFormSubmit(event) {
             event.preventDefault();
 
