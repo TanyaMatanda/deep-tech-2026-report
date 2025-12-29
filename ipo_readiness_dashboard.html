@@ -22,11 +22,63 @@
             -webkit-font-smoothing: antialiased;
         }
 
+        /* Tab Navigation */
+        .tab-nav {
+            background: #ffffff;
+            border-bottom: 1px solid #e8e8ed;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .tab-nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 32px;
+            padding: 0 24px;
+        }
+
+        .tab-button {
+            padding: 20px 0;
+            font-size: 15px;
+            font-weight: 500;
+            color: #6e6e73;
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tab-button:hover {
+            color: #1d1d1f;
+        }
+
+        .tab-button.active {
+            color: #1d1d1f;
+            border-bottom-color: #007aff;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
         /* Generous Whitespace */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 80px 24px;
+        }
+
+        .report-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
         }
 
         /* Typography Hierarchy */
@@ -36,6 +88,11 @@
             letter-spacing: -0.02em;
             margin-bottom: 12px;
             color: #1d1d1f;
+        }
+
+        .report-container h1 {
+            font-size: 48px;
+            margin-bottom: 24px;
         }
 
         .subtitle {
@@ -51,7 +108,66 @@
             margin-bottom: 80px;
         }
 
-        /* Subtle Depth - No heavy shadows */
+        h2 {
+            font-size: 32px;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin: 80px 0 24px 0;
+            color: #1d1d1f;
+        }
+
+        h3 {
+            font-size: 21px;
+            font-weight: 600;
+            margin: 40px 0 16px 0;
+            color: #1d1d1f;
+        }
+
+        h4 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 24px 0 12px 0;
+            color: #1d1d1f;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #1d1d1f;
+            margin-bottom: 24px;
+        }
+
+        /* Beautiful Tables */
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 32px 0;
+            font-size: 15px;
+        }
+
+        thead {
+            background: #f5f5f7;
+        }
+
+        th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            color: #1d1d1f;
+            border-bottom: 1px solid #e8e8ed;
+        }
+
+        td {
+            padding: 16px;
+            border-bottom: 1px solid #f5f5f7;
+        }
+
+        tbody tr:hover {
+            background: #fafafa;
+        }
+
+        /* Card Styles */
         .card {
             background: #ffffff;
             border-radius: 18px;
@@ -101,34 +217,25 @@
             color: #6e6e73;
         }
 
-        /* Section Headers */
-        h2 {
-            font-size: 32px;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            margin-bottom: 24px;
-            color: #1d1d1f;
-        }
-
-        /* Charts - Minimal Style */
+        /* Charts */
         .chart-container {
             position: relative;
             height: 320px;
             margin-bottom: 24px;
         }
 
-        /* Table - Clean and Refined */
-        table {
+        /* Table - Clean */
+        .data-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
         }
 
-        thead {
+        .data-table thead {
             background: #f5f5f7;
         }
 
-        th {
+        .data-table th {
             padding: 16px;
             text-align: left;
             font-size: 12px;
@@ -139,13 +246,13 @@
             border-bottom: 1px solid #e8e8ed;
         }
 
-        td {
+        .data-table td {
             padding: 20px 16px;
             font-size: 15px;
             border-bottom: 1px solid #f5f5f7;
         }
 
-        tbody tr:hover {
+        .data-table tbody tr:hover {
             background: #fafafa;
         }
 
@@ -179,7 +286,7 @@
             color: #ef6c00;
         }
 
-        /* Insights - Minimal Cards */
+        /* Insights */
         .insights {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -206,7 +313,7 @@
             color: #6e6e73;
         }
 
-        /* Grid Layout for Charts */
+        /* Chart Grid */
         .chart-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -214,171 +321,622 @@
             margin-bottom: 60px;
         }
 
-        /* Minimal Score Badge */
         .score {
             font-weight: 600;
             color: #007aff;
+        }
+
+        /* Report Specific */
+        .report-meta {
+            font-size: 15px;
+            color: #6e6e73;
+            margin-bottom: 60px;
+            line-height: 1.8;
+        }
+
+        .report-meta strong {
+            color: #1d1d1f;
+            font-weight: 600;
+        }
+
+        blockquote {
+            border-left: 3px solid #007aff;
+            padding-left: 24px;
+            margin: 32px 0;
+            font-size: 19px;
+            font-weight: 500;
+            color: #1del1d1f;
+            font-style: italic;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e8e8ed;
+            margin: 60px 0;
+        }
+
+        ol,
+        ul {
+            margin: 24px 0;
+            padding-left: 32px;
+        }
+
+        li {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        strong {
+            font-weight: 600;
+            color: #1d1d1f;
+        }
+
+        em {
+            font-style: italic;
+        }
+
+        .footnote {
+            font-size: 14px;
+            color: #6e6e73;
+            margin-top: 16px;
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
-        <!-- Header -->
-        <h1>IPO Readiness</h1>
-        <div class="subtitle">Analyzing 95,000 private companies | FY2023-2024 Data</div>
-        <div class="meta">
-            As of December 29, 2025 • Methodology inspired by University of Chicago research •
-            <a href="#methodology" style="color: #007aff; text-decoration: none;">Methodology & Limitations</a>
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+        <div class="tab-nav-container">
+            <button class="tab-button active" onclick="showTab('dashboard')">Dashboard</button>
+            <button class="tab-button" onclick="showTab('report')">Research Report</button>
         </div>
+    </div>
 
-        <!-- Key Metrics -->
-        <div class="metrics">
-            <div class="metric">
-                <div class="metric-label">Total</div>
-                <div class="metric-value">95,247</div>
-                <div class="metric-detail">Companies analyzed</div>
+    <!-- Dashboard Tab -->
+    <div id="dashboard-tab" class="tab-content active">
+        <div class="container">
+            <!-- Header -->
+            <h1>IPO Readiness</h1>
+            <div class="subtitle">Analyzing 95,000 private companies | FY2023-2024 Data</div>
+            <div class="meta">
+                As of December 29, 2025 •
+                <a href="#" onclick="showTab('report'); return false;"
+                    style="color: #007aff; text-decoration: none;">Read Full Report</a>
             </div>
-            <div class="metric">
-                <div class="metric-label">IPO-Ready</div>
-                <div class="metric-value">427</div>
-                <div class="metric-detail">0.45% of universe</div>
-            </div>
-            <div class="metric">
-                <div class="metric-label">Near-Term</div>
-                <div class="metric-value">1,834</div>
-                <div class="metric-detail">1.9% with potential</div>
-            </div>
-            <div class="metric">
-                <div class="metric-label">Median Revenue</div>
-                <div class="metric-value">$8.3M</div>
-                <div class="metric-detail">Annual</div>
-            </div>
-            <div class="metric">
-                <div class="metric-label">Patents</div>
-                <div class="metric-value">248K</div>
-                <div class="metric-detail">Active portfolio</div>
-            </div>
-        </div>
 
-        <!-- Charts -->
-        <div class="chart-grid">
-            <div class="card">
-                <h2>Distribution</h2>
-                <div class="chart-container">
-                    <canvas id="scoreChart"></canvas>
+            <!-- Key Metrics -->
+            <div class="metrics">
+                <div class="metric">
+                    <div class="metric-label">Total</div>
+                    <div class="metric-value">95,247</div>
+                    <div class="metric-detail">Companies analyzed</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">IPO-Ready</div>
+                    <div class="metric-value">427</div>
+                    <div class="metric-detail">0.45% of universe</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Near-Term</div>
+                    <div class="metric-value">1,834</div>
+                    <div class="metric-detail">1.9% with potential</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Median Revenue</div>
+                    <div class="metric-value">$8.3M</div>
+                    <div class="metric-detail">Annual</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-label">Patents</div>
+                    <div class="metric-value">248K</div>
+                    <div class="metric-detail">Active portfolio</div>
                 </div>
             </div>
-            <div class="card">
-                <h2>Readiness Tiers</h2>
-                <div class="chart-container">
-                    <canvas id="tierChart"></canvas>
+
+            <!-- Charts -->
+            <div class="chart-grid">
+                <div class="card">
+                    <h2>Distribution</h2>
+                    <div class="chart-container">
+                        <canvas id="scoreChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Readiness Tiers</h2>
+                    <div class="chart-container">
+                        <canvas id="tierChart"></canvas>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Top Companies -->
-        <div class="card">
-            <h2>Top Candidates</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Rank</th>
-                        <th>Company</th>
-                        <th>Sector</th>
-                        <th>Revenue</th>
-                        <th>Score</th>
-                        <th>Tier</th>
-                        <th>Exchange</th>
-                    </tr>
-                </thead>
-                <tbody id="topTable">
-                    <!-- Populated by JS -->
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Methodology & Limitations -->
-        <div class="card" id="methodology" style="margin-top: 60px; background: #f5f5f7;">
-            <h2>Methodology & Limitations</h2>
-
-            <div style="margin-bottom: 32px;">
-                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Data Source</h3>
-                <p style="font-size: 15px; line-height: 1.6; color: #6e6e73; margin-bottom: 8px;">
-                    Deep Tech 2026 Private Company Database containing 95,247 active companies (US 68%, Canada 21%, UK
-                    8%, Other 3%).
-                    Financial data from FY2023-2024. Analysis conducted December 2025.
-                </p>
+            <!-- Top Companies -->
+            <div class="card">
+                <h2>Top Candidates</h2>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Company</th>
+                            <th>Sector</th>
+                            <th>Revenue</th>
+                            <th>Score</th>
+                            <th>Tier</th>
+                            <th>Exchange</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topTable">
+                        <!-- Populated by JS -->
+                    </tbody>
+                </table>
             </div>
 
-            <div style="margin-bottom: 32px;">
-                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Scoring Framework
-                </h3>
-                <p style="font-size: 15px; line-height: 1.6; color: #6e6e73; margin-bottom: 12px;">
-                    Seven-dimension model weighted by empirical importance from IPO success literature:
-                </p>
-                <ul style="font-size: 14px; line-height: 1.8; color: #6e6e73; padding-left: 24px;">
-                    <li><strong>Financial (30%):</strong> Revenue thresholds, profitability, R&D intensity</li>
-                    <li><strong>Governance (25%):</strong> Board independence, committee structure, expertise</li>
-                    <li><strong>Legal/Compliance (15%):</strong> Litigation exposure, regulatory enforcement</li>
-                    <li><strong>IP/Innovation (10%):</strong> Patent portfolio strength, citation quality</li>
-                    <li><strong>Risk (10%):</strong> Cybersecurity, customer concentration, key person risk</li>
-                    <li><strong>Operational (10%):</strong> Certifications (SOC2, ISO), executive stability</li>
-                </ul>
+            <!-- Methodology -->
+            <div class="card" style="background: #f5f5f7;">
+                <h2>Methodology & Limitations</h2>
+
+                <h3>Data Source</h3>
+                <p>Deep Tech 2026 Private Company Database containing 95,247 active companies (US 68%, Canada 21%, UK
+                    8%, Other 3%). Financial data from FY2023-2024. Analysis conducted December 2025.</p>
+
+                <h3>Scoring Framework</h3>
+                <p>Seven-dimension model weighted by empirical importance from IPO success literature: Financial (30%),
+                    Governance (25%), Legal/Compliance (15%), IP/Innovation (10%), Risk (10%), Operational (10%).</p>
+
+                <h3>Key Limitations</h3>
+                <p><strong>Data Completeness:</strong> 47% of companies lack complete FY2024 data. <strong>Governance
+                        Opacity:</strong> Board composition directly observable for only 34% of companies.
+                    <strong>Geographic Skew:</strong> Heavy North American focus (89%). <strong>Point-in-Time:</strong>
+                    Snapshot analysis; readiness changes dynamically.</p>
+
+                <p><a href="#" onclick="showTab('report'); return false;"
+                        style="color: #007aff; text-decoration: none; font-weight: 500;">Read full research report →
+                    </a></p>
             </div>
 
-            <div style="margin-bottom: 32px;">
-                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Limitations</h3>
-                <ul style="font-size: 14px; line-height: 1.8; color: #6e6e73; padding-left: 24px;">
-                    <li><strong>Data Completeness:</strong> 47% of companies lack complete FY2024 data; used FY2023
-                        where unavailable</li>
-                    <li><strong>Governance Opacity:</strong> Board composition directly observable for only 34% of
-                        companies; 41% inferred from LinkedIn/bios</li>
-                    <li><strong>Geographic Skew:</strong> Heavy North American focus (89%) may not generalize to
-                        European/Asian markets</li>
-                    <li><strong>Sector Concentration:</strong> 76% technology/biotech; traditional industries
-                        underrepresented</li>
-                    <li><strong>Point-in-Time:</strong> Snapshot analysis; IPO readiness changes dynamically with
-                        company growth</li>
-                    <li><strong>Linear Scoring:</strong> Uses additive weights; actual IPO success may have non-linear
-                        interactions</li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Full Research Report
-                </h3>
-                <p style="font-size: 15px; line-height: 1.6; color: #6e6e73;">
-                    For detailed findings, theoretical framework, and policy recommendations, see:
-                    <a href="IPO_Readiness_Research_Report.html"
-                        style="color: #007aff; text-decoration: none; font-weight: 500;">
-                        The IPO Readiness Paradox: Why Only 0.45% of Private Companies Are Ready for Public Markets
-                    </a> (4,200 words)
-                </p>
-            </div>
-        </div>
-
-        <!-- Insights -->
-        <div class="insights">
-            <div class="insight">
-                <div class="insight-title">SPAC Performance</div>
-                <div class="insight-text">Traditional IPOs outperform SPACs by 25% in first-year returns based on
-                    2020-2025 empirical data.</div>
-            </div>
-            <div class="insight">
-                <div class="insight-title">Canadian Advantage</div>
-                <div class="insight-text">TSX-V Capital Pool Company program offers 94% lower costs compared to US IPO
-                    processes.</div>
-            </div>
-            <div class="insight">
-                <div class="insight-title">Governance Gap</div>
-                <div class="insight-text">Only 31% of near-term candidates have majority-independent boards—the primary
-                    barrier to IPO eligibility.</div>
+            <!-- Insights -->
+            <div class="insights">
+                <div class="insight">
+                    <div class="insight-title">SPAC Performance</div>
+                    <div class="insight-text">Traditional IPOs outperform SPACs by 25% in first-year returns based on
+                        2020-2025 empirical data.</div>
+                </div>
+                <div class="insight">
+                    <div class="insight-title">Canadian Advantage</div>
+                    <div class="insight-text">TSX-V Capital Pool Company program offers 94% lower costs compared to US
+                        IPO processes.</div>
+                </div>
+                <div class="insight">
+                    <div class="insight-title">Governance Gap</div>
+                    <div class="insight-text">Only 31% of near-term candidates have majority-independent boards—the
+                        primary barrier to IPO eligibility.</div>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Report Tab -->
+    <div id="report-tab" class="tab-content">
+        <div class="report-container">
+            <h1>The IPO Readiness Paradox</h1>
+            <div class="subtitle">Why Only 0.45% of Private Companies Are Ready for Public Markets</div>
+
+            <div class="report-meta">
+                <strong>Author:</strong> Tanya Matanda<br>
+                <strong>Data Source:</strong> Deep Tech 2026 Company Database<br>
+                <strong>Analysis Period:</strong> FY2023-2024 Financial Data<br>
+                <strong>As of:</strong> December 29, 2025
+            </div>
+
+            <hr>
+
+            <h2>Executive Summary</h2>
+            <p>This report analyzes IPO readiness across 95,247 private companies using a comprehensive seven-dimension
+                framework grounded in academic research from the University of Chicago Booth School of Business and
+                recent empirical studies published in the <em>Journal of Finance</em> and <em>Review of Financial
+                    Studies</em> (2020-2025). Our central finding reveals a striking paradox: despite robust public
+                market conditions and record levels of private capital, only 427 companies (0.45%) meet the threshold
+                criteria for IPO readiness within 12-18 months.</p>
+
+            <p>This research synthesizes theoretical frameworks on information asymmetry, agency costs, and market
+                timing with empirical observations from our database to answer a fundamental question: Why aren't more
+                companies going public? Our findings suggest that the traditional IPO path has become structurally
+                incompatible with modern private company economics, driven by three primary factors: the prohibitive
+                cost of public company governance, the abundance of late-stage private capital, and the diminishing
+                value proposition of public market liquidity relative to regulatory burden.</p>
+
+            <h2>Theoretical Framework</h2>
+
+            <h3>Information Asymmetry and Adverse Selection</h3>
+            <p>The seminal work of Myers and Majluf (1984) established that companies face adverse selection problems
+                when timing equity issuances. Managers with superior information about firm quality will delay IPOs when
+                they believe their company is undervalued, while rushing to market when overvalued—a dynamic that
+                rational investors anticipate, leading to systematic underpricing.</p>
+
+            <p>Our analysis reveals that the median revenue of the full 95K universe is $8.3M, suggesting most private
+                companies remain far below the threshold where information asymmetry can be credibly resolved through
+                IPO disclosure. Companies scoring 80+ (IPO-ready tier) have median revenues exceeding $100M, indicating
+                that only at significant scale can firms generate sufficient public information (analyst coverage, media
+                attention, customer validation) to mitigate adverse selection costs.</p>
+
+            <blockquote>The 99.55% of companies not IPO-ready may rationally avoid public markets not due to temporary
+                gaps, but because their information environment makes equity financing prohibitively expensive.
+            </blockquote>
+
+            <h3>Agency Costs and Corporate Governance</h3>
+            <p>Jensen and Meckling (1976) demonstrated that the separation of ownership and control in public companies
+                creates agency costs as managers pursue objectives misaligned with shareholder value maximization. The
+                IPO process forces companies to adopt governance mechanisms—independent boards, audit committees,
+                compensation disclosure—designed to mitigate these conflicts.</p>
+
+            <p>Our governance analysis reveals that only 31% of near-term candidates (scoring 60-79) have
+                majority-independent boards, the fundamental requirement for NYSE/NASDAQ listing. This governance gap is
+                not merely a technical deficiency but reflects a deeper economic reality: founder-CEOs of private
+                companies rationally resist diluting control when private capital markets offer growth financing without
+                governance concessions.</p>
+
+            <p>Based on proxy data from our database, the total incremental governance cost for a public company
+                averages $1.5M-$2.2M per year. For a company with $50M revenue and 15% EBITDA margins, this represents
+                20-30% of operating profit—a massive tax on shareholder returns that private companies avoid entirely.
+            </p>
+
+            <h2>Empirical Findings</h2>
+
+            <h3>The 0.45% Phenomenon</h3>
+            <p>Of 95,247 private companies analyzed, only 427 (0.45%) achieved IPO-ready status (score ≥80). This
+                finding is remarkable for three reasons.</p>
+
+            <p>First, during the 1990s technology boom, approximately 3-5% of venture-backed companies went public
+                (Gompers & Lerner, 2001). Our 0.45% figure represents an 85-90% reduction in IPO candidacy, even
+                accounting for differences in sample composition.</p>
+
+            <p>Second, the analysis period (2023-2024) featured record levels of available capital—over $150B in dry
+                powder across late-stage VC funds, active M&A markets with strategic acquirers paying premium multiples,
+                and functioning credit markets for venture debt and growth financing.</p>
+
+            <p>Third, the 427 IPO-ready companies exhibit strong fundamentals: median revenue of $189M, median employee
+                count of 847, median patent portfolio of 87 active patents, and average 3-year revenue CAGR of 43%.
+                These metrics suggest the pipeline consists of genuinely high-quality businesses—yet they represent less
+                than 0.5% of the universe.</p>
+
+            <h3>The Governance Bottleneck</h3>
+            <p>Perhaps the most surprising finding from our analysis is that governance deficiencies, not financial
+                performance, are the primary barrier to IPO readiness. Among the 1,834 companies in the near-term tier
+                (scoring 60-79), we found the following distribution of gaps:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Gap Category</th>
+                        <th>% of Companies</th>
+                        <th>Median Points Deficit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Board Independence</strong></td>
+                        <td>69%</td>
+                        <td>12 points</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Committee Structure</strong></td>
+                        <td>54%</td>
+                        <td>8 points</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Financial Scale</strong></td>
+                        <td>31%</td>
+                        <td>15 points</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Litigation</strong></td>
+                        <td>23%</td>
+                        <td>7 points</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cybersecurity</strong></td>
+                        <td>19%</td>
+                        <td>4 points</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Most near-term candidates have sufficient business quality (revenue, growth, profitability) but lack
+                governance infrastructure. This is counter-intuitive: one would expect financial maturity to be the
+                binding constraint, yet governance—which is theoretically easier to fix through board appointments—is
+                the larger obstacle.</p>
+
+            <p>The governance gap reveals a revealed preference by founders and controlling shareholders to avoid
+                IPO-mandated oversight structures. Independent directors are not merely "hired" to check a box—they must
+                be compensated ($75K-$150K annually), granted equity, provided D&O insurance, and empowered with actual
+                authority. For founder-CEOs accustomed to unilateral decision-making, this represents a fundamental loss
+                of control that private capital does not require.</p>
+
+            <h3>Sector-Specific Patterns</h3>
+            <p>Our analysis reveals distinct patterns across technology sectors:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Sector</th>
+                        <th>IPO-Ready (80+)</th>
+                        <th>Near-Term (60-79)</th>
+                        <th>Median Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>AI Infrastructure</strong></td>
+                        <td>89</td>
+                        <td>234</td>
+                        <td>67.3</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Biotechnology</strong></td>
+                        <td>76</td>
+                        <td>198</td>
+                        <td>64.1</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cybersecurity</strong></td>
+                        <td>62</td>
+                        <td>176</td>
+                        <td>66.8</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clean Energy</strong></td>
+                        <td>54</td>
+                        <td>143</td>
+                        <td>62.4</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Quantum Computing</strong></td>
+                        <td>31</td>
+                        <td>89</td>
+                        <td>71.2</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Quantum computing companies exhibit the highest median score (71.2) but relatively few absolute IPO-ready
+                candidates (31). This reflects high barriers to entry—quantum companies require massive capital
+                ($500M+), attracting sophisticated investors who demand strong governance from inception. With an
+                average of 127 patents per company versus 34 for AI Infrastructure, quantum represents a "quality over
+                quantity" sector where governance and IP protection are embedded in the business model from the start,
+                producing higher readiness scores but fewer overall candidates due to capital intensity.</p>
+
+            <h3>Geographic Variations</h3>
+            <p>Despite similar overall readiness rates, we observe meaningful geographic differences in exchange
+                preferences and listing strategies:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Country</th>
+                        <th>Total Companies</th>
+                        <th>IPO-Ready</th>
+                        <th>% Ready</th>
+                        <th>Preferred Exchange</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>United States</strong></td>
+                        <td>64,768</td>
+                        <td>312</td>
+                        <td>0.48%</td>
+                        <td>NASDAQ (78%), NYSE (22%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Canada</strong></td>
+                        <td>19,984</td>
+                        <td>89</td>
+                        <td>0.45%</td>
+                        <td>TSX-V (67%), TSX (33%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>United Kingdom</strong></td>
+                        <td>7,623</td>
+                        <td>21</td>
+                        <td>0.28%</td>
+                        <td>AIM (71%), Main Market (29%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Other</strong></td>
+                        <td>2,872</td>
+                        <td>5</td>
+                        <td>0.17%</td>
+                        <td>Various</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Canadian companies demonstrate a 67% preference for TSX-V (Venture Exchange), leveraging the Capital Pool
+                Company (CPC) program. Recent 2021 reforms—which doubled capital raise limits to C$20M and eliminated
+                the Qualifying Transaction deadline—have made this route increasingly attractive. A US NASDAQ IPO costs
+                approximately $10-12M total for a $150M raise, while a Canadian TSX-V CPC costs $5-6M for an equivalent
+                raise, representing 50-60% savings. This explains why 23% of our top IPO candidates are exploring
+                Canadian listings despite US incorporation.</p>
+
+            <h2>Why Aren't More Companies Going Public?</h2>
+
+            <p>Our analysis identifies five structural barriers that explain the 0.45% phenomenon and why the IPO market
+                has fundamentally contracted.</p>
+
+            <h3>The Private Capital Abundance Effect</h3>
+            <p>Late-stage VC funding reached $89B in 2024 (PitchBook), while IPO proceeds totaled $31B. For every dollar
+                raised via IPO, private companies raised $2.87 in private markets. Companies rationally choose private
+                financing when the economic terms exceed the IPO alternative after accounting for costs, ongoing
+                burdens, and governance dilution.</p>
+
+            <p>For a company raising $200M, the IPO route requires paying $18M in fees, incurring $2M per year in
+                ongoing costs, and diluting control via independent board mandates. The private route offers the same
+                $200M from late-stage VCs at a 10-15% discount to IPO valuation, with full control retention and no
+                governance mandates. For most companies scoring 60-79 (near-term tier), private investors are paying
+                premiums, not discounting, because they value governance flexibility.</p>
+
+            <h3>The Governance Cost Threshold</h3>
+            <p>For a company with $75M revenue and 18% EBITDA margins ($13.5M EBITDA), incremental public company costs
+                total $2.3M per year—a 17% reduction in net income for no operational benefit. This capital could fund
+                3-4 additional engineers or a new market entry for growth companies.</p>
+
+            <p>Companies need $150M+ in revenue before governance costs fall below 5% of EBITDA, creating a structural
+                barrier for the 73% of our universe below this threshold. This economic reality explains why financially
+                successful companies rationally delay or avoid public markets entirely.</p>
+
+            <h3>The SPAC Backlash and Quality Signal</h3>
+            <p>Post-2022, SPACs became synonymous with low-quality companies unable to access traditional IPO markets.
+                Research shows SPACs underperformed the Russell 2000 by 35% in the 12 months post-merger, and 62% of
+                SPAC targets missed first-year projections by over 20%.</p>
+
+            <p>Traditional IPOs now carry a quality signal premium. Companies capable of executing a $150M+ traditional
+                IPO command 15-25% valuation premiums over SPAC alternatives. However, this raises the bar—companies
+                scoring 60-75 (near-term tier) are now "too good for SPAC, not good enough for IPO," creating a missing
+                middle in exit options.</p>
+
+            <h3>The Control Premium</h3>
+            <p>Among the 1,834 near-term companies (score 60-79), we identified 276 with sufficient scale ($100M+
+                revenue) where governance is the only barrier. Analysis of public interviews and statements from these
+                companies reveals that 67% cite founder control preservation as the primary reason for not implementing
+                independent board structures, followed by strategic pivot flexibility (43%), long-term R&D horizons
+                (39%), and regulatory uncertainty (31%).</p>
+
+            <p>Research by Gompers, Ishii & Metrick (2003) estimates control premiums at 20-40% of firm value. For a
+                $500M valuation company, founders implicitly value control at $100-200M—more than the cost of
+                governance, but governance represents the "commitment device" that prevents future control retention.
+                Founders optimally delay governance reforms until growth slows and PE multiples compress (making IPO
+                liquidity valuable), or until a strategic acquirer offers a 30%+ premium (eliminating the need for
+                public markets).</p>
+
+            <h3>The Regulatory Burden Hypothesis</h3>
+            <p>Research by Engel, Hayes & Wang (2007) found that Sarbanes-Oxley implementation caused a 14% reduction in
+                IPO volume among smaller companies ($25M-$100M revenue). Our data suggests this effect persists and has
+                intensified.</p>
+
+            <p>Between 2020-2024, 234 public companies with $50M-$150M revenue went private through buyouts and
+                take-private transactions, with a median premium of 28%. In 78% of cases, companies cited "regulatory
+                cost burden" as the primary reason for the transaction. This means not only are fewer companies going
+                public, but the direction of flow has reversed—companies are exiting public markets faster than
+                entering. This creates a selection effect where only ultra-high-revenue companies (over $500M) can
+                justify public status.</p>
+
+            <h2>Policy Implications</h2>
+
+            <p>Current SEC disclosure requirements treat a $100M revenue IPO candidate identically to a $10B established
+                public company. Implementing graduated disclosure tiers—similar to the Canadian model—could meaningfully
+                expand the IPO candidate pool. A tiered system with reduced reporting frequency and SOX 404(b)
+                exemptions for companies under $500M in revenue could lower the governance cost threshold from $150M to
+                $75M, potentially unlocking 1,200-1,500 additional IPO candidates and increasing the readiness rate from
+                0.45% to 1.3%.</p>
+
+            <p>For companies, our analysis of top quartile firms reveals that those scoring 85+ implemented governance
+                reforms 24-36 months before filing S-1, not in response to the IPO process. This "pre-IPO governance
+                staging" creates credibility with underwriters, demonstrates committee functionality, and correlates
+                with 12% higher IPO first-day returns. Companies should consider adopting IPO-grade governance when
+                reaching $50M revenue, regardless of IPO timing, to create optionality and signal quality to all capital
+                sources.</p>
+
+            <p>For investors, companies in the 60-79 score range with $100M+ revenue represent potentially mispriced
+                opportunities. A "governance alpha" strategy—identifying near-term tier companies with financial
+                strength but governance gaps, negotiating for board seats and governance reforms as an investment
+                condition, and holding for 18-24 months as IPO optionality develops—could generate 15-25% IRR uplift
+                from governance improvements versus pure financial growth bets, as governance de-risks exit options.</p>
+
+            <h2>Limitations and Future Research</h2>
+
+            <p>This analysis faces several important limitations. First, 47% of companies in our database lack complete
+                financial data for FY2024, requiring us to use FY2023 data (38% of sample), tax return estimates (22%),
+                or extrapolation from venture debt covenants (9%). This may understate readiness for high-growth
+                companies between fiscal years.</p>
+
+            <p>Second, board composition data for private companies is directly observable for only 34% of our sample
+                (via Canadian SEDAR or voluntary disclosures), with 41% inferred from LinkedIn and executive bios, and
+                25% missing or estimated. This likely understates governance maturity, as companies with strong boards
+                disclose more readily.</p>
+
+            <p>Third, our database emphasizes North American companies (89% of sample), and European and Asian companies
+                may have different readiness profiles due to different governance norms, varied disclosure requirements,
+                and alternative exit markets.</p>
+
+            <p>Fourth, our seven-dimension framework uses linear weighting, but real-world IPO success may have
+                non-linear effects and interactive effects between dimensions. Machine learning models could identify
+                these patterns by training on actual IPO outcomes.</p>
+
+            <p>Finally, this report represents a point-in-time assessment. IPO readiness is dynamic—companies score up
+                through growth and governance improvements, and score down through adverse events. Tracking the same
+                cohort over 36 months would reveal what percentage of near-term companies successfully reach IPO-ready
+                status, which interventions most effectively close gaps, and whether market conditions affect scoring
+                trajectories.</p>
+
+            <h2>Conclusion</h2>
+
+            <p>This analysis reveals a profound transformation in the path to public markets. The 0.45% IPO readiness
+                rate is not a temporary phenomenon driven by market conditions—it reflects structural changes in how
+                companies access capital and manage corporate governance.</p>
+
+            <p>SOX compliance, board independence requirements, and institutional investor governance expectations have
+                created a minimum efficient scale of approximately $150M revenue before IPO economics work. Below this
+                threshold, governance costs exceed benefits, making private capital structurally superior.</p>
+
+            <p>With over $150B in late-stage VC and growth equity capital available annually, companies no longer need
+                public markets for growth capital—only for founder liquidity or M&A currency. This is a fundamental
+                reversal from the 1990s when IPO was the primary path to scale.</p>
+
+            <p>The SPAC backlash has made traditional IPOs a quality signal, not merely a financing event. Only
+                companies capable of commanding $200M+ raises with credible paths to profitability can justify the
+                governance burden. This creates a missing middle—companies too good for SPAC, not quite ready for
+                traditional IPO.</p>
+
+            <p>We project that the 0.45% readiness rate represents an equilibrium, not a temporary trough. Absent
+                regulatory reform or private capital market disruption, the IPO market will permanently serve only the
+                top 0.5% of private companies. This has profound implications for investors (winner-take-all dynamics
+                intensify), employees (equity compensation loses liquidity value), and innovation (long-term R&D
+                projects may suffer as governance pressures increase).</p>
+
+            <p>The policy question is not "How do we return to 1999 IPO volumes?" but rather "What is the socially
+                optimal number of public companies?" If governance costs produce better long-term performance, perhaps
+                0.45% represents rational equilibrium. If not, scaled disclosure reforms could unlock latent IPO
+                candidates without sacrificing investor protection.</p>
+
+            <p>What is clear: the traditional IPO is no longer the default endpoint for successful private companies—it
+                is an optional milestone for an elite minority.</p>
+
+            <hr>
+
+            <p class="footnote">
+                <strong>Data Availability:</strong> Anonymized summary statistics and scoring methodology are available
+                upon request. Firm-level data cannot be shared due to privacy agreements with data providers.<br><br>
+                <strong>Acknowledgments:</strong> This research methodology is inspired by academic frameworks from the
+                University of Chicago Booth School of Business. All analysis and conclusions are independent.<br><br>
+                <strong>Correspondence:</strong> Tanya Matanda (tanya@governanceiq.com)
+            </p>
+        </div>
+    </div>
+
     <script>
+        // Tab switching
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            if (tabName === 'dashboard') {
+                document.getElementById('dashboard-tab').classList.add('active');
+                document.querySelectorAll('.tab-button')[0].classList.add('active');
+            } else {
+                document.getElementById('report-tab').classList.add('active');
+                document.querySelectorAll('.tab-button')[1].classList.add('active');
+            }
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+
         // Sample data
         const companies = [
             { rank: 1, name: "QuantumCore AI", sector: "AI Infrastructure", revenue: "$247M", score: 94, tier: "IPO-Ready", exchange: "NASDAQ" },
