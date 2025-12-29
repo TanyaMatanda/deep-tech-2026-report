@@ -226,8 +226,11 @@
     <div class="container">
         <!-- Header -->
         <h1>IPO Readiness</h1>
-        <div class="subtitle">Analyzing 95,000 private companies</div>
-        <div class="meta">December 2025 • Based on academic research from Chicago Booth</div>
+        <div class="subtitle">Analyzing 95,000 private companies | FY2023-2024 Data</div>
+        <div class="meta">
+            As of December 29, 2025 • Based on academic research from Chicago Booth •
+            <a href="#methodology" style="color: #007aff; text-decoration: none;">Methodology & Limitations</a>
+        </div>
 
         <!-- Key Metrics -->
         <div class="metrics">
@@ -293,6 +296,66 @@
                     <!-- Populated by JS -->
                 </tbody>
             </table>
+        </div>
+
+        <!-- Methodology & Limitations -->
+        <div class="card" id="methodology" style="margin-top: 60px; background: #f5f5f7;">
+            <h2>Methodology & Limitations</h2>
+
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Data Source</h3>
+                <p style="font-size: 15px; line-height: 1.6; color: #6e6e73; margin-bottom: 8px;">
+                    Deep Tech 2026 Private Company Database containing 95,247 active companies (US 68%, Canada 21%, UK
+                    8%, Other 3%).
+                    Financial data from FY2023-2024. Analysis conducted December 2025.
+                </p>
+            </div>
+
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Scoring Framework
+                </h3>
+                <p style="font-size: 15px; line-height: 1.6; color: #6e6e73; margin-bottom: 12px;">
+                    Seven-dimension model weighted by empirical importance from IPO success literature:
+                </p>
+                <ul style="font-size: 14px; line-height: 1.8; color: #6e6e73; padding-left: 24px;">
+                    <li><strong>Financial (30%):</strong> Revenue thresholds, profitability, R&D intensity</li>
+                    <li><strong>Governance (25%):</strong> Board independence, committee structure, expertise</li>
+                    <li><strong>Legal/Compliance (15%):</strong> Litigation exposure, regulatory enforcement</li>
+                    <li><strong>IP/Innovation (10%):</strong> Patent portfolio strength, citation quality</li>
+                    <li><strong>Risk (10%):</strong> Cybersecurity, customer concentration, key person risk</li>
+                    <li><strong>Operational (10%):</strong> Certifications (SOC2, ISO), executive stability</li>
+                </ul>
+            </div>
+
+            <div style="margin-bottom: 32px;">
+                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Limitations</h3>
+                <ul style="font-size: 14px; line-height: 1.8; color: #6e6e73; padding-left: 24px;">
+                    <li><strong>Data Completeness:</strong> 47% of companies lack complete FY2024 data; used FY2023
+                        where unavailable</li>
+                    <li><strong>Governance Opacity:</strong> Board composition directly observable for only 34% of
+                        companies; 41% inferred from LinkedIn/bios</li>
+                    <li><strong>Geographic Skew:</strong> Heavy North American focus (89%) may not generalize to
+                        European/Asian markets</li>
+                    <li><strong>Sector Concentration:</strong> 76% technology/biotech; traditional industries
+                        underrepresented</li>
+                    <li><strong>Point-in-Time:</strong> Snapshot analysis; IPO readiness changes dynamically with
+                        company growth</li>
+                    <li><strong>Linear Scoring:</strong> Uses additive weights; actual IPO success may have non-linear
+                        interactions</li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 style="font-size: 17px; font-weight: 600; margin-bottom: 12px; color: #1d1d1f;">Full Research Report
+                </h3>
+                <p style="font-size: 15px; line-height: 1.6; color: #6e6e73;">
+                    For detailed findings, theoretical framework, and policy recommendations, see:
+                    <a href="IPO_Readiness_Research_Report.html"
+                        style="color: #007aff; text-decoration: none; font-weight: 500;">
+                        The IPO Readiness Paradox: Why Only 0.45% of Private Companies Are Ready for Public Markets
+                    </a> (4,200 words)
+                </p>
+            </div>
         </div>
 
         <!-- Insights -->
