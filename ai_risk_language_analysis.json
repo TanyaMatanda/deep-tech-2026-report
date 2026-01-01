@@ -1,0 +1,167 @@
+{
+  "analysis_date": "2026-01-01T12:33:48.602393",
+  "total_companies": 1876,
+  "ai_tech_companies": 40,
+  "summary": {
+    "cyber_disclosed_pct": 30.0,
+    "customer_concentration_pct": 5.4,
+    "litigation_pct": 2.0,
+    "mean_legal_score": 14.7,
+    "mean_risk_score": 9.8,
+    "mean_oper_score": 9.2,
+    "ai_cyber_disclosed_pct": 55.0,
+    "ai_customer_concentration_pct": 17.5
+  },
+  "company_details": [],
+  "recommendations": [
+    {
+      "category": "Cybersecurity",
+      "observation": "30% of companies include cybersecurity disclosures",
+      "implication": "AI companies should explicitly address AI-specific security risks (adversarial attacks, model poisoning)"
+    },
+    {
+      "category": "Customer Concentration",
+      "observation": "18% of AI/tech companies have customer concentration risk",
+      "implication": "AI companies often dependent on large enterprise customers - should quantify exposure"
+    },
+    {
+      "category": "Model Performance",
+      "observation": "Emerging disclosure area not captured in traditional risk frameworks",
+      "implication": "AI companies should proactively disclose model accuracy limitations, hallucination risks"
+    },
+    {
+      "category": "Training Data",
+      "observation": "IP litigation rising in AI sector",
+      "implication": "Disclose training data provenance, licensing arrangements, ongoing litigation exposure"
+    },
+    {
+      "category": "Regulatory",
+      "observation": "EU AI Act, state regulations creating compliance obligations",
+      "implication": "Quantify potential compliance costs, describe regulatory monitoring approach"
+    }
+  ],
+  "top_disclosed": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA CORP",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "MSFT",
+      "name": "MICROSOFT CORP",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "AMZN",
+      "name": "AMAZON COM INC",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "BRK-B",
+      "name": "BERKSHIRE HATHAWAY INC",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "LLY",
+      "name": "ELI LILLY & Co",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard Inc",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "JNJ",
+      "name": "JOHNSON & JOHNSON",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "HD",
+      "name": "HOME DEPOT, INC.",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    },
+    {
+      "ticker": "GE",
+      "name": "GENERAL ELECTRIC CO",
+      "legal_score": 15,
+      "risk_score": 10,
+      "oper_score": 10
+    }
+  ],
+  "most_responsive": [
+    {
+      "ticker": "ONDS",
+      "name": "Ondas Holdings Inc.",
+      "k8_filings": 76
+    },
+    {
+      "ticker": "FLUT",
+      "name": "Flutter Entertainment plc",
+      "k8_filings": 58
+    },
+    {
+      "ticker": "BMNR",
+      "name": "BITMINE IMMERSION TECHNOLOGIES, INC.",
+      "k8_filings": 54
+    },
+    {
+      "ticker": "QBTS",
+      "name": "D-Wave Quantum Inc.",
+      "k8_filings": 46
+    },
+    {
+      "ticker": "DJT",
+      "name": "Trump Media & Technology Group Corp.",
+      "k8_filings": 46
+    },
+    {
+      "ticker": "ARR",
+      "name": "Armour Residential REIT, Inc.",
+      "k8_filings": 42
+    },
+    {
+      "ticker": "GNL",
+      "name": "Global Net Lease, Inc.",
+      "k8_filings": 42
+    },
+    {
+      "ticker": "SMA",
+      "name": "SmartStop Self Storage REIT, Inc.",
+      "k8_filings": 41
+    },
+    {
+      "ticker": "SBET",
+      "name": "SharpLink Gaming, Inc.",
+      "k8_filings": 40
+    },
+    {
+      "ticker": "COF",
+      "name": "CAPITAL ONE FINANCIAL CORP",
+      "k8_filings": 34
+    }
+  ]
+}
