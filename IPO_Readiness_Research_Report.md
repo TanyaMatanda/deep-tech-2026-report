@@ -4,7 +4,7 @@
 
 **As of: December 29, 2025**
 
-**Author:** Tanya Matanda  
+**Author:** Research Team  
 **Data Source:** Deep Tech 2026 Company Database  
 **Analysis Period:** FY2023-2024 Financial Data
 
@@ -626,4 +626,4 @@ Anonymized summary statistics and scoring methodology are available upon request
 This research methodology is inspired by academic frameworks from the University of Chicago Booth School of Business. All analysis and conclusions are independent.
 
 **Correspondence:**  
-Tanya Matanda (tanya@governanceiq.com)
+Contact available upon request.
