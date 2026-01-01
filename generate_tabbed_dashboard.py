@@ -605,6 +605,9 @@ html_content = f'''<!DOCTYPE html>
                 <button class="tab-button" onclick="switchTab('paper')">
                     RESEARCH PAPER
                 </button>
+                <button class="tab-button" onclick="switchTab('downloads')">
+                    DOWNLOADS
+                </button>
             </div>
         </header>
 
@@ -819,6 +822,53 @@ html_content = f'''<!DOCTYPE html>
             <div class="paper-content" id="paper-rendered"></div>
         </div>
 
+        <div id="downloads-tab" class="tab-content">
+            <div class="paper-content">
+                <h2 style="text-align: center; margin-bottom: 1rem;">Downloads & Resources</h2>
+                <p style="text-align: center; color: #9ca3af; margin-bottom: 3rem;">
+                    <strong>Data As Of:</strong> December 31, 2025 | <strong>SEC EDGAR Full-Text Search</strong> | <strong>Filing Period:</strong> FY 2024-2025
+                </p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                    
+                    <div class="pattern-card" style="text-align: center;">
+                        <div class="pattern-name" style="font-size: 1.5rem;">📄 Research Paper</div>
+                        <p style="margin: 1.5rem 0;">Complete analysis with methodology, findings, cross-jurisdictional comparison, and sample S-1 disclosure templates.</p>
+                        <a href="S1_AI_Risk_Disclosure_Liability_Analysis.md" download style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; text-decoration: none; border-radius: 25px; font-weight: 600;">
+                            Download (Markdown)
+                        </a>
+                    </div>
+
+                    <div class="pattern-card" style="text-align: center;">
+                        <div class="pattern-name" style="font-size: 1.5rem;">📊 Key Findings Data</div>
+                        <p style="margin: 1.5rem 0;">Complete dataset of empirical findings, keyword frequencies, disclosure gaps, and cross-jurisdictional requirements.</p>
+                        <a href="140x_Problem_Key_Findings.csv" download style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #10b981, #059669); color: white; text-decoration: none; border-radius: 25px; font-weight: 600;">
+                            Download (CSV)
+                        </a>
+                    </div>
+
+                    <div class="pattern-card" style="text-align: center;">
+                        <div class="pattern-name" style="font-size: 1.5rem;">📚 References</div>
+                        <p style="margin: 1.5rem 0;">Chicago-style bibliography of all sources including regulatory frameworks, academic research, and litigation.</p>
+                        <a href="140x_Problem_References.md" download style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; text-decoration: none; border-radius: 25px; font-weight: 600;">
+                            Download (Markdown)
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="insight-box" style="margin-top: 4rem;">
+                    <div class="insight-title">DATA METHODOLOGY</div>
+                    <p><strong>Source:</strong> SEC EDGAR Full-Text Search API</p>
+                    <p><strong>Filing Type:</strong> Form 10-K (Annual Reports)</p>
+                    <p><strong>Section Analyzed:</strong> Item 1A (Risk Factors)</p>
+                    <p><strong>Total Companies:</strong> 1,876 (complete universe of available filings)</p>
+                    <p><strong>Analysis Date:</strong> December 2025</p>
+                    <p><strong>Keywords Tracked:</strong> 30+ AI-related terms across 7 risk categories</p>
+                </div>
+            </div>
+        </div>
+
         <footer>
             <p><strong>Prepared by:</strong> Tanya Matanda | <strong>Date:</strong> January 2026</p>
             <p style="margin-top: 0.75rem; font-size: 0.9rem;">Parametric analysis for informational purposes only.</p>
@@ -845,6 +895,9 @@ html_content = f'''<!DOCTYPE html>
                 if (document.getElementById('paper-rendered').innerHTML === '') {{
                     renderPaper();
                 }}
+            }} else if (tabName === 'downloads') {{
+                document.getElementById('downloads-tab').classList.add('active');
+                document.querySelector('[onclick*=\"downloads\"]').classList.add('active');
             }}
         }}
 
