@@ -145,17 +145,54 @@ The problem, of course, is that securities law doesn't care about your preferred
 
 ---
 
-### The Bottom Line: What the Data and Litigation History Suggest
+### The Bottom Line: Weighing the Disclosure Tradeoffs
 
-When we step back and look at the complete picture, a notable pattern emerges in the data. Companies are embracing AI terminology in their public disclosures—1,484 mentions of LLMs and generative AI, 3,249 mentions of AI and machine learning—while the specific risks that have historically attracted regulatory scrutiny and litigation receive comparatively little attention. Infrastructure dependencies are disclosed at high rates (58%). Generic AI terminology appears frequently (47%). But the distinctive risks that have been central to recent enforcement actions and lawsuits—hallucination, training data provenance, bias, regulatory compliance, model failure—appear in fewer than 10% of filings.
+The data presents a pattern that warrants careful analysis, but the question of *optimal* AI disclosure is more nuanced than simply "disclose more." Securities law, corporate governance literature, and judicial precedent suggest that disclosure decisions involve genuine tradeoffs that boards and disclosure committees must weigh thoughtfully.
 
-The data suggests what might be termed a disclosure asymmetry: companies may be emphasizing capabilities that support their competitive narrative while providing less detail on risks that present disclosure challenges. For S-1 filers, this pattern warrants careful consideration in light of evolving regulatory expectations and the litigation landscape.
+**The Case for Enhanced Disclosure**
 
-Historical precedent from securities litigation suggests that broad capability claims paired with generic risk disclosures can create exposure when specific risks materialize. Courts have generally looked more favorably on specific, tailored risk language than on boilerplate warnings. The pending AI-related IP litigation (*New York Times v. OpenAI*, *Getty Images v. Stability AI*) and emerging regulatory enforcement around "AI washing" suggest that this area is receiving increased attention.
+The litigation and regulatory landscape provides several reasons to consider more specific AI risk disclosure:
 
-Companies that proactively adopt comprehensive, specific AI risk disclosure—addressing model performance, training data provenance, bias testing, and regulatory compliance—may be better positioned to demonstrate good-faith governance if and when AI-related incidents occur. The current disclosure landscape, as reflected in our data, suggests an opportunity for differentiation.
+- **Materiality Arguments**: When specific risks materialize, courts examine whether reasonable investors would have considered the omitted information important. Generic "AI may have errors" language may not satisfy this standard when specific risks—hallucination, IP exposure, bias—were known and undisclosed. The *Omnicare* line of cases suggests that opinion statements may require disclosure of known contrary facts.
 
-The strategic question for boards and disclosure committees is whether to align with current industry norms or to anticipate where regulatory expectations and judicial standards may be heading.
+- **Safe Harbor Considerations**: The PSLRA's safe harbor for forward-looking statements requires "meaningful cautionary language." Courts have held that boilerplate warnings don't qualify. Specific, tailored risk disclosures are more likely to provide safe harbor protection.
+
+- **Regulatory Tailwinds**: The SEC's enforcement actions around "AI washing," combined with the EU AI Act's mandatory requirements, suggest regulatory expectations are tightening. Companies that anticipate this shift may face lower adjustment costs.
+
+**The Case for Disclosure Restraint**
+
+However, securities law and corporate governance doctrine also support measured disclosure:
+
+- **The Business Judgment Rule**: Directors are entitled to significant deference in disclosure decisions made in good faith with adequate information. *Caremark* and its progeny establish that the board's oversight duty does not require disclosure of every conceivable risk—only material risks assessed through reasonable processes. A board that thoughtfully considers AI risks and determines certain disclosures are not yet material is exercising business judgment.
+
+- **Competitive Harm**: Excessive disclosure can harm shareholders by revealing competitive intelligence to rivals. The literature on voluntary disclosure (*Dye, 1985*; *Verrecchia, 1983*) recognizes that proprietary costs may justify non-disclosure. AI capabilities, model architectures, and training methodologies may constitute trade secrets whose disclosure creates competitive disadvantage.
+
+- **Disclosure Overload**: Research suggests that excessive or undifferentiated disclosure can obscure material information and impair investor decision-making (*Paredes, 2003*). Generic AI risk language may serve as "safe harbor stuffing" without improving investor understanding.
+
+- **First-Mover Risk**: Companies that disclose aggressively while competitors remain silent may signal weakness or uncertainty. The economics of disclosure suggest some coordination problems—individual companies may rationally wait for industry standards to emerge.
+
+**What the Literature Suggests**
+
+The academic literature on disclosure is not unanimous about optimal levels:
+
+- *Mahoney (1995)* argues that mandatory disclosure solves agency problems, but notes that the marginal cost of disclosure must be weighed against marginal benefit
+- *Langevoort (2018)* emphasizes that disclosure decisions involve judgment calls that courts should not readily second-guess
+- *Coffee (2006)* documents how disclosure can become ritualized and pro forma, reducing its informational value
+- NIST's AI RMF acknowledges that risk communication must balance transparency with operational security and competitive considerations
+
+**A Framework for Boards**
+
+Rather than advocating for maximum or minimum disclosure, the data suggests boards should:
+
+1. **Document the Process**: The business judgment rule protects informed decisions. Boards that can demonstrate they considered AI-specific risks—even if they determined certain disclosures were not yet material—are better positioned than boards that never considered the question.
+
+2. **Monitor the Landscape**: Regulatory expectations and judicial standards evolve. The current disclosure gap may represent industry practice today but may not represent defensible practice in future litigation environments.
+
+3. **Match Disclosure to Claims**: Where companies make specific AI capability claims in business descriptions, corresponding risk disclosure creates structural symmetry that courts have looked upon favorably. The disclosure asymmetry our data reveals—many capability claims, few risk disclosures—may warrant attention.
+
+4. **Consider Jurisdictional Variation**: Companies operating under EU AI Act requirements may find it efficient to harmonize global disclosure rather than maintain different disclosure regimes.
+
+The strategic question is not whether to disclose, but how to calibrate disclosure to the company's specific risk profile, competitive position, regulatory exposure, and governance philosophy—while documenting the reasoning process that informed these judgments.
 
 
 ---
