@@ -2,8 +2,8 @@
 ## Actual 10-K Text Extraction Results
 
 **Analysis Date:** 2026-01-01
-**Companies Analyzed:** 1,876
-**Processing Time:** 867.9 seconds
+**Companies Analyzed:** 1,655
+**Processing Time:** 804.8 seconds
 
 ---
 
@@ -11,38 +11,43 @@
 
 ### AI Disclosure Rate
 
-- **654** companies (34.9%) include AI-related risk disclosures
-- **6,878** total AI-related keyword mentions across all filings
+- **620** companies (37.5%) include AI-related risk disclosures
+- **9,158** total AI-related keyword mentions across all filings
 
 ### Most Common AI Keywords in Risk Factors
 
 | Rank | Keyword | Mentions |
 |------|---------|----------|
-| 1 | compute | 1430 |
-| 2 | artificial intelligence | 1051 |
-| 3 | llm | 1038 |
-| 4 | data center | 799 |
-| 5 | machine learning | 456 |
-| 6 | generative ai | 446 |
-| 7 | automation | 335 |
-| 8 | algorithm | 312 |
-| 9 | bias | 214 |
-| 10 | autonomous | 173 |
-| 11 | ai model | 123 |
-| 12 | ai system | 91 |
-| 13 | robotics | 83 |
-| 14 | gpu | 67 |
-| 15 | nvidia | 56 |
+| 1 | sustainability | 1605 |
+| 2 | compute | 1257 |
+| 3 | artificial intelligence | 942 |
+| 4 | llm | 795 |
+| 5 | data center | 717 |
+| 6 | cyberattack | 638 |
+| 7 | machine learning | 422 |
+| 8 | misuse | 415 |
+| 9 | generative ai | 375 |
+| 10 | automation | 314 |
+| 11 | algorithm | 251 |
+| 12 | bias | 182 |
+| 13 | autonomous | 164 |
+| 14 | environmental impact | 155 |
+| 15 | ai model | 113 |
 
 ### Category Breakdown
 
 | Category | Total Mentions |
 |----------|----------------|
-| Core Ai | 3249 |
-| Ai Infra | 2375 |
-| Ai Tech | 945 |
-| Ai Risk | 261 |
-| Ai Regulation | 48 |
+| Core Ai | 2776 |
+| Ai Infra | 2121 |
+| Mit6 Environ | 1857 |
+| Mit4 Malicious | 1078 |
+| Ai Tech | 852 |
+| Ai Risk | 230 |
+| Mit5 Human | 92 |
+| Mit6 Socio | 63 |
+| Mit7 Safety | 46 |
+| Ai Regulation | 43 |
 
 ---
 
@@ -50,31 +55,31 @@
 
 | Ticker | Company | AI Mentions |
 |--------|---------|-------------|
-| IREN | IREN Ltd | 128 |
-| ONDS | Ondas Holdings Inc. | 107 |
-| NVDA | NVIDIA CORP | 89 |
-| CXM | Sprinklr, Inc. | 86 |
-| IONQ | IonQ, Inc. | 76 |
-| GCT | GigaCloud Technology Inc | 71 |
-| LMND | Lemonade, Inc. | 67 |
-| DOCN | DigitalOcean Holdings, Inc. | 58 |
-| AMBA | AMBARELLA INC | 53 |
-| RBRK | Rubrik, Inc. | 52 |
-| STX | Seagate Technology Holdings plc | 49 |
-| ZM | Zoom Communications, Inc. | 48 |
-| TEM | Tempus AI, Inc. | 48 |
+| IREN | IREN Ltd | 136 |
+| ONDS | Ondas Holdings Inc. | 110 |
+| NVDA | NVIDIA CORP | 104 |
+| CXM | Sprinklr, Inc. | 91 |
+| WK | WORKIVA INC | 82 |
+| IONQ | IonQ, Inc. | 78 |
+| BAM | Brookfield Asset Management Ltd. | 73 |
+| LMND | Lemonade, Inc. | 69 |
+| RBRK | Rubrik, Inc. | 64 |
+| DOCN | DigitalOcean Holdings, Inc. | 62 |
+| ZM | Zoom Communications, Inc. | 54 |
+| AMBA | AMBARELLA INC | 54 |
+| CRDO | Credo Technology Group Holding Ltd | 52 |
+| PATH | UiPath, Inc. | 52 |
+| STX | Seagate Technology Holdings plc | 50 |
+| TEM | Tempus AI, Inc. | 49 |
+| KBR | KBR, INC. | 49 |
+| LYFT | Lyft, Inc. | 48 |
+| CHWY | Chewy, Inc. | 47 |
 | UPST | Upstart Holdings, Inc. | 47 |
-| CHWY | Chewy, Inc. | 45 |
-| PATH | UiPath, Inc. | 44 |
-| PEGA | PEGASYSTEMS INC | 43 |
-| AKAM | AKAMAI TECHNOLOGIES INC | 41 |
-| CLSK | CLEANSPARK, INC. | 41 |
-| CART | Maplebear Inc. | 40 |
-| APPN | APPIAN CORP | 40 |
-| QUBT | Quantum Computing Inc. | 40 |
-| FIGS | FIGS, Inc. | 40 |
-| UBER | Uber Technologies, Inc | 39 |
-| SYM | Symbotic Inc. | 38 |
+| UBER | Uber Technologies, Inc | 46 |
+| NDAQ | NASDAQ, INC. | 45 |
+| AKAM | AKAMAI TECHNOLOGIES INC | 44 |
+| CART | Maplebear Inc. | 44 |
+| PEGA | PEGASYSTEMS INC | 44 |
 
 ---
 
@@ -96,29 +101,29 @@
 
 > &#8226; We use artificial intelligence in our products, which may result in operational challenges, legal liability, reputational concerns and competitive risks...
 
+### WK (WORKIVA INC)
+
+> &#8226; In the second half of 2024, Workiva launched enhancements to the core platform powering our solutions including linking entire tables to keep data and layout changes in sync, sharable content libraries to streamline data reuse across organizations, and generative artificial intelligence (&#8...
+
 ### IONQ (IonQ, Inc.)
 
 > Additionally, Sensitive Data could be leaked, disclosed or revealed as a result of or in connection with our employees', contractors', consultants', affiliates', or vendors' use of generative artificial intelligence (&#8220;AI&#8221;) technologies...
 
-### GCT (GigaCloud Technology Inc)
+### BAM (Brookfield Asset Management Lt)
 
-> &#8226; We may not be successful in optimizing our fulfillment centers and fulfillment network...
+> Integrity, fairness and respect are hallmarks of our culture, including carrying out our activities by respecting fundamental human rights and our efforts to identify and prevent human rights violations within our business and supply chain...
 
 ### LMND (Lemonade, Inc.)
 
 > Many factors affect our ability to pay claims accurately and timely, including the efficacy of our artificial intelligence claims processing, the training and experience of our claims adjusters, including our third-party claims administrators, and our ability to develop or select and implement appro...
 
-### DOCN (DigitalOcean Holdings, Inc.)
-
-> It is difficult to predict customer adoption rates and demand for our products and services, the entry of competitive products or services or the future growth rate and size of the Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS) and Software-as-a-Service (SaaS), and artificial intel...
-
-### AMBA (AMBARELLA INC)
-
-> &#8226; Uncertain risks relating to the adoption, use or application of emerging technologies, including artificial intelligence, by our customers and in our business, could adversely impact our financial results and result in reputational harm and liability...
-
 ### RBRK (Rubrik, Inc.)
 
 > , &#8220;deep fakes,&#8221; which may be increasingly difficult to identify), malware (including as a result of advanced persistent threat intrusions), denial-of-service attacks, credential stuffing attacks, credential harvesting, personnel misconduct or error, other inadvertent compromises of our s...
+
+### DOCN (DigitalOcean Holdings, Inc.)
+
+> It is difficult to predict customer adoption rates and demand for our products and services, the entry of competitive products or services or the future growth rate and size of the Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS) and Software-as-a-Service (SaaS), and artificial intel...
 
 
 ---

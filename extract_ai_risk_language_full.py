@@ -16,7 +16,7 @@ import concurrent.futures
 # SEC EDGAR User Agent (required)
 HEADERS = {'User-Agent': 'GovernanceIQ Research tanya@governanceiq.com'}
 
-# AI-related keywords to search for
+# AI-related keywords to search for (including MIT Risk Repository categories)
 AI_KEYWORDS = {
     'core_ai': ['artificial intelligence', 'machine learning', 'deep learning', 'neural network', 
                 'generative ai', 'large language model', 'llm', 'ai model', 'ai system'],
@@ -25,7 +25,21 @@ AI_KEYWORDS = {
     'ai_risk': ['hallucination', 'model accuracy', 'bias', 'ai regulation', 'ai governance',
                 'ai safety', 'responsible ai', 'explainability', 'ai ethics'],
     'ai_infra': ['gpu', 'nvidia', 'training data', 'compute', 'data center'],
-    'ai_regulation': ['eu ai act', 'ai legislation', 'ai compliance', 'algorithmic accountability']
+    'ai_regulation': ['eu ai act', 'ai legislation', 'ai compliance', 'algorithmic accountability'],
+    # MIT 4: Malicious Actors & Misuse
+    'mit4_malicious': ['adversarial', 'jailbreak', 'prompt injection', 'misuse', 'dual-use', 
+                       'weaponiz', 'cyberattack'],
+    # MIT 5: Human-Computer Interaction
+    'mit5_human': ['automation bias', 'human oversight', 'overreliance', 'over-reliance',
+                   'human-in-the-loop', 'manipulation', 'disinformation', 'misinformation'],
+    # MIT 6: Socioeconomic & Environmental
+    'mit6_socio': ['job displacement', 'workforce displacement', 'labor disruption', 
+                   'power concentration', 'monopol'],
+    'mit6_environ': ['carbon footprint', 'energy consumption', 'environmental impact', 
+                     'data center energy', 'sustainability'],
+    # MIT 7: AI Safety & Alignment
+    'mit7_safety': ['ai alignment', 'goal misalignment', 'misalignment', 'agentic', 
+                    'ai agent', 'emergent behavior', 'uncontrollable']
 }
 
 def get_10k_filing_url(cik: str) -> dict:
@@ -245,6 +259,28 @@ def main():
         if r.get('sample_sentences'):
             print(f"    Sample: \"{r['sample_sentences'][0][:100]}...\"")
     
+    # Save FULL company-level CSV for reproducibility
+    csv_data = []
+    for r in results:
+        csv_row = {
+            'ticker': r.get('ticker', ''),
+            'name': r.get('name', ''),
+            'status': r.get('status', ''),
+            'has_ai_disclosure': r.get('has_ai_disclosure', False),
+            'total_ai_mentions': r.get('total_ai_mentions', 0),
+        }
+        # Add category counts as columns
+        for cat in AI_KEYWORDS.keys():
+            csv_row[f'cat_{cat}'] = r.get('category_counts', {}).get(cat, 0)
+        # Add top keyword counts
+        for kw, count in r.get('top_keywords', {}).items():
+            csv_row[f'kw_{kw.replace(" ", "_")}'] = count
+        csv_data.append(csv_row)
+    
+    csv_df = pd.DataFrame(csv_data)
+    csv_df.to_csv('140x_Problem_Company_Level_Data.csv', index=False)
+    print(f"\n✓ Company-level CSV saved to 140x_Problem_Company_Level_Data.csv ({len(csv_df)} companies)")
+    
     # Save detailed results
     output = {
         'analysis_date': datetime.now().isoformat(),
@@ -252,7 +288,7 @@ def main():
         'companies_with_ai_disclosure': companies_with_ai,
         'ai_disclosure_rate': round(companies_with_ai/analyzed*100, 1) if analyzed > 0 else 0,
         'total_ai_mentions': total_ai_mentions,
-        'top_keywords': dict(keyword_totals.most_common(50)),
+        'top_keywords': dict(keyword_totals.most_common(100)),  # Expanded to 100
         'category_breakdown': dict(category_totals),
         'top_disclosing_companies': [
             {
@@ -268,7 +304,7 @@ def main():
     
     with open('ai_risk_language_detailed.json', 'w') as f:
         json.dump(output, f, indent=2)
-    print(f"\n✓ Detailed results saved to ai_risk_language_detailed.json")
+    print(f"✓ Detailed results saved to ai_risk_language_detailed.json")
     
     # Generate markdown report
     report = f"""# AI Risk Factor Language Analysis
