@@ -1,27 +1,25 @@
-# The AI Disclosure Gap: What 1,876 SEC Filings Reveal About Emerging Liability Risks
-## Why Current S-1 Risk Factor Language May Not Protect You
+# The AI Disclosure Gap: What 1,876 SEC Filings Reveal About Your Competitive Vulnerability
+## Why Most Companies Are Advertising AI Capabilities While Hiding AI Risks—And What It Means for Boards
 
-*An Analysis for General Counsel, Securities Attorneys & Board Directors*
+*An Analysis for Directors, Investors & Corporate Stakeholders*
 
 ---
 
-## I. What is an S-1—And Why It Matters for AI Liability
+## I. Why This Matters: The Board's Fiduciary Duty in the AI Era
 
-### The S-1 as Legal Shield
+### When Innovation Meets Oversight
 
-An S-1 registration statement is the primary disclosure document filed with the SEC when a company goes public. Item 1A—the "Risk Factors" section—serves a dual purpose:
+When a company goes public, its S-1 registration statement serves as both a marketing document and a legal contract with investors. Item 1A—the "Risk Factors" section—is where companies must disclose material risks that could affect their business. But here's what makes this critical for boards and investors: adequate risk disclosure isn't just about SEC compliance. It's about whether the company is being honest with itself about the risks it's taking.
 
-1. **Information provision**: Inform investors of material risks
-2. **Liability protection**: Establish a safe harbor under the Private Securities Litigation Reform Act (PSLRA)
+For AI companies in 2026, we've identified a massive gap between the risks these companies actually face and what they're telling investors. This gap represents three distinct problems:
 
-**The Doctrine**: If you adequately disclose a risk in your S-1, subsequent losses arising from that risk are less likely to result in successful securities fraud claims. Courts apply the "bespeaks caution" doctrine—specific, meaningful warnings can negate allegations of misleading statements.
+**For directors**: You face potential breach of fiduciary duty if material AI risks aren't disclosed. When those risks materialize—and they will—shareholders will ask why the board allowed inadequate disclosure.
 
-**The Problem**: For AI companies in 2026, there is a **massive gap** between:
-- The risks AI companies actually face
-- The risks currently disclosed in public company filings
-- The risks academic and regulatory frameworks identify as material
+**For investors**: You're making investment decisions based on incomplete information. Companies are showcasing AI as a competitive advantage while systematically concealing AI-specific risks.
 
-This gap creates **liability exposure** that most IPO candidates are not addressing.
+**For stakeholders**: The companies you rely on—as customers, partners, or regulators—may be taking undisclosed AI risks that could cascade into your operations.
+
+The disclosure practices we've uncovered suggest that most companies aren't just failing to meet SEC requirements. They're failing to exercise basic governance over their AI deployments. And that creates both strategic and reputational risk that no legal disclaimer can fix.
 
 ---
 
@@ -29,7 +27,7 @@ This gap creates **liability exposure** that most IPO candidates are not address
 
 We extracted and analyzed the actual Item 1A (Risk Factors) text from every available 10-K filing in the SEC EDGAR database—1,876 companies total, representing the complete universe of available public company disclosure data. Using automated text extraction, we scanned for more than thirty AI-related keywords across five risk categories, ultimately identifying 6,878 total AI-related mentions across 654 companies.
 
-What we found should alarm every General Counsel preparing an S-1 for an AI company. The data reveals a systematic pattern: companies are advertising their use of cutting-edge AI technology while systematically failing to disclose the most material risks associated with that technology. The gap between what companies say about AI in their business descriptions and what they disclose in their risk factors represents a ticking time bomb for securities liability.
+What we found should concern every board director, investor, and stakeholder evaluating AI companies. The data reveals a systematic pattern: companies are advertising their use of cutting-edge AI technology while systematically failing to disclose the most material risks associated with that technology. The gap between what companies say about AI in their business descriptions and what they disclose in their risk factors represents both a governance failure and a competitive vulnerability that will separate winners from losers as AI regulation and enforcement mature.
 
 ---
 
