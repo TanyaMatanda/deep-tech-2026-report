@@ -1,5 +1,5 @@
-# The AI Disclosure Gap: What 1,876 SEC Filings Reveal About Your Competitive Vulnerability
-## Why Most Companies Are Advertising AI Capabilities While Hiding AI Risks—And What It Means for Boards
+# The 140x Problem: Why AI Companies Disclose Infrastructure Risks 140 Times More Than Model Risks
+## An Empirical Analysis of 1,876 SEC Filings and What It Means for Boards
 
 *An Analysis for Directors, Investors & Corporate Stakeholders*
 
