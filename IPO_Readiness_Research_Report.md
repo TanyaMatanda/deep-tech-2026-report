@@ -109,17 +109,12 @@ We developed a seven-dimension scoring model based on NYSE, NASDAQ, and TSX list
 #### Dimension 3: Legal & Compliance (15% weight)
 - **Litigation exposure**: No material active litigation = 10 points; graduated deductions
 - **Regulatory enforcement**: Clean record = 5 points
-- **IP protection**: Patent portfolio strength (see Dimension 5)
 
 #### Dimension 4: Operational Infrastructure (10% weight)
 - **Certifications**: SOC 2 Type II, ISO 27001 = 5 points each
 - **Executive stability**: No C-suite turnover in prior 12 months = 5 points
 
-#### Dimension 5: IP & Innovation (10% weight)
-- **Patent portfolio**: 100+ active patents = 10 points (graduated scale)
-- **Citation quality**: Weighted by forward citations
-
-#### Dimension 6: Risk Mitigation (10% weight)
+#### Dimension 5: Risk Mitigation (10% weight)
 - **Cybersecurity**: No breaches in 36 months = 4 points
 - **Customer concentration**: Top customer <25% of revenue = 3 points
 - **Key person risk**: Documented succession plans = 3 points

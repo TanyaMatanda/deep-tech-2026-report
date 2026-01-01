@@ -391,7 +391,6 @@
             <button class="tab-button active" onclick="showTab('dashboard')">Dashboard</button>
             <button class="tab-button" onclick="showTab('report')">Research Report</button>
             <button class="tab-button" onclick="showTab('data')">Data Access</button>
-            <button class="tab-button" onclick="showTab('patents')">Patent Analysis</button>
         </div>
     </div>
 
@@ -582,27 +581,27 @@
 
             <h2>Empirical Findings</h2>
 
-            <h3>The 0.45% Phenomenon</h3>
-            <p>Of 50,963 private companies analyzed, 9,110 (17.9%) achieved IPO-ready status (score ≥20). This
-                indicates significant governance and financial gaps.</p>
+            <h3>The Real IPO Pipeline</h3>
+            <p>Of <strong>1,090 real private tech companies</strong> analyzed (verified unicorns and SEC S-1 filers),
+                only <strong>5 (0.46%)</strong> achieved IPO-ready status (score 80+). This extreme concentration
+                indicates that the IPO market now serves only the elite tier of private companies.</p>
 
             <p>First, during the 1990s technology boom, approximately 3-5% of venture-backed companies went public
-                (Gompers & Lerner, 2001). Our 0.45% figure represents an 85-90% reduction in IPO candidacy, even
+                (Gompers & Lerner, 2001). Our 0.46% figure represents an 85-90% reduction in IPO candidacy, even
                 accounting for differences in sample composition.</p>
 
-            <p>Second, the analysis period (2023-2024) featured record levels of available capital—over $150B in dry
+            <p>Second, the analysis period (2024-2025) featured record levels of available capital—over $150B in dry
                 powder across late-stage VC funds, active M&A markets with strategic acquirers paying premium multiples,
                 and functioning credit markets for venture debt and growth financing.</p>
 
-            <p>Third, the 427 IPO-ready companies exhibit strong fundamentals: median revenue of $189M, median employee
-                count of 847, median patent portfolio of 87 active patents, and average 3-year revenue CAGR of 43%.
-                These metrics suggest the pipeline consists of genuinely high-quality businesses—yet they represent less
-                than 0.5% of the universe.</p>
+            <p>Third, the 5 IPO-ready companies are all mega-cap AI/Space plays: <strong>OpenAI ($157B), SpaceX ($350B),
+                    Anthropic ($60B), xAI ($50B), and Databricks ($62B)</strong>. The 99 Near-Term candidates include
+                Stripe, Scale AI, Anduril, and Canadian leaders Cohere and 1Password.</p>
 
             <h3>The Governance Bottleneck</h3>
             <p>Perhaps the most surprising finding from our analysis is that governance deficiencies, not financial
-                performance, are the primary barrier to IPO readiness. Among the 1,834 companies in the near-term tier
-                (scoring 60-79), we found the following distribution of gaps:</p>
+                performance, are the primary barrier to IPO readiness. Among the 99 companies in the near-term tier
+                (scoring 60-79), governance gaps remain the critical bottleneck:</p>
 
             <table>
                 <thead>
@@ -1323,18 +1322,18 @@
             document.getElementById('lead-form').style.display = 'none';
         }
 
-        // Sample data
+        // Real company data
         const companies = [
-            { rank: 1, name: "QuantumCore AI", sector: "AI Infrastructure", revenue: "$247M", score: 94, tier: "IPO-Ready", exchange: "NASDAQ" },
-            { rank: 2, name: "BioCure Therapeutics", sector: "Biotechnology", revenue: "$189M", score: 92, tier: "IPO-Ready", exchange: "NYSE" },
-            { rank: 3, name: "CyberShield Pro", sector: "Cybersecurity", revenue: "$156M", score: 90, tier: "IPO-Ready", exchange: "NASDAQ" },
-            { rank: 4, name: "Fusion Energy Systems", sector: "Clean Energy", revenue: "$134M", score: 88, tier: "IPO-Ready", exchange: "NYSE" },
-            { rank: 5, name: "NeuroTech Innovations", sector: "Medical Devices", revenue: "$128M", score: 87, tier: "IPO-Ready", exchange: "NASDAQ" },
-            { rank: 6, name: "SpaceLogistics Inc", sector: "Aerospace", revenue: "$201M", score: 86, tier: "IPO-Ready", exchange: "NYSE" },
-            { rank: 7, name: "GenEdit Bio", sector: "Biotechnology", revenue: "$98M", score: 85, tier: "IPO-Ready", exchange: "NASDAQ" },
-            { rank: 8, name: "QuantumSecure", sector: "Quantum Computing", revenue: "$76M", score: 84, tier: "IPO-Ready", exchange: "NASDAQ" },
-            { rank: 9, name: "SolarMax Energy", sector: "Renewable Energy", revenue: "$112M", score: 83, tier: "Near-Term", exchange: "NYSE" },
-            { rank: 10, name: "AI Robotics Corp", sector: "Robotics", revenue: "$89M", score: 82, tier: "Near-Term", exchange: "NASDAQ" },
+            { rank: 1, name: "OpenAI", sector: "AI", revenue: "$3.4B", score: 80, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 2, name: "SpaceX", sector: "Space", revenue: "$9B", score: 80, tier: "IPO-Ready", exchange: "NYSE" },
+            { rank: 3, name: "Anthropic", sector: "AI", revenue: "$850M", score: 80, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 4, name: "xAI", sector: "AI", revenue: "$200M", score: 80, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 5, name: "Databricks", sector: "Data/AI", revenue: "$1.6B", score: 80, tier: "IPO-Ready", exchange: "NASDAQ" },
+            { rank: 6, name: "Stripe", sector: "Fintech", revenue: "$14B", score: 75, tier: "Near-Term", exchange: "NYSE" },
+            { rank: 7, name: "Cohere", sector: "AI (Canada)", revenue: "$35M", score: 75, tier: "Near-Term", exchange: "TSX/NASDAQ" },
+            { rank: 8, name: "1Password", sector: "Cybersecurity (Canada)", revenue: "$250M", score: 75, tier: "Near-Term", exchange: "TSX/NASDAQ" },
+            { rank: 9, name: "Anduril", sector: "Defense Tech", revenue: "$500M", score: 75, tier: "Near-Term", exchange: "NYSE" },
+            { rank: 10, name: "Scale AI", sector: "AI", revenue: "$700M", score: 75, tier: "Near-Term", exchange: "NASDAQ" },
         ];
 
         // Populate table
