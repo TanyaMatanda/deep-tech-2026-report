@@ -484,15 +484,41 @@ The SPAC backlash has made traditional IPOs a *quality signal*, not merely a fin
 
 **The Future of IPO Markets:**
 
-We project that the 0.45% readiness rate is an *equilibrium*, not a temporary trough. Absent regulatory reform or private capital market disruption, the IPO market will permanently serve only the top 0.5% of private companies. This has profound implications:
+We project that the current readiness concentration is an *equilibrium*, not a temporary trough. The IPO market has **bifurcated into three tiers**:
 
-- **For investors:** Winner-take-all dynamics intensify as fewer exit opportunities concentrate value
-- **For employees:** Equity compensation loses liquidity value, requiring cash-heavy packages
-- **For innovation:** Long-term R&D projects may suffer as governance pressures increase
+1. **Mega-cap AI ($50B+):** Will IPO when they choose, not when they need capital
+2. **Mid-cap growth ($5-30B):** Stuck in purgatory—too big for M&A, too small for mega-IPO
+3. **Small-cap S-1 filers ($50-500M):** Active but ignored by media and institutions
 
-The policy question is not "How do we return to 1999 IPO volumes?" but rather "What is the socially optimal number of public companies?" If governance costs produce better long-term performance (debatable), perhaps 0.45% represents rational equilibrium. If not, scaled disclosure reforms could unlock latent IPO candidates without sacrificing investor protection.
+---
 
-What is clear: **The traditional IPO is no longer the default endpoint for successful private companies**—it is an optional milestone for an elite minority.
+## VIII. Implications by Investor Group
+
+### Venture Capital (Series A-C)
+The path to IPO exit now requires ~$50B+ valuation, extending timelines to 10+ years. Traditional 7-10 year fund cycles are mismatched. VCs must increasingly rely on **secondary sales** rather than IPO exits. The 99 Near-Term companies represent the realistic pipeline—but need 2-3 more funding rounds.
+
+### Late-Stage / Growth Equity (Series D+)
+The 5 IPO-Ready companies are at $50B+ valuations—entry is expensive, upside compressed. The arbitrage opportunity is in the **75-79 score band** (Stripe, Cohere, 1Password). These companies need governance upgrades, not capital. **Advisory value-add exceeds capital deployment** as differentiation.
+
+### Pension Funds / Sovereign Wealth
+Mandates to deploy $500M+ checks limit the universe to ~20 companies globally. Secondary market purchases of OpenAI, SpaceX, Stripe are the play. **Governance demands become leverage**—push for board representation. Canadian pension funds (CPPIB, OTPP) should prioritize Cohere and 1Password.
+
+### Family Offices
+The 99 Near-Term companies are too small for institutions, too large for angels—creating a sweet spot. Target **$1-5B valuation companies** (Ada, Sanctuary AI, FreshBooks). Canadian family offices have asymmetric access to Wealthsimple, Hopper, Clio. Governance expertise is differentiating.
+
+### Retail Investors
+Zero access to IPO-Ready companies until post-IPO. The S-1 filers (42 companies) are the only entry point—QumulusAI, Virtuix, Deep Fission at $50-200M valuations. **High-risk, high-volatility**. Alternative: secondary platforms (Forge, EquityZen).
+
+### Corporate M&A / Strategic Buyers
+Near-Term companies (60-79 score) that don't IPO become acquisition targets. M&A opportunity in **60-69 score band**—companies realizing they can't make the IPO cut. Deep tech acquirers (NVIDIA, Microsoft, Google) should watch Cerebras, SambaNova, Graphcore. Canadian strategics should evaluate Ada, Clio, FreshBooks.
+
+---
+
+## IX. Conclusion
+
+This analysis of **1,090 real private tech companies** reveals extreme concentration at the top. Only 5 companies qualify as IPO-Ready (80+): OpenAI, SpaceX, Anthropic, xAI, and Databricks. 99 companies are Near-Term candidates (60-79), with Canadian leaders Cohere, 1Password, Dapper Labs, and Wealthsimple prominent.
+
+**The traditional IPO is no longer the default endpoint for successful private companies**—it is an optional milestone for an elite minority. The real opportunity lies in providing governance expertise and strategic value to the mid-cap tier, where capital alone no longer differentiates.
 
 ---
 
