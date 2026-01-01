@@ -145,17 +145,17 @@ The problem, of course, is that securities law doesn't care about your preferred
 
 ---
 
-### The Bottom Line: Advertising Capabilities, Hiding Risks
+### The Bottom Line: What the Data and Litigation History Suggest
 
-When we step back and look at the complete picture, a pattern emerges with remarkable clarity. Companies are enthusiastically adopting AI terminology in their public disclosures—1,484 mentions of LLMs and generative AI, 3,249 mentions of AI and machine learning—while systematically avoiding disclosure of AI-specific risks. Infrastructure gets disclosed at high rates (58%). Generic AI terminology gets mentioned frequently (47%). But the distinctive risks most likely to result in liability—hallucination, training data provenance, bias, regulatory compliance, model failure—barely register.
+When we step back and look at the complete picture, a notable pattern emerges in the data. Companies are embracing AI terminology in their public disclosures—1,484 mentions of LLMs and generative AI, 3,249 mentions of AI and machine learning—while the specific risks that have historically attracted regulatory scrutiny and litigation receive comparatively little attention. Infrastructure dependencies are disclosed at high rates (58%). Generic AI terminology appears frequently (47%). But the distinctive risks that have been central to recent enforcement actions and lawsuits—hallucination, training data provenance, bias, regulatory compliance, model failure—appear in fewer than 10% of filings.
 
-This is the disclosure inversion: companies are advertising what makes them look innovative while hiding what makes them vulnerable. For S-1 filers in 2026, this pattern represents more than just inadequate disclosure. It represents a strategic mistake that could haunt you for years.
+The data suggests what might be termed a disclosure asymmetry: companies may be emphasizing capabilities that support their competitive narrative while providing less detail on risks that present disclosure challenges. For S-1 filers, this pattern warrants careful consideration in light of evolving regulatory expectations and the litigation landscape.
 
-You cannot claim AI as a competitive advantage in your business description while providing only generic risk disclosure in Item 1A. You cannot tell investors "We're at the forefront of LLM technology" without also telling them "LLMs can hallucinate, and we face IP litigation risk from our training data." You cannot say "AI powers our decision-making" without disclosing "our AI may exhibit bias that could violate anti-discrimination law."
+Historical precedent from securities litigation suggests that broad capability claims paired with generic risk disclosures can create exposure when specific risks materialize. Courts have generally looked more favorably on specific, tailored risk language than on boilerplate warnings. The pending AI-related IP litigation (*New York Times v. OpenAI*, *Getty Images v. Stability AI*) and emerging regulatory enforcement around "AI washing" suggest that this area is receiving increased attention.
 
-The companies that figure this out first—that provide comprehensive, specific, substantive AI risk disclosure even when it's uncomfortable—will have the strongest legal position when the inevitable wave of AI-related litigation and enforcement arrives. The companies that follow the current inadequate  disclosure norms will be defending securities fraud claims with generic risk factors that courts will likely find insufficient.
+Companies that proactively adopt comprehensive, specific AI risk disclosure—addressing model performance, training data provenance, bias testing, and regulatory compliance—may be better positioned to demonstrate good-faith governance if and when AI-related incidents occur. The current disclosure landscape, as reflected in our data, suggests an opportunity for differentiation.
 
-The choice is yours. Lead with meaningful disclosure now, or defend inadequate disclosure later.
+The strategic question for boards and disclosure committees is whether to align with current industry norms or to anticipate where regulatory expectations and judicial standards may be heading.
 
 
 ---
