@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate enhanced AI Disclosure Gap Dashboard with tabbed interface"""
+"""Generate Zaha Hadid-inspired AI Disclosure Gap Dashboard with flowing, organic design"""
 
 import json
 
@@ -15,7 +15,7 @@ html_content = f'''<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The AI Disclosure Gap: Analysis & Research</title>
+    <title>The AI Disclosure Gap: Parametric Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
@@ -26,81 +26,157 @@ html_content = f'''<!DOCTYPE html>
         }}
 
         body {{
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: #2d3748;
+            font-family: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
             line-height: 1.6;
+            overflow-x: hidden;
+        }}
+
+        /* Zaha Hadid Principle: Flowing background with parametric curves */
+        body::before {{
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            animation: flow 30s ease-in-out infinite;
+            z-index: -1;
+        }}
+
+        @keyframes flow {{
+            0%, 100% {{ transform: translate(0, 0) rotate(0deg); }}
+            33% {{ transform: translate(5%, 10%) rotate(1deg); }}
+            66% {{ transform: translate(-5%, -10%) rotate(-1deg); }}
         }}
 
         .container {{
-            max-width: 1600px;
-            margin: 2rem auto;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            overflow: hidden;
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
         }}
 
+        /* Zaha Hadid Principle: Asymmetric, flowing header */
         header {{
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
-            color: white;
-            padding: 3rem 2rem 1rem;
-            text-align: center;
+            position: relative;
+            padding: 4rem 3rem;
+            margin: 2rem 0 4rem;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+            transform: skewY(-1deg);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+        }}
+
+        header::before {{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(120deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            opacity: 0;
+            animation: shine 8s ease-in-out infinite;
+        }}
+
+        @keyframes shine {{
+            0%, 100% {{ opacity: 0; transform: translateX(-100%); }}
+            50% {{ opacity: 1; transform: translateX(100%); }}
+        }}
+
+        header > * {{
+            transform: skewY(1deg);
         }}
 
         h1 {{
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.05em;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            margin-bottom: 1rem;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }}
 
         .subtitle {{
-            font-size: 1.25rem;
-            color: #cbd5e0;
-            margin-bottom: 1.5rem;
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            color: #a0aec0;
+            font-weight: 300;
+            letter-spacing: 0.05em;
         }}
 
-        /* Tab Navigation */
+        /* Zaha Hadid Principle: Fluid tab navigation with curves */
         .tab-nav {{
             display: flex;
-            gap: 0;
-            background: rgba(0, 0, 0, 0.2);
+            gap: 2rem;
             padding: 0;
-            margin-top: 2rem;
+            margin: 3rem 0 0;
+            position: relative;
         }}
 
         .tab-button {{
             flex: 1;
-            padding: 1.25rem 2rem;
+            padding: 1.5rem 2.5rem;
             background: transparent;
-            color: #cbd5e0;
+            color: #718096;
             border: none;
             cursor: pointer;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 600;
-            transition: all 0.3s ease;
+            letter-spacing: 0.05em;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            clip-path: polygon(5% 0%, 95% 0%, 100% 100%, 0% 100%);
+        }}
+
+        .tab-button::before {{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
         }}
 
         .tab-button:hover {{
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+            color: #e2e8f0;
+            transform: translateY(-2px);
+        }}
+
+        .tab-button:hover::before {{
+            opacity: 1;
         }}
 
         .tab-button.active {{
-            background: white;
-            color: #1a202c;
+            color: #ffffff;
+            clip-path: polygon(3% 0%, 97% 0%, 100% 100%, 0% 100%);
+        }}
+
+        .tab-button.active::before {{
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.3), rgba(139, 92, 246, 0.3));
+            opacity: 1;
         }}
 
         .tab-button.active::after {{
             content: '';
             position: absolute;
             bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            left: 5%;
+            right: 5%;
+            height: 3px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
         }}
 
         .tab-content {{
@@ -109,269 +185,409 @@ html_content = f'''<!DOCTYPE html>
 
         .tab-content.active {{
             display: block;
+            animation: fadeSlideIn 0.6s cubic-bezier(0.4, 0, 0.2, 1);
         }}
 
-        /* Dashboard styles */
+        @keyframes fadeSlideIn {{
+            from {{ opacity: 0; transform: translateY(20px); }}
+            to {{ opacity: 1; transform: translateY(0); }}
+        }}
+
+        /* Zaha Hadid Principle: Asymmetric stat cards with skewed forms */
         .stats-banner {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            padding: 3rem 2rem;
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding: 4rem 2rem;
+            margin: -2rem 0 4rem;
+            position: relative;
         }}
 
         .stat-card {{
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 1.75rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            text-align: center;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, rgba(26, 32, 46, 0.8), rgba(31, 41, 55, 0.6));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+            transform-origin: center;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }}
+
+        .stat-card::before {{
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(99, 102, 241, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: transform 0.6s ease;
+        }}
+
+        .stat-card:hover {{
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(139, 92, 246, 0.3);
+            box-shadow: 
+                0 25px 50px -12px rgba(139, 92, 246, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }}
+
+        .stat-card:hover::before {{
+            transform: rotate(45deg) translateX(50%);
         }}
 
         .stat-number {{
-            font-size: 2.75rem;
-            font-weight: 700;
-            color: #fff;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #fff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
         }}
 
         .stat-label {{
-            font-size: 0.95rem;
-            color: #cbd5e0;
-            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: #9ca3af;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }}
 
         .content {{
-            padding: 3rem 2rem;
+            padding: 2rem;
         }}
 
         .section {{
-            margin-bottom: 4rem;
+            margin-bottom: 6rem;
+            position: relative;
         }}
 
         h2 {{
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            color: #1a202c;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #ffffff 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
         }}
 
         h3 {{
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 2rem 0 1rem;
-            color: #2d3748;
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 3rem 0 1.5rem;
+            color: #e2e8f0;
         }}
 
+        p {{
+            color: #cbd5e0;
+            line-height: 1.8;
+        }}
+
+        /* Zaha Hadid Principle: Curved, flowing insight boxes */
         .insight-box {{
-            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            border-left: 4px solid #667eea;
-            padding: 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 8px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-left: 4px solid #8b5cf6;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 30px 30px 0;
+            clip-path: polygon(0 0, 100% 0, 98% 100%, 0 100%);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.1);
+            transition: all 0.4s ease;
+        }}
+
+        .insight-box:hover {{
+            transform: translateX(5px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.2);
         }}
 
         .insight-title {{
             font-weight: 700;
-            color: #667eea;
-            margin-bottom: 0.5rem;
+            color: #a78bfa;
+            margin-bottom: 0.75rem;
+            font-size: 1.1rem;
+            letter-spacing: 0.05em;
         }}
 
+        /* Zaha Hadid Principle: Dynamic, asymmetric chart containers */
         .chart-container {{
             position: relative;
-            height: 400px;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            height: 450px;
+            margin: 3rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(26, 32, 46, 0.6), rgba(31, 41, 55, 0.4));
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 40px;
+            clip-path: polygon(2% 0%, 98% 0%, 100% 98%, 0% 100%);
+            box-shadow: 
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }}
 
+        .chart-container::before {{
+            content: '';
+             position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), transparent);
+            pointer-events: none;
+        }}
+
+        .chart-container:hover {{
+            transform: translateY(-5px);
+            box-shadow: 
+                0 35px 60px -12px rgba(139, 92, 246, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }}
+
+        /* Zaha Hadid Principle: Flowing table design */
         .comparison-table {{
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            margin: 2rem 0;
-            border-radius: 12px;
+            margin: 3rem 0;
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            background: rgba(26, 32, 46, 0.6);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
         }}
 
         .comparison-table thead {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
         }}
 
         .comparison-table th {{
-            padding: 1rem;
+            padding: 1.5rem;
             text-align: left;
-            font-weight: 600;
+            font-weight: 700;
+            color: #a78bfa;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-size: 0.9rem;
         }}
 
         .comparison-table td {{
-            padding: 1rem;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #cbd5e0;
+        }}
+
+        .comparison-table tbody tr {{
+            transition: all 0.3s ease;
         }}
 
         .comparison-table tbody tr:hover {{
-            background: #f7fafc;
+            background: rgba(139, 92, 246, 0.1);
+            transform: translateX(5px);
         }}
 
         .badge {{
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.875rem;
-            font-weight: 600;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
         }}
 
         .badge-critical {{
-            background: #fed7d7;
-            color: #c53030;
+            background: rgba(239, 68, 68, 0.2);
+            color: #fca5a5;
+            border: 1px solid rgba(239, 68, 68, 0.3);
         }}
 
         .badge-warning {{
-            background: #feebc8;
-            color: #c05621;
+            background: rgba(245, 158, 11, 0.2);
+            color: #fcd34d;
+            border: 1px solid rgba(245, 158, 11, 0.3);
         }}
 
         .badge-good {{
-            background: #c6f6d5;
-            color: #276749;
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.3);
         }}
 
+        /* Zaha Hadid Principle: Asymmetric pattern cards */
         .pattern-card {{
-            background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            margin: 1.5rem 0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            border-top: 4px solid #667eea;
+            background: linear-gradient(135deg, rgba(26, 32, 46, 0.8), rgba(31, 41, 55, 0.6));
+            backdrop-filter: blur(20px);
+            padding: 3rem;
+            margin: 2rem 0;
+            clip-path: polygon(3% 0%, 100% 0%, 97% 100%, 0% 100%);
+            border-left: 4px solid #8b5cf6;
+            box-shadow: 
+                0 20px 40px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }}
+
+        .pattern-card::before {{
+            content: '';
+            position: absolute;
+            top: -100%;
+            right: -100%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+            transition: transform 0.8s ease;
+        }}
+
+        .pattern-card:hover {{
+            transform: translateX(10px) scale(1.01);
+            border-left-color: #ec4899;
+            box-shadow: 
+                0 30px 60px rgba(139, 92, 246, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+        }}
+
+        .pattern-card:hover::before {{
+            transform: translate(-50%, -50%);
         }}
 
         .pattern-name {{
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #667eea;
-            margin-bottom: 0.5rem;
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #a78bfa 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
         }}
 
         .pattern-stat {{
-            font-size: 3rem;
-            font-weight: 800;
-            color: #1a202c;
-            margin: 1rem 0;
+            font-size: 4rem;
+            font-weight: 900;
+            color: #fff;
+            margin: 1.5rem 0;
+            text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
         }}
 
-        /* Paper Tab Styles */
+        /* Paper tab styling */
         .paper-content {{
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 3rem 2rem;
-            line-height: 1.8;
+            padding: 4rem 3rem;
+            line-height: 1.9;
         }}
 
         .paper-content h1 {{
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            color: #1a202c;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }}
 
         .paper-content h2 {{
-            font-size: 2rem;
-            margin: 3rem 0 1rem;
-            color: #2d3748;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #e2e8f0;
+            font-size: 2.25rem;
+            margin: 4rem 0 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(139, 92, 246, 0.3);
         }}
 
         .paper-content h3 {{
-            font-size: 1.5rem;
-            margin: 2rem 0 1rem;
-            color: #4a5568;
+            font-size: 1.75rem;
+            margin: 3rem 0 1.5rem;
         }}
 
         .paper-content p {{
-            margin: 1rem 0;
-            color: #2d3748;
+            margin: 1.5rem 0;
         }}
 
         .paper-content strong {{
-            color: #1a202c;
+            color: #e2e8f0;
             font-weight: 600;
         }}
 
         .paper-content table {{
             width: 100%;
-            margin: 2rem 0;
+            margin: 3rem 0;
             border-collapse: collapse;
+            background: rgba(26, 32, 46, 0.4);
+            border-radius: 20px;
+            overflow: hidden;
         }}
 
         .paper-content table th {{
-            background: #f7fafc;
-            padding: 0.75rem;
+            background: rgba(31, 41, 55, 0.8);
+            padding: 1rem;
             text-align: left;
             font-weight: 600;
-            border-bottom: 2px solid #e2e8f0;
+            border-bottom: 2px solid rgba(139, 92, 246, 0.3);
+            color: #a78bfa;
         }}
 
         .paper-content table td {{
-            padding: 0.75rem;
-            border-bottom: 1px solid #e2e8f0;
-        }}
-
-        .paper-content blockquote {{
-            border-left: 4px solid #667eea;
-            padding-left: 1.5rem;
-            margin: 1.5rem 0;
-            color: #4a5568;
-            font-style: italic;
+            padding: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }}
 
         .paper-content ul, .paper-content ol {{
-  margin-left: 2rem;
-            margin: 1rem 0;
+            margin-left: 2rem;
+            margin: 1.5rem 0;
         }}
 
         .paper-content li {{
-            margin: 0.5rem 0;
+            margin: 0.75rem 0;
         }}
 
         .paper-content hr {{
             border: none;
-            border-top: 2px solid #e2e8f0;
-            margin: 3rem 0;
+            border-top: 2px solid rgba(139, 92, 246, 0.2);
+            margin: 4rem 0;
         }}
 
         footer {{
-            background: #1a202c;
-            color: #cbd5e0;
-            padding: 2rem;
+            background: linear-gradient(135deg, #111827 0%, #1f2937 100%);
+            color: #9ca3af;
+            padding: 3rem 2rem;
             text-align: center;
+            margin-top: 6rem;
+            clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
         }}
 
         .grid-2 {{
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
         }}
 
         @media (max-width: 768px) {{
-            h1 {{
-                font-size: 1.75rem;
+            header {{
+                clip-path: polygon(0 0, 100% 0, 98% 100%, 2% 100%);
             }}
-            
+
             .grid-2 {{
                 grid-template-columns: 1fr;
             }}
             
             .chart-container {{
-                height: 300px;
+                height: 350px;
             }}
 
             .paper-content {{
-                padding: 2rem 1rem;
+                padding: 2rem 1.5rem;
+            }}
+
+            .stat-card {{
+                clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
             }}
         }}
     </style>
@@ -380,14 +596,14 @@ html_content = f'''<!DOCTYPE html>
     <div class="container">
         <header>
             <h1>The AI Disclosure Gap</h1>
-            <div class="subtitle">Empirical Analysis of 1,876 SEC Filings & Board Governance Implications</div>
+            <div class="subtitle">Parametric Analysis of 1,876 SEC Filings</div>
             
             <div class="tab-nav">
                 <button class="tab-button active" onclick="switchTab('dashboard')">
-                    📊 Interactive Dashboard
+                    INTERACTIVE DATA
                 </button>
                 <button class="tab-button" onclick="switchTab('paper')">
-                    📄 Full Research Paper
+                    RESEARCH PAPER
                 </button>
             </div>
         </header>
@@ -415,7 +631,7 @@ html_content = f'''<!DOCTYPE html>
             <div class="content">
                 <div class="section">
                     <h2>Executive Findings</h2>
-                    <p style="font-size: 1.125rem; color: #4a5568; margin-bottom: 2rem;">
+                    <p style="font-size: 1.2rem; margin-bottom: 3rem;">
                         We extracted and analyzed every available SEC 10-K Item 1A (Risk Factors) filing—1,876 companies total—and discovered a systematic pattern: companies are advertising AI capabilities while concealing AI-specific risks.
                     </p>
 
@@ -457,7 +673,7 @@ html_content = f'''<!DOCTYPE html>
                     </div>
 
                     <div class="insight-box">
-                        <div class="insight-title">Key Insight</div>
+                        <div class="insight-title">KEY INSIGHT</div>
                         <p>Companies are comfortable disclosing risks they don't control (supply chain, vendors) while remaining silent on risks they do control but can't eliminate (model performance, training data, bias).</p>
                     </div>
                 </div>
@@ -522,7 +738,7 @@ html_content = f'''<!DOCTYPE html>
 
                 <div class="section">
                     <h2>Keyword Frequency Analysis</h2>
-                    <div class="chart-container" style="height: 500px;">
+                    <div class="chart-container" style="height: 550px;">
                         <canvas id="keywordChart"></canvas>
                     </div>
                 </div>
@@ -534,7 +750,7 @@ html_content = f'''<!DOCTYPE html>
                     </div>
 
                     <div class="insight-box">
-                        <div class="insight-title">Quality vs Quantity</div>
+                        <div class="insight-title">QUALITY VS QUANTITY</div>
                         <p>63% of companies mentioning AI provide only minimal disclosure (≤5 mentions). Only 2.3% (15 companies) provide comprehensive disclosure (50+ mentions).</p>
                     </div>
                 </div>
@@ -599,14 +815,13 @@ html_content = f'''<!DOCTYPE html>
 
         <footer>
             <p><strong>Prepared by:</strong> Tanya Matanda | <strong>Date:</strong> January 2026</p>
-            <p style="margin-top: 0.5rem; font-size: 0.875rem;">This analysis is provided for informational purposes only.</p>
+            <p style="margin-top: 0.75rem; font-size: 0.9rem;">Parametric analysis for informational purposes only.</p>
         </footer>
     </div>
 
     <script>
         // Tab switching
         function switchTab(tabName) {{
-            // Hide all tabs
             document.querySelectorAll('.tab-content').forEach(tab => {{
                 tab.classList.remove('active');
             }});
@@ -614,7 +829,6 @@ html_content = f'''<!DOCTYPE html>
                 btn.classList.remove('active');
             }});
 
-            // Show selected tab
             if (tabName === 'dashboard') {{
                 document.getElementById('dashboard-tab').classList.add('active');
                 document.querySelector('[onclick*="dashboard"]').classList.add('active');
@@ -622,27 +836,59 @@ html_content = f'''<!DOCTYPE html>
                 document.getElementById('paper-tab').classList.add('active');
                 document.querySelector('[onclick*="paper"]').classList.add('active');
                 
-                // Render markdown if not already rendered
                 if (document.getElementById('paper-rendered').innerHTML === '') {{
                     renderPaper();
                 }}
             }}
         }}
 
-        // Render the full paper
         function renderPaper() {{
             const paperMarkdown = {paper_escaped};
             const rendered = marked.parse(paperMarkdown);
             document.getElementById('paper-rendered').innerHTML = rendered;
         }}
 
-        // Initialize charts (only when dashboard tab is active)
         window.addEventListener('load', function() {{
             initializeCharts();
         }});
 
         function initializeCharts() {{
-            // Disclosure by Risk Category Chart
+            // Custom Zaha Hadid-inspired chart colors
+            const primaryGradient = ['#6366f1', '#8b5cf6', '#a855f7', '#c026d3', '#d946ef', '#ec4899', '#f43f5e', '#ef4444'];
+            const chartDefaults = {{
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {{
+                    legend: {{
+                        labels: {{
+                            color: '#e2e8f0',
+                            font: {{
+                                size: 12,
+                                weight: '600'
+                            }}
+                        }}
+                    }},
+                    title: {{
+                        color: '#a78bfa',
+                        font: {{
+                            size: 16,
+                            weight: '700'
+                        }}
+                    }}
+                }},
+                scales: {{
+                    x: {{
+                        ticks: {{ color: '#9ca3af' }},
+                        grid: {{ color: 'rgba(255, 255, 255, 0.05)' }}
+                    }},
+                    y: {{
+                        ticks: {{ color: '#9ca3af' }},
+                        grid: {{ color: 'rgba(255, 255, 255, 0.05)' }}
+                    }}
+                }}
+            }};
+
+            // Disclosure Chart
             const disclosureCtx = document.getElementById('disclosureChart').getContext('2d');
             new Chart(disclosureCtx, {{
                 type: 'bar',
@@ -651,51 +897,39 @@ html_content = f'''<!DOCTYPE html>
                     datasets: [{{
                         label: '% of AI Disclosers',
                         data: [58, 47, 41, 25, 9, 7, 0.9, 0.5],
-                        backgroundColor: [
-                            'rgba(102, 126, 234, 0.8)',
-                            'rgba(118, 75, 162, 0.8)',
-                            'rgba(237, 100, 166, 0.8)',
-                            'rgba(255, 159, 28, 0.8)',
-                            'rgba(255, 107, 107, 0.8)',
-                            'rgba(252, 92, 101, 0.8)',
-                            'rgba(240, 52, 52, 0.8)',
-                            'rgba(220, 38, 38, 0.8)'
-                        ],
-                        borderColor: 'rgba(255, 255, 255, 1)',
-                        borderWidth: 2
+                        backgroundColor: primaryGradient,
+                        borderColor: primaryGradient.map(c => c + 'ff'),
+                        borderWidth: 2,
+                        borderRadius: 8
                     }}]
                 }},
                 options: {{
-                    responsive: true,
-                    maintainAspectRatio: false,
+                    ...chartDefaults,
                     plugins: {{
-                        legend: {{
-                            display: false
-                        }},
+                        ...chartDefaults.plugins,
+                        legend: {{ display: false }},
                         title: {{
                             display: true,
                             text: 'What Companies Are Disclosing (% of 654 AI Disclosers)',
-                            font: {{
-                                size: 16,
-                                weight: 'bold'
-                            }}
+                            ...chartDefaults.plugins.title
                         }}
                     }},
                     scales: {{
+                        ...chartDefaults.scales,
                         y: {{
+                            ...chartDefaults.scales.y,
                             beginAtZero: true,
                             max: 100,
                             ticks: {{
-                                callback: function(value) {{
-                                    return value + '%';
-                                }}
+                                ...chartDefaults.scales.y.ticks,
+                                callback: function(value) {{ return value + '%'; }}
                             }}
                         }}
                     }}
                 }}
             }});
 
-            // Infrastructure vs Model Risk Charts
+            // Infrastructure Chart
             const infraCtx = document.getElementById('infrastructureChart').getContext('2d');
             new Chart(infraCtx, {{
                 type: 'doughnut',
@@ -703,31 +937,26 @@ html_content = f'''<!DOCTYPE html>
                     labels: ['Infrastructure Mentions', 'Other'],
                     datasets: [{{
                         data: [2375, 4503],
-                        backgroundColor: [
-                            'rgba(102, 126, 234, 0.8)',
-                            'rgba(226, 232, 240, 0.8)'
-                        ]
+                        backgroundColor: ['#6366f1', 'rgba(255, 255, 255, 0.1)'],
+                        borderColor: ['#8b5cf6', 'rgba(255, 255, 255, 0.2)'],
+                        borderWidth: 2
                     }}]
                 }},
                 options: {{
-                    responsive: true,
-                    maintainAspectRatio: false,
+                    ...chartDefaults,
                     plugins: {{
-                        legend: {{
-                            position: 'bottom'
-                        }},
+                        ...chartDefaults.plugins,
+                        legend: {{ position: 'bottom', labels: chartDefaults.plugins.legend.labels }},
                         title: {{
                             display: true,
                             text: 'Infrastructure Risk Mentions (2,375)',
-                            font: {{
-                                size: 14,
-                                weight: 'bold'
-                            }}
+                            ...chartDefaults.plugins.title
                         }}
                     }}
                 }}
             }});
 
+            // Model Risk Chart
             const modelCtx = document.getElementById('modelRiskChart').getContext('2d');
             new Chart(modelCtx, {{
                 type: 'doughnut',
@@ -735,32 +964,26 @@ html_content = f'''<!DOCTYPE html>
                     labels: ['Model Performance Mentions', 'Other'],
                     datasets: [{{
                         data: [17, 6861],
-                        backgroundColor: [
-                            'rgba(252, 92, 101, 0.8)',
-                            'rgba(226, 232, 240, 0.8)'
-                        ]
+                        backgroundColor: ['#ec4899', 'rgba(255, 255, 255, 0.1)'],
+                        borderColor: ['#f43f5e', 'rgba(255, 255, 255, 0.2)'],
+                        borderWidth: 2
                     }}]
                 }},
                 options: {{
-                    responsive: true,
-                    maintainAspectRatio: false,
+                    ...chartDefaults,
                     plugins: {{
-                        legend: {{
-                            position: 'bottom'
-                        }},
+                        ...chartDefaults.plugins,
+                        legend: {{ position: 'bottom', labels: chartDefaults.plugins.legend.labels }},
                         title: {{
                             display: true,
                             text: 'Model Performance Risk Mentions (<17)',
-                            font: {{
-                                size: 14,
-                                weight: 'bold'
-                            }}
+                            ...chartDefaults.plugins.title
                         }}
                     }}
                 }}
             }});
 
-            // Keyword Frequency Chart
+            // Keyword Chart
             const keywordCtx = document.getElementById('keywordChart').getContext('2d');
             new Chart(keywordCtx, {{
                 type: 'bar',
@@ -769,37 +992,28 @@ html_content = f'''<!DOCTYPE html>
                     datasets: [{{
                         label: 'Total Mentions',
                         data: [1430, 1051, 1038, 799, 456, 446, 335, 312, 214, 173, 123, 91, 67, 56, 46],
-                        backgroundColor: 'rgba(102, 126, 234, 0.8)',
-                        borderColor: 'rgba(102, 126, 234, 1)',
-                        borderWidth: 2
+                        backgroundColor: '#8b5cf6',
+                        borderColor: '#a78bfa',
+                        borderWidth: 2,
+                        borderRadius: 6
                     }}]
                 }},
                 options: {{
+                    ...chartDefaults,
                     indexAxis: 'y',
-                    responsive: true,
-                    maintainAspectRatio: false,
                     plugins: {{
-                        legend: {{
-                            display: false
-                        }},
+                        ...chartDefaults.plugins,
+                        legend: {{ display: false }},
                         title: {{
                             display: true,
                             text: 'Top 15 AI Keywords in Risk Factors (Total Mentions)',
-                            font: {{
-                                size: 16,
-                                weight: 'bold'
-                            }}
-                        }}
-                    }},
-                    scales: {{
-                        x: {{
-                            beginAtZero: true
+                            ...chartDefaults.plugins.title
                         }}
                     }}
                 }}
             }});
 
-            // Disclosure Depth Chart
+            // Depth Chart
             const depthCtx = document.getElementById('depthChart').getContext('2d');
             new Chart(depthCtx, {{
                 type: 'pie',
@@ -807,28 +1021,20 @@ html_content = f'''<!DOCTYPE html>
                     labels: ['1-5 mentions (Minimal)', '6-20 mentions (Moderate)', '21-50 mentions (Substantial)', '50+ mentions (Comprehensive)'],
                     datasets: [{{
                         data: [63, 28.9, 5.8, 2.3],
-                        backgroundColor: [
-                            'rgba(252, 92, 101, 0.8)',
-                            'rgba(255, 159, 28, 0.8)',
-                            'rgba(118, 75, 162, 0.8)',
-                            'rgba(102, 126, 234, 0.8)'
-                        ]
+                        backgroundColor: ['#ef4444', '#f59e0b', '#8b5cf6', '#6366f1'],
+                        borderColor: ['#f87171', '#fbbf24', '#a78bfa', '#818cf8'],
+                        borderWidth: 2
                     }}]
                 }},
                 options: {{
-                    responsive: true,
-                    maintainAspectRatio: false,
+                    ...chartDefaults,
                     plugins: {{
-                        legend: {{
-                            position: 'bottom'
-                        }},
+                        ...chartDefaults.plugins,
+                        legend: {{ position: 'bottom', labels: chartDefaults.plugins.legend.labels }},
                         title: {{
                             display: true,
                             text: 'AI Disclosure Depth Distribution (% of 654 Companies)',
-                            font: {{
-                                size: 16,
-                                weight: 'bold'
-                            }}
+                            ...chartDefaults.plugins.title
                         }}
                     }}
                 }}
@@ -843,5 +1049,12 @@ html_content = f'''<!DOCTYPE html>
 with open('AI_Disclosure_Gap_Dashboard.html', 'w') as f:
     f.write(html_content)
 
-print("Enhanced dashboard with tabs created successfully!")
+print("Zaha Hadid-inspired dashboard created successfully!")
 print("File: AI_Disclosure_Gap_Dashboard.html")
+print("\nDesign principles applied:")
+print("✓ Fluid, organic forms with parametric curves")
+print("✓ Asymmetric layouts and diagonal flows")
+print("✓ Dynamic hover effects and transitions")
+print("✓ Dramatic shadows and depth")
+print("✓ Futuristic dark aesthetic")
+print("✓ Bold contrasts and flowing gradients")

@@ -3,6 +3,8 @@
 
 *An Analysis for Directors, Investors & Corporate Stakeholders*
 
+📊 **[View Interactive Dashboard](https://tanyamatanda.github.io/deep-tech-2026-report/AI_Disclosure_Gap_Dashboard.html)** | Explore the data with dynamic visualizations and charts
+
 ---
 
 ## Executive Summary: The Disclosure Inversion
@@ -471,9 +473,155 @@ If your ML engineers can tell you:
 
 ---
 
-## Appendix: Sample Language by Risk Category
+## Appendix: Sample S-1 Disclosure Language by Risk Category
 
-[This section would include the 5 sample disclosure templates from the previous report]
+The following sample language templates provide specific, substantive disclosure examples for the five most critical AI risk categories identified in our empirical analysis. These templates are designed to satisfy both SEC materiality requirements and best-practice standards from EU AI Act, NIST AI RMF, and academic frameworks.
+
+---
+
+### 1. Model Performance & Reliability Risks
+
+**Context**: For companies whose products or services rely on AI model outputs for core functionality.
+
+**Sample Disclosure**:
+
+> **Our AI Models May Produce Inaccurate, Incomplete, or Harmful Outputs That Could Result in Liability, Reputational Damage, and Loss of Customer Trust**
+>
+> Our platform relies on large language models and machine learning algorithms to [describe core use case: generate content, make recommendations, automate decisions, etc.]. These AI systems, including both proprietary models we have developed and third-party models we license, are inherently probabilistic and may produce outputs that are factually incorrect, incomplete, nonsensical, biased, offensive, or otherwise harmful.
+>
+> **Hallucination and Factual Errors**: Large language models can generate plausible-sounding but factually incorrect information—a phenomenon known as "hallucination." Despite our testing and quality assurance processes, our models may hallucinate [specific examples relevant to your use case: medical information, legal advice, financial data, product specifications]. If users rely on hallucinated outputs for important decisions, we could face product liability claims, professional malpractice allegations, or regulatory enforcement.
+>
+> **Model Accuracy Limitations**: Our models achieve approximately [X]% accuracy in production environments based on our internal testing. However, model performance degrades when confronted with edge cases, adversarial inputs, out-of-distribution data, or novel scenarios not represented in training data. We cannot guarantee that our models will perform at stated accuracy levels for all users, use cases, or time periods. Material declines in model accuracy could lead to customer churn, contract terminations, and revenue loss.
+>
+> **Reliability and Availability**: AI model inference depends on complex technical infrastructure including GPUs, specialized software, and cloud services. Model latency, downtime, or degraded performance due to infrastructure failures could render our products unusable, triggering service level agreement breaches and financial penalties.
+>
+> **Remediation Costs**: If significant model performance issues emerge post-deployment, remediation may require model retraining, architecture changes, or deployment rollbacks at substantial cost. We estimate that complete model retraining could cost between $[X]M and $[Y]M and require [Z] months, during which product quality and customer satisfaction would be materially impaired.
+>
+> **Insurance Limitations**: Our existing product liability and errors & omissions insurance may not adequately cover claims arising from AI-generated outputs, particularly novel theories of liability related to hallucination, bias, or automated decision-making. We may face uninsured losses or be unable to obtain adequate insurance at commercially reasonable rates.
+
+---
+
+### 2. Training Data & Intellectual Property Risk
+
+**Context**: For companies developing proprietary AI models trained on large-scale data, particularly scraped web content or licensed datasets.
+
+**Sample Disclosure**:
+
+> **Our AI Models Are Trained on Large Datasets That May Include Copyrighted, Proprietary, or Personally Identifiable Information, Exposing Us to Intellectual Property Litigation and Regulatory Enforcement**
+>
+> **Training Data Sources and Provenance**: Our AI models are trained on datasets comprising [describe: billions of web pages, licensed content, user-generated content, proprietary data]. A substantial portion of this training data was obtained through automated web scraping, data licensing agreements, or user uploads. We cannot verify that all training data was obtained with proper authorization, that all licensing terms were complied with, or that all copyrighted material was used in accordance with fair use or other legal exceptions.
+>
+> **Intellectual Property Litigation Risk**: Publishers, content creators, and rights holders have filed lawsuits against AI companies alleging that training AI models on copyrighted works constitutes copyright infringement. Notable pending cases include *New York Times v. OpenAI*, *Getty Images v. Stability AI*, and class actions by the Authors Guild. These cases assert theories of direct infringement, vicarious liability, removal of copyright management information, and violation of terms of service. Adverse rulings in these or similar cases could:
+>
+> - Result in statutory damages potentially reaching billions of dollars
+> - Require us to pay ongoing licensing fees to rights holders, fundamentally changing our cost structure
+> - Compel us to retrain models using only licensed or public domain data, which we estimate would cost $[X]M-[Y]M and require [Z] months
+> - Force removal of products from the market, representing [%] of current revenue
+> - Create precedent that makes our business model legally untenable
+>
+> **Fair Use Uncertainty**: We believe our use of copyrighted training data constitutes fair use under U.S. copyright law based on the transformative nature of machine learning and the non-expressive use of training data. However, no court has definitively ruled on this issue in the context of generative AI. If courts reject the fair use defense for AI training, our business model would require fundamental restructuring.
+>
+> **International IP Exposure**: Copyright and data protection laws vary by jurisdiction. The EU Copyright Directive includes text and data mining exceptions with opt-out provisions. Japan permits AI training on copyrighted works without authorization. The UK is considering similar exceptions. Our training practices may comply with law in some jurisdictions while violating law in others, creating complex cross-border liability exposure.
+>
+> **Model Outputs May Reproduce Protected Content**: Despite technical measures to prevent verbatim reproduction of training data, our models may occasionally generate outputs that substantially reproduce copyrighted works, trademarked content, or proprietary information. Such outputs could trigger direct infringement liability and expose us to injunctive relief, damages, and reputational harm.
+>
+> **Data Deletion and Right to Be Forgotten**: Individuals whose personal information or creative works appear in our training data may demand deletion under GDPR, CCPA, or other data protection laws. Model "unlearning"—removing specific data points from trained models without complete retraining—remains technically immature. We may be unable to comply with deletion requests without prohibitively expensive retraining.
+
+---
+
+### 3. Regulatory Compliance & Cross-Jurisdictional Risk
+
+**Context**: For companies operating AI systems in multiple jurisdictions, particularly those subject to EU AI Act, sectoral regulations, or emerging AI-specific laws.
+
+**Sample Disclosure**:
+
+> **We Are Subject to Rapidly Evolving and Inconsistent AI Regulations Across Multiple Jurisdictions, and Compliance Failures Could Result in Substantial Fines, Operational Restrictions, and Competitive Disadvantage**
+>
+> **EU AI Act Compliance**: The European Union's Artificial Intelligence Act became law in 2024 and imposes risk-based requirements on AI systems deployed in EU markets. Our [describe systems: customer-facing chatbot, automated underwriting system, biometric identification tool] are classified as "high-risk" under the Act, triggering requirements for:
+>
+> - Conformity assessment and CE marking before deployment
+> - Ongoing bias and fairness testing with documented methodologies
+> - Human oversight mechanisms with specified intervention capabilities
+> - Detailed technical documentation and record-keeping
+> - Incident reporting to national authorities within defined timeframes
+> - Transparency obligations requiring disclosure of AI use to affected individuals
+>
+> We estimate that achieving full EU AI Act compliance will cost $[X]M-[Y]M over the next [Z] months and require ongoing annual compliance costs of $[A]M-[B]M. We are not currently fully compliant with all requirements. Non-compliance could result in fines up to €30 million or 6% of annual global revenue, whichever is higher, as well as orders to cease deployment of non-compliant systems in EU markets representing [%] of revenue.
+>
+> **Extraterritorial Regulatory Reach**: The EU AI Act applies to any provider placing AI systems on the EU market, regardless of where the provider is established. We cannot avoid EU AI Act requirements by incorporating outside the EU or maintaining EU operations through intermediaries. Similarly, other jurisdictions including China, the UK, and Canada are implementing AI regulations with extraterritorial reach.
+>
+> **U.S. Sectoral Regulation**: While the U.S. lacks comprehensive AI legislation, our AI systems are subject to sector-specific regulations including:
+>
+> - **Equal Credit Opportunity Act (ECOA) and Fair Lending**: Our AI-powered credit decisioning may violate fair lending laws if models exhibit disparate impact on protected classes. We have not completed disparate impact testing.
+> - **Fair Credit Reporting Act (FCRA)**: If our AI models constitute "consumer reports," we face FCRA compliance obligations including accuracy requirements, adverse action notices, and consumer rights to dispute.
+> - **Employment Law**: AI-assisted hiring tools may violate Title VII, EEOC guidance, or state laws (including New York City Local Law 144) requiring bias audits and notice.
+> - **Health Insurance Portability and Accountability Act (HIPAA)**: AI processing of protected health information must comply with HIPAA privacy and security requirements.
+>
+> **State AI Legislation**: California, Colorado, Connecticut, and other states have enacted or are considering AI-specific disclosure, testing, and liability requirements. Multi-state compliance creates complexity and may require jurisdiction-specific model versions.
+>
+> **China Algorithmic Regulation**: Our AI systems deployed in China must register with the Cyberspace Administration of China and comply with algorithmic recommendation regulations requiring disclosure of algorithm characteristics, data usage, and social impact assessments. We currently operate in China without full algorithmic registration, creating enforcement risk.
+>
+> **Regulatory Uncertainty**: AI regulation is evolving rapidly with inconsistent requirements across jurisdictions. We may face conflicting legal obligations (e.g., EU requirements for algorithm transparency vs. U.S. trade secret protection). Compliance costs may escalate as regulations mature. New regulations may render our current business model impractical or prohibited in key markets.
+
+---
+
+### 4. Infrastructure Dependencies & Third-Party Risk
+
+**Context**: For companies relying on specialized AI infrastructure providers (cloud compute, GPU access, model APIs).
+
+**Sample Disclosure**:
+
+> **Our Business Depends on Continued Access to Specialized AI Infrastructure and Third-Party Model Providers, and Loss of Access Could Materially Disrupt Our Operations**
+>
+> **GPU and Compute Dependencies**: Training and deploying our AI models requires access to specialized graphics processing units (GPUs), particularly NVIDIA H100 and A100 chips, which are in limited global supply. We currently:
+>
+> - Depend on [cloud provider] for [%] of our compute capacity, creating single-vendor concentration risk
+> - Face GPU allocation limits that constrain our ability to scale model capacity to meet customer demand
+> - Pay spot-market prices for compute that have ranged from $[X] to $[Y] per GPU-hour, creating financial volatility
+> - Compete for GPU access with well-capitalized competitors who may outbid us for constrained resources
+>
+> If our cloud provider experiences outages, capacity constraints, or chooses to prioritize other customers, we may be unable to serve our customers, process inference requests, or train improved models. Alternative GPU providers have months-long waitlists and require advance commitments we cannot afford.
+>
+> **Third-Party Model Dependencies**: We license foundational AI models from [provider: OpenAI, Anthropic, Google, etc.] via API for [describe use case]. These dependencies create multiple risks:
+>
+> - **Service Discontinuation**: Our third-party provider may discontinue API access, modify pricing to uneconomical levels, or impose usage restrictions that prevent our use case.
+> - **Model Changes**: Providers may update models in ways that degrade performance for our specific application, require prompt re-engineering, or introduce unwanted behaviors.
+> - **Competitive Conflicts**: Our model provider may enter our market as a competitor or provide superior access to our competitors.
+> - **Data Privacy**: Sending customer data to third-party model APIs creates privacy and confidentiality risks, particularly for regulated industries.
+> - **Compliance Attribution**: We remain legally responsible for outputs generated by third-party models, but cannot control model behavior, training data, or bias characteristics.
+>
+> **Vendor Lock-In and Switching Costs**: Migrating from one model provider or cloud infrastructure platform to another requires substantial re-engineering, retraining, and customer migration. We estimate that switching costs would range from $[X]M-[Y]M and require [Z] months, during which service quality would be materially degraded.
+>
+> **Data Center and Network Risks**: AI inference requires low-latency, high-bandwidth connectivity to data centers housing GPU infrastructure. Natural disasters, cyberattacks, power outages, or network failures affecting our primary data center regions could render our services unavailable. Our disaster recovery and geographic redundancy capabilities are limited by GPU availability constraints.
+
+---
+
+### 5. AI Talent & Key Personnel Risk
+
+**Context**: For companies whose competitive advantage depends on specialized AI expertise.
+
+**Sample Disclosure**:
+
+> **Our Success Depends on Attracting and Retaining Specialized AI Talent in an Intensely Competitive Market, and Loss of Key Personnel Could Materially Harm Our Technology Development and Competitive Position**
+>
+> **Specialized Talent Requirements**: Developing, training, and deploying state-of-the-art AI systems requires expertise in machine learning, deep learning architectures, large-scale distributed systems, and domain-specific applications. The global supply of individuals with these combined skills is extremely limited, and demand far exceeds supply.
+>
+> **Competitive Talent Market**: We compete for AI talent against well-capitalized technology companies (including Google, Meta, Amazon, Microsoft, and OpenAI), research institutions offering academic prestige, and well-funded AI startups offering equity upside. Many of these competitors offer compensation packages materially exceeding what we can afford, particularly for the most sought-after individuals with publications in top-tier venues or experience training frontier models.
+>
+> **Key Person Dependencies**: Our AI capabilities depend substantially on [X] key AI researchers and engineers, including [describe: Chief AI Officer, lead ML engineers, specialized domain experts]. Loss of any of these individuals could:
+>
+> - Delay product development timelines by [X] months
+> - Require costly knowledge transfer and re-staffing
+> - Result in loss of institutional knowledge about model architectures, training procedures, and troubleshooting
+> - Signal competitive weakness to customers, investors, and remaining employees
+>
+> These key personnel are not bound by long-term employment contracts and may resign at any time. We do not maintain key person insurance.
+>
+> **Non-Compete Limitations**: California law prohibits most employee non-compete agreements. Our key AI personnel can immediately join direct competitors, taking knowledge of our model architectures, training techniques, and product roadmap. While we maintain confidentiality and IP assignment agreements, preventing unauthorized use or disclosure of trade secrets is difficult to enforce.
+>
+> **Equity Compensation Challenges**: As a pre-IPO company, we compensate AI talent substantially with equity grants. Post-IPO, stock price volatility may make our compensation less competitive than private AI companies offering new hire grants at higher valuations, or public technology companies with more liquid equity.
+>
+> **Immigration Risk**: Approximately [%] of our AI team members are not U.S. citizens and work under H-1B, O-1, or other visa categories. Changes in immigration policy, visa processing delays, or visa denials could prevent us from retaining or hiring essential talent. Remote work arrangements with non-U.S. personnel create data residency, export control, and IP protection challenges.
 
 ---
 
