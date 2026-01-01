@@ -477,17 +477,19 @@
                 <h2>Methodology & Limitations</h2>
 
                 <h3>Data Source</h3>
-                <p>Deep Tech 2026 Private Company Database containing 50,963 active companies (US 68%, Canada 21%, UK
-                    11%). Verified data only; synthetic test records excluded.</p>
+                <p>Real Private Tech Company Database containing 1,090 verified companies (1,014 unicorns + 42 SEC S-1
+                    filers). Geographic coverage: US 82%, Canada 3%, UK 4%, Other 11%.</p>
 
                 <h3>Scoring Framework</h3>
-                <p>Seven-dimension model weighted by empirical importance from IPO success literature: Financial (30%),
-                    Governance (25%), Legal/Compliance (15%), IP/Innovation (10%), Risk (10%), Operational (10%).</p>
+                <p>Five-dimension model weighted by empirical importance from IPO success literature: Financial (30%),
+                    Governance (25%), Legal/Compliance (15%), Operational (15%), Risk (15%).</p>
 
                 <h3>Key Limitations</h3>
-                <p><strong>Data Completeness:</strong> 47% of companies lack complete FY2024 data. <strong>Governance
-                        Opacity:</strong> Board composition directly observable for only 34% of companies.
-                    <strong>Geographic Skew:</strong> Heavy North American focus (89%). <strong>Point-in-Time:</strong>
+                <p><strong>Data Completeness:</strong> A substantial portion of companies lack complete FY2024 data;
+                    FY2023 data used as proxy where unavailable. <strong>Governance
+                        Opacity:</strong> Board composition directly observable for only a minority of private
+                    companies.
+                    <strong>Geographic Skew:</strong> Heavy North American focus. <strong>Point-in-Time:</strong>
                     Snapshot analysis; readiness changes dynamically.
                 </p>
 
@@ -666,7 +668,7 @@
                 <tbody>
                     <tr>
                         <td><strong>AI & Machine Learning</strong></td>
-                        <td>5</td>
+                        <td>4</td>
                         <td>25</td>
                         <td>72.5</td>
                     </tr>
@@ -697,12 +699,10 @@
                 </tbody>
             </table>
 
-            <p>Quantum computing companies exhibit the highest median score (71.2) but relatively few absolute IPO-ready
-                candidates (31). This reflects high barriers to entry—quantum companies require massive capital
-                ($500M+), attracting sophisticated investors who demand strong governance from inception. With an
-                average of 127 patents per company versus 34 for AI Infrastructure, quantum represents a "quality over
-                quantity" sector where governance and IP protection are embedded in the business model from the start,
-                producing higher readiness scores but fewer overall candidates due to capital intensity.</p>
+            <p><strong>Key Insight:</strong> AI & Machine Learning dominates the IPO-Ready tier with 4 of 5 qualifying
+                companies (OpenAI, Anthropic, xAI, Databricks). SpaceX represents the only non-AI company in the top
+                tier. The Near-Term candidates are more diversified across sectors, with Fintech, Enterprise SaaS, and
+                Biotech showing the largest pipelines.</p>
 
             <h3>Geographic Variations</h3>
             <p>Despite similar overall readiness rates, we observe meaningful geographic differences in exchange
@@ -763,8 +763,9 @@
                 has fundamentally contracted.</p>
 
             <h3>The Private Capital Abundance Effect</h3>
-            <p>Late-stage VC funding reached $89B in 2024 (PitchBook), while IPO proceeds totaled $31B. For every dollar
-                raised via IPO, private companies raised $2.87 in private markets. Companies rationally choose private
+            <p>Total US VC deal value reached approximately $209B in 2024 (PitchBook/NVCA), heavily driven by outsized
+                AI financings. Meanwhile, US IPO proceeds totaled approximately $33B. Companies rationally choose
+                private
                 financing when the economic terms exceed the IPO alternative after accounting for costs, ongoing
                 burdens, and governance dilution.</p>
 
@@ -784,9 +785,10 @@
                 successful companies rationally delay or avoid public markets entirely.</p>
 
             <h3>The SPAC Backlash and Quality Signal</h3>
-            <p>Post-2022, SPACs became synonymous with low-quality companies unable to access traditional IPO markets.
-                Research shows SPACs underperformed the Russell 2000 by 35% in the 12 months post-merger, and 62% of
-                SPAC targets missed first-year projections by over 20%.</p>
+            <p>Post-2022, SPACs became associated with lower-quality companies unable to access traditional IPO markets.
+                Academic research documents significant underperformance; one major study finds firms meet only
+                approximately 35% of observable revenue forecasts. SPAC cohorts have also shown meaningful
+                underperformance versus benchmarks including the Russell 2000.</p>
 
             <p>Traditional IPOs now carry a quality signal premium. Companies capable of executing a $150M+ traditional
                 IPO command 15-25% valuation premiums over SPAC alternatives. However, this raises the bar—companies
@@ -794,11 +796,11 @@
                 middle in exit options.</p>
 
             <h3>The Control Premium</h3>
-            <p>Among the 1,834 near-term companies (score 60-79), we identified 276 with sufficient scale ($100M+
-                revenue) where governance is the only barrier. Analysis of public interviews and statements from these
-                companies reveals that 67% cite founder control preservation as the primary reason for not implementing
-                independent board structures, followed by strategic pivot flexibility (43%), long-term R&D horizons
-                (39%), and regulatory uncertainty (31%).</p>
+            <p>Among Near-Term candidates in our sample, a subset have sufficient scale ($100M+ revenue) where
+                governance appears to be the primary barrier. Based on available public statements and interviews,
+                founder control preservation is commonly cited as the primary reason for not implementing
+                independent board structures, followed by strategic pivot flexibility, long-term R&D horizons, and
+                regulatory uncertainty.</p>
 
             <p>Research by Gompers, Ishii & Metrick (2003) estimates control premiums at 20-40% of firm value. For a
                 $500M valuation company, founders implicitly value control at $100-200M—more than the cost of
@@ -812,26 +814,28 @@
                 IPO volume among smaller companies ($25M-$100M revenue). Our data suggests this effect persists and has
                 intensified.</p>
 
-            <p>Between 2020-2024, 234 public companies with $50M-$150M revenue went private through buyouts and
-                take-private transactions, with a median premium of 28%. In 78% of cases, companies cited "regulatory
-                cost burden" as the primary reason for the transaction. This means not only are fewer companies going
-                public, but the direction of flow has reversed—companies are exiting public markets faster than
-                entering. This creates a selection effect where only ultra-high-revenue companies (over $500M) can
-                justify public status.</p>
+            <p>The take-private trend has accelerated in recent years, with numerous smaller public companies
+                ($50M-$150M revenue) exiting public markets through buyouts and
+                take-private transactions. Anecdotally, many cite regulatory cost burden as a contributing factor. This
+                suggests not only are fewer companies going
+                public, but the direction of flow has partially reversed—some companies are exiting public markets. This
+                creates a selection effect where primarily ultra-high-revenue companies (over $500M) can
+                most easily justify public status.</p>
 
             <h2>Policy Implications</h2>
 
             <p>Current SEC disclosure requirements treat a $100M revenue IPO candidate identically to a $10B established
-                public company. Implementing graduated disclosure tiers—similar to the Canadian model—could meaningfully
+                public company. Implementing graduated disclosure tiers—similar to the Canadian model—could potentially
                 expand the IPO candidate pool. A tiered system with reduced reporting frequency and SOX 404(b)
-                exemptions for companies under $500M in revenue could lower the governance cost threshold from $150M to
-                $75M, potentially unlocking 1,200-1,500 additional IPO candidates and increasing the readiness rate from
-                0.45% to 1.3%.</p>
+                exemptions for smaller companies could lower the effective governance cost threshold, though quantifying
+                the precise impact requires further research.</p>
 
-            <p>For companies, our analysis of top quartile firms reveals that those scoring 85+ implemented governance
-                reforms 24-36 months before filing S-1, not in response to the IPO process. This "pre-IPO governance
-                staging" creates credibility with underwriters, demonstrates committee functionality, and correlates
-                with 12% higher IPO first-day returns. Companies should consider adopting IPO-grade governance when
+            <p>For companies, our analysis of top-scoring firms suggests that those with higher readiness scores
+                implemented governance
+                reforms well in advance of filing S-1, not in response to the IPO process. This "pre-IPO governance
+                staging" may create credibility with underwriters and demonstrates committee functionality. Academic
+                literature suggests governance quality is associated with better IPO outcomes, though causality is
+                difficult to establish. Companies should consider adopting IPO-grade governance when
                 reaching $50M revenue, regardless of IPO timing, to create optionality and signal quality to all capital
                 sources.</p>
 
@@ -843,9 +847,10 @@
 
             <h2>Limitations and Future Research</h2>
 
-            <p>This analysis faces several important limitations. First, 47% of companies in our database lack complete
-                financial data for FY2024, requiring us to use FY2023 data (38% of sample), tax return estimates (22%),
-                or extrapolation from venture debt covenants (9%). This may understate readiness for high-growth
+            <p>This analysis faces several important limitations. First, a substantial portion of companies in our
+                database lack complete
+                financial data for FY2024, requiring us to use FY2023 data as a proxy where FY2024 was unavailable. This
+                may understate readiness for high-growth
                 companies between fiscal years.</p>
 
             <p>Second, board composition data for private companies is directly observable for only 34% of our sample
