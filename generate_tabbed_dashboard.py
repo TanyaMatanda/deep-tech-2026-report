@@ -581,6 +581,12 @@ html_content = f'''<!DOCTYPE html>
                                 <td>Reputational</td>
                                 <td>Competitive signaling in quality markets</td>
                             </tr>
+                            <tr>
+                                <td><strong>Canada</strong></td>
+                                <td>AIDA (Artificial Intelligence and Data Act)</td>
+                                <td>Emerging (legislative process)</td>
+                                <td>North American leadership positioning—ethical AI disclosure premium</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>

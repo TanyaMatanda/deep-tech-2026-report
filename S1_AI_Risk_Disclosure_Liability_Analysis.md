@@ -236,6 +236,22 @@ The FEAT framework requires disclosure of:
 
 ---
 
+### Canada: AIDA and the Emerging Compliance Framework
+
+Canada's Artificial Intelligence and Data Act (AIDA), part of Bill C-27, represents North America's first comprehensive AI-specific legislation. While still in legislative process, AIDA establishes disclosure obligations that Canadian companies and companies operating in Canadian markets should anticipate.
+
+**High-impact system designation**: AIDA requires companies deploying "high-impact" AI systems to notify the government and maintain detailed documentation. High-impact determination considers potential harm to health, safety, rights, or economic interests.
+
+**Transparency obligations**: Companies must disclose the use of AI systems to affected individuals in specific contexts, particularly where AI decisions significantly affect rights or opportunities. Generic privacy policy language won't suffice.
+
+**Impact assessment requirements**: For high-impact systems, companies must conduct and document impact assessments covering bias, accuracy, explainability, and human oversight. These assessments create a disclosure trail that could become relevant in securities filings for Canadian issuers.
+
+**The competitive dynamic for Toronto-Waterloo corridor**: Canada positions itself as an "ethical AI" leader, with companies in the Toronto-Waterloo tech corridor facing reputational pressure to exceed minimum AIDA standards. This creates interesting disclosure dynamics—Canadian AI companies may voluntarily adopt more rigorous disclosure to signal alignment with national AI ethics positioning.
+
+**Cross-border implications**: For US companies with Canadian operations or customers, AIDA creates parallel compliance obligations to the EU AI Act. Companies disclosing only for US markets while operating in Canada face the same information asymmetry problem—investors don't know if Canadian compliance costs are embedded or represent future shocks.
+
+---
+
 ### The Disclosure Arbitrage Opportunity
 
 Here's what directors and investors need to understand: the global variation in AI disclosure standards creates both risk and opportunity.
@@ -472,6 +488,6 @@ If your ML engineers can tell you:
 
 *This analysis is provided for informational purposes only and does not constitute legal advice. Consult qualified securities counsel for company-specific guidance.*
 
-**Prepared by**: GovernanceIQ Research  
+**Prepared by**: Tanya Matanda
 **Date**: January 2026  
 **Contact**: [Your info]
