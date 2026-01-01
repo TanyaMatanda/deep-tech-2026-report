@@ -2,8 +2,8 @@
 ## Actual 10-K Text Extraction Results
 
 **Analysis Date:** 2026-01-01
-**Companies Analyzed:** 1,000
-**Processing Time:** 451.6 seconds
+**Companies Analyzed:** 1,876
+**Processing Time:** 867.9 seconds
 
 ---
 
@@ -11,38 +11,38 @@
 
 ### AI Disclosure Rate
 
-- **327** companies (32.7%) include AI-related risk disclosures
-- **3,782** total AI-related keyword mentions across all filings
+- **654** companies (34.9%) include AI-related risk disclosures
+- **6,878** total AI-related keyword mentions across all filings
 
 ### Most Common AI Keywords in Risk Factors
 
 | Rank | Keyword | Mentions |
 |------|---------|----------|
-| 1 | compute | 762 |
-| 2 | artificial intelligence | 620 |
-| 3 | data center | 490 |
-| 4 | llm | 379 |
-| 5 | machine learning | 298 |
-| 6 | generative ai | 264 |
-| 7 | automation | 197 |
-| 8 | algorithm | 172 |
-| 9 | bias | 116 |
-| 10 | autonomous | 111 |
-| 11 | ai system | 69 |
-| 12 | ai model | 63 |
-| 13 | gpu | 57 |
-| 14 | nvidia | 53 |
-| 15 | eu ai act | 28 |
+| 1 | compute | 1430 |
+| 2 | artificial intelligence | 1051 |
+| 3 | llm | 1038 |
+| 4 | data center | 799 |
+| 5 | machine learning | 456 |
+| 6 | generative ai | 446 |
+| 7 | automation | 335 |
+| 8 | algorithm | 312 |
+| 9 | bias | 214 |
+| 10 | autonomous | 173 |
+| 11 | ai model | 123 |
+| 12 | ai system | 91 |
+| 13 | robotics | 83 |
+| 14 | gpu | 67 |
+| 15 | nvidia | 56 |
 
 ### Category Breakdown
 
 | Category | Total Mentions |
 |----------|----------------|
-| Core Ai | 1716 |
-| Ai Infra | 1375 |
-| Ai Tech | 515 |
-| Ai Risk | 147 |
-| Ai Regulation | 29 |
+| Core Ai | 3249 |
+| Ai Infra | 2375 |
+| Ai Tech | 945 |
+| Ai Risk | 261 |
+| Ai Regulation | 48 |
 
 ---
 
@@ -51,30 +51,30 @@
 | Ticker | Company | AI Mentions |
 |--------|---------|-------------|
 | IREN | IREN Ltd | 128 |
+| ONDS | Ondas Holdings Inc. | 107 |
 | NVDA | NVIDIA CORP | 89 |
+| CXM | Sprinklr, Inc. | 86 |
 | IONQ | IonQ, Inc. | 76 |
+| GCT | GigaCloud Technology Inc | 71 |
 | LMND | Lemonade, Inc. | 67 |
+| DOCN | DigitalOcean Holdings, Inc. | 58 |
+| AMBA | AMBARELLA INC | 53 |
 | RBRK | Rubrik, Inc. | 52 |
 | STX | Seagate Technology Holdings plc | 49 |
 | ZM | Zoom Communications, Inc. | 48 |
 | TEM | Tempus AI, Inc. | 48 |
+| UPST | Upstart Holdings, Inc. | 47 |
 | CHWY | Chewy, Inc. | 45 |
 | PATH | UiPath, Inc. | 44 |
 | PEGA | PEGASYSTEMS INC | 43 |
 | AKAM | AKAMAI TECHNOLOGIES INC | 41 |
+| CLSK | CLEANSPARK, INC. | 41 |
 | CART | Maplebear Inc. | 40 |
+| APPN | APPIAN CORP | 40 |
+| QUBT | Quantum Computing Inc. | 40 |
+| FIGS | FIGS, Inc. | 40 |
 | UBER | Uber Technologies, Inc | 39 |
 | SYM | Symbotic Inc. | 38 |
-| CRDO | Credo Technology Group Holding Ltd | 38 |
-| LYFT | Lyft, Inc. | 38 |
-| SSNC | SS&C Technologies Holdings Inc | 37 |
-| MELI | MERCADOLIBRE INC | 34 |
-| U | Unity Software Inc. | 32 |
-| QBTS | D-Wave Quantum Inc. | 32 |
-| HQY | HEALTHEQUITY, INC. | 32 |
-| KBR | KBR, INC. | 31 |
-| EFX | EQUIFAX INC | 29 |
-| TPR | TAPESTRY, INC. | 29 |
 
 ---
 
@@ -84,41 +84,41 @@
 
 > &#8226; AI/ML: Artificial Intelligence and Machine Learning...
 
+### ONDS (Ondas Holdings Inc.)
+
+> &#160; We design, develop, manufacture, sell and support FullMAX, our patented, Software Defined Radio (&#8220;SDR&#8221;) platform for secure, private, wide-area broadband networks...
+
 ### NVDA (NVIDIA CORP)
 
 > We offer enterprise customers NVIDIA DGX Cloud services, which include cloud-based infrastructure, software and services for training and deploying AI models...
+
+### CXM (Sprinklr, Inc.)
+
+> &#8226; We use artificial intelligence in our products, which may result in operational challenges, legal liability, reputational concerns and competitive risks...
 
 ### IONQ (IonQ, Inc.)
 
 > Additionally, Sensitive Data could be leaked, disclosed or revealed as a result of or in connection with our employees', contractors', consultants', affiliates', or vendors' use of generative artificial intelligence (&#8220;AI&#8221;) technologies...
 
+### GCT (GigaCloud Technology Inc)
+
+> &#8226; We may not be successful in optimizing our fulfillment centers and fulfillment network...
+
 ### LMND (Lemonade, Inc.)
 
 > Many factors affect our ability to pay claims accurately and timely, including the efficacy of our artificial intelligence claims processing, the training and experience of our claims adjusters, including our third-party claims administrators, and our ability to develop or select and implement appro...
 
+### DOCN (DigitalOcean Holdings, Inc.)
+
+> It is difficult to predict customer adoption rates and demand for our products and services, the entry of competitive products or services or the future growth rate and size of the Infrastructure-as-a-Service (IaaS), Platform-as-a-Service (PaaS) and Software-as-a-Service (SaaS), and artificial intel...
+
+### AMBA (AMBARELLA INC)
+
+> &#8226; Uncertain risks relating to the adoption, use or application of emerging technologies, including artificial intelligence, by our customers and in our business, could adversely impact our financial results and result in reputational harm and liability...
+
 ### RBRK (Rubrik, Inc.)
 
 > , &#8220;deep fakes,&#8221; which may be increasingly difficult to identify), malware (including as a result of advanced persistent threat intrusions), denial-of-service attacks, credential stuffing attacks, credential harvesting, personnel misconduct or error, other inadvertent compromises of our s...
-
-### STX (Seagate Technology Holdings pl)
-
-> Mass capacity storage involves well-established use cases, such as hyperscale data centers and private and public clouds as well as quickly emerging use cases such as machine learning (&#8220;ML&#8221;) and artificial intelligence (&#8220;AI&#8221;)...
-
-### ZM (Zoom Communications, Inc.)
-
-> &#8226; We use generative artificial intelligence (&#8220;AI&#8221;) in our products and services, which may result in operational challenges, legal liability, reputational concerns, competitive risks and regulatory concerns that could adversely affect our business and results of operations...
-
-### TEM (Tempus AI, Inc.)
-
-> Conversely, the government may implement programs to accelerate the adoption of artificial intelligence within the healthcare industry, which could have a favorable impact on our operations...
-
-### CHWY (Chewy, Inc.)
-
-> &#8226; If we do not successfully optimize, operate, and manage the expansion of the capacity of our fulfillment centers, our business, financial condition and results of operations could be harmed...
-
-### PATH (UiPath, Inc.)
-
-> Risks associated with the use of AI (including ML and large language models) in our platforms may result in reputational harm or liability...
 
 
 ---

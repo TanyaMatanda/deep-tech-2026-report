@@ -176,9 +176,8 @@ def main():
     df = pd.read_csv('sec_risk_data_v2.csv')
     print(f"\nLoaded {len(df)} companies from database")
     
-    # Take first 1000 companies
-    df = df.head(1000)
-    print(f"Processing {len(df)} companies...")
+    # Process ALL companies
+    print(f"Processing ALL {len(df)} companies...")
     
     # Process companies
     results = []
