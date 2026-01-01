@@ -389,15 +389,17 @@ Academic research on AI risk has matured significantly. The **MIT AI Risk Reposi
 
 ### The MIT AI Risk Repository: Seven Domain Categories
 
-| MIT Domain | Description | Our Data Shows |
-|------------|-------------|----------------|
-| **1. Discrimination & Toxicity** | Bias, unfair treatment, harmful outputs | 214 mentions (9%) — **Moderate gap** |
-| **2. Privacy & Security** | Data protection, adversarial attacks | ~30% — **Moderate gap** |
-| **3. Misinformation** | Hallucination, false content generation | <10 mentions (<1%) — **Critical gap** |
-| **4. Malicious Actors & Misuse** | Jailbreaking, dual-use, weaponization | **Rarely disclosed** — Critical gap |
-| **5. Human-Computer Interaction** | Over-reliance, automation bias, manipulation | **Rarely disclosed** — Critical gap |
-| **6. Socioeconomic & Environmental** | Labor displacement, power concentration, carbon footprint | **Rarely disclosed** — Critical gap |
-| **7. AI System Safety** | Alignment, goal conflict, dangerous capabilities | **Rarely disclosed** — Critical gap |
+Our SEC EDGAR full-text search across 10-K filings (FY 2024-2025) reveals significant disclosure gaps when mapped against MIT's taxonomy:
+
+| MIT Domain | Description | SEC Filings Mentioning | Gap Assessment |
+|------------|-------------|----------------------|----------------|
+| **1. Discrimination & Toxicity** | Bias, unfair treatment, harmful outputs | 7,243 (fairness, discrimination) | ⚠️ Moderate |
+| **2. Privacy & Security** | Data protection, adversarial attacks | ~30% (estimated) | ⚠️ Moderate |
+| **3. Misinformation** | Hallucination, false content generation | 43 (hallucination) | ❌ **Critical** |
+| **4. Malicious Actors & Misuse** | Jailbreaking, dual-use, weaponization | 184 (mostly dual-use) | ❌ **Critical** |
+| **5. Human-Computer Interaction** | Over-reliance, automation bias, manipulation | 310 (0 for automation bias) | ❌ **Critical** |
+| **6. Socioeconomic & Environmental** | Labor displacement, power concentration, carbon | 4,166 (mostly environmental) | ⚠️ Mixed |
+| **7. AI System Safety** | Alignment, goal conflict, dangerous capabilities | 65 (0 for AI alignment) | ❌ **Critical** |
 
 ### Additional Risk Categories Warranting Disclosure
 

@@ -1,0 +1,57 @@
+category,keyword,filing_count,as_of_date,form_type
+AI/ML Generic,artificial intelligence,5760,2025-12-31,10-K
+AI/ML Generic,machine learning,2888,2025-12-31,10-K
+AI/ML Generic,deep learning,193,2025-12-31,10-K
+AI/ML Generic,neural network,61,2025-12-31,10-K
+LLM/GenAI,llm,137,2025-12-31,10-K
+LLM/GenAI,large language model,74,2025-12-31,10-K
+LLM/GenAI,generative ai,1390,2025-12-31,10-K
+LLM/GenAI,chatgpt,135,2025-12-31,10-K
+LLM/GenAI,gpt-4,14,2025-12-31,10-K
+LLM/GenAI,gpt-3,1,2025-12-31,10-K
+Infrastructure,compute capacity,23,2025-12-31,10-K
+Infrastructure,gpu,109,2025-12-31,10-K
+Infrastructure,data center,2072,2025-12-31,10-K
+Infrastructure,nvidia,290,2025-12-31,10-K
+Infrastructure,cloud computing,1954,2025-12-31,10-K
+Model Performance,hallucination,43,2025-12-31,10-K
+Model Performance,hallucinate,3,2025-12-31,10-K
+Model Performance,model accuracy,16,2025-12-31,10-K
+Model Performance,model failure,21,2025-12-31,10-K
+Model Performance,false positive,57,2025-12-31,10-K
+Training Data/IP,training data,283,2025-12-31,10-K
+Training Data/IP,data provenance,37,2025-12-31,10-K
+Training Data/IP,copyrighted content,52,2025-12-31,10-K
+Training Data/IP,licensed data,39,2025-12-31,10-K
+Bias/Fairness,algorithmic bias,25,2025-12-31,10-K
+Bias/Fairness,ai bias,3,2025-12-31,10-K
+Bias/Fairness,fairness,1899,2025-12-31,10-K
+Bias/Fairness,discrimination,5187,2025-12-31,10-K
+Bias/Fairness,disparate impact,129,2025-12-31,10-K
+Regulatory,eu ai act,215,2025-12-31,10-K
+Regulatory,ai act,437,2025-12-31,10-K
+Regulatory,ai regulation,59,2025-12-31,10-K
+Regulatory,algorithmic accountability,6,2025-12-31,10-K
+MIT4-Malicious Use,adversarial attack,1,2025-12-31,10-K
+MIT4-Malicious Use,jailbreak,3,2025-12-31,10-K
+MIT4-Malicious Use,prompt injection,4,2025-12-31,10-K
+MIT4-Malicious Use,ai misuse,0,2025-12-31,10-K
+MIT4-Malicious Use,dual-use,176,2025-12-31,10-K
+MIT5-Human Interaction,automation bias,0,2025-12-31,10-K
+MIT5-Human Interaction,human oversight,193,2025-12-31,10-K
+MIT5-Human Interaction,overreliance,59,2025-12-31,10-K
+MIT5-Human Interaction,ai manipulation,0,2025-12-31,10-K
+MIT5-Human Interaction,disinformation,58,2025-12-31,10-K
+MIT6-Socioeconomic,job displacement,7,2025-12-31,10-K
+MIT6-Socioeconomic,workforce disruption,37,2025-12-31,10-K
+MIT6-Socioeconomic,ai monopoly,0,2025-12-31,10-K
+MIT6-Socioeconomic,power concentration,2,2025-12-31,10-K
+MIT6-Environmental,carbon footprint,1049,2025-12-31,10-K
+MIT6-Environmental,energy consumption,1149,2025-12-31,10-K
+MIT6-Environmental,environmental impact,1908,2025-12-31,10-K
+MIT6-Environmental,data center energy,14,2025-12-31,10-K
+MIT7-AI Safety,ai alignment,0,2025-12-31,10-K
+MIT7-AI Safety,goal misalignment,0,2025-12-31,10-K
+MIT7-AI Safety,autonomous ai,11,2025-12-31,10-K
+MIT7-AI Safety,agentic ai,54,2025-12-31,10-K
+MIT7-AI Safety,emergent behavior,0,2025-12-31,10-K

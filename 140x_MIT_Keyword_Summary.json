@@ -1,0 +1,123 @@
+{
+  "extraction_date": "2026-01-01T17:37:22.048158",
+  "form_type": "10-K",
+  "date_range": "2024-01-01 to 2025-12-31",
+  "categories": {
+    "AI/ML Generic": {
+      "total_filings": 8902,
+      "keywords": {
+        "artificial intelligence": 5760,
+        "machine learning": 2888,
+        "deep learning": 193,
+        "neural network": 61
+      }
+    },
+    "LLM/GenAI": {
+      "total_filings": 1751,
+      "keywords": {
+        "llm": 137,
+        "large language model": 74,
+        "generative ai": 1390,
+        "chatgpt": 135,
+        "gpt-4": 14,
+        "gpt-3": 1
+      }
+    },
+    "Infrastructure": {
+      "total_filings": 4448,
+      "keywords": {
+        "compute capacity": 23,
+        "gpu": 109,
+        "data center": 2072,
+        "nvidia": 290,
+        "cloud computing": 1954
+      }
+    },
+    "Model Performance": {
+      "total_filings": 140,
+      "keywords": {
+        "hallucination": 43,
+        "hallucinate": 3,
+        "model accuracy": 16,
+        "model failure": 21,
+        "false positive": 57
+      }
+    },
+    "Training Data/IP": {
+      "total_filings": 411,
+      "keywords": {
+        "training data": 283,
+        "data provenance": 37,
+        "copyrighted content": 52,
+        "licensed data": 39
+      }
+    },
+    "Bias/Fairness": {
+      "total_filings": 7243,
+      "keywords": {
+        "algorithmic bias": 25,
+        "ai bias": 3,
+        "fairness": 1899,
+        "discrimination": 5187,
+        "disparate impact": 129
+      }
+    },
+    "Regulatory": {
+      "total_filings": 717,
+      "keywords": {
+        "eu ai act": 215,
+        "ai act": 437,
+        "ai regulation": 59,
+        "algorithmic accountability": 6
+      }
+    },
+    "MIT4-Malicious Use": {
+      "total_filings": 184,
+      "keywords": {
+        "adversarial attack": 1,
+        "jailbreak": 3,
+        "prompt injection": 4,
+        "ai misuse": 0,
+        "dual-use": 176
+      }
+    },
+    "MIT5-Human Interaction": {
+      "total_filings": 310,
+      "keywords": {
+        "automation bias": 0,
+        "human oversight": 193,
+        "overreliance": 59,
+        "ai manipulation": 0,
+        "disinformation": 58
+      }
+    },
+    "MIT6-Socioeconomic": {
+      "total_filings": 46,
+      "keywords": {
+        "job displacement": 7,
+        "workforce disruption": 37,
+        "ai monopoly": 0,
+        "power concentration": 2
+      }
+    },
+    "MIT6-Environmental": {
+      "total_filings": 4120,
+      "keywords": {
+        "carbon footprint": 1049,
+        "energy consumption": 1149,
+        "environmental impact": 1908,
+        "data center energy": 14
+      }
+    },
+    "MIT7-AI Safety": {
+      "total_filings": 65,
+      "keywords": {
+        "ai alignment": 0,
+        "goal misalignment": 0,
+        "autonomous ai": 11,
+        "agentic ai": 54,
+        "emergent behavior": 0
+      }
+    }
+  }
+}
