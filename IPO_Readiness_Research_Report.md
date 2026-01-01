@@ -72,11 +72,11 @@ Recent research (Gahng et al., 2023; Klausner et al., 2024) demonstrates that SP
 
 ### 2.1 Data Source and Sample Construction
 
-**Database:** Deep Tech 2026 Private Company Database  
-**Universe:** 95,247 active private companies  
-**Geographic Coverage:** United States (68%), Canada (21%), United Kingdom (8%), Other (3%)  
-**Sector Focus:** Technology, Biotechnology, Clean Energy, Advanced Manufacturing  
-**Data Currency:** Financial metrics from FY2023 or FY2024 (most recent available)
+**Database:** Real Private Tech Company Database  
+**Universe:** 1,090 verified private companies (1,014 unicorns + 42 SEC S-1 filers)  
+**Geographic Coverage:** United States (82%), Canada (3%), United Kingdom (4%), Other (11%)  
+**Sector Focus:** AI/ML, Fintech, Space/Defense, Biotech, Enterprise SaaS  
+**Data Sources:** Wikipedia Unicorn List, SEC S-1 Filings, Curated Research
 
 **Inclusion Criteria:**
 - Active operating status (excluding dormant/dissolved entities)
