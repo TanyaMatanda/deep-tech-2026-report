@@ -194,6 +194,60 @@ Rather than advocating for maximum or minimum disclosure, the data suggests boar
 
 The strategic question is not whether to disclose, but how to calibrate disclosure to the company's specific risk profile, competitive position, regulatory exposure, and governance philosophy—while documenting the reasoning process that informed these judgments.
 
+---
+
+### The Governance of AI Disclosure: Committee Roles and Interplay
+
+Effective AI disclosure requires coordination between multiple governance bodies, each with distinct responsibilities under securities law and corporate governance principles.
+
+**The Disclosure Committee**
+
+Most public companies maintain a Disclosure Committee—a management-level body required by Sarbanes-Oxley to implement "disclosure controls and procedures" (SEC Rules 13a-15 and 15d-15). The Disclosure Committee typically includes the CFO, General Counsel, Controller, and business unit leaders. Its function is to:
+
+- Review all SEC filings (10-K, 10-Q, 8-K, proxy statements, S-1s) for accuracy and completeness
+- Evaluate materiality of information for disclosure purposes
+- Draft and refine risk factor language
+- Support CEO/CFO certification of filings
+
+For AI-related disclosure, the Disclosure Committee is typically the body that reviews and approves the specific language that appears in Item 1A Risk Factors. However, the Disclosure Committee may not have direct visibility into the underlying AI risk assessment—that's where board-level committees become important.
+
+**The Audit Committee and Risk Committee**
+
+At the board level, the Audit Committee (required for NYSE and NASDAQ-listed companies) has oversight responsibility for disclosure controls, internal controls, and risk assessment. Many companies have also established standalone Risk Committees—particularly in financial services—to provide dedicated oversight of enterprise risk management.
+
+For AI disclosure, the board-level role involves:
+
+- Oversight of the company's AI risk identification and assessment processes
+- Review of management's determination of which AI risks are material
+- Providing "tone at the top" on disclosure philosophy
+- Ensuring the Disclosure Committee has access to information needed for informed disclosure decisions
+
+**The Interplay Problem**
+
+The challenge for AI disclosure is that these two governance structures don't always connect seamlessly:
+
+- The **Disclosure Committee** has expertise in securities law and disclosure practice, but may lack deep technical understanding of AI system risks
+- The **Risk Committee/Audit Committee** has broader risk oversight authority, but may review risks at a level of abstraction that doesn't translate directly into disclosure language
+- **Technical teams** (data scientists, ML engineers, AI ethics officers) understand the actual risks but may have limited interaction with either committee
+
+This creates potential gaps. A risk that the technical team considers significant may not surface in the risk assessment reviewed by the board, or may not be translated into specific disclosure language by the Disclosure Committee. Conversely, disclosure language drafted without technical input may be generic or inaccurate.
+
+**Best Practices for AI Disclosure Governance**
+
+Organizations developing stronger AI disclosure processes are adopting several practices:
+
+1. **Cross-functional AI risk inventories**: Creating formal processes for technical teams to surface AI-specific risks (hallucination, bias, IP exposure, vendor dependencies) to both the Disclosure Committee and the Risk/Audit Committee
+
+2. **Disclosure review by technical stakeholders**: Including AI/ML leadership in the Disclosure Committee's review of AI-related risk factors to ensure accuracy and specificity
+
+3. **Board education**: Ensuring Risk/Audit Committee members have sufficient AI literacy to meaningfully oversee AI risk assessment and disclosure decisions
+
+4. **Documentation of disclosure decisions**: Creating records of the analysis underlying materiality determinations for AI risks—supporting business judgment rule protection if disclosure decisions are later challenged
+
+5. **Periodic disclosure gap analysis**: Comparing the company's AI capabilities as described in business sections against corresponding risk disclosures, identifying asymmetries like those revealed in our data
+
+The governance challenge is that AI risks are both highly technical and rapidly evolving. Companies that create clear information flows between technical teams, the Disclosure Committee, and board-level risk oversight may be better positioned to make—and defend—informed disclosure decisions.
+
 
 ---
 
