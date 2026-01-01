@@ -1,6 +1,6 @@
-# The IPO Readiness Paradox: Why Only 0.45% of Private Companies Are Ready for Public Markets
+# IPO Readiness Analysis: Private Tech Unicorn Assessment
 
-**Research Report Based on Analysis of 95,247 Private Companies**
+**Research Report Based on Analysis of 1,090 Real Private Companies**
 
 **As of: December 29, 2025**
 
@@ -12,7 +12,13 @@
 
 ## Executive Summary
 
-This report analyzes IPO readiness across 95,247 private companies using a comprehensive seven-dimension framework grounded in academic research from the University of Chicago Booth School of Business and recent empirical studies published in the *Journal of Finance* and *Review of Financial Studies* (2020-2025). Our central finding reveals a striking paradox: despite robust public market conditions and record levels of private capital, **only 427 companies (0.45%)** meet the threshold criteria for IPO readiness within 12-18 months.
+This report analyzes IPO readiness of **1,090 verified private tech companies** using a 100-point framework based on valuation, industry positioning, and market timing. Our dataset includes **1,014 unicorns** from curated sources and Wikipedia, plus **42 companies actively filing S-1 registrations** with the SEC.
+
+**Key Findings:**
+- **5 companies** score IPO-Ready (80+): OpenAI ($157B), SpaceX ($350B), Anthropic ($60B), xAI ($50B), Databricks ($62B)
+- **99 companies** qualify as Near-Term candidates (60-79), including Stripe, Scale AI, Anduril
+- **35 Canadian companies** analyzed, with Cohere, 1Password, Dapper Labs, Wealthsimple leading
+- **98 Deep Tech companies** in AI, robotics, defense, and space sectors
 
 This research synthesizes theoretical frameworks on information asymmetry, agency costs, and market timing with empirical observations from our database to answer a fundamental question: **Why aren't more companies going public?** Our findings suggest that the traditional IPO path has become structurally incompatible with modern private company economics, driven by three primary factors: (1) the prohibitive cost of public company governance, (2) the abundance of late-stage private capital, and (3) the diminishing value proposition of public market liquidity relative to regulatory burden.
 
