@@ -15,7 +15,7 @@ html_content = f'''<!DOCTYPE html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The AI Disclosure Gap: Parametric Analysis</title>
+    <title>The 140x Problem | AI Disclosure Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
@@ -595,8 +595,8 @@ html_content = f'''<!DOCTYPE html>
 <body>
     <div class="container">
         <header>
-            <h1>The AI Disclosure Gap</h1>
-            <div class="subtitle">Parametric Analysis of 1,876 SEC Filings</div>
+            <h1>The 140x Problem</h1>
+            <div class="subtitle">Why AI Companies Disclose Infrastructure Risks 140 Times More Than Model Risks</div>
             
             <div class="tab-nav">
                 <button class="tab-button active" onclick="switchTab('dashboard')">
@@ -626,6 +626,12 @@ html_content = f'''<!DOCTYPE html>
                     <div class="stat-number">140x</div>
                     <div class="stat-label">Disclosure Ratio Gap</div>
                 </div>
+            </div>
+
+            <div style="text-align: center; margin: 2rem 0 4rem;">
+                <a href="140x_Problem_Key_Findings.csv" download class="download-btn" style="display: inline-block; padding: 1rem 2.5rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; text-decoration: none; border-radius: 30px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; box-shadow: 0 10px 30px rgba(99, 102, 241, 0.4); transition: all 0.3s ease;">
+                    ⬇ Download Key Findings Data (CSV)
+                </a>
             </div>
 
             <div class="content">

@@ -636,6 +636,5 @@ The following sample language templates provide specific, substantive disclosure
 
 *This analysis is provided for informational purposes only and does not constitute legal advice. Consult qualified securities counsel for company-specific guidance.*
 
-**Prepared by**: Tanya Matanda
-**Date**: January 2026  
-**Contact**: [Your info]
+**Prepared by**: Tanya Matanda  
+**Date**: January 2026

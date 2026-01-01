@@ -1,0 +1,59 @@
+Category,Metric,Value,Percentage,Notes
+Dataset Overview,Total Companies Analyzed,1876,100%,Complete SEC 10-K filing universe
+Dataset Overview,Companies Disclosing AI Risks,654,34.9%,Any AI-related mention in Item 1A
+Dataset Overview,Total AI Mentions,6878,,Across all risk factor sections
+Dataset Overview,Average AI Mentions per Discloser,10.5,,Among companies with any disclosure
+
+Key Finding: LLM Paradox,LLM Mentions,1038,,Companies mentioning large language models
+Key Finding: LLM Paradox,Generative AI Mentions,446,,Companies mentioning generative AI
+Key Finding: LLM Paradox,Hallucination Disclosures,<10,<1%,Critical gap - LLM's most distinctive risk
+
+Key Finding: 140x Rule,Infrastructure Risk Mentions,2375,,Compute + data center + GPU
+Key Finding: 140x Rule,Model Performance Risk Mentions,17,,Hallucination + accuracy + reliability
+Key Finding: 140x Rule,Infrastructure to Model Ratio,140:1,,The disclosure inversion
+
+Key Finding: Training Data/IP,Training Data Mentions,17,<1%,Despite active litigation (NYT v OpenAI)
+Key Finding: Training Data/IP,Data Provenance Mentions,<5,<0.3%,Critical IP risk undisclosed
+
+Disclosure by Risk Category,Infrastructure Dependencies,2375,58%,Compute GPU data center
+Disclosure by Risk Category,Generic AI/ML Terms,3249,47%,AI machine learning artificial intelligence
+Disclosure by Risk Category,LLM/GenAI Terms,1484,22%,LLM generative AI
+Disclosure by Risk Category,Bias/Fairness,214,9%,Only 32.7% of AI disclosers
+Disclosure by Risk Category,Regulatory Compliance (EU AI Act),46,7%,Despite law being in force
+
+Disclosure Depth Analysis,Minimal (1-5 mentions),412,63%,Token disclosure only
+Disclosure Depth Analysis,Moderate (6-20 mentions),172,26%,Some detail provided
+Disclosure Depth Analysis,Substantial (21-50 mentions),55,8%,Reasonable coverage
+Disclosure Depth Analysis,Comprehensive (50+ mentions),15,2.3%,Best practice disclosure
+
+Top Disclosers (Comprehensive),IREN,128,,AI mentions in risk factors
+Top Disclosers (Comprehensive),Ondas Holdings,107,,AI mentions in risk factors
+Top Disclosers (Comprehensive),NVIDIA,89,,AI mentions in risk factors
+Top Disclosers (Comprehensive),Sprinklr,86,,AI mentions in risk factors
+Top Disclosers (Comprehensive),IonQ,76,,AI mentions in risk factors
+
+Keyword Frequency,compute,1430,,Infrastructure category
+Keyword Frequency,LLM,1038,,Model category
+Keyword Frequency,data center,799,,Infrastructure category
+Keyword Frequency,generative AI,446,,Model category
+Keyword Frequency,bias,214,,Fairness category
+Keyword Frequency,GPU,67,,Infrastructure category
+Keyword Frequency,NVIDIA (named),56,,Vendor concentration
+Keyword Frequency,EU AI Act,46,,Regulatory category
+Keyword Frequency,training data,17,,IP/Data category
+Keyword Frequency,hallucination,<10,,Model performance category
+
+Cross-Jurisdictional Requirements,United States (SEC),Materiality-based,N/A,Flexible framework weak enforcement
+Cross-Jurisdictional Requirements,European Union (AI Act),Mandatory disclosure,6% revenue,High-risk system requirements in force
+Cross-Jurisdictional Requirements,United Kingdom (FCA),Model governance,Sector-specific,Financial services focus
+Cross-Jurisdictional Requirements,China (CAC),Algorithm registration,Required,Mandatory for recommendation systems
+Cross-Jurisdictional Requirements,Singapore (FEAT),Principles-based,Voluntary,Fairness ethics accountability transparency
+Cross-Jurisdictional Requirements,Canada (AIDA),High-impact systems,Pending,Bill C-27 transparency obligations
+
+Academic Risk Categories,Model Performance & Reliability,High,<1%,Critical gap
+Academic Risk Categories,Training Data & IP,High,<1%,Critical gap
+Academic Risk Categories,Bias & Fairness,High,9%,Significant gap
+Academic Risk Categories,Privacy & Data Protection,High,~30%,Moderate gap
+Academic Risk Categories,Security & Adversarial Attacks,High,~30%,Moderate gap
+Academic Risk Categories,Regulatory Compliance,Medium,<1%,Critical gap
+Academic Risk Categories,Societal & Ethical Impacts,Medium,<1%,Critical gap
