@@ -1,0 +1,997 @@
+{
+  "analysis_date": "2026-01-01T12:44:07.439782",
+  "companies_analyzed": 1000,
+  "companies_with_ai_disclosure": 327,
+  "ai_disclosure_rate": 32.7,
+  "total_ai_mentions": 3782,
+  "top_keywords": {
+    "compute": 762,
+    "artificial intelligence": 620,
+    "data center": 490,
+    "llm": 379,
+    "machine learning": 298,
+    "generative ai": 264,
+    "automation": 197,
+    "algorithm": 172,
+    "bias": 116,
+    "autonomous": 111,
+    "ai system": 69,
+    "ai model": 63,
+    "gpu": 57,
+    "nvidia": 53,
+    "eu ai act": 28,
+    "robotics": 24,
+    "large language model": 20,
+    "training data": 10,
+    "ai governance": 8,
+    "ai regulation": 6,
+    "responsible ai": 6,
+    "predictive analytics": 5,
+    "hallucination": 5,
+    "explainability": 3,
+    "neural network": 3,
+    "natural language processing": 2,
+    "algorithmic accountability": 1,
+    "computer vision": 1,
+    "nlp": 1
+  },
+  "category_breakdown": {
+    "core_ai": 1716,
+    "ai_tech": 515,
+    "ai_risk": 147,
+    "ai_infra": 1375,
+    "ai_regulation": 29
+  },
+  "top_disclosing_companies": [
+    {
+      "ticker": "IREN",
+      "name": "IREN Ltd",
+      "mentions": 128,
+      "top_keywords": {
+        "data center": 52,
+        "gpu": 32,
+        "nvidia": 17,
+        "compute": 12,
+        "algorithm": 10,
+        "machine learning": 3,
+        "artificial intelligence": 2
+      },
+      "sample_language": [
+        "&#8226; AI/ML: Artificial Intelligence and Machine Learning",
+        "Artificial Intelligence (&#8220;AI&#8221;) is computer software that mimics human cognitive abilities in order to perform complex tasks, such as decision making, data analysis, language translation and a variety of tools and services across the emergent AI industry that have been developed to levera",
+        "Machine Learning (&#8220;ML&#8221;) is a subset of AI in which algorithms are trained on data sets to become machine learning models capable of performing specific tasks"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA CORP",
+      "mentions": 89,
+      "top_keywords": {
+        "nvidia": 33,
+        "data center": 18,
+        "gpu": 13,
+        "compute": 8,
+        "ai model": 6,
+        "generative ai": 2,
+        "llm": 2,
+        "bias": 2,
+        "eu ai act": 2,
+        "large language model": 1
+      },
+      "sample_language": [
+        "We offer enterprise customers NVIDIA DGX Cloud services, which include cloud-based infrastructure, software and services for training and deploying AI models",
+        "Factors that have caused and/or could in the future cause us to underestimate or overestimate demand, and impact the timing and volume of our revenue, include: &#8226; changes in product development cycles and time to market; &#8226; competing technologies and competitor product releases, announceme",
+        "Because our products may be used in multiple use cases and applications, it is difficult to estimate with any reasonable degree of precision the impact of generative AI models on our reported revenue or forecasted demand"
+      ]
+    },
+    {
+      "ticker": "IONQ",
+      "name": "IonQ, Inc.",
+      "mentions": 76,
+      "top_keywords": {
+        "compute": 59,
+        "algorithm": 12,
+        "data center": 3,
+        "artificial intelligence": 1,
+        "autonomous": 1
+      },
+      "sample_language": [
+        "Additionally, Sensitive Data could be leaked, disclosed or revealed as a result of or in connection with our employees', contractors', consultants', affiliates', or vendors' use of generative artificial intelligence (&#8220;AI&#8221;) technologies"
+      ]
+    },
+    {
+      "ticker": "LMND",
+      "name": "Lemonade, Inc.",
+      "mentions": 67,
+      "top_keywords": {
+        "artificial intelligence": 33,
+        "algorithm": 15,
+        "data center": 8,
+        "eu ai act": 7,
+        "compute": 2,
+        "machine learning": 1,
+        "llm": 1
+      },
+      "sample_language": [
+        "Many factors affect our ability to pay claims accurately and timely, including the efficacy of our artificial intelligence claims processing, the training and experience of our claims adjusters, including our third-party claims administrators, and our ability to develop or select and implement appro",
+        "The speed by which our artificial intelligence technology allows us to process and pay claims is a differentiating factor for our business and an increase in the average time to process claims could undermine our reputation and position in the insurance marketplace",
+        "30 Table of Contents Our proprietary artificial intelligence algorithms may not operate properly or as we expect them to, which could cause us to write policies we should not write, price those policies inappropriately or overpay claims that are made by our customers"
+      ]
+    },
+    {
+      "ticker": "RBRK",
+      "name": "Rubrik, Inc.",
+      "mentions": 52,
+      "top_keywords": {
+        "generative ai": 36,
+        "ai model": 4,
+        "compute": 3,
+        "data center": 3,
+        "artificial intelligence": 2,
+        "llm": 1,
+        "algorithm": 1,
+        "ai governance": 1,
+        "training data": 1
+      },
+      "sample_language": [
+        ", &#8220;deep fakes,&#8221; which may be increasingly difficult to identify), malware (including as a result of advanced persistent threat intrusions), denial-of-service attacks, credential stuffing attacks, credential harvesting, personnel misconduct or error, other inadvertent compromises of our s",
+        "2025 Form 10-K 21 Table of Contents Our use of generative artificial intelligence tools may pose risks to our proprietary software and systems and subject us to legal liability",
+        "We use generative AI tools in our business, and we expect to use generative AI tools in the future, including to generate code and other materials incorporated into our products, proprietary software, and systems, and for other internal and external uses"
+      ]
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology Holdings plc",
+      "mentions": 49,
+      "top_keywords": {
+        "data center": 20,
+        "compute": 12,
+        "machine learning": 5,
+        "generative ai": 5,
+        "autonomous": 3,
+        "artificial intelligence": 2,
+        "automation": 1,
+        "algorithm": 1
+      },
+      "sample_language": [
+        "Mass capacity storage involves well-established use cases, such as hyperscale data centers and private and public clouds as well as quickly emerging use cases such as machine learning (&#8220;ML&#8221;) and artificial intelligence (&#8220;AI&#8221;)",
+        "Use cases include connected and autonomous vehicles, smart manufacturing, smart cities and emerging generative AI (&#8220;Gen AI&#8221;) applications",
+        "The nearline market includes storage for cloud computing, content delivery, archival, backup services and emerging use cases such as generative AI"
+      ]
+    },
+    {
+      "ticker": "ZM",
+      "name": "Zoom Communications, Inc.",
+      "mentions": 48,
+      "top_keywords": {
+        "data center": 21,
+        "generative ai": 6,
+        "ai model": 3,
+        "automation": 3,
+        "algorithm": 3,
+        "compute": 3,
+        "machine learning": 2,
+        "llm": 2,
+        "artificial intelligence": 1,
+        "large language model": 1
+      },
+      "sample_language": [
+        "&#8226; We use generative artificial intelligence (&#8220;AI&#8221;) in our products and services, which may result in operational challenges, legal liability, reputational concerns, competitive risks and regulatory concerns that could adversely affect our business and results of operations",
+        "Additionally, we introduced our federated approach to AI, which enables the use of multiple large language models (&#8220;LLMs&#8221;), including Zoom&#8217;s own, to complete each task for users",
+        "Zoom&#8217;s federated approach allows its tech stack to dynamically select from multiple AI models, including those from OpenAI, Anthropic, and Meta, making AI accessible and affordable so that more people can incorporate them in their day-to-day workflows"
+      ]
+    },
+    {
+      "ticker": "TEM",
+      "name": "Tempus AI, Inc.",
+      "mentions": 48,
+      "top_keywords": {
+        "algorithm": 20,
+        "generative ai": 10,
+        "bias": 4,
+        "compute": 4,
+        "machine learning": 3,
+        "artificial intelligence": 2,
+        "neural network": 2,
+        "large language model": 2,
+        "data center": 1
+      },
+      "sample_language": [
+        "Conversely, the government may implement programs to accelerate the adoption of artificial intelligence within the healthcare industry, which could have a favorable impact on our operations",
+        "states and other foreign jurisdictions are applying, or are considering applying, their cybersecurity and data protection laws to AI, particularly generative AI, and/or are considering general legal frameworks on AI (such as the European Union&#8217;s Artificial Intelligence Act, or the AI Act, whic",
+        "We understand that the terms &#8220;AI,&#8221; &#8220;Machine Learning,&#8221; &#8220;Generative AI,&#8221; &#8220;Large Language Models&#8221; and other similar terms may mean different things to different people"
+      ]
+    },
+    {
+      "ticker": "CHWY",
+      "name": "Chewy, Inc.",
+      "mentions": 45,
+      "top_keywords": {
+        "llm": 28,
+        "data center": 8,
+        "compute": 6,
+        "algorithm": 2,
+        "artificial intelligence": 1
+      },
+      "sample_language": [
+        "&#8226; If we do not successfully optimize, operate, and manage the expansion of the capacity of our fulfillment centers, our business, financial condition and results of operations could be harmed",
+        "We believe that our continued growth in net sales will depend upon, among other factors, our ability to: &#8226; acquire new customers and retain existing customers; &#8226; increase sales from our new and existing customers; &#8226; increase the number of customers and the amount of sales in our Au",
+        "Several of our fulfillment centers, customer service centers, and corporate offices are located in Florida, Texas, and other areas that are susceptible to hurricanes, sea-level rise, earthquakes, and other natural disasters and severe weather events (including those resulting from climate change)"
+      ]
+    },
+    {
+      "ticker": "PATH",
+      "name": "UiPath, Inc.",
+      "mentions": 44,
+      "top_keywords": {
+        "automation": 30,
+        "generative ai": 5,
+        "algorithm": 2,
+        "large language model": 1,
+        "llm": 1,
+        "nlp": 1,
+        "bias": 1,
+        "responsible ai": 1,
+        "data center": 1,
+        "eu ai act": 1
+      },
+      "sample_language": [
+        "Risks associated with the use of AI (including ML and large language models) in our platforms may result in reputational harm or liability",
+        "Third-party AI capabilities that can be integrated with our platform or used in our internal systems and processes, including generative AI, could also produce false or \"hallucinatory\" inferences about customer data, enterprises, other information, or subject matter",
+        "The use of generative AI processes at scale is relatively new, and may lead to challenges, concerns, and risks that are significant, or that we may not be able to predict, especially if our direct or indirect use of these technologies in our products and internal systems and processes were to become"
+      ]
+    },
+    {
+      "ticker": "PEGA",
+      "name": "PEGASYSTEMS INC",
+      "mentions": 43,
+      "top_keywords": {
+        "automation": 29,
+        "generative ai": 4,
+        "artificial intelligence": 3,
+        "llm": 2,
+        "machine learning": 1,
+        "large language model": 1,
+        "natural language processing": 1,
+        "predictive analytics": 1,
+        "compute": 1
+      },
+      "sample_language": [
+        "Forward-looking statements deal with future events and are subject to risks and uncertainties that are difficult to predict, including, but not limited to: &#8226; our future financial performance and business plans; &#8226; the adequacy of our liquidity and capital resources; &#8226; the successful",
+        "Our powerful platform for enterprise artificial intelligence (&#8220;AI&#8221;) decisioning and workflow automation enables the world&#8217;s leading brands and government agencies to hyper-personalize customer experiences, automate customer service, and streamline operations, mission-critical busin",
+        "For clients who want to extend intelligence and automation into the early stages of the customer journey, Pega Sales Automation&#8482; automates and manages the entire sales process, from prospecting to product fulfillment"
+      ]
+    },
+    {
+      "ticker": "AKAM",
+      "name": "AKAMAI TECHNOLOGIES INC",
+      "mentions": 41,
+      "top_keywords": {
+        "compute": 31,
+        "artificial intelligence": 5,
+        "machine learning": 2,
+        "data center": 2,
+        "responsible ai": 1
+      },
+      "sample_language": [
+        "Success in these efforts is not guaranteed and will largely depend on our ability to create products that are competitive in the enterprise market, source additional co-location facilities, manage an uncertain supply chain for server related hardware and adapt our offerings to new or emerging techno",
+        "Additionally, the use of artificial intelligence by bad actors has heightened the sophistication and effectiveness of these types of attacks, and may be used to create attacks that current processes and technologies are unable to adequately address",
+        "We may not be successful in our artificial intelligence initiatives, which could adversely affect our business, reputation, or financial results"
+      ]
+    },
+    {
+      "ticker": "CART",
+      "name": "Maplebear Inc.",
+      "mentions": 40,
+      "top_keywords": {
+        "llm": 28,
+        "artificial intelligence": 4,
+        "machine learning": 3,
+        "large language model": 1,
+        "automation": 1,
+        "algorithm": 1,
+        "bias": 1,
+        "compute": 1
+      },
+      "sample_language": [
+        "Overall growth of our GTV, revenue, margin, and profitability depends on a number of factors, including our ability to: &#8226; attract new retailers, customers, brands, and shoppers, including through effective pricing of our offerings, and sustain and expand our relationships with existing retaile",
+        "We face heavy competition for consumers in certain demographics, including those in younger age groups who prioritize use cases, features, and fulfillment options that are different from customers in older age groups, such as convenience and specific product categories, as well as those in different",
+        "If we do not successfully address the current and future needs of consumers in different demographics, primarily certain age and income groups, including through brand marketing campaigns and introduction and promotion of relevant use cases, features, fulfillment options, and other functionalities, "
+      ]
+    },
+    {
+      "ticker": "UBER",
+      "name": "Uber Technologies, Inc",
+      "mentions": 39,
+      "top_keywords": {
+        "autonomous": 30,
+        "compute": 5,
+        "algorithm": 2,
+        "artificial intelligence": 1,
+        "machine learning": 1
+      },
+      "sample_language": [
+        "&#8226; Our growing use of artificial intelligence and machine learning may present additional risks, including risks associated with algorithm development or use, the tools and data sets used, and/or a complex, developing regulatory environment"
+      ]
+    },
+    {
+      "ticker": "SYM",
+      "name": "Symbotic Inc.",
+      "mentions": 38,
+      "top_keywords": {
+        "automation": 24,
+        "robotics": 9,
+        "llm": 4,
+        "bias": 1
+      },
+      "sample_language": [
+        "In the second quarter of fiscal year 2025, we entered into a Master Automation Agreement (&#8220;2025 Walmart MAA&#8221;) with Walmart for the development, manufacture, and installation of 400 micro-fulfillment systems if we satisfy certain performance metrics",
+        "Our BreakPack and micro-fulfillment systems, as well as any other system, software, service or product we may launch in the future, may not be well received by our customers, may not help us to generate new customers, may adversely affect the attrition rate of existing customers and may increase our",
+        "In addition, BreakPack, and the micro-fulfillment systems, as well as any new system, software, services and products may require increased operational expenses or customer acquisition costs and present new and difficult technological and intellectual property challenges that may subject us to claim"
+      ]
+    },
+    {
+      "ticker": "CRDO",
+      "name": "Credo Technology Group Holding Ltd",
+      "mentions": 38,
+      "top_keywords": {
+        "generative ai": 18,
+        "artificial intelligence": 4,
+        "ai system": 3,
+        "compute": 3,
+        "data center": 3,
+        "machine learning": 2,
+        "algorithm": 2,
+        "eu ai act": 2,
+        "bias": 1
+      },
+      "sample_language": [
+        "Within the data infrastructure industry, our target markets include networking OEMs, optical module OEMs, hyperscalers, 5G communications, IoT, HPC and artificial intelligence markets",
+        "The general compute and Artificial Intelligence and Machine Learning (AI/ML) infrastructure market is an emerging market that will depend on the success of generative AI technologies, and this market may not develop as we currently expect, including due to regulatory uncertainty",
+        "Our business operations and future prospects in the AI/ML infrastructure market will depend, in part, on the successful development, deployment, and market acceptance of generative AI technologies"
+      ]
+    },
+    {
+      "ticker": "LYFT",
+      "name": "Lyft, Inc.",
+      "mentions": 38,
+      "top_keywords": {
+        "autonomous": 34,
+        "algorithm": 2,
+        "artificial intelligence": 1,
+        "machine learning": 1
+      },
+      "sample_language": [
+        "Risk Factor Summary Our business operations are subject to numerous risks, factors and uncertainties, including those outside of our control, that could cause our actual results to be harmed, including risks regarding the following: Operational Factors &#8226; our limited operating history; &#8226; "
+      ]
+    },
+    {
+      "ticker": "SSNC",
+      "name": "SS&C Technologies Holdings Inc",
+      "mentions": 37,
+      "top_keywords": {
+        "automation": 19,
+        "machine learning": 5,
+        "algorithm": 5,
+        "artificial intelligence": 3,
+        "data center": 3,
+        "generative ai": 1,
+        "predictive analytics": 1
+      },
+      "sample_language": [
+        "In addition, new technology incorporating artificial intelligence (&#8220;AI&#8221;), including machine learning, Robotic Process Automation (&#8220;RPA&#8221;), and Generative AI, is gaining traction in the financial technology industry",
+        "Singularity uses artificial intelligence, machine learning, robotic process automation, intelligent workflow optimization and advanced predictive analytics to drive significant cost savings and continuous operational improvements for our clients",
+        "Smart, innovative technologies matched with deep functionality streamlines clients&#8217; businesses and provides users with critical business intelligence via machine learning, workflow engine and KPI and system health monitoring"
+      ]
+    },
+    {
+      "ticker": "MELI",
+      "name": "MERCADOLIBRE INC",
+      "mentions": 34,
+      "top_keywords": {
+        "llm": 24,
+        "generative ai": 4,
+        "compute": 2,
+        "ai system": 1,
+        "autonomous": 1,
+        "algorithm": 1,
+        "bias": 1
+      },
+      "sample_language": [
+        "Table of Contents Also, some of our employees in Argentina are represented by the Commercial Labor Union (Sindicato de Empleados de Comercio) and our fulfillment employees in Argentina are represented by Sindicato de Carga y Descarga, some of our employees in Uruguay are represented by the Commercia",
+        "In Mexico some of our fulfillment employees are represented by the Mexican Commercial Labor Union (Federaci&#243;n Obrera Sindical de la Rep&#250;blica Mexicana)",
+        "The following is a summary of the principal risks that we believe are material to our stockholders and prospective stockholders and that should be carefully considered when evaluating our Company, our business and prospects: &#9632; Our business depends on the continued growth of online commerce and"
+      ]
+    },
+    {
+      "ticker": "U",
+      "name": "Unity Software Inc.",
+      "mentions": 32,
+      "top_keywords": {
+        "machine learning": 9,
+        "data center": 9,
+        "compute": 3,
+        "generative ai": 2,
+        "ai model": 2,
+        "ai system": 2,
+        "bias": 2,
+        "artificial intelligence": 1,
+        "algorithm": 1,
+        "hallucination": 1
+      },
+      "sample_language": [
+        "We believe that the principal competitive factors in our market are: &#8226; cross-platform deployability; &#8226; the pace and quality of new product innovation, such as the rise of AI and machine learning and the increasing use of data and trained models; &#8226; supply from publishers, who may al",
+        "Overall growth of our revenue is difficult to predict and depends in part on our ability to execute on enhancing our machine learning stack and data infrastructure capabilities, our portfolio reset, and other growth strategies",
+        "For example, in the third quarter of 2024, we announced the launch of Unity 6 and we began a comprehensive rebuild of our machine learning stack and data infrastructure"
+      ]
+    },
+    {
+      "ticker": "QBTS",
+      "name": "D-Wave Quantum Inc.",
+      "mentions": 32,
+      "top_keywords": {
+        "compute": 28,
+        "data center": 2,
+        "artificial intelligence": 1,
+        "machine learning": 1
+      },
+      "sample_language": [
+        ", artificial intelligence and machine learning), we could be at a competitive disadvantage and our offerings could become technologically or commercially obsolete over time, in which case our revenue and operating results would suffer"
+      ]
+    },
+    {
+      "ticker": "HQY",
+      "name": "HEALTHEQUITY, INC.",
+      "mentions": 32,
+      "top_keywords": {
+        "data center": 12,
+        "machine learning": 4,
+        "ai system": 4,
+        "generative ai": 3,
+        "llm": 2,
+        "bias": 2,
+        "training data": 2,
+        "artificial intelligence": 1,
+        "automation": 1,
+        "compute": 1
+      },
+      "sample_language": [
+        "We believe we are one of few providers with a solution that encompasses all of the core functionality of healthcare saving and spending in one integrated, secure, and compliant system, including custodial administration of individual savings and investment accounts, card and electronic funds transac",
+        "For example, a HealthEquity team member can configure product attributes, including integration with a partner&#8217;s chosen healthcare price transparency or wellness tools, single sign on, sales and broker support sites, branding, member communication, custom fulfillment and payment card, savings ",
+        "Our current innovation efforts include, among others, increasing member and client self-service capabilities, developing APIs, driving electronic communication rather than paper, increasing straight-through processing, improving overall process times utilizing both traditional robotic process automa"
+      ]
+    },
+    {
+      "ticker": "KBR",
+      "name": "KBR, INC.",
+      "mentions": 31,
+      "top_keywords": {
+        "machine learning": 12,
+        "artificial intelligence": 11,
+        "compute": 3,
+        "ai system": 2,
+        "bias": 2,
+        "algorithm": 1
+      },
+      "sample_language": [
+        "&#8226; We may use artificial intelligence, machine learning, data science and similar technologies in our business, and challenges with properly managing such technologies could result in reputational harm, competitive harm, and legal liability, and adversely affect our business, financial conditio",
+        "Our capabilities and offerings include the following: &#8226; Leading national security and defense systems engineering; rapid prototyping; test and evaluation; aerospace acquisition support; data analytics and systems and platform integration; and sustainment engineering; &#8226; Operational expert",
+        "&#9702; Innovative, advanced digital capabilities to improve operations, reliability and environmental impact, including artificial intelligence and machine learning"
+      ]
+    },
+    {
+      "ticker": "EFX",
+      "name": "EQUIFAX INC",
+      "mentions": 29,
+      "top_keywords": {
+        "artificial intelligence": 17,
+        "machine learning": 6,
+        "algorithm": 2,
+        "bias": 2,
+        "compute": 1,
+        "data center": 1
+      },
+      "sample_language": [
+        "We may face risks associated with our use of certain artificial intelligence and machine learning models and systems",
+        "We use artificial intelligence and machine learning models in the development of some of our products and artificial intelligence systems to support the deployment of new applications and to improve the efficiency of our business operations",
+        "Similarly, if the artificial intelligence systems used for deploying new applications or improving operational processes are incorrectly configured, if the data we use to train them is incomplete or inadequate, or if sufficient testing is not completed, the performance of our business operations, as"
+      ]
+    },
+    {
+      "ticker": "TPR",
+      "name": "TAPESTRY, INC.",
+      "mentions": 29,
+      "top_keywords": {
+        "llm": 14,
+        "compute": 8,
+        "artificial intelligence": 5,
+        "machine learning": 2
+      },
+      "sample_language": [
+        "As a Company engaged in sourcing on a global scale, we are subject to the risks inherent in such activities, including, but not limited to: &#8226; disruptions or delays in shipments whether due to port congestion, logistics carrier disruption (including as a result of labor disputes), militant atta",
+        "Additionally, our digital business is subject to numerous risks that could adversely impact our results, including (i) a diversion of sales from our brand stores or wholesale customers, (ii) difficulty in recreating the in-store experience through digital channels, (iii) liability for online content",
+        "See &#8220; Our business is subject to the risks inherent in global sourcing activities&#8221; for additional risks related to our fulfillment networks"
+      ]
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv Holdings Co",
+      "mentions": 28,
+      "top_keywords": {
+        "data center": 16,
+        "artificial intelligence": 4,
+        "llm": 3,
+        "automation": 2,
+        "compute": 2,
+        "predictive analytics": 1
+      },
+      "sample_language": [
+        "Driven by passion and innovation, Vertiv believes there is a better way to meet the world&#8217;s accelerating demand for data, including the impact of emerging technologies such as artificial intelligence",
+        "This portion of the industry is growing rapidly with drivers such as adoption of cloud based 7 Table of contents &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&",
+        "As a consequence, for each of our seven main interconnected processes (opportunity-to-order, order-to-cash, procure-to-pay, sales inventory and operations planning, order-to-fulfillment, new product development and introduction, and multiple service processes), we have assigned clear business owners"
+      ]
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal Holdings, Inc.",
+      "mentions": 28,
+      "top_keywords": {
+        "llm": 13,
+        "artificial intelligence": 3,
+        "data center": 3,
+        "machine learning": 2,
+        "algorithm": 2,
+        "compute": 2,
+        "generative ai": 1,
+        "ai system": 1,
+        "bias": 1
+      },
+      "sample_language": [
+        "Further, we offer interest-bearing installment products for consumers in the U",
+        "We face competition from banks and financial institutions, which provide traditional payment methods (particularly credit cards and debit cards (collectively, &#8220;payment cards&#8221;), electronic bank transfers, credit, and installment methods), payment networks that facilitate payments for paym",
+        "We also face competition from providers offering a variety of payment products and services ranging from broader platform solutions to point solutions focused on a specific functionality or feature, including tokenized and contactless payment cards, digital wallets and mobile payments solutions, cre"
+      ]
+    },
+    {
+      "ticker": "DKS",
+      "name": "DICK'S SPORTING GOODS, INC.",
+      "mentions": 26,
+      "top_keywords": {
+        "llm": 11,
+        "machine learning": 9,
+        "compute": 2,
+        "artificial intelligence": 1,
+        "generative ai": 1,
+        "algorithm": 1,
+        "bias": 1
+      },
+      "sample_language": [
+        "In addition, our industry is experiencing continued technological developments and innovations (including the use of artificial intelligence (&#8220;AI&#8221;) and machine learning); if we are unable to provide enhancements and new features to our existing platforms or innovate quickly enough to kee",
+        "Our business is also highly dependent on the shipping and trucking industry to deliver products to our distribution centers, our eCommerce fulfillment centers, our stores and our athletes",
+        "Our results of operations may be adversely affected if we, or our vendors, are unable to secure adequate and timely transportation resources at competitive prices to fulfill our delivery schedules to our distribution centers, our eCommerce fulfillment centers, our stores or our athletes"
+      ]
+    },
+    {
+      "ticker": "PINS",
+      "name": "PINTEREST, INC.",
+      "mentions": 26,
+      "top_keywords": {
+        "machine learning": 5,
+        "generative ai": 4,
+        "compute": 3,
+        "data center": 3,
+        "eu ai act": 3,
+        "artificial intelligence": 2,
+        "algorithm": 2,
+        "ai system": 1,
+        "computer vision": 1,
+        "automation": 1
+      },
+      "sample_language": [
+        "Our advertising revenue could be harmed by many other factors, including: &#8226; decreases in the number of our MAUs or our MAU growth rate; &#8226; decreases in our users&#8217; engagement with us and the ads on our platform; &#8226; changes in the price of advertisements; 13 Part I &#8226; our in",
+        "Advancements in technology such as AI and machine learning are changing the way people work by automating tasks, enhancing communication, and improving decision-making processes, and our business may be harmed or we may face 19 Part I competitive disadvantage if we are slow to adopt these new techno",
+        "We use machine learning and AI technologies in our products and services, and we are making investments in expanding our AI capabilities, including ongoing deployment and improvement of existing machine learning and AI technologies, as well as developing new product features using AI technologies"
+      ]
+    },
+    {
+      "ticker": "GDDY",
+      "name": "GoDaddy Inc.",
+      "mentions": 26,
+      "top_keywords": {
+        "data center": 16,
+        "generative ai": 4,
+        "compute": 3,
+        "bias": 2,
+        "ai system": 1
+      },
+      "sample_language": [
+        "We are increasingly using new and rapidly evolving technologies, such as AI, to, among other things, develop new tools and products, and additional features in our existing products, including ongoing deployment and improvement of existing AI, and the development of new product technologies, such as",
+        "states, including Colorado and California, have adopted laws, rules and regulations directly relating to the use of AI or extending the application of existing laws, rules and regulations to AI systems and outputs",
+        "Any content created by us using generative AI tools may 24 Table of Contents not be subject to intellectual property protection which may affect our ability to commercialize such content"
+      ]
+    },
+    {
+      "ticker": "PCTY",
+      "name": "Paylocity Holding Corp",
+      "mentions": 26,
+      "top_keywords": {
+        "machine learning": 11,
+        "data center": 9,
+        "compute": 3,
+        "generative ai": 2,
+        "artificial intelligence": 1
+      },
+      "sample_language": [
+        "The market for our solutions is characterized by rapid technological advancements, including but not limited to artificial intelligence (&#8220;AI&#8221;) and machine learning, changes in client requirements, frequent new product introductions and enhancements and changing industry standards",
+        "New technologies that involve AI or machine learning or that are created using AI or machine learning may emerge that are able to deliver solutions at lower prices, more efficiently or more conveniently than our solutions, which could adversely impact our ability to compete",
+        "For example, the non-deterministic nature of generative AI outputs may compromise the reliability of our products which may lead to customer dissatisfaction and damage to our reputation"
+      ]
+    },
+    {
+      "ticker": "IT",
+      "name": "GARTNER INC",
+      "mentions": 25,
+      "top_keywords": {
+        "compute": 5,
+        "artificial intelligence": 3,
+        "machine learning": 3,
+        "ai system": 3,
+        "algorithm": 3,
+        "generative ai": 2,
+        "eu ai act": 2,
+        "large language model": 1,
+        "llm": 1,
+        "bias": 1
+      },
+      "sample_language": [
+        "Disruptive technologies, including in areas of artificial intelligence (&#8220;AI&#8221;) and machine learning, are rapidly changing the environment in which we, our clients, and our competitors operate and could affect the nature of how we generate revenue",
+        "We use, and may expand our use of, machine learning and AI technologies in some of our products, services, and processes",
+        "Developing, testing, and deploying AI systems will require additional investment and increase our costs"
+      ]
+    },
+    {
+      "ticker": "W",
+      "name": "Wayfair Inc.",
+      "mentions": 25,
+      "top_keywords": {
+        "artificial intelligence": 10,
+        "llm": 6,
+        "compute": 4,
+        "algorithm": 3,
+        "bias": 1,
+        "data center": 1
+      },
+      "sample_language": [
+        "In addition, if there are changes in the usage and functioning of search engines or decreases in consumer use of search engines, for example, as a result of the continued development of artificial intelligence technology, this could negatively impact our owned and operated and third-party publishers",
+        "Further, as we continue to expand our fulfillment capability or add new businesses with different 17 Table of Contents requirements, our logistics networks become increasingly complex and operating them becomes more challenging",
+        "For example, if our cloud provider fails or suffers an interruption or degradation of services, we could lose customer data and miss order fulfillment deadlines, which could harm our business"
+      ]
+    },
+    {
+      "ticker": "VIRT",
+      "name": "Virtu Financial, Inc.",
+      "mentions": 25,
+      "top_keywords": {
+        "compute": 14,
+        "artificial intelligence": 6,
+        "machine learning": 2,
+        "automation": 1,
+        "hallucination": 1,
+        "data center": 1
+      },
+      "sample_language": [
+        "&#8226; Artificial intelligence and machine learning are new and emerging technologies and could ultimately cause harm to our business",
+        "Additionally, adoption or development of similar or more advanced technologies by our competitors, including but not limited to artificial intelligence and related technologies, may require that we devote substantial resources to the development of more advanced technology to remain competitive",
+        "Artificial intelligence and machine learning are new and emerging technologies and could ultimately cause harm to our business"
+      ]
+    },
+    {
+      "ticker": "FOUR",
+      "name": "Shift4 Payments, Inc.",
+      "mentions": 25,
+      "top_keywords": {
+        "artificial intelligence": 9,
+        "compute": 7,
+        "machine learning": 5,
+        "data center": 2,
+        "algorithm": 1,
+        "bias": 1
+      },
+      "sample_language": [
+        "Our use of artificial intelligence and machine learning tools may subject us to additional risks and may adversely impact our reputation and the performance of our products, service offerings and business",
+        "We use artificial intelligence, machine learning, and automated decision-making technologies, including proprietary artificial intelligence and machine learning algorithms throughout our business, and are making significant investments to continuously improve our use of such technologies",
+        "For example, we use machine learning, artificial intelligence and automated decision-making technologies in our SkyTab Website Builder, a tool powered by artificial intelligence for restaurants to quickly and easily create a website for their business"
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "name": "ORACLE CORP",
+      "mentions": 24,
+      "top_keywords": {
+        "data center": 16,
+        "generative ai": 2,
+        "llm": 2,
+        "compute": 2,
+        "machine learning": 1,
+        "bias": 1
+      },
+      "sample_language": [
+        "Machine learning and AI, including generative AI, agentic AI and LLMs, are increasingly driving innovations in technology, and AI technology and services are highly competitive and rapidly evolving",
+        "We expect to continue to receive such claims as: &#8226; we continue to expand into new businesses and acquire companies; &#8226; the number of products and competitors in our industry segments grows; &#8226; the use and support of third-party code (including open source code) becomes more prevalent",
+        "Our stock price could also be affected by factors, some of which are beyond our control, including, among others: speculation in the press, social media and the analyst community; changes in recommendations or earnings-related estimates by financial analysts; changes in investors&#8217; or analysts&"
+      ]
+    },
+    {
+      "ticker": "AXON",
+      "name": "AXON ENTERPRISE, INC.",
+      "mentions": 24,
+      "top_keywords": {
+        "ai model": 6,
+        "generative ai": 4,
+        "data center": 4,
+        "ai system": 3,
+        "machine learning": 2,
+        "bias": 2,
+        "automation": 1,
+        "algorithm": 1,
+        "ai governance": 1
+      },
+      "sample_language": [
+        "In particular, AI and machine learning technologies are rapidly developing and as these technologies are incorporated into our products and the operations of our customers, the pace of change has in the past and may in the future continue to accelerate",
+        "Recent developments in the threat landscape include use of AI and machine learning by attackers to automate, enhance, and evade detection during cyberattacks, along with an increased number of cyber extortion and ransomware incidents",
+        "We offer systems and tools that incorporate AI-based technologies, including generative AI, for our customers"
+      ]
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler, Inc.",
+      "mentions": 24,
+      "top_keywords": {
+        "data center": 17,
+        "llm": 2,
+        "generative ai": 1,
+        "large language model": 1,
+        "bias": 1,
+        "training data": 1,
+        "compute": 1
+      },
+      "sample_language": [
+        "We are increasingly utilizing AI and ML capabilities, including, for example, those relating to generative AI and large language models, into our product offerings",
+        "In particular, some of the open source software we incorporate into our products may include LLMs",
+        "Using open source LLMs can present uncertainty regarding license terms and restrictions, potential exposure to intellectual property or privacy claims related to training data, increased risk of embedded bias or security vulnerabilities and challenges in compliance with evolving AI-specific regulati"
+      ]
+    },
+    {
+      "ticker": "CLS",
+      "name": "CELESTICA INC",
+      "mentions": 24,
+      "top_keywords": {
+        "data center": 10,
+        "llm": 6,
+        "compute": 3,
+        "automation": 2,
+        "artificial intelligence": 1,
+        "machine learning": 1,
+        "robotics": 1
+      },
+      "sample_language": [
+        "Our material assumptions include: growth in manufacturing outsourcing from customers in diversified markets; our ability to retain programs and customers, including no unexpected customer or program transfers, losses or disengagements; no unforeseen adverse changes in our mix of businesses; no undue",
+        "and other government budgets, changes in spending or budgetary priorities, or delays in contract awards; &#8226; geopolitical uncertainty; &#8226; foreign currency exchange rate fluctuations; &#8226; global operations and supply chain risks; &#8226; regulation of AI/Machine Learning (AI/ML) technolo",
+        "We offer a comprehensive range of product manufacturing and related supply chain services to customers in both of our segments, including design and development, new product introduction, engineering services, component sourcing, electronics manufacturing and assembly, testing, complex mechanical as"
+      ]
+    },
+    {
+      "ticker": "AUR",
+      "name": "Aurora Innovation, Inc.",
+      "mentions": 24,
+      "top_keywords": {
+        "artificial intelligence": 6,
+        "machine learning": 6,
+        "autonomous": 6,
+        "robotics": 2,
+        "automation": 1,
+        "bias": 1,
+        "gpu": 1,
+        "compute": 1
+      },
+      "sample_language": [
+        "&#8226; Issues relating to our use of artificial intelligence and machine learning technologies, combined with an uncertain legal and regulatory environment, could materially and adversely affect our business, financial condition and results of operations",
+        "Issues relating to our use of artificial intelligence and machine learning technologies, combined with an uncertain legal and regulatory environment, could materially and adversely affect our business, financial condition and results of operations",
+        "We use artificial intelligence and machine learning technologies in our operations, services, and products"
+      ]
+    },
+    {
+      "ticker": "MTCH",
+      "name": "Match Group, Inc.",
+      "mentions": 24,
+      "top_keywords": {
+        "data center": 6,
+        "artificial intelligence": 5,
+        "compute": 5,
+        "generative ai": 4,
+        "algorithm": 2,
+        "bias": 2
+      },
+      "sample_language": [
+        "These laws and regulations involve matters including antitrust and competition, broadband internet access, online commerce, advertising, user privacy, data protection, intermediary liability, protection of minors, biometrics, consumer protection, general safety, sex-trafficking, taxation, money laun",
+        "states are considering, or have already enacted, legislation or regulations that would impact the use of generative artificial intelligence (&#8220;AI&#8221;) by companies",
+        "In addition, the Federal Trade Commission has a compulsory process in nonpublic investigations involving products and services that use or claim to be produced using generative AI or claim to detect its use"
+      ]
+    },
+    {
+      "ticker": "IDXX",
+      "name": "IDEXX LABORATORIES INC /DE",
+      "mentions": 23,
+      "top_keywords": {
+        "artificial intelligence": 7,
+        "machine learning": 6,
+        "automation": 3,
+        "algorithm": 2,
+        "large language model": 1,
+        "ai model": 1,
+        "bias": 1,
+        "responsible ai": 1,
+        "compute": 1
+      },
+      "sample_language": [
+        "Our products that use generative or other forms of artificial intelligence may also be subject to new and emerging law and regulations, including the European Union&#8217;s Artificial Intelligence Act enacted in August 2024",
+        "; &#8226; Identifying, completing, and integrating acquisitions that enhance our existing businesses, create new businesses for us or expand the geographic areas in which we do business; &#8226; Continuing to incorporate AI, machine learning, and automation into our products and services and associa",
+        "Furthermore, over the last two years, there have been multiple class action lawsuits filed against large language model developers in the Northern District of California, the Southern District of New York, and the Middle District of Tennessee concerning alleged copyright and other intellectual prope"
+      ]
+    },
+    {
+      "ticker": "CWAN",
+      "name": "Clearwater Analytics Holdings, Inc.",
+      "mentions": 23,
+      "top_keywords": {
+        "compute": 7,
+        "data center": 7,
+        "machine learning": 2,
+        "training data": 2,
+        "artificial intelligence": 1,
+        "generative ai": 1,
+        "algorithm": 1,
+        "bias": 1,
+        "eu ai act": 1
+      },
+      "sample_language": [
+        "Such laws and regulations may cover sales 26 Table of Content s practices, taxes, user privacy, data protection, the use of generative AI, pricing, content, copyrights, distribution, electronic contracts, consumer protection, broadband residential Internet access and the characteristics and quality ",
+        "Issues in the development and use of artificial intelligence, combined with an uncertain regulatory environment, may result in reputational harm, liability, or other adverse consequences to our business operations",
+        "We use machine learning (ML) and AI technologies in our solutions and business, and we are making investments in expanding the use of AI solutions, including ongoing deployment and improvement of features using AI technologies"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc.",
+      "mentions": 22,
+      "top_keywords": {
+        "compute": 4,
+        "data center": 4,
+        "ai system": 3,
+        "algorithm": 2,
+        "ai regulation": 2,
+        "eu ai act": 2,
+        "artificial intelligence": 1,
+        "generative ai": 1,
+        "llm": 1,
+        "ai model": 1
+      },
+      "sample_language": [
+        "This includes generative AI and continuing to integrate AI capabilities into our products and services",
+        "The availability of our products and services and fulfillment of our customer contracts depend on the continuing operation of our information technology and communications systems",
+        "As a result of these and other challenges associated with innovative technologies, our implementation of AI systems could subject us to competitive harm, regulatory action, legal liability (including under new and proposed legislation and regulations), new applications of existing data protection, p"
+      ]
+    },
+    {
+      "ticker": "CIFR",
+      "name": "Cipher Mining Inc.",
+      "mentions": 22,
+      "top_keywords": {
+        "data center": 18,
+        "artificial intelligence": 2,
+        "compute": 2
+      },
+      "sample_language": [
+        "As we increase in size, and threat actors become increasingly sophisticated in using techniques and tools&#8212;including artificial intelligence&#8212;that circumvent security controls, evade detection and remove forensic evidence, we may become a more appealing target of hackers, malware, cyber-at",
+        "Additionally, any integration of artificial intelligence in our or any service providers&#8217; or partners&#8217; operations, products or services is expected to pose new or unknown cybersecurity risks and challenges"
+      ]
+    },
+    {
+      "ticker": "CVNA",
+      "name": "CARVANA CO.",
+      "mentions": 21,
+      "top_keywords": {
+        "llm": 5,
+        "generative ai": 4,
+        "autonomous": 3,
+        "compute": 3,
+        "artificial intelligence": 2,
+        "machine learning": 1,
+        "ai model": 1,
+        "algorithm": 1,
+        "data center": 1
+      },
+      "sample_language": [
+        "In addition, technology related to generative AI is advancing rapidly, and its future impact on the automotive ecosystem is unknown",
+        "In addition, technology related to generative AI is advancing rapidly, and its future impact on the automotive ecosystem is unknown",
+        "Our failure to successfully manage our logistics and fulfillment process could cause a disruption in our inventory supply chain and distribution, which may adversely affect our operating results and financial condition"
+      ]
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog, Inc.",
+      "mentions": 21,
+      "top_keywords": {
+        "artificial intelligence": 7,
+        "machine learning": 6,
+        "compute": 4,
+        "data center": 2,
+        "generative ai": 1,
+        "llm": 1
+      },
+      "sample_language": [
+        "Cyber-attacks, computer malware, viruses, employee mistakes or malfeasance, social engineering (including through deep fakes and spear phishing), malicious code, denial-of-service attacks, credential harvesting and general hacking have become more prevalent in our industry, particularly against clou",
+        "Competition for these personnel is intense, especially for engineers experienced in designing and developing SaaS applications,those experienced with artificial intelligence and machine learning, and experienced sales professionals",
+        "We believe our culture has been a key contributor to our success to date and that the critical nature of the platform that we provide promotes a sense of greater purpose and fulfillment in our employees"
+      ]
+    },
+    {
+      "ticker": "TTD",
+      "name": "Trade Desk, Inc.",
+      "mentions": 21,
+      "top_keywords": {
+        "compute": 7,
+        "algorithm": 5,
+        "artificial intelligence": 4,
+        "automation": 3,
+        "machine learning": 1,
+        "data center": 1
+      },
+      "sample_language": [
+        "Koa, our predictive algorithmic tool, utilizes artificial intelligence to process complex data sets and make recommendations for campaign optimizations",
+        "Koa&#8217;s artificial intelligence capabilities are used across various aspects of the platform, including predictive clearing, ad impression relevance scoring, measurement and forecasting, budget optimization and key performance indicator scoring",
+        "In addition, as we develop and introduce new offerings, including those incorporating or utilizing artificial intelligence and machine learning and new processing of personal information, including identifiable information, they may raise new, or heighten existing, technological, security, legal and"
+      ]
+    },
+    {
+      "ticker": "NXT",
+      "name": "Nextpower Inc.",
+      "mentions": 21,
+      "top_keywords": {
+        "ai system": 9,
+        "generative ai": 3,
+        "artificial intelligence": 2,
+        "bias": 2,
+        "ai model": 1,
+        "algorithm": 1,
+        "ai governance": 1,
+        "compute": 1,
+        "data center": 1
+      },
+      "sample_language": [
+        "The use of artificial intelligence by malicious actors may increase the frequency, speed, scale, and impact of these threats",
+        "We use systems and tools that incorporate AI-based technologies, including generative AI, in connection with our business",
+        "The development, adoption, integration, deployment and use of generative AI technology remains in early stages, and ineffective or inadequate AI governance, development, adoption, integration, deployment or use practices by us or third parties could result in unintended consequences"
+      ]
+    },
+    {
+      "ticker": "FLS",
+      "name": "FLOWSERVE CORP",
+      "mentions": 21,
+      "top_keywords": {
+        "artificial intelligence": 7,
+        "automation": 6,
+        "machine learning": 4,
+        "neural network": 1,
+        "robotics": 1,
+        "bias": 1,
+        "compute": 1
+      },
+      "sample_language": [
+        ", positioners, actuators, limit switches and associated accessories) with Distributed Control Systems (\"DCS\") and Asset Management Systems (&#8220;AMS&#8221;); (2) developing and deploying next-generation hardware and software solutions that leverage our in-depth domain knowledge and artificial inte",
+        "To remain competitive, we must invest in manufacturing, technology, such as artificial intelligence and machine learning, marketing, customer service and support and our distribution networks",
+        "Failure to successfully develop and introduce new products and integrate new technologies, including artificial intelligence and machine learning, could limit our ability to grow and maintain our competitive position and adversely affect our financial condition, results of operations and cash flow"
+      ]
+    }
+  ]
+}
