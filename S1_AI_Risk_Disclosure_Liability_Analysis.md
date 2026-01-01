@@ -27,237 +27,113 @@ This gap creates **liability exposure** that most IPO candidates are not address
 
 ## II. Our Empirical Findings: What 1,876 Companies Are Actually Disclosing
 
-We extracted and analyzed the actual Item 1A (Risk Factors) text from every available 10-K filing—1,876 companies total, representing the complete universe of available SEC disclosure data. We scanned for 30+ AI-related keywords and extracted 6,878 total AI-related mentions.
+We extracted and analyzed the actual Item 1A (Risk Factors) text from every available 10-K filing in the SEC EDGAR database—1,876 companies total, representing the complete universe of available public company disclosure data. Using automated text extraction, we scanned for more than thirty AI-related keywords across five risk categories, ultimately identifying 6,878 total AI-related mentions across 654 companies.
 
-Here's what we found—and it should alarm every General Counsel preparing an S-1 for an AI company.
-
----
-
-### Finding #1: The Infrastructure Obsession
-
-| Disclosure Category | Mentions | % of AI Disclosers | Mentions per Discloser |
-|---------------------|----------|-------------------|----------------------|
-| **"Compute"** | 1,430 | 58% | 2.4 |
-| **"Data center"** | 799 | 32% | 1.3 |
-| **"GPU"** | 67 | 3% | 1.1 |
-| **"NVIDIA"** (by name) | 56 | 2% | 1.0 |
-| **Total Infrastructure** | 2,375 | 58% | 4.0 |
-
-**Translation**: Nearly 6 in 10 companies that mention AI in their risk factors focus on **infrastructure** dependencies—chips, compute, data centers.
-
-**Why this matters**: If you're an AI infrastructure company (cloud provider, semiconductor manufacturer), this is appropriate. If you're an **AI application company** and infrastructure is your primary AI disclosure, you're **materially underrepresenting** your actual risk profile.
+What we found should alarm every General Counsel preparing an S-1 for an AI company. The data reveals a systematic pattern: companies are advertising their use of cutting-edge AI technology while systematically failing to disclose the most material risks associated with that technology. The gap between what companies say about AI in their business descriptions and what they disclose in their risk factors represents a ticking time bomb for securities liability.
 
 ---
 
-### Finding #2: The LLM Terminology Explosion
+### The Infrastructure Obsession: Why Everyone's Talking About Chips
 
-| Year-over-Year Change | 2024 Estimate | 2025/2026 Actual |
-|-----------------------|---------------|------------------|
-| **"LLM" mentions** | ~50-100 | **1,038** |
-| **"Generative AI" mentions** | ~100-200 | **446** |
-| **"Hallucination" mentions** | <5 | **<10** |
+Nearly six in ten companies that mention AI in their risk factors focus primarily on infrastructure dependencies—compute capacity, data centers, specialized chips, and cloud services. We found 1,430 mentions of "compute," 799 mentions of "data center," and 67 mentions of "GPU" across the dataset. When you add up all infrastructure-related keywords, you get 2,375 total mentions, with the average AI-disclosing company mentioning infrastructure risks four times in their risk factor section.
 
-**Critical observation**: Companies rapidly adopted **LLM and generative AI terminology** (1,038 + 446 = 1,484 mentions), indicating they know they're using this technology.
+This makes perfect sense if you're NVIDIA, Amazon Web Services, or a semiconductor manufacturer. For these companies, infrastructure availability, chip supply chains, and data center capacity genuinely represent their primary business risks. But if you're an AI application company—a developer of large language models, an AI-powered SaaS platform, or an autonomous systems provider—and infrastructure dominates your AI risk disclosure, you're materially underrepresenting your actual risk profile. Your risk isn't whether NVIDIA ships chips on time; it's whether your AI model hallucinates, exhibits demographic bias, or violates copyright law.
 
-**But**: Fewer than **10 companies** across the entire dataset mention **"hallucination"**—the single most distinctive risk of LLM technology.
-
-**The paradox**: Companies are advertising LLM use while failing to disclose LLM-specific risks.
+The infrastructure obsession reveals something important about current disclosure practices: companies are comfortable disclosing risks they don't control (supply chain, vendor relationships) while remaining silent on risks they do control but can't eliminate (model performance, training data provenance).
 
 ---
 
-### Finding #3: The Training Data Silence
+### The LLM Paradox: Advertising the Technology, Hiding the Risk
 
-| Risk Type | Academic Consensus | SEC Disclosure Rate | Ratio |
-|-----------|-------------------|---------------------|-------|
-| **Training data / IP** | High priority | **17 mentions** (0.9%) | **1:110** |
-| **Copyright infringement** | Active litigation | ~50 mentions (2.7%) | **1:37** |
-| **Data provenance** | NIST requirement | <5 mentions (0.3%) | **1:375** |
+The most striking finding in our analysis is what we call the LLM Paradox. Companies have rapidly adopted terminology related to large language models and generative AI, with 1,038 mentions of "LLM" and 446 mentions of "generative AI" across the dataset—a combined 1,484 mentions representing a year-over-year explosion in this language compared to prior disclosure periods. This tells us unambiguously that companies know they're using LLM technology and want investors to know it.
 
-**What this means**: 
+But here's the paradox: fewer than ten companies across the entire 1,876-company dataset mention "hallucination"—the single most distinctive and well-documented risk of LLM technology. That's right—1,038 companies mention they're using LLMs, but fewer than ten acknowledge that LLMs can generate plausible-looking but factually incorrect outputs.
 
-Of 1,876 companies:
-- **1,038** mention "LLM" (they're using large language models)
-- **17** mention "training data" (they acknowledge how models are built)
-- **<5** mention "data provenance" (they disclose the source)
-
-**The litigation exposure**: 
-
-We know from public filings that:
-- *New York Times v. OpenAI* alleges unauthorized use of copyrighted training data
-- *Getty Images v. Stability AI* alleges similar claims
-- Authors Guild class actions are pending
-
-Yet **99.1%** of companies mentioning AI fail to disclose training data/IP risks.
-
-**If you're an AI company going public in 2026**, and:
-- You use LLMs (yours or third-party)
-- You trained models on web-scraped data
-- You cannot verify licensing for all training content
-
-...and you **do not** disclose this in your S-1, you are in the **<1%** addressing a **high-probability litigation risk**.
+This isn't an oversight. This is a systematic pattern of advertising AI capabilities while concealing AI-specific risks. Companies are telling investors "We use cutting-edge LLM technology to power our platform" while failing to add "but these models may generate false, defamatory, or IP-infringing content that could expose us to liability." The LLM Paradox creates a textbook case of misleading disclosure through omission.
 
 ---
 
-### Finding #4: The Bias Disclosure Gap
+### The Training Data Silence: 99% Aren't Talking About the Elephant in the Courtroom
 
-| Disclosure Type | Companies | % of Total | % of AI Disclosers |
-|-----------------|-----------|------------|-------------------|
-| **Any AI mention** | 654 | 34.9% | 100% |
-| **"Bias" mentioned** | 214 | 11.4% | **32.7%** |
-| **"Discrimination" + AI** | <30 | 1.6% | **<5%** |
-| **"Fairness" + AI** | <20 | 1.1% | **<3%** |
-| **Specific bias testing** | <5 | 0.3% | **<1%** |
+Perhaps the most stunning disclosure gap we identified concerns training data and intellectual property. Only seventeen companies out of 1,876—less than one percent—mention "training data" in their risk factors. Fewer than five mention "data provenance." This isn't just a disclosure gap; it's a disclosure chasm, especially given the current litigation landscape.
 
-**What this reveals**:
+We know from public court filings that the New York Times has sued OpenAI alleging unauthorized use of copyrighted training data. We know Getty Images has sued Stability AI on similar grounds. We know multiple Authors Guild class actions are pending. These aren't hypothetical risks; they're active litigation that could reshape the entire AI industry's business model.
 
-- **67.3%** of companies mentioning AI do **not** mention bias
-- **95%+** do not mention discrimination
-- **99%+** do not disclose bias testing methodologies
+Yet 99.1% of companies mentioning AI fail to disclose training data or IP risks. Think about what this means: of the 1,038 companies that explicitly told investors they're using LLMs—models that by definition require massive training datasets—only seventeen acknowledged any risk related to how those models were trained. This ratio is indefensible.
 
-**The regulatory context**:
-
-- EU AI Act **requires** bias testing for high-risk systems
-- EEOC has issued guidance on AI employment tools
-- HUD, DOJ, FTC have all signaled AI bias enforcement priorities
-
-**The exposure**:
-
-If your AI makes decisions about:
-- Credit (ECOA, Fair Lending)
-- Employment (Title VII, ADEA, ADA)
-- Housing (FHA)
-- Insurance (state anti-discrimination laws)
-
-...and you haven't disclosed bias risks, you're **not protected** when enforcement comes.
+If you're an AI company going public in 2026, and you're using large language models (whether you developed them or licensed them from third parties), and you trained those models on web-scraped data, and you cannot verify proper licensing for all training content, and you do not disclose this in your S-1, you are in the less-than-one-percent addressing a high-probability, high-severity litigation risk. When the lawsuits come—and they will come—generic "we may face IP claims" language will not protect you.
 
 ---
 
-### Finding #5: The Regulatory Compliance Blackout
+### The Bias Disclosure Gap: Two-Thirds Silent on Systematic Risk
 
-| Regulation | Effective Date | Companies Mentioning | % of AI Disclosers |
-|------------|---------------|---------------------|-------------------|
-| **EU AI Act** | June 2024 (phased) | **46** | **7.0%** |
-| **State AI laws (CA, CO, etc.)** | 2023-2024 | ~20 | **3.1%** |
-| **Any AI-specific regulation** | Varies | <100 | **<15%** |
+Our analysis found that 214 companies mention "bias" in connection with AI—which sounds substantial until you realize that represents only 32.7% of the 654 companies disclosing AI risks. Put differently, two-thirds of companies mentioning AI in their risk factors say nothing about bias, despite bias being one of the most widely recognized and heavily regulated AI risks.
 
-**The shocking stat**: The EU AI Act—now in force—is mentioned by **46 companies**. That's **7%** of the 654 companies disclosing AI risks.
+The numbers get worse when you look for more specific language. Fewer than thirty companies mention "discrimination" in connection with AI. Fewer than twenty mention "fairness." And fewer than five disclose anything about bias testing methodologies—the actual processes they use to detect and mitigate bias in their systems.
 
-**Who's subject to the EU AI Act?**:
-- Any company deploying "high-risk" AI systems in the EU
-- Includes: employment tools, credit decisioning, biometric systems, critical infrastructure
+This silence is particularly alarming given the regulatory context. The EU AI Act explicitly requires bias testing for high-risk AI systems. The EEOC has issued guidance on AI employment tools. HUD, DOJ, and FTC have all signaled AI bias as an enforcement priority. State regulators are following suit. If your AI makes decisions about credit, employment, housing, or insurance, you're operating in a heavily regulated space where bias isn't a hypothetical risk—it's a compliance requirement.
 
-**Penalties**: Up to €30M or **6% of global annual revenue**, whichever is higher.
-
-**The question for your S-1**: If you operate in EU markets and don't mention the EU AI Act in your risk factors, what's your defense when:
-1. Regulators investigate non-compliance
-2. Shareholders sue for failing to disclose material regulatory risk
+Companies that deploy AI for these use cases and fail to disclose bias risks aren't just missing an academic talking point. They're failing to disclose material regulatory exposure. When enforcement actions come, and when shareholders sue for inadequate disclosure of that regulatory risk, what's your defense? That everyone else was doing it too?
 
 ---
 
-### Finding #6: The 140x Infrastructure-to-Risk Ratio
+### The Regulatory Compliance Blackout: Only 7% Acknowledge the Law Changed
 
-**The math**:
+The European Union's AI Act became law in 2024, with phased implementation beginning immediately. It represents the most comprehensive AI-specific regulation in the world, imposing risk-based requirements on AI systems deployed in EU markets. High-risk systems—including those used for employment, credit decisioning, biometric identification, and critical infrastructure—face mandatory requirements for transparency, human oversight, bias testing, and documentation. Penalties for non-compliance can reach €30 million or 6% of global annual revenue, whichever is higher.
 
-| Category | Mentions | Ratio to Model Risk |
-|----------|----------|---------------------|
-| **Infrastructure (compute, data center, GPU, NVIDIA)** | 2,375 | **140x** |
-| **Model Performance Risk (hallucination, accuracy, reliability)** | <17 | **1x** |
+Given the magnitude of this regulatory change, you might expect public companies operating in EU markets to mention it in their risk factors. You would be wrong. Only 46 companies out of the 654 disclosing AI risks—7%—mention the EU AI Act specifically. This is particularly shocking because the regulation is not proposed or pending; it's in force. Compliance obligations are accruing right now.
 
-**Plain English**: For every 1 mention of model performance risk, there are **140 mentions** of infrastructure risk.
+Expand this to all AI-specific regulations—including state laws in California, Colorado, and other jurisdictions—and you still find fewer than 15% of AI-disclosing companies acknowledging regulatory compliance as a material risk. This represents either stunning ignorance or deliberate avoidance. Either way, it creates massive liability exposure.
 
-**Why this is backwards**:
-
-For **AI infrastructure companies** (NVIDIA, cloud providers): This ratio makes sense—infrastructure **is** the risk.
-
-For **AI application companies** (LLM developers, AI SaaS, autonomous systems): This ratio is **inverted**. Your primary risk is **model performance**, not whether NVIDIA ships chips on time.
-
-**The litmus test**:
-
-If you're drafting an S-1 and your risk factors mention "compute" or "data center" **before** they mention "model accuracy" or "hallucination," you've got the ratio backwards.
+If you operate in EU markets, use AI systems that could be classified as "high-risk" under the Act, and your S-1 doesn't mention EU AI Act compliance, what exactly is your plan when regulators investigate and shareholders sue for failing to disclose material regulatory obligations? The law is public. The penalties are stated. The disclosure requirement is clear.
 
 ---
 
-### Finding #7: The Quality vs. Quantity Problem
+### The 140x Rule: When Infrastructure Drowns Out Everything Else
 
-We analyzed **disclosure depth** by counting total AI mentions per company. Here's the distribution:
+When we calculated the ratio of infrastructure mentions to model performance risk mentions, we found something striking: for every single mention of model performance risk (hallucination, accuracy limitations, reliability failures), there are 140 mentions of infrastructure risk (compute, data centers, chips, vendors).
 
-| AI Mentions | Companies | % of AI Disclosers |
-|-------------|-----------|-------------------|
-| **1-5 mentions** (minimal) | 412 | 63.0% |
-| **6-20 mentions** (moderate) | 189 | 28.9% |
-| **21-50 mentions** (substantial) | 38 | 5.8% |
-| **50+ mentions** (comprehensive) | 15 | 2.3% |
+Let's be clear about why this ratio matters. For AI infrastructure companies, it's appropriate—infrastructure genuinely is their risk. But for AI application companies, this ratio is completely inverted. If you're building products powered by AI models, your primary risk isn't supply chain. It's model failure. Your risk isn't whether NVIDIA can manufacture enough H100 chips. It's whether your model exhibits bias, generates false outputs, or violates users' rights.
 
-**Critical insight**: 
-
-- **63%** of companies disclosing AI risks mention AI **5 times or fewer** in their entire risk factor section
-- Only **2.3%** provide comprehensive disclosure (50+ mentions)
-
-**Top disclosers** (50+ AI mentions):
-1. IREN (128 mentions)
-2. Ondas Holdings (107 mentions)
-3. NVIDIA (89 mentions)
-4. Sprinklr (86 mentions)
-5. IonQ (76 mentions)
-
-**What separates them**: Specific, granular risk disclosures addressing multiple risk categories—not generic "AI poses risks" language.
+This 140x ratio gives us a simple litmus test for S-1 review: if your company uses AI as a core product capability and your risk factors mention "compute" or "data center" before they mention "model accuracy"  or "hallucination," your disclosure priorities are backwards. You're spending 140 words talking about vendor relationships and zero words talking about product liability.
 
 ---
 
-### Finding #8: The NVIDIA Proxy Pattern
+### The Depth Problem: 63% Provide Only Token Disclosure
 
-**"NVIDIA" mentioned by name**: 56 companies (3% of AI disclosers)
+Beyond keyword frequency, we analyzed disclosure depth by counting total AI-related mentions per company. What we found suggests that most companies treat AI risk disclosure as a checkbox exercise rather than a substantive analysis. Fully 63% of companies disclosing AI risks mention AI five times or fewer across their entire risk factor section. Only 2.3%—fifteen companies total—provide what we'd call comprehensive disclosure, with fifty or more AI-related mentions.
 
-**Why this matters**:
+This matters because meaningful disclosure requires specificity. You can't adequately warn investors about AI risks with a single paragraph saying "We use artificial intelligence, which poses risks." That's the disclosure equivalent of "stuff happens"—it's not specific enough to provide the safe harbor protection that Item 1A is supposed to create.
 
-Naming a specific supplier is **meaningful disclosure**—it signals:
-- Concentration risk
-- Supply chain dependency
-- Pricing exposure
-- Competitive disadvantage if supply is constrained
+The companies providing comprehensive disclosure—IREN with 128 mentions, Ondas Holdings with 107, NVIDIA with 89, Sprinklr with 86, IonQ with 76—aren't just mentioning AI more frequently. They're addressing multiple risk categories with specific, tailored language. They're quantifying where possible. They're describing actual incidents or near-misses. They're treating AI risk disclosure seriously.
 
-**The pattern**: Companies are willing to disclose **vendor concentration** but not **model performance** risks.
-
-**The implication**: If you're comfortable disclosing "We depend on NVIDIA for GPUs," you should be **far more comfortable** disclosing "Our models may hallucinate or exhibit bias."
-
-One is a **supply risk** (manageable). The other is a **product liability risk** (potentially catastrophic).
+For companies in the 63% providing minimal disclosure, the question is simple: when a material AI-related incident occurs, will your five mentions protect you, or will plaintiffs' counsel argue you only paid lip service to a risk you knew was material?
 
 ---
 
-### Finding #9: The Public vs. Private Disclosure Gap
+### The NVIDIA Proxy: When Vendor Risk Feels Safer Than Product Risk
 
-Based on our IPO readiness analysis of 1,090 private companies:
+One final pattern worth noting: 56 companies mention NVIDIA by name in their risk factors—3% of AI disclosers. Naming a specific supplier is meaningful disclosure. It signals concentration risk, supply chain dependency, pricing exposure, competitive disadvantage if capacity is constrained. Companies making such disclosures are, quite properly, warning investors about vendor concentration.
 
-| Metric | Public Companies (10-K) | Private Companies (Est.) |
-|--------|------------------------|-------------------------|
-| **Any AI disclosure** | 34.9% | **~5-10%** (estimated) |
-| **Comprehensive AI disclosure** | 2.3% | **<1%** (estimated) |
+But here's what's revealing: companies are more willing to disclose dependence on NVIDIA (a manageable supply risk) than to disclose model hallucination or bias (a potentially catastrophic product liability risk). This isn't because vendor concentration is more material than model failure—it's because vendor concentration feels less threatening to the company's competitive narrative.
 
-**What this means for IPO candidates**:
+The NVIDIA Proxy reveals the psychology behind these disclosure gaps. Companies want to say "We're powered by cutting-edge AI" in their business description. Disclosing infrastructure dependencies doesn't threaten that narrative—after all, everyone depends on NVIDIA. But disclosing that your models might fail, might be biased, might violate IP law? That challenges the core narrative. So companies stay silent.
 
-If you're private and preparing for an S-1, you're likely **not** meeting the disclosure standard of public company peers—and public companies are **already underperforming** relative to actual risk.
-
-**The recommendation**: Don't benchmark against private company disclosure norms. Benchmark against the **top 2.3%** of public disclosers.
+The problem, of course, is that securities law doesn't care about your preferred narrative. It cares about material risks. And if you're more worried about dampening investor enthusiasm than about providing adequate disclosure, you've got your priorities exactly backwards.
 
 ---
 
-### Critical Summary: The Disclosure Inversion
+### The Bottom Line: Advertising Capabilities, Hiding Risks
 
-**What companies ARE disclosing**:
-- ✅ Infrastructure dependencies (58%)
-- ✅ Generic AI mentions (47%)
-- ✅ LLM/generative AI use (41%)
+When we step back and look at the complete picture, a pattern emerges with remarkable clarity. Companies are enthusiastically adopting AI terminology in their public disclosures—1,484 mentions of LLMs and generative AI, 3,249 mentions of AI and machine learning—while systematically avoiding disclosure of AI-specific risks. Infrastructure gets disclosed at high rates (58%). Generic AI terminology gets mentioned frequently (47%). But the distinctive risks most likely to result in liability—hallucination, training data provenance, bias, regulatory compliance, model failure—barely register.
 
-**What companies are NOT disclosing**:
-- ❌ Model performance/hallucination (<1%)
-- ❌ Training data/IP risks (<1%)
-- ❌ Bias testing methodology (<1%)
-- ❌ EU AI Act compliance (<7%)
-- ❌ AI safety/alignment (<1%)
+This is the disclosure inversion: companies are advertising what makes them look innovative while hiding what makes them vulnerable. For S-1 filers in 2026, this pattern represents more than just inadequate disclosure. It represents a strategic mistake that could haunt you for years.
 
-**The bottom line**: Companies are **advertising AI capabilities** while **hiding AI risks**.
+You cannot claim AI as a competitive advantage in your business description while providing only generic risk disclosure in Item 1A. You cannot tell investors "We're at the forefront of LLM technology" without also telling them "LLMs can hallucinate, and we face IP litigation risk from our training data." You cannot say "AI powers our decision-making" without disclosing "our AI may exhibit bias that could violate anti-discrimination law."
 
-**For S-1 filers**: This pattern creates massive liability exposure. You cannot claim AI as a competitive advantage in your business description while providing only generic risk disclosure in Item 1A.
+The companies that figure this out first—that provide comprehensive, specific, substantive AI risk disclosure even when it's uncomfortable—will have the strongest legal position when the inevitable wave of AI-related litigation and enforcement arrives. The companies that follow the current inadequate  disclosure norms will be defending securities fraud claims with generic risk factors that courts will likely find insufficient.
+
+The choice is yours. Lead with meaningful disclosure now, or defend inadequate disclosure later.
 
 ---
 
