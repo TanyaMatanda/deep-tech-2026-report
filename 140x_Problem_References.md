@@ -38,6 +38,8 @@ Hagendorff, Thilo. "The Ethics of AI Ethics: An Evaluation of Guidelines." *Mind
 
 Floridi, Luciano, and Josh Cowls. "A Unified Framework of Five Principles for AI in Society." *Harvard Data Science Review* 1, no. 1 (2019). https://doi.org/10.1162/99608f92.8cd550d1.
 
+Slattery, Peter, Alexander K. Saeri, Emily A.C. Grundy, Jess Graham, Michael Noetel, Risto Uuk, James Dao, Soroush Pour, Stephen Casper, and Neil Thompson. "The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy of Risks from Artificial Intelligence." MIT FutureTech Working Paper, March 2025. https://airisk.mit.edu.
+
 ---
 
 ### Securities Law and Disclosure Standards

@@ -385,27 +385,73 @@ Either answer suggests disclosure isn't your real problem. Governance is.
 
 ## IV. The Academic Framework: What MIT, Stanford, and NIST Say You Should Be Disclosing
 
-While I cannot access your specific Google Sheet, academic frameworks from MIT, Stanford HAI, NIST, and EU AIHLEG identify **seven core AI risk categories** that should appear in material disclosures:
+Academic research on AI risk has matured significantly. The **MIT AI Risk Repository** (Slattery et al., 2025) provides the most comprehensive taxonomy to date—a meta-review of 43 risk frameworks that identifies 777 distinct AI risks organized into 7 domain categories. Cross-referencing our SEC disclosure data against this taxonomy reveals additional disclosure gaps beyond those previously identified.
 
-### The Seven Categories (Academic Consensus)
+### The MIT AI Risk Repository: Seven Domain Categories
 
-| Risk Category | Academic Risk Level | Current Disclosure Rate | Gap |
-|---------------|-------------------|------------------------|-----|
-| **1. Model Performance & Reliability** | High | <1% | ❌ **Critical** |
-| **2. Training Data & IP** | High | <1% | ❌ **Critical** |
-| **3. Bias & Fairness** | High | 9% | ⚠️ **Significant** |
-| **4. Privacy & Data Protection** | High | ~30% | ⚠️ **Moderate** |
-| **5. Security & Adversarial Attacks** | High | ~30% | ⚠️ **Moderate** |
-| **6. Regulatory Compliance** | Medium | <1% | ❌ **Critical** |
-| **7. Societal & Ethical Impacts** | Medium | <1% | ❌ **Critical** |
+| MIT Domain | Description | Our Data Shows |
+|------------|-------------|----------------|
+| **1. Discrimination & Toxicity** | Bias, unfair treatment, harmful outputs | 214 mentions (9%) — **Moderate gap** |
+| **2. Privacy & Security** | Data protection, adversarial attacks | ~30% — **Moderate gap** |
+| **3. Misinformation** | Hallucination, false content generation | <10 mentions (<1%) — **Critical gap** |
+| **4. Malicious Actors & Misuse** | Jailbreaking, dual-use, weaponization | **Rarely disclosed** — Critical gap |
+| **5. Human-Computer Interaction** | Over-reliance, automation bias, manipulation | **Rarely disclosed** — Critical gap |
+| **6. Socioeconomic & Environmental** | Labor displacement, power concentration, carbon footprint | **Rarely disclosed** — Critical gap |
+| **7. AI System Safety** | Alignment, goal conflict, dangerous capabilities | **Rarely disclosed** — Critical gap |
 
-### What This Means
+### Additional Risk Categories Warranting Disclosure
 
-If you're an AI-focused company filing an S-1 in 2026 and your risk factors don't address **all seven categories**, your disclosure is materially deficient compared to:
-- Academic consensus on AI risk
-- EU regulatory requirements (AI Act)
-- NIST AI Risk Management Framework
-- Likely SEC expectations going forward
+Our initial analysis focused on keywords commonly appearing in SEC filings. The MIT taxonomy identifies additional risk subcategories that are materially understated in current disclosures:
+
+**Malicious Use Risks (MIT 4)**
+- *Adversarial attacks*: Deliberate manipulation of AI inputs to cause errors
+- *Jailbreaking*: Circumvention of AI safety measures
+- *Dual-use concerns*: Technology applicable to both beneficial and harmful purposes
+
+**Human-Computer Interaction Risks (MIT 5)**
+- *Automation bias*: Users over-trusting AI outputs without verification
+- *Human oversight erosion*: Reduction in human review of AI decisions
+- *Psychological harms*: AI-driven manipulation, persuasion, or addiction
+
+**Socioeconomic & Environmental Risks (MIT 6)**
+- *Labor displacement*: Workforce impacts from AI automation
+- *Power concentration*: Market concentration around AI capabilities
+- *Environmental harm*: Energy consumption and carbon footprint of AI infrastructure
+- *Economic devaluation*: Displacement of human creative and knowledge work
+
+**AI Safety & Alignment Risks (MIT 7)**
+- *Goal misalignment*: AI systems pursuing objectives that diverge from human intent
+- *Autonomous agents*: AI systems taking consequential actions with minimal oversight
+- *Emergent behaviors*: Unexpected capabilities or behaviors in complex AI systems
+
+### Mapping Current Disclosure Against MIT Standards
+
+| Risk Category | MIT Priority | Current SEC Disclosure | Gap Assessment |
+|---------------|--------------|----------------------|----------------|
+| **Model Performance & Reliability** | High | <1% | ❌ **Critical** |
+| **Training Data & IP** | High | <1% | ❌ **Critical** |
+| **Bias & Fairness** | High | 9% | ⚠️ **Significant** |
+| **Privacy & Data Protection** | High | ~30% | ⚠️ **Moderate** |
+| **Security & Adversarial Attacks** | High | ~30% | ⚠️ **Moderate** |
+| **Regulatory Compliance** | High | <7% | ❌ **Critical** |
+| **Malicious Use / Dual-Use** | High | <1% | ❌ **Critical** |
+| **Human-AI Interaction** | Medium | <1% | ❌ **Critical** |
+| **Socioeconomic Impact** | Medium | <5% | ⚠️ **Significant** |
+| **Environmental Impact** | Medium | <1% | ❌ **Critical** |
+
+### Implications for Disclosure Strategy
+
+The MIT taxonomy suggests that current SEC disclosure practices significantly understate AI risk across multiple dimensions:
+
+1. **Companies focus on infrastructure while ignoring behavior**: Disclosing GPU dependencies (58%) while ignoring model alignment and hallucination risks (<1%) inverts academic risk priorities.
+
+2. **Human factors are invisible**: Over-reliance, automation bias, and erosion of human oversight—all identified as material risks by MIT—barely appear in SEC filings.
+
+3. **Environmental and social impacts undisclosed**: Despite growing stakeholder concern and emerging ESG disclosure requirements, AI-related environmental and labor impacts receive minimal disclosure.
+
+4. **Misuse risks unaddressed**: Dual-use concerns, adversarial attacks, and potential for misuse—particularly relevant for generative AI companies—remain largely undisclosed.
+
+The MIT AI Risk Repository provides disclosure committees with a comprehensive framework for evaluating whether risk factor language addresses the full landscape of AI-specific risks identified by academic research.
 
 ---
 
