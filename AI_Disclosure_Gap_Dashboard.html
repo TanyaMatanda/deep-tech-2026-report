@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The 140x Problem | AI Disclosure Analysis</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         * {
@@ -1750,34 +1752,63 @@ The market has validated that AI is present in the enterprise. The next phase of
             const infraCtx = document.getElementById('infrastructureChart').getContext('2d');
             new Chart(infraCtx, {
                 type: 'doughnut',
+                plugins: [ChartDataLabels],
                 data: {
                     labels: ['Legacy Risks (Cyber/ESG)', 'Specific AI Risks'],
                     datasets: [{
                         data: [10604, 1491],
-                        backgroundColor: ['#2563eb', '#e11d48']
+                        backgroundColor: ['#2563eb', '#e11d48'],
+                        borderWidth: 3,
+                        borderColor: '#0f172a'
                     }]
                 },
                 options: {
                     responsive: true,
+                    cutout: '50%',
                     plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#ffffff',
+                                font: {
+                                    size: 14,
+                                    weight: '600'
+                                },
+                                padding: 20
+                            }
+                        },
                         title: {
                             display: true,
-                            text: 'The Volume Gap: Legacy vs Specific Mentions'
-                        }
-                    }
-                },
-                scales: {
-                    x: {
-                        ticks: { color: '#9ca3af' },
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' }
-                    },
-                    y: {
-                        ticks: { color: '#9ca3af' },
-                        grid: { color: 'rgba(255, 255, 255, 0.05)' },
-                        beginAtZero: true,
-                        max: 100,
-                        ticks: {
-                            callback: function (value) { return value + '%'; }
+                            text: 'The Volume Gap: Legacy vs Specific Mentions',
+                            color: '#ffffff',
+                            font: {
+                                size: 18,
+                                weight: '700'
+                            },
+                            padding: 20
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return label + ': ' + value.toLocaleString() + ' (' + percentage + '%)';
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#ffffff',
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            formatter: function (value, context) {
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / total) * 100).toFixed(1);
+                                return percentage + '%';
+                            }
                         }
                     }
                 }
@@ -1787,19 +1818,62 @@ The market has validated that AI is present in the enterprise. The next phase of
             const modelCtx = document.getElementById('modelRiskChart').getContext('2d');
             new Chart(document.getElementById('modelRiskChart'), {
                 type: 'pie',
+                plugins: [ChartDataLabels],
                 data: {
                     labels: ['Generic Disclosers (Zero Specificity)', 'Partial Specificity', 'High Specificity'],
                     datasets: [{
                         data: [34, 1520, 133],
-                        backgroundColor: ['#e11d48', '#8b5cf6', '#2563eb']
+                        backgroundColor: ['#e11d48', '#8b5cf6', '#2563eb'],
+                        borderWidth: 3,
+                        borderColor: '#0f172a'
                     }]
                 },
                 options: {
                     responsive: true,
                     plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: '#ffffff',
+                                font: {
+                                    size: 14,
+                                    weight: '600'
+                                },
+                                padding: 20
+                            }
+                        },
                         title: {
                             display: true,
-                            text: 'Disclosure Quality Distribution (1,687 Companies)'
+                            text: 'Disclosure Quality Distribution (1,687 Companies)',
+                            color: '#ffffff',
+                            font: {
+                                size: 18,
+                                weight: '700'
+                            },
+                            padding: 20
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = ((value / total) * 100).toFixed(1);
+                                    return label + ': ' + value.toLocaleString() + ' (' + percentage + '%)';
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#ffffff',
+                            font: {
+                                size: 16,
+                                weight: 'bold'
+                            },
+                            formatter: function (value, context) {
+                                const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                const percentage = ((value / total) * 100).toFixed(1);
+                                return percentage + '%';
+                            }
                         }
                     }
                 }
