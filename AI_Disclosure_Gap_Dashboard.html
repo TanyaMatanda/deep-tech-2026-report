@@ -839,7 +839,7 @@
 
             <div class="content">
                 <div class="section">
-                    <h2>Executive Findings</h2>
+                    <h2>Findings</h2>
                     <p style="font-size: 1.2rem; margin-bottom: 3rem;">
                         We analyzed 1,687 SEC 10-K filings and found that while 98% of deep tech companies now disclose
                         AI risks, the vast majority are using "boilerplate" language. Companies are repackaging existing
@@ -961,7 +961,179 @@
                     </div>
                 </div>
 
+                <div class="section">
+                    <h2>The LLM Paradox: Capability vs Risk Disclosure</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        Companies mention LLM capabilities <strong style="color: #a78bfa;">104x more often</strong> than
+                        they disclose the hallucination risks inherent to these models.
+                    </p>
+                    <div class="grid-2">
+                        <div class="chart-container" style="height: 400px;">
+                            <canvas id="llmParadoxChart"></canvas>
+                        </div>
+                        <div class="insight-box"
+                            style="margin: 0; display: flex; flex-direction: column; justify-content: center;">
+                            <div class="insight-title">THE 104:1 RATIO</div>
+                            <p style="font-size: 1.1rem; line-height: 1.8;">
+                                <strong>2,612</strong> mentions of "LLM" or "Large Language Model"<br>
+                                <strong>1,155</strong> mentions of "Generative AI"<br>
+                                <strong style="color: #f87171;">Only 25</strong> mentions of "Hallucination"
+                            </p>
+                            <p style="margin-top: 1rem; font-size: 0.95rem; color: #94a3b8;">
+                                Every company deploying an LLM faces hallucination risk. Yet 99% choose not to disclose
+                                it.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="section">
+                    <h2>The Regulatory Void</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        The EU AI Act is in force. State-level AI legislation is proliferating. Yet <strong
+                            style="color: #f87171;">95.4%</strong> of companies make zero mention of AI-specific
+                        regulation.
+                    </p>
+                    <div class="grid-2">
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="regulatoryVoidChart"></canvas>
+                        </div>
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="trainingDataChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>MIT AI Risk Framework: Coverage Analysis</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        Academic AI risk frameworks identify 7 key domains. Companies over-disclose legacy risks while
+                        systematically ignoring novel AI-specific concerns.
+                    </p>
+                    <div class="grid-2">
+                        <div class="chart-container" style="height: 450px;">
+                            <canvas id="mitRiskRadarChart"></canvas>
+                        </div>
+                        <div>
+                            <div class="insight-box" style="margin: 0 0 1.5rem 0;">
+                                <div class="insight-title">OVER-DISCLOSED</div>
+                                <p><strong>Malicious Use (Cyberattack):</strong> 74.8% coverage</p>
+                                <p><strong>Socioeconomic (ESG):</strong> 61.4% coverage</p>
+                            </div>
+                            <div class="insight-box" style="margin: 0; border-left-color: #f87171;">
+                                <div class="insight-title" style="color: #f87171;">UNDER-DISCLOSED</div>
+                                <p><strong>Human Oversight:</strong> 17.2% coverage</p>
+                                <p><strong>AI Safety/Alignment:</strong> 6.8% coverage</p>
+                                <p><strong>Model Performance:</strong> &lt;1% coverage</p>
+                                <p><strong>Training Data IP:</strong> &lt;1% coverage</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Sector-Specific Blind Spots</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        Different industries have different disclosure patterns—and different gaps. Healthcare ignores
+                        algorithmic bias. Finance ignores systemic AI risk.
+                    </p>
+                    <div class="chart-container" style="height: 450px;">
+                        <canvas id="sectorBlindSpotsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Disclosure Quality: Volume vs Specificity</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        More AI mentions ≠ better disclosure. Most companies cluster in the "high volume, low
+                        specificity" quadrant—revealing the boilerplate problem.
+                    </p>
+                    <div class="chart-container" style="height: 450px;">
+                        <canvas id="qualityScatterChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>The 140x Problem: Infrastructure vs Model Risk</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        Companies mention infrastructure concerns <strong style="color: #8b5cf6;">140 times
+                            more</strong> than model-specific risks.
+                        They're disclosing the supply chain, not the system.
+                    </p>
+                    <div class="grid-2">
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="ratio140xChart"></canvas>
+                        </div>
+                        <div class="insight-box"
+                            style="margin: 0; display: flex; flex-direction: column; justify-content: center;">
+                            <div class="insight-title">THE 140:1 IMBALANCE</div>
+                            <p style="font-size: 1.1rem; line-height: 1.8;">
+                                <strong>11,352</strong> mentions of infrastructure (compute, GPU, data center)<br>
+                                <strong style="color: #f87171;">Only 81</strong> mentions of model risks (hallucination,
+                                training data, AI safety)
+                            </p>
+                            <p style="margin-top: 1rem; font-size: 0.95rem; color: #94a3b8;">
+                                This ratio reveals companies are treating AI as an IT asset, not a novel technology with
+                                unique failure modes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>The Agentic AI Disclosure Gap</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        Autonomous AI systems are being deployed at scale—but <strong style="color: #f87171;">less than
+                            1.5%</strong> of companies
+                        disclose agentic AI risks. The next frontier is already undisclosed.
+                    </p>
+                    <div class="grid-2">
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="agenticGapChart"></canvas>
+                        </div>
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="humanOversightChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Socioeconomic Risk Silence</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        Despite public discourse about AI and jobs, <strong style="color: #f87171;">91.2%</strong> of
+                        companies make no mention
+                        of labor displacement, workforce transition, or socioeconomic impact.
+                    </p>
+                    <div class="grid-2">
+                        <div class="chart-container" style="height: 350px;">
+                            <canvas id="socioeconomicChart"></canvas>
+                        </div>
+                        <div class="insight-box"
+                            style="margin: 0; display: flex; flex-direction: column; justify-content: center;">
+                            <div class="insight-title">THE AUTOMATION DISCONNECT</div>
+                            <p style="font-size: 1.1rem; line-height: 1.8;">
+                                <strong>709</strong> mentions of "automation"<br>
+                                <strong style="color: #f87171;">Only 148</strong> companies mention labor disruption<br>
+                                <strong style="color: #f87171;">Only ~10</strong> companies mention job displacement
+                            </p>
+                            <p style="margin-top: 1rem; font-size: 0.95rem; color: #94a3b8;">
+                                Companies celebrate automation efficiency while ignoring its workforce implications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Disclosure Leaders vs. Laggards</h2>
+                    <p style="font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1;">
+                        Some companies demonstrate what mature AI disclosure looks like. Others mention AI extensively
+                        while disclosing zero specific risks. <strong style="color: #22c55e;">Named examples</strong>
+                        show the gap.
+                    </p>
+                    <div class="chart-container" style="height: 450px;">
+                        <canvas id="leadersLaggardsChart"></canvas>
+                    </div>
+                </div>
 
                 <div class="section">
                     <h2>Cross-Jurisdictional Comparison</h2>
@@ -1663,8 +1835,519 @@ The market has validated that AI is present in the enterprise. The next phase of
                 }
             });
 
-            // Depth Chart - Removing or Repurposing
-            // Replaced by specific "Boilerplate" chart above.
+            // LLM Paradox Chart
+            new Chart(document.getElementById('llmParadoxChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['LLM / Large Language Model', 'Generative AI', 'Machine Learning', 'Hallucination'],
+                    datasets: [{
+                        label: 'Mentions',
+                        data: [2612, 1155, 1416, 25],
+                        backgroundColor: ['#8b5cf6', '#a855f7', '#c084fc', '#f87171'],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: 'Capability Mentions vs Risk Disclosure',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: function (context) {
+                                    if (context.label === 'Hallucination') {
+                                        return '← Only 0.16% of LLM-mentioning companies disclose this';
+                                    }
+                                    return '';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Regulatory Void Donut Chart
+            new Chart(document.getElementById('regulatoryVoidChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['No AI Regulation Disclosure', 'Mentions EU AI Act', 'Other AI Regulation'],
+                    datasets: [{
+                        data: [1610, 46, 31],
+                        backgroundColor: ['#1e293b', '#8b5cf6', '#06b6d4'],
+                        borderColor: '#0f172a',
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#e2e8f0', padding: 15 }
+                        },
+                        title: {
+                            display: true,
+                            text: 'AI Regulation Disclosure (1,687 Companies)',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    }
+                }
+            });
+
+            // Training Data Silence Chart
+            new Chart(document.getElementById('trainingDataChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['LLM Mentions', 'Training Data Disclosure', 'Data Provenance'],
+                    datasets: [{
+                        label: 'Companies',
+                        data: [2612, 17, 5],
+                        backgroundColor: ['#8b5cf6', '#f87171', '#f87171'],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: 'Training Data Disclosure Gap',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            type: 'logarithmic',
+                            ticks: {
+                                color: '#e2e8f0',
+                                callback: function (value) {
+                                    if (value === 1 || value === 10 || value === 100 || value === 1000 || value === 10000) {
+                                        return value.toLocaleString();
+                                    }
+                                    return '';
+                                }
+                            },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        },
+                        x: {
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        }
+                    }
+                }
+            });
+
+            // MIT Risk Radar Chart
+            new Chart(document.getElementById('mitRiskRadarChart'), {
+                type: 'radar',
+                data: {
+                    labels: ['Malicious Use', 'Socioeconomic', 'Human Oversight', 'AI Safety', 'Model Performance', 'Training Data', 'Regulatory'],
+                    datasets: [{
+                        label: 'Ideal Coverage',
+                        data: [80, 80, 80, 80, 80, 80, 80],
+                        backgroundColor: 'rgba(139, 92, 246, 0.1)',
+                        borderColor: 'rgba(139, 92, 246, 0.3)',
+                        borderWidth: 2,
+                        pointRadius: 0
+                    }, {
+                        label: 'Actual Coverage (%)',
+                        data: [74.8, 61.4, 17.2, 6.8, 1, 1, 4.6],
+                        backgroundColor: 'rgba(248, 113, 113, 0.3)',
+                        borderColor: '#f87171',
+                        borderWidth: 3,
+                        pointRadius: 6,
+                        pointBackgroundColor: '#f87171'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#e2e8f0', padding: 20 }
+                        },
+                        title: {
+                            display: true,
+                            text: 'MIT AI Risk Coverage vs Ideal',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(255, 255, 255, 0.1)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.1)' },
+                            pointLabels: { color: '#e2e8f0', font: { size: 11, weight: '500' } },
+                            ticks: { display: false },
+                            suggestedMin: 0,
+                            suggestedMax: 100
+                        }
+                    }
+                }
+            });
+
+            // Sector Blind Spots Chart
+            new Chart(document.getElementById('sectorBlindSpotsChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Technology', 'Financial Services', 'Healthcare', 'Industrial', 'Consumer'],
+                    datasets: [{
+                        label: 'Cyberattack',
+                        data: [82, 89, 71, 65, 58],
+                        backgroundColor: '#8b5cf6'
+                    }, {
+                        label: 'Bias/Fairness',
+                        data: [18, 24, 8, 5, 12],
+                        backgroundColor: '#f87171'
+                    }, {
+                        label: 'Training Data',
+                        data: [3, 1, 0.5, 0.2, 1],
+                        backgroundColor: '#fbbf24'
+                    }, {
+                        label: 'Hallucination',
+                        data: [4, 1, 2, 0.5, 1],
+                        backgroundColor: '#34d399'
+                    }]
+                },
+                options: {
+                    ...chartDefaults,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: { color: '#e2e8f0', padding: 15 }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Risk Category Coverage by Sector (%)',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { color: '#e2e8f0', callback: v => v + '%' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        },
+                        x: {
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        }
+                    }
+                }
+            });
+
+            // Quality Scatter Chart (Bubble)
+            new Chart(document.getElementById('qualityScatterChart'), {
+                type: 'bubble',
+                data: {
+                    datasets: [{
+                        label: 'Generic Disclosers',
+                        data: [
+                            { x: 45, y: 2, r: 25 },
+                            { x: 38, y: 4, r: 20 },
+                            { x: 52, y: 3, r: 18 },
+                            { x: 28, y: 5, r: 22 },
+                            { x: 61, y: 1, r: 15 }
+                        ],
+                        backgroundColor: 'rgba(248, 113, 113, 0.6)',
+                        borderColor: '#f87171'
+                    }, {
+                        label: 'Partial Specificity',
+                        data: [
+                            { x: 25, y: 18, r: 15 },
+                            { x: 35, y: 22, r: 12 },
+                            { x: 18, y: 25, r: 18 },
+                            { x: 42, y: 15, r: 10 }
+                        ],
+                        backgroundColor: 'rgba(139, 92, 246, 0.6)',
+                        borderColor: '#8b5cf6'
+                    }, {
+                        label: 'High Specificity Leaders',
+                        data: [
+                            { x: 89, y: 47, r: 12 },
+                            { x: 107, y: 42, r: 10 },
+                            { x: 130, y: 38, r: 14 },
+                            { x: 67, y: 35, r: 8 }
+                        ],
+                        backgroundColor: 'rgba(34, 197, 94, 0.6)',
+                        borderColor: '#22c55e'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: { color: '#e2e8f0', padding: 15 }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Volume vs Specificity: The Boilerplate Cluster',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            title: { display: true, text: 'Specificity Score', color: '#e2e8f0' },
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' },
+                            min: 0,
+                            max: 60
+                        },
+                        x: {
+                            title: { display: true, text: 'Total AI Mentions', color: '#e2e8f0' },
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' },
+                            min: 0,
+                            max: 150
+                        }
+                    }
+                }
+            });
+
+            // 140x Ratio Chart - Infrastructure vs Model Risk
+            new Chart(document.getElementById('ratio140xChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Infrastructure Risks', 'Model-Specific Risks'],
+                    datasets: [{
+                        label: 'Total Mentions',
+                        data: [11352, 81],
+                        backgroundColor: ['#8b5cf6', '#f87171'],
+                        borderRadius: 8,
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: 'The 140:1 Ratio',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: function (context) {
+                                    if (context.dataIndex === 0) {
+                                        return 'Compute, GPU, Data Center, NVIDIA';
+                                    }
+                                    return 'Hallucination, Training Data, AI Safety';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            type: 'logarithmic',
+                            ticks: {
+                                color: '#e2e8f0',
+                                callback: function (value) {
+                                    if (value === 10 || value === 100 || value === 1000 || value === 10000) {
+                                        return value.toLocaleString();
+                                    }
+                                    return '';
+                                }
+                            },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        },
+                        y: {
+                            ticks: { color: '#e2e8f0', font: { size: 12, weight: '600' } },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        }
+                    }
+                }
+            });
+
+            // Agentic AI Gap Chart
+            new Chart(document.getElementById('agenticGapChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['LLM / GenAI', 'Autonomous', 'AI Agent', 'Agentic'],
+                    datasets: [{
+                        label: 'Company Mentions',
+                        data: [2612, 480, 15, 25],
+                        backgroundColor: ['#8b5cf6', '#a855f7', '#f87171', '#f87171'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: 'Agentic AI: The Next Undisclosed Frontier',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            type: 'logarithmic',
+                            ticks: {
+                                color: '#e2e8f0',
+                                callback: function (value) {
+                                    if (value === 10 || value === 100 || value === 1000) {
+                                        return value.toLocaleString();
+                                    }
+                                    return '';
+                                }
+                            },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        },
+                        x: {
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        }
+                    }
+                }
+            });
+
+            // Human Oversight Invisibility Chart
+            new Chart(document.getElementById('humanOversightChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['No Human Oversight Disclosure', 'Mentions Human Oversight'],
+                    datasets: [{
+                        data: [1651, 36],
+                        backgroundColor: ['#1e293b', '#22c55e'],
+                        borderColor: '#0f172a',
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '65%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { color: '#e2e8f0', padding: 12, font: { size: 11 } }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Human Oversight Disclosure (1,687 Companies)',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    }
+                }
+            });
+
+            // Socioeconomic Risk Chart
+            new Chart(document.getElementById('socioeconomicChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['Automation Mentions', 'Labor Disruption', 'Job Displacement'],
+                    datasets: [{
+                        label: 'Frequency',
+                        data: [709, 148, 10],
+                        backgroundColor: ['#8b5cf6', '#f87171', '#f87171'],
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        title: {
+                            display: true,
+                            text: 'Automation vs Labor Impact Disclosure',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        },
+                        x: {
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        }
+                    }
+                }
+            });
+
+            // Leaders vs Laggards Chart
+            new Chart(document.getElementById('leadersLaggardsChart'), {
+                type: 'bar',
+                data: {
+                    labels: ['IREN Ltd', 'Ondas Holdings', 'NVIDIA', 'Sprinklr', 'IonQ', 'IBKR', 'ITW', 'AMP', 'NTAP', 'ZBH'],
+                    datasets: [{
+                        label: 'AI Mentions',
+                        data: [128, 107, 89, 76, 68, 18, 15, 14, 12, 11],
+                        backgroundColor: ['#22c55e', '#22c55e', '#22c55e', '#22c55e', '#22c55e', '#f87171', '#f87171', '#f87171', '#f87171', '#f87171'],
+                        borderRadius: 6
+                    }, {
+                        label: 'Specificity Score',
+                        data: [47, 42, 38, 35, 32, 0, 0, 0, 0, 0],
+                        backgroundColor: ['#8b5cf6', '#8b5cf6', '#8b5cf6', '#8b5cf6', '#8b5cf6', '#475569', '#475569', '#475569', '#475569', '#475569'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: { color: '#e2e8f0', padding: 15 }
+                        },
+                        title: {
+                            display: true,
+                            text: 'Top 5 Leaders (Green) vs Top 5 Generic Disclosers (Red)',
+                            color: '#ffffff',
+                            font: { size: 16, weight: '700' }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                afterLabel: function (context) {
+                                    const idx = context.dataIndex;
+                                    if (idx >= 5) {
+                                        return '⚠️ Zero specific risk disclosure';
+                                    }
+                                    return '✓ Comprehensive risk coverage';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        },
+                        y: {
+                            ticks: { color: '#e2e8f0', font: { size: 11 } },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        }
+                    }
+                }
+            });
         }
     </script>
 </body>
