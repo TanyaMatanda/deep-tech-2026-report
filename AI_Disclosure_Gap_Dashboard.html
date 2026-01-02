@@ -1801,12 +1801,20 @@ The market has validated that AI is present in the enterprise. The next phase of
                         datalabels: {
                             color: '#ffffff',
                             font: {
-                                size: 16,
+                                size: 14,
                                 weight: 'bold'
                             },
+                            anchor: 'center',
+                            align: 'center',
+                            offset: 0,
+                            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                            borderRadius: 4,
+                            padding: 6,
                             formatter: function (value, context) {
                                 const total = context.dataset.data.reduce((a, b) => a + b, 0);
                                 const percentage = ((value / total) * 100).toFixed(1);
+                                // Only show label if slice is big enough (>3%)
+                                if (percentage < 3) return '';
                                 return percentage + '%';
                             }
                         }
@@ -1866,12 +1874,20 @@ The market has validated that AI is present in the enterprise. The next phase of
                         datalabels: {
                             color: '#ffffff',
                             font: {
-                                size: 16,
+                                size: 14,
                                 weight: 'bold'
                             },
+                            anchor: 'center',
+                            align: 'center',
+                            offset: 0,
+                            backgroundColor: 'rgba(0, 0, 0, 0.6)',
+                            borderRadius: 4,
+                            padding: 6,
                             formatter: function (value, context) {
                                 const total = context.dataset.data.reduce((a, b) => a + b, 0);
                                 const percentage = ((value / total) * 100).toFixed(1);
+                                // Only show label if slice is big enough (>3%)
+                                if (percentage < 3) return '';
                                 return percentage + '%';
                             }
                         }
