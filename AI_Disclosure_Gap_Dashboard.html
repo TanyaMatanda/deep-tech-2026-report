@@ -1114,33 +1114,47 @@
         }
 
         // Handle form submission
-        function handleFormSubmit(event) {
+        async function handleFormSubmit(event) {
             event.preventDefault();
 
             const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
+                first_name: document.getElementById('firstName').value,
+                last_name: document.getElementById('lastName').value,
                 email: document.getElementById('email').value,
                 industry: document.getElementById('industry').value,
                 role: document.getElementById('role').value,
-                intendedUse: document.getElementById('intendedUse').value,
-                timestamp: new Date().toISOString(),
-                downloadRequested: pendingDownload
+                intended_use: document.getElementById('intendedUse').value,
+                download_requested: pendingDownload
             };
 
             // Store submission to localStorage
             localStorage.setItem('140x_lead_submitted', 'true');
             localStorage.setItem('140x_lead_data', JSON.stringify(formData));
 
-            // Send to webhook/spreadsheet (using a simple approach)
-            // For GitHub Pages, you can connect this to a Google Form or Formspree
-            const existingLeads = JSON.parse(localStorage.getItem('140x_all_leads') || '[]');
-            existingLeads.push(formData);
-            localStorage.setItem('140x_all_leads', JSON.stringify(existingLeads));
+            // Send to Supabase
+            const SUPABASE_URL = 'https://hffpgxomodzhplzvesvx.supabase.co';
+            const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhmZnBneG9tb2R6aHBsenZlc3Z4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzU1MjA4NzEsImV4cCI6MjA1MTA5Njg3MX0.sb_publishable_X5vHNJURX5KcJyG12Zyd1Q_V2vJ_7Ky';
 
-            // Log for debugging/export
-            console.log('Lead captured:', formData);
-            console.log('All leads:', existingLeads);
+            try {
+                const response = await fetch(`${SUPABASE_URL}/rest/v1/leads_140x`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'apikey': SUPABASE_ANON_KEY,
+                        'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
+                        'Prefer': 'return=minimal'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    console.log('Lead saved to Supabase');
+                } else {
+                    console.log('Supabase error:', await response.text());
+                }
+            } catch (error) {
+                console.log('Network error, lead saved locally:', error);
+            }
 
             // Close modal and trigger download
             closeModal();
