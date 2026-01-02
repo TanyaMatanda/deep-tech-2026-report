@@ -1,110 +1,135 @@
 # The 140x Problem: References
 
-## Chicago Style Bibliography
+## A Strategic Analysis for Corporate Boards, Risk Committees, and Investors
 
-### Primary Data Sources
-
-U.S. Securities and Exchange Commission. "EDGAR Full-Text Search: Form 10-K Filings." Accessed January 2026. https://www.sec.gov/cgi-bin/srch-ia.
+**January 2026**
 
 ---
 
-### Regulatory Frameworks
+## Primary Data Sources
 
-European Parliament. *Regulation (EU) 2024/1689 of the European Parliament and of the Council Laying Down Harmonised Rules on Artificial Intelligence (AI Act)*. Official Journal of the European Union, 2024.
+U.S. Securities and Exchange Commission. "EDGAR Full-Text Search." Accessed December 31, 2025. https://efts.sec.gov/LATEST/search-index.
 
-Government of Canada. *Bill C-27: An Act to Enact the Consumer Privacy Protection Act, the Personal Information and Data Protection Tribunal Act and the Artificial Intelligence and Data Act (AIDA)*. Parliament of Canada, 2022.
-
-Monetary Authority of Singapore. *Principles to Promote Fairness, Ethics, Accountability and Transparency (FEAT) in the Use of Artificial Intelligence and Data Analytics in Singapore's Financial Sector*. Singapore: MAS, 2021.
-
-U.K. Financial Conduct Authority. *FG 22/4: Guidance for Firms on the Fair Treatment of Customers Using Automated Decision-Making*. London: FCA, 2022.
-
-Cyberspace Administration of China. *Provisions on the Management of Algorithmic Recommendations for Internet Information Services*. Beijing: CAC, 2022.
-
-U.S. Securities and Exchange Commission. *Regulation S-K: Standard Instructions for Filing Forms*. 17 CFR § 229. Washington, DC: SEC.
+U.S. Securities and Exchange Commission. "Form 10-K Annual Reports." EDGAR Database, Fiscal Year 2024-2025.
 
 ---
 
-### Academic Frameworks and Research
+## Regulatory Frameworks
 
-National Institute of Standards and Technology. *AI Risk Management Framework (AI RMF 1.0)*. Gaithersburg, MD: NIST, January 2023. https://doi.org/10.6028/NIST.AI.100-1.
+### United States
 
-Smuha, Nathalie A. "The EU Approach to Ethics Guidelines for Trustworthy Artificial Intelligence." *Computer Law Review International* 20, no. 4 (2019): 97-106.
+U.S. Securities and Exchange Commission. "Commission Guidance Regarding Disclosure Related to Climate Change." Release No. 33-9106 (February 2, 2010).
 
-Jobin, Anna, Marcello Ienca, and Effy Vayena. "The Global Landscape of AI Ethics Guidelines." *Nature Machine Intelligence* 1 (2019): 389-399. https://doi.org/10.1038/s42256-019-0088-2.
+U.S. Securities and Exchange Commission. "Regulation S-K, Item 105 – Risk Factors." 17 CFR § 229.105.
 
-Fjeld, Jessica, Nele Achten, Hannah Hilligoss, Adam Nagy, and Madhulika Srikumar. *Principled Artificial Intelligence: Mapping Consensus in Ethical and Rights-Based Approaches to Principles for AI*. Cambridge, MA: Berkman Klein Center for Internet & Society, Harvard University, 2020.
+U.S. Securities and Exchange Commission. "Staff Accounting Bulletin No. 99 – Materiality." August 12, 1999.
 
-Hagendorff, Thilo. "The Ethics of AI Ethics: An Evaluation of Guidelines." *Minds and Machines* 30 (2020): 99-120. https://doi.org/10.1007/s11023-020-09517-8.
+### European Union
 
-Floridi, Luciano, and Josh Cowls. "A Unified Framework of Five Principles for AI in Society." *Harvard Data Science Review* 1, no. 1 (2019). https://doi.org/10.1162/99608f92.8cd550d1.
+European Parliament and Council. "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)." Official Journal of the European Union L 1689 (2024).
 
-Slattery, Peter, Alexander K. Saeri, Emily A.C. Grundy, Jess Graham, Michael Noetel, Risto Uuk, James Dao, Soroush Pour, Stephen Casper, and Neil Thompson. "The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy of Risks from Artificial Intelligence." MIT FutureTech Working Paper, March 2025. https://airisk.mit.edu.
-
----
-
-### Securities Law and Disclosure Standards
-
-Cox, James D., Robert W. Hillman, and Donald C. Langevoort. *Securities Regulation: Cases and Materials*. 9th ed. New York: Wolters Kluwer, 2020.
-
-Langevoort, Donald C. "Fraud Detection in Securities Markets." In *The Oxford Handbook of Corporate Law and Governance*, edited by Jeffrey N. Gordon and Wolf-Georg Ringe, 827-851. Oxford: Oxford University Press, 2018.
-
-Mahoney, Paul G. "Mandatory Disclosure as a Solution to Agency Problems." *University of Chicago Law Review* 62, no. 3 (1995): 1047-1112.
+European Commission. "AI Act Penalty Guidelines: Fines for Non-Compliance with High-Risk AI Requirements." Brussels, 2025.
 
 ---
 
-### AI Litigation and IP Cases
+## Academic Research and Risk Taxonomies
 
-The New York Times Company v. Microsoft Corporation, OpenAI Inc., et al., No. 1:23-cv-11195 (S.D.N.Y. filed December 27, 2023).
+Slattery, Peter, et al. "The AI Risk Repository: A Comprehensive Meta-Review, Database, and Taxonomy of Risks from Artificial Intelligence." MIT FutureTech, 2024. https://airisk.mit.edu.
 
-Getty Images (US), Inc. v. Stability AI, Inc., No. 1:23-cv-00135 (D. Del. filed February 3, 2023).
+National Institute of Standards and Technology. "Artificial Intelligence Risk Management Framework (AI RMF 1.0)." NIST AI 100-1, January 2023.
 
-Authors Guild v. Google, Inc., 804 F.3d 202 (2d Cir. 2015).
+Bommasani, Rishi, et al. "On the Opportunities and Risks of Foundation Models." Stanford Center for Research on Foundation Models (CRFM), August 2021.
 
-Andersen v. Stability AI Ltd., No. 3:23-cv-00201 (N.D. Cal. filed January 13, 2023).
-
----
-
-### AI Risk and Governance Reports
-
-Stanford University Human-Centered Artificial Intelligence. *Artificial Intelligence Index Report 2024*. Stanford, CA: Stanford HAI, 2024. https://aiindex.stanford.edu/report/.
-
-MIT Sloan Management Review and Boston Consulting Group. *Winning with AI: Pioneers Combine Strategy, Organizational Behavior, and Technology*. Cambridge, MA: MIT SMR, 2019.
-
-World Economic Forum. *AI Governance Alliance: Generative AI Governance Framework*. Geneva: WEF, 2024.
-
-OECD. *Recommendation of the Council on Artificial Intelligence*. Paris: OECD, 2019. https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449.
+Weidinger, Laura, et al. "Taxonomy of Risks Posed by Language Models." DeepMind, 2022. https://arxiv.org/abs/2112.04359.
 
 ---
 
-### Industry Analysis
+## Litigation References
 
-OpenAI. "GPT-4 Technical Report." arXiv preprint arXiv:2303.08774 (2023). https://arxiv.org/abs/2303.08774.
+### Training Data and Copyright
 
-Anthropic. "Constitutional AI: Harmlessness from AI Feedback." arXiv preprint arXiv:2212.08073 (2022). https://arxiv.org/abs/2212.08073.
+The New York Times Company v. Microsoft Corporation and OpenAI LP. Case No. 1:23-cv-11195 (S.D.N.Y. filed December 27, 2023).
 
-Bommasani, Rishi, et al. "On the Opportunities and Risks of Foundation Models." arXiv preprint arXiv:2108.07258 (2021). https://arxiv.org/abs/2108.07258.
+Getty Images (US), Inc. v. Stability AI, Inc. Case No. 1:23-cv-00135 (D. Del. filed February 3, 2023).
 
-Bender, Emily M., Timnit Gebru, Angelina McMillan-Major, and Shmargaret Shmitchell. "On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜" In *Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency*, 610-623. New York: ACM, 2021.
+Authors Guild v. OpenAI Inc. Case No. 1:23-cv-08292 (S.D.N.Y. filed September 19, 2023).
 
----
+Tremblay v. OpenAI, Inc. Case No. 3:23-cv-03223 (N.D. Cal. filed June 28, 2023).
 
-### Regulatory Guidance and Enforcement
+### Securities and D&O Liability
 
-U.S. Equal Employment Opportunity Commission. *The Americans with Disabilities Act and the Use of Software, Algorithms, and Artificial Intelligence to Assess Job Applicants and Employees*. Technical Assistance Document. Washington, DC: EEOC, 2022.
+In re Caremark International Inc. Derivative Litigation. 698 A.2d 959 (Del. Ch. 1996).
 
-Federal Trade Commission. "Aiming for Truth, Fairness, and Equity in Your Company's Use of AI." FTC Business Blog, April 19, 2021. https://www.ftc.gov/business-guidance/blog/2021/04/aiming-truth-fairness-equity-your-companys-use-ai.
+TSC Industries, Inc. v. Northway, Inc. 426 U.S. 438 (1976) (materiality standard).
 
-New York City Department of Consumer and Worker Protection. *Local Law 144 of 2021: Automated Employment Decision Tools*. New York: DCWP, 2023.
-
----
-
-## About This Research
-
-**Author**: Tanya Matanda  
-**Publication Date**: January 2026  
-**Data Coverage**: 1,876 SEC 10-K Filings (Complete EDGAR Universe)  
-**Methodology**: Automated Item 1A (Risk Factors) text extraction and keyword frequency analysis
+Basic Inc. v. Levinson. 485 U.S. 224 (1988) (materiality in securities fraud context).
 
 ---
 
-*This bibliography follows the Chicago Manual of Style, 17th edition (Notes and Bibliography system).*
+## Industry Reports and Analysis
+
+Cornerstone Research. "Securities Class Action Filings: 2024 Year in Review." Stanford Law School Securities Class Action Clearinghouse, 2025.
+
+Willis Towers Watson. "D&O Liability Survey 2024: Technology Sector Deep Dive." 2024.
+
+Marsh McLennan. "AI Liability and D&O Insurance: Emerging Risks for Directors and Officers." 2025.
+
+---
+
+## Companies Referenced
+
+### Disclosure Leaders (High Specificity Scores)
+
+IREN Ltd. Form 10-K for the fiscal year ended June 30, 2024. Filed with SEC.
+
+Ondas Holdings Inc. Form 10-K for the fiscal year ended December 31, 2024. Filed with SEC.
+
+NVIDIA Corporation. Form 10-K for the fiscal year ended January 28, 2024. Filed with SEC.
+
+Sprinklr, Inc. Form 10-K for the fiscal year ended January 31, 2024. Filed with SEC.
+
+IonQ, Inc. Form 10-K for the fiscal year ended December 31, 2024. Filed with SEC.
+
+### Generic Disclosers (Zero Specificity Cohort)
+
+Interactive Brokers Group, Inc. (IBKR). Form 10-K for the fiscal year ended December 31, 2024. Filed with SEC.
+
+Illinois Tool Works Inc. (ITW). Form 10-K for the fiscal year ended December 31, 2024. Filed with SEC.
+
+Ameriprise Financial, Inc. (AMP). Form 10-K for the fiscal year ended December 31, 2024. Filed with SEC.
+
+NetApp, Inc. (NTAP). Form 10-K for the fiscal year ended April 26, 2024. Filed with SEC.
+
+Zimmer Biomet Holdings, Inc. (ZBH). Form 10-K for the fiscal year ended December 31, 2024. Filed with SEC.
+
+Wingstop Inc. (WING). Form 10-K for the fiscal year ended December 28, 2024. Filed with SEC.
+
+---
+
+## Methodology Notes
+
+### Keyword Taxonomy
+
+The analysis employed 35 AI-related keywords derived from three sources:
+
+1. MIT AI Risk Repository (risk categories)
+2. NIST AI Risk Management Framework (governance terms)
+3. Legal scholarship on AI disclosure requirements (regulatory terms)
+
+Keywords were classified as:
+- **Generic terms**: "artificial intelligence," "machine learning," "AI," "LLM," "compute," "GPU," "data center"
+- **Specific risk terms**: "hallucination," "bias," "training data," "model accuracy," "human oversight," "AI safety," "EU AI Act"
+
+### Specificity Score Calculation
+
+Specificity Score = Sum of mentions across specific risk categories (cat_ai_risk, cat_ai_regulation, cat_mit4_malicious, cat_mit5_human, cat_mit6_socio, cat_mit6_environ, cat_mit7_safety)
+
+### Generic Discloser Criteria
+
+Companies classified as "Generic Disclosers" met both conditions:
+1. Generic category mentions > 5
+2. Specific category mentions = 0
+
+---
+
+*© 2026 GovernanceIQ Research. All rights reserved.*
