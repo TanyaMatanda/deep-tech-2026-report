@@ -1,0 +1,708 @@
+{
+  "collection_date": "2026-01-01T18:56:46.025253",
+  "filings_accessed": [
+    {
+      "ticker": "WPC",
+      "accession_number": "0001025378-25-000031",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001025378&accession_number=0001025378-25-000031",
+      "file_size_kb": 7836.1,
+      "local_path": "sec-edgar-filings/WPC/10-K/0001025378-25-000031/primary-document.html"
+    },
+    {
+      "ticker": "CTAS",
+      "accession_number": "0000723254-25-000017",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000723254&accession_number=0000723254-25-000017",
+      "file_size_kb": 1949.4,
+      "local_path": "sec-edgar-filings/CTAS/10-K/0000723254-25-000017/primary-document.html"
+    },
+    {
+      "ticker": "WELL",
+      "accession_number": "0000766704-25-000009",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000766704&accession_number=0000766704-25-000009",
+      "file_size_kb": 15349.9,
+      "local_path": "sec-edgar-filings/WELL/10-K/0000766704-25-000009/primary-document.html"
+    },
+    {
+      "ticker": "CDE",
+      "accession_number": "0000215466-25-000009",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000215466&accession_number=0000215466-25-000009",
+      "file_size_kb": 3190.7,
+      "local_path": "sec-edgar-filings/CDE/10-K/0000215466-25-000009/primary-document.html"
+    },
+    {
+      "ticker": "VZ",
+      "accession_number": "0000732712-25-000006",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000732712&accession_number=0000732712-25-000006",
+      "file_size_kb": 3848.9,
+      "local_path": "sec-edgar-filings/VZ/10-K/0000732712-25-000006/primary-document.html"
+    },
+    {
+      "ticker": "GME",
+      "accession_number": "0001628280-25-014731",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001628280&accession_number=0001628280-25-014731",
+      "file_size_kb": 1558.7,
+      "local_path": "sec-edgar-filings/GME/10-K/0001628280-25-014731/primary-document.html"
+    },
+    {
+      "ticker": "OMF",
+      "accession_number": "0001584207-25-000006",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001584207&accession_number=0001584207-25-000006",
+      "file_size_kb": 4658.0,
+      "local_path": "sec-edgar-filings/OMF/10-K/0001584207-25-000006/primary-document.html"
+    },
+    {
+      "ticker": "AMZN",
+      "accession_number": "0001018724-25-000004",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001018724&accession_number=0001018724-25-000004",
+      "file_size_kb": 1877.3,
+      "local_path": "sec-edgar-filings/AMZN/10-K/0001018724-25-000004/primary-document.html"
+    },
+    {
+      "ticker": "CELH",
+      "accession_number": "0001341766-25-000024",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001341766&accession_number=0001341766-25-000024",
+      "file_size_kb": 1678.7,
+      "local_path": "sec-edgar-filings/CELH/10-K/0001341766-25-000024/primary-document.html"
+    },
+    {
+      "ticker": "CNP",
+      "accession_number": "0001130310-25-000040",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001130310&accession_number=0001130310-25-000040",
+      "file_size_kb": 7079.8,
+      "local_path": "sec-edgar-filings/CNP/10-K/0001130310-25-000040/primary-document.html"
+    },
+    {
+      "ticker": "RCL",
+      "accession_number": "0000884887-25-000050",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000884887&accession_number=0000884887-25-000050",
+      "file_size_kb": 2746.4,
+      "local_path": "sec-edgar-filings/RCL/10-K/0000884887-25-000050/primary-document.html"
+    },
+    {
+      "ticker": "CAT",
+      "accession_number": "0000018230-25-000008",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000018230&accession_number=0000018230-25-000008",
+      "file_size_kb": 5958.3,
+      "local_path": "sec-edgar-filings/CAT/10-K/0000018230-25-000008/primary-document.html"
+    },
+    {
+      "ticker": "AAPL",
+      "accession_number": "0000320193-25-000079",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000320193&accession_number=0000320193-25-000079",
+      "file_size_kb": 1484.6,
+      "local_path": "sec-edgar-filings/AAPL/10-K/0000320193-25-000079/primary-document.html"
+    },
+    {
+      "ticker": "PANW",
+      "accession_number": "0001327567-25-000027",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001327567&accession_number=0001327567-25-000027",
+      "file_size_kb": 2746.2,
+      "local_path": "sec-edgar-filings/PANW/10-K/0001327567-25-000027/primary-document.html"
+    },
+    {
+      "ticker": "SYM",
+      "accession_number": "0001837240-25-000278",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001837240&accession_number=0001837240-25-000278",
+      "file_size_kb": 2197.3,
+      "local_path": "sec-edgar-filings/SYM/10-K/0001837240-25-000278/primary-document.html"
+    },
+    {
+      "ticker": "PM",
+      "accession_number": "0001413329-25-000013",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001413329&accession_number=0001413329-25-000013",
+      "file_size_kb": 4200.1,
+      "local_path": "sec-edgar-filings/PM/10-K/0001413329-25-000013/primary-document.html"
+    },
+    {
+      "ticker": "KHC",
+      "accession_number": "0001637459-25-000011",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001637459&accession_number=0001637459-25-000011",
+      "file_size_kb": 4009.8,
+      "local_path": "sec-edgar-filings/KHC/10-K/0001637459-25-000011/primary-document.html"
+    },
+    {
+      "ticker": "TEL",
+      "accession_number": "0001104659-25-109150",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001104659&accession_number=0001104659-25-109150",
+      "file_size_kb": 5512.4,
+      "local_path": "sec-edgar-filings/TEL/10-K/0001104659-25-109150/primary-document.html"
+    },
+    {
+      "ticker": "QSR",
+      "accession_number": "0001618756-25-000087",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001618756&accession_number=0001618756-25-000087",
+      "file_size_kb": 3358.7,
+      "local_path": "sec-edgar-filings/QSR/10-K/0001618756-25-000087/primary-document.html"
+    },
+    {
+      "ticker": "USO",
+      "accession_number": "0001410578-25-000228",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001410578&accession_number=0001410578-25-000228",
+      "file_size_kb": 2011.3,
+      "local_path": "sec-edgar-filings/USO/10-K/0001410578-25-000228/primary-document.html"
+    },
+    {
+      "ticker": "CBSH",
+      "accession_number": "0000022356-25-000016",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000022356&accession_number=0000022356-25-000016",
+      "file_size_kb": 6398.5,
+      "local_path": "sec-edgar-filings/CBSH/10-K/0000022356-25-000016/primary-document.html"
+    },
+    {
+      "ticker": "RGTI",
+      "accession_number": "0001558370-25-002499",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001558370&accession_number=0001558370-25-002499",
+      "file_size_kb": 2718.8,
+      "local_path": "sec-edgar-filings/RGTI/10-K/0001558370-25-002499/primary-document.html"
+    },
+    {
+      "ticker": "CMCSA",
+      "accession_number": "0001166691-25-000011",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001166691&accession_number=0001166691-25-000011",
+      "file_size_kb": 2786.1,
+      "local_path": "sec-edgar-filings/CMCSA/10-K/0001166691-25-000011/primary-document.html"
+    },
+    {
+      "ticker": "GRMN",
+      "accession_number": "0000950170-25-022760",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-022760",
+      "file_size_kb": 4422.3,
+      "local_path": "sec-edgar-filings/GRMN/10-K/0000950170-25-022760/primary-document.html"
+    },
+    {
+      "ticker": "PINS",
+      "accession_number": "0001506293-25-000022",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001506293&accession_number=0001506293-25-000022",
+      "file_size_kb": 1893.6,
+      "local_path": "sec-edgar-filings/PINS/10-K/0001506293-25-000022/primary-document.html"
+    },
+    {
+      "ticker": "SAIA",
+      "accession_number": "0000950170-25-025702",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-025702",
+      "file_size_kb": 2511.4,
+      "local_path": "sec-edgar-filings/SAIA/10-K/0000950170-25-025702/primary-document.html"
+    },
+    {
+      "ticker": "ANET",
+      "accession_number": "0001596532-25-000028",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001596532&accession_number=0001596532-25-000028",
+      "file_size_kb": 2032.4,
+      "local_path": "sec-edgar-filings/ANET/10-K/0001596532-25-000028/primary-document.html"
+    },
+    {
+      "ticker": "BRO",
+      "accession_number": "0000950170-25-019039",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-019039",
+      "file_size_kb": 5497.4,
+      "local_path": "sec-edgar-filings/BRO/10-K/0000950170-25-019039/primary-document.html"
+    },
+    {
+      "ticker": "CAH",
+      "accession_number": "0000721371-25-000079",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000721371&accession_number=0000721371-25-000079",
+      "file_size_kb": 2767.1,
+      "local_path": "sec-edgar-filings/CAH/10-K/0000721371-25-000079/primary-document.html"
+    },
+    {
+      "ticker": "GLPI",
+      "accession_number": "0001575965-25-000008",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001575965&accession_number=0001575965-25-000008",
+      "file_size_kb": 2927.5,
+      "local_path": "sec-edgar-filings/GLPI/10-K/0001575965-25-000008/primary-document.html"
+    },
+    {
+      "ticker": "SW",
+      "accession_number": "0002005951-25-000005",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0002005951&accession_number=0002005951-25-000005",
+      "file_size_kb": 9929.8,
+      "local_path": "sec-edgar-filings/SW/10-K/0002005951-25-000005/primary-document.html"
+    },
+    {
+      "ticker": "CVNA",
+      "accession_number": "0001690820-25-000074",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001690820&accession_number=0001690820-25-000074",
+      "file_size_kb": 2597.6,
+      "local_path": "sec-edgar-filings/CVNA/10-K/0001690820-25-000074/primary-document.html"
+    },
+    {
+      "ticker": "SOLV",
+      "accession_number": "0001964738-25-000019",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001964738&accession_number=0001964738-25-000019",
+      "file_size_kb": 2961.4,
+      "local_path": "sec-edgar-filings/SOLV/10-K/0001964738-25-000019/primary-document.html"
+    },
+    {
+      "ticker": "TROW",
+      "accession_number": "0001113169-25-000007",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001113169&accession_number=0001113169-25-000007",
+      "file_size_kb": 2716.2,
+      "local_path": "sec-edgar-filings/TROW/10-K/0001113169-25-000007/primary-document.html"
+    },
+    {
+      "ticker": "CMC",
+      "accession_number": "0000022444-25-000138",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000022444&accession_number=0000022444-25-000138",
+      "file_size_kb": 2490.5,
+      "local_path": "sec-edgar-filings/CMC/10-K/0000022444-25-000138/primary-document.html"
+    },
+    {
+      "ticker": "EWBC",
+      "accession_number": "0001069157-25-000025",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001069157&accession_number=0001069157-25-000025",
+      "file_size_kb": 7418.7,
+      "local_path": "sec-edgar-filings/EWBC/10-K/0001069157-25-000025/primary-document.html"
+    },
+    {
+      "ticker": "UI",
+      "accession_number": "0001511737-25-000053",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001511737&accession_number=0001511737-25-000053",
+      "file_size_kb": 1503.6,
+      "local_path": "sec-edgar-filings/UI/10-K/0001511737-25-000053/primary-document.html"
+    },
+    {
+      "ticker": "TOL",
+      "accession_number": "0000794170-25-000112",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000794170&accession_number=0000794170-25-000112",
+      "file_size_kb": 3036.7,
+      "local_path": "sec-edgar-filings/TOL/10-K/0000794170-25-000112/primary-document.html"
+    },
+    {
+      "ticker": "ZM",
+      "accession_number": "0001585521-25-000042",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001585521&accession_number=0001585521-25-000042",
+      "file_size_kb": 2259.2,
+      "local_path": "sec-edgar-filings/ZM/10-K/0001585521-25-000042/primary-document.html"
+    },
+    {
+      "ticker": "MKSI",
+      "accession_number": "0000950170-25-026433",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-026433",
+      "file_size_kb": 5446.0,
+      "local_path": "sec-edgar-filings/MKSI/10-K/0000950170-25-026433/primary-document.html"
+    },
+    {
+      "ticker": "PODD",
+      "accession_number": "0001145197-25-000007",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001145197&accession_number=0001145197-25-000007",
+      "file_size_kb": 2078.1,
+      "local_path": "sec-edgar-filings/PODD/10-K/0001145197-25-000007/primary-document.html"
+    },
+    {
+      "ticker": "FSLR",
+      "accession_number": "0001274494-25-000010",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001274494&accession_number=0001274494-25-000010",
+      "file_size_kb": 2674.3,
+      "local_path": "sec-edgar-filings/FSLR/10-K/0001274494-25-000010/primary-document.html"
+    },
+    {
+      "ticker": "BMRN",
+      "accession_number": "0001048477-25-000007",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001048477&accession_number=0001048477-25-000007",
+      "file_size_kb": 2419.4,
+      "local_path": "sec-edgar-filings/BMRN/10-K/0001048477-25-000007/primary-document.html"
+    },
+    {
+      "ticker": "PFE",
+      "accession_number": "0000078003-25-000054",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000078003&accession_number=0000078003-25-000054",
+      "file_size_kb": 5213.8,
+      "local_path": "sec-edgar-filings/PFE/10-K/0000078003-25-000054/primary-document.html"
+    },
+    {
+      "ticker": "REG",
+      "accession_number": "0000950170-25-021359",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-021359",
+      "file_size_kb": 20757.0,
+      "local_path": "sec-edgar-filings/REG/10-K/0000950170-25-021359/primary-document.html"
+    },
+    {
+      "ticker": "APTV",
+      "accession_number": "0001521332-25-000010",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001521332&accession_number=0001521332-25-000010",
+      "file_size_kb": 4162.3,
+      "local_path": "sec-edgar-filings/APTV/10-K/0001521332-25-000010/primary-document.html"
+    },
+    {
+      "ticker": "SSD",
+      "accession_number": "0000920371-25-000051",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000920371&accession_number=0000920371-25-000051",
+      "file_size_kb": 2318.0,
+      "local_path": "sec-edgar-filings/SSD/10-K/0000920371-25-000051/primary-document.html"
+    },
+    {
+      "ticker": "AAL",
+      "accession_number": "0000006201-25-000010",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000006201&accession_number=0000006201-25-000010",
+      "file_size_kb": 4853.1,
+      "local_path": "sec-edgar-filings/AAL/10-K/0000006201-25-000010/primary-document.html"
+    },
+    {
+      "ticker": "CDW",
+      "accession_number": "0001402057-25-000018",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001402057&accession_number=0001402057-25-000018",
+      "file_size_kb": 2426.3,
+      "local_path": "sec-edgar-filings/CDW/10-K/0001402057-25-000018/primary-document.html"
+    },
+    {
+      "ticker": "MASI",
+      "accession_number": "0000937556-25-000032",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000937556&accession_number=0000937556-25-000032",
+      "file_size_kb": 3392.3,
+      "local_path": "sec-edgar-filings/MASI/10-K/0000937556-25-000032/primary-document.html"
+    },
+    {
+      "ticker": "MAR",
+      "accession_number": "0001628280-25-004818",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001628280&accession_number=0001628280-25-004818",
+      "file_size_kb": 1999.7,
+      "local_path": "sec-edgar-filings/MAR/10-K/0001628280-25-004818/primary-document.html"
+    },
+    {
+      "ticker": "VRSN",
+      "accession_number": "0001014473-25-000006",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001014473&accession_number=0001014473-25-000006",
+      "file_size_kb": 1311.5,
+      "local_path": "sec-edgar-filings/VRSN/10-K/0001014473-25-000006/primary-document.html"
+    },
+    {
+      "ticker": "KMI",
+      "accession_number": "0001506307-25-000008",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001506307&accession_number=0001506307-25-000008",
+      "file_size_kb": 4256.5,
+      "local_path": "sec-edgar-filings/KMI/10-K/0001506307-25-000008/primary-document.html"
+    },
+    {
+      "ticker": "AMG",
+      "accession_number": "0001004434-25-000010",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001004434&accession_number=0001004434-25-000010",
+      "file_size_kb": 5653.4,
+      "local_path": "sec-edgar-filings/AMG/10-K/0001004434-25-000010/primary-document.html"
+    },
+    {
+      "ticker": "UBER",
+      "accession_number": "0001543151-25-000008",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001543151&accession_number=0001543151-25-000008",
+      "file_size_kb": 3084.4,
+      "local_path": "sec-edgar-filings/UBER/10-K/0001543151-25-000008/primary-document.html"
+    },
+    {
+      "ticker": "SPGI",
+      "accession_number": "0000064040-25-000052",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000064040&accession_number=0000064040-25-000052",
+      "file_size_kb": 4036.8,
+      "local_path": "sec-edgar-filings/SPGI/10-K/0000064040-25-000052/primary-document.html"
+    },
+    {
+      "ticker": "IAU",
+      "accession_number": "0001437749-25-004257",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001437749&accession_number=0001437749-25-004257",
+      "file_size_kb": 812.5,
+      "local_path": "sec-edgar-filings/IAU/10-K/0001437749-25-004257/primary-document.html"
+    },
+    {
+      "ticker": "ALLE",
+      "accession_number": "0001579241-25-000008",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001579241&accession_number=0001579241-25-000008",
+      "file_size_kb": 2445.3,
+      "local_path": "sec-edgar-filings/ALLE/10-K/0001579241-25-000008/primary-document.html"
+    },
+    {
+      "ticker": "SYK",
+      "accession_number": "0000310764-25-000023",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000310764&accession_number=0000310764-25-000023",
+      "file_size_kb": 2751.1,
+      "local_path": "sec-edgar-filings/SYK/10-K/0000310764-25-000023/primary-document.html"
+    },
+    {
+      "ticker": "MMC",
+      "accession_number": "0000062709-25-000015",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000062709&accession_number=0000062709-25-000015",
+      "file_size_kb": 3581.0,
+      "local_path": "sec-edgar-filings/MMC/10-K/0000062709-25-000015/primary-document.html"
+    },
+    {
+      "ticker": "MPWR",
+      "accession_number": "0001437749-25-005903",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001437749&accession_number=0001437749-25-005903",
+      "file_size_kb": 2253.0,
+      "local_path": "sec-edgar-filings/MPWR/10-K/0001437749-25-005903/primary-document.html"
+    },
+    {
+      "ticker": "DXCM",
+      "accession_number": "0001093557-25-000036",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001093557&accession_number=0001093557-25-000036",
+      "file_size_kb": 2471.2,
+      "local_path": "sec-edgar-filings/DXCM/10-K/0001093557-25-000036/primary-document.html"
+    },
+    {
+      "ticker": "YUMC",
+      "accession_number": "0000950170-25-029134",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-029134",
+      "file_size_kb": 7059.3,
+      "local_path": "sec-edgar-filings/YUMC/10-K/0000950170-25-029134/primary-document.html"
+    },
+    {
+      "ticker": "PJT",
+      "accession_number": "0000950170-25-029132",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-029132",
+      "file_size_kb": 3250.4,
+      "local_path": "sec-edgar-filings/PJT/10-K/0000950170-25-029132/primary-document.html"
+    },
+    {
+      "ticker": "PEP",
+      "accession_number": "0000077476-25-000007",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000077476&accession_number=0000077476-25-000007",
+      "file_size_kb": 3819.3,
+      "local_path": "sec-edgar-filings/PEP/10-K/0000077476-25-000007/primary-document.html"
+    },
+    {
+      "ticker": "TEM",
+      "accession_number": "0000950170-25-025603",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-025603",
+      "file_size_kb": 5337.9,
+      "local_path": "sec-edgar-filings/TEM/10-K/0000950170-25-025603/primary-document.html"
+    },
+    {
+      "ticker": "FRT",
+      "accession_number": "0000034903-25-000016",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000034903&accession_number=0000034903-25-000016",
+      "file_size_kb": 3685.3,
+      "local_path": "sec-edgar-filings/FRT/10-K/0000034903-25-000016/primary-document.html"
+    },
+    {
+      "ticker": "SNPS",
+      "accession_number": "0000883241-25-000028",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000883241&accession_number=0000883241-25-000028",
+      "file_size_kb": 2960.4,
+      "local_path": "sec-edgar-filings/SNPS/10-K/0000883241-25-000028/primary-document.html"
+    },
+    {
+      "ticker": "ESAB",
+      "accession_number": "0001877322-25-000021",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001877322&accession_number=0001877322-25-000021",
+      "file_size_kb": 2551.6,
+      "local_path": "sec-edgar-filings/ESAB/10-K/0001877322-25-000021/primary-document.html"
+    },
+    {
+      "ticker": "PLD",
+      "accession_number": "0000950170-25-021272",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-021272",
+      "file_size_kb": 10895.5,
+      "local_path": "sec-edgar-filings/PLD/10-K/0000950170-25-021272/primary-document.html"
+    },
+    {
+      "ticker": "MMM",
+      "accession_number": "0000066740-25-000006",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000066740&accession_number=0000066740-25-000006",
+      "file_size_kb": 4570.4,
+      "local_path": "sec-edgar-filings/MMM/10-K/0000066740-25-000006/primary-document.html"
+    },
+    {
+      "ticker": "SUN",
+      "accession_number": "0001552275-25-000019",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001552275&accession_number=0001552275-25-000019",
+      "file_size_kb": 3141.2,
+      "local_path": "sec-edgar-filings/SUN/10-K/0001552275-25-000019/primary-document.html"
+    },
+    {
+      "ticker": "EMN",
+      "accession_number": "0000915389-25-000012",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000915389&accession_number=0000915389-25-000012",
+      "file_size_kb": 3918.7,
+      "local_path": "sec-edgar-filings/EMN/10-K/0000915389-25-000012/primary-document.html"
+    },
+    {
+      "ticker": "NXPI",
+      "accession_number": "0001413447-25-000019",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001413447&accession_number=0001413447-25-000019",
+      "file_size_kb": 2403.7,
+      "local_path": "sec-edgar-filings/NXPI/10-K/0001413447-25-000019/primary-document.html"
+    },
+    {
+      "ticker": "PB",
+      "accession_number": "0000950170-25-029222",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-029222",
+      "file_size_kb": 9395.8,
+      "local_path": "sec-edgar-filings/PB/10-K/0000950170-25-029222/primary-document.html"
+    },
+    {
+      "ticker": "AVTR",
+      "accession_number": "0001722482-25-000015",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001722482&accession_number=0001722482-25-000015",
+      "file_size_kb": 2698.2,
+      "local_path": "sec-edgar-filings/AVTR/10-K/0001722482-25-000015/primary-document.html"
+    },
+    {
+      "ticker": "PCG",
+      "accession_number": "0001004980-25-000010",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001004980&accession_number=0001004980-25-000010",
+      "file_size_kb": 4857.2,
+      "local_path": "sec-edgar-filings/PCG/10-K/0001004980-25-000010/primary-document.html"
+    },
+    {
+      "ticker": "AMT",
+      "accession_number": "0001053507-25-000025",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001053507&accession_number=0001053507-25-000025",
+      "file_size_kb": 4520.4,
+      "local_path": "sec-edgar-filings/AMT/10-K/0001053507-25-000025/primary-document.html"
+    },
+    {
+      "ticker": "ADI",
+      "accession_number": "0000006281-25-000153",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000006281&accession_number=0000006281-25-000153",
+      "file_size_kb": 2308.1,
+      "local_path": "sec-edgar-filings/ADI/10-K/0000006281-25-000153/primary-document.html"
+    },
+    {
+      "ticker": "SUI",
+      "accession_number": "0000912593-25-000086",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000912593&accession_number=0000912593-25-000086",
+      "file_size_kb": 11216.3,
+      "local_path": "sec-edgar-filings/SUI/10-K/0000912593-25-000086/primary-document.html"
+    },
+    {
+      "ticker": "GWRE",
+      "accession_number": "0001528396-25-000221",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001528396&accession_number=0001528396-25-000221",
+      "file_size_kb": 2551.4,
+      "local_path": "sec-edgar-filings/GWRE/10-K/0001528396-25-000221/primary-document.html"
+    },
+    {
+      "ticker": "MAA",
+      "accession_number": "0000950170-25-016287",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000950170&accession_number=0000950170-25-016287",
+      "file_size_kb": 13121.1,
+      "local_path": "sec-edgar-filings/MAA/10-K/0000950170-25-016287/primary-document.html"
+    },
+    {
+      "ticker": "WSM",
+      "accession_number": "0001628280-25-015037",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001628280&accession_number=0001628280-25-015037",
+      "file_size_kb": 1463.1,
+      "local_path": "sec-edgar-filings/WSM/10-K/0001628280-25-015037/primary-document.html"
+    },
+    {
+      "ticker": "ARWR",
+      "accession_number": "0000879407-25-000029",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000879407&accession_number=0000879407-25-000029",
+      "file_size_kb": 2327.8,
+      "local_path": "sec-edgar-filings/ARWR/10-K/0000879407-25-000029/primary-document.html"
+    },
+    {
+      "ticker": "HIMS",
+      "accession_number": "0001773751-25-000062",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001773751&accession_number=0001773751-25-000062",
+      "file_size_kb": 2078.5,
+      "local_path": "sec-edgar-filings/HIMS/10-K/0001773751-25-000062/primary-document.html"
+    },
+    {
+      "ticker": "HWM",
+      "accession_number": "0000004281-25-000011",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000004281&accession_number=0000004281-25-000011",
+      "file_size_kb": 2878.9,
+      "local_path": "sec-edgar-filings/HWM/10-K/0000004281-25-000011/primary-document.html"
+    },
+    {
+      "ticker": "DKNG",
+      "accession_number": "0001883685-25-000010",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001883685&accession_number=0001883685-25-000010",
+      "file_size_kb": 2375.6,
+      "local_path": "sec-edgar-filings/DKNG/10-K/0001883685-25-000010/primary-document.html"
+    },
+    {
+      "ticker": "MAS",
+      "accession_number": "0000062996-25-000004",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000062996&accession_number=0000062996-25-000004",
+      "file_size_kb": 2208.2,
+      "local_path": "sec-edgar-filings/MAS/10-K/0000062996-25-000004/primary-document.html"
+    },
+    {
+      "ticker": "SSB",
+      "accession_number": "0001558370-25-001274",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001558370&accession_number=0001558370-25-001274",
+      "file_size_kb": 12914.8,
+      "local_path": "sec-edgar-filings/SSB/10-K/0001558370-25-001274/primary-document.html"
+    },
+    {
+      "ticker": "MDB",
+      "accession_number": "0001441816-25-000057",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001441816&accession_number=0001441816-25-000057",
+      "file_size_kb": 2058.9,
+      "local_path": "sec-edgar-filings/MDB/10-K/0001441816-25-000057/primary-document.html"
+    },
+    {
+      "ticker": "UWMC",
+      "accession_number": "0001783398-25-000007",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001783398&accession_number=0001783398-25-000007",
+      "file_size_kb": 2219.7,
+      "local_path": "sec-edgar-filings/UWMC/10-K/0001783398-25-000007/primary-document.html"
+    },
+    {
+      "ticker": "FTV",
+      "accession_number": "0001659166-25-000024",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001659166&accession_number=0001659166-25-000024",
+      "file_size_kb": 2581.2,
+      "local_path": "sec-edgar-filings/FTV/10-K/0001659166-25-000024/primary-document.html"
+    },
+    {
+      "ticker": "CAG",
+      "accession_number": "0001558370-25-009180",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001558370&accession_number=0001558370-25-009180",
+      "file_size_kb": 4520.9,
+      "local_path": "sec-edgar-filings/CAG/10-K/0001558370-25-009180/primary-document.html"
+    },
+    {
+      "ticker": "MGM",
+      "accession_number": "0000789570-25-000008",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000789570&accession_number=0000789570-25-000008",
+      "file_size_kb": 2716.5,
+      "local_path": "sec-edgar-filings/MGM/10-K/0000789570-25-000008/primary-document.html"
+    },
+    {
+      "ticker": "ALLY",
+      "accession_number": "0000040729-25-000006",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0000040729&accession_number=0000040729-25-000006",
+      "file_size_kb": 9215.1,
+      "local_path": "sec-edgar-filings/ALLY/10-K/0000040729-25-000006/primary-document.html"
+    },
+    {
+      "ticker": "CNC",
+      "accession_number": "0001071739-25-000027",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001071739&accession_number=0001071739-25-000027",
+      "file_size_kb": 3137.1,
+      "local_path": "sec-edgar-filings/CNC/10-K/0001071739-25-000027/primary-document.html"
+    },
+    {
+      "ticker": "REXR",
+      "accession_number": "0001571283-25-000006",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001571283&accession_number=0001571283-25-000006",
+      "file_size_kb": 9077.9,
+      "local_path": "sec-edgar-filings/REXR/10-K/0001571283-25-000006/primary-document.html"
+    },
+    {
+      "ticker": "VLO",
+      "accession_number": "0001035002-25-000005",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001035002&accession_number=0001035002-25-000005",
+      "file_size_kb": 3870.1,
+      "local_path": "sec-edgar-filings/VLO/10-K/0001035002-25-000005/primary-document.html"
+    },
+    {
+      "ticker": "UPS",
+      "accession_number": "0001090727-25-000019",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001090727&accession_number=0001090727-25-000019",
+      "file_size_kb": 4328.8,
+      "local_path": "sec-edgar-filings/UPS/10-K/0001090727-25-000019/primary-document.html"
+    },
+    {
+      "ticker": "PLTR",
+      "accession_number": "0001321655-25-000022",
+      "sec_edgar_url": "https://www.sec.gov/cgi-bin/viewer?action=view&cik=0001321655&accession_number=0001321655-25-000022",
+      "file_size_kb": 2226.5,
+      "local_path": "sec-edgar-filings/PLTR/10-K/0001321655-25-000022/primary-document.html"
+    }
+  ],
+  "total_filings": 891,
+  "total_size_mb": 409.16,
+  "sample_size": 100
+}
