@@ -606,10 +606,189 @@
                 clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
             }
         }
+
+        /* Lead Capture Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .modal-content h2 {
+            color: #a78bfa;
+            margin-bottom: 0.5rem;
+            font-size: 1.5rem;
+        }
+
+        .modal-content p {
+            color: #9ca3af;
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #e0e0e0;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            color: #e0e0e0;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #8b5cf6;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .modal-submit {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .modal-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(99, 102, 241, 0.3);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            color: #9ca3af;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
     </style>
 </head>
 
 <body>
+    <!-- Lead Capture Modal -->
+    <div id="leadModal" class="modal-overlay">
+        <div class="modal-content" style="position: relative;">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <h2>Download Research Data</h2>
+            <p>Get instant access to the complete 140x Problem report and dataset.</p>
+            <form id="leadForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Work Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="industry">Industry *</label>
+                        <select id="industry" name="industry" required>
+                            <option value="">Select...</option>
+                            <option value="Financial Services">Financial Services</option>
+                            <option value="Insurance">Insurance / Reinsurance</option>
+                            <option value="Technology">Technology</option>
+                            <option value="Legal">Legal / Law Firm</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Investment">Investment / PE / VC</option>
+                            <option value="Corporate">Corporate (In-house)</option>
+                            <option value="Government">Government / Regulatory</option>
+                            <option value="Academic">Academic / Research</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Role *</label>
+                        <select id="role" name="role" required>
+                            <option value="">Select...</option>
+                            <option value="Board Director">Board Director</option>
+                            <option value="C-Suite">C-Suite Executive</option>
+                            <option value="VP/Director">VP / Director</option>
+                            <option value="Manager">Manager</option>
+                            <option value="Analyst">Analyst / Associate</option>
+                            <option value="Consultant">Consultant / Advisor</option>
+                            <option value="Attorney">Attorney</option>
+                            <option value="Researcher">Researcher / Academic</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="intendedUse">Intended Use *</label>
+                    <select id="intendedUse" name="intendedUse" required>
+                        <option value="">Select...</option>
+                        <option value="Board/Committee Presentation">Board or Committee Presentation</option>
+                        <option value="Investment Due Diligence">Investment Due Diligence</option>
+                        <option value="D&O Underwriting">D&O Insurance Underwriting</option>
+                        <option value="Risk Assessment">Risk Assessment / Audit</option>
+                        <option value="Disclosure Drafting">SEC Disclosure Drafting</option>
+                        <option value="Academic Research">Academic Research</option>
+                        <option value="Client Advisory">Client Advisory Work</option>
+                        <option value="Personal Interest">Personal / Professional Interest</option>
+                    </select>
+                </div>
+                <button type="submit" class="modal-submit">Access Downloads →</button>
+            </form>
+        </div>
+    </div>
+
     <div class="container">
         <header>
             <a href="https://www.governanceiq.io" target="_blank"
@@ -857,30 +1036,30 @@
                         <div class="pattern-name" style="font-size: 1.5rem;">📄 Research Paper</div>
                         <p style="margin: 1.5rem 0;">The 140x Problem: Complete analysis with D&O exposure estimates,
                             company-level findings, and investor guidance.</p>
-                        <a href="COMPREHENSIVE_AI_RISK_REPORT.md" download
-                            style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; text-decoration: none; border-radius: 25px; font-weight: 600;">
+                        <button onclick="openModal('paper')"
+                            style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; border: none; cursor: pointer;">
                             Download (Markdown)
-                        </a>
+                        </button>
                     </div>
 
                     <div class="pattern-card" style="text-align: center;">
                         <div class="pattern-name" style="font-size: 1.5rem;">📊 Key Findings Data</div>
                         <p style="margin: 1.5rem 0;">Complete dataset: 1,687 companies with keyword frequencies,
                             specificity scores, and disclosure gaps.</p>
-                        <a href="SEC_AI_Extraction_FINAL.csv" download
-                            style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #10b981, #059669); color: white; text-decoration: none; border-radius: 25px; font-weight: 600;">
+                        <button onclick="openModal('data')"
+                            style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #10b981, #059669); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; border: none; cursor: pointer;">
                             Download (CSV)
-                        </a>
+                        </button>
                     </div>
 
                     <div class="pattern-card" style="text-align: center;">
                         <div class="pattern-name" style="font-size: 1.5rem;">📚 References</div>
                         <p style="margin: 1.5rem 0;">Chicago-style bibliography of all sources including regulatory
                             frameworks, academic research, and litigation.</p>
-                        <a href="140x_Problem_References.md" download
-                            style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; text-decoration: none; border-radius: 25px; font-weight: 600;">
+                        <button onclick="openModal('refs')"
+                            style="display: inline-block; padding: 1rem 2rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: white; text-decoration: none; border-radius: 25px; font-weight: 600; border: none; cursor: pointer;">
                             Download (Markdown)
-                        </a>
+                        </button>
                     </div>
 
                 </div>
@@ -904,6 +1083,102 @@
     </div>
 
     <script>
+        // Lead capture state
+        let pendingDownload = null;
+        const downloadUrls = {
+            paper: 'COMPREHENSIVE_AI_RISK_REPORT.md',
+            data: 'SEC_AI_Extraction_FINAL.csv',
+            refs: '140x_Problem_References.md'
+        };
+
+        // Check if user already submitted
+        function hasSubmitted() {
+            return localStorage.getItem('140x_lead_submitted') === 'true';
+        }
+
+        // Open modal
+        function openModal(fileType) {
+            if (hasSubmitted()) {
+                // Already submitted, download directly
+                triggerDownload(fileType);
+                return;
+            }
+            pendingDownload = fileType;
+            document.getElementById('leadModal').classList.add('active');
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('leadModal').classList.remove('active');
+            pendingDownload = null;
+        }
+
+        // Handle form submission
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById('firstName').value,
+                lastName: document.getElementById('lastName').value,
+                email: document.getElementById('email').value,
+                industry: document.getElementById('industry').value,
+                role: document.getElementById('role').value,
+                intendedUse: document.getElementById('intendedUse').value,
+                timestamp: new Date().toISOString(),
+                downloadRequested: pendingDownload
+            };
+
+            // Store submission to localStorage
+            localStorage.setItem('140x_lead_submitted', 'true');
+            localStorage.setItem('140x_lead_data', JSON.stringify(formData));
+
+            // Send to webhook/spreadsheet (using a simple approach)
+            // For GitHub Pages, you can connect this to a Google Form or Formspree
+            const existingLeads = JSON.parse(localStorage.getItem('140x_all_leads') || '[]');
+            existingLeads.push(formData);
+            localStorage.setItem('140x_all_leads', JSON.stringify(existingLeads));
+
+            // Log for debugging/export
+            console.log('Lead captured:', formData);
+            console.log('All leads:', existingLeads);
+
+            // Close modal and trigger download
+            closeModal();
+            if (pendingDownload) {
+                triggerDownload(pendingDownload);
+            }
+
+            // Show all downloads after first submission
+            showDirectDownloads();
+        }
+
+        // Trigger file download
+        function triggerDownload(fileType) {
+            const url = downloadUrls[fileType];
+            if (url) {
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = url;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        // Replace buttons with direct download links after submission
+        function showDirectDownloads() {
+            // Buttons will still work via openModal which checks hasSubmitted()
+        }
+
+        // Close modal on overlay click
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('leadModal').addEventListener('click', function (e) {
+                if (e.target === this) {
+                    closeModal();
+                }
+            });
+        });
+
         // Tab switching
         function switchTab(tabName) {
             document.querySelectorAll('.tab-content').forEach(tab => {
