@@ -1529,24 +1529,22 @@ The market has validated that AI is present in the enterprise. The next phase of
                 }
             };
 
-            // Disclosure Chart (Categories)
+            // Disclosure Chart (AI-Specific Gaps) - Shows what companies are NOT disclosing
             const disclosureCtx = document.getElementById('disclosureChart').getContext('2d');
             new Chart(disclosureCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Malicious Use (Cyber)', 'Infrastructure', 'Environmental', 'AI Risk', 'Human Oversight', 'Socioeconomic', 'AI Safety', 'Regulation'],
+                    labels: ['Training Data', 'AI Regulation', 'AI Safety', 'Model Accuracy', 'Human Oversight', 'Bias/Fairness'],
                     datasets: [{
-                        label: '% of Companies Disclosing',
-                        data: [73.4, 82.7, 60.2, 31.1, 17.2, 10.9, 6.8, 4.6],
+                        label: '% of Companies Silent',
+                        data: [99.0, 95.4, 93.0, 89.1, 82.8, 78.5],
                         backgroundColor: [
-                            '#2563eb',
-                            '#2563eb',
-                            '#2563eb',
-                            '#8b5cf6',
                             '#e11d48',
                             '#e11d48',
                             '#e11d48',
-                            '#e11d48'
+                            '#e11d48',
+                            '#e11d48',
+                            '#f97316'
                         ]
                     }]
                 },
@@ -1556,13 +1554,21 @@ The market has validated that AI is present in the enterprise. The next phase of
                         legend: { display: false },
                         title: {
                             display: true,
-                            text: 'The Governance Blind Spots: What Companies Are NOT Disclosing'
+                            text: 'AI-Specific Disclosure Gaps: % of Companies Silent',
+                            color: '#ffffff',
+                            font: { size: 18, weight: '700' }
                         }
                     },
                     scales: {
                         y: {
                             beginAtZero: true,
-                            max: 100
+                            max: 100,
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
+                        },
+                        x: {
+                            ticks: { color: '#e2e8f0' },
+                            grid: { color: 'rgba(255, 255, 255, 0.08)' }
                         }
                     }
                 }
