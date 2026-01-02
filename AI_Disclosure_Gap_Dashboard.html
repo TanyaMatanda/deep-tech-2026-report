@@ -1264,15 +1264,16 @@ The market has validated that AI is present in the enterprise. The next phase of
             new Chart(disclosureCtx, {
                 type: 'bar',
                 data: {
-                    labels: ['Malicious Use (Cyber)', 'Environmental', 'Bias', 'Human Interaction', 'Socioeconomic', 'AI Safety', 'Regulation'],
+                    labels: ['Malicious Use (Cyber)', 'Infrastructure', 'Environmental', 'AI Risk', 'Human Oversight', 'Socioeconomic', 'AI Safety', 'Regulation'],
                     datasets: [{
                         label: '% of Companies Disclosing',
-                        data: [74.8, 61.4, 30.2, 17.6, 11.1, 7.0, 4.7],
+                        data: [73.4, 82.7, 60.2, 31.1, 17.2, 10.9, 6.8, 4.6],
                         backgroundColor: [
                             '#2563eb',
                             '#2563eb',
-                            '#e11d48',
                             '#2563eb',
+                            '#8b5cf6',
+                            '#e11d48',
                             '#e11d48',
                             '#e11d48',
                             '#e11d48'
@@ -1285,7 +1286,7 @@ The market has validated that AI is present in the enterprise. The next phase of
                         legend: { display: false },
                         title: {
                             display: true,
-                            text: 'Legacy Risks vs Novel AI Risks (% Prevalence)'
+                            text: 'The Governance Blind Spots: What Companies Are NOT Disclosing'
                         }
                     },
                     scales: {
@@ -1334,15 +1335,15 @@ The market has validated that AI is present in the enterprise. The next phase of
                 }
             });
 
-            // Model Risk Chart (Boilerplate)
+            // Model Risk Chart (Disclosure Quality)
             const modelCtx = document.getElementById('modelRiskChart').getContext('2d');
             new Chart(document.getElementById('modelRiskChart'), {
                 type: 'pie',
                 data: {
-                    labels: ['Boilerplate Disclosers', 'Specific Disclosers'],
+                    labels: ['Generic Disclosers (Zero Specificity)', 'Partial Specificity', 'High Specificity'],
                     datasets: [{
-                        data: [34, 1620],
-                        backgroundColor: ['#e11d48', '#2563eb']
+                        data: [34, 1520, 133],
+                        backgroundColor: ['#e11d48', '#8b5cf6', '#2563eb']
                     }]
                 },
                 options: {
@@ -1350,7 +1351,7 @@ The market has validated that AI is present in the enterprise. The next phase of
                     plugins: {
                         title: {
                             display: true,
-                            text: 'The "Boilerplate Brigade" (High Volume, Zero Specificity)'
+                            text: 'Disclosure Quality Distribution (1,687 Companies)'
                         }
                     }
                 }
